@@ -1,0 +1,1104 @@
+{
+ "1": {
+  "meaning": {
+   "ru": "Базовое «иметь / у меня есть»: вещи, питомцы, родственники, черты характера, симптомы. Это состояние, а не действие, поэтому в этом значении have не ставится в Continuous.",
+   "ko": "가장 기본적인 '소유'의 의미입니다. 물건, 반려동물, 가족, 성격, 증상까지 모두 have로 말합니다. 동작이 아니라 상태이므로 진행형으로 쓰지 않습니다."
+  },
+  "examples": [
+   {
+    "en": "Do you have any pets?",
+    "ru": "У тебя есть домашние животные?",
+    "ko": "반려동물 키워요?"
+   },
+   {
+    "en": "I have two older brothers.",
+    "ru": "У меня два старших брата.",
+    "ko": "저는 형이 둘 있어요."
+   },
+   {
+    "en": "Do you have any allergies?",
+    "ru": "У вас есть аллергия?",
+    "ko": "알레르기 있으세요?"
+   },
+   {
+    "en": "She has a great sense of humor.",
+    "ru": "У неё отличное чувство юмора.",
+    "ko": "걔는 유머 감각이 정말 좋아요."
+   },
+   {
+    "en": "We have a meeting at three.",
+    "ru": "У нас встреча в три.",
+    "ko": "세 시에 회의 있어요."
+   },
+   {
+    "en": "I don't have my wallet on me.",
+    "ru": "У меня нет с собой кошелька.",
+    "ko": "지금 지갑을 안 가지고 있어요."
+   }
+  ],
+  "dialogue": [
+   {
+    "s": "A",
+    "en": "Do you have any pets?",
+    "ru": "У тебя есть питомцы?",
+    "ko": "반려동물 키워요?"
+   },
+   {
+    "s": "B",
+    "en": "Yeah, I have a golden retriever. His name is Max.",
+    "ru": "Да, золотистый ретривер. Его зовут Макс.",
+    "ko": "네, 골든 리트리버 한 마리요. 이름은 맥스예요."
+   },
+   {
+    "s": "A",
+    "en": "Oh, nice. How long have you had him?",
+    "ru": "О, здорово. Давно он у тебя?",
+    "ko": "좋네요. 키운 지 얼마나 됐어요?"
+   },
+   {
+    "s": "B",
+    "en": "About three years now.",
+    "ru": "Уже около трёх лет.",
+    "ko": "이제 한 3년 됐어요.",
+    "you": true
+   }
+  ],
+  "notes": [
+   {
+    "ru": "have got — разговорный британский вариант have: I've got a car = I have a car. В американском чаще просто have.",
+    "ko": "have got은 영국식 구어체로 have와 같은 뜻입니다. 미국에서는 그냥 have를 더 많이 씁니다."
+   },
+   {
+    "ru": "Вопрос без do — Have you any pets? — звучит устаревше. Современно: Do you have…? (US) или Have you got…? (UK).",
+    "ko": "Have you any pets?는 예스러운 표현입니다. 요즘은 Do you have…? 또는 Have you got…?을 씁니다."
+   },
+   {
+    "ru": "В вопросе — any, не some. Some появляется, когда вы предлагаете: Would you like some coffee?",
+    "ko": "의문문에서는 some이 아니라 any를 씁니다. 권유할 때만 some을 씁니다."
+   }
+  ],
+  "quiz": [
+   {
+    "type": "build",
+    "ru": "У вас есть аллергия?",
+    "ko": "알레르기 있으세요?",
+    "answer": "Do you have any allergies?",
+    "extra": [
+     "some",
+     "are",
+     "has"
+    ]
+   },
+   {
+    "type": "pick",
+    "q_ru": "Что звучит естественно?",
+    "q_ko": "어느 쪽이 자연스러울까요?",
+    "options": [
+     {
+      "en": "I have a headache.",
+      "ok": true
+     },
+     {
+      "en": "I'm having a headache.",
+      "ok": false
+     }
+    ],
+    "why": {
+     "ru": "have в значении состояния не ставится в Continuous.",
+     "ko": "상태를 나타내는 have는 진행형으로 쓰지 않습니다."
+    }
+   }
+  ]
+ },
+ "2": {
+  "meaning": {
+   "ru": "have = есть, пить, принимать пищу: have lunch, have a coffee, have a snack. Здесь have — это действие, поэтому Continuous возможен: I'm having lunch.",
+   "ko": "have가 '먹다, 마시다'의 뜻으로 쓰입니다. 이때는 동작이므로 진행형이 가능합니다."
+  },
+  "examples": [
+   {
+    "en": "I just had a snack, so I'm not that hungry.",
+    "ru": "Я только что перекусил, так что не особо голоден.",
+    "ko": "방금 간식을 먹어서 별로 안 배고파요."
+   },
+   {
+    "en": "Let's have lunch together sometime.",
+    "ru": "Давай как-нибудь пообедаем вместе.",
+    "ko": "언제 같이 점심 먹어요."
+   },
+   {
+    "en": "I usually have coffee around ten.",
+    "ru": "Обычно я пью кофе около десяти.",
+    "ko": "보통 열 시쯤 커피를 마셔요."
+   },
+   {
+    "en": "I'm having dinner right now. Can I call you back?",
+    "ru": "Я сейчас ужинаю. Можно перезвоню?",
+    "ko": "지금 저녁 먹는 중이에요. 이따 전화드려도 될까요?"
+   },
+   {
+    "en": "Did you have breakfast?",
+    "ru": "Ты завтракал?",
+    "ko": "아침 먹었어요?"
+   },
+   {
+    "en": "We had a few drinks after work.",
+    "ru": "Мы после работы выпили пару бокалов.",
+    "ko": "퇴근하고 몇 잔 했어요."
+   }
+  ],
+  "dialogue": [
+   {
+    "s": "A",
+    "en": "Do you want to grab something to eat?",
+    "ru": "Хочешь перекусить?",
+    "ko": "뭐 좀 먹으러 갈래요?"
+   },
+   {
+    "s": "B",
+    "en": "I just had a snack, so I'm not that hungry.",
+    "ru": "Я только что перекусил, не особо голоден.",
+    "ko": "방금 간식 먹어서 별로 안 배고파요."
+   },
+   {
+    "s": "A",
+    "en": "Okay. Maybe just coffee, then?",
+    "ru": "Ладно. Тогда, может, просто кофе?",
+    "ko": "그럼 커피만 마실까요?"
+   },
+   {
+    "s": "B",
+    "en": "Sure, I could go for a coffee.",
+    "ru": "Давай, от кофе не откажусь.",
+    "ko": "좋아요, 커피는 괜찮아요.",
+    "you": true
+   }
+  ],
+  "notes": [
+   {
+    "ru": "Ключевая разница с уроком 1: have-обладание в Continuous не ставится, have-еда ставится. I'm having lunch ✓ / I'm having a car ✗",
+    "ko": "소유의 have는 진행형 불가, 식사의 have는 진행형 가능합니다."
+   },
+   {
+    "ru": "have a coffee / have a beer — с артиклем, когда речь о порции. I don't drink coffee — о привычке вообще.",
+    "ko": "한 잔을 말할 때는 관사를 붙입니다. 습관을 말할 때는 drink를 씁니다."
+   },
+   {
+    "ru": "«Только что» — just + Past Simple в американском (I just had), в британском чаще Present Perfect (I've just had). Оба верны.",
+    "ko": "미국식은 just + 과거형, 영국식은 현재완료를 선호합니다. 둘 다 맞습니다."
+   }
+  ],
+  "quiz": [
+   {
+    "type": "build",
+    "ru": "Ты завтракал?",
+    "ko": "아침 먹었어요?",
+    "answer": "Did you have breakfast?",
+    "extra": [
+     "are",
+     "having",
+     "a"
+    ]
+   },
+   {
+    "type": "pick",
+    "q_ru": "«Я сейчас обедаю» — как сказать?",
+    "q_ko": "'지금 점심 먹는 중이에요'는?",
+    "options": [
+     {
+      "en": "I'm having lunch.",
+      "ok": true
+     },
+     {
+      "en": "I have lunch now.",
+      "ok": false
+     }
+    ],
+    "why": {
+     "ru": "Еда — это действие, значит Continuous. I have lunch at noon описывает привычку, а не текущий момент.",
+     "ko": "식사는 동작이므로 진행형을 씁니다. I have lunch at noon은 습관을 뜻합니다."
+    }
+   }
+  ]
+ },
+ "3": {
+  "meaning": {
+   "ru": "have = провести, пережить отрезок времени или опыт: have a good time, have a hard day, have a weird morning.",
+   "ko": "시간이나 경험을 '보내다, 겪다'의 의미입니다."
+  },
+  "examples": [
+   {
+    "en": "I had a weird morning yesterday.",
+    "ru": "Вчера у меня было странное утро.",
+    "ko": "어제 아침이 좀 이상했어요."
+   },
+   {
+    "en": "Did you have a good time in Osaka?",
+    "ru": "Хорошо провели время в Осаке?",
+    "ko": "오사카에서 잘 보냈어요?"
+   },
+   {
+    "en": "I had a really long day.",
+    "ru": "У меня был очень тяжёлый день.",
+    "ko": "오늘 하루 진짜 길었어요."
+   },
+   {
+    "en": "We had a great time at the workshop.",
+    "ru": "Мы отлично провели время на воркшопе.",
+    "ko": "워크숍 정말 즐거웠어요."
+   },
+   {
+    "en": "She's having a hard time at work these days.",
+    "ru": "У неё сейчас тяжёлый период на работе.",
+    "ko": "걔 요즘 회사에서 힘들어해요."
+   },
+   {
+    "en": "Have a safe flight.",
+    "ru": "Хорошего полёта.",
+    "ko": "안전하게 잘 다녀오세요."
+   }
+  ],
+  "dialogue": [
+   {
+    "s": "A",
+    "en": "You look tired.",
+    "ru": "Ты выглядишь уставшим.",
+    "ko": "피곤해 보여요."
+   },
+   {
+    "s": "B",
+    "en": "I had a weird morning yesterday and barely slept.",
+    "ru": "Вчера было странное утро, я почти не спал.",
+    "ko": "어제 아침이 좀 이상했는데 잠도 거의 못 잤어요."
+   },
+   {
+    "s": "A",
+    "en": "What happened?",
+    "ru": "Что случилось?",
+    "ko": "무슨 일 있었어요?"
+   },
+   {
+    "s": "B",
+    "en": "Long story. I'll tell you over coffee.",
+    "ru": "Долгая история. Расскажу за кофе.",
+    "ko": "얘기가 길어요. 커피 마시면서 얘기할게요.",
+    "you": true
+   }
+  ],
+  "notes": [
+   {
+    "ru": "Здесь have означает проживать отрезок времени, поэтому Continuous возможен: She's having a hard time.",
+    "ko": "시간을 '보내는' 의미이므로 진행형이 가능합니다."
+   },
+   {
+    "ru": "Have a good one / Have a good day — стандартное прощание. В деловом письме уместно Have a great day.",
+    "ko": "Have a good one은 흔한 작별 인사입니다. 업무 메일에서는 Have a great day가 무난합니다."
+   },
+   {
+    "ru": "Порядок слов жёсткий: have + прилагательное + существительное. a long day, a hard time, a safe flight.",
+    "ko": "have + 형용사 + 명사 순서로 굳어져 있습니다."
+   }
+  ],
+  "quiz": [
+   {
+    "type": "build",
+    "ru": "Хорошо провели время в Осаке?",
+    "ko": "오사카에서 잘 보냈어요?",
+    "answer": "Did you have a good time in Osaka?",
+    "extra": [
+     "were",
+     "having"
+    ]
+   },
+   {
+    "type": "pick",
+    "q_ru": "«У неё сейчас тяжёлый период»",
+    "q_ko": "'걔 요즘 힘들어해요'는?",
+    "options": [
+     {
+      "en": "She's having a hard time.",
+      "ok": true
+     },
+     {
+      "en": "She has a hard time.",
+      "ok": false
+     }
+    ],
+    "why": {
+     "ru": "О текущем периоде — Continuous. She has a hard time звучит как общее свойство характера.",
+     "ko": "지금 겪고 있는 상황은 진행형으로 말합니다."
+    }
+   }
+  ]
+ },
+ "4": {
+  "meaning": {
+   "ru": "have = проводить, устраивать мероприятие: встречу, презентацию, вечеринку, распродажу. Разговорный синоним hold.",
+   "ko": "행사를 '열다, 하다'의 의미입니다. hold의 구어체 표현입니다."
+  },
+  "examples": [
+   {
+    "en": "Samsung is having a new-product launch today.",
+    "ru": "Samsung сегодня проводит презентацию нового продукта.",
+    "ko": "삼성이 오늘 신제품 발표회를 열어요."
+   },
+   {
+    "en": "We're having a team dinner on Friday.",
+    "ru": "В пятницу у нас корпоратив.",
+    "ko": "금요일에 회식 있어요."
+   },
+   {
+    "en": "The store is having a sale this week.",
+    "ru": "На этой неделе в магазине распродажа.",
+    "ko": "이번 주에 그 가게 세일해요."
+   },
+   {
+    "en": "Are you having a housewarming party?",
+    "ru": "Ты устраиваешь новоселье?",
+    "ko": "집들이 하실 거예요?"
+   },
+   {
+    "en": "We had a long meeting about the budget.",
+    "ru": "У нас было долгое совещание по бюджету.",
+    "ko": "예산 관련해서 회의를 길게 했어요."
+   },
+   {
+    "en": "They're having a press conference at noon.",
+    "ru": "В полдень у них пресс-конференция.",
+    "ko": "정오에 기자회견을 해요."
+   }
+  ],
+  "dialogue": [
+   {
+    "s": "A",
+    "en": "Are you free Thursday afternoon?",
+    "ru": "Ты свободен в четверг после обеда?",
+    "ko": "목요일 오후에 시간 돼요?"
+   },
+   {
+    "s": "B",
+    "en": "Not really. Samsung is having a new-product launch and we're invited.",
+    "ru": "Не совсем. У Samsung презентация, нас позвали.",
+    "ko": "아니요. 삼성 신제품 발표회가 있는데 저희도 초대받았어요."
+   },
+   {
+    "s": "A",
+    "en": "That's a good chance to meet their team.",
+    "ru": "Хороший шанс познакомиться с их командой.",
+    "ko": "그쪽 팀 만날 좋은 기회네요."
+   },
+   {
+    "s": "B",
+    "en": "Exactly. I'll send you the invitation.",
+    "ru": "Именно. Пришлю тебе приглашение.",
+    "ko": "맞아요. 초대장 보내드릴게요.",
+    "you": true
+   }
+  ],
+  "notes": [
+   {
+    "ru": "О запланированном событии have почти всегда в Continuous: We're having a meeting tomorrow.",
+    "ko": "예정된 행사는 보통 진행형으로 말합니다."
+   },
+   {
+    "ru": "hold a meeting — письменно и официально. have a meeting — в разговоре и в обычных письмах.",
+    "ko": "공식 문서는 hold, 일상 대화와 메일은 have를 씁니다."
+   },
+   {
+    "ru": "«У нас будет совещание» → We're having / We have a meeting. We will have звучит как решение, принятое прямо сейчас.",
+    "ko": "이미 정해진 일정에 will을 쓰면 지금 막 정한 것처럼 들립니다."
+   }
+  ],
+  "quiz": [
+   {
+    "type": "build",
+    "ru": "В пятницу у нас корпоратив.",
+    "ko": "금요일에 회식 있어요.",
+    "answer": "We're having a team dinner on Friday.",
+    "extra": [
+     "will",
+     "at"
+    ]
+   },
+   {
+    "type": "pick",
+    "q_ru": "«На этой неделе в магазине распродажа»",
+    "q_ko": "'이번 주에 그 가게 세일해요'는?",
+    "options": [
+     {
+      "en": "The store is having a sale this week.",
+      "ok": true
+     },
+     {
+      "en": "The store has a sale this week.",
+      "ok": false
+     }
+    ],
+    "why": {
+     "ru": "Мероприятие с конкретным сроком — Continuous.",
+     "ko": "기간이 정해진 행사는 진행형이 자연스럽습니다."
+    }
+   }
+  ]
+ },
+ "5": {
+  "meaning": {
+   "ru": "have something to do — «есть что-то, что надо сделать». Не путать с have to (быть должным): I have work to do ≠ I have to work.",
+   "ko": "'할 일이 있다'는 뜻입니다. 의무를 뜻하는 have to와 구별해야 합니다."
+  },
+  "examples": [
+   {
+    "en": "I have some chores to do in the afternoon.",
+    "ru": "У меня после обеда дела по дому.",
+    "ko": "오후에 집안일이 좀 있어요."
+   },
+   {
+    "en": "I have a lot of emails to answer.",
+    "ru": "Мне надо ответить на кучу писем.",
+    "ko": "답장해야 할 메일이 많아요."
+   },
+   {
+    "en": "Do you have anything to add?",
+    "ru": "Хотите что-нибудь добавить?",
+    "ko": "더 하실 말씀 있으세요?"
+   },
+   {
+    "en": "I have two calls to make before lunch.",
+    "ru": "До обеда мне надо сделать два звонка.",
+    "ko": "점심 전에 전화 두 통 해야 해요."
+   },
+   {
+    "en": "We have a lot to talk about.",
+    "ru": "Нам есть о чём поговорить.",
+    "ko": "우리 얘기할 게 많아요."
+   },
+   {
+    "en": "I don't have much to say about it.",
+    "ru": "Мне особо нечего об этом сказать.",
+    "ko": "그거에 대해선 별로 할 말이 없어요."
+   }
+  ],
+  "dialogue": [
+   {
+    "s": "A",
+    "en": "Want to grab lunch and go see a movie?",
+    "ru": "Пообедаем и сходим в кино?",
+    "ko": "점심 먹고 영화 볼래요?"
+   },
+   {
+    "s": "B",
+    "en": "Lunch sounds good, but I have some chores to do in the afternoon.",
+    "ru": "Обед — да, но у меня после обеда дела по дому.",
+    "ko": "점심은 좋은데, 오후에 집안일이 좀 있어요."
+   },
+   {
+    "s": "A",
+    "en": "No problem. Next weekend, then?",
+    "ru": "Не проблема. Тогда на следующих выходных?",
+    "ko": "괜찮아요. 그럼 다음 주말에 할까요?"
+   },
+   {
+    "s": "B",
+    "en": "Works for me.",
+    "ru": "Мне подходит.",
+    "ko": "저는 좋아요.",
+    "you": true
+   }
+  ],
+  "notes": [
+   {
+    "ru": "have something to do ≠ have to do something. I have work to do — у меня есть работа. I have to work — я обязан работать.",
+    "ko": "have + 명사 + to부정사는 '할 ~가 있다', have to + 동사는 '~해야 한다'입니다."
+   },
+   {
+    "ru": "Схема: have + (a lot / some / nothing / anything) + to + глагол.",
+    "ko": "have + 수량 표현 + to + 동사원형 구조로 외우세요."
+   },
+   {
+    "ru": "Do you have anything to add? — стандартная фраза в конце совещания. Запомните целиком.",
+    "ko": "회의 마무리에 쓰는 정형 표현입니다. 통째로 외우세요."
+   }
+  ],
+  "quiz": [
+   {
+    "type": "build",
+    "ru": "Хотите что-нибудь добавить?",
+    "ko": "더 하실 말씀 있으세요?",
+    "answer": "Do you have anything to add?",
+    "extra": [
+     "some",
+     "adding"
+    ]
+   },
+   {
+    "type": "pick",
+    "q_ru": "«У меня есть работа, которую надо сделать»",
+    "q_ko": "'해야 할 일이 있어요'는?",
+    "options": [
+     {
+      "en": "I have work to do.",
+      "ok": true
+     },
+     {
+      "en": "I have to work to do.",
+      "ok": false
+     }
+    ],
+    "why": {
+     "ru": "have to — это обязанность, здесь она не нужна: работа уже есть как объект.",
+     "ko": "여기서는 의무가 아니라 '할 일'이라는 목적어이므로 have to를 쓰지 않습니다."
+    }
+   }
+  ]
+ },
+ "6": {
+  "meaning": {
+   "ru": "Неодушевлённое подлежащее + have: у места, здания или предмета есть характеристика, атмосфера, функция.",
+   "ko": "장소나 사물이 주어가 되어 '~가 있다, ~한 특징을 가지다'를 나타냅니다."
+  },
+  "examples": [
+   {
+    "en": "The Gion district in Kyoto has a charming vibe.",
+    "ru": "У квартала Гион в Киото особое очарование.",
+    "ko": "교토 기온 거리는 분위기가 참 좋아요."
+   },
+   {
+    "en": "This cafe has really good desserts.",
+    "ru": "В этом кафе очень хорошие десерты.",
+    "ko": "이 카페 디저트가 진짜 괜찮아요."
+   },
+   {
+    "en": "The new model has a bigger screen.",
+    "ru": "У новой модели экран больше.",
+    "ko": "새 모델은 화면이 더 커요."
+   },
+   {
+    "en": "Our office has a great view.",
+    "ru": "Из нашего офиса отличный вид.",
+    "ko": "저희 사무실은 전망이 좋아요."
+   },
+   {
+    "en": "Does this hotel have a gym?",
+    "ru": "В этом отеле есть спортзал?",
+    "ko": "이 호텔에 헬스장 있어요?"
+   },
+   {
+    "en": "This restaurant has a nice terrace.",
+    "ru": "В этом ресторане приятная терраса.",
+    "ko": "이 식당은 테라스가 좋아요."
+   }
+  ],
+  "dialogue": [
+   {
+    "s": "A",
+    "en": "How was Kyoto?",
+    "ru": "Как Киото?",
+    "ko": "교토 어땠어요?"
+   },
+   {
+    "s": "B",
+    "en": "Amazing. The Gion district has a charming vibe, especially at night.",
+    "ru": "Потрясающе. У Гиона особое очарование, особенно вечером.",
+    "ko": "너무 좋았어요. 기온 거리는 특히 밤에 분위기가 정말 좋아요."
+   },
+   {
+    "s": "A",
+    "en": "Is it very touristy?",
+    "ru": "Там очень туристично?",
+    "ko": "관광객 많아요?"
+   },
+   {
+    "s": "B",
+    "en": "A bit, but it's still worth it.",
+    "ru": "Немного, но всё равно стоит того.",
+    "ko": "좀 있긴 한데 그래도 가 볼 만해요.",
+    "you": true
+   }
+  ],
+  "notes": [
+   {
+    "ru": "«В этом кафе хорошие десерты» → This cafe has good desserts. Не In this cafe are good desserts — это калька с русского.",
+    "ko": "장소를 주어로 삼아 have를 쓰는 것이 영어식 발상입니다."
+   },
+   {
+    "ru": "vibe — разговорное «атмосфера». Формально: atmosphere, character.",
+    "ko": "vibe는 구어체이고, 격식 있는 자리에서는 atmosphere를 씁니다."
+   },
+   {
+    "ru": "Об услугах в отеле естественнее have: Does the hotel have parking? — лучше, чем Is there parking in the hotel?",
+    "ko": "호텔 시설을 물을 때는 have가 더 자연스럽습니다."
+   }
+  ],
+  "quiz": [
+   {
+    "type": "build",
+    "ru": "В этом отеле есть спортзал?",
+    "ko": "이 호텔에 헬스장 있어요?",
+    "answer": "Does this hotel have a gym?",
+    "extra": [
+     "Is",
+     "there"
+    ]
+   },
+   {
+    "type": "pick",
+    "q_ru": "«Из нашего офиса отличный вид»",
+    "q_ko": "'저희 사무실은 전망이 좋아요'는?",
+    "options": [
+     {
+      "en": "Our office has a great view.",
+      "ok": true
+     },
+     {
+      "en": "In our office is a great view.",
+      "ok": false
+     }
+    ],
+    "why": {
+     "ru": "Английский делает место подлежащим и вешает на него have.",
+     "ko": "영어는 장소를 주어로 삼습니다."
+    }
+   }
+  ]
+ },
+ "7": {
+  "meaning": {
+   "ru": "have somebody over — принимать гостей у себя дома. Устойчивая благодарность гостя: Thank you for having us.",
+   "ko": "'집에 초대하다'라는 뜻입니다. 손님이 하는 인사 Thank you for having us도 함께 외우세요."
+  },
+  "examples": [
+   {
+    "en": "Thank you for having us over for dinner.",
+    "ru": "Спасибо, что пригласили нас на ужин.",
+    "ko": "저녁 초대해 주셔서 감사합니다."
+   },
+   {
+    "en": "We're having some friends over on Saturday.",
+    "ru": "В субботу к нам придут друзья.",
+    "ko": "토요일에 친구들 몇 명 초대했어요."
+   },
+   {
+    "en": "Let's have them over sometime.",
+    "ru": "Давай как-нибудь позовём их к нам.",
+    "ko": "언제 한번 초대하죠."
+   },
+   {
+    "en": "Thanks for having me.",
+    "ru": "Спасибо, что позвали.",
+    "ko": "초대해 주셔서 감사합니다."
+   },
+   {
+    "en": "She had her parents over for the holidays.",
+    "ru": "Она принимала родителей на праздники.",
+    "ko": "명절에 부모님을 모셨어요."
+   },
+   {
+    "en": "We don't have people over very often.",
+    "ru": "Мы нечасто зовём гостей.",
+    "ko": "저희는 손님을 자주 초대하진 않아요."
+   }
+  ],
+  "dialogue": [
+   {
+    "s": "A",
+    "en": "Thank you for having us over for dinner. Everything was delicious.",
+    "ru": "Спасибо, что позвали на ужин. Всё было очень вкусно.",
+    "ko": "저녁 초대해 주셔서 감사합니다. 다 너무 맛있었어요."
+   },
+   {
+    "s": "B",
+    "en": "I'm so glad you enjoyed it.",
+    "ru": "Очень рада, что вам понравилось.",
+    "ko": "맛있게 드셨다니 다행이에요."
+   },
+   {
+    "s": "A",
+    "en": "Next time you two come to our place.",
+    "ru": "В следующий раз вы к нам.",
+    "ko": "다음엔 저희 집으로 오세요."
+   },
+   {
+    "s": "B",
+    "en": "We'd love to.",
+    "ru": "С удовольствием.",
+    "ko": "좋죠, 꼭 갈게요.",
+    "you": true
+   }
+  ],
+  "notes": [
+   {
+    "ru": "Thanks for having me — универсальная благодарность гостя: и в гостях, и в подкасте, и на встрече.",
+    "ko": "집, 방송, 행사 어디서든 손님이 쓰는 표현입니다."
+   },
+   {
+    "ru": "have over — именно к себе домой. invite — шире и формальнее.",
+    "ko": "have over는 '집으로', invite는 더 넓고 격식 있는 표현입니다."
+   },
+   {
+    "ru": "Ответ хозяина: Thanks for coming. / Our pleasure.",
+    "ko": "초대한 쪽은 Thanks for coming이라고 답합니다."
+   }
+  ],
+  "quiz": [
+   {
+    "type": "build",
+    "ru": "Спасибо, что пригласили нас на ужин.",
+    "ko": "저녁 초대해 주셔서 감사합니다.",
+    "answer": "Thank you for having us over for dinner.",
+    "extra": [
+     "invite",
+     "to"
+    ]
+   },
+   {
+    "type": "pick",
+    "q_ru": "Гость уходит. Что он скажет?",
+    "q_ko": "손님이 돌아가며 하는 인사는?",
+    "options": [
+     {
+      "en": "Thanks for having me.",
+      "ok": true
+     },
+     {
+      "en": "Thanks for inviting me to have.",
+      "ok": false
+     }
+    ],
+    "why": {
+     "ru": "Thanks for having me — готовая формула, менять её не нужно.",
+     "ko": "통째로 굳어진 표현입니다."
+    }
+   }
+  ]
+ },
+ "8": {
+  "meaning": {
+   "ru": "Каузатив: have + человек + глагол БЕЗ to. «Попросить / устроить, чтобы кто-то что-то сделал». Мягче, чем make (заставить).",
+   "ko": "have + 사람 + 동사원형: '~에게 ~하게 하다'. make(강제)보다 부드러운 표현입니다."
+  },
+  "examples": [
+   {
+    "en": "You could have Daniel give you a ride.",
+    "ru": "Ты можешь попросить Даниэля тебя подвезти.",
+    "ko": "다니엘한테 태워 달라고 하면 되잖아요."
+   },
+   {
+    "en": "I'll have my assistant send you the file.",
+    "ru": "Я попрошу ассистента прислать вам файл.",
+    "ko": "비서한테 파일 보내 드리라고 할게요."
+   },
+   {
+    "en": "Let me have someone call you back.",
+    "ru": "Я попрошу, чтобы вам перезвонили.",
+    "ko": "담당자가 다시 연락드리게 하겠습니다."
+   },
+   {
+    "en": "She had the waiter bring more water.",
+    "ru": "Она попросила официанта принести ещё воды.",
+    "ko": "웨이터한테 물 더 갖다 달라고 했어요."
+   },
+   {
+    "en": "I'll have them check the shipment again.",
+    "ru": "Попрошу их ещё раз проверить отгрузку.",
+    "ko": "출고 건 다시 확인해 보라고 하겠습니다."
+   },
+   {
+    "en": "Have him wait in the lobby.",
+    "ru": "Пусть подождёт в холле.",
+    "ko": "로비에서 기다리시라고 해 주세요."
+   }
+  ],
+  "dialogue": [
+   {
+    "s": "A",
+    "en": "I don't think I can get to the airport by six.",
+    "ru": "Вряд ли успею в аэропорт к шести.",
+    "ko": "6시까지 공항에 못 갈 것 같아요."
+   },
+   {
+    "s": "B",
+    "en": "You could have Daniel give you a ride. He's driving that way anyway.",
+    "ru": "Попроси Даниэля подвезти, он всё равно едет в ту сторону.",
+    "ko": "다니엘한테 태워 달라고 해요. 어차피 그쪽으로 가잖아요."
+   },
+   {
+    "s": "A",
+    "en": "Good idea. Would that be okay with him?",
+    "ru": "Хорошая идея. Ему будет удобно?",
+    "ko": "좋은 생각이네요. 괜찮을까요?"
+   },
+   {
+    "s": "B",
+    "en": "I'm sure he wouldn't mind.",
+    "ru": "Уверен, он не против.",
+    "ko": "아마 상관없을 거예요.",
+    "you": true
+   }
+  ],
+  "notes": [
+   {
+    "ru": "Три каузатива: have (попросить, нейтрально) / make (заставить) / get (уговорить, get + to + глагол). I'll have him call / I made him call / I got him to call.",
+    "ko": "have는 중립, make는 강제, get은 설득입니다. get만 to부정사를 씁니다."
+   },
+   {
+    "ru": "Голый инфинитив, без to: have him call, а не have him to call. Частая ошибка.",
+    "ko": "have 다음에는 to 없이 동사원형이 옵니다. 자주 틀리는 부분입니다."
+   },
+   {
+    "ru": "В деловой переписке I'll have my colleague follow up — стандартная вежливая формула.",
+    "ko": "업무 메일에서 자주 쓰는 정중한 표현입니다."
+   }
+  ],
+  "quiz": [
+   {
+    "type": "build",
+    "ru": "Я попрошу ассистента прислать вам файл.",
+    "ko": "비서한테 파일 보내 드리라고 할게요.",
+    "answer": "I'll have my assistant send you the file.",
+    "extra": [
+     "to send",
+     "asking"
+    ]
+   },
+   {
+    "type": "pick",
+    "q_ru": "«Попрошу его вам перезвонить»",
+    "q_ko": "'그에게 다시 전화드리라고 할게요'는?",
+    "options": [
+     {
+      "en": "I'll have him call you back.",
+      "ok": true
+     },
+     {
+      "en": "I'll have him to call you back.",
+      "ok": false
+     }
+    ],
+    "why": {
+     "ru": "После have — глагол без to.",
+     "ko": "have 뒤에는 to를 쓰지 않습니다."
+    }
+   }
+  ]
+ },
+ "9": {
+  "meaning": {
+   "ru": "get = получить, достать, приобрести — самое базовое значение. В разговоре заменяет buy, receive, obtain.",
+   "ko": "가장 기본적인 '얻다, 구하다, 사다'의 의미로, 구어에서 buy/receive/obtain을 대신합니다."
+  },
+  "examples": [
+   {
+    "en": "My boyfriend got a ticket to the concert.",
+    "ru": "Мой парень достал билет на концерт.",
+    "ko": "남자친구가 콘서트 티켓을 구했어요."
+   },
+   {
+    "en": "I got your email, thanks.",
+    "ru": "Получил ваше письмо, спасибо.",
+    "ko": "메일 잘 받았습니다, 감사합니다."
+   },
+   {
+    "en": "Where did you get that jacket?",
+    "ru": "Где ты взял эту куртку?",
+    "ko": "그 재킷 어디서 샀어요?"
+   },
+   {
+    "en": "I need to get a new phone.",
+    "ru": "Мне нужен новый телефон.",
+    "ko": "휴대폰 새로 사야 해요."
+   },
+   {
+    "en": "Did you get the documents from the customs broker?",
+    "ru": "Ты получил документы от таможенного брокера?",
+    "ko": "관세사한테 서류 받았어요?"
+   },
+   {
+    "en": "He got a job at a hospital in Almaty.",
+    "ru": "Он устроился на работу в больницу в Алматы.",
+    "ko": "알마티에 있는 병원에 취직했어요."
+   }
+  ],
+  "dialogue": [
+   {
+    "s": "A",
+    "en": "My boyfriend got a ticket to the concert.",
+    "ru": "Мой парень достал билет на концерт.",
+    "ko": "남자친구가 콘서트 티켓을 구했어요."
+   },
+   {
+    "s": "B",
+    "en": "Only one?",
+    "ru": "Только один?",
+    "ko": "한 장만요?"
+   },
+   {
+    "s": "A",
+    "en": "Yeah, they sold out in five minutes.",
+    "ru": "Да, всё раскупили за пять минут.",
+    "ko": "네, 5분 만에 매진됐어요."
+   },
+   {
+    "s": "B",
+    "en": "That's rough. Maybe try the resale site.",
+    "ru": "Обидно. Попробуй сайт перепродажи.",
+    "ko": "아쉽네요. 리셀 사이트 한번 봐요.",
+    "you": true
+   }
+  ],
+  "notes": [
+   {
+    "ru": "get покрывает buy, receive, obtain и find. В письме лучше receive / obtain, в разговоре — почти всегда get.",
+    "ko": "구어에서는 get 하나로 해결되지만, 격식 있는 문서에서는 receive/obtain을 씁니다."
+   },
+   {
+    "ru": "got ≠ have got. I got a new phone — купил (действие). I've got a new phone — у меня есть (состояние).",
+    "ko": "got은 '샀다', have got은 '가지고 있다'입니다."
+   },
+   {
+    "ru": "Запоминайте связками: get a job, get a ticket, get an email, get a haircut.",
+    "ko": "덩어리째 외우는 것이 효율적입니다."
+   }
+  ],
+  "quiz": [
+   {
+    "type": "build",
+    "ru": "Где ты взял эту куртку?",
+    "ko": "그 재킷 어디서 샀어요?",
+    "answer": "Where did you get that jacket?",
+    "extra": [
+     "have",
+     "got"
+    ]
+   },
+   {
+    "type": "pick",
+    "q_ru": "«Получил ваше письмо»",
+    "q_ko": "'메일 잘 받았습니다'는?",
+    "options": [
+     {
+      "en": "I got your email.",
+      "ok": true
+     },
+     {
+      "en": "I am getting your email.",
+      "ok": false
+     }
+    ],
+    "why": {
+     "ru": "Письмо уже получено — это завершённое действие, Continuous не подходит.",
+     "ko": "이미 끝난 동작이므로 진행형을 쓰지 않습니다."
+    }
+   }
+  ]
+ },
+ "10": {
+  "meaning": {
+   "ru": "get a table / get a seat / get a spot — «достать, занять место». Подразумевается, что это непросто или требует брони.",
+   "ko": "'자리를 잡다, 구하다'의 의미로, 쉽지 않거나 예약이 필요한 상황에서 씁니다."
+  },
+  "examples": [
+   {
+    "en": "You have to book way in advance to get a table there.",
+    "ru": "Столик там надо бронировать сильно заранее.",
+    "ko": "거기는 한참 전에 예약해야 자리가 있어요."
+   },
+   {
+    "en": "We got a table by the window.",
+    "ru": "Нам достался столик у окна.",
+    "ko": "창가 자리 잡았어요."
+   },
+   {
+    "en": "I couldn't get a seat on the morning flight.",
+    "ru": "Не смог взять место на утренний рейс.",
+    "ko": "아침 비행기 자리를 못 구했어요."
+   },
+   {
+    "en": "Try to get there early to get a good spot.",
+    "ru": "Приходи пораньше, чтобы занять хорошее место.",
+    "ko": "좋은 자리 잡으려면 일찍 가세요."
+   },
+   {
+    "en": "Did you get tickets for Saturday?",
+    "ru": "Ты взял билеты на субботу?",
+    "ko": "토요일 표 구했어요?"
+   },
+   {
+    "en": "We got the last two rooms at the hotel.",
+    "ru": "Мы взяли последние два номера в отеле.",
+    "ko": "호텔에 마지막 남은 방 두 개 잡았어요."
+   }
+  ],
+  "dialogue": [
+   {
+    "s": "A",
+    "en": "Let's try that new place in Gangnam.",
+    "ru": "Давай сходим в то новое место в Каннаме.",
+    "ko": "강남에 새로 생긴 데 가 볼까요?"
+   },
+   {
+    "s": "B",
+    "en": "You have to book way in advance to get a table there.",
+    "ru": "Там столик надо бронировать сильно заранее.",
+    "ko": "거기는 한참 전에 예약해야 자리가 있어요."
+   },
+   {
+    "s": "A",
+    "en": "How far in advance?",
+    "ru": "Насколько заранее?",
+    "ko": "얼마나 전에요?"
+   },
+   {
+    "s": "B",
+    "en": "About a month, I heard.",
+    "ru": "Говорят, примерно за месяц.",
+    "ko": "한 달 정도라고 들었어요.",
+    "you": true
+   }
+  ],
+  "notes": [
+   {
+    "ru": "way in advance — «сильно заранее». way усиливает: way too expensive, way better, way more.",
+    "ko": "way는 강조어입니다. way too expensive처럼 씁니다."
+   },
+   {
+    "ru": "book (британское) = reserve (американское). Оба понятны везде.",
+    "ko": "book은 영국식, reserve는 미국식이지만 둘 다 통합니다."
+   },
+   {
+    "ru": "Не путайте: get a table — сесть за столик сейчас; get a reservation — получить бронь.",
+    "ko": "get a table는 자리를 잡는 것, get a reservation은 예약을 잡는 것입니다."
+   }
+  ],
+  "quiz": [
+   {
+    "type": "build",
+    "ru": "Нам достался столик у окна.",
+    "ko": "창가 자리 잡았어요.",
+    "answer": "We got a table by the window.",
+    "extra": [
+     "have",
+     "on"
+    ]
+   },
+   {
+    "type": "pick",
+    "q_ru": "«Бронировать надо сильно заранее»",
+    "q_ko": "'한참 전에 예약해야 해요'는?",
+    "options": [
+     {
+      "en": "You have to book way in advance.",
+      "ok": true
+     },
+     {
+      "en": "You have to book very in advance.",
+      "ok": false
+     }
+    ],
+    "why": {
+     "ru": "Перед in advance усилитель — way, не very.",
+     "ko": "in advance 앞에는 very가 아니라 way를 씁니다."
+    }
+   }
+  ]
+ }
+}
