@@ -24,8 +24,9 @@ docs/
   image-brief.csv
   style-prompt.txt   единый стиль для всех картинок
 tools/
-  build-data.py      content/*.json  →  app/data.js
+  build-data.py      content/*.json  →  app/data.js (сам находит картинки)
   build-artifact.py  app/            →  build/artifact.html
+  cut-grid.py        композит 2×2    →  четыре app/images/day-NNN.jpg
 ```
 
 ## Урок дня
@@ -55,5 +56,15 @@ python3 -m http.server 8000 --directory app
 
 ## Иллюстрации
 
-Файлы кладутся в `app/images/` с именами `day-001.png` … `day-100.png`,
-16:9, минимум 1200×675. Если файла нет, урок показывает заглушку.
+Файлы кладутся в `app/images/` с именами `day-001` … `day-100`, расширение
+любое из jpg / jpeg / png / webp — `build-data.py` находит его сам. Пропорции
+3:2, минимум 1350×900. Если файла нет, урок показывает заглушку.
+
+Если картинки приходят сеткой 2×2 с подписями:
+
+```sh
+python3 tools/cut-grid.py grid.png 17 18 19 20   # по часовой с левого верхнего
+python3 tools/build-data.py
+```
+
+Единый стиль генерации — `docs/style-prompt.txt`.

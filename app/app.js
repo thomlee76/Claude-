@@ -135,11 +135,12 @@ function shuffle(a) {
 
 /* ---------- иллюстрация ---------- */
 function illo(d) {
+  if (!d.image) {
+    return '<div class="illo"><div class="ph"><b>' + esc(d.verb) + "</b>" +
+      '<span>иллюстрация ещё не добавлена</span></div></div>';
+  }
   var src = (window.IMG_BASE || "images/") + d.image;
-  return '<div class="illo">' +
-    '<img src="' + esc(src) + '" alt="" loading="lazy" onerror="this.parentNode.innerHTML=\'' +
-    '<div class=&quot;ph&quot;><b>' + esc(d.verb) + '</b><span>иллюстрация ' + esc(d.image) + ' ещё не добавлена</span></div>\'">' +
-    "</div>";
+  return '<div class="illo"><img src="' + esc(src) + '" alt="" loading="lazy"></div>';
 }
 
 /* ============================================================
