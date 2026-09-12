@@ -18,12 +18,14 @@ app/                 само приложение (статика, без сб�
   icons/             иконки PWA
 content/
   days.json          100 дней: глагол, оттенок, ключевое предложение, RU/KO
-  lessons.json       развёрнутое содержание уроков
+  lessons.json       автогенерируется из content/src/
+  src/               исходники уроков, по десять дней в файле
 docs/
   VERB100_картинки_брифинг.xlsx   бриф на 100 иллюстраций
   image-brief.csv
   style-prompt.txt   единый стиль для всех картинок
 tools/
+  build-lessons.py   content/src/*.py →  content/lessons.json (с проверками)
   build-data.py      content/*.json  →  app/data.js (сам находит картинки)
   build-artifact.py  app/            →  build/artifact.html
   cut-grid.py        композит 2×2    →  четыре app/images/day-NNN.jpg
@@ -43,9 +45,14 @@ tools/
 ## Разработка
 
 ```sh
-python3 tools/build-data.py      # пересобрать данные после правки content/
+python3 tools/build-lessons.py   # исходники уроков → content/lessons.json
+python3 tools/build-data.py      # content/ → app/data.js
 python3 -m http.server 8000 --directory app
 ```
+
+`build-lessons.py` заодно проверяет: по шесть примеров и три заметки в уроке,
+ровно одна реплика ученика в диалоге, один верный вариант в тесте, ни одного
+пустого перевода. При ошибке сборка падает и печатает, где именно.
 
 Прогресс хранится в localStorage на устройстве, сервер не нужен.
 
