@@ -1,0 +1,578 @@
+<title>복약 시간</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --ground:#EFF4F2;
+    --surface:#FFFFFF;
+    --surface-2:#F6FAF8;
+    --ink:#1C2422;
+    --ink-2:#586964;
+    --ink-3:#8A9A95;
+    --line:#DCE7E3;
+    --line-soft:#E9F0EE;
+    --mint:#2FA98C;
+    --mint-deep:#1B7A62;
+    --mint-soft:#DFF1EB;
+    --terra:#D25C3C;
+    --terra-soft:#FAE7E0;
+    --shadow-sm:0 1px 2px rgba(20,40,35,.06);
+    --shadow-lg:0 2px 4px rgba(20,40,35,.05), 0 24px 48px -20px rgba(20,40,35,.28);
+    --radius-phone:38px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#0D1412;
+      --surface:#161F1C;
+      --surface-2:#1C2622;
+      --ink:#E6EEEB;
+      --ink-2:#9BADA8;
+      --ink-3:#6F817C;
+      --line:#26332F;
+      --line-soft:#1F2B27;
+      --mint:#43C8A6;
+      --mint-deep:#8CE3CB;
+      --mint-soft:#12302A;
+      --terra:#EE8062;
+      --terra-soft:#33201A;
+      --shadow-sm:0 1px 2px rgba(0,0,0,.4);
+      --shadow-lg:0 2px 4px rgba(0,0,0,.3), 0 24px 48px -20px rgba(0,0,0,.7);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0D1412;
+    --surface:#161F1C;
+    --surface-2:#1C2622;
+    --ink:#E6EEEB;
+    --ink-2:#9BADA8;
+    --ink-3:#6F817C;
+    --line:#26332F;
+    --line-soft:#1F2B27;
+    --mint:#43C8A6;
+    --mint-deep:#8CE3CB;
+    --mint-soft:#12302A;
+    --terra:#EE8062;
+    --terra-soft:#33201A;
+    --shadow-sm:0 1px 2px rgba(0,0,0,.4);
+    --shadow-lg:0 2px 4px rgba(0,0,0,.3), 0 24px 48px -20px rgba(0,0,0,.7);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--ground);
+    color:var(--ink);
+    font-family:"Manrope","Noto Sans KR","Apple SD Gothic Neo","Helvetica Neue",Arial,sans-serif;
+    font-size:15px;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1300px;margin:0 auto;padding-inline:20px;padding-block:48px 72px}
+
+  /* ---------- page header ---------- */
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--mint-deep);margin:0 0 14px;
+  }
+  h1{
+    font-size:clamp(32px,5vw,46px);font-weight:800;letter-spacing:-.025em;
+    margin:0 0 12px;text-wrap:balance;line-height:1.08;
+  }
+  .lede{max-width:62ch;color:var(--ink-2);font-size:16px;margin:0}
+  .lede b{color:var(--ink);font-weight:600}
+
+  .rule{height:1px;background:var(--line);border:0;margin:40px 0}
+
+  h2{
+    font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink-3);margin:0 0 20px;
+  }
+
+  /* ---------- palette ---------- */
+  .palette{
+    display:grid;gap:10px;
+    grid-template-columns:repeat(auto-fit,minmax(148px,1fr));
+  }
+  .sw{
+    background:var(--surface);border:1px solid var(--line);border-radius:12px;
+    padding:12px 14px;display:flex;flex-direction:column;gap:10px;
+  }
+  .sw .chip{height:34px;border-radius:8px;border:1px solid rgba(0,0,0,.06)}
+  .sw .nm{font-weight:600;font-size:13px;line-height:1.25}
+  .sw .hex{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-3);letter-spacing:.02em}
+  .sw .use{font-size:11.5px;color:var(--ink-2);line-height:1.35}
+
+  /* ---------- phones ---------- */
+  .screens{
+    display:grid;gap:34px 26px;
+    grid-template-columns:repeat(auto-fit,minmax(272px,300px));
+    justify-content:center;
+  }
+  .screen-block{display:flex;flex-direction:column;gap:14px;align-items:center}
+  .cap{text-align:center;max-width:300px}
+  .cap .t{font-weight:700;font-size:15px}
+  .cap .d{font-size:12.5px;color:var(--ink-2);line-height:1.45;margin-top:3px}
+
+  .phone{
+    width:100%;max-width:300px;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius-phone);
+    box-shadow:var(--shadow-lg);
+    overflow:hidden;
+    display:flex;flex-direction:column;
+    min-height:616px;
+  }
+  .phone.lock{background:linear-gradient(168deg,#14312B 0%,#1E4A41 46%,#2B6156 100%)}
+
+  .statusbar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 24px 4px;
+    font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;
+    color:var(--ink);letter-spacing:.02em;
+  }
+  .lock .statusbar{color:#DCEFE9}
+  .statusbar .dots{display:flex;gap:3px;align-items:center}
+  .statusbar .dots i{display:block;width:3px;height:9px;border-radius:1px;background:currentColor;opacity:.85}
+  .statusbar .dots i:nth-child(1){height:4px}
+  .statusbar .dots i:nth-child(2){height:6px}
+  .statusbar .dots i:nth-child(3){height:8px}
+  .statusbar .batt{width:20px;height:10px;border:1.2px solid currentColor;border-radius:3px;position:relative;opacity:.85}
+  .statusbar .batt::after{content:"";position:absolute;inset:1.6px;right:6px;background:currentColor;border-radius:1px}
+
+  .head{padding:6px 20px 12px}
+  .head .day{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+  .head .title{font-size:26px;font-weight:800;letter-spacing:-.02em;margin-top:2px}
+
+  .progress{margin:0 20px 4px;padding:13px 15px;background:var(--surface-2);border:1px solid var(--line-soft);border-radius:14px}
+  .progress .row{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+  .progress .big{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:14px;font-variant-numeric:tabular-nums}
+  .progress .sub{font-size:11.5px;color:var(--ink-2)}
+  .bar{height:5px;border-radius:99px;background:var(--line);margin-top:10px;overflow:hidden;display:flex;gap:2px}
+  .bar span{display:block;height:100%;border-radius:99px}
+  .bar .fill{background:var(--mint);width:40%}
+
+  .scroll{flex:1;padding:16px 20px 20px;overflow:hidden}
+
+  /* timeline */
+  .tl{display:flex;flex-direction:column}
+  .slot{display:grid;grid-template-columns:40px 1fr;column-gap:11px}
+  .slot .when{
+    font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;
+    font-variant-numeric:tabular-nums;color:var(--ink-2);padding-top:11px;text-align:right;
+  }
+  .slot .rail{grid-column:1;grid-row:1;justify-self:end;width:40px;position:relative}
+  .slot .body{padding-bottom:12px;position:relative}
+  .slot .body::before{
+    content:"";position:absolute;left:-25.25px;top:26px;bottom:-2px;width:1.5px;background:var(--line);
+  }
+  .slot:last-child .body::before{display:none}
+  .node{
+    position:absolute;left:-31px;top:13px;width:13px;height:13px;border-radius:50%;
+    background:var(--surface);border:2px solid var(--line);
+  }
+  .node.done{background:var(--mint);border-color:var(--mint)}
+  .node.now{border-color:var(--mint);box-shadow:0 0 0 4px var(--mint-soft)}
+  .node.miss{background:var(--terra);border-color:var(--terra)}
+
+  .card{
+    background:var(--surface);border:1px solid var(--line);border-radius:14px;
+    padding:11px 13px;box-shadow:var(--shadow-sm);
+  }
+  .card.dim{background:transparent;box-shadow:none;border-color:var(--line-soft)}
+  .card.active{border-color:var(--mint);box-shadow:0 0 0 3px var(--mint-soft),var(--shadow-sm)}
+  .card .meds{font-weight:700;font-size:14px;letter-spacing:-.01em;line-height:1.3}
+  .card.dim .meds{color:var(--ink-2);font-weight:600}
+  .chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+  .tag{
+    font-size:10.5px;font-weight:600;letter-spacing:.02em;
+    padding:2.5px 7px;border-radius:99px;border:1px solid var(--line);color:var(--ink-2);
+    white-space:nowrap;
+  }
+  .tag.note{background:var(--terra-soft);border-color:transparent;color:var(--terra)}
+  .tag.before{background:var(--mint-soft);border-color:transparent;color:var(--mint-deep)}
+  .state{
+    display:flex;align-items:center;gap:5px;margin-top:8px;
+    font-size:11.5px;font-weight:600;color:var(--mint-deep);
+    font-variant-numeric:tabular-nums;
+  }
+  .state.missed{color:var(--terra)}
+  .memo{
+    display:flex;gap:6px;margin-top:8px;padding:7px 9px;border-radius:9px;
+    background:var(--terra-soft);font-size:11px;line-height:1.35;color:var(--terra);font-weight:600;
+  }
+  .tick{width:13px;height:13px;flex:none}
+
+  .act{
+    display:flex;gap:7px;margin-top:10px;
+  }
+  .btn{
+    flex:1;text-align:center;padding:8px 10px;border-radius:10px;
+    font-size:12.5px;font-weight:700;border:1px solid transparent;cursor:default;
+  }
+  .btn.primary{background:var(--mint);color:#fff}
+  .btn.ghost{background:transparent;border-color:var(--line);color:var(--ink-2);flex:0 0 auto;padding-inline:13px}
+
+  .nowline{
+    display:flex;align-items:center;gap:8px;margin:2px 0 12px -31px;padding-left:0;
+  }
+  .nowline .dot{width:7px;height:7px;border-radius:50%;background:var(--terra);flex:none}
+  .nowline .ln{flex:1;height:1px;background:var(--terra);opacity:.32}
+  .nowline .lb{
+    font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;color:var(--terra);
+    letter-spacing:.06em;font-variant-numeric:tabular-nums;
+  }
+
+  /* tabbar */
+  .tabs{
+    display:flex;border-top:1px solid var(--line);background:var(--surface);
+    padding:9px 10px 16px;gap:4px;
+  }
+  .tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;font-weight:600;color:var(--ink-3)}
+  .tab.on{color:var(--mint-deep)}
+  .tab svg{width:19px;height:19px}
+
+  /* lock screen */
+  .lockwrap{flex:1;display:flex;flex-direction:column;padding:26px 18px 22px;color:#EAF6F2}
+  .lockclock{text-align:center;margin-top:16px}
+  .lockclock .d{font-size:12.5px;font-weight:600;opacity:.78;letter-spacing:.02em}
+  .lockclock .t{
+    font-family:"IBM Plex Mono",monospace;font-size:62px;font-weight:500;
+    letter-spacing:-.03em;line-height:1.05;margin-top:2px;font-variant-numeric:tabular-nums;
+  }
+  .notif{
+    margin-top:auto;background:rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:18px;padding:13px 14px;backdrop-filter:blur(14px);
+  }
+  .notif .top{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:.03em;opacity:.85}
+  .notif .app{width:15px;height:15px;border-radius:4px;background:var(--mint);display:flex;align-items:center;justify-content:center;font-size:9px}
+  .notif .ttl{font-weight:700;font-size:14.5px;margin-top:7px;line-height:1.3}
+  .notif .sub{font-size:12.5px;opacity:.86;margin-top:3px;line-height:1.35}
+  .notif .acts{display:flex;gap:7px;margin-top:11px}
+  .notif .na{
+    flex:1;text-align:center;font-size:12px;font-weight:700;padding:7px;border-radius:10px;
+    background:rgba(255,255,255,.22);
+  }
+  .notif .na.go{background:var(--mint);color:#08241E}
+  .lockhint{text-align:center;font-size:11px;opacity:.6;margin-top:14px}
+
+  /* history */
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:16px}
+  .stat{background:var(--surface-2);border:1px solid var(--line-soft);border-radius:13px;padding:11px 12px}
+  .stat .k{font-size:10.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3)}
+  .stat .v{font-family:"IBM Plex Mono",monospace;font-size:22px;font-weight:600;letter-spacing:-.02em;margin-top:2px;font-variant-numeric:tabular-nums}
+  .stat .v.mint{color:var(--mint-deep)}
+
+  .calhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px}
+  .calhead .m{font-weight:700;font-size:14px}
+  .calhead .nav{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-3);letter-spacing:.2em}
+  .cal{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;text-align:center}
+  .cal .dow{font-size:9.5px;font-weight:700;color:var(--ink-3);letter-spacing:.04em;padding-bottom:2px}
+  .cal .d{
+    aspect-ratio:1;display:flex;align-items:center;justify-content:center;
+    font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;border-radius:9px;
+    color:var(--ink-3);font-variant-numeric:tabular-nums;
+  }
+  .cal .d.full{background:var(--mint);color:#fff;font-weight:600}
+  .cal .d.part{background:var(--mint-soft);color:var(--mint-deep);font-weight:600}
+  .cal .d.miss{background:var(--terra-soft);color:var(--terra);font-weight:600}
+  .cal .d.today{border:1.5px solid var(--mint);color:var(--ink);font-weight:700}
+  .cal .d.off{opacity:.35}
+
+  .legend{display:flex;flex-wrap:wrap;gap:9px;margin-top:11px;font-size:10.5px;color:var(--ink-2)}
+  .legend span{display:flex;align-items:center;gap:4px}
+  .legend i{width:9px;height:9px;border-radius:3px;display:block}
+
+  .bymed{margin-top:16px;display:flex;flex-direction:column;gap:9px}
+  .bymed .r{display:grid;grid-template-columns:1fr 34px;align-items:center;gap:9px}
+  .bymed .n{font-size:12.5px;font-weight:600}
+  .bymed .track{height:4px;background:var(--line);border-radius:99px;margin-top:5px;overflow:hidden}
+  .bymed .track i{display:block;height:100%;background:var(--mint);border-radius:99px}
+  .bymed .p{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;text-align:right;color:var(--ink-2);font-variant-numeric:tabular-nums}
+
+  /* schedule editor */
+  .sched{display:flex;flex-direction:column;gap:9px}
+  .srow{
+    display:grid;grid-template-columns:46px 1fr 16px;align-items:center;gap:10px;
+    background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:10px 12px;
+  }
+  .srow .tm{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums}
+  .srow .nm{font-size:12.5px;font-weight:600;line-height:1.3}
+  .srow .sub{font-size:10.5px;color:var(--ink-3);margin-top:2px}
+  .srow .arw{color:var(--ink-3);font-size:14px;text-align:right}
+
+  .sheet{
+    margin-top:14px;border:1px solid var(--mint);border-radius:16px;padding:13px;
+    background:var(--surface);box-shadow:0 0 0 3px var(--mint-soft);
+  }
+  .sheet .sh{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mint-deep)}
+  .sheet .st{font-family:"IBM Plex Mono",monospace;font-size:20px;font-weight:600;margin-top:3px;font-variant-numeric:tabular-nums}
+  .sheet .sn{font-size:13px;font-weight:700;margin-top:1px;line-height:1.3}
+  .tog{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 0;border-top:1px solid var(--line-soft)}
+  .tog:first-of-type{margin-top:10px}
+  .tog .l{font-size:12.5px;font-weight:600}
+  .tog .sw2{width:34px;height:20px;border-radius:99px;background:var(--line);position:relative;flex:none}
+  .tog .sw2::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:var(--surface);box-shadow:var(--shadow-sm)}
+  .tog .sw2.on{background:var(--mint)}
+  .tog .sw2.on::after{left:16px}
+
+  /* notes */
+  .notes{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+  .note{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:15px 16px}
+  .note h3{font-size:13.5px;font-weight:700;margin:0 0 6px;letter-spacing:-.01em}
+  .note p{margin:0;font-size:13px;color:var(--ink-2);line-height:1.5}
+  .note .q{color:var(--terra);font-weight:700}
+
+  @media (max-width:520px){
+    .stats{grid-template-columns:1fr}
+    .wrap{padding-block:34px 52px}
+  }
+</style>
+
+<div class="wrap">
+
+  <p class="eyebrow">Макет · версия 1 · на согласование</p>
+  <h1>복약 시간</h1>
+  <p class="lede">Пять ежедневных приёмов из вашей таблицы, отметка факта приёма и история соблюдения схемы. Интерфейс на корейском, названия — как на упаковках, ПРЕСТАНС оставлен на русском. Палитра — <b>мята и графит</b>. Ниже: цвета, четыре экрана и открытые вопросы. Это статичный макет — кнопки не нажимаются.</p>
+
+  <hr class="rule">
+
+  <h2>Палитра</h2>
+  <div class="palette">
+    <div class="sw"><div class="chip" style="background:#2FA98C"></div><div><div class="nm">Мята</div><div class="hex">#2FA98C</div></div><div class="use">Основной акцент, кнопка «Принял», закрытые приёмы</div></div>
+    <div class="sw"><div class="chip" style="background:#1B7A62"></div><div><div class="nm">Мята глубокая</div><div class="hex">#1B7A62</div></div><div class="use">Текст на мятном фоне, подписи статуса</div></div>
+    <div class="sw"><div class="chip" style="background:#1C2422"></div><div><div class="nm">Графит</div><div class="hex">#1C2422</div></div><div class="use">Основной текст, названия препаратов</div></div>
+    <div class="sw"><div class="chip" style="background:#586964"></div><div><div class="nm">Серо-зелёный</div><div class="hex">#586964</div></div><div class="use">Вторичный текст, время, подписи</div></div>
+    <div class="sw"><div class="chip" style="background:#EFF4F2;border-color:#DCE7E3"></div><div><div class="nm">Фон</div><div class="hex">#EFF4F2</div></div><div class="use">Подложка экрана, карточки прогресса</div></div>
+    <div class="sw"><div class="chip" style="background:#D25C3C"></div><div><div class="nm">Терракота</div><div class="hex">#D25C3C</div></div><div class="use">Пропущенный приём, метка текущего времени, заметки врача</div></div>
+  </div>
+
+  <hr class="rule">
+
+  <h2>Экраны</h2>
+  <div class="screens">
+
+    <!-- ===== 1. СЕГОДНЯ ===== -->
+    <div class="screen-block">
+      <div class="phone">
+        <div class="statusbar"><span>12:18</span><span style="display:flex;gap:5px;align-items:center"><span class="dots"><i></i><i></i><i></i></span><span class="batt"></span></span></div>
+        <div class="head">
+          <div class="day">9월 12일 토요일</div>
+          <div class="title">오늘</div>
+        </div>
+        <div class="progress">
+          <div class="row"><span class="big">5회 중 2회 복용</span><span class="sub">3회 남음</span></div>
+          <div class="bar"><span class="fill"></span></div>
+        </div>
+        <div class="scroll">
+          <div class="tl">
+
+            <div class="slot">
+              <div class="when">10:00</div>
+              <div class="body">
+                <span class="node done"></span>
+                <div class="card dim">
+                  <div class="meds">비멕스메타비 + 모바렌</div>
+                  <div class="chips"><span class="tag">식후</span></div>
+                  <div class="state">
+                    <svg class="tick" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.4 3.4L13 5"/></svg>
+                    10:04 복용함
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slot">
+              <div class="when">12:00</div>
+              <div class="body">
+                <span class="node done"></span>
+                <div class="card dim">
+                  <div class="meds">ПРЕСТАНС</div>
+                  <div class="chips"><span class="tag before">식전</span></div>
+                  <div class="state">
+                    <svg class="tick" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.4 3.4L13 5"/></svg>
+                    12:02 복용함
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slot">
+              <div class="when">12:30</div>
+              <div class="body">
+                <span class="node now"></span>
+                <div class="nowline"><span class="dot"></span><span class="lb">지금 12:18</span><span class="ln"></span></div>
+                <div class="card active">
+                  <div class="meds">아보다트 + 모바렌 + 미녹시딘</div>
+                  <div class="chips"><span class="tag">식후</span><span class="tag note">메모</span></div>
+                  <div class="memo">혈압 주의 · ПРЕСТАНС 12:02 복용함</div>
+                  <div class="act"><span class="btn primary">복용함</span><span class="btn ghost">건너뛰기</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slot">
+              <div class="when">21:00</div>
+              <div class="body">
+                <span class="node"></span>
+                <div class="card dim">
+                  <div class="meds">오메가3 + 유산균 이야기</div>
+                  <div class="chips"><span class="tag">식후</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slot">
+              <div class="when">22:30</div>
+              <div class="body">
+                <span class="node"></span>
+                <div class="card dim">
+                  <div class="meds">마그네슘 + 수면제</div>
+                  <div class="chips"><span class="tag">취침 전</span></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="tabs">
+          <div class="tab on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>오늘</div>
+          <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></svg>기록</div>
+          <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="9" cy="7" r="2" fill="currentColor" stroke="none"/><circle cx="15" cy="12" r="2" fill="currentColor" stroke="none"/><circle cx="8" cy="17" r="2" fill="currentColor" stroke="none"/></svg>일정</div>
+        </div>
+      </div>
+      <div class="cap"><div class="t">오늘 · Сегодня</div><div class="d">День как лента: время слева, красная метка «сейчас» стоит между приёмами. Ближайший приём выделен и открыт для отметки, ярлык «заметка» отмечает комментарий врача.</div></div>
+    </div>
+
+    <!-- ===== 2. УВЕДОМЛЕНИЕ ===== -->
+    <div class="screen-block">
+      <div class="phone lock">
+        <div class="statusbar"><span>12:30</span><span style="display:flex;gap:5px;align-items:center"><span class="dots"><i></i><i></i><i></i></span><span class="batt"></span></span></div>
+        <div class="lockwrap">
+          <div class="lockclock">
+            <div class="d">9월 12일 토요일</div>
+            <div class="t">12:30</div>
+          </div>
+          <div class="notif">
+            <div class="top"><span class="app">💊</span>복약 시간 · 지금</div>
+            <div class="ttl">12:30 복용</div>
+            <div class="sub">아보다트 + 모바렌 + 미녹시딘<br>식후 복용</div>
+            <div class="acts"><span class="na go">복용함</span><span class="na">건너뛰기</span></div>
+          </div>
+          <div class="lockhint">잠금 해제 없이 약 이름과 복용 조건 확인</div>
+        </div>
+      </div>
+      <div class="cap"><div class="t">알림 · Уведомление</div><div class="d">Названия показываются полностью, как вы выбрали. Отметить приём можно, не открывая приложение.</div></div>
+    </div>
+
+    <!-- ===== 3. ИСТОРИЯ ===== -->
+    <div class="screen-block">
+      <div class="phone">
+        <div class="statusbar"><span>12:18</span><span style="display:flex;gap:5px;align-items:center"><span class="dots"><i></i><i></i><i></i></span><span class="batt"></span></span></div>
+        <div class="head">
+          <div class="day">최근 30일</div>
+          <div class="title">기록</div>
+        </div>
+        <div class="scroll">
+          <div class="stats">
+            <div class="stat"><div class="k">복용률</div><div class="v mint">92%</div></div>
+            <div class="stat"><div class="k">연속 복용</div><div class="v">9일</div></div>
+          </div>
+
+          <div class="calhead"><span class="m">2026년 9월</span><span class="nav">‹ ›</span></div>
+          <div class="cal">
+            <span class="dow">월</span><span class="dow">화</span><span class="dow">수</span><span class="dow">목</span><span class="dow">금</span><span class="dow">토</span><span class="dow">일</span>
+            <span class="d"></span>
+            <span class="d full">1</span><span class="d full">2</span><span class="d part">3</span><span class="d full">4</span><span class="d full">5</span><span class="d full">6</span>
+            <span class="d full">7</span><span class="d miss">8</span><span class="d full">9</span><span class="d full">10</span><span class="d full">11</span><span class="d today">12</span><span class="d off">13</span>
+            <span class="d off">14</span><span class="d off">15</span><span class="d off">16</span><span class="d off">17</span><span class="d off">18</span><span class="d off">19</span><span class="d off">20</span>
+            <span class="d off">21</span><span class="d off">22</span><span class="d off">23</span><span class="d off">24</span><span class="d off">25</span><span class="d off">26</span><span class="d off">27</span>
+            <span class="d off">28</span><span class="d off">29</span><span class="d off">30</span>
+          </div>
+          <div class="legend">
+            <span><i style="background:#2FA98C"></i>5회 모두</span>
+            <span><i style="background:var(--mint-soft)"></i>일부</span>
+            <span><i style="background:var(--terra-soft)"></i>누락</span>
+          </div>
+
+          <div class="bymed">
+            <div class="r"><div><div class="n">모바렌</div><div class="track"><i style="width:96%"></i></div></div><div class="p">96%</div></div>
+            <div class="r"><div><div class="n">아보다트</div><div class="track"><i style="width:93%"></i></div></div><div class="p">93%</div></div>
+            <div class="r"><div><div class="n">ПРЕСТАНС</div><div class="track"><i style="width:90%"></i></div></div><div class="p">90%</div></div>
+            <div class="r"><div><div class="n">미녹시딘</div><div class="track"><i style="width:84%"></i></div></div><div class="p">84%</div></div>
+            <div class="r"><div><div class="n">마그네슘</div><div class="track"><i style="width:97%"></i></div></div><div class="p">97%</div></div>
+          </div>
+        </div>
+        <div class="tabs">
+          <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>오늘</div>
+          <div class="tab on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></svg>기록</div>
+          <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="9" cy="7" r="2" fill="currentColor" stroke="none"/><circle cx="15" cy="12" r="2" fill="currentColor" stroke="none"/><circle cx="8" cy="17" r="2" fill="currentColor" stroke="none"/></svg>일정</div>
+        </div>
+      </div>
+      <div class="cap"><div class="t">기록 · История</div><div class="d">Процент соблюдения за месяц плюс разбивка по препаратам — этот экран можно показать врачу.</div></div>
+    </div>
+
+    <!-- ===== 4. РАСПИСАНИЕ ===== -->
+    <div class="screen-block">
+      <div class="phone">
+        <div class="statusbar"><span>12:18</span><span style="display:flex;gap:5px;align-items:center"><span class="dots"><i></i><i></i><i></i></span><span class="batt"></span></span></div>
+        <div class="head">
+          <div class="day">매일 5회 복용</div>
+          <div class="title">일정</div>
+        </div>
+        <div class="scroll">
+          <div class="sched">
+            <div class="srow"><span class="tm">10:00</span><span><span class="nm">비멕스메타비 + 모바렌</span><span class="sub">식후</span></span><span class="arw">›</span></div>
+            <div class="srow"><span class="tm">12:00</span><span><span class="nm">ПРЕСТАНС</span><span class="sub">식전</span></span><span class="arw">›</span></div>
+            <div class="srow" style="border-color:var(--mint)"><span class="tm">12:30</span><span><span class="nm">아보다트 + 모바렌 + 미녹시딘</span><span class="sub">식후 · 메모 있음</span></span><span class="arw">›</span></div>
+            <div class="srow"><span class="tm">21:00</span><span><span class="nm">오메가3 + 유산균 이야기</span><span class="sub">식후</span></span><span class="arw">›</span></div>
+            <div class="srow"><span class="tm">22:30</span><span><span class="nm">마그네슘 + 수면제</span><span class="sub">취침 전</span></span><span class="arw">›</span></div>
+          </div>
+
+          <div class="sheet">
+            <div class="sh">복용 편집</div>
+            <div class="st">12:30</div>
+            <div class="sn">아보다트 + 모바렌 + 미녹시딘</div>
+            <div class="tog"><span class="l">알림</span><span class="sw2 on"></span></div>
+            <div class="tog"><span class="l">식전</span><span class="sw2"></span></div>
+            <div class="tog"><span class="l">식후</span><span class="sw2 on"></span></div>
+            <div class="tog"><span class="l">의사 메모</span><span class="sw2 on"></span></div>
+          </div>
+        </div>
+        <div class="tabs">
+          <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>오늘</div>
+          <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></svg>기록</div>
+          <div class="tab on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="9" cy="7" r="2" fill="currentColor" stroke="none"/><circle cx="15" cy="12" r="2" fill="currentColor" stroke="none"/><circle cx="8" cy="17" r="2" fill="currentColor" stroke="none"/></svg>일정</div>
+        </div>
+      </div>
+      <div class="cap"><div class="t">일정 · Расписание</div><div class="d">Время и состав приёма можно менять. Условия — переключателями, они попадают в текст уведомления.</div></div>
+    </div>
+
+  </div>
+
+  <hr class="rule">
+
+  <h2>Что нужно подтвердить</h2>
+  <div class="notes">
+    <div class="note">
+      <h3>Ярлыки «с едой» и «перед сном»</h3>
+      <p>В таблице их не было — я проставил по смыслу: 오메가3 и 비멕스메타비 усваиваются с едой, 마그네슘 вечером. <span class="q">Подтвердите или поправьте.</span></p>
+    </div>
+    <div class="note">
+      <h3>Престанс и 미녹시딘 в 30 минутах</h3>
+      <p>Оба влияют на давление: Престанс в 12:00, пероральный 미녹시딘 в 12:30. Под приём добавлено поле заметки. <span class="q">Есть указания врача по разносу этих двух по времени?</span></p>
+    </div>
+    <div class="note">
+      <h3>모바렌 дважды в день</h3>
+      <p>В таблице он в 10:00 и 12:30. Для препаратов этой группы обычная схема — 3 раза в день. <span class="q">Так и оставляем, как у вас?</span></p>
+    </div>
+    <div class="note">
+      <h3>Ограничение iOS</h3>
+      <p>Веб-приложение не умеет надёжно будить iPhone по расписанию. Напоминания оставляем в штатном будильнике, а приложение ведёт отметки и историю. <span class="q">Принимаете это ограничение?</span></p>
+    </div>
+  </div>
+
+</div>
