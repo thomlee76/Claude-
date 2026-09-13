@@ -33,6 +33,130 @@ function save() {
   try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {}
 }
 
+/* ---------- строки интерфейса ---------- */
+var UI = {
+  greet:        ["Доброе утро", "좋은 아침입니다"],
+  streakOn:     ["Серия идёт", "연속 학습 중"],
+  courseDone:   ["Курс пройден", "과정 완료"],
+  settings:     ["Настройки", "설정"],
+  close:        ["Закрыть", "닫기"],
+  back:         ["Назад", "뒤로"],
+  progressAria: ["Пройдено %1 из 100", "100일 중 %1일 완료"],
+  done:         ["Готово", "완료"],
+  doneText:     ["Все 100 уроков пройдены. Дальше — только повторение: карточки продолжают приходить по графику.",
+                 "100개 수업을 모두 마쳤습니다. 이제부터는 복습만 남았고, 카드는 일정에 따라 계속 나옵니다."],
+  chapter:      ["ГЛАВА", "챕터"],
+  draft:        ["черновик", "초안"],
+  startLesson:  ["Начать урок", "학습 시작"],
+  min12:        ["12 мин", "12분"],
+  min3:         ["3 мин", "3분"],
+  review:       ["Повторение", "복습"],
+  dueCards:     ["Карточек на сегодня — <b>%1</b>", "오늘 복습할 카드 <b>%1</b>장"],
+  dueNone:      ["На сегодня всё чисто", "오늘은 복습할 카드가 없습니다"],
+  start:        ["Начать", "시작"],
+  streak:       ["Серия", "연속"],
+  streakDays:   ["%1 подряд", "%1 연속"],
+  streakNone:   ["Начнём сегодня", "오늘부터 시작합니다"],
+  streakNone2:  ["Пока нет", "아직 없음"],
+  watching:     ["Смотрю параллельно", "함께 보기"],
+  lectureOn:    ["Лекция по DAY %1", "DAY %1 강의"],
+  ytChannel:    ["YouTube · канал 영어독학", "YouTube · 영어독학 채널"],
+  open:         ["Открыть", "열기"],
+  keySentence:  ["Ключевое предложение", "핵심 문장"],
+  listen:       ["🔊 Слушать", "🔊 듣기"],
+  meaning:      ["Значение", "의미"],
+  draftTitle:   ["Урок в подготовке", "준비 중인 수업"],
+  draftBody:    ["Развёрнутые блоки Model Examples, Small Talk и Further Studies для этого дня ещё не залиты. Ключевое предложение из книги уже здесь — прослушайте, повторите вслух и отметьте день пройденным.",
+                 "이 날의 Model Examples, Small Talk, Further Studies는 아직 준비 중입니다. 책의 핵심 문장은 이미 들어 있으니 듣고 소리 내어 따라 한 뒤 완료로 표시하세요."],
+  hintExamples: ["Нажмите на строку, чтобы скрыть перевод, и переведите сами.",
+                 "문장을 누르면 번역이 사라집니다. 직접 옮겨 보세요."],
+  hintDialogue: ["Последняя реплика — ваша. Скажите её вслух, потом откройте.",
+                 "마지막 대사는 여러분 차례입니다. 소리 내어 말한 뒤 열어 보세요."],
+  hintNotes:    ["Три момента, на которых обычно спотыкаются.", "많이들 헷갈리는 세 가지입니다."],
+  you:          ["вы", "나"],
+  yourLine:     ["Ваша реплика…", "여러분의 대사…"],
+  playDialogue: ["🔊 Прослушать диалог", "🔊 대화 듣기"],
+  next:         ["Дальше", "다음"],
+  finishDay:    ["Завершить DAY %1", "DAY %1 마치기"],
+  check:        ["проверка", "확인"],
+  taskOf:       ["Задание %1 из %2", "문제 %1 / %2"],
+  buildIt:      ["Соберите предложение", "문장 배열하기"],
+  clear:        ["Очистить", "지우기"],
+  correct:      ["Верно.", "정답입니다."],
+  wrong:        ["Мимо.", "아쉽네요."],
+  notMatching:  ["Не сходится.", "순서가 맞지 않습니다."],
+  rightOrder:   ["Правильный порядок: ", "올바른 순서: "],
+  tryAgain:     ["Попробовать снова", "다시 해 보기"],
+  dayDoneErr:   ["DAY %1 пройден. Ошибок: %2", "DAY %1 완료. 오답 %2개"],
+  dayDoneClean: ["DAY %1 пройден без ошибок", "DAY %1 완료, 오답 없음"],
+  srsCards:     ["Интервальные карточки", "간격 반복 카드"],
+  emptyTitle:   ["Пусто", "비어 있습니다"],
+  emptyBody:    ["Карточки появятся завтра. Интервалы — 1, 3, 7, 21 и 60 дней после урока.",
+                 "카드는 내일부터 나옵니다. 간격은 학습 후 1, 3, 7, 21, 60일입니다."],
+  inQueue:      ["%1 в работе", "진행 중 %1장"],
+  cardOf:       ["Карточка %1 из %2", "카드 %1 / %2"],
+  sayItAloud:   ["Скажите вслух по-английски, потом откройте.", "영어로 소리 내어 말한 뒤 열어 보세요."],
+  show:         ["Показать", "보기"],
+  forgot:       ["Не вспомнил", "기억 안 남"],
+  knew:         ["Знал", "알았음"],
+  reviewDone:   ["Повторение окончено: %1 из %2", "복습 완료: %2개 중 %1개"],
+  hundredDays:  ["100 дней", "100일"],
+  bookToc:      ["Оглавление книги", "책 목차"],
+  chShort:      ["Гл.", "챕터"],
+  progress:     ["Прогресс", "학습 현황"],
+  startedOn:    ["Старт — %1", "시작 — %1"],
+  statLessons:  ["Уроков", "수업"],
+  statPhrases:  ["Фраз", "문장"],
+  statVerbs:    ["Глаголов", "동사"],
+  calendar:     ["Календарь курса", "학습 달력"],
+  softStreak:   ["Пропуск не обнуляет прогресс — урок просто сдвигается на следующий день. Командировка не ломает план.",
+                 "하루 걸러도 진도가 초기화되지 않습니다. 수업이 다음 날로 밀릴 뿐이라 출장 중에도 계획이 무너지지 않습니다."],
+  upcoming:     ["Ближайшие повторения", "다가오는 복습"],
+  langLabel:    ["Язык объяснений", "설명 언어"],
+  langHint:     ["Английские фразы не меняются", "영어 문장은 그대로입니다"],
+  theme:        ["Тема", "테마"],
+  themeAuto:    ["Авто", "자동"],
+  themeLight:   ["Свет", "밝게"],
+  themeDark:    ["Ночь", "어둡게"],
+  reminder:     ["Напоминание", "알림"],
+  reminderHint: ["Время локального уведомления", "기기 알림 시각"],
+  timezone:     ["Часовой пояс", "시간대"],
+  timezoneHint: ["Меняйте при перелёте", "이동 시 변경하세요"],
+  allowNotif:   ["Разрешить уведомления", "알림 허용"],
+  allowHint:    ["iPhone: сначала добавьте приложение на экран «Домой»", "아이폰은 먼저 홈 화면에 추가해야 합니다"],
+  enable:       ["Включить", "켜기"],
+  speechRate:   ["Скорость речи", "말하기 속도"],
+  accent:       ["Произношение", "발음"],
+  startDate:    ["Дата старта курса", "학습 시작일"],
+  startHint:    ["DAY 1 = этот день", "이 날짜가 DAY 1입니다"],
+  resetLabel:   ["Сбросить прогресс", "진도 초기화"],
+  resetHint:    ["Уроки, серия и карточки", "수업, 연속 기록, 카드"],
+  reset:        ["Сбросить", "초기화"],
+  resetConfirm: ["Сбросить весь прогресс? Уроки, серия и карточки будут удалены.",
+                 "진도를 모두 초기화할까요? 수업, 연속 기록, 카드가 삭제됩니다."],
+  resetDone:    ["Прогресс сброшен", "진도가 초기화되었습니다"],
+  footer:       ["По книге «김재우의 기본 동사 100» (상상스퀘어).<br>Прогресс хранится только на этом устройстве.",
+                 "《김재우의 기본 동사 100》(상상스퀘어) 기반입니다.<br>학습 기록은 이 기기에만 저장됩니다."],
+  toastReminder:["Напоминание в %1", "알림 시각 %1"],
+  toastTz:      ["Часовой пояс: %1", "시간대: %1"],
+  toastStart:   ["Старт: %1", "시작일: %1"],
+  noTts:        ["Озвучка недоступна в этом браузере", "이 브라우저에서는 음성 재생이 지원되지 않습니다"],
+  noNotif:      ["Уведомления не поддерживаются", "알림이 지원되지 않습니다"],
+  notifOn:      ["Уведомления включены", "알림이 켜졌습니다"],
+  notifOff:     ["Отклонено в настройках браузера", "브라우저 설정에서 거부되었습니다"],
+  noImage:      ["иллюстрация ещё не добавлена", "삽화가 아직 없습니다"],
+  tabToday:     ["Сегодня", "오늘"],
+  tabMap:       ["100 дней", "100일"],
+  tabReview:    ["Повтор", "복습"],
+  tabProgress:  ["Прогресс", "현황"]
+};
+function ui(k, a, b) {
+  var s = UI[k][S.lang === "ko" ? 1 : 0];
+  if (a !== undefined) s = s.replace("%1", a);
+  if (b !== undefined) s = s.replace("%2", b);
+  return s;
+}
+
 /* ---------- даты ---------- */
 function todayISO() {
   var d = new Date();
@@ -47,13 +171,19 @@ function addDays(iso, n) {
 function diffDays(a, b) { return Math.round((parseISO(b) - parseISO(a)) / 86400000); }
 var MONTHS = ["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];
 var WEEK = ["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"];
+var WEEK_KO = ["일요일","월요일","화요일","수요일","목요일","금요일","토요일"];
 function dateShort(iso) {
   var d = parseISO(iso);
+  if (S.lang === "ko") return d.getFullYear() + "년 " + (d.getMonth() + 1) + "월 " + d.getDate() + "일";
   return d.getDate() + " " + MONTHS[d.getMonth()] + " " + d.getFullYear();
 }
 function humanDate(iso) {
   var d = parseISO(iso);
+  if (S.lang === "ko") return (d.getMonth() + 1) + "월 " + d.getDate() + "일 " + WEEK_KO[d.getDay()];
   return WEEK[d.getDay()] + ", " + d.getDate() + " " + MONTHS[d.getMonth()];
+}
+function daysWord(n) {
+  return S.lang === "ko" ? n + "일" : n + " " + plural(n, "день", "дня", "дней");
 }
 
 /* ---------- производные ---------- */
@@ -100,7 +230,7 @@ if (window.speechSynthesis) {
   speechSynthesis.onvoiceschanged = loadVoices;
 }
 function speak(text, btn) {
-  if (!window.speechSynthesis) return toast("Озвучка недоступна в этом браузере");
+  if (!window.speechSynthesis) return toast(ui("noTts"));
   speechSynthesis.cancel();
   var u = new SpeechSynthesisUtterance(text);
   u.lang = S.voice;
@@ -137,7 +267,7 @@ function shuffle(a) {
 function illo(d) {
   if (!d.image) {
     return '<div class="illo"><div class="ph"><b>' + esc(d.verb) + "</b>" +
-      '<span>иллюстрация ещё не добавлена</span></div></div>';
+      '<span>' + ui("noImage") + "</span></div></div>";
   }
   var src = (window.IMG_BASE || "images/") + d.image;
   return '<div class="illo"><img src="' + esc(src) + '" alt="" loading="lazy"></div>';
@@ -163,11 +293,11 @@ function viewToday() {
     '<div class="head">' +
       "<div>" +
         '<div class="sub">' + esc(humanDate(todayISO())) + "</div>" +
-        "<h1>" + (finished ? "Курс пройден" : (st > 0 ? "Серия идёт" : "Доброе утро")) + "</h1>" +
+        "<h1>" + (finished ? ui("courseDone") : (st > 0 ? ui("streakOn") : ui("greet"))) + "</h1>" +
       "</div>" +
       '<div class="row" style="gap:8px">' +
-        '<button class="iconbtn" data-go="settings" aria-label="Настройки"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg></button>' +
-        '<svg class="ring" viewBox="0 0 56 56" aria-label="Пройдено ' + done + ' из 100">' +
+        '<button class="iconbtn" data-go="settings" aria-label="' + ui("settings") + '"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg></button>' +
+        '<svg class="ring" viewBox="0 0 56 56" aria-label="' + ui("progressAria", done) + '">' +
           '<circle class="bg" cx="28" cy="28" r="23"></circle>' +
           '<circle class="fg" cx="28" cy="28" r="23" stroke-dasharray="' + C.toFixed(1) + '" stroke-dashoffset="' + (C * (1 - pct)).toFixed(1) + '" transform="rotate(-90 28 28)"></circle>' +
           '<text x="28" y="33" text-anchor="middle">' + done + "</text>" +
@@ -176,45 +306,45 @@ function viewToday() {
     "</div>";
 
   if (finished) {
-    html += '<div class="card"><div class="lbl">Готово</div><p class="mut" style="margin:6px 0 0">Все 100 уроков пройдены. Дальше — только повторение: карточки продолжают приходить по графику.</p></div>';
+    html += '<div class="card"><div class="lbl">' + ui("done") + '</div><p class="mut" style="margin:6px 0 0">' + ui("doneText") + "</p></div>";
   } else {
     html +=
     '<div class="hero">' +
       '<div class="row" style="align-items:flex-start">' +
         '<div class="grow">' +
-          '<div class="lbl">DAY ' + n + " · ГЛАВА " + ch.n + "</div>" +
+          '<div class="lbl">DAY ' + n + " · " + ui("chapter") + " " + ch.n + "</div>" +
           '<div class="verb">' + esc(b.verb) + (b.sense ? " " + b.sense : "") + "</div>" +
         "</div>" +
-        (d.full ? "" : '<span class="pill" style="background:rgba(255,255,255,.22);color:var(--on-acc)">черновик</span>') +
+        (d.full ? "" : '<span class="pill" style="background:rgba(255,255,255,.22);color:var(--on-acc)">' + ui("draft") + "</span>") +
       "</div>" +
       "<div>" +
         '<div class="en">' + esc(b.en) + "</div>" +
         '<div class="tr">' + esc(tr(b)) + "</div>" +
       "</div>" +
-      '<button class="btn light" data-lesson="' + n + '">Начать урок · ' + (d.full ? "12 мин" : "3 мин") + "</button>" +
+      '<button class="btn light" data-lesson="' + n + '">' + ui("startLesson") + " · " + (d.full ? ui("min12") : ui("min3")) + "</button>" +
     "</div>";
   }
 
   html +=
     '<button class="card tight row" data-go="review" style="width:100%;text-align:left">' +
-      '<div class="grow"><div class="lbl">Повторение</div><div style="font-size:13.5px">' +
-        (due ? "Карточек на сегодня — <b>" + due + "</b>" : "На сегодня всё чисто") +
+      '<div class="grow"><div class="lbl">' + ui("review") + '</div><div style="font-size:13.5px">' +
+        (due ? ui("dueCards", due) : ui("dueNone")) +
       "</div></div>" +
-      '<span class="pill' + (due ? "" : " g") + '">' + (due ? "Начать" : "✓") + "</span>" +
+      '<span class="pill' + (due ? "" : " g") + '">' + (due ? ui("start") : "✓") + "</span>" +
     "</button>" +
 
     '<div class="row" style="gap:10px">' +
-      '<div class="card tight grow row"><div class="grow"><div class="lbl">Серия</div><div style="font-size:13.5px">' +
-        (st ? st + " " + plural(st, "день", "дня", "дней") + " подряд" : "Начнём сегодня") +
+      '<div class="card tight grow row"><div class="grow"><div class="lbl">' + ui("streak") + '</div><div style="font-size:13.5px">' +
+        (st ? ui("streakDays", daysWord(st)) : ui("streakNone")) +
       '</div></div><div class="big" style="font-size:22px;color:var(--acc)">' + st + "</div></div>" +
     "</div>" +
 
     '<div class="card tight">' +
-      '<div class="lbl" style="margin-bottom:6px">Смотрю параллельно</div>' +
+      '<div class="lbl" style="margin-bottom:6px">' + ui("watching") + "</div>" +
       '<div class="row">' +
-        '<div class="grow" style="font-size:13.5px;line-height:1.35">Лекция по DAY ' + n + '<div class="tr">YouTube · канал 영어독학</div></div>' +
+        '<div class="grow" style="font-size:13.5px;line-height:1.35">' + ui("lectureOn", n) + '<div class="tr">' + ui("ytChannel") + "</div></div>" +
         '<a class="pill n" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=' +
-          encodeURIComponent("김재우 기본 동사 100 DAY " + n + " " + b.verb) + '">Открыть</a>' +
+          encodeURIComponent("김재우 기본 동사 100 DAY " + n + " " + b.verb) + '">' + ui("open") + "</a>" +
       "</div>" +
     "</div>" +
   "</div>";
@@ -262,7 +392,7 @@ function renderLesson() {
       "<h1>" + esc(b.verb) + (b.sense ? " " + b.sense : "") + "</h1>" +
     "</div>" +
     '<div class="row" style="gap:8px">' + langToggle() +
-      '<button class="iconbtn" data-go="today" aria-label="Закрыть"><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button>' +
+      '<button class="iconbtn" data-go="today" aria-label="' + ui("close") + '"><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button>' +
     "</div>" +
   "</div>";
 
@@ -272,22 +402,21 @@ function renderLesson() {
     body =
       illo(b) +
       '<div class="card">' +
-        '<div class="lbl" style="margin-bottom:7px">Ключевое предложение</div>' +
+        '<div class="lbl" style="margin-bottom:7px">' + ui("keySentence") + "</div>" +
         '<div class="en">' + esc(b.en) + "</div>" +
         '<div class="tr">' + esc(tr(b)) + "</div>" +
         '<div class="row" style="gap:7px;margin-top:12px">' +
-          '<button class="pill" data-say="' + esc(b.en) + '">🔊 Слушать</button>' +
+          '<button class="pill" data-say="' + esc(b.en) + '">' + ui("listen") + "</button>" +
           '<button class="pill n" data-rate="1">' + S.rate.toFixed(2).replace(/0$/, "") + "×</button>" +
         "</div>" +
       "</div>";
     if (f) {
-      body += '<div><div class="lbl" style="margin-bottom:6px">Значение</div><p style="margin:0;font-size:14.5px;line-height:1.55">' + esc(t(f.meaning)) + "</p></div>";
+      body += '<div><div class="lbl" style="margin-bottom:6px">' + ui("meaning") + '</div><p style="margin:0;font-size:14.5px;line-height:1.55">' + esc(t(f.meaning)) + "</p></div>";
     } else {
       body +=
       '<div class="card">' +
-        '<div class="lbl">Урок в подготовке</div>' +
-        '<p class="mut" style="margin:7px 0 0;font-size:14px;line-height:1.5">Развёрнутые блоки Model Examples, Small Talk и Further Studies для этого дня ещё не залиты. ' +
-        "Ключевое предложение из книги уже здесь — прослушайте, повторите вслух и отметьте день пройденным.</p>" +
+        '<div class="lbl">' + ui("draftTitle") + "</div>" +
+        '<p class="mut" style="margin:7px 0 0;font-size:14px;line-height:1.5">' + ui("draftBody") + "</p>" +
       "</div>";
     }
   }
@@ -295,7 +424,7 @@ function renderLesson() {
   if (step === "examples") {
     body =
       '<div><h2 class="big" style="font-size:18px">Model Examples</h2>' +
-      '<p class="mut" style="margin:4px 0 0;font-size:13.5px">Нажмите на строку, чтобы скрыть перевод, и переведите сами.</p></div>' +
+      '<p class="mut" style="margin:4px 0 0;font-size:13.5px">' + ui("hintExamples") + "</p></div>" +
       '<div class="card"><div class="ex">' +
         f.examples.map(function (e, i) {
           return '<div class="exitem" data-toggle="' + i + '">' +
@@ -309,12 +438,12 @@ function renderLesson() {
   if (step === "dialogue") {
     body =
       '<div><h2 class="big" style="font-size:18px">Small Talk</h2>' +
-      '<p class="mut" style="margin:4px 0 0;font-size:13.5px">Последняя реплика — ваша. Скажите её вслух, потом откройте.</p></div>' +
+      '<p class="mut" style="margin:4px 0 0;font-size:13.5px">' + ui("hintDialogue") + "</p></div>" +
       '<div class="dlg">' +
         f.dialogue.map(function (l) {
           if (l.you) {
-            return '<div class="who" style="justify-self:end">' + l.s + " · вы</div>" +
-              '<div class="bub you" data-reveal><div class="en mut">Ваша реплика…</div><div class="tr">' + esc(tr(l)) + "</div></div>";
+            return '<div class="who" style="justify-self:end">' + l.s + " · " + ui("you") + "</div>" +
+              '<div class="bub you" data-reveal><div class="en mut">' + ui("yourLine") + '</div><div class="tr">' + esc(tr(l)) + "</div></div>";
           }
           return '<div class="who"' + (l.s === "B" ? ' style="justify-self:end"' : "") + ">" + l.s + "</div>" +
             '<div class="bub ' + (l.s === "A" ? "a" : "b") + '">' +
@@ -322,13 +451,13 @@ function renderLesson() {
             "</div>";
         }).join("") +
       "</div>" +
-      '<button class="btn ghost" data-say-all="1">🔊 Прослушать диалог</button>';
+      '<button class="btn ghost" data-say-all="1">' + ui("playDialogue") + "</button>";
   }
 
   if (step === "notes") {
     body =
       '<div><h2 class="big" style="font-size:18px">Further Studies</h2>' +
-      '<p class="mut" style="margin:4px 0 0;font-size:13.5px">Три момента, на которых обычно спотыкаются.</p></div>' +
+      '<p class="mut" style="margin:4px 0 0;font-size:13.5px">' + ui("hintNotes") + "</p></div>" +
       '<div class="card">' +
         f.notes.map(function (x, i) {
           return '<div class="note"><b class="m">' + (i + 1) + "</b><div>" + esc(t(x)) + "</div></div>";
@@ -342,8 +471,8 @@ function renderLesson() {
 
   var last = lessonState.step >= steps.length - 1;
   var next = last
-    ? '<button class="btn teal" data-finish="1">Завершить DAY ' + n + "</button>"
-    : '<button class="btn" data-next="1">Дальше</button>';
+    ? '<button class="btn teal" data-finish="1">' + ui("finishDay", n) + "</button>"
+    : '<button class="btn" data-next="1">' + ui("next") + "</button>";
 
   render('<div class="stack">' + bar + head + body + '<div style="height:4px"></div>' + next + "</div>", null);
 }
@@ -365,22 +494,22 @@ function renderQuiz() {
   }).join("") + "</div>";
 
   var head =
-  '<div class="head"><div><div class="sub">DAY ' + n + " · проверка</div><h1>Задание " + (lessonState.quizIndex + 1) + " из " + f.quiz.length + "</h1></div>" +
+  '<div class="head"><div><div class="sub">DAY ' + n + " · " + ui("check") + "</div><h1>" + ui("taskOf", lessonState.quizIndex + 1, f.quiz.length) + "</h1></div>" +
   '<div class="row" style="gap:8px">' + langToggle() +
-  '<button class="iconbtn" data-go="today" aria-label="Закрыть"><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div></div>';
+  '<button class="iconbtn" data-go="today" aria-label="' + ui("close") + '"><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div></div>';
 
   var body = "";
   if (q.type === "build") {
     var words = q.answer.split(/\s+/).filter(Boolean);
     var pool = shuffle(words.concat(q.extra || []));
     body =
-      '<div><div class="lbl" style="margin-bottom:6px">Соберите предложение</div>' +
+      '<div><div class="lbl" style="margin-bottom:6px">' + ui("buildIt") + "</div>" +
       '<div style="font-size:15px">' + esc(S.lang === "ko" ? (q.ko || q.ru) : q.ru) + "</div></div>" +
       '<div class="slot" id="slot"></div>' +
       '<div class="tokens" id="pool">' + pool.map(function (w, i) {
         return '<button class="tok" data-tok="' + i + '" data-w="' + esc(w) + '">' + esc(w) + "</button>";
       }).join("") + "</div>" +
-      '<button class="btn ghost sm" id="clearBtn" data-clear="1" hidden>Очистить</button>' +
+      '<button class="btn ghost sm" id="clearBtn" data-clear="1" hidden>' + ui("clear") + "</button>" +
       '<div id="verdict"></div>';
   } else {
     body =
@@ -419,16 +548,16 @@ function wireBuild(q) {
     var v = document.getElementById("verdict");
     if (ok) {
       var cb2 = document.getElementById("clearBtn"); if (cb2) cb2.hidden = true;
-      v.innerHTML = '<div class="card tight"><div class="row"><div class="grow"><b style="color:var(--acc2)">Верно.</b> ' +
+      v.innerHTML = '<div class="card tight"><div class="row"><div class="grow"><b style="color:var(--acc2)">' + ui("correct") + "</b> " +
         esc(q.answer) + '</div><button class="play" data-say="' + esc(q.answer) + '"><svg viewBox="0 0 10 10"><path d="M1 0l8 5-8 5z"/></svg></button></div></div>' +
-        '<button class="btn" data-qnext="1">Дальше</button>';
+        '<button class="btn" data-qnext="1">' + ui("next") + "</button>";
       pushCard(lessonState.day, q.answer);
     } else {
       lessonState.wrong++;
-      v.innerHTML = '<div class="card tight"><b style="color:var(--acc)">Не сходится.</b> Правильный порядок: ' +
+      v.innerHTML = '<div class="card tight"><b style="color:var(--acc)">' + ui("notMatching") + "</b> " + ui("rightOrder") +
         esc(target.join(" ")) + "</div>" +
-        '<button class="btn ghost sm" data-clear="1">Попробовать снова</button>' +
-        '<button class="btn" data-qnext="1">Дальше</button>';
+        '<button class="btn ghost sm" data-clear="1">' + ui("tryAgain") + "</button>" +
+        '<button class="btn" data-qnext="1">' + ui("next") + "</button>";
       pushCard(lessonState.day, q.answer, true);
     }
   }
@@ -472,8 +601,8 @@ function wirePick(q) {
     var right = q.options.filter(function (x) { return x.ok; })[0];
     document.getElementById("verdict").innerHTML =
       '<div class="card tight"><b style="color:' + (o.ok ? "var(--acc2)" : "var(--acc)") + '">' +
-      (o.ok ? "Верно." : "Мимо.") + "</b> " + esc(t(q.why)) + "</div>" +
-      '<button class="btn" data-qnext="1">Дальше</button>';
+      (o.ok ? ui("correct") : ui("wrong")) + "</b> " + esc(t(q.why)) + "</div>" +
+      '<button class="btn" data-qnext="1">' + ui("next") + "</button>";
     if (right) pushCard(lessonState.day, right.en, !o.ok);
   });
 }
@@ -495,7 +624,7 @@ function finishLesson() {
   if (f) f.examples.slice(0, 3).forEach(function (e) { pushCard(n, e.en); });
   save();
   var w = lessonState.wrong;
-  toast(w ? "DAY " + n + " пройден. Ошибок: " + w : "DAY " + n + " пройден без ошибок");
+  toast(w ? ui("dayDoneErr", n, w) : ui("dayDoneClean", n));
   lessonState = null;
   go("today");
 }
@@ -527,9 +656,9 @@ var reviewState = null;
 function viewReview() {
   var due = dueCards();
   if (!due.length) {
-    render('<div class="stack">' + headSimple("Повторение", "Интервальные карточки") +
-      '<div class="empty"><b>Пусто</b><p>Карточки появятся завтра. Интервалы — 1, 3, 7, 21 и 60 дней после урока.</p>' +
-      (S.queue.length ? '<span class="pill n">' + S.queue.length + " в работе</span>" : "") +
+    render('<div class="stack">' + headSimple(ui("review"), ui("srsCards")) +
+      '<div class="empty"><b>' + ui("emptyTitle") + "</b><p>" + ui("emptyBody") + "</p>" +
+      (S.queue.length ? '<span class="pill n">' + ui("inQueue", S.queue.length) + "</span>" : "") +
       "</div></div>", "review");
     return;
   }
@@ -546,23 +675,23 @@ function renderCard() {
         '<div class="lbl">DAY ' + c.day + "</div>" +
         '<div style="font-size:18px;margin-top:10px;line-height:1.4">' + esc(S.lang === "ko" ? c.ko : c.ru) + "</div>" +
       "</div>" +
-      '<p class="mut" style="text-align:center;margin:0;font-size:13.5px">Скажите вслух по-английски, потом откройте.</p>' +
-      '<button class="btn" data-reveal-card="1">Показать</button>';
+      '<p class="mut" style="text-align:center;margin:0;font-size:13.5px">' + ui("sayItAloud") + "</p>" +
+      '<button class="btn" data-reveal-card="1">' + ui("show") + "</button>";
   } else {
     body =
       '<div class="card" style="padding:26px 18px;text-align:center">' +
         '<div class="lbl">DAY ' + c.day + "</div>" +
         '<div class="en" style="font-size:19px;margin-top:10px">' + esc(c.en) + "</div>" +
         '<div class="tr">' + esc(S.lang === "ko" ? c.ko : c.ru) + "</div>" +
-        '<button class="pill" style="margin-top:14px" data-say="' + esc(c.en) + '">🔊 Слушать</button>' +
+        '<button class="pill" style="margin-top:14px" data-say="' + esc(c.en) + '">' + ui("listen") + "</button>" +
       "</div>" +
       '<div class="btnrow">' +
-        '<button class="btn ghost" data-grade="0">Не вспомнил</button>' +
-        '<button class="btn teal" data-grade="1">Знал</button>' +
+        '<button class="btn ghost" data-grade="0">' + ui("forgot") + "</button>" +
+        '<button class="btn teal" data-grade="1">' + ui("knew") + "</button>" +
       "</div>";
   }
   render('<div class="stack">' +
-    headSimple("Карточка " + (r.i + 1) + " из " + r.cards.length, "Повторение") +
+    headSimple(ui("cardOf", r.i + 1, r.cards.length), ui("review")) +
     body + "</div>", "review");
 }
 
@@ -576,7 +705,7 @@ function grade(ok) {
   r.i++;
   r.revealed = false;
   if (r.i >= r.cards.length) {
-    toast("Повторение окончено: " + r.right + " из " + r.cards.length);
+    toast(ui("reviewDone", r.right, r.cards.length));
     reviewState = null;
     go("today");
   } else renderCard();
@@ -587,7 +716,7 @@ function grade(ok) {
    ============================================================ */
 function viewMap() {
   var cur = currentDay();
-  var html = '<div class="stack">' + headSimple("100 дней", "Оглавление книги") ;
+  var html = '<div class="stack">' + headSimple(ui("hundredDays"), ui("bookToc")) ;
   var chs = window.CHAPTERS;
   Object.keys(chs).forEach(function (k) {
     var c = chs[k], cells = "";
@@ -600,7 +729,7 @@ function viewMap() {
       .forEach(function (d) { verbs[d.verb] = (verbs[d.verb] || 0) + 1; });
     html +=
       '<div class="chapter">' +
-        '<div class="lbl">Гл. ' + k + " · " + esc(c.ru) + " — DAY " + c.from + "–" + c.to + "</div>" +
+        '<div class="lbl">' + ui("chShort") + " " + k + " · " + esc(S.lang === "ko" ? (c.ko || c.ru) : c.ru) + " — DAY " + c.from + "–" + c.to + "</div>" +
         '<div class="map">' + cells + "</div>" +
         '<div class="pillrow">' + Object.keys(verbs).map(function (v) {
           return '<span class="pill n">' + esc(v) + (verbs[v] > 1 ? " ×" + verbs[v] : "") + "</span>";
@@ -630,23 +759,23 @@ function viewProgress() {
   }
 
   render('<div class="stack">' +
-    headSimple("Прогресс", "Старт — " + dateShort(S.start)) +
+    headSimple(ui("progress"), ui("startedOn", dateShort(S.start))) +
     '<div class="stats">' +
-      '<div class="stat"><b style="color:var(--acc2)">' + done + "</b><span>Уроков</span></div>" +
-      '<div class="stat"><b>' + phrases + "</b><span>Фраз</span></div>" +
-      '<div class="stat"><b style="color:var(--acc)">' + Object.keys(verbs).length + "</b><span>Глаголов</span></div>" +
+      '<div class="stat"><b style="color:var(--acc2)">' + done + "</b><span>" + ui("statLessons") + "</span></div>" +
+      '<div class="stat"><b>' + phrases + "</b><span>" + ui("statPhrases") + "</span></div>" +
+      '<div class="stat"><b style="color:var(--acc)">' + Object.keys(verbs).length + "</b><span>" + ui("statVerbs") + "</span></div>" +
     "</div>" +
     '<div class="card">' +
-      '<div class="lbl" style="margin-bottom:10px">Календарь курса</div>' +
+      '<div class="lbl" style="margin-bottom:10px">' + ui("calendar") + "</div>" +
       '<div class="weeks">' + cells + "</div>" +
-      '<p class="tr" style="margin-top:10px">Пропуск не обнуляет прогресс — урок просто сдвигается на следующий день. Командировка не ломает план.</p>' +
+      '<p class="tr" style="margin-top:10px">' + ui("softStreak") + "</p>" +
     "</div>" +
     '<div class="card tight row">' +
-      '<div class="grow"><div class="lbl">Серия</div><div style="font-size:13.5px">' +
-        (st ? st + " " + plural(st, "день", "дня", "дней") + " подряд" : "Пока нет") + "</div></div>" +
+      '<div class="grow"><div class="lbl">' + ui("streak") + '</div><div style="font-size:13.5px">' +
+        (st ? ui("streakDays", daysWord(st)) : ui("streakNone2")) + "</div></div>" +
       '<div class="big" style="font-size:22px;color:var(--acc)">' + st + "</div>" +
     "</div>" +
-    (S.queue.length ? '<div class="card tight"><div class="lbl" style="margin-bottom:7px">Ближайшие повторения</div>' +
+    (S.queue.length ? '<div class="card tight"><div class="lbl" style="margin-bottom:7px">' + ui("upcoming") + "</div>" +
       S.queue.slice().sort(function (a, b) { return a.due < b.due ? -1 : 1; }).slice(0, 4).map(function (c) {
         return '<div class="row" style="padding:5px 0"><span class="en grow" style="font-size:13.5px">' + esc(c.en) +
           '</span><span class="pill n">' + esc(c.due.slice(5).replace("-", ".")) + "</span></div>";
@@ -661,63 +790,63 @@ var TZS = ["Asia/Almaty", "Asia/Seoul", "Europe/Moscow", "Asia/Tashkent", "Asia/
 
 function viewSettings() {
   render('<div class="stack">' +
-    '<div class="head"><div><div class="sub">Verb 100</div><h1>Настройки</h1></div>' +
-    '<button class="iconbtn" data-go="today" aria-label="Назад"><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>' +
+    '<div class="head"><div><div class="sub">Verb 100</div><h1>' + ui("settings") + '</h1></div>' +
+    '<button class="iconbtn" data-go="today" aria-label="' + ui("back") + '"><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>' +
 
     '<div class="card">' +
-      '<div class="field"><div><label>Язык объяснений</label><div class="hint">Английские фразы не меняются</div></div>' + langToggle() + "</div>" +
-      '<div class="field"><div><label>Тема</label></div>' +
+      '<div class="field"><div><label>' + ui("langLabel") + '</label><div class="hint">' + ui("langHint") + "</div></div>" + langToggle() + "</div>" +
+      '<div class="field"><div><label>' + ui("theme") + "</label></div>" +
         '<div class="seg">' +
           ["auto", "light", "dark"].map(function (x) {
             return '<button data-theme="' + x + '" class="' + (S.theme === x ? "on" : "") + '">' +
-              (x === "auto" ? "Авто" : x === "light" ? "Свет" : "Ночь") + "</button>";
+              (x === "auto" ? ui("themeAuto") : x === "light" ? ui("themeLight") : ui("themeDark")) + "</button>";
           }).join("") +
         "</div></div>" +
     "</div>" +
 
     '<div class="card">' +
-      '<div class="field"><div><label>Напоминание</label><div class="hint">Время локального уведомления</div></div>' +
+      '<div class="field"><div><label>' + ui("reminder") + '</label><div class="hint">' + ui("reminderHint") + "</div></div>" +
         '<input type="time" id="rem" value="' + esc(S.reminder) + '"></div>' +
-      '<div class="field"><div><label>Часовой пояс</label><div class="hint">Меняйте при перелёте</div></div>' +
+      '<div class="field"><div><label>' + ui("timezone") + '</label><div class="hint">' + ui("timezoneHint") + "</div></div>" +
         '<select id="tz">' + TZS.map(function (z) {
           return '<option value="' + z + '"' + (S.tz === z ? " selected" : "") + ">" + z.split("/")[1].replace("_", " ") + "</option>";
         }).join("") + "</select></div>" +
-      '<div class="field"><div><label>Разрешить уведомления</label><div class="hint">iPhone: сначала добавьте приложение на экран «Домой»</div></div>' +
-        '<button class="pill" id="notif">Включить</button></div>' +
+      '<div class="field"><div><label>' + ui("allowNotif") + '</label><div class="hint">' + ui("allowHint") + "</div></div>" +
+        '<button class="pill" id="notif">' + ui("enable") + "</button></div>" +
     "</div>" +
 
     '<div class="card">' +
-      '<div class="field"><div><label>Скорость речи</label></div>' +
+      '<div class="field"><div><label>' + ui("speechRate") + "</label></div>" +
         '<div class="seg">' + [0.75, 0.95, 1.1].map(function (r) {
           return '<button data-rate="' + r + '" class="' + (Math.abs(S.rate - r) < 0.01 ? "on" : "") + '">' + r + "×</button>";
         }).join("") + "</div></div>" +
-      '<div class="field"><div><label>Произношение</label></div>' +
+      '<div class="field"><div><label>' + ui("accent") + "</label></div>" +
         '<div class="seg">' + [["en-US", "US"], ["en-GB", "UK"]].map(function (v) {
           return '<button data-voice="' + v[0] + '" class="' + (S.voice === v[0] ? "on" : "") + '">' + v[1] + "</button>";
         }).join("") + "</div></div>" +
     "</div>" +
 
     '<div class="card">' +
-      '<div class="field"><div><label>Дата старта курса</label><div class="hint">DAY 1 = этот день</div></div>' +
+      '<div class="field"><div><label>' + ui("startDate") + '</label><div class="hint">' + ui("startHint") + "</div></div>" +
         '<input type="date" id="start" value="' + esc(S.start) + '"></div>' +
-      '<div class="field"><div><label>Сбросить прогресс</label><div class="hint">Уроки, серия и карточки</div></div>' +
-        '<button class="pill" id="reset">Сбросить</button></div>' +
+      '<div class="field"><div><label>' + ui("resetLabel") + '</label><div class="hint">' + ui("resetHint") + "</div></div>" +
+        '<button class="pill" id="reset">' + ui("reset") + "</button></div>" +
     "</div>" +
 
-    '<p class="mut" style="font-size:12px;text-align:center;margin:0">По книге «김재우의 기본 동사 100» (상상스퀘어).<br>Прогресс хранится только на этом устройстве.</p>' +
+    '<p class="mut" style="font-size:12px;text-align:center;margin:0">' + ui("footer") + "</p>" +
   "</div>", null);
 
-  document.getElementById("rem").onchange = function () { S.reminder = this.value; save(); toast("Напоминание в " + this.value); };
-  document.getElementById("tz").onchange = function () { S.tz = this.value; save(); toast("Часовой пояс: " + this.value); };
-  document.getElementById("start").onchange = function () { S.start = this.value; save(); toast("Старт: " + dateShort(this.value)); };
+  document.getElementById("rem").onchange = function () { S.reminder = this.value; save(); toast(ui("toastReminder", this.value)); };
+  document.getElementById("tz").onchange = function () { S.tz = this.value; save(); toast(ui("toastTz", this.value)); };
+  document.getElementById("start").onchange = function () { S.start = this.value; save(); toast(ui("toastStart", dateShort(this.value))); };
   document.getElementById("reset").onclick = function () {
-    if (!confirm("Сбросить весь прогресс? Уроки, серия и карточки будут удалены.")) return;
-    S.done = {}; S.queue = []; S.errors = {}; save(); go("today"); toast("Прогресс сброшен");
+    if (!confirm(ui("resetConfirm"))) return;
+    S.done = {}; S.queue = []; S.errors = {}; save(); go("today"); toast(ui("resetDone"));
   };
   document.getElementById("notif").onclick = function () {
-    if (!("Notification" in window)) return toast("Уведомления не поддерживаются");
+    if (!("Notification" in window)) return toast(ui("noNotif"));
     Notification.requestPermission().then(function (p) {
-      toast(p === "granted" ? "Уведомления включены" : "Отклонено в настройках браузера");
+      toast(p === "granted" ? ui("notifOn") : ui("notifOff"));
       if (p === "granted") scheduleReminder();
     });
   };
@@ -750,7 +879,7 @@ function scheduleReminder() {
 function headSimple(title, sub) {
   return '<div class="head"><div><div class="sub">' + esc(sub) + '</div><h1>' + esc(title) + "</h1></div>" +
     '<div class="row" style="gap:8px">' + langToggle() +
-    '<button class="iconbtn" data-go="settings" aria-label="Настройки"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg></button></div></div>';
+    '<button class="iconbtn" data-go="settings" aria-label="' + ui("settings") + '"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg></button></div></div>';
 }
 
 var currentTab = "today";
@@ -767,6 +896,11 @@ function render(html, tab) {
   } else {
     tabbar.hidden = true;
   }
+  var tabNames = ["tabToday", "tabMap", "tabReview", "tabProgress"];
+  Array.prototype.slice.call(tabbar.children).forEach(function (b, i) {
+    var label = b.querySelector("span");
+    if (label) label.textContent = ui(tabNames[i]);
+  });
   var due = dueCards().length;
   var badge = document.getElementById("reviewBadge");
   badge.hidden = !due;
