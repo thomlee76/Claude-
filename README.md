@@ -29,6 +29,7 @@ tools/
   build-data.py      content/*.json  →  app/data.js (сам находит картинки)
   build-artifact.py  app/            →  build/artifact.html
   cut-grid.py        композит 2×2    →  четыре app/images/day-NNN.jpg
+  make-icons.py      иконки приложения (книга в стиле обложки)
 ```
 
 ## Урок дня
