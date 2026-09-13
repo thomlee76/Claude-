@@ -59,8 +59,6 @@ var UI = {
   streakNone:   ["Начнём сегодня", "오늘부터 시작합니다"],
   streakNone2:  ["Пока нет", "아직 없음"],
   watching:     ["Смотрю параллельно", "함께 보기"],
-  lectureOn:    ["Лекция по DAY %1", "DAY %1 강의"],
-  ytChannel:    ["YouTube · канал 영어독학", "YouTube · 영어독학 채널"],
   open:         ["Открыть", "열기"],
   keySentence:  ["Ключевое предложение", "핵심 문장"],
   listen:       ["🔊 Слушать", "🔊 듣기"],
@@ -145,6 +143,12 @@ var UI = {
   notifOn:      ["Уведомления включены", "알림이 켜졌습니다"],
   notifOff:     ["Отклонено в настройках браузера", "브라우저 설정에서 거부되었습니다"],
   noImage:      ["иллюстрация ещё не добавлена", "삽화가 아직 없습니다"],
+  ytRange:      ["Повтор ×5 · DAY %1–%2", "5회 반복 · DAY %1–%2"],
+  ytWhole:      ["Весь курс", "전체 과정"],
+  ytKoEn:       ["한국어–영어", "한국어–영어"],
+  ytEnOnly:     ["영어만", "영어만"],
+  ytVideo:      ["🎬 Видео", "🎬 영상"],
+  ytPlaylist:   ["원어민 발음 몰아듣기 · плейлист", "원어민 발음 몰아듣기 · 플레이리스트"],
   tabToday:     ["Сегодня", "오늘"],
   tabMap:       ["100 дней", "100일"],
   tabReview:    ["Повтор", "복습"],
@@ -215,6 +219,29 @@ function chapterOf(n) {
   return { n: 5, meta: ch["5"] };
 }
 
+/* ---------- видео плейлиста «원어민 발음 몰아듣기» ---------- */
+var YT = {
+  list: "PLWGv_i60H2Exc_BaZS_4D39KSjnXLzw1i",
+  ranges: [
+    { from: 1,  to: 20,  id: "DqrkMre_rVA" },
+    { from: 21, to: 40,  id: "x6gXJ3z8I_U" },
+    { from: 41, to: 60,  id: "IqO1VfZTAlM" },
+    { from: 61, to: 80,  id: "y2168ClNKho" },
+    { from: 81, to: 100, id: "JdQ9_UGwo5s" }
+  ],
+  fullKoEn: "2riZH_XDU5o",   // Day 1~100, корейский → английский, один проход
+  fullEn:   "F0UkCUbTus8"    // Day 1~100, только английский
+};
+function ytRangeFor(day) {
+  for (var i = 0; i < YT.ranges.length; i++) {
+    if (day >= YT.ranges[i].from && day <= YT.ranges[i].to) return YT.ranges[i];
+  }
+  return YT.ranges[0];
+}
+function ytUrl(id) {
+  return "https://www.youtube.com/watch?v=" + id + "&list=" + YT.list;
+}
+
 /* ---------- язык ---------- */
 function t(obj) {
   if (!obj) return "";
@@ -271,6 +298,25 @@ function illo(d) {
   }
   var src = (window.IMG_BASE || "images/") + d.image;
   return '<div class="illo"><img src="' + esc(src) + '" alt="" loading="lazy"></div>';
+}
+
+/* ---------- блок с видео ---------- */
+function ytCard(n) {
+  var r = ytRangeFor(n);
+  return '<div class="card tight">' +
+    '<div class="lbl" style="margin-bottom:8px">' + ui("watching") + "</div>" +
+    '<a class="row" target="_blank" rel="noopener" href="' + ytUrl(r.id) + '">' +
+      '<div class="grow" style="font-size:13.5px;line-height:1.35">' + ui("ytRange", r.from, r.to) +
+        '<div class="tr">' + ui("ytPlaylist") + "</div></div>" +
+      '<span class="pill">' + ui("open") + "</span>" +
+    "</a>" +
+    '<div class="divider" style="height:1px;background:var(--line);margin:10px 0"></div>' +
+    '<div class="row" style="gap:7px">' +
+      '<span class="tr" style="margin:0">' + ui("ytWhole") + "</span>" +
+      '<a class="pill n" target="_blank" rel="noopener" href="' + ytUrl(YT.fullKoEn) + '">' + ui("ytKoEn") + "</a>" +
+      '<a class="pill n" target="_blank" rel="noopener" href="' + ytUrl(YT.fullEn) + '">' + ui("ytEnOnly") + "</a>" +
+    "</div>" +
+  "</div>";
 }
 
 /* ============================================================
@@ -339,14 +385,7 @@ function viewToday() {
       '</div></div><div class="big" style="font-size:22px;color:var(--acc)">' + st + "</div></div>" +
     "</div>" +
 
-    '<div class="card tight">' +
-      '<div class="lbl" style="margin-bottom:6px">' + ui("watching") + "</div>" +
-      '<div class="row">' +
-        '<div class="grow" style="font-size:13.5px;line-height:1.35">' + ui("lectureOn", n) + '<div class="tr">' + ui("ytChannel") + "</div></div>" +
-        '<a class="pill n" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=' +
-          encodeURIComponent("김재우 기본 동사 100 DAY " + n + " " + b.verb) + '">' + ui("open") + "</a>" +
-      "</div>" +
-    "</div>" +
+    ytCard(n) +
   "</div>";
 
   render(html, "today");
@@ -408,6 +447,7 @@ function renderLesson() {
         '<div class="row" style="gap:7px;margin-top:12px">' +
           '<button class="pill" data-say="' + esc(b.en) + '">' + ui("listen") + "</button>" +
           '<button class="pill n" data-rate="1">' + S.rate.toFixed(2).replace(/0$/, "") + "×</button>" +
+          '<a class="pill n" target="_blank" rel="noopener" href="' + ytUrl(ytRangeFor(n).id) + '">' + ui("ytVideo") + "</a>" +
         "</div>" +
       "</div>";
     if (f) {
