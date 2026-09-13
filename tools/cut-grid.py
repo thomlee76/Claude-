@@ -4,7 +4,7 @@
 
     python3 tools/cut-grid.py grid.png 17 18 19 20
 
-Кладёт app/images/day-017.jpg ... в порядке: левый верхний, правый верхний,
+Кладёт docs/images/day-017.jpg ... в порядке: левый верхний, правый верхний,
 левый нижний, правый нижний. Подпись-карточка внизу плитки отрезается,
 результат приводится к 3:2 и 1350x900.
 """
@@ -12,7 +12,7 @@ from PIL import Image
 import numpy as np, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = os.path.join(ROOT, 'app/images')
+OUT = os.path.join(ROOT, 'docs/images')
 
 
 def gutter(mean1d, lo, hi):

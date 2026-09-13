@@ -7,7 +7,7 @@
 
     python3 tools/make-icons.py [путь_к_Unbounded.ttf]
 
-Пишет app/icons/icon-180, -192, -512 и -512-maskable.
+Пишет docs/icons/icon-180, -192, -512 и -512-maskable.
 Для корейского нужен шрифт с хангылем (wqy-zenhei), для цифр — Unbounded;
 если Unbounded не найден, берётся DejaVu Sans Bold.
 """
@@ -69,7 +69,7 @@ def render(size, pad=0.0):
 
 
 if __name__ == "__main__":
-    out = os.path.join(ROOT, "app/icons")
+    out = os.path.join(ROOT, "docs/icons")
     os.makedirs(out, exist_ok=True)
     for size in (180, 192, 512):
         render(size).save(os.path.join(out, "icon-%d.png" % size))

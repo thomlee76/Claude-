@@ -9,18 +9,20 @@
 ## Структура
 
 ```
-app/                 само приложение (статика, без сборки)
+docs/                само приложение (статика, без сборки)
+                     папка называется docs, потому что GitHub Pages
+                     умеет публиковать только корень или /docs
   index.html
   app.css
   app.js             движок: уроки, тест, повторение, прогресс
   data.js            автогенерируется из content/
-  images/            иллюстрации day-001.png … day-100.png
+  images/            иллюстрации day-001.jpg … day-100.jpg
   icons/             иконки PWA
 content/
   days.json          100 дней: глагол, оттенок, ключевое предложение, RU/KO
   lessons.json       автогенерируется из content/src/
   src/               исходники уроков, по десять дней в файле
-docs/
+brief/
   VERB100_картинки_брифинг.xlsx   бриф на 100 иллюстраций
   image-brief.csv
   style-prompt.txt   единый стиль для всех картинок
@@ -48,7 +50,7 @@ tools/
 ```sh
 python3 tools/build-lessons.py   # исходники уроков → content/lessons.json
 python3 tools/build-data.py      # content/ → app/data.js
-python3 -m http.server 8000 --directory app
+python3 -m http.server 8000 --directory docs
 ```
 
 `build-lessons.py` заодно проверяет: по шесть примеров и три заметки в уроке,
@@ -57,14 +59,22 @@ python3 -m http.server 8000 --directory app
 
 Прогресс хранится в localStorage на устройстве, сервер не нужен.
 
+## Публикация
+
+Репозиторий должен быть публичным. Settings → Pages → Deploy from a branch →
+ветка `claude/english-learning-app-3ufdp7`, папка `/docs`. Адрес получится
+`https://<пользователь>.github.io/Claude-/`.
+
 ## Установка на iPhone
 
-Открыть адрес в Safari → «Поделиться» → «На экран „Домой“». После этого
-приложение запускается в полноэкранном режиме и работает офлайн.
+Открыть этот адрес в Safari → «Поделиться» → «На экран „Домой“». Только со
+своего адреса iOS видит `apple-touch-icon` и manifest: приложение получает
+собственную иконку, полноэкранный режим и офлайн. Со ссылки на claude.ai
+ярлык всегда берёт иконку claude.ai — приложение там работает внутри iframe.
 
 ## Иллюстрации
 
-Файлы кладутся в `app/images/` с именами `day-001` … `day-100`, расширение
+Файлы кладутся в `docs/images/` с именами `day-001` … `day-100`, расширение
 любое из jpg / jpeg / png / webp — `build-data.py` находит его сам. Пропорции
 3:2, минимум 1350×900. Если файла нет, урок показывает заглушку.
 
@@ -75,4 +85,4 @@ python3 tools/cut-grid.py grid.png 17 18 19 20   # по часовой с лев
 python3 tools/build-data.py
 ```
 
-Единый стиль генерации — `docs/style-prompt.txt`.
+Единый стиль генерации — `brief/style-prompt.txt`.

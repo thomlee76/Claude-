@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Собирает app/data.js из content/days.json и content/lessons.json.
+"""Собирает docs/data.js из content/days.json и content/lessons.json.
 
-Поле image берётся не из days.json, а с диска: ищется app/images/day-NNN.*
+Поле image берётся не из days.json, а с диска: ищется docs/images/day-NNN.*
 в порядке jpg, jpeg, png, webp. Если файла нет, image = null и урок
 показывает заглушку. Так неважно, в каком формате пришла картинка.
 """
 import json, os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-IMG_DIR = os.path.join(ROOT, 'app/images')
+IMG_DIR = os.path.join(ROOT, 'docs/images')
 EXTS = ('jpg', 'jpeg', 'png', 'webp')
 
 
@@ -34,10 +34,10 @@ js = ("/* Автогенерируемый файл — правьте content/*
       "window.CHAPTERS=" + json.dumps(days['chapters'], ensure_ascii=False) + ";\n"
       "window.DAYS=" + json.dumps(slim, ensure_ascii=False) + ";\n"
       "window.LESSONS=" + json.dumps(lessons, ensure_ascii=False) + ";\n")
-open(os.path.join(ROOT, 'app/data.js'), 'w', encoding='utf-8').write(js)
+open(os.path.join(ROOT, 'docs/data.js'), 'w', encoding='utf-8').write(js)
 
 with_img = [r['day'] for r in slim if r['image']]
-print('app/data.js — %d уроков, %d с полным содержанием, %d с картинкой'
+print('docs/data.js — %d уроков, %d с полным содержанием, %d с картинкой'
       % (len(slim), len(lessons), len(with_img)))
 missing = [d for d in range(1, 101) if d not in with_img]
 if missing:

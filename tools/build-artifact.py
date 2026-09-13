@@ -9,7 +9,7 @@ Service worker и manifest в этой версии не подключаютс�
 import os, re
 
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-src = open(os.path.join(root, 'app/index.html'), encoding='utf-8').read()
+src = open(os.path.join(root, 'docs/index.html'), encoding='utf-8').read()
 
 body = src[src.index('<div id="app">'):src.index('</body>')]
 body = body.replace('<script src="data.js"></script>', '<script src="data.js"></script>')
