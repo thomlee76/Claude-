@@ -1,0 +1,131 @@
+@import 'tailwindcss';
+
+/* Pretendard Variable — 한국어 본문용 가변 폰트 (dynamic subset) */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+
+@theme {
+  /* ── Brand palette ─────────────────────────────────────────── */
+  --color-graphite: #111827;
+  --color-lab-blue: #155eef;
+  --color-lab-blue-dark: #0f47b8;
+  --color-cyan-electric: #32b5ff;
+  --color-surface: #f6f8fb;
+  --color-line: #e4e9f2;
+  --color-muted: #667085;
+  --color-warning: #f79009;
+  --color-warning-soft: #fffaeb;
+  --color-compatible: #12b76a;
+  --color-compatible-soft: #ecfdf3;
+  --color-danger: #d92d20;
+  --color-danger-soft: #fef3f2;
+
+  /* ── Typography ────────────────────────────────────────────── */
+  --font-sans:
+    'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+    'Segoe UI', 'Malgun Gothic', system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), 'SFMono-Regular', ui-monospace, 'Menlo', monospace;
+
+  /* ── Radii & shadows ───────────────────────────────────────── */
+  --radius-card: 0.875rem;
+  --shadow-card: 0 1px 2px rgb(16 24 40 / 0.04), 0 8px 24px -12px rgb(16 24 40 / 0.12);
+  --shadow-card-hover: 0 1px 2px rgb(16 24 40 / 0.06), 0 16px 32px -16px rgb(16 24 40 / 0.2);
+
+  /* ── Motion ────────────────────────────────────────────────── */
+  --animate-signal: signal 2.6s linear infinite;
+  --animate-fade-up: fade-up 0.5s ease-out both;
+}
+
+@keyframes signal {
+  0% {
+    stroke-dashoffset: 48;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before {
+    border-color: var(--color-line);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-graphite);
+    font-family: var(--font-sans);
+    font-feature-settings: 'ss01', 'tnum';
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    word-break: keep-all;
+    line-break: strict;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-lab-blue);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* 기술 사양·모델 코드는 고정폭 서체 */
+  .font-tech {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.01em;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@utility container-lab {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 80rem;
+  padding-inline: 1rem;
+
+  @media (width >= 40rem) {
+    padding-inline: 1.5rem;
+  }
+
+  @media (width >= 64rem) {
+    padding-inline: 2rem;
+  }
+}

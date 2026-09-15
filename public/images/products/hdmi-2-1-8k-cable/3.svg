@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="HDMI 2.1 placeholder">
+  <rect width="1200" height="900" fill="#F6F8FB"/>
+  <g stroke="#E4E9F2" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="900"/>
+    <line x1="90" y1="0" x2="90" y2="900"/>
+    <line x1="180" y1="0" x2="180" y2="900"/>
+    <line x1="270" y1="0" x2="270" y2="900"/>
+    <line x1="360" y1="0" x2="360" y2="900"/>
+    <line x1="450" y1="0" x2="450" y2="900"/>
+    <line x1="540" y1="0" x2="540" y2="900"/>
+    <line x1="630" y1="0" x2="630" y2="900"/>
+    <line x1="720" y1="0" x2="720" y2="900"/>
+    <line x1="810" y1="0" x2="810" y2="900"/>
+    <line x1="900" y1="0" x2="900" y2="900"/>
+    <line x1="990" y1="0" x2="990" y2="900"/>
+    <line x1="1080" y1="0" x2="1080" y2="900"/>
+    <line x1="1170" y1="0" x2="1170" y2="900"/>
+    <line x1="0" y1="0" x2="1200" y2="0"/>
+    <line x1="0" y1="90" x2="1200" y2="90"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+    <line x1="0" y1="630" x2="1200" y2="630"/>
+    <line x1="0" y1="720" x2="1200" y2="720"/>
+    <line x1="0" y1="810" x2="1200" y2="810"/>
+    <line x1="0" y1="900" x2="1200" y2="900"/>
+  </g>
+  <rect x="60" y="60" width="1080" height="780" rx="24" fill="#FFFFFF" stroke="#E4E9F2" stroke-width="2"/>
+  <g transform="translate(600 392)">
+    <rect x="-420" y="-18" width="200" height="36" rx="10" fill="#155EEF"/>
+    <rect x="220" y="-18" width="200" height="36" rx="10" fill="#155EEF"/>
+    <path d="M-220 0 H220" stroke="#111827" stroke-width="22" stroke-linecap="round"/>
+    <path d="M-220 0 H220" stroke="#155EEF" stroke-width="6" stroke-linecap="round" stroke-dasharray="26 34" opacity="0.9"/>
+  </g>
+  <text x="600" y="560" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="42" font-weight="700" fill="#111827">HDMI 2.1</text>
+  <text x="600" y="612" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="26" fill="#667085">LAB-HD21-801 · DETAIL</text>
+  <text x="600" y="780" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="20" fill="#98A2B3">PLACEHOLDER — replace with product photo</text>
+</svg>
