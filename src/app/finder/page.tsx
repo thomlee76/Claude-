@@ -6,7 +6,15 @@ import { EmptyResult, ResultList } from '@/components/finder/result-list';
 import { HiddenState, OptionButton, StepProgress, StepShell } from '@/components/finder/step-shell';
 import { Button } from '@/components/ui/button';
 import { CheckboxField } from '@/components/ui/checkbox';
-import { connectors, devices, purposeDescriptions, purposeLabels, taskMap } from '@/lib/data/taxonomy';
+import {
+  connectorMap,
+  connectors,
+  deviceMap,
+  devices,
+  purposeDescriptions,
+  purposeLabels,
+  taskMap,
+} from '@/lib/data/taxonomy';
 import {
   buildFinderQuery,
   currentStep,
@@ -291,9 +299,22 @@ function StepResults({ state }: { state: FinderState }) {
           추천 결과
         </h2>
         <dl className="mt-4 grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-4">
-          <SelectionItem labelKo="기기" value={state.devices.length > 0 ? `${state.devices.length}개 선택` : '-'} />
-          <SelectionItem labelKo="출력 단자" value={state.source ?? '-'} />
-          <SelectionItem labelKo="입력 단자" value={state.target ?? '-'} />
+          <SelectionItem
+            labelKo="기기"
+            value={
+              state.devices.length > 0
+                ? state.devices.map((d) => deviceMap.get(d)?.nameKo ?? d).join(', ')
+                : '-'
+            }
+          />
+          <SelectionItem
+            labelKo="출력 단자"
+            value={state.source ? (connectorMap.get(state.source)?.shortKo ?? state.source) : '-'}
+          />
+          <SelectionItem
+            labelKo="입력 단자"
+            value={state.target ? (connectorMap.get(state.target)?.shortKo ?? state.target) : '-'}
+          />
           <SelectionItem
             labelKo="목적"
             value={state.purpose ? purposeLabels[state.purpose] : '-'}

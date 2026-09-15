@@ -77,7 +77,10 @@ function buildSpecRows(product: Product): SpecRow[] {
     ...(product.shielding ? [{ labelKo: '차폐 방식', value: shieldingLabels[product.shielding] }] : []),
     ...(product.supportsSamsungDex ? [{ labelKo: '삼성 DeX', value: '지원' }] : []),
   ];
-  return [...base, ...product.specs];
+  // 기본 행과 제품별 행에 같은 항목이 있으면 제품별 값을 우선해 한 번만 노출합니다.
+  const merged = new Map<string, SpecRow>();
+  for (const row of [...base, ...product.specs]) merged.set(row.labelKo, row);
+  return [...merged.values()];
 }
 
 export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
