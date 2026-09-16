@@ -1,6 +1,6 @@
 /* 日本語 復習ノート — 오프라인 서비스 워커
    전략: 앱 셸은 미리 캐시(cache-first), 폰트 등 외부 자원은 stale-while-revalidate. */
-const VERSION = 'jpn-v1';
+const VERSION = 'jpn-v2';
 const SHELL = VERSION + '-shell';
 const RUNTIME = VERSION + '-runtime';
 
@@ -10,7 +10,8 @@ const SHELL_FILES = [
   './manifest.json',
   './icon-180.png',
   './icon-192.png',
-  './icon-512.png'
+  './icon-512.png',
+  './favicon-32.png'
 ];
 
 self.addEventListener('install', e => {
