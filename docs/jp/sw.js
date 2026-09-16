@@ -1,6 +1,6 @@
 /* 日本語 復習ノート — 오프라인 서비스 워커
    전략: 앱 셸은 미리 캐시(cache-first), 폰트 등 외부 자원은 stale-while-revalidate. */
-const VERSION = 'jpn-v2';
+const VERSION = 'jpn-v3';
 const SHELL = VERSION + '-shell';
 const RUNTIME = VERSION + '-runtime';
 
