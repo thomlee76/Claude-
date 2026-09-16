@@ -1,0 +1,1551 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>日本語 復習ノート</title>
+<link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="icon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="manifest" href="manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="日本語">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#071B2A">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+/* ===== 컬러: 바다 Marine (딥) — 심해 감청 · 아쿠아 · 모래색 ===== */
+:root{
+  --bg:#E9EEF2; --surface:#FBFCFD; --surface2:#DFE7ED; --line:#CBD8E1;
+  --text:#0D1E2C; --muted:#4A6274;
+  --blue:#0A5F75; --blue-soft:#D7E6EB;        /* 아쿠아 (주 강조) */
+  --purple:#0D2C42; --purple-soft:#DAE2E9;    /* 심해 감청 (부 강조) */
+  --mint:#0A6E55; --mint-soft:#DCEDE7;        /* 정답 */
+  --rose:#B93A38; --rose-soft:#F6E3E2;        /* 오답 */
+  --sand:#B98436; --sand-soft:#F4E9D4;        /* 모래색 포인트 */
+  --grad:linear-gradient(135deg,#071B2A,#0C4A5E);
+  --grad2:linear-gradient(135deg,#0D2C42,#0A6E86);
+  --sh:0 1px 2px rgba(9,25,38,.07),0 6px 20px rgba(9,25,38,.10);
+  --sh-lg:0 4px 12px rgba(9,25,38,.10),0 16px 40px rgba(9,25,38,.16);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#060F16; --surface:#0E1C26; --surface2:#152733; --line:#1F3846;
+  --text:#DCE9F0; --muted:#7E9AAB;
+  --blue:#43B4CD; --blue-soft:#0C2A34;
+  --purple:#6FA6C4; --purple-soft:#0F2331;
+  --mint:#34B491; --mint-soft:#0A2723;
+  --rose:#E87672; --rose-soft:#2E1A19;
+  --sand:#DCA855; --sand-soft:#2B2110;
+  --grad:linear-gradient(135deg,#061722,#0A3D4E);
+  --grad2:linear-gradient(135deg,#0D2C42,#0A6E86);
+  --sh:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.28);
+  --sh-lg:0 4px 12px rgba(0,0,0,.34),0 16px 40px rgba(0,0,0,.4);
+}}
+:root[data-theme="dark"]{
+  --bg:#060F16; --surface:#0E1C26; --surface2:#152733; --line:#1F3846;
+  --text:#DCE9F0; --muted:#7E9AAB;
+  --blue:#43B4CD; --blue-soft:#0C2A34;
+  --purple:#6FA6C4; --purple-soft:#0F2331;
+  --mint:#34B491; --mint-soft:#0A2723;
+  --rose:#E87672; --rose-soft:#2E1A19;
+  --sand:#DCA855; --sand-soft:#2B2110;
+  --grad:linear-gradient(135deg,#061722,#0A3D4E);
+  --grad2:linear-gradient(135deg,#0D2C42,#0A6E86);
+  --sh:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.28);
+  --sh-lg:0 4px 12px rgba(0,0,0,.34),0 16px 40px rgba(0,0,0,.4);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:"Noto Sans KR","Outfit",system-ui,sans-serif;line-height:1.6;-webkit-tap-highlight-color:transparent;font-size:14px}
+.jp,ruby{font-family:"Zen Kaku Gothic New","Noto Sans JP",sans-serif}
+ruby{ruby-align:center}
+rt{font-size:.5em;color:var(--muted);font-weight:500;font-family:"Zen Kaku Gothic New",sans-serif;letter-spacing:-.02em}
+body.nofuri rt{visibility:hidden;font-size:.5em}
+.jp{line-height:2.1}
+#app{max-width:600px;margin:0 auto;padding:12px 14px 96px}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+:focus-visible{outline:2.5px solid var(--purple);outline-offset:2px;border-radius:6px}
+
+/* ---- header ---- */
+header{background:var(--grad);border-radius:20px;padding:16px 18px;color:#fff;position:relative;overflow:hidden;margin-bottom:14px;box-shadow:var(--sh-lg)}
+header::after{content:"日本語";position:absolute;right:-8px;bottom:-22px;font-family:"Zen Kaku Gothic New",sans-serif;font-size:66px;font-weight:900;color:rgba(255,255,255,.09);letter-spacing:2px}
+.hrow{display:flex;align-items:flex-start;gap:12px;position:relative;z-index:1}
+.hrow h1{font-size:18px;font-weight:800;letter-spacing:-.2px}
+.hrow .sub{font-size:11.5px;opacity:.82;margin-top:1px}
+.hmark{width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.28);display:flex;align-items:center;justify-content:center;font-family:"Zen Kaku Gothic New";font-size:19px;font-weight:900;flex:none}
+.hbtns{margin-left:auto;display:flex;flex-direction:column;gap:5px;align-items:flex-end;flex:none}
+.furibtn{background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.32);color:#fff;border-radius:20px;padding:4px 11px;font-size:10.5px;font-weight:700;white-space:nowrap}
+.hbar{display:flex;gap:8px;margin-top:14px;position:relative;z-index:1}
+.hstat{flex:1;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:8px 6px;text-align:center}
+.hstat .n{font-family:"Outfit";font-size:17px;font-weight:800;line-height:1.2}
+.hstat .l{font-size:9.5px;opacity:.8}
+
+/* ---- nav ---- */
+nav{position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--line);z-index:20;padding-bottom:env(safe-area-inset-bottom);box-shadow:0 -4px 20px rgba(18,58,86,.08)}
+.tabs{display:flex;max-width:600px;margin:0 auto;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:1 0 auto;min-width:52px;padding:9px 4px 8px;text-align:center;font-size:9.5px;color:var(--muted);font-weight:500;position:relative}
+.tab .ico{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:17px;font-weight:900;line-height:1.3;margin-bottom:1px}
+.tab.on{color:var(--purple)}
+.tab.on::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:26px;height:3px;border-radius:0 0 4px 4px;background:var(--grad)}
+
+/* ---- panels & cards ---- */
+.panel{display:none}
+.panel.on{display:block;animation:fade .28s cubic-bezier(.2,.8,.3,1)}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none}.fc-inner{transition:none!important}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh);padding:16px 16px 17px;margin-bottom:12px}
+h2{font-size:15px;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px;letter-spacing:-.2px}
+h2 .bar{width:4px;height:15px;border-radius:3px;background:var(--grad);flex:none}
+h3{font-size:12.5px;font-weight:700;color:var(--purple);margin:14px 0 6px;display:flex;align-items:center;gap:6px}
+h3:first-child{margin-top:0}
+h3::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--mint);flex:none}
+p{font-size:13.5px}
+.muted{color:var(--muted);font-size:12px}
+
+/* lesson banner */
+.lb{border-radius:18px;padding:14px 18px;margin:20px 0 12px;color:#fff;position:relative;overflow:hidden;box-shadow:var(--sh-lg)}
+.lb:first-child{margin-top:0}
+.lb.l1{background:linear-gradient(135deg,#0A2438,#12546B)}
+.lb.l2{background:linear-gradient(135deg,#0A5F75,#1D8C88)}
+.lb.l3{background:linear-gradient(135deg,#8A5E1E,#C9993F)}
+.lb .lnum{font-family:"Outfit";font-size:10.5px;font-weight:700;letter-spacing:.18em;opacity:.85;color:#fff}
+.lb .ti{font-size:17px;font-weight:800;margin-top:1px}
+.lb .de{font-size:11.5px;opacity:.85;margin-top:3px}
+.lb::after{content:"";position:absolute;width:110px;height:110px;border-radius:50%;background:rgba(255,255,255,.1);right:-34px;top:-44px}
+.ltag{display:inline-block;font-size:9.5px;font-weight:800;color:#fff;border-radius:6px;padding:1px 6px;vertical-align:middle;margin-left:5px;font-family:"Outfit"}
+.ltag.a{background:var(--purple)} .ltag.b{background:var(--blue)} .ltag.c{background:#A8752A}
+
+/* formula */
+.fx{display:flex;flex-wrap:wrap;align-items:center;gap:6px;background:var(--surface2);border-radius:12px;padding:11px 13px;margin:8px 0;font-size:13px;font-weight:700}
+.fx .b1{background:var(--purple);color:#fff;border-radius:8px;padding:3px 9px}
+.fx .b2{background:var(--blue);color:#fff;border-radius:8px;padding:3px 9px}
+.fx .b3{background:var(--sand);color:#3A2A08;border-radius:8px;padding:3px 9px}
+.fx .op{color:var(--muted);font-weight:800}
+.fx .rs{color:var(--muted);font-weight:500;font-size:12px;width:100%;margin-top:2px}
+
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{font-size:10.5px;color:var(--muted);font-weight:700;letter-spacing:.06em;text-align:left;padding:5px 8px;border-bottom:1.5px solid var(--line)}
+td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.7}
+tr:last-child td{border-bottom:none}
+td.f{font-weight:700;color:var(--blue);white-space:nowrap}
+
+.ex{border-left:3px solid var(--blue-soft);padding:3px 0 3px 12px;margin:9px 0}
+.ex .j{font-size:14.5px;font-weight:600}
+.ex .k{font-size:11.5px;color:var(--muted);margin-top:1px}
+.hl{color:var(--purple);font-weight:800}
+.hl2{color:var(--mint);font-weight:800}
+.ok{color:var(--mint);font-weight:700}
+.no{color:var(--rose);text-decoration:line-through;text-decoration-thickness:1.5px}
+.box{border-radius:13px;padding:11px 14px;margin-top:10px;font-size:12.5px;line-height:1.75}
+.box.warn{background:var(--rose-soft)}
+.box.warn b{color:var(--rose)}
+.box.tip{background:var(--sand-soft)}
+.box.tip b{color:#8A6420}
+:root[data-theme="dark"] .box.tip b,html:not([data-theme="light"]) .box.tip b{color:var(--sand)}
+.box.note{background:var(--blue-soft)}
+.box.note b{color:var(--blue)}
+.box .t{font-weight:800;display:block;margin-bottom:3px;font-size:12px}
+
+/* segmented */
+.seg{display:flex;gap:6px;margin-bottom:12px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.seg::-webkit-scrollbar{display:none}
+.sg{flex:1 0 auto;border:1.5px solid var(--line);background:var(--surface);border-radius:22px;padding:7px 14px;font-size:12px;color:var(--muted);font-weight:700;white-space:nowrap}
+.sg.on{background:var(--grad);color:#fff;border-color:transparent;box-shadow:0 3px 12px rgba(18,58,86,.26)}
+
+/* vocab list */
+.vrow{display:flex;gap:11px;padding:11px 0;border-bottom:1px solid var(--line)}
+.vrow:last-child{border-bottom:none}
+.vic{width:36px;height:36px;border-radius:11px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:19px;flex:none}
+.vmain{flex:1;min-width:0}
+.vw{font-size:15px;font-weight:700;font-family:"Zen Kaku Gothic New",sans-serif}
+.vr{font-size:11px;color:var(--blue);font-weight:600}
+.vm{font-size:12.5px;color:var(--text);margin-top:1px}
+.vex{font-size:12px;margin-top:5px;background:var(--surface2);border-radius:9px;padding:6px 9px;line-height:1.9}
+.vex .k{display:block;font-size:11px;color:var(--muted);line-height:1.5;margin-top:1px}
+
+/* flashcard */
+.fcw{perspective:1200px;margin-bottom:12px}
+.fc{width:100%;min-height:236px;display:block;position:relative}
+.fc-inner{position:relative;width:100%;min-height:236px;transition:transform .5s cubic-bezier(.3,.9,.3,1);transform-style:preserve-3d}
+.fc.flip .fc-inner{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:20px;box-shadow:var(--sh-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;padding:22px;text-align:center;background:var(--surface);border:1px solid var(--line)}
+.face.back{transform:rotateY(180deg);background:var(--grad);color:#fff;border-color:transparent}
+.face .cat{position:absolute;top:13px;left:15px;font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.08em}
+.face.back .cat{color:rgba(255,255,255,.75)}
+.face .cnt{position:absolute;top:13px;right:15px;font-size:10.5px;color:var(--muted);font-family:"Outfit";font-weight:700}
+.face.back .cnt{color:rgba(255,255,255,.75)}
+.face .em{font-size:44px;line-height:1.1}
+.face .big{font-family:"Zen Kaku Gothic New";font-size:29px;font-weight:900;line-height:1.45}
+.face .mid{font-size:18px;font-weight:700}
+.face .note{font-size:12px;opacity:.9;max-width:38ch;line-height:1.8}
+.fchint{text-align:center;font-size:11px;color:var(--muted);margin-bottom:10px}
+.fcb{display:flex;gap:9px}
+.btn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:5px;border-radius:14px;padding:12px 16px;font-size:13.5px;font-weight:700;border:1.5px solid var(--line);background:var(--surface)}
+.btn.p{background:var(--grad);color:#fff;border-color:transparent;box-shadow:0 4px 14px rgba(18,58,86,.28)}
+.btn.m{background:var(--mint);color:#fff;border-color:transparent}
+.btn.g{color:var(--muted);flex:none}
+
+/* kanji */
+.kg{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:8px}
+.kt{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--sh);padding:10px 5px 8px;text-align:center;position:relative;overflow:hidden}
+.kt::before{content:"";position:absolute;top:0;left:0;right:0;height:2.5px;background:var(--blue)}
+.kt.k2::before{background:var(--grad2)}
+.kt.k3::before{background:linear-gradient(90deg,#8A5E1E,#C9993F)}
+.kt .k{font-family:"Zen Kaku Gothic New";font-size:25px;font-weight:900;line-height:1.4}
+.kt .r{font-size:10.5px;color:var(--purple);font-weight:700;min-height:15px}
+.kt .m{font-size:10.5px;color:var(--muted)}
+.kt .kx{font-size:9px;color:var(--muted);opacity:.9;margin-top:4px;padding-top:4px;border-top:1px dashed var(--line);line-height:1.45}
+.kt.hide .r,.kt.hide .m,.kt.hide .kx{visibility:hidden}
+.kt.known{border-color:var(--mint)}
+.kt.known::after{content:"✓";position:absolute;top:5px;right:6px;font-size:10px;color:var(--mint);font-weight:900}
+
+/* quiz */
+.qbar{height:6px;background:var(--line);border-radius:4px;overflow:hidden;margin-bottom:13px}
+.qbar i{display:block;height:100%;background:var(--grad);border-radius:4px;transition:width .35s}
+.qn{font-size:10.5px;color:var(--muted);font-weight:700;letter-spacing:.06em;margin-bottom:7px;display:flex;gap:7px;align-items:center}
+.qtype{background:var(--purple-soft);color:var(--purple);border-radius:6px;padding:1px 7px;font-size:9.5px;font-weight:800}
+.qt{font-size:16px;font-weight:700;margin-bottom:14px;line-height:1.9}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{border:1.5px solid var(--line);background:var(--surface);border-radius:14px;padding:12px 15px;font-size:14.5px;text-align:left;font-weight:600;transition:transform .12s}
+.opt:active{transform:scale(.985)}
+.opt.c{border-color:var(--mint);background:var(--mint-soft)}
+.opt.w{border-color:var(--rose);background:var(--rose-soft)}
+.fb{margin-top:12px;border-radius:13px;padding:11px 14px;font-size:12.5px;display:none;line-height:1.8}
+.fb.on{display:block}
+.fb.g{background:var(--mint-soft);color:var(--mint)}
+.fb.b{background:var(--rose-soft);color:var(--rose)}
+
+/* dialogue */
+.dl{display:flex;gap:9px;margin-bottom:10px}
+.who{flex:none;width:32px;height:32px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;font-family:"Zen Kaku Gothic New"}
+.who.a{background:var(--blue)} .who.b{background:var(--purple)}
+.bub{background:var(--surface2);border-radius:5px 16px 16px 16px;padding:9px 13px;flex:1}
+.dl.me{flex-direction:row-reverse}
+.dl.me .bub{background:var(--purple-soft);border-radius:16px 5px 16px 16px}
+.bub .j{font-size:14px;font-weight:600}
+.bub .k{font-size:11.5px;color:var(--muted);display:none;margin-top:2px}
+.showkr .bub .k{display:block}
+.reveal{background:var(--mint-soft);border-radius:11px;padding:9px 13px;font-size:13.5px;margin-top:7px;display:none}
+.reveal.on{display:block}
+.sq{border-bottom:1px solid var(--line);padding:11px 0}
+.sq:last-child{border-bottom:none}
+.sq .q{font-size:13.5px;font-weight:600}
+.sq .btn{margin-top:7px;padding:6px 14px;font-size:11.5px;flex:none;display:inline-flex}
+
+/* progress */
+.pr{margin-bottom:14px}
+.prh{display:flex;justify-content:space-between;align-items:baseline;font-size:12.5px;margin-bottom:5px}
+.prh b{font-weight:700}
+.prh .v{font-family:"Outfit";font-weight:800;font-size:13px;color:var(--purple)}
+.prb{height:9px;background:var(--surface2);border-radius:6px;overflow:hidden}
+.prb i{display:block;height:100%;border-radius:6px;transition:width .6s cubic-bezier(.2,.8,.3,1)}
+.prb i.b1{background:linear-gradient(90deg,#0A2438,#12546B)}
+.prb i.b2{background:linear-gradient(90deg,#0A5F75,#1D8C88)}
+.prb i.b3{background:linear-gradient(90deg,#9A6C24,#C9993F)}
+.ring{display:flex;align-items:center;gap:16px;margin-bottom:4px}
+.ring svg{flex:none}
+.ring .rt{font-size:12.5px;color:var(--muted);line-height:1.8}
+.ring .rt b{color:var(--text);font-size:14px}
+.mini{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:4px}
+.mc{background:var(--surface2);border-radius:13px;padding:11px 13px}
+.mc .n{font-family:"Outfit";font-size:19px;font-weight:800;color:var(--blue)}
+.mc .l{font-size:10.5px;color:var(--muted)}
+
+/* notes */
+textarea{width:100%;min-height:150px;border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;font-family:inherit;font-size:13.5px;background:var(--surface2);color:var(--text);resize:vertical;line-height:1.8}
+textarea:focus{outline:2px solid var(--purple);border-color:transparent}
+.saved{font-size:11px;color:var(--mint);font-weight:700;margin-left:auto}
+.tl{position:relative;padding-left:20px}
+.tl::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tli{position:relative;padding-bottom:14px}
+.tli::before{content:"";position:absolute;left:-19px;top:5px;width:11px;height:11px;border-radius:50%;background:var(--surface);border:2.5px solid var(--purple)}
+.tli:last-child{padding-bottom:0}
+.tli .d{font-family:"Outfit";font-size:10.5px;color:var(--muted);font-weight:700}
+.tli .h{font-size:13.5px;font-weight:700;margin:1px 0 3px}
+.tli .b{font-size:12px;color:var(--muted);line-height:1.75}
+</style>
+
+<div id="app">
+<header>
+  <div class="hrow">
+    <div class="hmark jp">習</div>
+    <div><h1>일본어 복습노트</h1><div class="sub">Preply · LESSON 01–03</div></div>
+    <div class="hbtns">
+      <button class="furibtn" id="thbtn">🌗 자동</button>
+      <button class="furibtn" id="furibtn">ふりがな ON</button>
+    </div>
+  </div>
+  <div class="hbar">
+    <div class="hstat"><div class="n" id="h-word">0</div><div class="l">단어</div></div>
+    <div class="hstat"><div class="n" id="h-kanji">0</div><div class="l">한자</div></div>
+    <div class="hstat"><div class="n" id="h-quiz">0%</div><div class="l">퀴즈</div></div>
+    <div class="hstat"><div class="n" id="h-all">0%</div><div class="l">전체</div></div>
+  </div>
+</header>
+
+<!-- ===== HOME ===== -->
+<section class="panel on" id="p-home">
+  <div class="card">
+    <h2><span class="bar"></span>지금까지 배운 것</h2>
+    <div class="tl">
+      <div class="tli"><div class="d">LESSON 01 · 2026.08.25</div><div class="h">희망과 계획 말하기</div><div class="b jp">～たいです（희망）・～つもりです（계획）<br>요일·시간·날짜, 바다 단어, 착용 동사, 날씨 표현</div></div>
+      <div class="tli"><div class="d">LESSON 02 · 2026.09.02</div><div class="h">비교하고 순위 매기기</div><div class="b jp">AはBより～です（비교）・どちら／どっち・～の中（なか）で 一番（いちばん）<br>형용사 반대말 8쌍, 계절, 물가·경치·종류 등 여행 어휘</div></div>
+      <div class="tli"><div class="d">LESSON 03 · 2026.09.16</div><div class="h">날짜·가격 읽기와 옷차림 묘사</div><div class="b jp">月（がつ）・日（にち）읽기, 百・千・万과 円（えん）, 税込（ぜいこ）み／税抜（ぜいぬ）き<br>색(い형용사 vs の), 옷 + ～ています(상태), ～なければなりません, ～すぎる</div></div>
+    </div>
+  </div>
+  <div class="card">
+    <h2><span class="bar"></span>오늘의 복습 루트</h2>
+    <p style="font-size:13px;line-height:1.9">① <b>문법</b>에서 배운 과를 소리내어 읽기 → ② <b>단어</b> 목록으로 예문 확인 후 카드로 테스트 → ③ <b>한자</b> 가리고 읽기 → ④ <b>퀴즈</b> 도전 → ⑤ <b>회화</b>를 한국어 없이 읽기. 한 바퀴 약 20분입니다.</p>
+    <div class="box tip"><span class="t">💡 효율 팁</span>틀린 퀴즈 문제는 자동으로 뒤에 다시 나옵니다. 끝까지 풀면 약점이 저절로 걸러집니다.</div>
+  </div>
+  <div class="card">
+    <h2><span class="bar"></span>내 오답노트 — 반드시 고칠 것</h2>
+    <table>
+      <tr><th>이렇게 쓰면 ×</th><th>이렇게 써야 ○</th></tr>
+      <tr><td class="jp"><span class="no">海に泳ぎます</span></td><td class="jp"><span class="ok">海で泳ぎます</span><br><span class="muted">동작 장소 = で</span></td></tr>
+      <tr><td class="jp"><span class="no">なにもしなくないです</span></td><td class="jp"><span class="ok">なにもしたくないです</span><br><span class="muted">たい의 부정 = たくない</span></td></tr>
+      <tr><td class="jp"><span class="no">ボールトスします</span></td><td class="jp"><span class="ok">ボールをトスします</span><br><span class="muted">목적어 を 누락</span></td></tr>
+      <tr><td class="jp"><span class="no">市外に行きたい</span></td><td class="jp"><span class="ok">郊外（こうがい）に行きたい</span><br><span class="muted">市外는 회화에서 잘 안 씀</span></td></tr>
+      <tr><td>~기로 하다 = つもり?</td><td><span class="ok">つもり = ~할 생각</span><br><span class="muted">~기로 하다 = ～ことにする</span></td></tr>
+      <tr><td>housemaid 自家製</td><td><span class="ok">homemade = 自家製（じかせい）</span><br><span class="muted">housemaid는 가사도우미</span></td></tr>
+      <tr><td class="jp"><span class="no">緑い ズボン</span></td><td class="jp"><span class="ok">緑の ズボン</span><br><span class="muted">緑·紫·水色는 명사 → の (L3)</span></td></tr>
+      <tr><td class="jp"><span class="no">暑い 服</span> (두꺼운 옷)</td><td class="jp"><span class="ok">厚い 服</span><br><span class="muted">あつい 동음: 暑い 덥다 / 厚い 두껍다 (L3)</span></td></tr>
+      <tr><td class="jp"><span class="no">よんがつ・にじゅうにち</span></td><td class="jp"><span class="ok">しがつ・はつか</span><br><span class="muted">4·7·9월, 1~10·14·20·24일은 특수 읽기 (L3)</span></td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ===== GRAMMAR ===== -->
+<section class="panel" id="p-gram">
+  <div class="seg" id="gseg"><button class="sg on" data-g="0">전체</button><button class="sg" data-g="1">1과</button><button class="sg" data-g="2">2과</button><button class="sg" data-g="3">3과</button></div>
+  <div id="gwrap"></div>
+</section>
+
+<!-- ===== VOCAB ===== -->
+<section class="panel" id="p-word">
+  <div class="seg"><button class="sg on" data-vm="list">📖 목록</button><button class="sg" data-vm="card">🃏 카드</button></div>
+  <div class="seg" id="vcat"></div>
+  <div id="vlist"></div>
+  <div id="vcard" style="display:none">
+    <div class="fcw"><button class="fc" id="fc" aria-label="카드 뒤집기"><div class="fc-inner">
+      <div class="face front"><span class="cat" id="fc-cat"></span><span class="cnt" id="fc-cnt"></span><div class="em" id="fc-em"></div><div class="big jp" id="fc-front"></div><div class="note">읽기와 뜻을 말해보세요</div></div>
+      <div class="face back"><span class="cat">답</span><div class="mid jp" id="fc-read"></div><div class="mid" id="fc-mean"></div><div class="note jp" id="fc-ex"></div></div>
+    </div></button></div>
+    <div class="fchint">카드를 누르면 뒤집힙니다 · "다시"를 누른 카드는 뒤에서 또 나옵니다</div>
+    <div class="fcb"><button class="btn" id="fc-again">🔁 다시</button><button class="btn m" id="fc-know">✓ 알아요</button></div>
+    <div style="text-align:center;margin-top:11px"><button class="btn g" id="fc-reset">덱 처음부터</button></div>
+  </div>
+</section>
+
+<!-- ===== KANJI ===== -->
+<section class="panel" id="p-kanji">
+  <div class="seg"><button class="sg on" data-k="0">전체</button><button class="sg" data-k="1">1과</button><button class="sg" data-k="2">2과</button><button class="sg" data-k="3">3과</button></div>
+  <div class="card">
+    <h2><span class="bar"></span>수업 한자 <span class="ltag b" id="kcnt"></span></h2>
+    <p class="muted" style="margin-bottom:10px">타일을 누르면 읽기·뜻이 가려집니다. 길게 눌러 ✓ 표시하면 진도에 반영됩니다.</p>
+    <div class="kg" id="kg"></div>
+    <div style="display:flex;gap:8px;margin-top:12px"><button class="btn" id="k-hide">🙈 전부 가리기</button><button class="btn" id="k-show">👀 전부 보기</button></div>
+  </div>
+  <div class="card">
+    <h2><span class="bar"></span>헷갈리는 한자 짝</h2>
+    <table>
+      <tr><th>한자</th><th>구분</th></tr>
+      <tr><td class="jp" style="font-size:19px;font-weight:900">高</td><td class="jp"><ruby>高<rt>たか</rt></ruby>い = <b>비싸다</b>(⇔<ruby>安<rt>やす</rt></ruby>い) / <b>높다</b>(⇔<ruby>低<rt>ひく</rt></ruby>い)<span class="ltag b">L2</span></td></tr>
+      <tr><td class="jp" style="font-size:19px;font-weight:900">大·多</td><td class="jp"><ruby>大<rt>おお</rt></ruby>きい 크다 / <ruby>多<rt>おお</rt></ruby>い 많다 — 읽기가 같음<span class="ltag b">L2</span></td></tr>
+      <tr><td class="jp" style="font-size:19px;font-weight:900">寒·冷</td><td class="jp"><ruby>寒<rt>さむ</rt></ruby>い 날씨가 춥다 / <ruby>冷<rt>つめ</rt></ruby>たい 사물이 차갑다<span class="ltag a">L1</span></td></tr>
+      <tr><td class="jp" style="font-size:19px;font-weight:900">海</td><td class="jp">海<span class="ok">で</span><ruby>泳<rt>およ</rt></ruby>ぐ(장소) / 海<b>に</b><ruby>行<rt>い</rt></ruby>く(도착점)<span class="ltag a">L1</span></td></tr>
+      <tr><td class="jp" style="font-size:19px;font-weight:900">選·失</td><td class="jp"><ruby>選<rt>えら</rt></ruby>ぶ／<ruby>選択<rt>せんたく</rt></ruby>する ・ <ruby>失<rt>な</rt></ruby>くす／<ruby>紛失<rt>ふんしつ</rt></ruby>する<br><span class="muted">앞=일상, 뒤=격식</span><span class="ltag b">L2</span></td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ===== QUIZ ===== -->
+<section class="panel" id="p-quiz">
+  <div class="seg" id="qseg"></div>
+  <div class="card" id="qbox">
+    <div class="qbar"><i id="qb" style="width:0%"></i></div>
+    <div class="qn"><span id="qn"></span><span class="qtype" id="qty"></span></div>
+    <div class="qt jp" id="qt"></div>
+    <div class="opts" id="qo"></div>
+    <div class="fb" id="qf"></div>
+    <div style="text-align:right;margin-top:12px"><button class="btn p" id="qnext" style="display:none;flex:none">다음 →</button></div>
+  </div>
+  <div class="card" id="qdone" style="display:none;text-align:center">
+    <div style="font-family:Outfit;font-size:38px;font-weight:800;color:var(--purple)" id="qsc"></div>
+    <p id="qmsg" style="margin:5px 0 14px"></p>
+    <button class="btn p" id="qre" style="flex:none">다시 도전</button>
+  </div>
+</section>
+
+<!-- ===== TALK ===== -->
+<section class="panel" id="p-talk">
+  <div class="box note" style="margin-bottom:12px"><span class="t">📌 사용법</span>한국어 번역을 켜지 말고 먼저 소리내어 읽으세요. 막힐 때만 번역을 켭니다. 모든 대화는 배운 단어로만 만들었습니다.</div>
+  <div id="dwrap"></div>
+  <div class="card">
+    <h2><span class="bar"></span>말하기 연습 — 직접 대답하기</h2>
+    <div id="swrap"></div>
+  </div>
+</section>
+
+<!-- ===== PROGRESS ===== -->
+<section class="panel" id="p-prog">
+  <div class="card">
+    <h2><span class="bar"></span>전체 습득률</h2>
+    <div class="ring">
+      <svg width="104" height="104" viewBox="0 0 104 104">
+        <circle cx="52" cy="52" r="44" fill="none" stroke="var(--surface2)" stroke-width="11"/>
+        <circle id="ringc" cx="52" cy="52" r="44" fill="none" stroke="url(#rg)" stroke-width="11" stroke-linecap="round" stroke-dasharray="276.5" stroke-dashoffset="276.5" transform="rotate(-90 52 52)" style="transition:stroke-dashoffset .8s cubic-bezier(.2,.8,.3,1)"/>
+        <defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0A2438"/><stop offset="1" stop-color="#1D8C88"/></linearGradient></defs>
+        <text id="ringt" x="52" y="58" text-anchor="middle" font-family="Outfit" font-size="24" font-weight="800" fill="var(--text)">0%</text>
+      </svg>
+      <div class="rt" id="ringmsg"></div>
+    </div>
+  </div>
+  <div class="card">
+    <h2><span class="bar"></span>영역별 진도</h2>
+    <div class="pr"><div class="prh"><b>단어 암기</b><span class="v" id="pv1">0%</span></div><div class="prb"><i class="b1" id="pb1" style="width:0"></i></div><div class="muted" id="pd1" style="margin-top:3px"></div></div>
+    <div class="pr"><div class="prh"><b>한자 습득</b><span class="v" id="pv2">0%</span></div><div class="prb"><i class="b2" id="pb2" style="width:0"></i></div><div class="muted" id="pd2" style="margin-top:3px"></div></div>
+    <div class="pr" style="margin-bottom:0"><div class="prh"><b>퀴즈 최고점</b><span class="v" id="pv3">0%</span></div><div class="prb"><i class="b3" id="pb3" style="width:0"></i></div><div class="muted" id="pd3" style="margin-top:3px"></div></div>
+  </div>
+  <div class="card">
+    <h2><span class="bar"></span>과별 퀴즈 기록</h2>
+    <div class="mini" id="lessonstats"></div>
+  </div>
+  <div class="card">
+    <h2><span class="bar"></span>다음에 집중할 것</h2>
+    <div id="weak"></div>
+  </div>
+  <div style="text-align:center"><button class="btn g" id="resetall" style="margin:0 auto">진도 기록 초기화</button></div>
+</section>
+
+<!-- ===== NOTES ===== -->
+<section class="panel" id="p-note">
+  <div class="card">
+    <h2><span class="bar"></span>나의 메모 <span class="saved" id="savemsg"></span></h2>
+    <p class="muted" style="margin-bottom:9px">수업 중 궁금했던 것, 선생님께 물어볼 것을 적어두세요. 자동 저장됩니다.</p>
+    <textarea id="mynote" placeholder="예) 「～ませんか」와 「～ましょう」 차이 물어보기&#10;예) 물가 이야기할 때 쓸 표현 더 알아보기"></textarea>
+  </div>
+  <div class="card">
+    <h2><span class="bar"></span>선생님께 물어볼 것 (추천)</h2>
+    <table>
+      <tr><td class="jp"><ruby>紅茶<rt>こうちゃ</rt></ruby>が <ruby>好<rt>す</rt></ruby>きです ・ 紅茶を 好きです</td><td>어느 쪽이 맞나요?<br><span class="muted">정답: が</span></td></tr>
+      <tr><td class="jp"><ruby>豚足<rt>とんそく</rt></ruby>は <ruby>辛<rt>から</rt></ruby>くないです ・ 辛いじゃないです</td><td>い형용사 부정 확인<br><span class="muted">정답: 辛くないです</span></td></tr>
+      <tr><td class="jp">どっち ・ どちら ・ どれ</td><td>실제로 언제 무엇을 쓰는지</td></tr>
+      <tr><td class="jp"><ruby>迷<rt>まよ</rt></ruby>う ・ <ruby>失<rt>な</rt></ruby>くす</td><td>둘 다 "잃다"로 번역되는데 차이는?</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h2><span class="bar"></span>수업 어휘 출처 정리</h2>
+    <p style="font-size:12.5px;line-height:1.9"><b>LESSON 01</b> — 요일·시간, 바다/해변 장면 묘사, 착용 동사, 날씨 표현. 요일별 ～たい／～つもり 작문 연습.<br><br><b>LESSON 02</b> — 비교 문법 중심. 선생님 채팅 어휘: <span class="jp">自家製・寿司・白菜・近い／遠い・辛い／甘い・得意・景色・物価・季節・春夏秋冬・低い・種類・迷う・選ぶ・失くす・似合う・おすすめする・豚足・紅茶</span>. 호텔 고르는 방법, 추천 메뉴 묻기 회화.<br><br><b>LESSON 03</b> — 날짜·숫자·통화·가격·색·옷·착용 동사. 선생님 채팅 어휘: <span class="jp">お腹が痛い・残っていた・具合が悪い・食べ過ぎた・完食・生肉・焼ける・朝から昼まで・忙しかった・プレゼンしなければなりません・黄色／紫／水色／緑／茶色・シャツ／ズボン／靴下／運動靴／帽子／眼鏡／ジャケット・半袖／長袖／下着・きつい／ゆるい・厚い／薄い・試着室・スーツ／ネクタイ／革靴／スニーカー・派手／地味・玉／札・税込み／税抜き・消費税・送料無料・発送・希少・品種／品質・特産品・高級・限定価格／限定品</span>.</p>
+    <div class="box warn"><span class="t">⚠️ 자료 오류 주의</span>수업 이미지 자료에 <span class="jp no">なにもしなくない</span>(→したくない), 한자 土의 뜻 표기, 읽기 해설의 "집에 갈 계획"(→헬스장) 오류가 있습니다. 이 앱의 내용이 정확합니다.</div>
+  </div>
+</section>
+</div>
+
+<nav><div class="tabs">
+  <button class="tab on" data-p="home"><span class="ico">home</span>홈</button>
+  <button class="tab" data-p="gram"><span class="ico">文</span>문법</button>
+  <button class="tab" data-p="word"><span class="ico">語</span>단어</button>
+  <button class="tab" data-p="kanji"><span class="ico">漢</span>한자</button>
+  <button class="tab" data-p="quiz"><span class="ico">問</span>퀴즈</button>
+  <button class="tab" data-p="talk"><span class="ico">話</span>회화</button>
+  <button class="tab" data-p="prog"><span class="ico">度</span>진도</button>
+  <button class="tab" data-p="note"><span class="ico">memo</span>노트</button>
+</div></nav>
+
+<script>
+const $=id=>document.getElementById(id);
+const store={get(k,d){try{const v=localStorage.getItem("jpn:"+k);return v===null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem("jpn:"+k,JSON.stringify(v))}catch(e){}}};
+const ESC=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+// 漢字（かな） → ruby (콘텐츠는 모두 내부 데이터이므로 <b> 등 서식 태그 허용)
+const F=s=>String(s).replace(/([0-9０-９,]*[一-龯々%]+)（([ぁ-ゖー・ァ-ヶ]+)）/g,"<ruby>$1<rt>$2</rt></ruby>");
+const LT=n=>n===1?"a":n===2?"b":"c";
+
+/* ===================== GRAMMAR ===================== */
+const GRAM=[
+{l:1,title:"희망과 계획 말하기",desc:"～たいです · ～つもりです · 기본 조사",items:[
+ {h:"① ～たいです — ~하고 싶습니다",
+  intro:"자기 자신의 <b>희망·바람</b>을 말하는 가장 기본적인 표현입니다. 일본어 회화에서 사용 빈도가 매우 높아 반드시 입에 붙여야 합니다.",
+  fx:['동사 ます형','＋','たいです','行きます→行（い）きたいです / 食（た）べます→食べたいです'],
+  table:[["형태","일본어","뜻"],
+   ["긍정","行（い）きたいです","가고 싶습니다"],
+   ["부정","行きた<b>くない</b>です","가고 싶지 않습니다"],
+   ["과거","行きた<b>かった</b>です","가고 싶었습니다"],
+   ["과거부정","行きた<b>くなかった</b>です","가고 싶지 않았습니다"],
+   ["의문","行きたいですか","가고 싶습니까?"]],
+  tip:{t:"핵심 원리",b:"たい는 <b>い형용사처럼</b> 변합니다. 그래서 부정은 たく<b>ない</b>, 과거는 た<b>かった</b>가 됩니다. 「行きたいでした」는 틀린 형태입니다."},
+  ex:[["水（みず）が 飲（の）みたいです。","물이 마시고 싶습니다. — 희망의 대상은 が를 자주 씁니다(を도 가능)"],
+      ["月曜日（げつようび）に 早（はや）く 家（いえ）に 帰（かえ）りたいです。","월요일에 일찍 집에 돌아가고 싶습니다."],
+      ["火曜日（かようび）に 会社（かいしゃ）に 行（い）きたくないです。","화요일에 회사에 가고 싶지 않습니다."],
+      ["木曜日（もくようび）に なにも したくないです。","목요일에 아무것도 하고 싶지 않습니다. — なにも+부정"],
+      ["きのうは とても 楽（たの）しかったです。海（うみ）に 行きたかったです。","어제는 아주 즐거웠습니다. 바다에 가고 싶었습니다."]],
+  warn:{t:"자주 하는 실수",b:"① <b>남의 희망</b>에는 쓰지 않습니다. \"다나카 씨는 가고 싶어합니다\"는 <span class='jp'>田中（たなか）さんは 行きた<b>がって います</b></span>.<br>② 과거형 <span class='jp no'>行きたいでした</span> → <span class='jp ok'>行きたかったです</span>.<br>③ 정중히 권할 때는 たい가 아니라 <span class='jp'>～ませんか</span>를 씁니다."},
+  dlg:[["A","今日（きょう）、何（なに）が 食（た）べたいですか。","오늘 뭐가 먹고 싶어요?"],
+       ["B","とんかつが 食べたいです。でも 高（たか）い 店（みせ）は 行きたくないです。","돈가스가 먹고 싶어요. 그런데 비싼 가게는 가고 싶지 않아요."]]},
+
+ {h:"② ～つもりです — ~할 생각입니다",
+  intro:"이미 마음속으로 <b>정해 둔 계획·의도</b>를 말합니다. たい가 '바람'이라면 つもり는 '결심'에 가깝습니다.",
+  fx:['동사 기본형(사전형)','＋','つもりです','行く→行くつもりです / 会（あ）う→会うつもりです'],
+  table:[["형태","일본어","뜻"],
+   ["긍정","勉強（べんきょう）する つもりです","공부할 생각입니다"],
+   ["부정","行（い）か<b>ない</b> つもりです","안 갈 생각입니다"],
+   ["강한 부정","行く つもりは <b>ありません</b>","갈 생각은 없습니다"],
+   ["의문","何（なに）を する つもりですか","무엇을 할 생각입니까?"]],
+  tip:{t:"뉘앙스 정확히",b:"つもり = <b>~할 생각/작정</b>입니다. \"~기로 했다\"처럼 <b>결정의 순간</b>을 말할 때는 <span class='jp'>～ことに しました</span>를 씁니다.<br>비교: <span class='jp'>会わない つもりです</span>(안 만날 생각이야) / <span class='jp'>会わない ことに しました</span>(안 만나기로 했어)."},
+  ex:[["月曜日（げつようび）に 父（ちち）に 会（あ）う つもりです。","월요일에 아버지를 만날 생각입니다. — 만나는 대상은 に"],
+      ["水曜日（すいようび）に 公園（こうえん）を 散歩（さんぽ）する つもりです。","수요일에 공원을 산책할 생각입니다. — 산책하는 장소는 を"],
+      ["木曜日（もくようび）に 家（いえ）で 休（やす）む つもりです。","목요일에 집에서 쉴 생각입니다. — 쉬는 장소는 で"],
+      ["金曜日（きんようび）に 友達（ともだち）と とんかつを 食（た）べる つもりです。","금요일에 친구와 돈가스를 먹을 생각입니다."],
+      ["日曜日（にちようび）は 早（はや）く 寝（ね）る つもりです。","일요일은 일찍 잘 생각입니다."]],
+  warn:{t:"자주 하는 실수",b:"つもり 앞은 반드시 <b>기본형</b>입니다. <span class='jp no'>行きます つもり</span> / <span class='jp no'>行って つもり</span> → <span class='jp ok'>行く つもり</span>."},
+  dlg:[["A","週末（しゅうまつ）、何（なに）を する つもりですか。","주말에 뭐 할 생각이에요?"],
+       ["B","土曜日（どようび）は ジムに 行（い）く つもりです。日曜日（にちようび）は 何（なに）も しない つもりです。","토요일은 헬스장에 갈 생각이에요. 일요일은 아무것도 안 할 생각이에요."]]},
+
+ {h:"③ 기본 조사 정리 — に · で · を · と",
+  intro:"1과에서 가장 많이 틀린 부분입니다. 조사 하나로 문장의 뜻이 완전히 달라집니다.",
+  table:[["조사","쓰임","예"],
+   ["に","도착점·시각·대상","海（うみ）<b>に</b> 行きます / 12時（じ）<b>に</b> 寝ます / 父（ちち）<b>に</b> 会います"],
+   ["で","<b>동작이 일어나는 장소</b>·수단","海<b>で</b> 泳（およ）ぎます / 家（いえ）<b>で</b> 休みます / 電車（でんしゃ）<b>で</b> 行きます"],
+   ["を","목적어·통과하는 장소","水（みず）<b>を</b> 飲みます / 公園（こうえん）<b>を</b> 散歩します"],
+   ["と","함께 하는 상대","友達（ともだち）<b>と</b> 食べます"]],
+  warn:{t:"★ 내 오답 1번",b:"<span class='jp no'>人々（ひとびと）が 海に 泳ぎます</span> → <span class='jp ok'>人々が 海で 泳ぎます</span><br>수영은 <b>동작</b>이므로 장소에 で. 「海に行く」는 바다가 <b>도착점</b>이라 に."}},
+
+ {h:"④ 착용 동사 — 몸의 부위가 동사를 정한다",
+  intro:"한국어는 \"쓰다·입다·신다\"로 뭉뚱그리지만 일본어는 부위별로 동사가 다릅니다. 단어와 동사를 <b>세트로</b> 외우는 것이 유일한 방법입니다.",
+  table:[["동사","부위","예"],
+   ["かぶります","머리","ぼうしを かぶります 모자를 씁니다"],
+   ["かけます","눈에 걸침","サングラスを かけます 선글라스를 씁니다"],
+   ["着（き）ます","상체","Tシャツを 着ます 티셔츠를 입습니다"],
+   ["はきます","허리 아래·발","ズボンを／靴（くつ）を／靴下（くつした）を はきます"],
+   ["つけます","바름","日焼（ひや）け止（ど）めを つけます 선크림을 바릅니다"],
+   ["さします","우산·양산","日傘（ひがさ）を さします 양산을 씁니다"]]},
+
+ {h:"⑤ 날씨 표현",
+  intro:"인사 대신 날씨로 대화를 시작하는 것은 일본에서 매우 흔합니다.",
+  table:[["형용사","뜻","하늘·날씨","뜻"],
+   ["暑（あつ）い","덥다","晴（は）れです","맑습니다"],
+   ["寒（さむ）い","춥다","曇（くも）りです","흐립니다"],
+   ["涼（すず）しい","시원하다","雨（あめ）が 降（ふ）ります","비가 옵니다"],
+   ["暖（あたた）かい","따뜻하다","雪（ゆき）が 降ります","눈이 옵니다"],
+   ["蒸（む）し暑（あつ）い","무덥다","風（かぜ）が 強（つよ）いです","바람이 강합니다"],
+   ["冷（つめ）たい","차갑다(사물)","湿度（しつど）が 高（たか）いです","습도가 높습니다"]],
+  warn:{t:"寒い vs 冷たい",b:"<b>날씨·기온</b>이 추운 것은 <span class='jp'>寒い</span>, <b>물·음료 등 사물</b>이 차가운 것은 <span class='jp'>冷たい</span>. 한국어로는 구분이 흐릿해 실수가 잦습니다."},
+  dlg:[["A","今日（きょう）は どんな 天気（てんき）ですか。","오늘은 날씨가 어때요?"],
+       ["B","曇（くも）りです。午後（ごご）は 雨（あめ）が 降（ふ）ります。","흐려요. 오후에는 비가 와요."]]}
+]},
+
+{l:2,title:"비교하고 순위 매기기",desc:"より · どちら／どっち · ～の中で 一番 · 반대말",items:[
+ {h:"① AはBより～です — A는 B보다 ~합니다",
+  intro:"두 가지를 비교하는 가장 기본 구문입니다. <b>より는 비교 기준(B) 바로 뒤에</b> 붙는다는 것이 핵심입니다.",
+  fx:['A は','B より','～です','夏（なつ）は 冬（ふゆ）より 暑（あつ）いです'],
+  table:[["패턴","예문","뜻"],
+   ["형용사 비교","夏（なつ）は 冬（ふゆ）より 暑（あつ）いです","여름은 겨울보다 덥습니다"],
+   ["명사가 주어","日本（にほん）は 韓国（かんこく）より 物価（ぶっか）<b>が</b> 高（たか）いです","일본은 한국보다 물가가 비쌉니다"],
+   ["강조 もっと","ソウルは 東京（とうきょう）より <b>もっと</b> 寒（さむ）いです","서울은 도쿄보다 더욱 춥습니다"],
+   ["부정","この 店（みせ）は あの 店より 高くないです","이 가게는 저 가게보다 비싸지 않습니다"]],
+  tip:{t:"어순 감각",b:"한국어 \"<b>B보다</b> A가 ~\"와 어순이 달라 헷갈립니다. 일본어는 <b>A는 → B より → 형용사</b> 순서로 고정입니다. 「A는」을 먼저 말하는 습관을 들이세요."},
+  ex:[["飛行機（ひこうき）は 電車（でんしゃ）より 早（はや）いです。","비행기는 전철보다 빠릅니다."],
+      ["この かばんは あの かばんより 安（やす）いです。","이 가방은 저 가방보다 쌉니다."],
+      ["キムチは 豚足（とんそく）より 辛（から）いです。","김치는 족발보다 맵습니다."],
+      ["駅（えき）から この ホテルの ほうが 近（ちか）いです。","역에서 이 호텔 쪽이 가깝습니다."]],
+  warn:{t:"자주 하는 실수",b:"① より 위치: <span class='jp no'>より日本は 高い</span> → <span class='jp ok'>日本は 韓国より 高い</span><br>② <span class='jp no'>韓国から 高いです</span> — から(~부터)와 혼동 금지<br>③ 비교 대상이 명사일 때 조사 が 빠뜨리기: 物価<b>が</b> 高いです"}},
+
+ {h:"② どちら / どっち — 어느 쪽이 ~합니까?",
+  intro:"두 가지 중 하나를 고르게 하는 질문입니다. 대답에는 반드시 <b>～のほうが</b>를 씁니다.",
+  fx:['A と B と、','どちらが','～ですか','→ 답: ○○の ほうが ～です'],
+  table:[["표현","격식","예"],
+   ["どちら","정중 (수업·비즈니스)","コーヒーと 紅茶（こうちゃ）と、どちらが いいですか。"],
+   ["どっち","캐주얼 (친구·일상)","コーヒーと 紅茶、どっちが いい？"],
+   ["どれ","<b>셋 이상</b> 중에서","この 中（なか）で どれが 一番（いちばん） いいですか。"]],
+  ex:[["Q: 韓国（かんこく）と 日本（にほん）と、どちらが 物価（ぶっか）が 高（たか）いですか。","한국과 일본 중 어느 쪽이 물가가 비쌉니까?"],
+      ["A: 日本の ほうが 高いです。","일본 쪽이 비쌉니다."],
+      ["Q: 夏（なつ）と 冬（ふゆ）と、どっちが 好（す）きですか。","여름과 겨울 중 어느 쪽을 좋아해요?"],
+      ["A: 冬の ほうが 好きです。寒（さむ）さに 強（つよ）いですから。","겨울 쪽을 좋아해요. 추위에 강하니까요."]],
+  tip:{t:"세트로 기억",b:"질문 <span class='jp'>どちら/どっちが</span> → 대답 <span class='jp'>～のほうが</span>. 대답에서 ほう를 빼면 어색합니다. 캐주얼하게는 <span class='jp'>こっちの ほうが いい</span>."},
+  warn:{t:"둘 vs 셋 이상",b:"선택지가 <b>둘</b>이면 どちら(どっち), <b>셋 이상</b>이면 どれ. 이 구분을 틀리는 학습자가 많습니다."}},
+
+ {h:"③ ～の中で 一番～です — ~중에서 가장 ~합니다",
+  intro:"셋 이상의 범위에서 <b>최고</b>를 말하는 최상급 표현입니다. 一番（いちばん）의 원뜻은 '1번'입니다.",
+  fx:['범위 の中（なか）で','○○が','一番（いちばん）～です','季節（きせつ）の中で 夏（なつ）が 一番 好（す）きです'],
+  table:[["의문사","쓰는 곳","예"],
+   ["何（なに）が","사물","料理（りょうり）の中で 何が 一番 おいしいですか"],
+   ["どこが","장소","日本（にほん）の中で どこが 一番 いいですか"],
+   ["だれが","사람","友達（ともだち）の中で だれが 一番 背（せ）が 高（たか）いですか"],
+   ["いつが","시간·계절","季節（きせつ）の中で いつが 一番 好（す）きですか"],
+   ["どれが","선택지 셋 이상","この中で どれが 一番 안 비싸요?"]],
+  ex:[["季節（きせつ）の 中（なか）で 夏（なつ）が 一番（いちばん） 好（す）きです。","계절 중에서 여름을 가장 좋아합니다."],
+      ["韓国料理（かんこくりょうり）の 中で 豚足（とんそく）が 一番 おいしいです。","한국 요리 중에서 족발이 가장 맛있습니다."],
+      ["この 中で この ホテルが 一番 便利（べんり）です。","이 중에서 이 호텔이 가장 편리합니다."],
+      ["キムチの 中で 白菜（はくさい）キムチが 一番 有名（ゆうめい）です。","김치 중에서 배추김치가 가장 유명합니다."]],
+  tip:{t:"中（なか）의 정체",b:"<span class='jp'>中</span> = '안·속'. 그래서 <span class='jp'>～の中で</span> = '~(범위) 안에서'. 눈앞의 선택지를 가리킬 때는 <span class='jp'>この中で</span>도 자주 씁니다."},
+  dlg:[["A","韓国料理（かんこくりょうり）の 中（なか）で 何（なに）が 一番（いちばん） おすすめですか。","한국 요리 중에 뭐가 제일 추천이에요?"],
+       ["B","豚足（とんそく）です。辛（から）くないですから、日本人（にほんじん）にも 人気（にんき）が あります。","족발이에요. 맵지 않으니까 일본인에게도 인기가 있어요."]]},
+
+ {h:"④ より vs 一番 — 언제 무엇을",
+  intro:"두 문법의 사용 범위를 정확히 구분해야 합니다.",
+  table:[["","より","一番"],
+   ["대상 수","<b>둘</b>을 비교","<b>셋 이상</b> 범위 중 최고"],
+   ["질문 형태","どちら(どっち)が","何が / どこが / だれが / いつが / どれが"],
+   ["대답 형태","○○の ほうが ～です","○○が 一番 ～です"],
+   ["예","夏は 冬より 暑（あつ）いです","季節（きせつ）の中で 夏が 一番 暑いです"]],
+  tip:{t:"실전 조합",b:"대화에서는 두 문법이 이어서 나옵니다. \"<span class='jp'>日本と 韓国と、どちらが 物価（ぶっか）が 高（たか）いですか</span>\" → \"<span class='jp'>日本の ほうが 高いです。アジアの中で 日本が 一番 高いと 思（おも）います</span>\""}},
+
+ {h:"⑤ 형용사 반대말 8쌍",
+  intro:"비교 문법은 반대말을 알아야 실제로 쓸 수 있습니다. 특히 <b>高い는 반대말이 두 개</b>라는 점이 이번 과 최대 함정입니다.",
+  table:[["긍정","반대","주의"],
+   ["長（なが）い 길다","短（みじか）い 짧다",""],
+   ["暑（あつ）い 덥다","寒（さむ）い 춥다","날씨 전용"],
+   ["高（たか）い <b>비싸다</b>","安（やす）い 싸다","← 값"],
+   ["高（たか）い <b>높다</b>","低（ひく）い 낮다","← 높이"],
+   ["多（おお）い 많다","少（すく）ない 적다","수량"],
+   ["大（おお）きい 크다","小（ちい）さい 작다","크기"],
+   ["辛（から）い 맵다","甘（あま）い 달다","맛"],
+   ["近（ちか）い 가깝다","遠（とお）い 멀다","거리"]],
+  warn:{t:"★ 이번 과 최대 함정",b:"<span class='jp'>高（たか）い</span> 하나로 '비싸다'와 '높다'를 모두 말하지만, <b>반대말이 갈립니다</b>. 값이면 <span class='jp ok'>安い</span>, 높이면 <span class='jp ok'>低い</span>.<br>또 <span class='jp'>大（おお）きい</span>(크다)와 <span class='jp'>多（おお）い</span>(많다)는 읽기가 같아 혼동하기 쉽습니다."},
+  ex:[["この ホテルは 駅（えき）から 近（ちか）いですが、値段（ねだん）が 高（たか）いです。","이 호텔은 역에서 가깝지만 가격이 비쌉니다."],
+      ["キムチの 種類（しゅるい）は とても 多（おお）いです。","김치 종류는 아주 많습니다."]]}
+]},
+
+{l:3,title:"날짜·숫자·가격·색·옷",desc:"日付（ひづけ）・値段（ねだん）・色（いろ）・服（ふく）・～ています(상태)・～なければなりません",items:[
+ {h:"① 날짜 읽기 — 月（がつ）와 日（にち）",
+  intro:"월은 숫자+がつ로 규칙적이지만 <b>4·7·9월</b>은 읽기가 다릅니다. 일은 <b>1~10일·14·20·24일</b>이 완전히 다른 고유어 읽기라 통째로 외워야 합니다.",
+  table:[["월","읽기","주의"],
+   ["1月・2月・3月","いちがつ・にがつ・さんがつ",""],
+   ["4月","<b>し</b>がつ","よんがつ ✕"],
+   ["5月・6月","ごがつ・ろくがつ",""],
+   ["7月","<b>しち</b>がつ","なながつ ✕"],
+   ["8月","はちがつ",""],
+   ["9月","<b>く</b>がつ","きゅうがつ ✕"],
+   ["10月・11月・12月","じゅうがつ・じゅういちがつ・じゅうにがつ",""]],
+  t2h:"일 — 고유어 읽기 (통째로 암기)",
+  table2:[["일","읽기","일","읽기"],
+   ["1日","<b>ついたち</b>","6日","むいか"],
+   ["2日","ふつか","7日","なのか"],
+   ["3日","みっか","8日","ようか"],
+   ["4日","よっか","9日","ここのか"],
+   ["5日","いつか","10日","<b>とおか</b>"],
+   ["14日","じゅう<b>よっか</b>","20日","<b>はつか</b>"],
+   ["24日","にじゅう<b>よっか</b>","그 외","숫자+にち (11日 じゅういちにち)"]],
+  ex:[["今日（きょう）は 9月（くがつ）16日（じゅうろくにち）です。","오늘은 9월 16일입니다."],
+      ["会議（かいぎ）は 4月（しがつ）4日（よっか）です。","회의는 4월 4일입니다."],
+      ["1日（ついたち）から 10日（とおか）まで 出張（しゅっちょう）です。","1일부터 10일까지 출장입니다."],
+      ["何月（なんがつ）何日（なんにち）ですか。","몇 월 며칠입니까?"]],
+  warn:{t:"자주 하는 실수",b:"① <span class='jp no'>よんがつ・なながつ・きゅうがつ</span> → <span class='jp ok'>しがつ・しちがつ・くがつ</span><br>② 1日는 날짜면 <span class='jp'>ついたち</span>, '하루'라는 기간이면 <span class='jp'>一日（いちにち）</span> — 같은 한자, 다른 읽기<br>③ 20日는 <span class='jp no'>にじゅうにち</span>가 아니라 <span class='jp ok'>はつか</span>"},
+  dlg:[["A","今日（きょう）は 何日（なんにち）ですか。","오늘은 며칠이에요?"],
+       ["B","16日（じゅうろくにち）です。会議（かいぎ）は 20日（はつか）の 午後（ごご）ですよ。","16일이에요. 회의는 20일 오후예요."]]},
+
+ {h:"② 숫자와 가격 — 円（えん）・税（ぜい）",
+  intro:"쇼핑에서 가장 많이 쓰는 문장은 <b>これは 何円（なんえん）ですか</b>입니다. 백·천·만 단위의 발음 변화와 세금 표시(税込み／税抜き)를 알면 가격표를 읽을 수 있습니다.",
+  fx:['숫자','＋','円（えん）','これは 何円（なんえん）ですか → 税込（ぜいこ）みで 1,100円（せんひゃくえん）です'],
+  table:[["숫자","읽기","주의"],
+   ["100","ひゃく",""],
+   ["300","さん<b>びゃく</b>","탁음 변화"],
+   ["600","ろっ<b>ぴゃく</b>","촉음+반탁음"],
+   ["800","はっ<b>ぴゃく</b>",""],
+   ["1,000","せん","いっせん ✕"],
+   ["3,000","さん<b>ぜん</b>",""],
+   ["8,000","はっ<b>せん</b>",""],
+   ["10,000","<b>いち</b>まん","まん ✕ — 1을 꼭 붙임"],
+   ["100円玉（ひゃくえんだま）","동전","동전을 셀 때 玉（だま）"],
+   ["千円札（せんえんさつ）","지폐","지폐를 셀 때 札（さつ）"]],
+  ex:[["これは 何円（なんえん）ですか。","이것은 얼마입니까?"],
+      ["税抜（ぜいぬ）きで 1,000円（せんえん）、税込（ぜいこ）みで 1,100円（せんひゃくえん）です。","세전 1,000엔, 세후 1,100엔입니다."],
+      ["消費税（しょうひぜい）は 10%（じゅっパーセント）です。昔（むかし）は 8%（はちパーセント）でした。","소비세는 10%입니다. 옛날에는 8%였습니다."],
+      ["ぶどうは 約（やく）1キロ（いちキロ）で 3,000円（さんぜんえん）です。送料（そうりょう）無料（むりょう）です。","포도는 약 1kg에 3,000엔입니다. 배송비 무료입니다."]],
+  tip:{t:"일본 가격표 읽는 법",b:"가격표에 두 숫자가 있으면 큰 쪽이 <span class='jp'>税込み</span>(실제 지불액)입니다. 소비세는 <b>10%</b>지만 <b>식료품·음료는 8%</b>(軽減税率)라 슈퍼 영수증에서는 두 세율이 섞여 나옵니다."},
+  warn:{t:"발음 변화 주의",b:"300 <span class='jp'>さんびゃく</span> / 600 <span class='jp'>ろっぴゃく</span> / 800 <span class='jp'>はっぴゃく</span> / 3,000 <span class='jp'>さんぜん</span> / 8,000 <span class='jp'>はっせん</span> / 10,000 <span class='jp'>いちまん</span>. 이 여섯 개만 따로 외우면 나머지는 규칙적입니다."},
+  dlg:[["A","この いちご、何円（なんえん）ですか。","이 딸기 얼마예요?"],
+       ["B","税込（ぜいこ）みで 880円（はっぴゃくはちじゅうえん）です。高級（こうきゅう）品種（ひんしゅ）ですよ。","세후 880엔이에요. 고급 품종이에요."]]},
+
+ {h:"③ 색 — い형용사 색과 명사 색",
+  intro:"일본어 색 이름은 두 부류입니다. <b>い로 끝나는 색</b>은 형용사라 명사 앞에 바로 붙고, <b>나머지 색</b>은 명사라 <b>の</b>가 필요합니다. 이걸 섞으면 바로 틀립니다.",
+  table:[["부류","색","명사 수식"],
+   ["い형용사","赤（あか）い・黒（くろ）い・白（しろ）い・青（あお）い","赤<b>い</b> 帽子（ぼうし） 빨간 모자"],
+   ["둘 다 가능","黄色（きいろ）い／黄色の・茶色（ちゃいろ）い／茶色の","茶色<b>の</b> 靴下（くつした） = 茶色<b>い</b> 靴下"],
+   ["명사 (+の)","緑（みどり）・紫（むらさき）・水色（みずいろ）・ピンク・オレンジ","緑<b>の</b> ズボン / 水色<b>の</b> ジャケット"]],
+  ex:[["赤（あか）い 帽子（ぼうし）を 被（かぶ）って います。","빨간 모자를 쓰고 있습니다."],
+      ["緑（みどり）の ズボンを 履（は）いて います。","초록 바지를 입고 있습니다."],
+      ["水色（みずいろ）の ジャケットと 黒（くろ）い 眼鏡（めがね）です。","하늘색 재킷과 검은 안경입니다."],
+      ["紫（むらさき）の ネクタイは 派手（はで）ですね。","보라색 넥타이는 화려하네요."]],
+  warn:{t:"자주 하는 실수",b:"<span class='jp no'>緑い ズボン</span> / <span class='jp no'>紫い ネクタイ</span> / <span class='jp no'>水色い ジャケット</span> → 전부 <span class='jp ok'>～の</span>. 緑·紫·水色에는 い형이 없습니다."}},
+
+ {h:"④ 착용 동사 + ～ています — 옷차림 묘사",
+  intro:"1과에서 배운 착용 동사(かぶる·かける·着る·はく·する)에 <b>～ています</b>를 붙이면 '입고 있는 <b>상태</b>'가 됩니다. 사람의 옷차림을 설명할 때는 항상 이 형태입니다.",
+  fx:['동사 て형','＋','います','着（き）る → 着て います / 履（は）く → 履いて います'],
+  table:[["동사","て형","예"],
+   ["着（き）る 상체","着て","水色（みずいろ）の ジャケットを 着て います"],
+   ["履（は）く 하체·발","履いて","緑（みどり）の ズボンを 履いて います / 靴（くつ）を 履いて います"],
+   ["被（かぶ）る 머리","被って","赤（あか）い 帽子（ぼうし）を 被って います"],
+   ["かける 안경","かけて","黒（くろ）い 眼鏡（めがね）を かけて います"],
+   ["する 넥타이·시계","して","ネクタイを して います"]],
+  tip:{t:"ます vs ています",b:"<span class='jp'>帽子を 被ります</span> = 지금 쓰는 <b>동작</b> / <span class='jp'>帽子を 被って います</span> = 쓰고 있는 <b>상태</b>. \"저 사람 누구예요?\" \"빨간 모자 쓴 사람이요\"처럼 옷차림으로 사람을 가리킬 때는 반드시 ています."},
+  ex:[["田中（たなか）さんは スーツを 着（き）て、ネクタイを して います。","다나카 씨는 정장을 입고 넥타이를 하고 있습니다."],
+      ["運動靴（うんどうぐつ）を 履（は）いて ジムに 行（い）きます。","운동화를 신고 헬스장에 갑니다."],
+      ["夏（なつ）は 半袖（はんそで）、冬（ふゆ）は 長袖（ながそで）を 着ます。","여름은 반팔, 겨울은 긴팔을 입습니다."]],
+  warn:{t:"동사 짝 재확인",b:"ネクタイ는 <span class='jp ok'>します</span>(<span class='jp no'>着ます</span> ✕), 靴下는 <span class='jp ok'>履きます</span>, 眼鏡는 <span class='jp ok'>かけます</span>. 1과 착용 동사 표를 다시 보세요."},
+  dlg:[["A","田中（たなか）さんは どの 人（ひと）ですか。","다나카 씨는 어느 분이에요?"],
+       ["B","赤（あか）い 帽子（ぼうし）を 被（かぶ）って いる 人（ひと）です。緑（みどり）の ズボンを 履（は）いて います。","빨간 모자를 쓰고 있는 사람이에요. 초록 바지를 입고 있어요."]]},
+
+ {h:"⑤ ～なければなりません — ~해야 합니다",
+  intro:"의무·필요를 말하는 표현입니다. 형태가 길어 보이지만 <b>ない형에서 ない를 떼고 なければなりません</b>을 붙이면 끝입니다.",
+  fx:['동사 ない형 (ない 제거)','＋','なければなりません','プレゼンする → プレゼンし<b>なければなりません</b>'],
+  table:[["동사","ない형","의무 표현"],
+   ["行（い）く","行かない","行か<b>なければなりません</b>"],
+   ["する","しない","し<b>なければなりません</b>"],
+   ["食（た）べる","食べない","食べ<b>なければなりません</b>"],
+   ["会（あ）う","会わない","会わ<b>なければなりません</b>"],
+   ["買（か）う","買わない","買わ<b>なければなりません</b>"]],
+  ex:[["明日（あした）、プレゼンしなければなりません。","내일 프레젠테이션을 해야 합니다."],
+      ["仕事（しごと）で 病院（びょういん）に 行（い）かなければなりません。","일 때문에 병원에 가야 합니다."],
+      ["月曜日（げつようび）に 会社（かいしゃ）に 行かなければなりませんから、早（はや）く 寝（ね）ます。","월요일에 회사에 가야 하니까 일찍 잡니다."]],
+  tip:{t:"회화에서는",b:"일상 회화에서는 <span class='jp'>～なければなりません</span>보다 <span class='jp'>～ないと いけません</span>이 더 흔하고, 친구끼리는 <span class='jp'>～なきゃ</span>로 줄입니다: <span class='jp'>行かなきゃ</span>. 지금은 정중형 하나만 정확히 익히세요."},
+  warn:{t:"반대 표현",b:"'하지 않아도 됩니다'는 <span class='jp ok'>～なくても いいです</span>: <span class='jp'>明日は 行かなくても いいです</span>. なければなりません의 부정이 아니라 별도 표현입니다."},
+  dlg:[["A","今日（きょう）は 早（はや）く 帰（かえ）りますか。","오늘은 일찍 가세요?"],
+       ["B","はい。明日（あした） プレゼンしなければなりませんから。","네. 내일 프레젠테이션을 해야 하니까요."]]},
+
+ {h:"⑥ ～すぎる · ～から～まで · 이유의 から · 과거형",
+  intro:"3과 어휘에 섞여 나온 작은 문법 네 가지입니다. 각각 한 줄이지만 회화 빈도가 매우 높습니다.",
+  table:[["표현","뜻","예"],
+   ["ます형 + すぎる","너무 ~하다","食（た）べ<b>すぎ</b>ました 과식했습니다 / 飲（の）みすぎた"],
+   ["A から B まで","A부터 B까지","朝（あさ）<b>から</b> 昼（ひる）<b>まで</b> 忙（いそが）しかったです"],
+   ["문장 + から","~니까 (이유)","プレゼンしなければなりません<b>から</b>、早く 寝ます"],
+   ["い형용사 과거","~했습니다","忙し<b>かった</b>です / 痛（いた）<b>かった</b>です / 高（たか）かったです"],
+   ["～て いた","~해 있던 (상태 과거)","残（のこ）<b>って いた</b> ケーキ 남아 있던 케이크"]],
+  ex:[["残（のこ）って いた ケーキを 完食（かんしょく）しました。食（た）べすぎました。","남아 있던 케이크를 다 먹었습니다. 과식했습니다."],
+      ["具合（ぐあい）が 悪（わる）いですから、病院（びょういん）に 行（い）く つもりです。","몸이 안 좋으니까 병원에 갈 생각입니다."],
+      ["肉（にく）は ちゃんと 焼（や）けて いましたか。","고기는 제대로 구워져 있었습니까?"]],
+  tip:{t:"焼ける와 焼く",b:"<span class='jp'>焼（や）ける</span>는 '구워지다'(자동사), <span class='jp'>焼（や）く</span>는 '굽다'(타동사). \"고기가 잘 구워졌나요?\"는 고기가 주어라 <span class='jp ok'>肉が 焼けて いました</span>. 생고기 = <span class='jp'>生肉（なまにく）</span>."},
+  dlg:[["A","具合（ぐあい）が 悪（わる）いですか。","몸이 안 좋아요?"],
+       ["B","はい、お腹（なか）が 痛（いた）いです。昨日（きのう）食（た）べすぎましたから。","네, 배가 아파요. 어제 과식했거든요."],
+       ["A","肉（にく）は ちゃんと 焼（や）けて いましたか。","고기는 제대로 구워져 있었어요?"],
+       ["B","たぶん 生（なま）でした…。","아마 날것이었어요…."]]}
+]}];
+
+function drawGram(scope){
+  const w=$("gwrap");w.innerHTML="";
+  GRAM.filter(g=>scope===0||g.l===scope).forEach(g=>{
+    const b=document.createElement("div");b.className="lb l"+g.l;
+    b.innerHTML='<div class="lnum">LESSON 0'+g.l+'</div><div class="ti">'+g.title+'</div><div class="de jp">'+F(g.desc)+'</div>';
+    w.appendChild(b);
+    g.items.forEach(it=>{
+      const c=document.createElement("div");c.className="card";
+      let h='<h2><span class="bar"></span>'+F(it.h)+'</h2>';
+      if(it.intro)h+='<p style="line-height:1.9">'+F(it.intro)+'</p>';
+      if(it.fx)h+='<div class="fx jp"><span class="b1">'+F(it.fx[0])+'</span><span class="op">'+it.fx[1]+'</span><span class="b2">'+F(it.fx[2])+'</span><span class="rs">'+F(it.fx[3])+'</span></div>';
+      const TB=t=>{let s='<div style="overflow-x:auto"><table>';t.forEach((r,i)=>{
+        s+="<tr>"+r.map((cell,j)=>{const tag=i===0?"th":"td";const cls=(i>0&&j===0)?' class="f jp"':(i>0?' class="jp"':"");return "<"+tag+cls+">"+F(cell)+"</"+tag+">"}).join("")+"</tr>"});return s+'</table></div>'};
+      if(it.table)h+=TB(it.table);
+      if(it.table2){if(it.t2h)h+='<h3>'+it.t2h+'</h3>';h+=TB(it.table2)}
+      if(it.tip)h+='<div class="box tip"><span class="t">💡 '+it.tip.t+'</span>'+F(it.tip.b)+'</div>';
+      if(it.ex){h+='<h3>예문</h3>';it.ex.forEach(e=>{h+='<div class="ex"><div class="j jp">'+F(e[0])+'</div><div class="k">'+F(e[1])+'</div></div>'})}
+      if(it.warn)h+='<div class="box warn"><span class="t">⚠️ '+it.warn.t+'</span>'+F(it.warn.b)+'</div>';
+      if(it.dlg){h+='<h3>미니 회화</h3>';it.dlg.forEach(d=>{h+='<div class="dl'+(d[0]==="B"?" me":"")+'"><span class="who '+(d[0]==="B"?"b":"a")+'">'+d[0]+'</span><div class="bub"><div class="j jp">'+F(d[1])+'</div><div class="k" style="display:block">'+F(d[2])+'</div></div></div>'}) }
+      c.innerHTML=h;w.appendChild(c);
+    });
+  });
+}
+document.querySelectorAll("[data-g]").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll("[data-g]").forEach(x=>x.classList.toggle("on",x===b));drawGram(+b.dataset.g)}));
+drawGram(0);
+
+/* ===================== VOCAB ===================== */
+// [단어, 읽기, 뜻, 예문, 예문뜻, 과, 분류, 이모지]
+const VOCAB=[
+// L1 요일
+["月曜日","げつようび","월요일","月曜日（げつようび）に 父（ちち）に 会（あ）う つもりです。","월요일에 아버지를 만날 생각입니다.",1,"요일·시간","🌙"],
+["火曜日","かようび","화요일","火曜日（かようび）に 会社（かいしゃ）に 行（い）きたくないです。","화요일에 회사에 가고 싶지 않습니다.",1,"요일·시간","🔥"],
+["水曜日","すいようび","수요일","水曜日（すいようび）に 映画（えいが）を 見（み）たいです。","수요일에 영화를 보고 싶습니다.",1,"요일·시간","💧"],
+["木曜日","もくようび","목요일","木曜日（もくようび）に 家（いえ）で 休（やす）む つもりです。","목요일에 집에서 쉴 생각입니다.",1,"요일·시간","🌳"],
+["金曜日","きんようび","금요일","金曜日（きんようび）に 友達（ともだち）と 食（た）べます。","금요일에 친구와 먹습니다.",1,"요일·시간","⭐"],
+["土曜日","どようび","토요일","土曜日（どようび）に ジムに 行（い）く つもりです。","토요일에 헬스장에 갈 생각입니다.",1,"요일·시간","🏔️"],
+["日曜日","にちようび","일요일","日曜日（にちようび）に 日本語（にほんご）を 復習（ふくしゅう）したいです。","일요일에 일본어를 복습하고 싶습니다.",1,"요일·시간","☀️"],
+["一昨日","おととい","그저께","一昨日（おととい）は 雨（あめ）が 降（ふ）りました。","그저께는 비가 왔습니다.",1,"요일·시간","⏪"],
+["昨日","きのう","어제","昨日（きのう）は 出張（しゅっちょう）でした。","어제는 출장이었습니다.",1,"요일·시간","◀️"],
+["今日","きょう","오늘","今日（きょう）は とても 暑（あつ）いです。","오늘은 아주 덥습니다.",1,"요일·시간","📍"],
+["明日","あした","내일","明日（あした）、映画（えいが）を 見（み）る つもりです。","내일 영화를 볼 생각입니다.",1,"요일·시간","▶️"],
+["明後日","あさって","모레","明後日（あさって）、父（ちち）に 会（あ）います。","모레 아버지를 만납니다.",1,"요일·시간","⏩"],
+["午前","ごぜん","오전","午前（ごぜん）9時（くじ）から 働（はたら）きます。","오전 9시부터 일합니다.",1,"요일·시간","🌅"],
+["午後","ごご","오후","午後（ごご）は 雨（あめ）が 降（ふ）ります。","오후에는 비가 옵니다.",1,"요일·시간","🌇"],
+["早く","はやく","일찍·빨리","早（はや）く 家（いえ）に 帰（かえ）りたいです。","일찍 집에 돌아가고 싶습니다.",1,"요일·시간","⏰"],
+["何時","なんじ","몇 시","何時（なんじ）に 寝（ね）る つもりですか。","몇 시에 잘 생각입니까?",1,"요일·시간","🕐"],
+// L1 바다
+["ボール","ボール","공","バレーボールを します。ボールを トスします。","배구를 합니다. 공을 토스합니다.",1,"바다·해변","🏐"],
+["日傘","ひがさ","양산","日傘（ひがさ）を さします。","양산을 씁니다. (전용동사 さす)",1,"바다·해변","⛱️"],
+["人々","ひとびと","사람들","人々（ひとびと）が 海（うみ）で 泳（およ）ぎます。","사람들이 바다에서 헤엄칩니다. (★장소는 で)",1,"바다·해변","👥"],
+["椅子","いす","의자","椅子（いす）に 座（すわ）ります。","의자에 앉습니다. (조사 に)",1,"바다·해변","🪑"],
+["サングラス","サングラス","선글라스","サングラスを かけます。","선글라스를 씁니다.",1,"바다·해변","🕶️"],
+["日焼け止め","ひやけどめ","선크림","日焼（ひや）け止（ど）めを つけます。","선크림을 바릅니다.",1,"바다·해변","🧴"],
+["砂","すな","모래","砂（すな）の 上（うえ）で 遊（あそ）びます。","모래 위에서 놉니다.",1,"바다·해변","🏖️"],
+["浮き輪","うきわ","튜브","浮（う）き輪（わ）を 使（つか）います。","튜브를 사용합니다. (浮く 뜨다 + 輪 고리)",1,"바다·해변","🛟"],
+["タオル","タオル","수건","タオルで ふきます。","수건으로 닦습니다.",1,"바다·해변","🧺"],
+["海","うみ","바다","海（うみ）の 近（ちか）くの 場所（ばしょ）に 行（い）きたいです。","바다 근처의 장소에 가고 싶습니다.",1,"바다·해변","🌊"],
+// L1 착용
+["かぶります","かぶります","(머리에) 쓰다","ぼうしを かぶります。","모자를 씁니다.",1,"착용·동작","👒"],
+["かけます","かけます","(안경을) 쓰다","サングラスを かけます。","선글라스를 씁니다.",1,"착용·동작","🕶️"],
+["着ます","きます","(상의를) 입다","Tシャツを 着（き）ます。","티셔츠를 입습니다.",1,"착용·동작","👕"],
+["はきます","はきます","(하의·신발을) 입다·신다","ズボンを はきます。靴（くつ）を はきます。","바지를 입습니다. 신발을 신습니다.",1,"착용·동작","👖"],
+["つけます","つけます","바르다·붙이다","日焼（ひや）け止（ど）めを つけます。","선크림을 바릅니다.",1,"착용·동작","🧴"],
+["さします","さします","(우산을) 쓰다","日傘（ひがさ）を さします。","양산을 씁니다.",1,"착용·동작","☂️"],
+["泳ぎます","およぎます","헤엄치다","海（うみ）で 泳（およ）ぎます。","바다에서 헤엄칩니다.",1,"착용·동작","🏊"],
+["座ります","すわります","앉다","椅子（いす）に 座（すわ）ります。","의자에 앉습니다.",1,"착용·동작","💺"],
+// L1 날씨
+["暑い","あつい","덥다","今日（きょう）は 暑（あつ）いです。夏（なつ）は 蒸（む）し暑（あつ）いです。","오늘은 덥습니다. 여름은 무덥습니다.",1,"날씨","🥵"],
+["寒い","さむい","춥다","冬（ふゆ）は 寒（さむ）いです。寒（さむ）さに 強（つよ）いですか。","겨울은 춥습니다. 추위에 강합니까?",1,"날씨","🥶"],
+["涼しい","すずしい","시원하다","朝（あさ）は 涼（すず）しいです。","아침은 시원합니다.",1,"날씨","🍃"],
+["暖かい","あたたかい","따뜻하다","春（はる）は 暖（あたた）かいです。","봄은 따뜻합니다.",1,"날씨","🌸"],
+["蒸し暑い","むしあつい","무덥다","夏（なつ）は 蒸（む）し暑（あつ）いです。","여름은 무덥습니다.",1,"날씨","💦"],
+["冷たい","つめたい","차갑다(사물)","冷（つめ）たい 水（みず）を 飲（の）みたいです。","차가운 물을 마시고 싶습니다.",1,"날씨","🧊"],
+["雨が降ります","あめがふります","비가 옵니다","午後（ごご）は 雨（あめ）が 降（ふ）ります。","오후에는 비가 옵니다.",1,"날씨","☔"],
+["雪が降ります","ゆきがふります","눈이 옵니다","冬（ふゆ）は 雪（ゆき）が 降（ふ）ります。","겨울에는 눈이 옵니다.",1,"날씨","❄️"],
+["晴れです","はれです","맑습니다","今日（きょう）は 晴（は）れです。","오늘은 맑습니다.",1,"날씨","☀️"],
+["曇りです","くもりです","흐립니다","空（そら）が 曇（くも）りです。","하늘이 흐립니다.",1,"날씨","☁️"],
+["風が強いです","かぜがつよいです","바람이 강합니다","今日（きょう）は 風（かぜ）が 強（つよ）いです。","오늘은 바람이 강합니다.",1,"날씨","💨"],
+["天気","てんき","날씨","今日（きょう）は どんな 天気（てんき）ですか。","오늘은 날씨가 어떻습니까?",1,"날씨","🌤️"],
+// L1 생활동사
+["行きます","いきます","가다","会社（かいしゃ）に 行（い）きます。","회사에 갑니다.",1,"생활 동사","🚶"],
+["帰ります","かえります","돌아가다","早（はや）く 家（いえ）に 帰（かえ）りたいです。","일찍 집에 돌아가고 싶습니다.",1,"생활 동사","🏠"],
+["会います","あいます","만나다","父（ちち）に 会（あ）う つもりです。","아버지를 만날 생각입니다. (★대상은 に)",1,"생활 동사","🤝"],
+["休みます","やすみます","쉬다","家（いえ）で 休（やす）む つもりです。","집에서 쉴 생각입니다.",1,"생활 동사","😴"],
+["寝ます","ねます","자다","12時（じ）に 寝（ね）たいです。","12시에 자고 싶습니다.",1,"생활 동사","🛏️"],
+["散歩します","さんぽします","산책하다","公園（こうえん）を 散歩（さんぽ）する つもりです。","공원을 산책할 생각입니다. (★통과 장소는 を)",1,"생활 동사","🚶‍♀️"],
+["復習します","ふくしゅうします","복습하다","日本語（にほんご）を 復習（ふくしゅう）したいです。","일본어를 복습하고 싶습니다.",1,"생활 동사","📚"],
+// L2 형용사 쌍
+["長い","ながい","길다","この 道（みち）は 長（なが）いです。","이 길은 깁니다. (⇔短い)",2,"형용사 쌍","📏"],
+["短い","みじかい","짧다","休（やす）みが 短（みじか）いです。","휴가가 짧습니다. (⇔長い)",2,"형용사 쌍","✂️"],
+["高い","たかい","비싸다","日本（にほん）は 韓国（かんこく）より 物価（ぶっか）が 高（たか）いです。","일본은 한국보다 물가가 비쌉니다. (⇔安い)",2,"형용사 쌍","💸"],
+["安い","やすい","싸다","この 店（みせ）は 安（やす）くて おいしいです。","이 가게는 싸고 맛있습니다. (⇔高い)",2,"형용사 쌍","🏷️"],
+["低い","ひくい","낮다","この ホテルは 値段（ねだん）が 低（ひく）いです。","(높이·수치가) 낮습니다. (⇔高い 높다)",2,"형용사 쌍","🐜"],
+["多い","おおい","많다","キムチの 種類（しゅるい）は 多（おお）いです。","김치 종류는 많습니다. (⇔少ない)",2,"형용사 쌍","🗻"],
+["少ない","すくない","적다","人（ひと）が 少（すく）ないです。","사람이 적습니다. (⇔多い)",2,"형용사 쌍","🤏"],
+["大きい","おおきい","크다","大（おお）きい かばんを 買（か）いたいです。","큰 가방을 사고 싶습니다. (⇔小さい)",2,"형용사 쌍","🐘"],
+["小さい","ちいさい","작다","小（ちい）さい 部屋（へや）です。","작은 방입니다. (⇔大きい)",2,"형용사 쌍","🐭"],
+["辛い","からい","맵다","キムチは 豚足（とんそく）より 辛（から）いです。","김치는 족발보다 맵습니다. (⇔甘い)",2,"형용사 쌍","🌶️"],
+["甘い","あまい","달다","この 果物（くだもの）は 甘（あま）いです。","이 과일은 답니다. (⇔辛い)",2,"형용사 쌍","🍬"],
+["近い","ちかい","가깝다","駅（えき）から 近（ちか）い ホテルを 選（えら）びます。","역에서 가까운 호텔을 고릅니다. (⇔遠い)",2,"형용사 쌍","📍"],
+["遠い","とおい","멀다","空港（くうこう）は 遠（とお）いです。","공항은 멉니다. (⇔近い)",2,"형용사 쌍","🗺️"],
+// L2 명사
+["物価","ぶっか","물가","日本（にほん）は 物価（ぶっか）が 高（たか）いです。","일본은 물가가 비쌉니다.",2,"L2 명사","💰"],
+["季節","きせつ","계절","季節（きせつ）の 中（なか）で 夏（なつ）が 一番（いちばん） 好（す）きです。","계절 중에서 여름을 가장 좋아합니다.",2,"L2 명사","🍂"],
+["春","はる","봄","春（はる）は 暖（あたた）かいです。","봄은 따뜻합니다.",2,"L2 명사","🌸"],
+["夏","なつ","여름","夏（なつ）は 冬（ふゆ）より 暑（あつ）いです。","여름은 겨울보다 덥습니다.",2,"L2 명사","🌻"],
+["秋","あき","가을","秋（あき）が 一番（いちばん） 好（す）きです。","가을을 가장 좋아합니다.",2,"L2 명사","🍁"],
+["冬","ふゆ","겨울","冬（ふゆ）は 寒（さむ）いですが、好（す）きです。","겨울은 춥지만 좋아합니다.",2,"L2 명사","⛄"],
+["種類","しゅるい","종류","キムチの 種類（しゅるい）が 多（おお）いです。","김치 종류가 많습니다.",2,"L2 명사","🗂️"],
+["景色","けしき","경치","この ホテルは 景色（けしき）が きれいです。","이 호텔은 경치가 예쁩니다.",2,"L2 명사","🏞️"],
+["場所","ばしょ","장소","便利（べんり）な 場所（ばしょ）を 選（えら）びます。","편리한 장소를 고릅니다.",2,"L2 명사","📌"],
+["自家製","じかせい","수제·홈메이드","自家製（じかせい）の キムチが 一番（いちばん） おいしいです。","수제 김치가 가장 맛있습니다.",2,"L2 명사","🏠"],
+["寿司","すし","초밥","日本（にほん）で 寿司（すし）が 食（た）べたいです。","일본에서 초밥이 먹고 싶습니다.",2,"L2 명사","🍣"],
+["白菜","はくさい","배추","白菜（はくさい）キムチが 一番（いちばん） 有名（ゆうめい）です。","배추김치가 가장 유명합니다.",2,"L2 명사","🥬"],
+["豚足","とんそく","족발","豚足（とんそく）が 一番（いちばん） おいしいです。","족발이 가장 맛있습니다.",2,"L2 명사","🍖"],
+["紅茶","こうちゃ","홍차","コーヒーと 紅茶（こうちゃ）と、どちらが いいですか。","커피와 홍차 중 어느 쪽이 좋습니까?",2,"L2 명사","🍵"],
+// L2 동사·표현
+["選びます","えらびます","고르다","場所（ばしょ）で ホテルを 選（えら）びます。","장소로 호텔을 고릅니다. (격식: 選択する)",2,"L2 동사·표현","☑️"],
+["迷います","まよいます","헤매다·망설이다","道（みち）に 迷（まよ）いました。","길을 잃었습니다.",2,"L2 동사·표현","🌀"],
+["失くします","なくします","잃어버리다","かぎを 失（な）くしました。","열쇠를 잃어버렸습니다. (서면: 紛失する)",2,"L2 동사·표현","🔑"],
+["似合います","にあいます","어울리다","その ぼうし、よく 似合（にあ）いますね。","그 모자, 잘 어울리네요.",2,"L2 동사·표현","💃"],
+["おすすめします","おすすめします","추천하다","おすすめは なんですか。","추천은 뭐예요?",2,"L2 동사·표현","👍"],
+["得意","とくい","잘함·특기","料理（りょうり）が 得意（とくい）です。","요리를 잘합니다.",2,"L2 동사·표현","💪"],
+["便利","べんり","편리하다","便利（べんり）な 場所（ばしょ）が いいです。","편리한 장소가 좋습니다.",2,"L2 동사·표현","✨"],
+// L2 비교표현
+["より","より","~보다","夏（なつ）は 冬（ふゆ）より 暑（あつ）いです。","여름은 겨울보다 덥습니다.",2,"비교 표현","⚖️"],
+["どちら","どちら","어느 쪽 (정중)","韓国（かんこく）と 日本（にほん）と、どちらが 高（たか）いですか。","한국과 일본 중 어느 쪽이 비쌉니까?",2,"비교 표현","🔀"],
+["どっち","どっち","어느 쪽 (캐주얼)","コーヒーと 紅茶（こうちゃ）、どっちが いい？","커피와 홍차, 어느 쪽이 좋아?",2,"비교 표현","🔁"],
+["～のほうが","～のほうが","~쪽이","日本（にほん）の ほうが 高（たか）いです。","일본 쪽이 비쌉니다.",2,"비교 표현","➡️"],
+["～の中で","～のなかで","~중에서","季節（きせつ）の 中（なか）で いつが 好（す）きですか。","계절 중에서 언제를 좋아합니까?",2,"비교 표현","🎯"],
+["一番","いちばん","가장·제일","豚足（とんそく）が 一番（いちばん） おいしいです。","족발이 가장 맛있습니다.",2,"비교 표현","🥇"],
+// ===== L3 몸·건강 =====
+["お腹が痛い","おなかがいたい","배가 아프다","食（た）べすぎて、お腹（なか）が 痛（いた）いです。","과식해서 배가 아픕니다.",3,"L3 몸·건강","🤕"],
+["具合が悪い","ぐあいがわるい","몸 상태가 나쁘다","今日（きょう）は 具合（ぐあい）が 悪（わる）いです。","오늘은 몸이 안 좋습니다.",3,"L3 몸·건강","🤒"],
+["食べ過ぎる","たべすぎる","과식하다","昨日（きのう）、食（た）べ過（す）ぎました。","어제 과식했습니다. (ます형+すぎる)",3,"L3 몸·건강","🍰"],
+["残っていた","のこっていた","남아 있던","残（のこ）って いた ケーキを 食（た）べました。","남아 있던 케이크를 먹었습니다.",3,"L3 몸·건강","🍰"],
+["完食","かんしょく","다 먹음·완식","ケーキを 完食（かんしょく）しました。","케이크를 다 먹었습니다.",3,"L3 몸·건강","🍽️"],
+["生","なま","날것·생","生（なま）の 野菜（やさい）を 食（た）べます。","생야채를 먹습니다.",3,"L3 몸·건강","🥗"],
+["生肉","なまにく","생고기","生肉（なまにく）は 食（た）べたくないです。","생고기는 먹고 싶지 않습니다.",3,"L3 몸·건강","🥩"],
+["焼ける","やける","구워지다","肉（にく）は ちゃんと 焼（や）けて いましたか。","고기는 제대로 구워져 있었습니까? (자동사)",3,"L3 몸·건강","🔥"],
+["ちゃんと","ちゃんと","제대로·잘","ちゃんと 焼（や）けて いました。","제대로 구워져 있었습니다.",3,"L3 몸·건강","✅"],
+["野菜","やさい","채소","野菜（やさい）は 安（やす）いです。","채소는 쌉니다.",3,"L3 몸·건강","🥬"],
+["病院","びょういん","병원","仕事（しごと）で 病院（びょういん）に 行（い）く つもりです。","일 때문에 병원에 갈 생각입니다.",3,"L3 몸·건강","🏥"],
+// ===== L3 일·시간 =====
+["朝から昼まで","あさからひるまで","아침부터 낮까지","朝（あさ）から 昼（ひる）まで 忙（いそが）しかったです。","아침부터 낮까지 바빴습니다.",3,"L3 일·시간","🌅"],
+["忙しい","いそがしい","바쁘다","今週（こんしゅう）は とても 忙（いそが）しいです。","이번 주는 아주 바쁩니다.",3,"L3 일·시간","💼"],
+["プレゼン","プレゼン","프레젠테이션","明日（あした）、プレゼンしなければなりません。","내일 프레젠테이션을 해야 합니다.",3,"L3 일·시간","📊"],
+["～なければなりません","～なければなりません","~해야 합니다","会社（かいしゃ）に 行（い）かなければなりません。","회사에 가야 합니다.",3,"L3 일·시간","❗"],
+["仕事で","しごとで","일 때문에·업무로","仕事（しごと）で 東京（とうきょう）に 行（い）きます。","업무로 도쿄에 갑니다.",3,"L3 일·시간","🏢"],
+// ===== L3 색 =====
+["赤い","あかい","빨갛다","赤（あか）い 帽子（ぼうし）を 被（かぶ）って います。","빨간 모자를 쓰고 있습니다. (い형용사)",3,"L3 색","🔴"],
+["黒い","くろい","검다","黒（くろ）い 眼鏡（めがね）を かけて います。","검은 안경을 쓰고 있습니다. (い형용사)",3,"L3 색","⚫"],
+["黄色","きいろ","노랑","黄色（きいろ）の シャツ ／ 黄色い シャツ 둘 다 가능","노란 셔츠",3,"L3 색","🟡"],
+["緑","みどり","초록","緑（みどり）の ズボンを 履（は）いて います。","초록 바지를 입고 있습니다. (緑い ✕ → 緑の)",3,"L3 색","🟢"],
+["紫","むらさき","보라","紫（むらさき）の ネクタイを して います。","보라색 넥타이를 하고 있습니다. (명사+の)",3,"L3 색","🟣"],
+["水色","みずいろ","하늘색","水色（みずいろ）の ジャケットを 着（き）て います。","하늘색 재킷을 입고 있습니다.",3,"L3 색","🩵"],
+["茶色","ちゃいろ","갈색","茶色（ちゃいろ）の 靴下（くつした）を 履（は）いて います。","갈색 양말을 신고 있습니다.",3,"L3 색","🟤"],
+// ===== L3 옷 =====
+["服","ふく","옷","薄（うす）い 服（ふく）を 着（き）ます。","얇은 옷을 입습니다.",3,"L3 옷","👗"],
+["シャツ","シャツ","셔츠","黄色（きいろ）の シャツを 着（き）ます。","노란 셔츠를 입습니다.",3,"L3 옷","👔"],
+["ズボン","ズボン","바지","緑（みどり）の ズボンを 履（は）きます。","초록 바지를 입습니다.",3,"L3 옷","👖"],
+["靴下","くつした","양말","茶色（ちゃいろ）の 靴下（くつした）を 履（は）きます。","갈색 양말을 신습니다.",3,"L3 옷","🧦"],
+["運動靴","うんどうぐつ","운동화","運動靴（うんどうぐつ）を 履（は）いて ジムに 行（い）きます。","운동화를 신고 헬스장에 갑니다.",3,"L3 옷","👟"],
+["帽子","ぼうし","모자","赤（あか）い 帽子（ぼうし）を 被（かぶ）ります。","빨간 모자를 씁니다.",3,"L3 옷","🧢"],
+["眼鏡","めがね","안경","黒（くろ）い 眼鏡（めがね）を かけます。","검은 안경을 씁니다.",3,"L3 옷","👓"],
+["ジャケット","ジャケット","재킷","水色（みずいろ）の ジャケットを 着（き）ます。","하늘색 재킷을 입습니다.",3,"L3 옷","🧥"],
+["半袖","はんそで","반팔","夏（なつ）は 半袖（はんそで）を 着（き）ます。","여름은 반팔을 입습니다.",3,"L3 옷","👕"],
+["長袖","ながそで","긴팔","秋（あき）は 長袖（ながそで）を 着（き）ます。","가을은 긴팔을 입습니다.",3,"L3 옷","🧥"],
+["下着","したぎ","속옷","下着（したぎ）を 買（か）います。","속옷을 삽니다.",3,"L3 옷","🩲"],
+["スーツ","スーツ","정장","会社（かいしゃ）で スーツを 着（き）て います。","회사에서 정장을 입고 있습니다.",3,"L3 옷","🤵"],
+["ネクタイ","ネクタイ","넥타이","ネクタイを して います。","넥타이를 하고 있습니다. (동사는 する!)",3,"L3 옷","👔"],
+["革靴","かわぐつ","구두","会社（かいしゃ）では 革靴（かわぐつ）を 履（は）きます。","회사에서는 구두를 신습니다.",3,"L3 옷","👞"],
+["スニーカー","スニーカー","스니커즈","週末（しゅうまつ）は スニーカーを 履（は）きたいです。","주말은 스니커즈를 신고 싶습니다.",3,"L3 옷","👟"],
+// ===== L3 옷 형용사·시착 =====
+["きつい","きつい","꽉 끼다","この 靴（くつ）は ちょっと きついです。","이 신발은 좀 낍니다. (⇔ゆるい)",3,"L3 옷 형용사","😣"],
+["ゆるい","ゆるい","헐렁하다","この ズボンは ゆるいです。","이 바지는 헐렁합니다. (お腹がゆるい = 배탈 기미)",3,"L3 옷 형용사","😅"],
+["厚い","あつい","두껍다","冬（ふゆ）は 厚（あつ）い 服（ふく）を 着（き）ます。","겨울은 두꺼운 옷을 입습니다. (暑い 덥다와 동음!)",3,"L3 옷 형용사","🧥"],
+["薄い","うすい","얇다·싱겁다","薄（うす）い 服（ふく） ／ 味（あじ）が 薄い","얇은 옷 / 맛이 싱겁다 (⇔厚い)",3,"L3 옷 형용사","🌫️"],
+["派手","はで","화려하다","派手（はで）な 服（ふく）は 好（す）きじゃないです。","화려한 옷은 좋아하지 않습니다. (な형용사)",3,"L3 옷 형용사","✨"],
+["地味","じみ","수수하다","地味（じみ）な 色（いろ）の ほうが いいです。","수수한 색 쪽이 좋습니다. (⇔派手)",3,"L3 옷 형용사","🪨"],
+["試着","しちゃく","시착","試着（しちゃく）しても いいですか。","입어 봐도 됩니까? (L1 ～てもいいです)",3,"L3 옷 형용사","🛍️"],
+["試着室","しちゃくしつ","탈의실","試着室（しちゃくしつ）は どこですか。","탈의실은 어디입니까?",3,"L3 옷 형용사","🚪"],
+// ===== L3 쇼핑·가격 =====
+["何円","なんえん","얼마 (몇 엔)","これは 何円（なんえん）ですか。","이것은 얼마입니까?",3,"L3 쇼핑·가격","💴"],
+["円","えん","엔","1,000円（せんえん）です。","1,000엔입니다.",3,"L3 쇼핑·가격","💴"],
+["～玉","だま","~엔짜리 동전","100円玉（ひゃくえんだま）を 使（つか）います。","100엔 동전을 사용합니다.",3,"L3 쇼핑·가격","🪙"],
+["～札","さつ","~엔짜리 지폐","千円札（せんえんさつ）は ありますか。","천 엔 지폐 있습니까?",3,"L3 쇼핑·가격","💵"],
+["税込み","ぜいこみ","세금 포함","税込（ぜいこ）みで 1,100円（せんひゃくえん）です。","세후 1,100엔입니다.",3,"L3 쇼핑·가격","🧾"],
+["税抜き","ぜいぬき","세금 별도","税抜（ぜいぬ）き 1,000円（せんえん）です。","세전 1,000엔입니다. (⇔税込み)",3,"L3 쇼핑·가격","🧾"],
+["消費税","しょうひぜい","소비세","消費税（しょうひぜい）は 10%（じゅっパーセント）です。","소비세는 10%입니다.",3,"L3 쇼핑·가격","📈"],
+["昔","むかし","옛날","昔（むかし）は 8%（はちパーセント）でした。","옛날에는 8%였습니다.",3,"L3 쇼핑·가격","🕰️"],
+["いちご","いちご","딸기","いちごは 高（たか）いですね。","딸기는 비싸네요.",3,"L3 쇼핑·가격","🍓"],
+["ぶどう","ぶどう","포도","ぶどうは 約（やく）1キロで 3,000円（さんぜんえん）です。","포도는 약 1kg에 3,000엔입니다.",3,"L3 쇼핑·가격","🍇"],
+["約","やく","약·대략","約（やく）1キロ（いちキロ）です。","약 1kg입니다.",3,"L3 쇼핑·가격","⚖️"],
+["送料無料","そうりょうむりょう","배송비 무료","送料（そうりょう）無料（むりょう）です。","배송비 무료입니다.",3,"L3 쇼핑·가격","🚚"],
+["発送する","はっそうする","발송하다","明日（あした） 発送（はっそう）します。","내일 발송합니다.",3,"L3 쇼핑·가격","📦"],
+["希少","きしょう","희소","希少（きしょう）な 品種（ひんしゅ）です。","희소한 품종입니다. (超希少 = 초희소)",3,"L3 쇼핑·가격","💎"],
+["品種","ひんしゅ","품종","この 品種（ひんしゅ）は 甘（あま）いです。","이 품종은 답니다.",3,"L3 쇼핑·가격","🌱"],
+["品質","ひんしつ","품질","品質（ひんしつ）が いいです。","품질이 좋습니다.",3,"L3 쇼핑·가격","⭐"],
+["特産品","とくさんひん","특산품","特産品（とくさんひん）を 買（か）いたいです。","특산품을 사고 싶습니다.",3,"L3 쇼핑·가격","🎁"],
+["高級","こうきゅう","고급","高級（こうきゅう）な いちごです。","고급 딸기입니다. (な형용사)",3,"L3 쇼핑·가격","👑"],
+["限定価格","げんていかかく","한정 가격","今日（きょう）は 限定価格（げんていかかく）です。","오늘은 한정 가격입니다.",3,"L3 쇼핑·가격","🏷️"],
+["限定品","げんていひん","한정품","限定品（げんていひん）ですから、高（たか）いです。","한정품이라서 비쌉니다.",3,"L3 쇼핑·가격","🎯"]
+];
+const CATS=[...new Set(VOCAB.map(v=>v[6]))];
+let vcat="전체",vmode="list";
+let known=new Set(store.get("known",[]));
+
+function drawCats(){
+  const w=$("vcat");w.innerHTML="";
+  ["전체",...CATS].forEach(c=>{const b=document.createElement("button");b.className="sg"+(c===vcat?" on":"");
+    b.textContent=c+(c==="전체"?" "+VOCAB.length:" "+VOCAB.filter(v=>v[6]===c).length);
+    b.onclick=()=>{vcat=c;drawCats();drawVocab();resetDeck()};w.appendChild(b)});
+}
+function curVocab(){return VOCAB.filter(v=>vcat==="전체"||v[6]===vcat)}
+function drawVocab(){
+  const w=$("vlist");w.innerHTML="";
+  let cur=null,card=null;
+  curVocab().forEach((v,i)=>{
+    if(v[6]!==cur){cur=v[6];card=document.createElement("div");card.className="card";
+      card.innerHTML='<h2><span class="bar"></span>'+cur+' <span class="ltag '+LT(v[5])+'">L'+v[5]+'</span></h2>';w.appendChild(card)}
+    const id=VOCAB.indexOf(v);
+    const r=document.createElement("div");r.className="vrow";
+    r.innerHTML='<div class="vic">'+v[7]+'</div><div class="vmain"><div class="vw">'+ESC(v[0])+' <span class="vr">'+ESC(v[1])+'</span>'+(known.has(id)?' <span class="ok">✓</span>':'')+'</div><div class="vm">'+ESC(v[2])+'</div><div class="vex jp">'+F(v[3])+'<span class="k">'+ESC(v[4])+'</span></div></div>';
+    card.appendChild(r);
+  });
+}
+document.querySelectorAll("[data-vm]").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll("[data-vm]").forEach(x=>x.classList.toggle("on",x===b));
+  vmode=b.dataset.vm;$("vlist").style.display=vmode==="list"?"block":"none";$("vcard").style.display=vmode==="card"?"block":"none";
+}));
+// flashcards
+let queue=[],idx=0;
+function resetDeck(){queue=curVocab().map(v=>VOCAB.indexOf(v));idx=0;showCard()}
+function showCard(){
+  const fc=$("fc");fc.classList.remove("flip");
+  if(idx>=queue.length){$("fc-em").textContent="🎉";$("fc-front").textContent="완료!";$("fc-cat").textContent=vcat;$("fc-cnt").textContent="";
+    $("fc-read").textContent="お疲（つか）れさま";$("fc-mean").textContent="수고하셨습니다";$("fc-ex").textContent="'덱 처음부터'로 반복하세요";return}
+  const v=VOCAB[queue[idx]];
+  $("fc-cat").textContent=v[6];$("fc-cnt").textContent=(idx+1)+" / "+queue.length;
+  $("fc-em").textContent=v[7];$("fc-front").textContent=v[0];
+  $("fc-read").textContent=v[1];$("fc-mean").textContent=v[2];$("fc-ex").innerHTML=F(v[3]);
+}
+$("fc").addEventListener("click",()=>$("fc").classList.toggle("flip"));
+$("fc-know").addEventListener("click",()=>{if(idx<queue.length){known.add(queue[idx]);store.set("known",[...known]);idx++;showCard();updStats()}});
+$("fc-again").addEventListener("click",()=>{if(idx<queue.length){queue.push(queue[idx]);idx++;showCard()}});
+$("fc-reset").addEventListener("click",resetDeck);
+drawCats();drawVocab();resetDeck();
+
+/* ===================== KANJI ===================== */
+const KANJI=[
+["月","げつ・つき","달·월","月曜日 げつようび",1],["火","か・ひ","불","火曜日 かようび",1],
+["水","すい・みず","물","水曜日／水を飲む",1],["木","もく・き","나무","木曜日／木 き",1],
+["金","きん","금","金曜日 きんようび",1],["土","ど・つち","흙","土曜日 どようび",1],
+["日","にち・ひ","해·날","日曜日／日傘 ひがさ",1],["曜","よう","요일","何曜日 なんようび",1],
+["今日","きょう","오늘","今日は暑いです",1],["昨日","きのう","어제","昨日は出張でした",1],
+["明日","あした","내일","明日、映画を見ます",1],["時","じ・とき","시·때","何時 なんじ／12時",1],
+["午前","ごぜん","오전","午前9時 ごぜんくじ",1],["午後","ごご","오후","午後は雨が降ります",1],
+["早","はや","이르다·빠르다","早く帰りたい はやく",1],["行","い・こう","가다","会社に行く／旅行",1],
+["帰","かえ","돌아가다","家に帰りたいです",1],["会","あ・かい","만나다·모임","父に会う／会社",1],
+["見","み","보다","映画を見たいです",1],["食","た・しょく","먹다","とんかつを食べる",1],
+["飲","の","마시다","水を飲みます",1],["寝","ね","자다","12時に寝るつもり",1],
+["休","やす","쉬다","家で休むつもり",1],["家","いえ・か","집","家に帰る いえにかえる",1],
+["父","ちち","아버지","父に会う ちちにあう",1],["会社","かいしゃ","회사","会社に行きたくない",1],
+["映画","えいが","영화","映画を見る",1],["散歩","さんぽ","산책","公園を散歩する",1],
+["公園","こうえん","공원","うちの近くの公園",1],["友達","ともだち","친구","友達と食べるつもり",1],
+["勉強","べんきょう","공부","日本語を勉強する",1],["復習","ふくしゅう","복습","日本語を復習したい",1],
+["都心","としん","도심","都心にあるレストラン",1],["海","うみ","바다","海で泳ぎます ★で",1],
+["泳","およ","헤엄치다","海で泳ぐ うみでおよぐ",1],["人々","ひとびと","사람들","人々が海で泳ぐ",1],
+["椅子","いす","의자","椅子に座ります",1],["座","すわ","앉다","椅子に座る",1],
+["砂","すな","모래","砂の上で遊ぶ",1],["傘","かさ","우산·양산","日傘をさす ひがさ",1],
+["着","き","입다","Tシャツを着ます",1],["天気","てんき","날씨","どんな天気ですか",1],
+["暑","あつ","덥다","暑い／蒸し暑い",1],["寒","さむ","춥다","冬は寒いです ★날씨",1],
+["涼","すず","시원하다","朝は涼しいです",1],["暖","あたた","따뜻하다","春は暖かいです",1],
+["冷","つめ","차갑다","冷たい水 ★사물",1],["雨","あめ","비","雨が降ります",1],
+["雪","ゆき","눈","雪が降ります",1],["晴","は","맑음","晴れです はれです",1],
+["曇","くも","흐림","曇りです くもりです",1],["風","かぜ","바람","風が強いです",1],
+["降","ふ","내리다","雨が降る あめがふる",1],
+["高","たか","비싸다·높다","物価が高い／背が高い",2],["安","やす","싸다","安くておいしい",2],
+["低","ひく","낮다","背が低い せがひくい",2],["長","なが","길다","長い ながい",2],
+["短","みじか","짧다","短い みじかい",2],["多","おお","많다","種類が多い",2],
+["少","すく","적다","少ない すくない",2],["大","おお","크다","大きい おおきい",2],
+["小","ちい","작다","小さい ちいさい",2],["辛","から","맵다","辛い からい",2],
+["甘","あま","달다","甘い あまい",2],["近","ちか","가깝다","駅から近い",2],
+["遠","とお","멀다","遠い とおい",2],["物価","ぶっか","물가","物価が高いです",2],
+["季節","きせつ","계절","季節の中で きせつのなかで",2],["春","はる","봄","春は暖かい",2],
+["夏","なつ","여름","夏は蒸し暑い",2],["秋","あき","가을","秋は涼しい",2],
+["冬","ふゆ","겨울","冬は寒い",2],["種類","しゅるい","종류","種類が多い",2],
+["選","えら・せん","고르다","選ぶ えらぶ／選択する",2],["失","しつ・な","잃다","失くす なくす／紛失",2],
+["迷","まよ","헤매다","道に迷う みちにまよう",2],["似合","にあ","어울리다","似合う にあう",2],
+["得意","とくい","잘함·특기","料理が得意です",2],["景色","けしき","경치","景色がきれい",2],
+["自家製","じかせい","수제","自家製キムチ",2],["寿司","すし","초밥","寿司を食べる",2],
+["白菜","はくさい","배추","白菜キムチ",2],["豚足","とんそく","족발","豚足が一番おいしい",2],
+["紅茶","こうちゃ","홍차","紅茶を飲む",2],["場所","ばしょ","장소","便利な場所を選ぶ",2],
+["便利","べんり","편리","便利な場所",2],["一番","いちばん","가장·제일","一番好きです",2],
+["中","なか","안·속","季節の中で／この中で",2],
+// ── L03 ──
+["腹","なか・はら","배","お腹（おなか）が痛い",3],["痛","いた","아프다","お腹が痛い いたい",3],
+["残","のこ","남다","残っていた のこっていた",3],["野菜","やさい","채소","野菜は安いです",3],
+["具合","ぐあい","상태·컨디션","具合が悪い",3],["悪","わる","나쁘다","具合が悪い わるい",3],
+["過","す","지나치다","食べ過ぎた たべすぎた",3],["完食","かんしょく","완식","ケーキを完食した",3],
+["肉","にく","고기","生肉 なまにく",3],["焼","や","굽다·구워지다","焼ける やける",3],
+["生","なま・せい","날것·생","生肉／生の野菜",3],["朝","あさ","아침","朝から昼まで",3],
+["昼","ひる","낮","朝から昼まで ひる",3],["忙","いそが","바쁘다","忙しかった",3],
+["病院","びょういん","병원","病院に行く",3],["仕事","しごと","일·업무","仕事で病院に行く",3],
+["赤","あか","빨강","赤い帽子 あかいぼうし",3],["黒","くろ","검정","黒い眼鏡 くろいめがね",3],
+["黄色","きいろ","노랑","黄色のシャツ",3],["緑","みどり","초록","緑のズボン",3],
+["紫","むらさき","보라","紫のネクタイ",3],["茶色","ちゃいろ","갈색","茶色の靴下",3],
+["水色","みずいろ","하늘색","水色のジャケット",3],["色","いろ","색","地味な色 じみないろ",3],
+["服","ふく","옷","薄い服／厚い服",3],["帽子","ぼうし","모자","帽子を被る",3],
+["眼鏡","めがね","안경","眼鏡をかける",3],["靴","くつ","신발","靴下・革靴・運動靴",3],
+["運動","うんどう","운동","運動靴 うんどうぐつ",3],["履","は","신다·(하의) 입다","靴を履いています",3],
+["被","かぶ","(머리에) 쓰다","帽子を被っています",3],["袖","そで","소매","半袖・長袖",3],
+["半","はん","반","半袖 はんそで",3],["下着","したぎ","속옷","下着を買う",3],
+["厚","あつ","두껍다","厚い服 (暑い와 동음)",3],["薄","うす","얇다·싱겁다","薄い服／味が薄い",3],
+["試着","しちゃく","시착","試着してもいいですか",3],["室","しつ","방·실","試着室 しちゃくしつ",3],
+["革","かわ","가죽","革靴 かわぐつ",3],["派手","はで","화려함","派手な服",3],
+["地味","じみ","수수함","地味な服",3],["円","えん","엔","何円ですか なんえん",3],
+["玉","だま","동전","100円玉 ひゃくえんだま",3],["札","さつ","지폐","千円札 せんえんさつ",3],
+["税","ぜい","세금","消費税・税込み",3],["込","こ","포함","税込み ぜいこみ",3],
+["抜","ぬ","빼다","税抜き ぜいぬき",3],["消費","しょうひ","소비","消費税 しょうひぜい",3],
+["昔","むかし","옛날","昔は8%でした",3],["約","やく","약·대략","約1キロ",3],
+["送料","そうりょう","배송료","送料無料",3],["無料","むりょう","무료","送料無料 そうりょうむりょう",3],
+["発送","はっそう","발송","発送する",3],["超","ちょう","초·매우","超希少 ちょうきしょう",3],
+["希少","きしょう","희소","希少な品種",3],["品","ひん","물품","品種・品質・特産品・限定品",3],
+["特産","とくさん","특산","特産品 とくさんひん",3],["高級","こうきゅう","고급","高級ないちご",3],
+["限定","げんてい","한정","限定価格・限定品",3],["価格","かかく","가격","限定価格 げんていかかく",3]
+];
+let kScope=0,kKnown=new Set(store.get("kknown",[]));
+function drawKanji(){
+  const g=$("kg");g.innerHTML="";
+  const list=KANJI.map((k,i)=>[k,i]).filter(([k])=>kScope===0||k[4]===kScope);
+  $("kcnt").textContent=list.length+"자";
+  list.forEach(([k,i])=>{const d=document.createElement("button");d.className="kt"+(k[4]===2?" k2":k[4]===3?" k3":"")+(kKnown.has(i)?" known":"");
+    d.innerHTML='<div class="k jp">'+ESC(k[0])+'</div><div class="r jp">'+ESC(k[1])+'</div><div class="m">'+ESC(k[2])+'</div><div class="kx jp">'+ESC(k[3])+'</div>';
+    let t;d.onclick=()=>d.classList.toggle("hide");
+    d.addEventListener("pointerdown",()=>{t=setTimeout(()=>{if(kKnown.has(i))kKnown.delete(i);else kKnown.add(i);store.set("kknown",[...kKnown]);drawKanji();updStats()},550)});
+    ["pointerup","pointerleave","pointercancel"].forEach(e=>d.addEventListener(e,()=>clearTimeout(t)));
+    g.appendChild(d)});
+}
+document.querySelectorAll("[data-k]").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll("[data-k]").forEach(x=>x.classList.toggle("on",x===b));kScope=+b.dataset.k;drawKanji()}));
+$("k-hide").onclick=()=>document.querySelectorAll(".kt").forEach(t=>t.classList.add("hide"));
+$("k-show").onclick=()=>document.querySelectorAll(".kt").forEach(t=>t.classList.remove("hide"));
+drawKanji();
+
+/* ===================== QUIZ ===================== */
+// [질문, 보기[], 정답idx, 해설, 과, 유형]
+const QUIZ=[
+// L1 문법
+["木曜日（もくようび）に なにも ＿＿ です。",["したくない","しなくない","したいくない"],0,"たい의 부정은 たくない. しなくない는 없는 형태입니다.",1,"문법"],
+["「가고 싶었습니다」(과거)는?",["行（い）きたかったです","行きたいでした","行きたくなかったです"],0,"たい는 い형용사 활용 → たかった",1,"문법"],
+["つもり 앞에 오는 동사 형태는?",["行（い）く つもりです","行きます つもりです","行って つもりです"],0,"기본형(사전형) + つもりです",1,"문법"],
+["「안 갈 생각입니다」는?",["行（い）かない つもりです","行くない つもりです","行きません つもりです"],0,"부정형(ない형) + つもりです",1,"문법"],
+["「회사에 가고 싶지 않아요」는?",["会社（かいしゃ）に 行（い）きたくないです","会社に 行きたいじゃないです","会社に 行かないたいです"],0,"たい → たくない",1,"문법"],
+["남의 희망을 말할 때는?",["行（い）きたがって います","行きたいです","行く つもりです"],0,"3인칭 희망은 ～たがっている",1,"문법"],
+// L1 조사
+["人々（ひとびと）が 海（うみ）＿＿ 泳（およ）ぎます。",["で","に","を"],0,"동작이 일어나는 장소는 で. ★내 오답 1번",1,"조사"],
+["月曜日に 父（ちち）＿＿ 会（あ）う つもりです。",["に","を","が"],0,"会う(만나다)의 대상은 に",1,"조사"],
+["木曜日に 家（いえ）＿＿ 休（やす）む つもりです。",["で","に","へ"],0,"쉬는 동작의 장소 = で",1,"조사"],
+["公園（こうえん）＿＿ 散歩（さんぽ）します。",["を","で","に"],0,"통과·이동하는 장소는 を",1,"조사"],
+["椅子（いす）＿＿ 座（すわ）ります。",["に","で","を"],0,"앉는 귀착점 = に",1,"조사"],
+["ボール＿＿ トスします。",["を","が","に"],0,"목적어 조사 を. ★내 오답 3번",1,"조사"],
+["友達（ともだち）＿＿ とんかつを 食（た）べます。",["と","に","で"],0,"함께 하는 상대 = と",1,"조사"],
+// L1 단어
+["サングラスを ＿＿。",["かけます","かぶります","はきます"],0,"눈에 걸치는 것 = かける",1,"단어"],
+["ぼうしを ＿＿。",["かぶります","着（き）ます","つけます"],0,"머리에 쓰는 것 = かぶる",1,"단어"],
+["ズボンを ＿＿。",["はきます","着（き）ます","かけます"],0,"허리 아래 = はく",1,"단어"],
+["Tシャツを ＿＿。",["着（き）ます","はきます","かぶります"],0,"상체 = 着る",1,"단어"],
+["日焼（ひや）け止（ど）めを ＿＿。",["つけます","かけます","さします"],0,"바르는 것 = つける",1,"단어"],
+["日傘（ひがさ）を ＿＿。",["さします","かぶります","つけます"],0,"우산·양산 = さす",1,"단어"],
+["「튜브」는?",["浮（う）き輪（わ）","日傘（ひがさ）","タオル"],0,"浮く(뜨다)+輪(고리)",1,"단어"],
+["「선크림」은?",["日焼（ひや）け止（ど）め","日傘（ひがさ）","サングラス"],0,"日焼け(햇볕에 탐)+止め(막음)",1,"단어"],
+// L1 날씨
+["「물이 차갑다」의 '차갑다'는?",["冷（つめ）たい","寒（さむ）い","涼（すず）しい"],0,"사물·감촉=冷たい / 날씨=寒い",1,"단어"],
+["「무덥다」는?",["蒸（む）し暑（あつ）い","暑（あつ）い","暖（あたた）かい"],0,"蒸す(찌다)+暑い",1,"단어"],
+["雨が ＿＿ります。",["降","出","来"],0,"비·눈은 降る（ふる）",1,"단어"],
+["「흐립니다」는?",["曇（くも）りです","晴（は）れです","雪（ゆき）です"],0,"曇り 흐림 / 晴れ 맑음",1,"단어"],
+["「오늘은 날씨가 어떻습니까?」는?",["今日（きょう）は どんな 天気（てんき）ですか","今日は どうの 天気ですか","今日は 何 天気ですか"],0,"どんな + 명사",1,"단어"],
+// L1 유의어·반의어
+["寒（さむ）い ⇔ ?",["暑（あつ）い","冷（つめ）たい","涼（すず）しい"],0,"춥다 ⇔ 덥다",1,"반대말"],
+["涼（すず）しい와 가장 가까운 계절은?",["秋（あき）","夏（なつ）","冬（ふゆ）"],0,"秋は涼しいです",1,"유의어"],
+["「일찍」과 같은 뜻은?",["早（はや）く","近（ちか）く","多（おお）く"],0,"早く 일찍·빨리",1,"유의어"],
+// L1 한자 (후리가나 없음)
+["「休」의 읽기는?",["やす","きゅ","やま"],0,"休む やすむ 쉬다",1,"한자읽기"],
+["「帰」의 뜻은?",["돌아가다","가다","만나다"],0,"帰る かえる",1,"한자뜻"],
+["「泳」의 읽기는?",["およ","えい","なが"],0,"泳ぐ およぐ 헤엄치다",1,"한자읽기"],
+["「曇」의 뜻은?",["흐림","맑음","비"],0,"曇り くもり",1,"한자뜻"],
+["「傘」의 뜻은?",["우산·양산","모자","의자"],0,"日傘 ひがさ",1,"한자뜻"],
+["「砂」의 읽기는?",["すな","いし","うみ"],0,"砂 すな 모래",1,"한자읽기"],
+["「座」의 뜻은?",["앉다","서다","자다"],0,"座る すわる",1,"한자뜻"],
+["「涼」의 읽기는?",["すず","りょう","つめ"],0,"涼しい すずしい",1,"한자읽기"],
+// L2 문법
+["「일본은 한국보다 물가가 비쌉니다」는?",["日本（にほん）は 韓国（かんこく）より 物価（ぶっか）が 高（たか）いです","日本は 韓国から 物価が 高いです","日本より 韓国は 物価が 高いです"],0,"비교 기준(한국) 뒤에 より",2,"문법"],
+["Q: どちらが 高（たか）いですか。자연스러운 대답은?",["日本（にほん）の ほうが 高いです","日本は もっとです","日本より 高いです"],0,"どちら 질문의 대답은 ～のほうが",2,"문법"],
+["「계절 중에서 여름을 가장 좋아합니다」는?",["季節（きせつ）の 中（なか）で 夏（なつ）が 一番（いちばん） 好（す）きです","季節の 中で 夏が 一号 好きです","季節より 夏が 一番 好きです"],0,"범위+の中で ～が一番",2,"문법"],
+["どちら의 캐주얼한 형태는?",["どっち","どれ","どこ"],0,"どちら(정중) = どっち(캐주얼)",2,"문법"],
+["선택지가 <b>셋 이상</b>일 때 「어느 것이」는?",["どれが","どちらが","どっちが"],0,"둘=どちら／どっち, 셋 이상=どれ",2,"문법"],
+["「이 중에서」는?",["この 中（なか）で","この 中に","この 中は"],0,"범위를 나타내는 ～の中で",2,"문법"],
+["장소를 물을 때 최상급 질문은?",["どこが 一番（いちばん） いいですか","何（なに）が 一番 いいですか","いつが 一番 いいですか"],0,"장소=どこが / 사물=何が / 시간=いつが",2,"문법"],
+["「서울은 도쿄보다 더욱 춥습니다」의 '더욱'은?",["もっと","とても","あまり"],0,"もっと = 더욱 (비교 강조)",2,"문법"],
+["「이 가게는 저 가게보다 비싸지 않습니다」는?",["この 店（みせ）は あの 店より 高（たか）くないです","この 店は あの 店より 高いじゃないです","この 店は あの 店から 高くないです"],0,"い형용사 부정 = ～くないです",2,"문법"],
+// L2 반대말
+["「비싸다」의 반대말은?",["安（やす）い","低（ひく）い","少（すく）ない"],0,"값이 비싸다 ⇔ 安い",2,"반대말"],
+["「높다」의 반대말은?",["低（ひく）い","安（やす）い","短（みじか）い"],0,"높이가 높다 ⇔ 低い",2,"반대말"],
+["「많다」의 반대말은?",["少（すく）ない","小（ちい）さい","短（みじか）い"],0,"多い ⇔ 少ない",2,"반대말"],
+["「길다」의 반대말은?",["短（みじか）い","小（ちい）さい","低（ひく）い"],0,"長い ⇔ 短い",2,"반대말"],
+["「맵다」의 반대말은?",["甘（あま）い","冷（つめ）たい","辛（から）くない"],0,"辛い ⇔ 甘い",2,"반대말"],
+["「가깝다」의 반대말은?",["遠（とお）い","低（ひく）い","短（みじか）い"],0,"近い ⇔ 遠い",2,"반대말"],
+["「크다」의 반대말은?",["小（ちい）さい","少（すく）ない","低（ひく）い"],0,"大きい ⇔ 小さい",2,"반대말"],
+// L2 단어
+["「많다」는?",["多（おお）い","大（おお）きい","高（たか）い"],0,"多い 많다 / 大きい 크다 — 읽기가 같아 혼동 주의",2,"단어"],
+["homemade(수제)는?",["自家製（じかせい）","housemaid","家製作"],0,"自家製 = homemade",2,"단어"],
+["「그 모자 잘 어울려요」는?",["その ぼうし、よく 似合（にあ）いますね","その ぼうし、よく 会（あ）いますね","その ぼうし、よく 好（す）きですね"],0,"어울리다 = 似合う",2,"단어"],
+["「길을 잃었어요」는?",["道（みち）に 迷（まよ）いました","道を 失（な）くしました","道が 迷いました"],0,"길을 잃다=道に迷う / 물건을 잃다=失くす",2,"단어"],
+["「경치」는?",["景色（けしき）","場所（ばしょ）","季節（きせつ）"],0,"景色 けしき",2,"단어"],
+["「종류」는?",["種類（しゅるい）","季節（きせつ）","物価（ぶっか）"],0,"種類 しゅるい",2,"단어"],
+["「요리를 잘합니다」는?",["料理（りょうり）が 得意（とくい）です","料理が 便利（べんり）です","料理が 上（うえ）です"],0,"得意 = 잘함·특기",2,"단어"],
+// L2 유의어
+["일상 회화에서 「고르다」로 더 자주 쓰는 것은?",["選（えら）ぶ","選択（せんたく）する"],0,"일상=選ぶ / 격식·서면=選択する",2,"유의어"],
+["일상 회화에서 「잃어버리다」는?",["失（な）くす","紛失（ふんしつ）する"],0,"일상=失くす / 서면·격식=紛失する",2,"유의어"],
+["「편리한 장소」는?",["便利（べんり）な 場所（ばしょ）","便利の 場所","便利い 場所"],0,"便利는 な형용사 → 便利な+명사",2,"유의어"],
+// L2 한자 (후리가나 없음)
+["「物価」의 읽기는?",["ぶっか","ものか","ぶつか"],0,"物価 ぶっか 물가",2,"한자읽기"],
+["「季節」의 읽기는?",["きせつ","きせい","けせつ"],0,"季節 きせつ 계절",2,"한자읽기"],
+["「種類」의 읽기는?",["しゅるい","しゅるゐ","たねるい"],0,"種類 しゅるい 종류",2,"한자읽기"],
+["「景色」의 읽기는?",["けしき","けいしょく","けいろ"],0,"景色 けしき — 특수 읽기",2,"한자읽기"],
+["「紅茶」의 읽기는?",["こうちゃ","べにちゃ","こうさ"],0,"紅茶 こうちゃ 홍차",2,"한자읽기"],
+["「豚足」의 읽기는?",["とんそく","ぶたあし","とんあし"],0,"豚足 とんそく 족발",2,"한자읽기"],
+["「白菜」의 읽기는?",["はくさい","しろな","はくな"],0,"白菜 はくさい 배추",2,"한자읽기"],
+["「低」의 뜻은?",["낮다","비싸다","적다"],0,"低い ひくい 낮다",2,"한자뜻"],
+["「甘」의 뜻은?",["달다","맵다","차갑다"],0,"甘い あまい 달다",2,"한자뜻"],
+["「迷」의 뜻은?",["헤매다·망설이다","잃어버리다","고르다"],0,"迷う まよう",2,"한자뜻"],
+["「短」의 읽기는?",["みじか","たん","なが"],0,"短い みじかい 짧다",2,"한자읽기"],
+["「一番」의 뜻은?",["가장·제일","한 번","1번 승강장"],0,"一番 いちばん 최상급",2,"한자뜻"],
+// ===== L3 문법 =====
+["4月의 읽기는?",["しがつ","よんがつ","よがつ"],0,"4月=しがつ. 7月=しちがつ, 9月=くがつ도 세트",3,"문법"],
+["9月의 읽기는?",["くがつ","きゅうがつ","くげつ"],0,"9月=くがつ",3,"문법"],
+["1日(날짜)의 읽기는?",["ついたち","いちにち","ひとか"],0,"날짜 1일=ついたち / '하루'=いちにち",3,"문법"],
+["20日의 읽기는?",["はつか","にじゅうにち","にじゅうか"],0,"20日=はつか (고유어 읽기)",3,"문법"],
+["8日의 읽기는?",["ようか","はちにち","やっか"],0,"8日=ようか. 4日 よっか와 혼동 주의",3,"문법"],
+["300의 읽기는?",["さんびゃく","さんひゃく","さんぴゃく"],0,"300=さんびゃく (탁음)",3,"문법"],
+["8,000의 읽기는?",["はっせん","はちせん","はっぜん"],0,"8,000=はっせん",3,"문법"],
+["10,000円의 읽기는?",["いちまんえん","まんえん","じゅうせんえん"],0,"1万은 いちまん — 1을 반드시 붙임",3,"문법"],
+["「초록 바지」는?",["緑（みどり）の ズボン","緑い ズボン","緑な ズボン"],0,"緑는 명사 → の 필요. い형 없음",3,"문법"],
+["「빨간 모자」는?",["赤（あか）い 帽子（ぼうし）","赤の 帽子","赤な 帽子"],0,"赤い는 い형용사 → 바로 수식",3,"문법"],
+["「모자를 쓰고 있습니다」(상태)는?",["帽子（ぼうし）を 被（かぶ）って います","帽子を 被ります","帽子を 被りました"],0,"옷차림 상태 = ～ています",3,"문법"],
+["ネクタイを ＿＿ います。",["して","着（き）て","履（は）いて"],0,"넥타이·시계는 する",3,"문법"],
+["「프레젠테이션을 해야 합니다」는?",["プレゼンしなければなりません","プレゼンするなければなりません","プレゼンしないなければなりません"],0,"ない형에서 ない 제거 + なければなりません",3,"문법"],
+["行く의 의무형은?",["行（い）かなければなりません","行くなければなりません","行きなければなりません"],0,"行かない → 行か+なければなりません",3,"문법"],
+["「과식했습니다」는?",["食（た）べすぎました","食べましたすぎ","食べたすぎました"],0,"ます형(食べ) + すぎる",3,"문법"],
+["朝（あさ）＿＿ 昼（ひる）＿＿ 忙（いそが）しかったです。",["から／まで","に／に","で／まで"],0,"A から B まで = A부터 B까지",3,"문법"],
+["「바빴습니다」는?",["忙（いそが）しかったです","忙しいでした","忙しかったでした"],0,"い형용사 과거 = ～かったです",3,"문법"],
+["「하지 않아도 됩니다」는?",["行（い）かなくても いいです","行かなければなりません","行かないでも いいです"],0,"～なくてもいいです",3,"문법"],
+// ===== L3 반대말 =====
+["きつい ⇔ ?",["ゆるい","薄（うす）い","地味（じみ）"],0,"꽉 끼다 ⇔ 헐렁하다",3,"반대말"],
+["厚（あつ）い ⇔ ?",["薄（うす）い","寒（さむ）い","短（みじか）い"],0,"두껍다 ⇔ 얇다",3,"반대말"],
+["派手（はで） ⇔ ?",["地味（じみ）","便利（べんり）","高級（こうきゅう）"],0,"화려하다 ⇔ 수수하다",3,"반대말"],
+["税込（ぜいこ）み ⇔ ?",["税抜（ぜいぬ）き","送料（そうりょう）","消費税（しょうひぜい）"],0,"세금 포함 ⇔ 세금 별도",3,"반대말"],
+["半袖（はんそで） ⇔ ?",["長袖（ながそで）","下着（したぎ）","ジャケット"],0,"반팔 ⇔ 긴팔",3,"반대말"],
+// ===== L3 단어 =====
+["동전을 세는 말은?",["～玉（だま）","～札（さつ）","～円（えん）"],0,"100円玉 / 지폐는 札",3,"단어"],
+["「몸 상태가 나쁘다」는?",["具合（ぐあい）が 悪（わる）い","お腹（なか）が 痛（いた）い","気（き）が 悪い"],0,"具合が悪い = 컨디션이 나쁘다",3,"단어"],
+["「배송비 무료」는?",["送料（そうりょう）無料（むりょう）","発送（はっそう）無料","送料 限定（げんてい）"],0,"送料無料",3,"단어"],
+["「탈의실」은?",["試着室（しちゃくしつ）","試着（しちゃく）","下着室"],0,"試着室 = 시착실",3,"단어"],
+["「두꺼운 옷」은? (동음이의어 주의)",["厚（あつ）い 服（ふく）","暑い 服","熱い 服"],0,"厚い 두껍다 / 暑い 덥다 — 둘 다 あつい",3,"단어"],
+["薄（うす）い의 뜻 두 가지는?",["얇다·(맛이) 싱겁다","얇다·차갑다","가볍다·싸다"],0,"薄い服 / 味が薄い",3,"단어"],
+["「고기가 제대로 구워져 있었어요?」는?",["肉（にく）は ちゃんと 焼（や）けて いましたか","肉は ちゃんと 焼きましたか","肉は ちゃんと 生（なま）でしたか"],0,"焼ける(구워지다) 자동사 + ていました",3,"단어"],
+["「한정 가격」은?",["限定価格（げんていかかく）","限定品（げんていひん）","高級価格"],0,"限定価格",3,"단어"],
+["운동화는?",["運動靴（うんどうぐつ）","革靴（かわぐつ）","靴下（くつした）"],0,"運動靴 / 革靴 구두 / 靴下 양말",3,"단어"],
+["「특산품」은?",["特産品（とくさんひん）","限定品（げんていひん）","高級品"],0,"特産品",3,"단어"],
+// ===== L3 유의어 =====
+["「초희소」에서 超（ちょう）의 뜻은?",["매우·초","조금","보통"],0,"超 = 매우 (超希少·超高級)",3,"유의어"],
+["「대략 1kg」의 '대략'은?",["約（やく）","昔（むかし）","半（はん）"],0,"約1キロ",3,"유의어"],
+["「일 때문에 병원에 갑니다」의 '일 때문에'는?",["仕事（しごと）で","仕事に","仕事を"],0,"이유·용건의 で",3,"유의어"],
+// ===== L3 한자읽기 (후리가나 없음) =====
+["「痛」의 읽기는?",["いた","つう","いと"],0,"痛い いたい 아프다",3,"한자읽기"],
+["「忙」의 읽기는?",["いそが","ぼう","いそ"],0,"忙しい いそがしい",3,"한자읽기"],
+["「眼鏡」의 읽기는?",["めがね","がんきょう","めかがみ"],0,"眼鏡 めがね — 특수 읽기",3,"한자읽기"],
+["「帽子」의 읽기는?",["ぼうし","ぼうこ","もうし"],0,"帽子 ぼうし",3,"한자읽기"],
+["「消費税」의 읽기는?",["しょうひぜい","しょうびぜい","けしひぜい"],0,"消費税 しょうひぜい",3,"한자읽기"],
+["「限定」의 읽기는?",["げんてい","かんてい","げんじょう"],0,"限定 げんてい",3,"한자읽기"],
+["「品質」의 읽기는?",["ひんしつ","ひんしゅ","しなしつ"],0,"品質 ひんしつ / 品種 ひんしゅ 혼동 주의",3,"한자읽기"],
+["「発送」의 읽기는?",["はっそう","はつそう","はっそ"],0,"発送 はっそう",3,"한자읽기"],
+["「野菜」의 읽기는?",["やさい","のさい","やざい"],0,"野菜 やさい",3,"한자읽기"],
+["「紫」의 읽기는?",["むらさき","し","みどり"],0,"紫 むらさき 보라",3,"한자읽기"],
+// ===== L3 한자뜻 =====
+["「履」의 뜻은?",["신다·(하의) 입다","(상의) 입다","(머리에) 쓰다"],0,"履く はく",3,"한자뜻"],
+["「被」의 뜻은?",["(머리에) 쓰다","걸치다","신다"],0,"被る かぶる",3,"한자뜻"],
+["「薄」의 뜻은?",["얇다","두껍다","무겁다"],0,"薄い うすい",3,"한자뜻"],
+["「昔」의 뜻은?",["옛날","내일","계절"],0,"昔 むかし",3,"한자뜻"],
+["「税」의 뜻은?",["세금","가격","할인"],0,"税 ぜい — 消費税·税込み",3,"한자뜻"],
+["「札」의 뜻은?",["지폐","동전","영수증"],0,"札 さつ 千円札",3,"한자뜻"]
+];
+const QTYPES=[...new Set(QUIZ.map(q=>q[5]))];
+let qScope=0,qType="전체",qOrder=[],qi=0,qSc=0,ans=false;
+function drawQSeg(){
+  const w=$("qseg");w.innerHTML="";
+  const mk=(label,fn,on)=>{const b=document.createElement("button");b.className="sg"+(on?" on":"");b.textContent=label;b.onclick=fn;w.appendChild(b)};
+  mk("전체 "+QUIZ.length,()=>{qScope=0;qType="전체";drawQSeg();qStart()},qScope===0&&qType==="전체");
+  mk("1과",()=>{qScope=1;qType="전체";drawQSeg();qStart()},qScope===1);
+  mk("2과",()=>{qScope=2;qType="전체";drawQSeg();qStart()},qScope===2);
+  mk("3과",()=>{qScope=3;qType="전체";drawQSeg();qStart()},qScope===3);
+  QTYPES.forEach(t=>mk(t,()=>{qType=t;qScope=0;drawQSeg();qStart()},qType===t));
+}
+function qStart(){
+  qOrder=QUIZ.map((q,i)=>i).filter(i=>(qScope===0||QUIZ[i][4]===qScope)&&(qType==="전체"||QUIZ[i][5]===qType)).sort(()=>Math.random()-.5);
+  qi=0;qSc=0;ans=false;$("qdone").style.display="none";$("qbox").style.display="block";qShow();
+}
+function qShow(){
+  ans=false;$("qf").className="fb";$("qnext").style.display="none";
+  $("qb").style.width=Math.round(qi/qOrder.length*100)+"%";
+  const q=QUIZ[qOrder[qi]];
+  $("qn").textContent=(qi+1)+" / "+qOrder.length+" · "+q[4]+"과";
+  $("qty").textContent=q[5];
+  $("qt").innerHTML=F(q[0]);
+  const box=$("qo");box.innerHTML="";
+  q[1].map((o,i)=>i).sort(()=>Math.random()-.5).forEach(oi=>{
+    const b=document.createElement("button");b.className="opt jp";b.innerHTML=F(q[1][oi]);b.dataset.i=oi;
+    b.onclick=()=>{if(ans)return;ans=true;const ok=oi===q[2];
+      box.querySelectorAll(".opt").forEach(x=>{if(+x.dataset.i===q[2])x.classList.add("c")});
+      if(!ok){b.classList.add("w");qOrder.push(qOrder[qi])}else qSc++;
+      const f=$("qf");f.className="fb on "+(ok?"g":"b");
+      f.innerHTML=(ok?"○ 정답! ":"× 오답 — 뒤에서 다시 나옵니다. ")+F(q[3]);
+      $("qnext").style.display="inline-flex"};
+    box.appendChild(b)});
+}
+$("qnext").onclick=()=>{qi++;qi>=qOrder.length?qEnd():qShow()};
+function qEnd(){
+  $("qbox").style.display="none";$("qdone").style.display="block";
+  const pct=Math.round(qSc/qOrder.length*100);
+  $("qsc").textContent=qSc+" / "+qOrder.length;
+  $("qmsg").textContent=pct===100?"満点！완벽합니다.":pct>=80?"좋습니다. 틀린 유형만 단어 탭에서 다시 확인하세요.":"홈의 오답노트와 문법 탭을 복습한 뒤 재도전을 권합니다.";
+  const key=qScope===0&&qType==="전체"?"best":("best"+qScope+qType);
+  const bests=store.get("bests",{});if(pct>(bests[key]||0)){bests[key]=pct;store.set("bests",bests)}
+  updStats();
+}
+$("qre").onclick=qStart;
+drawQSeg();qStart();
+
+/* ===================== TALK ===================== */
+const DLGS=[
+{t:"이번 주 계획",l:1,lines:[
+ ["A","今週（こんしゅう）、なにを したいですか。","이번 주에 뭘 하고 싶어요?"],
+ ["B","金曜日（きんようび）に 海（うみ）の 近（ちか）くの 場所（ばしょ）に 行（い）きたいです。","금요일에 바다 근처 장소에 가고 싶어요."],
+ ["A","いいですね。そこで なにを する つもりですか。","좋네요. 거기서 뭘 할 생각이에요?"],
+ ["B","バレーボールを して、椅子（いす）に 座（すわ）って 休（やす）む つもりです。","배구를 하고, 의자에 앉아서 쉴 생각이에요."],
+ ["A","日焼（ひや）け止（ど）めを つけて くださいね。","선크림 바르세요."],
+ ["B","はい。日傘（ひがさ）も さす つもりです。","네. 양산도 쓸 생각이에요."],
+ ["A","土曜日（どようび）は なにを する つもりですか。","토요일은 뭘 할 생각이에요?"],
+ ["B","ジムに 行（い）く つもりです。日曜日（にちようび）は 日本語（にほんご）を 復習（ふくしゅう）したいです。そして 早（はや）く 寝（ね）る つもりです。","헬스장에 갈 생각이에요. 일요일은 일본어를 복습하고 싶어요. 그리고 일찍 잘 생각이에요."]]},
+{t:"퇴근길에",l:1,lines:[
+ ["A","今日（きょう）、飲（の）みに 行（い）きませんか。","오늘 한잔하러 가지 않을래요?"],
+ ["B","すみません、今日は 早（はや）く 家（いえ）に 帰（かえ）りたいです。","죄송해요, 오늘은 일찍 집에 가고 싶어요."],
+ ["A","そうですか。明日（あした）は どうですか。","그래요? 내일은 어때요?"],
+ ["B","明日も ちょっと…。木曜日（もくようび）は なにも したくないです。","내일도 좀…. 목요일은 아무것도 하고 싶지 않아요."],
+ ["A","じゃ、金曜日（きんようび）は？","그럼 금요일은요?"],
+ ["B","いいですね！とんかつが 食（た）べたいです。都心（としん）に ある レストランで 友達（ともだち）と 食べる つもりでしたが、一緒（いっしょ）に どうですか。","좋네요! 돈가스가 먹고 싶어요. 도심에 있는 레스토랑에서 친구와 먹을 생각이었는데, 같이 어때요?"],
+ ["A","ぜひ。何時（なんじ）に 会（あ）いますか。","꼭이요. 몇 시에 만날까요?"],
+ ["B","午後（ごご）7時（しちじ）に 駅（えき）で 会いましょう。","오후 7시에 역에서 만나요."]]},
+{t:"호텔 고르기",l:2,lines:[
+ ["A","いつも どうやって ホテルを 選（えら）びますか。","평소에 어떻게 호텔을 고르세요?"],
+ ["B","場所（ばしょ）で 選（えら）びます。駅（えき）から 近（ちか）い ホテルの ほうが 便利（べんり）ですから。","장소로 골라요. 역에서 가까운 호텔 쪽이 편리하니까요."],
+ ["A","値段（ねだん）と 場所と、どちらが 大切（たいせつ）ですか。","가격과 장소 중 어느 쪽이 중요해요?"],
+ ["B","場所の ほうが 大切です。遠（とお）い ホテルは 安（やす）いですが、道（みち）に 迷（まよ）いますから。","장소 쪽이 중요해요. 먼 호텔은 싸지만 길을 헤매니까요."],
+ ["A","なるほど。韓国（かんこく）と 日本（にほん）と、どちらが 物価（ぶっか）が 高（たか）いですか。","그렇군요. 한국과 일본 중 어느 쪽이 물가가 비싸요?"],
+ ["B","日本の ほうが 高いです。でも 韓国も 高く なりました。","일본 쪽이 비싸요. 하지만 한국도 비싸졌어요."],
+ ["A","日本の 中（なか）で どこが 一番（いちばん） 高いですか。","일본 중에서 어디가 제일 비싸요?"],
+ ["B","東京（とうきょう）が 一番 高いです。景色（けしき）が きれいな 場所は もっと 高いです。","도쿄가 제일 비싸요. 경치가 예쁜 곳은 더 비싸요."]]},
+{t:"추천 메뉴 묻기",l:2,lines:[
+ ["A","おすすめは なんですか。","추천은 뭐예요?"],
+ ["B","韓国料理（かんこくりょうり）の 中（なか）で 豚足（とんそく）が 一番（いちばん） おいしいです。","한국 요리 중에서 족발이 가장 맛있어요."],
+ ["A","辛（から）いですか。私（わたし）は 辛い 料理（りょうり）が 得意（とくい）じゃないです。","매워요? 저는 매운 요리를 잘 못 먹어요."],
+ ["B","いいえ、辛くないです。キムチより ずっと 甘（あま）いですよ。","아니요, 맵지 않아요. 김치보다 훨씬 달아요."],
+ ["A","キムチは 種類（しゅるい）が 多（おお）いですか。","김치는 종류가 많아요?"],
+ ["B","はい、とても 多いです。その 中で 白菜（はくさい）キムチが 一番 有名（ゆうめい）です。","네, 아주 많아요. 그중에서 배추김치가 가장 유명해요."],
+ ["A","自家製（じかせい）の キムチも ありますか。","수제 김치도 있어요?"],
+ ["B","あります。自家製の ほうが 店（みせ）の キムチより おいしいです。","있어요. 수제 쪽이 가게 김치보다 맛있어요."]]},
+{t:"계절 이야기",l:2,lines:[
+ ["A","季節（きせつ）の 中（なか）で いつが 一番（いちばん） 好（す）きですか。","계절 중에서 언제를 가장 좋아해요?"],
+ ["B","秋（あき）が 一番 好きです。涼（すず）しくて、景色（けしき）も きれいですから。","가을을 가장 좋아해요. 시원하고 경치도 예쁘니까요."],
+ ["A","夏（なつ）は どうですか。","여름은 어때요?"],
+ ["B","夏は 蒸（む）し暑（あつ）いですから、あまり 好きじゃないです。でも 海（うみ）で 泳（およ）ぎたいです。","여름은 무더우니까 별로 좋아하지 않아요. 그래도 바다에서 헤엄치고 싶어요."],
+ ["A","寒（さむ）さに 強（つよ）いですか。","추위에 강해요?"],
+ ["B","いいえ、強くないです。冬（ふゆ）は 雪（ゆき）が 降（ふ）りますから、家（いえ）で 休（やす）みたいです。","아니요, 강하지 않아요. 겨울은 눈이 오니까 집에서 쉬고 싶어요."],
+ ["A","ソウルと 東京（とうきょう）と、どっちが 寒いですか。","서울과 도쿄 중 어디가 추워요?"],
+ ["B","ソウルの ほうが ずっと 寒いです。東京より 気温（きおん）が 低（ひく）いです。","서울 쪽이 훨씬 추워요. 도쿄보다 기온이 낮아요."]]},
+{t:"옷 가게에서 시착",l:3,lines:[
+ ["A","この ジャケット、試着（しちゃく）しても いいですか。","이 재킷, 입어 봐도 될까요?"],
+ ["B","はい、どうぞ。試着室（しちゃくしつ）は あそこです。","네, 그러세요. 탈의실은 저쪽입니다."],
+ ["A","うーん、ちょっと きついです。もっと ゆるい ジャケットは ありますか。","음, 좀 끼네요. 더 헐렁한 재킷은 있나요?"],
+ ["B","水色（みずいろ）の ジャケットは どうですか。少（すこ）し 薄（うす）いですが、ゆるいです。","하늘색 재킷은 어떠세요? 조금 얇지만 헐렁합니다."],
+ ["A","派手（はで）じゃないですか。会社（かいしゃ）で 着（き）たいです。","화려하지 않나요? 회사에서 입고 싶어요."],
+ ["B","いいえ、地味（じみ）な 色（いろ）です。スーツにも 似合（にあ）いますよ。","아니요, 수수한 색입니다. 정장에도 어울려요."],
+ ["A","これは 何円（なんえん）ですか。","이건 얼마예요?"],
+ ["B","税込（ぜいこ）みで 8,800円（はっせんはっぴゃくえん）です。今日（きょう）は 限定価格（げんていかかく）ですよ。","세후 8,800엔입니다. 오늘은 한정 가격이에요."],
+ ["A","じゃ、これを 買（か）います。千円札（せんえんさつ）で いいですか。","그럼 이걸로 살게요. 천 엔 지폐로 괜찮나요?"]]},
+{t:"회식 다음 날",l:3,lines:[
+ ["A","具合（ぐあい）が 悪（わる）いですか。","몸이 안 좋아요?"],
+ ["B","はい、お腹（なか）が 痛（いた）いです。昨日（きのう）、残（のこ）って いた ケーキを 完食（かんしょく）しました。","네, 배가 아파요. 어제 남아 있던 케이크를 다 먹었어요."],
+ ["A","食（た）べすぎましたね。肉（にく）も 食べましたか。","과식했네요. 고기도 먹었어요?"],
+ ["B","はい。でも 肉は ちゃんと 焼（や）けて いましたか… たぶん 生（なま）でした。","네. 그런데 고기가 제대로 구워져 있었나… 아마 날것이었어요."],
+ ["A","病院（びょういん）に 行（い）きますか。","병원에 가요?"],
+ ["B","今日（きょう）は 朝（あさ）から 昼（ひる）まで 忙（いそが）しいです。明日（あした） プレゼンしなければなりませんから。","오늘은 아침부터 낮까지 바빠요. 내일 프레젠테이션을 해야 하거든요."],
+ ["A","じゃ、昼（ひる）は 薄（うす）い 味（あじ）の 野菜（やさい）を 食べて ください。","그럼 점심은 싱거운 채소를 드세요."],
+ ["B","はい。明日は 仕事（しごと）で 病院に 行く つもりです。","네. 내일은 일 때문에 병원에 갈 생각이에요."]]},
+{t:"과일 주문",l:3,lines:[
+ ["A","この ぶどう、超希少（ちょうきしょう）の 品種（ひんしゅ）ですね。","이 포도, 초희소 품종이네요."],
+ ["B","はい、この 地方（ちほう）の 特産品（とくさんひん）です。品質（ひんしつ）も 高級（こうきゅう）です。","네, 이 지방 특산품입니다. 품질도 고급이에요."],
+ ["A","何円（なんえん）ですか。","얼마예요?"],
+ ["B","約（やく）1キロ（いちキロ）で 税抜（ぜいぬ）き 3,000円（さんぜんえん）、税込（ぜいこ）みで 3,300円（さんぜんさんびゃくえん）です。","약 1kg에 세전 3,000엔, 세후 3,300엔입니다."],
+ ["A","高（たか）いですね。消費税（しょうひぜい）は 10%（じゅっパーセント）ですか。","비싸네요. 소비세는 10%예요?"],
+ ["B","はい。昔（むかし）は 8%（はちパーセント）でしたが。でも 限定価格（げんていかかく）で、送料（そうりょう）も 無料（むりょう）です。","네. 옛날에는 8%였지만요. 그래도 한정 가격이고 배송비도 무료예요."],
+ ["A","いつ 発送（はっそう）しますか。","언제 발송해요?"],
+ ["B","明日（あした） 発送します。いちごも 一緒（いっしょ）に どうですか。今日は 880円（はっぴゃくはちじゅうえん）です。","내일 발송합니다. 딸기도 같이 어떠세요? 오늘은 880엔이에요."]]}
+];
+const SPEAK=[
+["月曜日（げつようび）に 何（なに）を したいですか。","月曜日に 早（はや）く 家（いえ）に 帰（かえ）りたいです。",1],
+["火曜日（かようび）に 何を する つもりですか。","火曜日に 日本語（にほんご）を 勉強（べんきょう）する つもりです。",1],
+["海（うみ）で 何を しますか。조사에 주의하세요","海で 泳（およ）ぎます。友達（ともだち）と バレーボールを します。",1],
+["今日（きょう）は どんな 天気（てんき）ですか。","今日は 晴（は）れです。／ 曇（くも）りです。／ 蒸（む）し暑（あつ）いです。",1],
+["日曜日（にちようび）に 何時（なんじ）に 寝（ね）たいですか。","12時（じゅうにじ）に 寝たいです。",1],
+["\"서울은 도쿄보다 춥습니다\" 를 말해보세요","ソウルは 東京（とうきょう）より 寒（さむ）いです。",2],
+["韓国（かんこく）と 日本（にほん）と、どちらが 物価（ぶっか）が 高（たか）いですか。","日本の ほうが 高いです。",2],
+["季節（きせつ）の 中（なか）で いつが 一番（いちばん） 好（す）きですか。","秋（あき）が 一番 好きです。涼（すず）しいですから。",2],
+["韓国料理（かんこくりょうり）の 中で 何（なに）が 一番 おいしいですか。","豚足（とんそく）が 一番 おいしいです。おすすめです。",2],
+["\"평소에 어떻게 호텔을 고르세요?\" 라고 물어보세요","いつも どうやって ホテルを 選（えら）びますか。",2],
+["\"이 가방은 저 가방보다 쌉니다\" 를 말해보세요","この かばんは あの かばんより 安（やす）いです。",2],
+["\"김치는 종류가 많습니다\" 를 말해보세요","キムチは 種類（しゅるい）が 多（おお）いです。",2],
+["今日（きょう）は 何月（なんがつ）何日（なんにち）ですか。— 오늘 날짜로 대답","9月（くがつ）16日（じゅうろくにち）です。",3],
+["\"이것은 얼마예요?\" 라고 물어보세요","これは 何円（なんえん）ですか。",3],
+["지금 입고 있는 옷을 ～ています로 말해보세요 (색 포함)","黒（くろ）い スーツを 着（き）て、紫（むらさき）の ネクタイを して います。",3],
+["\"내일 프레젠테이션을 해야 해서 일찍 잡니다\" 를 말해보세요","明日（あした） プレゼンしなければなりませんから、早（はや）く 寝（ね）ます。",3],
+["\"이 신발은 좀 껴요. 더 헐렁한 신발은 있어요?\" 를 말해보세요","この 靴（くつ）は ちょっと きついです。もっと ゆるい 靴は ありますか。",3],
+["\"세후 3,300엔입니다\" 를 말해보세요 (숫자 읽기 주의)","税込（ぜいこ）みで 3,300円（さんぜんさんびゃくえん）です。",3],
+["\"어제 과식해서 배가 아파요\" 를 말해보세요","昨日（きのう） 食（た）べすぎて、お腹（なか）が 痛（いた）いです。",3]
+];
+(function(){
+  const w=$("dwrap");
+  DLGS.forEach((d,i)=>{
+    const c=document.createElement("div");c.className="card";c.id="dlg"+i;
+    let h='<h2><span class="bar"></span>'+d.t+' <span class="ltag '+LT(d.l)+'">L'+d.l+'</span></h2>';
+    d.lines.forEach(l=>{h+='<div class="dl'+(l[0]==="B"?" me":"")+'"><span class="who '+(l[0]==="B"?"b":"a")+'">'+l[0]+'</span><div class="bub"><div class="j jp">'+F(l[1])+'</div><div class="k">'+F(l[2])+'</div></div></div>'});
+    h+='<button class="btn" data-kr="dlg'+i+'" style="margin-top:9px;flex:none">🇰🇷 번역 켜기/끄기</button>';
+    c.innerHTML=h;w.appendChild(c);
+  });
+  const s=$("swrap");
+  SPEAK.forEach((q,i)=>{const d=document.createElement("div");d.className="sq";
+    d.innerHTML='<div class="q jp">'+(i+1)+'. '+F(q[0])+' <span class="ltag '+LT(q[2])+'">L'+q[2]+'</span></div><button class="btn" data-rv="rv'+i+'">모델 답 보기</button><div class="reveal jp" id="rv'+i+'">'+F(q[1])+'</div>';
+    s.appendChild(d)});
+  document.querySelectorAll("[data-kr]").forEach(b=>b.onclick=()=>$(b.dataset.kr).classList.toggle("showkr"));
+  document.querySelectorAll("[data-rv]").forEach(b=>b.onclick=()=>$(b.dataset.rv).classList.toggle("on"));
+})();
+
+/* ===================== PROGRESS ===================== */
+function updStats(){
+  const wp=Math.round(known.size/VOCAB.length*100);
+  const kp=Math.round(kKnown.size/KANJI.length*100);
+  const bests=store.get("bests",{});const qp=bests.best||0;
+  const all=Math.round((wp+kp+qp)/3);
+  $("h-word").textContent=known.size;$("h-kanji").textContent=kKnown.size;$("h-quiz").textContent=qp+"%";$("h-all").textContent=all+"%";
+  $("pv1").textContent=wp+"%";$("pb1").style.width=wp+"%";$("pd1").textContent=known.size+" / "+VOCAB.length+"개 · 카드 탭에서 '알아요'를 누르면 반영됩니다";
+  $("pv2").textContent=kp+"%";$("pb2").style.width=kp+"%";$("pd2").textContent=kKnown.size+" / "+KANJI.length+"자 · 한자 타일을 길게 누르면 ✓ 표시됩니다";
+  $("pv3").textContent=qp+"%";$("pb3").style.width=qp+"%";$("pd3").textContent="전체 퀴즈 최고 정답률";
+  const C=2*Math.PI*44;$("ringc").style.strokeDashoffset=C*(1-all/100);$("ringt").textContent=all+"%";
+  $("ringmsg").innerHTML=all>=80?"<b>훌륭합니다.</b><br>2과까지 충분히 소화했습니다. 다음 수업 준비 완료.":all>=50?"<b>순조롭습니다.</b><br>절반을 넘었습니다. 퀴즈를 한 번 더 돌려보세요.":all>=20?"<b>시작이 좋습니다.</b><br>단어 카드부터 한 덱씩 끝내보세요.":"<b>이제 시작입니다.</b><br>문법 → 단어 → 퀴즈 순으로 한 바퀴 돌아보세요.";
+  const ls=$("lessonstats");ls.innerHTML="";
+  [[1,"1과"],[2,"2과"],[3,"3과"]].forEach(([n,label])=>{
+    const kw=VOCAB.filter((v,i)=>v[5]===n&&known.has(i)).length,tw=VOCAB.filter(v=>v[5]===n).length;
+    const kk=KANJI.filter((k,i)=>k[4]===n&&kKnown.has(i)).length,tk=KANJI.filter(k=>k[4]===n).length;
+    ls.innerHTML+='<div class="mc"><div class="n">'+kw+'/'+tw+'</div><div class="l">'+label+' 단어</div></div><div class="mc"><div class="n">'+kk+'/'+tk+'</div><div class="l">'+label+' 한자</div></div>';
+  });
+  const w=$("weak");
+  const items=[];
+  if(wp<60)items.push(["단어","카드 탭에서 아직 "+(VOCAB.length-known.size)+"개가 남았습니다. 분류별로 한 덱씩 끝내세요."]);
+  if(kp<60)items.push(["한자","한자 "+(KANJI.length-kKnown.size)+"자가 미확인입니다. '전부 가리기' 후 테스트해 보세요."]);
+  if(qp<80)items.push(["퀴즈","정답률 80% 이상을 목표로 하세요. 유형별(조사·반대말·한자읽기)로 나눠 풀면 약점이 보입니다."]);
+  items.push(["고정 약점","① 海<b>で</b>泳ぐ(장소 で) ② たい의 부정 た<b>くない</b> ③ 高い의 반대말 두 개(安い/低い) ④ どちら 대답은 ～の<b>ほうが</b> ⑤ 緑<b>の</b>ズボン vs 赤<b>い</b>帽子 ⑥ 4月しがつ·7月しちがつ·9月くがつ ⑦ 1日ついたち·20日はつか"]);
+  w.innerHTML=items.map(i=>'<div class="ex"><div class="j" style="font-size:13.5px">'+i[0]+'</div><div class="k">'+i[1]+'</div></div>').join("");
+}
+$("resetall").onclick=()=>{known=new Set();kKnown=new Set();store.set("known",[]);store.set("kknown",[]);store.set("bests",{});drawVocab();drawKanji();resetDeck();updStats()};
+
+/* ===================== NOTES ===================== */
+const ta=$("mynote");ta.value=store.get("note","");
+let tmo;ta.addEventListener("input",()=>{clearTimeout(tmo);tmo=setTimeout(()=>{store.set("note",ta.value);$("savemsg").textContent="저장됨";setTimeout(()=>$("savemsg").textContent="",1600)},450)});
+
+/* ===================== NAV & FURIGANA ===================== */
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
+  document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("on",x===t));
+  document.querySelectorAll(".panel").forEach(p=>p.classList.toggle("on",p.id==="p-"+t.dataset.p));
+  if(t.dataset.p==="prog")updStats();
+  window.scrollTo({top:0});
+});
+const fb=$("furibtn");let furi=store.get("furi",true);
+function applyF(){document.body.classList.toggle("nofuri",!furi);fb.textContent="ふりがな "+(furi?"ON":"OFF")}
+fb.onclick=()=>{furi=!furi;store.set("furi",furi);applyF()};
+applyF();
+
+// 테마 전환: 자동(기기 설정) → 밝게 → 어둡게
+const tb=$("thbtn"),MODES=["auto","light","dark"],LABEL={auto:"🌗 자동",light:"☀️ 밝게",dark:"🌙 어둡게"};
+let theme=store.get("theme","auto");
+function applyT(){
+  if(theme==="auto")document.documentElement.removeAttribute("data-theme");
+  else document.documentElement.setAttribute("data-theme",theme);
+  tb.textContent=LABEL[theme];
+}
+tb.onclick=()=>{theme=MODES[(MODES.indexOf(theme)+1)%3];store.set("theme",theme);applyT()};
+applyT();updStats();
+</script>
+
+
+<!-- ===== PWA 셸: 설치 · 오프라인 · 업데이트 (앱 패키징 시 추가) ===== -->
+<style>
+#pwa-bar{position:fixed;left:0;right:0;bottom:calc(58px + env(safe-area-inset-bottom,0px));z-index:30;display:flex;justify-content:center;pointer-events:none}
+#pwa-bar .pill{pointer-events:auto;display:none;align-items:center;gap:10px;max-width:calc(600px - 28px);margin:0 14px;background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--sh-lg);padding:9px 12px;font-size:12px;line-height:1.5}
+#pwa-bar .pill.on{display:flex;animation:fade .28s cubic-bezier(.2,.8,.3,1)}
+#pwa-bar .pill .tx{flex:1;min-width:0}
+#pwa-bar .pill .tx b{font-size:12.5px;font-weight:700}
+#pwa-bar .pill .tx span{display:block;color:var(--muted);font-size:11px}
+#pwa-bar .pill .go{flex:none;background:var(--grad);color:#fff;border-radius:11px;padding:7px 13px;font-size:12px;font-weight:700}
+#pwa-bar .pill .x{flex:none;color:var(--muted);font-size:15px;padding:3px 5px;line-height:1}
+#offline{position:fixed;top:0;left:0;right:0;z-index:40;background:var(--rose);color:#fff;text-align:center;font-size:11.5px;font-weight:700;padding:5px 10px;padding-top:calc(5px + env(safe-area-inset-top,0px));display:none}
+#offline.on{display:block}
+</style>
+
+<div id="offline">오프라인 — 저장된 내용으로 계속 학습할 수 있습니다</div>
+<div id="pwa-bar">
+  <div class="pill" id="pwa-install">
+    <div class="tx"><b>홈 화면에 추가</b><span id="pwa-how">앱처럼 전체화면으로 열립니다</span></div>
+    <button class="go" id="pwa-go">설치</button>
+    <button class="x" id="pwa-x" aria-label="닫기">✕</button>
+  </div>
+  <div class="pill" id="pwa-update">
+    <div class="tx"><b>새 버전이 있습니다</b><span>다시 열면 최신 내용이 적용됩니다</span></div>
+    <button class="go" id="pwa-reload">새로고침</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var $$ = function(id){ return document.getElementById(id); };
+
+  /* --- 1) 서비스 워커 등록: 오프라인 사용 + 업데이트 알림 --- */
+  var waitingSW = null;
+  if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) {
+    window.addEventListener("load", function(){
+      navigator.serviceWorker.register("sw.js").then(function(reg){
+        function watch(sw){
+          if (!sw) return;
+          sw.addEventListener("statechange", function(){
+            if (sw.state === "installed" && navigator.serviceWorker.controller) {
+              waitingSW = sw; $$("pwa-update").classList.add("on");
+            }
+          });
+        }
+        if (reg.waiting && navigator.serviceWorker.controller) {
+          waitingSW = reg.waiting; $$("pwa-update").classList.add("on");
+        }
+        watch(reg.installing);
+        reg.addEventListener("updatefound", function(){ watch(reg.installing); });
+      }).catch(function(){});
+    });
+    var reloading = false;
+    navigator.serviceWorker.addEventListener("controllerchange", function(){
+      if (reloading) return; reloading = true; location.reload();
+    });
+  }
+  $$("pwa-reload").onclick = function(){
+    if (waitingSW) waitingSW.postMessage("skipWaiting"); else location.reload();
+  };
+
+  /* --- 2) 설치 안내: Android/데스크톱은 네이티브 프롬프트, iOS는 수동 안내 --- */
+  var deferred = null;
+  var standalone = window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+  var dismissed = false;
+  try { dismissed = localStorage.getItem("jpn:a2hs") === "1"; } catch(e){}
+
+  function showInstall(text){
+    if (standalone || dismissed) return;
+    if ($$("pwa-update").classList.contains("on")) return;
+    if (text) $$("pwa-how").textContent = text;
+    $$("pwa-install").classList.add("on");
+  }
+  function hideInstall(){
+    $$("pwa-install").classList.remove("on");
+    try { localStorage.setItem("jpn:a2hs", "1"); } catch(e){}
+  }
+
+  window.addEventListener("beforeinstallprompt", function(e){
+    e.preventDefault(); deferred = e; showInstall();
+  });
+  window.addEventListener("appinstalled", function(){ hideInstall(); deferred = null; });
+
+  $$("pwa-go").onclick = function(){
+    if (deferred) { deferred.prompt(); deferred.userChoice.then(function(){ deferred = null; hideInstall(); }); }
+    else { hideInstall(); }
+  };
+  $$("pwa-x").onclick = hideInstall;
+
+  var iOS = /iP(hone|ad|od)/.test(navigator.userAgent) ||
+            (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  if (iOS && !standalone) {
+    setTimeout(function(){ showInstall("공유 버튼 → “홈 화면에 추가”를 누르세요"); }, 2500);
+  }
+
+  /* --- 3) 오프라인 표시 --- */
+  function net(){ $$("offline").classList.toggle("on", !navigator.onLine); }
+  window.addEventListener("online", net); window.addEventListener("offline", net); net();
+
+  /* --- 4) 해시 라우팅: 앱 바로가기(#quiz 등)와 뒤로가기 지원 --- */
+  var TABS = ["home","gram","word","kanji","quiz","talk","prog","note"];
+  function openTab(name, push){
+    if (TABS.indexOf(name) < 0) return;
+    var btn = document.querySelector('.tab[data-p="' + name + '"]');
+    if (!btn || btn.classList.contains("on")) return;
+    silent = true; btn.click(); silent = false;
+    if (push && location.hash.slice(1) !== name) location.hash = name;
+  }
+  var silent = false;
+  document.querySelectorAll(".tab").forEach(function(t){
+    t.addEventListener("click", function(){
+      if (!silent && location.hash.slice(1) !== t.dataset.p) location.hash = t.dataset.p;
+    });
+  });
+  window.addEventListener("hashchange", function(){ openTab(location.hash.slice(1)); });
+  if (location.hash) openTab(location.hash.slice(1));
+})();
+</script>
+
+</body></html>
