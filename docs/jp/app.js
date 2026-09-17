@@ -66,8 +66,8 @@ function sheetGrid(list,showL){
   list.forEach((s,i)=>{
     const b=el("button","shi");b.type="button";
     b.setAttribute("aria-label","LESSON 0"+s.l+" "+s.p+"페이지 — "+s.t);
-    b.innerHTML='<img src="sheets/thumb/'+SFILE(s)+'.webp" alt="" loading="lazy" decoding="async">'+
-      '<span class="pg">'+(showL?"L"+s.l:s.p)+'</span>'+
+    b.innerHTML='<span class="im"><img src="sheets/thumb/'+SFILE(s)+'.webp" alt="" loading="lazy" decoding="async">'+
+      '<span class="pg">'+(showL?"L"+s.l:s.p)+'</span></span>'+
       '<span class="cap">'+ESC(s.t)+'</span>';
     b.onclick=()=>openViewer(list,i);
     g.appendChild(b);
@@ -113,11 +113,13 @@ function renderHub(){
   const vs=vocabOf(l),ks=kanjiOf(l),qs=quizOf(l);
   const kw=vs.filter(([,i])=>known.has(i)).length, kk=ks.filter(([,i])=>kknown.has(i)).length;
   const best=bests()["bestL"+l]||0;
-  const hero=el("div","lhero lb l"+l);
-  hero.innerHTML='<div class="n">LESSON 0'+l+' · '+LDATE[l]+'</div><div class="ti">'+ESC(g.title)+'</div>'+
-    '<div class="de jp">'+F(g.desc)+'</div>'+
-    '<div class="st"><div><b>'+kw+'/'+vs.length+'</b><span>단어</span></div><div><b>'+kk+'/'+ks.length+'</b><span>한자</span></div><div><b>'+best+'%</b><span>퀴즈</span></div></div>';
+  const hero=el("div","lhero");
+  hero.innerHTML='<div class="no">0'+l+'</div><div class="hx">'+
+    '<div class="n">LESSON 0'+l+' · '+LDATE[l]+'</div><div class="ti">'+ESC(g.title)+'</div>'+
+    '<div class="de jp">'+F(g.desc)+'</div></div>';
   v.appendChild(hero);
+  v.appendChild(el("div","lhero",'<div class="st" style="margin-top:0"><div><b>'+kw+'/'+vs.length+'</b><span>단어</span></div>'+
+    '<div><b>'+kk+'/'+ks.length+'</b><span>한자</span></div><div><b>'+best+'%</b><span>퀴즈</span></div></div>'));
 
   const sh=sheetsOf(0,l);
   v.appendChild(navCard("資","수업 자료","원본 "+sh.length+"장 · 문법 3 · 단어 3 · 한자 3 · 회화 1",()=>go("l"+l+"/sheets")));
@@ -475,8 +477,6 @@ function render(){
   }else if(R.tab==="prog")renderProg();
   else renderNote();
   document.documentElement.setAttribute("data-lesson",R.tab==="lesson"?String(R.lesson):"0");
-  const tc=document.querySelector('meta[name="theme-color"]');
-  if(tc)tc.setAttribute("content",R.tab==="lesson"?{1:"#1B5FA8",2:"#C74371",3:"#17395C"}[R.lesson]:"#1B5FA8");
   document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("on",t.dataset.p===R.tab));
   window.scrollTo({top:0});
   updStats();
