@@ -527,16 +527,23 @@ route();
 
 /* ===================== PWA 셸 ===================== */
 (function(){
-  let waiting=null;
+  let waiting=null,REG=null;
   if("serviceWorker" in navigator&&location.protocol.indexOf("http")===0){
     window.addEventListener("load",()=>{
       navigator.serviceWorker.register("sw.js").then(reg=>{
+        REG=reg;
         const watch=sw=>{if(!sw)return;sw.addEventListener("statechange",()=>{
           if(sw.state==="installed"&&navigator.serviceWorker.controller){waiting=sw;$("pwa-update").classList.add("on")}})};
         if(reg.waiting&&navigator.serviceWorker.controller){waiting=reg.waiting;$("pwa-update").classList.add("on")}
         watch(reg.installing);reg.addEventListener("updatefound",()=>watch(reg.installing));
       }).catch(()=>{});
     });
+    // iOS의 홈 화면 앱은 화면을 다시 켤 때 새로 탐색하지 않으므로 직접 갱신을 확인한다
+    const check=()=>{try{if(REG)REG.update()}catch(e){}};
+    document.addEventListener("visibilitychange",()=>{if(!document.hidden)check()});
+    window.addEventListener("focus",check);
+    window.addEventListener("pageshow",e=>{if(e.persisted)check()});
+    setInterval(check,30*60*1000);
     let reloading=false;
     navigator.serviceWorker.addEventListener("controllerchange",()=>{if(reloading)return;reloading=true;location.reload()});
   }
