@@ -114,12 +114,12 @@ function renderHub(){
   const kw=vs.filter(([,i])=>known.has(i)).length, kk=ks.filter(([,i])=>kknown.has(i)).length;
   const best=bests()["bestL"+l]||0;
   const hero=el("div","lhero");
-  hero.innerHTML='<div class="no">0'+l+'</div><div class="hx">'+
+  hero.innerHTML='<div class="lno">0'+l+'</div><div class="hx">'+
     '<div class="n">LESSON 0'+l+' · '+LDATE[l]+'</div><div class="ti">'+ESC(g.title)+'</div>'+
     '<div class="de jp">'+F(g.desc)+'</div></div>';
   v.appendChild(hero);
-  v.appendChild(el("div","lhero",'<div class="st" style="margin-top:0"><div><b>'+kw+'/'+vs.length+'</b><span>단어</span></div>'+
-    '<div><b>'+kk+'/'+ks.length+'</b><span>한자</span></div><div><b>'+best+'%</b><span>퀴즈</span></div></div>'));
+  v.appendChild(el("div","lstat",'<div><b>'+kw+'/'+vs.length+'</b><span>단어</span></div>'+
+    '<div><b>'+kk+'/'+ks.length+'</b><span>한자</span></div><div><b>'+best+'%</b><span>퀴즈</span></div>'));
 
   const sh=sheetsOf(0,l);
   v.appendChild(navCard("資","수업 자료","원본 "+sh.length+"장 · 문법 3 · 단어 3 · 한자 3 · 회화 1",()=>go("l"+l+"/sheets")));
