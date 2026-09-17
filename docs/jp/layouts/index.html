@@ -1,0 +1,269 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>레이아웃 5안</title>
+<meta name="theme-color" content="#1B5FA8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+:root{
+  --bg:#E9F2FA;--surface:#fff;--surface2:#F0F6FC;--line:#D5E5F2;
+  --text:#16375A;--muted:#5D7F9C;--blue:#2F80C8;--blue-soft:#E4F0FB;
+  --purple:#12539E;--purple-soft:#E1ECFA;--pink:#DC5480;--pink-soft:#FDEAF1;--pink-ink:#B8365F;
+  --mint:#2E9E6B;--mint-soft:#E2F5EC;--rose:#DF4C4C;--rose-soft:#FDEAEA;--sand:#B5811F;--sand-soft:#FFF5DA;
+  --grad:linear-gradient(135deg,#1B5FA8,#4BA3DC);
+  --sh:0 1px 2px rgba(22,55,90,.06),0 6px 18px rgba(22,55,90,.08);
+  --sh-lg:0 4px 12px rgba(22,55,90,.09),0 16px 38px rgba(22,55,90,.14);
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0A1725;--surface:#11253A;--surface2:#193348;--line:#24415C;--text:#DCE9F4;--muted:#8AA6BF;
+  --blue:#5BB3E8;--blue-soft:#12314A;--purple:#7FB6EA;--purple-soft:#13293F;--pink:#F08BAE;--pink-soft:#33202A;--pink-ink:#F3A3C0;
+  --mint:#43B98A;--mint-soft:#0E2A22;--rose:#EE7A7A;--rose-soft:#331C1C;--sand:#DDAE55;--sand-soft:#2E2413;
+  --grad:linear-gradient(135deg,#123C68,#2270AC);
+  --sh:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.26);--sh-lg:0 4px 12px rgba(0,0,0,.32),0 16px 40px rgba(0,0,0,.38);
+}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:"Noto Sans KR",system-ui,sans-serif;line-height:1.6;font-size:14px;-webkit-text-size-adjust:100%}
+.jp{font-family:"Zen Kaku Gothic New","Noto Sans JP",sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:18px 16px 60px}
+.top{background:var(--grad);color:#fff;border-radius:20px;padding:20px 22px;box-shadow:var(--sh-lg);margin-bottom:22px;position:relative;overflow:hidden}
+.top::after{content:"日本語";position:absolute;right:-6px;bottom:-24px;font-family:"Zen Kaku Gothic New";font-size:72px;font-weight:900;color:rgba(255,255,255,.14)}
+.top h1{font-size:20px;font-weight:800;letter-spacing:-.3px;position:relative;z-index:1}
+.top p{font-size:12.5px;opacity:.88;margin-top:4px;position:relative;z-index:1;max-width:60ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.opt{background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--sh);padding:16px 16px 18px;display:flex;flex-direction:column}
+.oh{display:flex;align-items:flex-start;gap:10px;margin-bottom:4px}
+.num{flex:none;width:30px;height:30px;border-radius:10px;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"Outfit";font-weight:800;font-size:15px}
+.oh h2{font-size:16px;font-weight:800;letter-spacing:-.2px;line-height:1.35}
+.oh .sub{font-size:11px;color:var(--muted);font-family:"Outfit";font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.desc{font-size:12.5px;color:var(--text);margin:8px 0 10px;line-height:1.75}
+.pm{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.pm div{border-radius:11px;padding:8px 10px;font-size:11.5px;line-height:1.6}
+.pm .p{background:var(--mint-soft)}.pm .p b{color:var(--mint)}
+.pm .m{background:var(--rose-soft)}.pm .m b{color:var(--rose)}
+.pm b{display:block;font-size:10.5px;margin-bottom:2px;font-weight:800}
+.rate{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--muted);margin-bottom:12px}
+.rate .st{font-family:"Outfit";font-weight:800;color:var(--purple);font-size:13px}
+.rate .tag{background:var(--purple-soft);color:var(--purple);border-radius:6px;padding:1px 7px;font-size:10px;font-weight:800}
+
+/* ---- phone mockup ---- */
+.ph{width:300px;margin:0 auto;border:8px solid #0E2C4A;border-radius:30px;overflow:hidden;background:var(--bg);box-shadow:var(--sh-lg);flex:none}
+@media (prefers-color-scheme:dark){.ph{border-color:#20344A}}
+.sc{height:520px;overflow:hidden;display:flex;flex-direction:column;position:relative}
+.sb{background:var(--grad);color:#fff;font-size:9px;padding:4px 12px;display:flex;justify-content:space-between;font-family:"Outfit";font-weight:700;flex:none}
+.body{flex:1;overflow:hidden;padding:9px 10px;display:flex;flex-direction:column;gap:8px}
+.tb{flex:none;background:var(--surface);border-top:1px solid var(--line);display:flex;padding:5px 0 6px}
+.tb span{flex:1;text-align:center;font-size:8px;color:var(--muted);font-weight:600}
+.tb span i{display:block;font-family:"Zen Kaku Gothic New";font-style:normal;font-size:14px;font-weight:900;line-height:1.3}
+.tb span.on{color:var(--purple)}
+.c{background:var(--surface);border:1px solid var(--line);border-radius:13px;box-shadow:var(--sh);padding:9px 10px}
+.h{font-size:11px;font-weight:800;background:var(--blue-soft);color:var(--purple);border-radius:8px;padding:5px 8px;display:flex;align-items:center;gap:6px;margin-bottom:7px}
+.h::before{content:"";width:3px;height:11px;border-radius:2px;background:var(--grad)}
+.t{font-size:10px;line-height:1.6;color:var(--muted)}
+.chip{display:inline-block;background:var(--pink-soft);color:var(--pink-ink);border-radius:7px;padding:3px 7px;font-size:9px;font-weight:800}
+.seg{display:flex;gap:5px;flex:none}
+.seg b{font-size:9.5px;font-weight:700;padding:4px 9px;border-radius:14px;border:1.2px solid var(--line);background:var(--surface);color:var(--muted)}
+.seg b.on{background:var(--grad);color:#fff;border-color:transparent}
+.ban{border-radius:13px;padding:9px 11px;color:#fff;position:relative;overflow:hidden;flex:none}
+.ban .n{font-family:"Outfit";font-size:8px;font-weight:800;letter-spacing:.16em;opacity:.85}
+.ban .ti{font-size:12.5px;font-weight:800;margin-top:1px}
+.ban .de{font-size:9px;opacity:.85}
+.b1{background:linear-gradient(135deg,#1B5FA8,#4BA3DC)}
+.b2{background:linear-gradient(135deg,#D14C79,#F58BA8)}
+.b3{background:linear-gradient(135deg,#17395C,#33628F)}
+.sh3{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.sh2{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}
+.sq{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--line);aspect-ratio:3/4;background:var(--surface2)}
+.sq img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.sq .pg{position:absolute;top:3px;right:3px;background:rgba(18,50,84,.78);color:#fff;font-family:"Outfit";font-size:7.5px;font-weight:800;border-radius:4px;padding:0 4px}
+.wide{border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--surface2);flex:none}
+.wide img{width:100%;display:block}
+.row{display:flex;gap:7px;align-items:center}
+.pill{flex:none;width:26px;height:26px;border-radius:9px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:13px}
+.k{font-family:"Zen Kaku Gothic New";font-weight:900}
+.bar{height:5px;border-radius:4px;background:var(--surface2);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--grad)}
+.btn{border-radius:10px;padding:7px 10px;font-size:10px;font-weight:800;text-align:center}
+.btn.p{background:var(--grad);color:#fff}
+.btn.o{border:1.2px solid var(--line);color:var(--muted);background:var(--surface)}
+.fab{position:absolute;right:12px;bottom:12px;background:var(--grad);color:#fff;border-radius:16px;padding:9px 13px;font-size:10.5px;font-weight:800;box-shadow:var(--sh-lg)}
+.crumb{font-size:9px;color:var(--muted);font-weight:700;flex:none}
+.tile{border-radius:12px;padding:10px 9px;border:1px solid var(--line);background:var(--surface);box-shadow:var(--sh);text-align:center}
+.tile .ic{font-family:"Zen Kaku Gothic New";font-size:17px;font-weight:900;color:var(--purple);line-height:1.3}
+.tile .lb{font-size:9px;font-weight:700;margin-top:1px}
+.tile .st{font-size:8px;color:var(--muted)}
+.ring{display:flex;align-items:center;gap:8px}
+.ring .d{width:32px;height:32px;border-radius:50%;flex:none;background:conic-gradient(var(--blue) 0 62%,var(--surface2) 62% 100%);display:flex;align-items:center;justify-content:center}
+.ring .d i{width:23px;height:23px;border-radius:50%;background:var(--surface);font-style:normal;font-family:"Outfit";font-size:8px;font-weight:800;display:flex;align-items:center;justify-content:center;color:var(--purple)}
+.todo{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--line);font-size:10px}
+.todo:last-child{border-bottom:none}
+.todo .bx{flex:none;width:15px;height:15px;border-radius:5px;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff}
+.todo .bx.dn{background:var(--mint);border-color:transparent}
+.todo .g{margin-left:auto;font-family:"Outfit";font-size:9px;font-weight:800;color:var(--muted)}
+.strip{display:flex;gap:5px;overflow:hidden;flex:none}
+.strip .s{flex:none;width:34px;aspect-ratio:3/4;border-radius:7px;overflow:hidden;border:1px solid var(--line);opacity:.55}
+.strip .s.on{opacity:1;border-color:var(--blue);border-width:2px}
+.strip .s img{width:100%;height:100%;object-fit:cover;object-position:top}
+.note{background:var(--sand-soft);border-radius:10px;padding:7px 9px;font-size:9.5px;line-height:1.6}
+.note b{color:var(--sand)}
+.foot{margin-top:24px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px 18px;box-shadow:var(--sh)}
+.foot h3{font-size:14px;font-weight:800;margin-bottom:8px}
+.foot ol{margin:0 0 0 18px;font-size:12.5px;line-height:1.95}
+.foot .rec{background:var(--mint-soft);border-radius:12px;padding:10px 12px;margin-top:11px;font-size:12.5px;line-height:1.75}
+.foot .rec b{color:var(--mint)}
+</style></head><body>
+<div class="wrap">
+<div class="top">
+  <h1>레이아웃 5안 — 하나를 고르세요</h1>
+  <p>팔레트는 그대로, <b>화면 구조</b>만 다섯 가지로 다르게 짰습니다. 각 화면은 실제 앱 크기(300px)로 그린 것이라 보이는 대로 나옵니다. 번호만 알려주시면 그 안으로 전체를 다시 만듭니다.</p>
+</div>
+
+<div class="grid">
+
+<!-- 1 -->
+<div class="opt">
+  <div class="oh"><div class="num">1</div><div><div class="sub">Lesson first</div><h2>교재형 — 과가 최상위</h2></div></div>
+  <p class="desc">탭을 유형(문법·단어·한자)이 아니라 <b>과</b>로 나눕니다. LESSON 01을 열면 그 과의 자료 10장·문법·단어·한자·회화·퀴즈가 한 줄기로 이어집니다. 수업 한 번 = 화면 하나.</p>
+  <div class="pm">
+    <div class="p"><b>장점</b>수업 흐름 그대로. 복습 단위가 명확.</div>
+    <div class="m"><b>단점</b>“전체 단어 159개”를 한 번에 보기 어려움.</div>
+  </div>
+  <div class="rate"><span class="tag">추천도</span><span class="st">8 / 10</span><span>· 수업 직후 복습에 가장 자연스러움</span></div>
+  <div class="ph"><div class="sc">
+    <div class="sb"><span>9:41</span><span>일본어</span></div>
+    <div class="body">
+      <div class="seg"><b class="on">1과</b><b>2과</b><b>3과</b><b>전체</b></div>
+      <div class="ban b1"><div class="n">LESSON 01 · 2026.08.25</div><div class="ti">희망과 계획 말하기</div><div class="de jp">～たいです・～つもりです</div></div>
+      <div class="wide"><img src="../sheets/thumb/l1-01.webp" alt="" style="height:88px;object-fit:cover;object-position:top"></div>
+      <div class="c"><div class="h">이 과의 문법 3</div><div class="t">① ～たいです<br>② ～つもりです<br>③ 조사 に·で·を</div></div>
+      <div class="c"><div class="h">이 과의 단어 <span style="margin-left:auto;font-family:Outfit;font-size:9px">0 / 54</span></div><div class="bar"><i style="width:8%"></i></div></div>
+      <div class="row"><div class="btn p" style="flex:1">이 과 퀴즈 38문제</div><div class="btn o" style="flex:none">회화</div></div>
+    </div>
+    <div class="tb"><span class="on"><i>課</i>수업</span><span><i>復</i>복습</span><span><i>度</i>진도</span><span><i>memo</i>노트</span></div>
+  </div></div>
+</div>
+
+<!-- 2 -->
+<div class="opt">
+  <div class="oh"><div class="num">2</div><div><div class="sub">Feed</div><h2>피드형 — 한 줄 스크롤</h2></div></div>
+  <p class="desc">탭을 없애고 <b>세로 피드 하나</b>로 만듭니다. 문법·단어 묶음·한자 세트·자료·회화가 모두 같은 크기의 카드로 흘러가고, 위쪽 칩으로 걸러 봅니다. 엄지 하나로 끝.</p>
+  <div class="pm">
+    <div class="p"><b>장점</b>이동 0회. 출퇴근·대기 시간에 최적.</div>
+    <div class="m"><b>단점</b>원하는 항목으로 바로 점프가 어려움.</div>
+  </div>
+  <div class="rate"><span class="tag">추천도</span><span class="st">6 / 10</span><span>· 가볍지만 자료 찾기가 불편</span></div>
+  <div class="ph"><div class="sc">
+    <div class="sb"><span>9:41</span><span>일본어</span></div>
+    <div class="body">
+      <div class="seg"><b class="on">전체</b><b>1과</b><b>단어</b><b>자료</b></div>
+      <div class="c"><div class="h">문법 <span class="chip" style="margin-left:auto">L1</span></div><div class="t jp" style="font-size:11px;color:var(--text)">動詞ます形 ＋ たいです</div><div class="t">희망을 말하는 기본형</div></div>
+      <div class="wide"><img src="../sheets/thumb/l1-04.webp" alt="" style="height:76px;object-fit:cover;object-position:top"></div>
+      <div class="c"><div class="row"><div class="pill">🌊</div><div><div class="jp" style="font-size:12px;font-weight:700">海</div><div class="t">うみ · 바다</div></div><div class="chip" style="margin-left:auto">L1</div></div></div>
+      <div class="c"><div class="h">퀴즈 한 문제</div><div class="t jp" style="font-size:10.5px;color:var(--text)">人々が 海＿ 泳ぎます。</div><div class="row" style="margin-top:5px"><div class="btn o" style="flex:1">で</div><div class="btn o" style="flex:1">に</div><div class="btn o" style="flex:1">を</div></div></div>
+    </div>
+    <div class="fab">다음 할 일 →</div>
+  </div></div>
+</div>
+
+<!-- 3 -->
+<div class="opt">
+  <div class="oh"><div class="num">3</div><div><div class="sub">Hub</div><h2>허브형 — 표지 + 타일</h2></div></div>
+  <p class="desc">첫 화면은 <b>과 표지 3장</b>(자료 첫 장이 표지)과 진도 링. 과를 열면 2×3 타일(문법·단어·한자·회화·퀴즈·자료)이 나오고, 타일에서 내용으로 들어갑니다.</p>
+  <div class="pm">
+    <div class="p"><b>장점</b>한 화면에 정보가 적어 눈이 편함. 자료가 표지로 살아남.</div>
+    <div class="m"><b>단점</b>원하는 곳까지 탭 2~3번.</div>
+  </div>
+  <div class="rate"><span class="tag">추천도</span><span class="st">7 / 10</span><span>· 보기 좋지만 손이 더 감</span></div>
+  <div class="ph"><div class="sc">
+    <div class="sb"><span>9:41</span><span>일본어</span></div>
+    <div class="body">
+      <div class="crumb">홈 · 오늘 15분</div>
+      <div class="c" style="padding:8px"><div class="ring"><div class="d"><i>62%</i></div><div class="t" style="font-size:9.5px">단어 98 · 한자 91 · 퀴즈 최고 84%<br>다음: 3과 한자</div></div></div>
+      <div class="sh2">
+        <div class="sq"><img src="../sheets/thumb/l1-01.webp" alt=""><span class="pg">L1</span></div>
+        <div class="sq"><img src="../sheets/thumb/l2-01.webp" alt=""><span class="pg">L2</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px">
+        <div class="tile"><div class="ic k">文</div><div class="lb">문법</div><div class="st">14</div></div>
+        <div class="tile"><div class="ic k">語</div><div class="lb">단어</div><div class="st">159</div></div>
+        <div class="tile"><div class="ic k">漢</div><div class="lb">한자</div><div class="st">148</div></div>
+      </div>
+    </div>
+    <div class="tb"><span class="on"><i>home</i>홈</span><span><i>課</i>수업</span><span><i>問</i>퀴즈</span><span><i>度</i>진도</span><span><i>memo</i>노트</span></div>
+  </div></div>
+</div>
+
+<!-- 4 -->
+<div class="opt">
+  <div class="oh"><div class="num">4</div><div><div class="sub">Sheet led</div><h2>자료 중심형 — 자료가 곧 화면</h2></div></div>
+  <p class="desc">자료 30장이 <b>주인공</b>이 됩니다. 위쪽 필름 스트립으로 장을 넘기고, 각 장 아래에 <b>그 장에서 나온 것만</b> 붙습니다 — 그 장의 단어 카드, 그 장 5문제 미니 퀴즈, 그 장의 정정 메모.</p>
+  <div class="pm">
+    <div class="p"><b>장점</b>“그림이 앱의 일부가 아니다”는 문제가 구조적으로 사라짐.</div>
+    <div class="m"><b>단점</b>전체 단어·전체 퀴즈는 한 단계 뒤로 밀림.</div>
+  </div>
+  <div class="rate"><span class="tag">추천도</span><span class="st">9 / 10</span><span>· 지금 불만을 정확히 해결</span></div>
+  <div class="ph"><div class="sc">
+    <div class="sb"><span>9:41</span><span>L1 · 4 / 10</span></div>
+    <div class="body">
+      <div class="strip">
+        <div class="s"><img src="../sheets/thumb/l1-01.webp" alt=""></div>
+        <div class="s"><img src="../sheets/thumb/l1-02.webp" alt=""></div>
+        <div class="s"><img src="../sheets/thumb/l1-03.webp" alt=""></div>
+        <div class="s on"><img src="../sheets/thumb/l1-04.webp" alt=""></div>
+        <div class="s"><img src="../sheets/thumb/l1-05.webp" alt=""></div>
+        <div class="s"><img src="../sheets/thumb/l1-06.webp" alt=""></div>
+        <div class="s"><img src="../sheets/thumb/l1-07.webp" alt=""></div>
+      </div>
+      <div class="wide"><img src="../sheets/thumb/l1-04.webp" alt="" style="height:150px;object-fit:cover;object-position:top"></div>
+      <div class="c" style="padding:8px 9px"><div class="h" style="margin-bottom:5px">이 장의 단어 16</div>
+        <div class="row" style="font-size:10px"><span class="jp" style="font-weight:700">月曜日</span><span class="t">げつようび · 월요일</span><span style="margin-left:auto" class="chip">카드</span></div>
+      </div>
+      <div class="row"><div class="btn p" style="flex:1">이 장 퀴즈 5문제</div><div class="btn o">전체 ▾</div></div>
+      <div class="note"><b>이 장의 정정</b> · 7장 요일 후리가나 오타 (けつ → げつようび)</div>
+      <div class="t" style="text-align:center;font-size:9px">← 스와이프로 5장 · 6장 →</div>
+    </div>
+    <div class="tb"><span class="on"><i>資</i>자료</span><span><i>語</i>단어</span><span><i>問</i>퀴즈</span><span><i>度</i>진도</span></div>
+  </div></div>
+</div>
+
+<!-- 5 -->
+<div class="opt">
+  <div class="oh"><div class="num">5</div><div><div class="sub">Today</div><h2>오늘형 — 학습 플랜</h2></div></div>
+  <p class="desc">첫 화면이 <b>오늘 할 일 5개</b>입니다. 단어 10개, 한자 10자, 자료 1장, 퀴즈 10문제, 회화 1개. 앱이 알아서 약한 곳부터 골라 줍니다. 전체 목록은 두 번째 탭으로.</p>
+  <div class="pm">
+    <div class="p"><b>장점</b>출장·야근에도 하루 10분이 굴러감. 연속일 기록.</div>
+    <div class="m"><b>단점</b>자유롭게 훑어보기보다 “시키는 대로” 성격.</div>
+  </div>
+  <div class="rate"><span class="tag">추천도</span><span class="st">8 / 10</span><span>· 꾸준함에는 제일 강함</span></div>
+  <div class="ph"><div class="sc">
+    <div class="sb"><span>9:41</span><span>7일 연속 🔥</span></div>
+    <div class="body">
+      <div class="ban b1" style="padding:11px"><div class="n">2026.09.17 · 목요일</div><div class="ti">오늘 15분</div><div class="de">3과 한자가 가장 약합니다</div></div>
+      <div class="c">
+        <div class="todo"><span class="bx dn">✓</span>단어 10개 <span class="g">완료</span></div>
+        <div class="todo"><span class="bx"></span>3과 한자 10자 <span class="g">4분</span></div>
+        <div class="todo"><span class="bx"></span>자료 L3 · 9장 <span class="g">2분</span></div>
+        <div class="todo"><span class="bx"></span>퀴즈 10문제 <span class="g">5분</span></div>
+        <div class="todo"><span class="bx"></span>회화 소리내어 읽기 <span class="g">3분</span></div>
+      </div>
+      <div class="note"><b>어제 틀린 것</b> · 服 = ふく / 速い(빠르다) ↔ 早い(이르다)</div>
+      <div class="btn p">시작하기</div>
+      <div class="c" style="padding:8px 10px"><div class="t" style="font-size:9px;margin-bottom:5px">이번 주</div><div class="row" style="gap:4px"><div style="flex:1;height:22px;border-radius:5px;background:var(--blue)"></div><div style="flex:1;height:22px;border-radius:5px;background:var(--blue)"></div><div style="flex:1;height:22px;border-radius:5px;background:var(--blue)"></div><div style="flex:1;height:22px;border-radius:5px;background:var(--blue)"></div><div style="flex:1;height:22px;border-radius:5px;background:var(--blue)"></div><div style="flex:1;height:22px;border-radius:5px;background:var(--surface2)"></div><div style="flex:1;height:22px;border-radius:5px;background:var(--surface2)"></div></div></div>
+    </div>
+    <div class="tb"><span class="on"><i>今</i>오늘</span><span><i>全</i>전체</span><span><i>資</i>자료</span><span><i>度</i>진도</span><span><i>memo</i>노트</span></div>
+  </div></div>
+</div>
+
+</div>
+
+<div class="foot">
+  <h3>추천 순위</h3>
+  <ol>
+    <li><b>4안 자료 중심형</b> — 지금 지적하신 “그림이 앱의 일부가 아니다”를 구조로 해결합니다.</li>
+    <li><b>1안 교재형</b> — 수업 한 번이 화면 하나. Preply 수업 직후 복습 흐름과 가장 잘 맞습니다.</li>
+    <li><b>5안 오늘형</b> — 출장이 잦은 일정에서 학습을 계속 굴리는 데 가장 강합니다.</li>
+    <li><b>3안 허브형</b> — 가장 보기 좋지만 탭이 늘어납니다.</li>
+    <li><b>2안 피드형</b> — 가볍지만 자료 30장을 다루기엔 찾기가 불편합니다.</li>
+  </ol>
+  <div class="rec"><b>제 선택: 4안 + 1안 결합.</b> 자료 스트립을 화면의 중심에 두되(4안), 그 위 단계를 과로 묶습니다(1안). 그러면 “LESSON 02 → 7장 → 이 장의 한자·퀴즈”가 한 줄기로 이어지고, 전체 단어·전체 퀴즈는 두 번째 탭에 그대로 남습니다.</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,21 @@
+ЕДИНЫЙ СТИЛЬ ДЛЯ ВСЕХ 100 ИЛЛЮСТРАЦИЙ
+(зафиксирован по первой партии: уроки 17-20 и 65-76)
+
+Korean webtoon / anime illustration style, soft cel shading with gentle gradients,
+warm natural lighting, detailed but uncluttered modern Korean settings.
+Young adults in their late twenties to thirties, expressive faces, natural poses.
+Muted natural palette - warm beige, soft grey, dusty blue, terracotta accents.
+Shallow depth of field, background softly blurred.
+No text, no captions, no letters, no logos, no watermark, no number badge.
+Wide horizontal composition, 3:2, subject clearly readable at small size.
+
+ТЕХНИЧЕСКИЕ ТРЕБОВАНИЯ
+- Пропорции 3:2 по горизонтали, минимум 1350x900 px
+- Один файл на урок: day-001 ... day-100 (png или jpg - неважно)
+- Если генератор выдаёт сетку 2x2 с подписями, просто пришлите её:
+  tools/cut-grid.py режет её на четыре файла и снимает подписи
+
+ЧЕГО ИЗБЕГАТЬ
+- Подписей и номеров прямо на картинке (приложение рисует их само)
+- Смены стиля между партиями - сотня разнородных картинок разваливает
+  приложение сильнее, чем неидеальная сцена
