@@ -60,14 +60,14 @@ function segBar(items,cur,fn){
 }
 
 /* ===================== 수업 자료 시트 ===================== */
-const SHINT='<p class="muted" style="margin-bottom:9px">수업에서 받은 원본 자료입니다. 눌러서 크게 보고, 좌우로 넘기세요. <b style="color:var(--rose)">⚠</b> 표시는 자료에 오류가 있는 쪽입니다.</p>';
+const SHINT='<p class="muted" style="margin-bottom:9px">수업에서 받은 원본 자료입니다. 눌러서 크게 보고, 좌우로 넘기세요.</p>';
 function sheetGrid(list,showL){
   const g=el("div","sh");
   list.forEach((s,i)=>{
     const b=el("button","shi");b.type="button";
     b.setAttribute("aria-label","LESSON 0"+s.l+" "+s.p+"페이지 — "+s.t);
     b.innerHTML='<img src="sheets/thumb/'+SFILE(s)+'.webp" alt="" loading="lazy" decoding="async">'+
-      '<span class="pg">'+(showL?"L"+s.l:s.p)+'</span>'+(s.n?'<span class="wn">⚠</span>':'')+
+      '<span class="pg">'+(showL?"L"+s.l:s.p)+'</span>'+
       '<span class="cap">'+ESC(s.t)+'</span>';
     b.onclick=()=>openViewer(list,i);
     g.appendChild(b);
@@ -84,9 +84,6 @@ function showSheet(){
   $("vsub").textContent="LESSON 0"+s.l+" · "+KLABEL[s.k]+" · "+s.p+"/10";
   $("vcnt").textContent=(VI+1)+" / "+VL.length;
   $("vprev").disabled=VI===0;$("vnext").disabled=VI===VL.length-1;
-  const n=$("vnote");
-  if(s.n){n.innerHTML='<span class="t">⚠️ 이 자료의 오류</span>'+F(s.n);n.style.display="block"}
-  else{n.style.display="none";n.innerHTML=""}
   const b=$("vbody");b.classList.toggle("zoom",VZ);b.scrollTop=0;
   b.scrollLeft=VZ?b.scrollWidth/2-b.clientWidth/2:0;
   $("vzoom").textContent=VZ?"축소":"확대";
@@ -127,7 +124,7 @@ function renderHub(){
   const strip=el("div","hstrip");
   sh.forEach((s,i)=>{
     const b=el("button","");b.type="button";b.setAttribute("aria-label",s.p+"쪽 "+s.t);
-    b.innerHTML='<img src="sheets/thumb/'+SFILE(s)+'.webp" alt="" loading="lazy" decoding="async">'+(s.n?'<span class="wn">⚠</span>':'');
+    b.innerHTML='<img src="sheets/thumb/'+SFILE(s)+'.webp" alt="" loading="lazy" decoding="async">';
     b.onclick=()=>openViewer(sh,i);strip.appendChild(b);
   });
   v.appendChild(strip);
@@ -146,13 +143,6 @@ function renderSheets(){
   c.innerHTML='<h2><span class="bar"></span>LESSON 0'+l+' 원본 자료</h2>'+SHINT;
   c.appendChild(sheetGrid(list));
   v.appendChild(c);
-  const bad=list.filter(s=>s.n);
-  if(bad.length){
-    const w=el("div","card");
-    w.innerHTML='<h2><span class="bar"></span>이 과 자료의 오류 '+bad.length+'건</h2>'+
-      bad.map(s=>'<div class="ex"><div class="j" style="font-size:12.5px">'+s.p+'쪽 · '+ESC(s.t)+'</div><div class="k">'+F(s.n)+'</div></div>').join("");
-    v.appendChild(w);
-  }
 }
 
 /* ===================== 섹션: 문법 ===================== */
@@ -377,8 +367,6 @@ function renderReviewMenu(){
     '<tr><td class="jp"><span class="no">暑い 服</span> (두꺼운 옷)</td><td class="jp"><span class="ok">厚い 服</span><br><span class="muted">あつい 동음: 暑い 덥다 / 厚い 두껍다 (L3)</span></td></tr>'+
     '<tr><td class="jp"><span class="no">よんがつ・にじゅうにち</span></td><td class="jp"><span class="ok">しがつ・はつか</span><br><span class="muted">4·7·9월, 1~10·14·20·24일은 특수 읽기 (L3)</span></td></tr>'+
     '</table>'));
-  const allSheets=SHEETS.filter(s=>s.n);
-  v.appendChild(navCard("資","자료 오류 "+allSheets.length+"건","배포된 30장 중 정정이 필요한 쪽만 모아 봅니다",()=>{openViewer(allSheets,0)},null,true));
 }
 function renderReviewCard(){
   const v=$("view");
@@ -467,9 +455,7 @@ function renderNote(){
     '<p style="font-size:12.5px;line-height:1.9"><b>LESSON 01</b> — 요일·시간, 바다/해변 장면 묘사, 착용 동사, 날씨 표현.<br><br>'+
     '<b>LESSON 02</b> — 비교 문법 중심. <span class="jp">自家製・寿司・白菜・近い／遠い・辛い／甘い・得意・景色・物価・季節・低い・種類・迷う・選ぶ・失くす・似合う・おすすめする・豚足・紅茶</span>.<br><br>'+
     '<b>LESSON 03</b> — 날짜·숫자·통화·가격·색·옷. <span class="jp">お腹が痛い・具合が悪い・食べ過ぎた・完食・生肉・焼ける・忙しかった・プレゼンしなければなりません・色·服 어휘·税込み／税抜き・消費税・送料無料・希少・品種／品質・特産品・高級・限定価格／限定品</span>.</p>'+
-    '<div class="box warn"><span class="t">⚠️ 자료 오류 주의</span>수업 이미지 자료에 <span class="jp no">なにもしなくない</span>(→したくない), 한자 土의 뜻 표기, 읽기 해설의 "집에 갈 계획"(→헬스장) 오류가 있습니다.<br><br>'+
-    '배포된 30장 자료에서도 9쪽에 오류를 확인했습니다 — 자료 썸네일의 <b>⚠</b> 표시를 누르면 정정 내용이 함께 나옵니다.<br>'+
-    'L1 7·8쪽 · L2 1·7·9쪽 · L3 3·5·8·9쪽.<br><br>충돌할 때는 <b>이 앱의 내용이 정확합니다.</b></div>'));
+''));
 }
 
 /* ===================== 렌더 ===================== */
@@ -488,6 +474,9 @@ function render(){
     }else renderReviewMenu();
   }else if(R.tab==="prog")renderProg();
   else renderNote();
+  document.documentElement.setAttribute("data-lesson",R.tab==="lesson"?String(R.lesson):"0");
+  const tc=document.querySelector('meta[name="theme-color"]');
+  if(tc)tc.setAttribute("content",R.tab==="lesson"?{1:"#1B5FA8",2:"#C74371",3:"#17395C"}[R.lesson]:"#1B5FA8");
   document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("on",t.dataset.p===R.tab));
   window.scrollTo({top:0});
   updStats();
