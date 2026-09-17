@@ -1,8 +1,10 @@
 /* 日本語 復習ノート — 오프라인 서비스 워커
-   전략: 앱 셸은 미리 캐시(cache-first), 폰트 등 외부 자원은 stale-while-revalidate. */
-const VERSION = 'jpn-v3';
+   앱 셸: 미리 캐시(cache-first) · 수업 자료: 열어본 것만 캐시(앱 업데이트해도 유지)
+   외부 자원(구글 폰트): stale-while-revalidate */
+const VERSION = 'jpn-v4';
 const SHELL = VERSION + '-shell';
 const RUNTIME = VERSION + '-runtime';
+const SHEETS = 'jpn-sheets-v1';   // 버전과 무관 — 한 번 받은 자료는 다시 받지 않음
 
 const SHELL_FILES = [
   './',
@@ -23,11 +25,10 @@ self.addEventListener('install', e => {
 });
 
 self.addEventListener('activate', e => {
+  const keep = [SHELL, RUNTIME, SHEETS];
   e.waitUntil(
     caches.keys()
-      .then(keys => Promise.all(
-        keys.filter(k => k !== SHELL && k !== RUNTIME).map(k => caches.delete(k))
-      ))
+      .then(keys => Promise.all(keys.filter(k => keep.indexOf(k) < 0).map(k => caches.delete(k))))
       .then(() => self.clients.claim())
   );
 });
@@ -35,6 +36,15 @@ self.addEventListener('activate', e => {
 self.addEventListener('message', e => {
   if (e.data === 'skipWaiting') self.skipWaiting();
 });
+
+function cacheFirst(req, cacheName) {
+  return caches.open(cacheName).then(c =>
+    c.match(req, { ignoreSearch: true }).then(hit => hit || fetch(req).then(res => {
+      if (res && res.status === 200) c.put(req, res.clone());
+      return res;
+    }))
+  );
+}
 
 self.addEventListener('fetch', e => {
   const req = e.request;
@@ -57,17 +67,11 @@ self.addEventListener('fetch', e => {
     return;
   }
 
-  // 같은 출처 정적 파일: 캐시 우선
   if (url.origin === location.origin) {
-    e.respondWith(
-      caches.match(req, { ignoreSearch: true }).then(hit => hit || fetch(req).then(res => {
-        if (res && res.status === 200) {
-          const copy = res.clone();
-          caches.open(SHELL).then(c => c.put(req, copy));
-        }
-        return res;
-      }))
-    );
+    // 수업 자료 이미지: 열어본 것만 따로 보관
+    if (url.pathname.indexOf('/sheets/') >= 0) { e.respondWith(cacheFirst(req, SHEETS)); return; }
+    // 그 밖의 같은 출처 파일: 앱 셸 캐시
+    e.respondWith(cacheFirst(req, SHELL));
     return;
   }
 
