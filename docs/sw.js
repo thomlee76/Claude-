@@ -1,7 +1,7 @@
 /* 日本語 復習ノート — 오프라인 서비스 워커
    앱 셸: 미리 캐시(cache-first) · 수업 자료: 열어본 것만 캐시(앱 업데이트해도 유지)
    외부 자원(구글 폰트): stale-while-revalidate */
-const VERSION = 'jpn-v12';
+const VERSION = 'jpn-v13';
 const SHELL = VERSION + '-shell';
 const RUNTIME = VERSION + '-runtime';
 const SHEETS = 'jpn-sheets-v2';   // 버전과 무관 — 한 번 받은 자료는 다시 받지 않음

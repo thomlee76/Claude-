@@ -12,7 +12,7 @@ const KLABEL={gram:"문법",word:"단어",kanji:"한자",talk:"회화",sum:"정�
 const LESSONS=GRAM.map(g=>g.l);
 const LDATE={1:"2026.08.25",2:"2026.09.02",3:"2026.09.16"};
 const SECT={sheets:["資","수업 자료"],gram:["文","문법"],word:["語","단어"],kanji:["漢","한자"],talk:["話","회화"],quiz:["問","퀴즈"]};
-const LSHORT={1:"희망·계획",2:"비교·순위",3:"날짜·색·옷",4:"식당·계산·미용실"};
+const LSHORT={1:"희망·계획",2:"비교·순위",3:"날짜·색·옷",4:"희망·주문·부탁"};
 
 let known=new Set(store.get("known",[])),kknown=new Set(store.get("kknown",[]));
 const lessonOf=l=>GRAM.find(g=>g.l===l);
