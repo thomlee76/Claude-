@@ -8,10 +8,11 @@ const ESC=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"
 const F=s=>String(s).replace(/([0-9０-９,]*[一-龯々%]+)（([ぁ-ゖー・ァ-ヶ]+)）/g,"<ruby>$1<rt>$2</rt></ruby>");
 const LT=n=>n===1?"a":n===2?"b":"c";
 const SFILE=s=>"l"+s.l+"-"+(s.p<10?"0"+s.p:s.p);
-const KLABEL={gram:"문법",word:"단어",kanji:"한자",talk:"회화"};
+const KLABEL={gram:"문법",word:"단어",kanji:"한자",talk:"회화",sum:"정리"};
+const LESSONS=GRAM.map(g=>g.l);
 const LDATE={1:"2026.08.25",2:"2026.09.02",3:"2026.09.16"};
 const SECT={sheets:["資","수업 자료"],gram:["文","문법"],word:["語","단어"],kanji:["漢","한자"],talk:["話","회화"],quiz:["問","퀴즈"]};
-const LSHORT={1:"희망·계획",2:"비교·순위",3:"날짜·색·옷"};
+const LSHORT={1:"희망·계획",2:"비교·순위",3:"날짜·색·옷",4:"식당·계산·미용실"};
 
 let known=new Set(store.get("known",[])),kknown=new Set(store.get("kknown",[]));
 const lessonOf=l=>GRAM.find(g=>g.l===l);
@@ -33,7 +34,7 @@ function route(){
   else if(p[0]==="note"){R.tab="note";R.sec=null}
   else{
     const l=parseInt((p[0]||"l1").replace("l",""),10);
-    R.tab="lesson";R.lesson=(l>=1&&l<=3)?l:1;R.sec=SECT[p[1]]?p[1]:null;
+    R.tab="lesson";R.lesson=LESSONS.indexOf(l)>=0?l:LESSONS[0];R.sec=SECT[p[1]]?p[1]:null;
     store.set("lesson",R.lesson);
   }
   render();
@@ -62,7 +63,7 @@ function segBar(items,cur,fn){
 /* ===================== 수업 자료 시트 ===================== */
 const SHINT='<p class="muted" style="margin-bottom:9px">수업에서 받은 원본 자료입니다. 눌러서 크게 보고, 좌우로 넘기세요.</p>';
 function sheetGrid(list,showL){
-  const g=el("div","sh");
+  const g=el("div","sh"+(list.length&&list.every(s=>s.o==="l")?" wide":""));
   list.forEach((s,i)=>{
     const b=el("button","shi");b.type="button";
     b.setAttribute("aria-label","LESSON 0"+s.l+" "+s.p+"페이지 — "+s.t);
@@ -94,7 +95,7 @@ function stepSheet(d){const n=VI+d;if(n<0||n>=VL.length)return;VI=n;VZ=false;sho
 /* ===================== 과 홈 ===================== */
 function lessonSelector(){
   const w=el("div","lsel");
-  [1,2,3].forEach(l=>{
+  LESSONS.forEach(l=>{
     const b=el("button",(R.lesson===l?"on l"+l:""),'<span class="n">LESSON 0'+l+'</span><span class="t">'+ESC(LSHORT[l])+'</span>');
     b.onclick=()=>go("l"+l);
     w.appendChild(b);
@@ -115,17 +116,18 @@ function renderHub(){
   const best=bests()["bestL"+l]||0;
   const hero=el("div","lhero");
   hero.innerHTML='<div class="lno">0'+l+'</div><div class="hx">'+
-    '<div class="n">LESSON 0'+l+' · '+LDATE[l]+'</div><div class="ti">'+ESC(g.title)+'</div>'+
+    '<div class="n">LESSON 0'+l+(LDATE[l]?' · '+LDATE[l]:'')+'</div><div class="ti">'+ESC(g.title)+'</div>'+
     '<div class="de jp">'+F(g.desc)+'</div></div>';
   v.appendChild(hero);
   v.appendChild(el("div","lstat",'<div><b>'+kw+'/'+vs.length+'</b><span>단어</span></div>'+
     '<div><b>'+kk+'/'+ks.length+'</b><span>한자</span></div><div><b>'+best+'%</b><span>퀴즈</span></div>'));
 
   const sh=sheetsOf(0,l);
-  v.appendChild(navCard("資","수업 자료","원본 "+sh.length+"장 · 문법 3 · 단어 3 · 한자 3 · 회화 1",()=>go("l"+l+"/sheets")));
+  const mix=["gram","word","kanji","talk","sum"].map(k=>[k,sh.filter(x=>x.k===k).length]).filter(x=>x[1]).map(x=>KLABEL[x[0]]+" "+x[1]).join(" · ");
+  v.appendChild(navCard("資","수업 자료","원본 "+sh.length+"장 · "+mix,()=>go("l"+l+"/sheets")));
   const strip=el("div","hstrip");
   sh.forEach((s,i)=>{
-    const b=el("button","");b.type="button";b.setAttribute("aria-label",s.p+"쪽 "+s.t);
+    const b=el("button",s.o==="l"?"wide":"");b.type="button";b.setAttribute("aria-label",s.p+"쪽 "+s.t);
     b.innerHTML='<img src="sheets/thumb/'+SFILE(s)+'.webp" alt="" loading="lazy" decoding="async">';
     b.onclick=()=>openViewer(sh,i);strip.appendChild(b);
   });
@@ -169,10 +171,7 @@ function renderGram(){
   const v=$("view"),g=lessonOf(R.lesson);
   v.appendChild(sectTitle("문법",g.items.length+"가지"));
   const sh=sheetsOf("gram",R.lesson);
-  const sc=el("div","card sheets");
-  sc.innerHTML='<h2><span class="bar"></span>이 과의 문법 자료</h2>';
-  sc.appendChild(sheetGrid(sh));
-  v.appendChild(sc);
+  if(sh.length){const sc=el("div","card sheets");sc.innerHTML='<h2><span class="bar"></span>이 과의 문법 자료</h2>';sc.appendChild(sheetGrid(sh));v.appendChild(sc)}
   g.items.forEach(it=>v.appendChild(gramCard(it)));
 }
 
@@ -232,8 +231,7 @@ function renderWord(){
   const v=$("view"),pairs=vocabOf(R.lesson);
   v.appendChild(sectTitle("단어",pairs.length+"개"));
   const sh=sheetsOf("word",R.lesson);
-  const sc=el("div","card sheets");sc.innerHTML='<h2><span class="bar"></span>이 과의 단어 자료</h2>';
-  sc.appendChild(sheetGrid(sh));v.appendChild(sc);
+  if(sh.length){const sc=el("div","card sheets");sc.innerHTML='<h2><span class="bar"></span>이 과의 단어 자료</h2>';sc.appendChild(sheetGrid(sh));v.appendChild(sc)}
   wordView(pairs,v);
 }
 
@@ -263,8 +261,8 @@ function kanjiGrid(pairs,host){
 function renderKanji(){
   const v=$("view"),pairs=kanjiOf(R.lesson);
   v.appendChild(sectTitle("한자",pairs.length+"자"));
-  const sc=el("div","card sheets");sc.innerHTML='<h2><span class="bar"></span>이 과의 한자 자료</h2>';
-  sc.appendChild(sheetGrid(sheetsOf("kanji",R.lesson)));v.appendChild(sc);
+  const ksh=sheetsOf("kanji",R.lesson);
+  if(ksh.length){const sc=el("div","card sheets");sc.innerHTML='<h2><span class="bar"></span>이 과의 한자 자료</h2>';sc.appendChild(sheetGrid(ksh));v.appendChild(sc)}
   kanjiGrid(pairs,v);
 }
 
@@ -273,8 +271,8 @@ function renderTalk(){
   const v=$("view"),l=R.lesson;
   const ds=DLGS.filter(d=>d.l===l),sp=SPEAK.filter(s=>s[2]===l);
   v.appendChild(sectTitle("회화","대화 "+ds.length+" · 말하기 "+sp.length));
-  const sc=el("div","card sheets");sc.innerHTML='<h2><span class="bar"></span>이 과의 회화 자료</h2>';
-  sc.appendChild(sheetGrid(sheetsOf("talk",l)));v.appendChild(sc);
+  const tsh=sheetsOf("talk",l);
+  if(tsh.length){const sc=el("div","card sheets");sc.innerHTML='<h2><span class="bar"></span>이 과의 회화 자료</h2>';sc.appendChild(sheetGrid(tsh));v.appendChild(sc)}
   v.appendChild(el("div","box note",'<span class="t">📌 사용법</span>한국어 번역을 켜지 말고 먼저 소리내어 읽으세요. 막힐 때만 번역을 켭니다.'));
   ds.forEach((d,i)=>{
     const c=el("div","card");c.id="dlg"+l+"_"+i;
@@ -343,6 +341,8 @@ function quizView(pool,host,key,label){
 function renderQuiz(){
   const v=$("view"),l=R.lesson,pool=quizOf(l);
   v.appendChild(sectTitle("퀴즈",pool.length+"문제 · 최고 "+(bests()["bestL"+l]||0)+"%"));
+  const ssh=sheetsOf("sum",l);
+  if(ssh.length){const sc=el("div","card sheets");sc.innerHTML='<h2><span class="bar"></span>이 과의 정리·연습 자료</h2>';sc.appendChild(sheetGrid(ssh));v.appendChild(sc)}
   quizView(pool,v,"bestL"+l);
 }
 
@@ -379,7 +379,7 @@ function renderReviewQuiz(){
   const v=$("view");
   v.appendChild(sectTitle("전체 퀴즈",QUIZ.length+"문제"));
   const types=[...new Set(QUIZ.map(q=>q[5]))];
-  v.appendChild(segBar([[0,"전체 과"],[1,"1과"],[2,"2과"],[3,"3과"]],rles,x=>{rles=x;render()}));
+  v.appendChild(segBar([[0,"전체 과"]].concat(LESSONS.map(l=>[l,l+"과"])),rles,x=>{rles=x;render()}));
   v.appendChild(segBar([["전체","모든 유형"]].concat(types.map(t=>[t,t])),rtype,x=>{rtype=x;render()}));
   const pool=QUIZ.map((q,i)=>i).filter(i=>(!rles||QUIZ[i][4]===rles)&&(rtype==="전체"||QUIZ[i][5]===rtype));
   if(!pool.length){v.appendChild(el("div","card",'<p class="muted">이 조합에는 문제가 없습니다.</p>'));return}
@@ -417,13 +417,13 @@ function renderProg(){
     '<div class="pr"><div class="prh"><b>한자 습득</b><span class="v">'+kp+'%</span></div><div class="prb"><i class="b2" style="width:'+kp+'%"></i></div><div class="muted" style="margin-top:3px">'+kknown.size+' / '+KANJI.length+'자 · 타일을 길게 누르면 ✓ 표시됩니다</div></div>'+
     '<div class="pr" style="margin-bottom:0"><div class="prh"><b>전체 퀴즈 최고점</b><span class="v">'+qp+'%</span></div><div class="prb"><i class="b3" style="width:'+qp+'%"></i></div></div>'));
   let ls='<h2><span class="bar"></span>과별 기록</h2><div class="mini">';
-  [1,2,3].forEach(l=>{
+  LESSONS.forEach(l=>{
     const vs=vocabOf(l),ks=kanjiOf(l);
     const kw=vs.filter(([,i])=>known.has(i)).length,kk=ks.filter(([,i])=>kknown.has(i)).length;
     ls+='<div class="mc"><div class="n">'+kw+'/'+vs.length+'</div><div class="l">'+l+'과 단어</div></div>'+
         '<div class="mc"><div class="n">'+kk+'/'+ks.length+'</div><div class="l">'+l+'과 한자</div></div>';
   });
-  ls+='</div><div class="mini" style="margin-top:9px">'+[1,2,3].map(l=>'<div class="mc"><div class="n">'+(b["bestL"+l]||0)+'%</div><div class="l">'+l+'과 퀴즈</div></div>').join("")+'</div>';
+  ls+='</div><div class="mini" style="margin-top:9px">'+LESSONS.map(l=>'<div class="mc"><div class="n">'+(b["bestL"+l]||0)+'%</div><div class="l">'+l+'과 퀴즈</div></div>').join("")+'</div>';
   v.appendChild(el("div","card",ls));
   const items=[];
   if(wp<60)items.push(["단어","아직 "+(VOCAB.length-known.size)+"개가 남았습니다. 과별로 한 덱씩 끝내세요."]);
