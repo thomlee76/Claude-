@@ -1,0 +1,275 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>디자인 5안</title><meta name="theme-color" content="#1F2430">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+KR:wght@400;500;700&family=Shippori+Mincho:wght@500;700;800&family=Noto+Serif+JP:wght@400;600;900&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#EEF1F5;color:#1B2430;font-family:"Noto Sans KR",system-ui,sans-serif;font-size:14px;line-height:1.6;-webkit-text-size-adjust:100%}
+@media (prefers-color-scheme:dark){body{background:#12161C;color:#E6ECF3}}
+.wrap{max-width:1200px;margin:0 auto;padding:18px 16px 60px}
+.top{background:#1B2430;color:#fff;border-radius:20px;padding:20px 22px;margin-bottom:20px}
+.top h1{font-size:20px;font-weight:800}
+.top p{font-size:12.5px;opacity:.85;margin-top:5px;max-width:64ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:18px}
+.opt{background:#fff;border:1px solid #DCE3EB;border-radius:20px;padding:16px;box-shadow:0 6px 20px rgba(20,40,70,.07)}
+@media (prefers-color-scheme:dark){.opt{background:#1A2029;border-color:#2B3542}}
+.oh{display:flex;gap:10px;align-items:flex-start;margin-bottom:6px}
+.num{flex:none;width:30px;height:30px;border-radius:9px;background:#1B2430;color:#fff;display:flex;align-items:center;justify-content:center;font-family:Outfit;font-weight:800}
+.oh .sub{font-size:10.5px;font-family:Outfit;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.6}
+.oh h2{font-size:16px;font-weight:800}
+.desc{font-size:12.5px;margin:6px 0 10px;line-height:1.75}
+.sw{display:flex;gap:5px;margin-bottom:10px}
+.sw i{width:26px;height:18px;border-radius:5px;display:block;border:1px solid rgba(0,0,0,.08)}
+.pm{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;font-size:11.5px}
+.pm div{border-radius:10px;padding:8px 10px;line-height:1.55}
+.pm .p{background:#E6F6EE}.pm .m{background:#FDEBEB}
+@media (prefers-color-scheme:dark){.pm .p{background:#132C22}.pm .m{background:#2E1A1A}}
+.pm b{display:block;font-size:10px;margin-bottom:2px}
+.rate{font-size:11.5px;opacity:.75;margin-bottom:12px}
+.rate b{font-family:Outfit;font-size:13px;opacity:1}
+.ph{width:300px;margin:0 auto;border-radius:26px;overflow:hidden;box-shadow:0 10px 34px rgba(15,30,55,.22)}
+.sc{height:520px;display:flex;flex-direction:column;overflow:hidden}
+.bd{flex:1;overflow:hidden;display:flex;flex-direction:column}
+.nv{flex:none;display:flex}
+.nv span{flex:1;text-align:center;font-size:8px;padding:7px 0 8px}
+.nv i{display:block;font-family:"Zen Kaku Gothic New";font-style:normal;font-size:14px;font-weight:900;line-height:1.3}
+.thumb{width:100%;display:block}
+
+/* ===== 1 washi ===== */
+.w1{background:#F4EFE3;color:#241F19;font-family:"Shippori Mincho","Noto Sans KR",serif}
+.w1 .hd{padding:14px 15px 10px;border-bottom:1px solid #D8CDB8}
+.w1 .t1{font-size:15px;font-weight:800;letter-spacing:.02em}
+.w1 .t2{font-size:9.5px;opacity:.6;margin-top:2px;font-family:Outfit;letter-spacing:.12em}
+.w1 .seal{float:right;width:30px;height:30px;border:1.5px solid #B23A2E;color:#B23A2E;border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:"Zen Kaku Gothic New";font-weight:900;font-size:15px}
+.w1 .bd{padding:12px 15px;gap:11px}
+.w1 .lrow{display:flex;gap:16px;font-size:11px;border-bottom:1px solid #D8CDB8;padding-bottom:7px}
+.w1 .lrow b{opacity:.35;font-weight:700}
+.w1 .lrow b.on{opacity:1;color:#B23A2E;border-bottom:2px solid #B23A2E;padding-bottom:5px}
+.w1 .cov{display:flex;gap:11px;align-items:flex-start}
+.w1 .cov .no{font-family:"Zen Kaku Gothic New";font-size:34px;font-weight:900;line-height:.9;color:#B23A2E;opacity:.85}
+.w1 .cov .ti{font-size:14px;font-weight:800;line-height:1.4}
+.w1 .cov .de{font-size:9.5px;opacity:.65;margin-top:3px}
+.w1 .st{display:flex;gap:6px}
+.w1 .st img{width:44px;border:1px solid #D8CDB8;border-radius:2px}
+.w1 .it{display:flex;align-items:center;gap:10px;padding:9px 0;border-top:1px solid #D8CDB8;font-size:12px}
+.w1 .it .k{font-family:"Zen Kaku Gothic New";font-size:16px;font-weight:900;width:20px;opacity:.85}
+.w1 .it .m{margin-left:auto;font-family:Outfit;font-size:10px;opacity:.55}
+.w1 .nv{background:#EAE2D2;border-top:1px solid #D8CDB8}
+.w1 .nv span{opacity:.45}.w1 .nv span.on{opacity:1;color:#B23A2E}
+
+/* ===== 2 night ===== */
+.w2{background:#0A0D14;color:#DDE6F2;font-family:"Noto Sans KR",sans-serif}
+.w2 .hd{padding:13px 14px;background:linear-gradient(135deg,#131B2B,#0A0D14)}
+.w2 .t1{font-size:14px;font-weight:800}
+.w2 .t2{font-size:9px;color:#5CE1E6;font-family:Outfit;letter-spacing:.14em;margin-top:2px}
+.w2 .bd{padding:11px 13px;gap:9px}
+.w2 .seg{display:flex;gap:6px}
+.w2 .seg b{flex:1;text-align:center;font-size:9.5px;padding:6px 0;border-radius:9px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#8FA3BF}
+.w2 .seg b.on{background:linear-gradient(135deg,#22D3EE,#7C5CFF);color:#04121A;border-color:transparent;font-weight:800}
+.w2 .cov{border-radius:14px;padding:12px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);position:relative;overflow:hidden}
+.w2 .cov::after{content:"";position:absolute;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle,rgba(34,211,238,.45),transparent 70%);right:-26px;top:-34px}
+.w2 .cov .n{font-family:Outfit;font-size:8.5px;letter-spacing:.16em;color:#5CE1E6}
+.w2 .cov .ti{font-size:14px;font-weight:800;margin-top:2px}
+.w2 .cov .de{font-size:9px;color:#8FA3BF;margin-top:3px}
+.w2 .st{display:flex;gap:6px}
+.w2 .st img{width:44px;border-radius:7px;border:1px solid rgba(255,255,255,.12)}
+.w2 .it{display:flex;align-items:center;gap:10px;border-radius:12px;padding:9px 11px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08);font-size:12px}
+.w2 .it .k{font-family:"Zen Kaku Gothic New";font-weight:900;font-size:15px;color:#22D3EE}
+.w2 .it .m{margin-left:auto;font-family:Outfit;font-size:9.5px;color:#8FA3BF}
+.w2 .bar{height:4px;border-radius:3px;background:rgba(255,255,255,.08);overflow:hidden;margin-top:5px}
+.w2 .bar i{display:block;height:100%;background:linear-gradient(90deg,#22D3EE,#F472B6)}
+.w2 .nv{background:#0E131D;border-top:1px solid rgba(255,255,255,.07)}
+.w2 .nv span{color:#63758F}.w2 .nv span.on{color:#22D3EE}
+
+/* ===== 3 swiss ===== */
+.w3{background:#fff;color:#000;font-family:"Space Grotesk","Noto Sans KR",sans-serif}
+.w3 .hd{padding:12px 14px;border-bottom:2px solid #000;display:flex;align-items:flex-end;gap:8px}
+.w3 .t1{font-size:15px;font-weight:700;letter-spacing:-.02em;text-transform:uppercase}
+.w3 .t2{margin-left:auto;font-size:9px;font-weight:700;background:#E4002B;color:#fff;padding:2px 6px}
+.w3 .bd{padding:0}
+.w3 .seg{display:flex;border-bottom:2px solid #000}
+.w3 .seg b{flex:1;text-align:center;font-size:10px;font-weight:700;padding:7px 0;border-right:2px solid #000}
+.w3 .seg b:last-child{border-right:none}
+.w3 .seg b.on{background:#000;color:#fff}
+.w3 .cov{padding:13px 14px;border-bottom:2px solid #000;display:flex;gap:11px;align-items:flex-start}
+.w3 .cov .no{font-family:"Space Grotesk";font-size:40px;font-weight:700;line-height:.82;letter-spacing:-.04em}
+.w3 .cov .ti{font-size:14px;font-weight:700;line-height:1.25}
+.w3 .cov .de{font-size:9.5px;margin-top:4px;line-height:1.5}
+.w3 .st{display:flex;gap:0;border-bottom:2px solid #000}
+.w3 .st img{width:25%;border-right:2px solid #000;display:block}
+.w3 .st img:last-child{border-right:none}
+.w3 .it{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid #000;font-size:12px;font-weight:700}
+.w3 .it .k{font-family:"Zen Kaku Gothic New";font-size:15px;font-weight:900}
+.w3 .it .m{margin-left:auto;font-size:10px;font-weight:700;color:#E4002B}
+.w3 .nv{border-top:2px solid #000}
+.w3 .nv span{border-right:1px solid #000;font-weight:700}
+.w3 .nv span:last-child{border-right:none}
+.w3 .nv span.on{background:#E4002B;color:#fff}
+
+/* ===== 4 clay ===== */
+.w4{background:#F3F1FB;color:#33305A;font-family:"Noto Sans KR",sans-serif}
+.w4 .hd{padding:13px 15px}
+.w4 .t1{font-size:15px;font-weight:800}
+.w4 .t2{font-size:9.5px;opacity:.6;font-family:Outfit;letter-spacing:.1em}
+.w4 .bd{padding:2px 14px 12px;gap:10px}
+.w4 .seg{display:flex;gap:7px}
+.w4 .seg b{flex:1;text-align:center;font-size:10px;font-weight:800;padding:8px 0;border-radius:15px;background:#fff;color:#8A86AE;box-shadow:0 3px 0 #DCD8F0}
+.w4 .seg b.on{background:#7C6CF0;color:#fff;box-shadow:0 3px 0 #5A49C9}
+.w4 .cov{border-radius:22px;background:#fff;padding:14px;box-shadow:0 5px 0 #DCD8F0}
+.w4 .cov .n{font-family:Outfit;font-size:8.5px;letter-spacing:.16em;color:#7C6CF0;font-weight:800}
+.w4 .cov .ti{font-size:15px;font-weight:800;margin-top:2px}
+.w4 .cov .de{font-size:9.5px;opacity:.65;margin-top:3px}
+.w4 .st{display:flex;gap:7px}
+.w4 .st img{width:46px;border-radius:12px;box-shadow:0 3px 0 #DCD8F0}
+.w4 .it{display:flex;align-items:center;gap:11px;border-radius:18px;background:#fff;padding:11px 12px;box-shadow:0 4px 0 #DCD8F0;font-size:12.5px;font-weight:700}
+.w4 .it .k{flex:none;width:30px;height:30px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-family:"Zen Kaku Gothic New";font-weight:900;font-size:15px}
+.w4 .it .m{margin-left:auto;font-size:10px;opacity:.55;font-family:Outfit;font-weight:800}
+.w4 .nv{background:#fff}
+.w4 .nv span{color:#A5A1C4}.w4 .nv span.on{color:#7C6CF0}
+
+/* ===== 5 editorial ===== */
+.w5{background:#FBF7F0;color:#20242E;font-family:"Noto Serif JP","Noto Sans KR",serif}
+.w5 .hd{padding:15px 16px 11px;border-bottom:3px double #C9BFA9}
+.w5 .t1{font-size:16px;font-weight:900;letter-spacing:-.01em}
+.w5 .t2{font-size:9px;font-family:Outfit;letter-spacing:.2em;color:#A08A4B;margin-top:3px;font-weight:700}
+.w5 .bd{padding:12px 16px;gap:11px}
+.w5 .seg{display:flex;gap:14px;font-size:10px;font-family:Outfit;font-weight:700;letter-spacing:.08em;color:#9A9384}
+.w5 .seg b.on{color:#26346B;border-bottom:2px solid #C89A2B;padding-bottom:3px}
+.w5 .cov{display:flex;gap:12px;align-items:flex-start}
+.w5 .cov .no{font-family:"Noto Serif JP";font-size:44px;font-weight:900;line-height:.85;color:#26346B}
+.w5 .cov .ti{font-size:15px;font-weight:900;line-height:1.35}
+.w5 .cov .de{font-size:9.5px;color:#6B6558;margin-top:4px;line-height:1.6}
+.w5 .st{display:flex;gap:7px}
+.w5 .st img{width:45px;border:1px solid #DED5C2}
+.w5 .it{display:flex;align-items:baseline;gap:9px;padding:9px 0;border-bottom:1px solid #E3DACA;font-size:12.5px}
+.w5 .it .k{font-family:"Noto Serif JP";font-weight:900;font-size:15px;color:#26346B;width:20px}
+.w5 .it .m{margin-left:auto;font-family:Outfit;font-size:9.5px;color:#A08A4B;font-weight:700}
+.w5 .nv{background:#F3EDE1;border-top:1px solid #DED5C2}
+.w5 .nv span{color:#9A9384;font-family:Outfit;font-weight:700}
+.w5 .nv span.on{color:#26346B}
+
+.foot{margin-top:22px;background:#fff;border:1px solid #DCE3EB;border-radius:18px;padding:16px 18px}
+@media (prefers-color-scheme:dark){.foot{background:#1A2029;border-color:#2B3542}}
+.foot h3{font-size:14px;font-weight:800;margin-bottom:8px}
+.foot ol{margin-left:18px;font-size:12.5px;line-height:1.95}
+.foot .rec{background:#E6F6EE;border-radius:12px;padding:10px 12px;margin-top:11px;font-size:12.5px;line-height:1.75}
+@media (prefers-color-scheme:dark){.foot .rec{background:#132C22}}
+</style></head><body><div class="wrap">
+<div class="top"><h1>디자인 5안 — 완전히 다른 다섯 가지</h1>
+<p>화면 구조(교재형)는 그대로 두고 <b>시각 언어만</b> 바꿨습니다. 다섯 모두 같은 화면(LESSON 01 과 홈)이라 그대로 비교됩니다. 번호를 고르시면 앱 전체를 그 언어로 다시 칠합니다.</p></div>
+<div class="grid">
+
+<div class="opt">
+  <div class="oh"><div class="num">1</div><div><div class="sub">Washi &amp; ink</div><h2>화지(和紙) — 종이와 먹</h2></div></div>
+  <div class="sw"><i style="background:#F4EFE3"></i><i style="background:#EAE2D2"></i><i style="background:#241F19"></i><i style="background:#B23A2E"></i><i style="background:#D8CDB8"></i></div>
+  <p class="desc">따뜻한 종이색 바탕, 먹빛 글자, 인주(朱) 한 가지 강조색. 그림자·그라데이션 없이 얇은 괘선만. 명조(Shippori Mincho) 활자로 <b>교재·습자 노트</b>의 인상.</p>
+  <div class="pm"><div class="p"><b>장점</b>화려한 수업 자료가 종이에 붙인 유인물처럼 보임. 오래 봐도 눈이 편함.</div><div class="m"><b>단점</b>차분해서 "앱"보다 "문서"에 가깝게 느껴질 수 있음.</div></div>
+  <div class="rate">추천도 <b>9 / 10</b> · 자료와 가장 잘 맞고, 지금과 가장 다름</div>
+  <div class="ph"><div class="sc w1">
+    <div class="hd"><div class="seal jp">習</div><div class="t1">일본어 복습노트</div><div class="t2">PREPLY · LESSON 01–03</div></div>
+    <div class="bd">
+      <div class="lrow"><b class="on">一課</b><b>二課</b><b>三課</b></div>
+      <div class="cov"><div class="no">一</div><div><div class="ti">희망과 계획 말하기</div><div class="de">～たいです・～つもりです・기본 조사</div></div></div>
+      <div class="st"><img class="thumb" src="../sheets/thumb/l1-01.webp" alt=""><img class="thumb" src="../sheets/thumb/l1-02.webp" alt=""><img class="thumb" src="../sheets/thumb/l1-04.webp" alt=""><img class="thumb" src="../sheets/thumb/l1-07.webp" alt=""></div>
+      <div><div class="it"><span class="k">資</span>수업 자료<span class="m">10장</span></div>
+      <div class="it"><span class="k">文</span>문법<span class="m">5</span></div>
+      <div class="it"><span class="k">語</span>단어<span class="m">0 / 53</span></div>
+      <div class="it"><span class="k">漢</span>한자<span class="m">0 / 53</span></div></div>
+    </div>
+    <div class="nv"><span class="on"><i>課</i>수업</span><span><i>復</i>복습</span><span><i>度</i>진도</span><span><i>記</i>노트</span></div>
+  </div></div>
+</div>
+
+<div class="opt">
+  <div class="oh"><div class="num">2</div><div><div class="sub">Night neon</div><h2>야간형 — 검정과 네온</h2></div></div>
+  <div class="sw"><i style="background:#0A0D14"></i><i style="background:#131B2B"></i><i style="background:#22D3EE"></i><i style="background:#7C5CFF"></i><i style="background:#F472B6"></i></div>
+  <p class="desc">거의 검은 바탕에 반투명 유리 카드, 시안·보라 네온 강조. 밤에 눈이 부시지 않고, 화면이 또렷합니다. 출장 이동·야근 후 사용에 유리.</p>
+  <div class="pm"><div class="p"><b>장점</b>저녁·기내에서 편함. 인상이 가장 현대적.</div><div class="m"><b>단점</b>밝은 수업 자료가 어두운 배경에서 튀어 보임.</div></div>
+  <div class="rate">추천도 <b>6 / 10</b> · 멋있지만 자료와 충돌</div>
+  <div class="ph"><div class="sc w2">
+    <div class="hd"><div class="t1">일본어 복습노트</div><div class="t2">PREPLY · LESSON 01–03</div></div>
+    <div class="bd">
+      <div class="seg"><b class="on">1과</b><b>2과</b><b>3과</b></div>
+      <div class="cov"><div class="n">LESSON 01 · 2026.08.25</div><div class="ti">희망과 계획 말하기</div><div class="de">～たいです・～つもりです</div></div>
+      <div class="st"><img class="thumb" src="../sheets/thumb/l1-01.webp" alt=""><img class="thumb" src="../sheets/thumb/l1-02.webp" alt=""><img class="thumb" src="../sheets/thumb/l1-04.webp" alt=""><img class="thumb" src="../sheets/thumb/l1-07.webp" alt=""></div>
+      <div class="it"><span class="k">資</span>수업 자료<span class="m">10장</span></div>
+      <div class="it"><span class="k">語</span><div style="flex:1">단어<div class="bar"><i style="width:22%"></i></div></div><span class="m">12/53</span></div>
+      <div class="it"><span class="k">問</span>퀴즈<span class="m">37문제</span></div>
+    </div>
+    <div class="nv"><span class="on"><i>課</i>수업</span><span><i>復</i>복습</span><span><i>度</i>진도</span><span><i>記</i>노트</span></div>
+  </div></div>
+</div>
+
+<div class="opt">
+  <div class="oh"><div class="num">3</div><div><div class="sub">Swiss print</div><h2>인쇄형 — 흑백 그리드</h2></div></div>
+  <div class="sw"><i style="background:#fff"></i><i style="background:#000"></i><i style="background:#E4002B"></i><i style="background:#F2F2F2"></i><i style="background:#999"></i></div>
+  <p class="desc">순백 바탕, 2px 검은 괘선, 둥근 모서리·그림자 전면 배제, 빨강 하나만 강조. 정보가 표처럼 딱 떨어져 <b>읽는 속도가 가장 빠릅니다</b>.</p>
+  <div class="pm"><div class="p"><b>장점</b>정보 밀도 최고. 흑백이라 자료 색이 더 살아남.</div><div class="m"><b>단점</b>딱딱하고 차갑습니다. 매일 보기엔 피로할 수 있음.</div></div>
+  <div class="rate">추천도 <b>7 / 10</b> · 강렬하지만 호불호가 큼</div>
+  <div class="ph"><div class="sc w3">
+    <div class="hd"><div><div class="t1">일본어 복습노트</div></div><div class="t2">L 01–03</div></div>
+    <div class="bd">
+      <div class="seg"><b class="on">1과</b><b>2과</b><b>3과</b></div>
+      <div class="cov"><div class="no">01</div><div><div class="ti">희망과 계획 말하기</div><div class="de">～たいです / ～つもりです / 조사 に·で·を</div></div></div>
+      <div class="st"><img class="thumb" src="../sheets/thumb/l1-01.webp" alt=""><img class="thumb" src="../sheets/thumb/l1-02.webp" alt=""><img class="thumb" src="../sheets/thumb/l1-04.webp" alt=""><img class="thumb" src="../sheets/thumb/l1-07.webp" alt=""></div>
+      <div class="it"><span class="k">資</span>수업 자료<span class="m">10</span></div>
+      <div class="it"><span class="k">文</span>문법<span class="m">5</span></div>
+      <div class="it"><span class="k">語</span>단어<span class="m">0/53</span></div>
+      <div class="it"><span class="k">問</span>퀴즈<span class="m">37</span></div>
+    </div>
+    <div class="nv"><span class="on"><i>課</i>수업</span><span><i>復</i>복습</span><span><i>度</i>진도</span><span><i>記</i>노트</span></div>
+  </div></div>
+</div>
+
+<div class="opt">
+  <div class="oh"><div class="num">4</div><div><div class="sub">Soft clay</div><h2>말랑형 — 파스텔 입체</h2></div></div>
+  <div class="sw"><i style="background:#F3F1FB"></i><i style="background:#fff"></i><i style="background:#7C6CF0"></i><i style="background:#FFB443"></i><i style="background:#34C77B"></i></div>
+  <p class="desc">라벤더 바탕에 두툼한 흰 카드, 아래로 떨어지는 단색 그림자, 큼직한 버튼. 듀오링고 계열의 <b>가볍고 친근한</b> 학습 앱 인상.</p>
+  <div class="pm"><div class="p"><b>장점</b>터치 대상이 크고 분명. 매일 열기 부담 없음.</div><div class="m"><b>단점</b>흔한 인상. 성인 학습자에겐 다소 유아적.</div></div>
+  <div class="rate">추천도 <b>6 / 10</b> · 편하지만 개성이 약함</div>
+  <div class="ph"><div class="sc w4">
+    <div class="hd"><div class="t1">일본어 복습노트</div><div class="t2">PREPLY · LESSON 01–03</div></div>
+    <div class="bd">
+      <div class="seg"><b class="on">1과</b><b>2과</b><b>3과</b></div>
+      <div class="cov"><div class="n">LESSON 01</div><div class="ti">희망과 계획 말하기</div><div class="de">～たいです・～つもりです</div></div>
+      <div class="st"><img class="thumb" src="../sheets/thumb/l1-01.webp" alt=""><img class="thumb" src="../sheets/thumb/l1-02.webp" alt=""><img class="thumb" src="../sheets/thumb/l1-04.webp" alt=""><img class="thumb" src="../sheets/thumb/l1-07.webp" alt=""></div>
+      <div class="it"><span class="k" style="background:#EDEAFD;color:#7C6CF0">資</span>수업 자료<span class="m">10장</span></div>
+      <div class="it"><span class="k" style="background:#FFF1DC;color:#C98416">語</span>단어<span class="m">0/53</span></div>
+      <div class="it"><span class="k" style="background:#E3F7EC;color:#2E9E6B">問</span>퀴즈<span class="m">37</span></div>
+    </div>
+    <div class="nv"><span class="on"><i>課</i>수업</span><span><i>復</i>복습</span><span><i>度</i>진도</span><span><i>記</i>노트</span></div>
+  </div></div>
+</div>
+
+<div class="opt">
+  <div class="oh"><div class="num">5</div><div><div class="sub">Editorial</div><h2>잡지형 — 세리프 편집</h2></div></div>
+  <div class="sw"><i style="background:#FBF7F0"></i><i style="background:#F3EDE1"></i><i style="background:#26346B"></i><i style="background:#C89A2B"></i><i style="background:#DED5C2"></i></div>
+  <p class="desc">크림색 지면, 명조 세리프, 큼직한 과 번호, 겹줄 괘선과 금박 같은 머스터드 강조. <b>잘 만든 어학 교재·잡지</b>의 인상.</p>
+  <div class="pm"><div class="p"><b>장점</b>품위 있고 어른스러움. 자료와도 자연스럽게 어울림.</div><div class="m"><b>단점</b>세리프라 작은 글자의 가독성에 신경 써야 함.</div></div>
+  <div class="rate">추천도 <b>8 / 10</b> · 1안 다음으로 추천</div>
+  <div class="ph"><div class="sc w5">
+    <div class="hd"><div class="t1">일본어 복습노트</div><div class="t2">PREPLY · LESSON 01–03</div></div>
+    <div class="bd">
+      <div class="seg"><b class="on">1과</b><b>2과</b><b>3과</b></div>
+      <div class="cov"><div class="no">01</div><div><div class="ti">희망과 계획<br>말하기</div><div class="de">～たいです・～つもりです・기본 조사</div></div></div>
+      <div class="st"><img class="thumb" src="../sheets/thumb/l1-01.webp" alt=""><img class="thumb" src="../sheets/thumb/l1-02.webp" alt=""><img class="thumb" src="../sheets/thumb/l1-04.webp" alt=""><img class="thumb" src="../sheets/thumb/l1-07.webp" alt=""></div>
+      <div><div class="it"><span class="k">資</span>수업 자료<span class="m">10장</span></div>
+      <div class="it"><span class="k">文</span>문법<span class="m">5가지</span></div>
+      <div class="it"><span class="k">語</span>단어<span class="m">0 / 53</span></div>
+      <div class="it"><span class="k">問</span>퀴즈<span class="m">37문제</span></div></div>
+    </div>
+    <div class="nv"><span class="on"><i>課</i>수업</span><span><i>復</i>복습</span><span><i>度</i>진도</span><span><i>記</i>노트</span></div>
+  </div></div>
+</div>
+
+</div>
+<div class="foot"><h3>추천 순위</h3>
+<ol>
+<li><b>1안 화지</b> — 지금과 가장 다르면서, 밝은 수업 자료가 종이에 붙인 유인물처럼 자연스럽게 앉습니다.</li>
+<li><b>5안 잡지</b> — 어른스럽고 품위 있으며 자료와도 충돌하지 않습니다.</li>
+<li><b>3안 인쇄</b> — 정보 밀도와 가독 속도는 최고, 다만 차갑습니다.</li>
+<li><b>2안 야간</b> — 저녁 사용에 좋지만 밝은 자료와 대비가 거칩니다.</li>
+<li><b>4안 말랑</b> — 편하지만 개성이 약합니다.</li>
+</ol>
+<div class="rec"><b>제 선택: 1안 화지.</b> 배경이 중립적인 종이색이라 30장의 화려한 자료가 유일한 색의 주인공이 되고, 과별 색(파랑·분홍·남색)은 인주색 하나로 정리되어 화면 전체가 흔들리지 않습니다. 밤에 쓰실 일이 많다면 1안의 어두운 버전(먹지)도 함께 만들어 드릴 수 있습니다.</div>
+</div></div></body></html>
