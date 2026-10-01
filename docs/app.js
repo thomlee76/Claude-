@@ -143,6 +143,14 @@ var UI = {
   notifOn:      ["Уведомления включены", "알림이 켜졌습니다"],
   notifOff:     ["Отклонено в настройках браузера", "브라우저 설정에서 거부되었습니다"],
   noImage:      ["иллюстрация ещё не добавлена", "삽화가 아직 없습니다"],
+  offline:      ["Офлайн", "오프라인"],
+  offlineHint:  ["Скачать все уроки и картинки на телефон", "모든 수업과 이미지를 기기에 내려받기"],
+  download:     ["Скачать", "내려받기"],
+  downloading:  ["%1 из %2", "%2개 중 %1개"],
+  offlineReady: ["Загружено · %1 МБ", "완료 · %1 MB"],
+  offlineAgain: ["Обновить", "다시 받기"],
+  offlineFail:  ["Не удалось. Проверьте интернет", "실패했습니다. 인터넷을 확인하세요"],
+  offlineNo:    ["Этот браузер не умеет сохранять офлайн", "이 브라우저는 오프라인 저장을 지원하지 않습니다"],
   ytRange:      ["Повтор ×5 · DAY %1–%2", "5회 반복 · DAY %1–%2"],
   ytWhole:      ["Весь курс", "전체 과정"],
   ytKoEn:       ["한국어–영어", "한국어–영어"],
@@ -406,6 +414,7 @@ var lessonState = null;
 var activeBuild = null;
 
 function startLesson(n) {
+  settingsOpen = false;
   var d = dayData(n);
   lessonState = { day: n, step: 0, quizIndex: 0, wrong: 0 };
   renderLesson();
@@ -838,7 +847,7 @@ function viewSettings() {
       '<div class="field"><div><label>' + ui("theme") + "</label></div>" +
         '<div class="seg">' +
           ["auto", "light", "dark"].map(function (x) {
-            return '<button data-theme="' + x + '" class="' + (S.theme === x ? "on" : "") + '">' +
+            return '<button data-set-theme="' + x + '" class="' + (S.theme === x ? "on" : "") + '">' +
               (x === "auto" ? ui("themeAuto") : x === "light" ? ui("themeLight") : ui("themeDark")) + "</button>";
           }).join("") +
         "</div></div>" +
@@ -867,6 +876,11 @@ function viewSettings() {
     "</div>" +
 
     '<div class="card">' +
+      '<div class="field"><div><label>' + ui("offline") + '</label><div class="hint" id="offHint">' + ui("offlineHint") + "</div></div>" +
+        '<button class="pill" id="offBtn">' + ui("download") + "</button></div>" +
+    "</div>" +
+
+    '<div class="card">' +
       '<div class="field"><div><label>' + ui("startDate") + '</label><div class="hint">' + ui("startHint") + "</div></div>" +
         '<input type="date" id="start" value="' + esc(S.start) + '"></div>' +
       '<div class="field"><div><label>' + ui("resetLabel") + '</label><div class="hint">' + ui("resetHint") + "</div></div>" +
@@ -883,6 +897,36 @@ function viewSettings() {
     if (!confirm(ui("resetConfirm"))) return;
     S.done = {}; S.queue = []; S.errors = {}; save(); go("today"); toast(ui("resetDone"));
   };
+  var offBtn = document.getElementById("offBtn");
+  var offHint = document.getElementById("offHint");
+  function showOffline() {
+    offlineStatus().then(function (st) {
+      if (!st) { offBtn.hidden = true; offHint.textContent = ui("offlineNo"); return; }
+      if (st.have >= st.total) {
+        offHint.textContent = ui("offlineReady", Math.round(st.bytes / 1048576));
+        offBtn.textContent = ui("offlineAgain");
+        offBtn.classList.add("g");
+      } else {
+        offHint.textContent = ui("offlineHint");
+        offBtn.textContent = ui("download");
+        offBtn.classList.remove("g");
+      }
+    });
+  }
+  showOffline();
+  offBtn.onclick = function () {
+    offBtn.disabled = true;
+    downloadOffline(function (done, total) {
+      offHint.textContent = ui("downloading", done, total);
+    }).then(function () {
+      offBtn.disabled = false;
+      showOffline();
+    }).catch(function () {
+      offBtn.disabled = false;
+      offHint.textContent = ui("offlineFail");
+    });
+  };
+
   document.getElementById("notif").onclick = function () {
     if (!("Notification" in window)) return toast(ui("noNotif"));
     Notification.requestPermission().then(function (p) {
@@ -890,6 +934,50 @@ function viewSettings() {
       if (p === "granted") scheduleReminder();
     });
   };
+}
+
+/* ---------- офлайн: складываем всё в кэш ---------- */
+var CACHE = "verb100-v2";
+
+function offlineUrls() {
+  var list = ["./", "index.html", "app.css", "app.js", "data.js", "fonts.css",
+              "manifest.webmanifest", "icons/icon-180.png", "icons/icon-192.png",
+              "icons/icon-512.png"];
+  (window.FONT_FILES || []).forEach(function (f) { list.push(f); });
+  window.DAYS.forEach(function (d) { if (d.image) list.push("images/" + d.image); });
+  return list;
+}
+
+/* Сколько из них уже лежит в кэше. */
+function offlineStatus() {
+  if (!window.caches) return Promise.resolve(null);
+  var urls = offlineUrls();
+  return caches.open(CACHE).then(function (c) {
+    return Promise.all(urls.map(function (u) {
+      return c.match(u).then(function (r) { return r ? (r.headers.get("content-length") | 0) || 1 : 0; });
+    }));
+  }).then(function (sizes) {
+    var have = sizes.filter(Boolean).length;
+    return { have: have, total: urls.length, bytes: sizes.reduce(function (a, b) { return a + b; }, 0) };
+  });
+}
+
+function downloadOffline(onProgress) {
+  var urls = offlineUrls(), done = 0;
+  return caches.open(CACHE).then(function (c) {
+    var queue = urls.slice();
+    function worker() {
+      var u = queue.shift();
+      if (!u) return Promise.resolve();
+      return fetch(u, { cache: "reload" })
+        .then(function (r) { return r.ok ? c.put(u, r) : null; })
+        .catch(function () {})
+        .then(function () { onProgress(++done, urls.length); return worker(); });
+    }
+    var lanes = [];
+    for (var i = 0; i < 6; i++) lanes.push(worker());
+    return Promise.all(lanes);
+  });
 }
 
 /* ---------- напоминание (пока приложение открыто/в фоне) ---------- */
@@ -923,6 +1011,19 @@ function headSimple(title, sub) {
 }
 
 var currentTab = "today";
+var settingsOpen = false;
+
+/* Перерисовать тот экран, который открыт сейчас. */
+function rerender() {
+  if (lessonState) {
+    if (lessonSteps()[lessonState.step] === "quiz") renderQuiz();
+    else renderLesson();
+    return;
+  }
+  if (reviewState) { renderCard(); return; }
+  if (settingsOpen) { viewSettings(); return; }
+  go(currentTab);
+}
 function render(html, tab) {
   view.innerHTML = "";
   view.appendChild(h('<div>' + html + "</div>"));
@@ -948,6 +1049,7 @@ function render(html, tab) {
 }
 
 function go(where) {
+  settingsOpen = (where === "settings");
   if (where === "today") viewToday();
   else if (where === "map") viewMap();
   else if (where === "review") viewReview();
@@ -978,14 +1080,10 @@ document.addEventListener("click", function (e) {
     return;
   }
   if ((el = e.target.closest("[data-lang]"))) {
-    S.lang = el.dataset.lang; save();
-    if (lessonState) { if (lessonSteps()[lessonState.step] === "quiz") renderQuiz(); else renderLesson(); }
-    else if (reviewState) renderCard();
-    else go(currentTab);
-    return;
+    S.lang = el.dataset.lang; save(); rerender(); return;
   }
-  if ((el = e.target.closest("[data-theme]"))) {
-    S.theme = el.dataset.theme; save(); applyTheme(); viewSettings(); return;
+  if ((el = e.target.closest("[data-set-theme]"))) {
+    S.theme = el.dataset.setTheme; save(); applyTheme(); viewSettings(); return;
   }
   if ((el = e.target.closest("[data-rate]"))) {
     var r = parseFloat(el.dataset.rate);
