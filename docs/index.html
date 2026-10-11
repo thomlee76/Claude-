@@ -11,7 +11,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="日本語">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="theme-color" content="#F4F5F7">
+<meta name="theme-color" content="#F6F2EA">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
 <style>
@@ -182,6 +182,33 @@ nav{position:fixed;left:0;right:0;bottom:0;background:var(--sf);border-top:1px s
 #pwa-bar .go{background:var(--ac);color:#fff;border-radius:7px;padding:6px 11px;font-size:11.5px;font-weight:600}#pwa-bar .x{color:var(--mu);padding:3px 5px}
 #offline{position:fixed;top:0;left:0;right:0;z-index:40;background:var(--bad);color:#fff;text-align:center;font-size:11px;font-weight:600;padding:4px 10px;padding-top:calc(4px + env(safe-area-inset-top,0px));display:none}#offline.on{display:block}
 @media (max-width:360px){.sh,.kg{grid-template-columns:repeat(3,1fr)}}
+/* ===== 색상 팔레트 (data-palette) ===== */
+:root[data-palette="sumi"]{--bg:#F6F2EA;--sf:#FFFDF8;--sf2:#EFE9DD;--ln:#E2DACB;--tx:#221F1B;--mu:#74695C;--ac:#C9463D;--ac2:#F8E4E0;--acd:#9E3129;}
+@media (prefers-color-scheme:dark){:root[data-palette="sumi"]:not([data-theme="light"]){--bg:#171513;--sf:#1F1C19;--sf2:#292521;--ln:#363028;--tx:#ECE6DA;--mu:#A3998A;--ac:#E9786C;--ac2:#3A2420;--acd:#F2A097;}}
+:root[data-palette="sumi"][data-theme="dark"]{--bg:#171513;--sf:#1F1C19;--sf2:#292521;--ln:#363028;--tx:#ECE6DA;--mu:#A3998A;--ac:#E9786C;--ac2:#3A2420;--acd:#F2A097;}
+:root[data-palette="indigo"]{--bg:#F4F5F7;--sf:#FFFFFF;--sf2:#EEF0F4;--ln:#E1E4EA;--tx:#1A1F2B;--mu:#6A7384;--ac:#2F56C8;--ac2:#E7ECFB;--acd:#1F3E9C;}
+@media (prefers-color-scheme:dark){:root[data-palette="indigo"]:not([data-theme="light"]){--bg:#101216;--sf:#181B21;--sf2:#20242C;--ln:#2A2F39;--tx:#E7EAEF;--mu:#98A1B1;--ac:#8FA6F2;--ac2:#232A45;--acd:#B4C3F7;}}
+:root[data-palette="indigo"][data-theme="dark"]{--bg:#101216;--sf:#181B21;--sf2:#20242C;--ln:#2A2F39;--tx:#E7EAEF;--mu:#98A1B1;--ac:#8FA6F2;--ac2:#232A45;--acd:#B4C3F7;}
+:root[data-palette="teal"]{--bg:#F2F6F6;--sf:#FFFFFF;--sf2:#E8EFEF;--ln:#D9E3E3;--tx:#15282A;--mu:#5F7577;--ac:#0F766E;--ac2:#DDF1EE;--acd:#0B5B55;}
+@media (prefers-color-scheme:dark){:root[data-palette="teal"]:not([data-theme="light"]){--bg:#0F1718;--sf:#161F20;--sf2:#1E292A;--ln:#2A3738;--tx:#E3ECEC;--mu:#8FA6A6;--ac:#4FC3B6;--ac2:#16302E;--acd:#86DED3;}}
+:root[data-palette="teal"][data-theme="dark"]{--bg:#0F1718;--sf:#161F20;--sf2:#1E292A;--ln:#2A3738;--tx:#E3ECEC;--mu:#8FA6A6;--ac:#4FC3B6;--ac2:#16302E;--acd:#86DED3;}
+:root[data-palette="amber"]{--bg:#F3F3F2;--sf:#FFFFFF;--sf2:#EBEBEA;--ln:#DEDEDC;--tx:#1C1C1A;--mu:#6E6E69;--ac:#B86E00;--ac2:#FBEFD6;--acd:#8A5200;}
+@media (prefers-color-scheme:dark){:root[data-palette="amber"]:not([data-theme="light"]){--bg:#121212;--sf:#1B1B1B;--sf2:#242424;--ln:#303030;--tx:#ECECEA;--mu:#9C9C96;--ac:#F0B14C;--ac2:#3A2C10;--acd:#F7C978;}}
+:root[data-palette="amber"][data-theme="dark"]{--bg:#121212;--sf:#1B1B1B;--sf2:#242424;--ln:#303030;--tx:#ECECEA;--mu:#9C9C96;--ac:#F0B14C;--ac2:#3A2C10;--acd:#F7C978;}
+:root[data-palette="forest"]{--bg:#F3F5F0;--sf:#FFFFFF;--sf2:#EAEEE5;--ln:#DCE2D5;--tx:#1B2419;--mu:#67735F;--ac:#2F6B4F;--ac2:#E1EFE6;--acd:#214F3A;}
+@media (prefers-color-scheme:dark){:root[data-palette="forest"]:not([data-theme="light"]){--bg:#111513;--sf:#181D1A;--sf2:#212823;--ln:#2C352E;--tx:#E5EBE5;--mu:#93A396;--ac:#6CC297;--ac2:#18312A;--acd:#9CDDBB;}}
+:root[data-palette="forest"][data-theme="dark"]{--bg:#111513;--sf:#181D1A;--sf2:#212823;--ln:#2C352E;--tx:#E5EBE5;--mu:#93A396;--ac:#6CC297;--ac2:#18312A;--acd:#9CDDBB;}
+
+/* 설정 패널 */
+#setp{position:fixed;z-index:50;top:calc(52px + env(safe-area-inset-top,0px));right:12px;left:12px;max-width:380px;margin-left:auto;background:var(--sf);border:1px solid var(--ln);border-radius:12px;padding:12px;box-shadow:0 10px 30px rgba(0,0,0,.18);display:none}
+#setp.on{display:block}
+#setp .lab{margin-top:0}
+.pal{display:flex;gap:8px;flex-wrap:wrap}
+.pal button{display:flex;align-items:center;gap:7px;border:1px solid var(--ln);border-radius:9px;padding:6px 10px;font-size:12px;font-weight:600;color:var(--mu);background:var(--sf2)}
+.pal button i{width:16px;height:16px;border-radius:50%;display:block;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.12)}
+.pal button.on{border-color:var(--ac);color:var(--ac);background:var(--ac2)}
+#setbg{position:fixed;inset:0;z-index:45;display:none}#setbg.on{display:block}
+
 </style>
 </head><body>
 <div id="offline">오프라인 — 저장된 내용으로 계속 학습할 수 있습니다</div>
@@ -193,6 +220,11 @@ nav{position:fixed;left:0;right:0;bottom:0;background:var(--sf);border-top:1px s
   </header>
   <main id="view"></main>
 </div>
+<div id="setbg"></div>
+<div id="setp" role="dialog" aria-label="화면 설정">
+  <div class="lab">밝기</div><div class="chips mini" id="setth"></div>
+  <div class="lab" style="margin-top:10px">색상</div><div class="pal" id="setpal"></div>
+
 <div id="viewer" role="dialog" aria-modal="true" aria-label="자료 보기">
   <div class="vhead"><div class="vtx"><b id="vttl"></b><span id="vsub"></span></div><button class="vbtn" id="vzoom">확대</button><button class="vbtn" id="vclose" aria-label="닫기">✕</button></div>
   <div class="vbody" id="vbody"><img id="vimg" alt=""></div>
