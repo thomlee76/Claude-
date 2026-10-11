@@ -75,7 +75,7 @@ pwa_head = ('<link rel="manifest" href="manifest.webmanifest">\n<link rel="apple
             '<meta name="apple-mobile-web-app-title" content="Глаголы 100">\n'
             '<meta name="apple-mobile-web-app-status-bar-style" content="default">\n')
 pwa_body = ('<script>if("serviceWorker" in navigator){addEventListener("load",()=>{navigator.serviceWorker.register("sw.js")'
-            '.then(r=>{const t=document.getElementById("toast");navigator.serviceWorker.ready.then(()=>{});})'
+            '.then(()=>navigator.serviceWorker.ready).then(r=>{if(r.active)r.active.postMessage("ensure")})'
             '.catch(()=>{})})}</script>')
 html = page(data + attach, pwa_head, pwa_body)
 open(f'{OUT}/index.html', 'w', encoding='utf-8').write(html)
@@ -87,10 +87,14 @@ for _p in precache[1:]: _h.update(_p.encode()); _h.update(open(f'{OUT}/{_p}', 'r
 ver = _h.hexdigest()[:10]
 sw = '''const CACHE="pv100-%s";const PRECACHE=%s;
 self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(PRECACHE)).then(()=>self.skipWaiting()))});
-self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE&&!k.startsWith("pv100-fonts")).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
+self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k.startsWith("pv100-")&&k!==CACHE&&k!=="pv100-fonts").map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
 async function rangeResponse(req,res){const range=req.headers.get("range");if(!range||!res)return res;
   const buf=await res.arrayBuffer();const m=/bytes=(\\d*)-(\\d*)/.exec(range);let s=m&&m[1]?+m[1]:0;let e=m&&m[2]?+m[2]:buf.byteLength-1;e=Math.min(e,buf.byteLength-1);
   return new Response(buf.slice(s,e+1),{status:206,statusText:"Partial Content",headers:{"Content-Type":res.headers.get("Content-Type")||"audio/mpeg","Content-Range":`bytes ${s}-${e}/${buf.byteLength}`,"Content-Length":String(e-s+1),"Accept-Ranges":"bytes"}})}
+async function ensure(){const c=await caches.open(CACHE);const have=new Set((await c.keys()).map(r=>new URL(r.url).pathname));
+  const base=new URL("./",self.registration.scope);const miss=PRECACHE.filter(p=>!have.has(new URL(p,base).pathname));
+  for(let i=0;i<miss.length;i+=12){await Promise.all(miss.slice(i,i+12).map(p=>c.add(p).catch(()=>{})))}}
+self.addEventListener("message",e=>{if(e.data==="ensure")e.waitUntil(ensure())});
 self.addEventListener("fetch",e=>{const u=new URL(e.request.url);if(e.request.method!=="GET")return;
   if(u.hostname.endsWith("fonts.googleapis.com")||u.hostname.endsWith("fonts.gstatic.com")){
     e.respondWith(caches.open("pv100-fonts").then(async c=>{const hit=await c.match(e.request);const net=fetch(e.request).then(r=>{c.put(e.request,r.clone());return r}).catch(()=>hit);return hit||net}));return}
