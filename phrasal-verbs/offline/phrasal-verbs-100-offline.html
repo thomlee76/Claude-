@@ -2974,8 +2974,8 @@ Object.assign(window.LESSONS,{
 const $=s=>document.querySelector(s);
 const store={get(k,d){try{const v=localStorage.getItem("pv100:"+k);return v==null?d:JSON.parse(v)}catch(e){return d}},
              set(k,v){try{localStorage.setItem("pv100:"+k,JSON.stringify(v))}catch(e){}}};
-let S={done:store.get("done",{}),mist:store.get("mist",[]),pal:store.get("pal3","pastel"),rate:store.get("rate",0.9),days:store.get("days",[])};
-function save(){store.set("done",S.done);store.set("mist",S.mist);store.set("pal3",S.pal);store.set("rate",S.rate);store.set("days",S.days)}
+let S={voice:store.get("voice","rec"),done:store.get("done",{}),mist:store.get("mist",[]),pal:store.get("pal3","pastel"),rate:store.get("rate",0.9),days:store.get("days",[])};
+function save(){store.set("voice",S.voice);store.set("done",S.done);store.set("mist",S.mist);store.set("pal3",S.pal);store.set("rate",S.rate);store.set("days",S.days)}
 const esc=t=>String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;");
 const hl=t=>esc(t).replace(/\{([^|}]+)\|([^}]+)\}/g,'<b class="v">$1</b> <b class="p">$2</b>');
 const plain=t=>t.replace(/\{([^|}]+)\|([^}]+)\}/g,"$1 $2");
@@ -2991,11 +2991,20 @@ let toastT;function toast(m){const t=$("#toast");t.textContent=m;t.classList.add
 /* speech */
 let queue=[],speaking=false;
 function voices(){try{return speechSynthesis.getVoices().filter(v=>/^en(-|_)(US|GB)/i.test(v.lang))}catch(e){return[]}}
+const MALE_V=/\b(Evan|Nathan|Tom|Aaron|Alex|Fred|Daniel|Arthur|Oliver|Reed|Rocko|Ralph|Gordon|Lee|Rishi|Eddy|Grandpa|Jamie|Male)\b/i;
+const FEM_V=/\b(Ava|Zoe|Samantha|Allison|Susan|Nicky|Joelle|Noelle|Karen|Kate|Serena|Moira|Tessa|Fiona|Martha|Shelley|Sandy|Flo|Grandma|Victoria|Female)\b/i;
+const MALE_WHO=/^(Min|Alex|Dad|Brother|Driver|Man|Waiter|Trainer|Teacher|Officer|Guard)$/;
+function vScore(v){let s=0;if(/premium/i.test(v.name))s+=40;else if(/enhanced|neural|natural/i.test(v.name))s+=25;if(/en(-|_)US/i.test(v.lang))s+=5;if(v.localService)s+=2;
+  if(/(Albert|Bad News|Bahh|Bells|Boing|Bubbles|Cellos|Good News|Jester|Organ|Superstar|Trinoids|Whisper|Wobble|Zarvox|Junior|Kathy|Ralph)/i.test(v.name))s-=100;return s}
+function bestVoice(male){const vs=voices().filter(v=>male?MALE_V.test(v.name):FEM_V.test(v.name)).sort((a,b)=>vScore(b)-vScore(a));
+  return vs[0]||voices().sort((a,b)=>vScore(b)-vScore(a))[0]||null}
+function voiceInfo(){const m=bestVoice(true),f=bestVoice(false);const prem=[m,f].some(v=>v&&/premium|enhanced/i.test(v.name));
+  return {text:(m||f)?`Мужской: ${m?m.name:"—"} · женский: ${f?f.name:"—"}`:"Голоса пока не загружены",prem}}
 let AU=null,auClean=null;
 function stop(){queue=[];speaking=false;try{speechSynthesis.cancel()}catch(e){};if(AU){try{AU.pause()}catch(e){}}if(auClean){auClean();auClean=null}document.querySelectorAll(".line.playing").forEach(x=>x.classList.remove("playing"))}
 function sayList(items){ // items: [{text,who,el,seg}]
   const L=cur&&LESSONS[cur];
-  if(L&&L.audio&&L.marks&&items.length&&items.every(it=>it.seg!=null&&L.marks[it.seg])){playSegs(items);return}
+  if(S.voice!=="dev"&&L&&L.audio&&L.marks&&items.length&&items.every(it=>it.seg!=null&&L.marks[it.seg])){playSegs(items);return}
   ttsList(items)}
 function playSegs(items){
   stop();const L=LESSONS[cur],m=L.marks;
@@ -3019,9 +3028,9 @@ function next(){
   if(!speaking||!queue.length){speaking=false;return}
   const it=queue.shift();const u=new SpeechSynthesisUtterance(it.text);
   u.lang="en-US";u.rate=S.rate;
-  const vs=voices();
-  if(it.who){ if(!(it.who in speakerIdx))speakerIdx[it.who]=Object.keys(speakerIdx).length;
-    const i=speakerIdx[it.who]; if(vs.length>1)u.voice=vs[i%vs.length]; else if(vs[0])u.voice=vs[0]; u.pitch=i%2?1.12:0.95;}
+  const male=MALE_WHO.test(it.who||"Min"),bv=bestVoice(male);
+  if(bv){try{u.voice=bv;u.lang=bv.lang}catch(e){}}
+  const fv=bestVoice(!male); if(bv&&fv&&bv.name===fv.name)u.pitch=male?0.9:1.12;
   if(it.el)it.el.classList.add("playing");
   u.onend=u.onerror=()=>setTimeout(next,250);
   speechSynthesis.speak(u);
@@ -3066,11 +3075,13 @@ function home(){
   const palNames={pastel:"Пастель",mint:"Мята",lavender:"Лаванда",sakura:"Сакура",sky:"Небо",latte:"Латте",lemon:"Лимон",orange:"Апельсин"};
   h+=`<div class="foot"><div class="settings">
     <div class="row"><label>Цвет</label>${pals.map(([k,c1,c2])=>`<button class="sw" data-pal="${k}" aria-pressed="${S.pal===k}" aria-label="${palNames[k]}" title="${palNames[k]}" style="background:linear-gradient(135deg,${c1} 50%,${c2} 50%)"></button>`).join("")}<span class="palname" id="palname">${palNames[S.pal]||""}</span></div>
+    <div class="row"><label>Озвучка</label><div class="seg"><button data-voice="rec" aria-pressed="${S.voice!=="dev"}">Запись</button><button data-voice="dev" aria-pressed="${S.voice==="dev"}">Голос iPhone</button></div>
+      <span class="palname" id="vinfo"></span></div>
     <div class="row"><label>Скорость озвучки</label><div class="seg">${[0.8,0.9,1].map(r=>`<button data-rate="${r}" aria-pressed="${S.rate===r}">${r===1?"1.0":r}</button>`).join("")}</div></div>
     <button class="danger" data-reset="1">Сбросить прогресс</button>
   </div>
   <p style="font-size:12px;color:var(--muted);margin:0">Прогресс хранится в этом браузере на этом устройстве. Глагол и ключевая фраза дня — из книги; диалоги, small talk и тесты составлены отдельно.</p></div>`;
-  $("#app").innerHTML=h;window.scrollTo(0,0);
+  $("#app").innerHTML=h;window.scrollTo(0,0);showVoice();
 }
 
 /* ---------- LESSON ---------- */
@@ -3135,6 +3146,8 @@ document.addEventListener("click",e=>{
   if(t.dataset.home){home();return}
   if(t.dataset.review){review();return}
   if(t.dataset.pal){S.pal=t.dataset.pal;save();applyPal();document.querySelectorAll(".sw").forEach(b=>b.setAttribute("aria-pressed",b.dataset.pal===S.pal));const pn=document.getElementById("palname");if(pn)pn.textContent=t.title;return}
+  if(t.dataset.voice){S.voice=t.dataset.voice;save();document.querySelectorAll("[data-voice]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.voice===S.voice));showVoice();
+    if(S.voice==="dev")ttsList([{text:"Hi! I'm going out now.",who:"Min"}]);return}
   if(t.dataset.rate){S.rate=+t.dataset.rate;save();document.querySelectorAll("[data-rate]").forEach(b=>b.setAttribute("aria-pressed",+b.dataset.rate===S.rate));return}
   if(t.dataset.reset){if(t.dataset.armed){S.done={};S.mist=[];S.days=[];save();home();toast("Прогресс сброшен");}else{t.dataset.armed="1";t.textContent="Нажмите ещё раз, чтобы сбросить";setTimeout(()=>{if(t.isConnected){delete t.dataset.armed;t.textContent="Сбросить прогресс"}},3000)}return}
   if(t.dataset.hidetr){const on=document.body.classList.toggle("hide-tr");t.setAttribute("aria-pressed",on);document.querySelectorAll(".tr.show").forEach(x=>x.classList.remove("show"));return}
@@ -3157,7 +3170,9 @@ document.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.tar
 let spyT;window.addEventListener("scroll",()=>{clearTimeout(spyT);spyT=setTimeout(()=>{if($("#steps").hidden)return;
   let on=0;["s1","s2","s3"].forEach((id,i)=>{const s=$("#"+id);if(s&&s.getBoundingClientRect().top<160)on=i});
   document.querySelectorAll(".steps a").forEach((a,i)=>a.classList.toggle("on",i===on))},80)},{passive:true});
-try{speechSynthesis.getVoices();speechSynthesis.onvoiceschanged=()=>{}}catch(e){}
+function showVoice(){const el=document.getElementById("vinfo");if(!el)return;if(S.voice!=="dev"){el.textContent="Ключевая фраза и диалог — записанные голоса; small talk — голос iPhone";return}
+  const vi=voiceInfo();el.textContent=vi.text+(vi.prem?"":" · для естественного звучания скачайте голоса Premium в настройках iPhone")}
+try{speechSynthesis.getVoices();speechSynthesis.onvoiceschanged=()=>showVoice()}catch(e){}
 home();
 })();
 </script>
