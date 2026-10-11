@@ -214,8 +214,8 @@ body.hide-tr .tr.show{filter:none;opacity:1}
 const $=s=>document.querySelector(s);
 const store={get(k,d){try{const v=localStorage.getItem("pv100:"+k);return v==null?d:JSON.parse(v)}catch(e){return d}},
              set(k,v){try{localStorage.setItem("pv100:"+k,JSON.stringify(v))}catch(e){}}};
-let S={voice:store.get("voice","auto"),done:store.get("done",{}),mist:store.get("mist",[]),pal:store.get("pal3","pastel"),rate:store.get("rate",0.9),days:store.get("days",[])};
-function save(){store.set("voice",S.voice);store.set("done",S.done);store.set("mist",S.mist);store.set("pal3",S.pal);store.set("rate",S.rate);store.set("days",S.days)}
+let S={voice:store.get("voice","auto"),done:store.get("done",{}),mist:store.get("mist",[]),pal:store.get("pal3","pastel"),rate:store.get("rate2",1),days:store.get("days",[])};
+function save(){store.set("voice",S.voice);store.set("done",S.done);store.set("mist",S.mist);store.set("pal3",S.pal);store.set("rate2",S.rate);store.set("days",S.days)}
 const esc=t=>String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;");
 const hl=t=>esc(t).replace(/\{([^|}]+)\|([^}]+)\}/g,'<b class="v">$1</b> <b class="p">$2</b>');
 const plain=t=>t.replace(/\{([^|}]+)\|([^}]+)\}/g,"$1 $2");
@@ -233,7 +233,7 @@ let queue=[],speaking=false;
 function voices(){try{return speechSynthesis.getVoices().filter(v=>/^en(-|_)(US|GB)/i.test(v.lang))}catch(e){return[]}}
 const MALE_V=/\b(Evan|Nathan|Tom|Aaron|Alex|Fred|Daniel|Arthur|Oliver|Reed|Rocko|Ralph|Gordon|Lee|Rishi|Eddy|Grandpa|Jamie|Male)\b/i;
 const FEM_V=/\b(Ava|Zoe|Samantha|Allison|Susan|Nicky|Joelle|Noelle|Karen|Kate|Serena|Moira|Tessa|Fiona|Martha|Shelley|Sandy|Flo|Grandma|Victoria|Female)\b/i;
-const MALE_WHO=/^(Min|Alex|Dad|Brother|Driver|Man|Waiter|Trainer|Teacher|Officer|Guard)$/;
+const MALE_WHO=/^(Min|Alex|Dad|Brother|Driver|Man|Waiter|Trainer|Teacher|Officer|Guard|Director|Engineer|Distributor|Supplier|Manager|Seller)$/;
 function vq(v){return (v.name||"")+" "+(v.voiceURI||"")}
 function isPrem(v){return !!v&&/premium|enhanced/i.test(vq(v))}
 function vLabel(v){if(!v)return"—";const q=vq(v);return v.name+(/premium/i.test(v.name)?"":/premium/i.test(q)?" (Premium)":/enhanced/i.test(v.name)?"":/enhanced/i.test(q)?" (Enhanced)":"")}
@@ -256,7 +256,7 @@ function playSegs(items){
   if(!AU){AU=new Audio();AU.preload="auto"}
   const a=AU;if(a.dataset.src!==src){a.src=src;a.dataset.src=src}
   const segs=items.map(it=>({s:m[ix(it)][0],e:m[ix(it)][1],el:it.el})),start=segs[0].s,end=segs[segs.length-1].e;
-  a.playbackRate=S.rate/0.9;
+  a.playbackRate=S.rate;
   const onT=()=>{const t=a.currentTime;segs.forEach(g=>{if(g.el)g.el.classList.toggle("playing",t>=g.s-0.05&&t<g.e+0.3)});if(t>=end){a.pause();clean()}};
   const clean=()=>{a.removeEventListener("timeupdate",onT);document.querySelectorAll(".line.playing").forEach(x=>x.classList.remove("playing"))};
   auClean=clean;a.addEventListener("timeupdate",onT);
@@ -418,10 +418,7 @@ document.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.tar
 let spyT;window.addEventListener("scroll",()=>{clearTimeout(spyT);spyT=setTimeout(()=>{if($("#steps").hidden)return;
   let on=0;["s1","s2","s3"].forEach((id,i)=>{const s=$("#"+id);if(s&&s.getBoundingClientRect().top<160)on=i});
   document.querySelectorAll(".steps a").forEach((a,i)=>a.classList.toggle("on",i===on))},80)},{passive:true});
-function showVoiceList(){const L=document.getElementById("vlist"),sm=document.getElementById("vsum");if(!L)return;
-  const vs=voices().sort((a,b)=>vScore(b)-vScore(a));if(sm)sm.textContent="Голоса на устройстве (англ.): "+vs.length;
-  L.innerHTML=vs.length?vs.map(v=>`${esc(vLabel(v))} · ${esc(v.lang)}${isPrem(v)?" ✓":""}<br><span style="opacity:.7">${esc(v.voiceURI||"")}</span>`).join("<br>"):"Браузер не передал ни одного английского голоса"}
-function showVoice(){showVoiceList();const el=document.getElementById("vinfo");if(!el)return;if(!useDev()){el.textContent=(S.voice==="auto"?"Авто: ":"")+"все фразы озвучены записанными естественными голосами";return}
+function showVoice(){const el=document.getElementById("vinfo");if(!el)return;if(!useDev()){el.textContent=(S.voice==="auto"?"Авто: ":"")+"все фразы озвучены записанными голосами (Supertonic 3)";return}
   const vi=voiceInfo();el.textContent=(S.voice==="auto"?"Авто: найдены голоса iPhone — ":"")+vi.text+(vi.prem?"":" · для естественного звучания скачайте голоса Premium в настройках iPhone")}
 try{speechSynthesis.getVoices();speechSynthesis.onvoiceschanged=()=>showVoice()}catch(e){}
 home();
