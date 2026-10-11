@@ -74,10 +74,14 @@ pwa_head = ('<link rel="manifest" href="manifest.webmanifest">\n<link rel="apple
             '<meta name="apple-mobile-web-app-capable" content="yes">\n<meta name="mobile-web-app-capable" content="yes">\n'
             '<meta name="apple-mobile-web-app-title" content="Глаголы 100">\n'
             '<meta name="apple-mobile-web-app-status-bar-style" content="default">\n')
-pwa_body = ('<script>if("serviceWorker" in navigator){addEventListener("load",()=>{navigator.serviceWorker.register("sw.js")'
+import datetime
+APP_VER = datetime.datetime.utcnow().strftime('%d.%m.%Y %H:%M')
+pwa_body = ('<script>if("serviceWorker" in navigator){const had=!!navigator.serviceWorker.controller;let rl=false;'
+            'navigator.serviceWorker.addEventListener("controllerchange",()=>{if(had&&!rl){rl=true;location.reload()}});'
+            'addEventListener("load",()=>{navigator.serviceWorker.register("sw.js",{updateViaCache:"none"})'
             '.then(()=>navigator.serviceWorker.ready).then(r=>{if(r.active)r.active.postMessage("ensure")})'
             '.catch(()=>{})})}</script>')
-html = page(data + attach, pwa_head, pwa_body)
+html = page(data + attach + 'window.APP_VER="' + APP_VER + '";\n', pwa_head, pwa_body)
 open(f'{OUT}/index.html', 'w', encoding='utf-8').write(html)
 
 # ---------- service worker ----------
@@ -99,6 +103,12 @@ self.addEventListener("fetch",e=>{const u=new URL(e.request.url);if(e.request.me
   if(u.hostname.endsWith("fonts.googleapis.com")||u.hostname.endsWith("fonts.gstatic.com")){
     e.respondWith(caches.open("pv100-fonts").then(async c=>{const hit=await c.match(e.request);const net=fetch(e.request).then(r=>{c.put(e.request,r.clone());return r}).catch(()=>hit);return hit||net}));return}
   if(u.origin!==location.origin)return;
+  if(e.request.mode==="navigate"||u.pathname.endsWith("/index.html")){
+    e.respondWith((async()=>{const c=await caches.open(CACHE);
+      try{const ctl=new AbortController();const t=setTimeout(()=>ctl.abort(),4000);
+        const r=await fetch(e.request,{cache:"no-store",signal:ctl.signal});clearTimeout(t);
+        if(r.ok){c.put("index.html",r.clone());return r}}catch(err){}
+      return (await c.match("index.html"))||(await c.match("./"))||Response.error()})());return}
   e.respondWith((async()=>{const c=await caches.open(CACHE);const key=new Request(u.pathname.endsWith("/")?u.pathname:u.href);
     let hit=await c.match(e.request,{ignoreSearch:true})||await c.match(key,{ignoreSearch:true});
     if(e.request.mode==="navigate"&&!hit)hit=await c.match("index.html");

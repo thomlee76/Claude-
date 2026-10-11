@@ -321,7 +321,7 @@ function home(){
     <div class="row"><label>Скорость озвучки</label><div class="seg">${[0.8,0.9,1].map(r=>`<button data-rate="${r}" aria-pressed="${S.rate===r}">${r===1?"1.0":r}</button>`).join("")}</div></div>
     <button class="danger" data-reset="1">Сбросить прогресс</button>
   </div>
-  <p style="font-size:12px;color:var(--muted);margin:0">Прогресс хранится в этом браузере на этом устройстве. Глагол и ключевая фраза дня — из книги; диалоги, small talk и тесты составлены отдельно.</p></div>`;
+  <p style="font-size:12px;color:var(--muted);margin:0">Прогресс хранится в этом браузере на этом устройстве. Глагол и ключевая фраза дня — из книги; диалоги, small talk и тесты составлены отдельно.${window.APP_VER?" Версия от "+window.APP_VER+" UTC.":""}</p></div>`;
   $("#app").innerHTML=h;window.scrollTo(0,0);showVoice();
 }
 
