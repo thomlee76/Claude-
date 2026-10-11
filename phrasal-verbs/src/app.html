@@ -37,9 +37,27 @@
   --accent:hsl(var(--h) var(--s) 72%); --accent-2:hsl(var(--h) var(--s) 62%);
   --tint:hsl(var(--h) 25% 17%); --tint-2:hsl(var(--h) 25% 23%); --on-accent:hsl(var(--h) 30% 10%);
   --good:#7BD3A0; --good-bg:#17301F; --bad:#F2928A; --bad-bg:#3A1C19; color-scheme:dark }
-:root[data-pal="plum"]{--h:332;--s:52%}
-:root[data-pal="forest"]{--h:152;--s:40%}
-:root[data-pal="graphite"]{--h:212;--s:14%}
+
+/* Пастельные палитры: кнопки пастельного цвета с тёмным текстом, цветные подложки; у каждой свой тёмный вариант */
+:root[data-pal="mint"]{--bg:#F6FAF8;--surface:#FFFFFF;--ink:#1F2D28;--muted:#677973;--line:#DFECE7;--accent:#2F7A62;--accent-2:#A8DCC6;--tint:#E8F4EF;--tint-2:#CDE9DD;--on-accent:#FFFFFF;--btn:#A8DCC6;--on-btn:#1C3A2F;--p1:#E3F4EC;--p2:#FDEEE6;--p3:#E7F1FA;--p4:#F1EEFA}
+@media (prefers-color-scheme: dark){ :root[data-pal="mint"]:not([data-theme="light"]){--bg:#151918;--surface:#1E2422;--ink:#E8EEEB;--muted:#A1AFAA;--line:#35413C;--accent:#8FD6B8;--accent-2:#A8DCC6;--tint:#22352E;--tint-2:#2F4C41;--on-accent:#12211C;--btn:#A8DCC6;--on-btn:#1C3A2F;--p1:#22352E;--p2:#263136;--p3:#372525;--p4:#263626;color-scheme:dark}}
+:root[data-theme="dark"][data-pal="mint"]{--bg:#151918;--surface:#1E2422;--ink:#E8EEEB;--muted:#A1AFAA;--line:#35413C;--accent:#8FD6B8;--accent-2:#A8DCC6;--tint:#22352E;--tint-2:#2F4C41;--on-accent:#12211C;--btn:#A8DCC6;--on-btn:#1C3A2F;--p1:#22352E;--p2:#263136;--p3:#372525;--p4:#263626;color-scheme:dark}
+:root[data-pal="lavender"]{--bg:#F9F7FD;--surface:#FFFFFF;--ink:#241F2D;--muted:#6E6779;--line:#E4DFEC;--accent:#6E52A8;--accent-2:#CDBDF0;--tint:#F0EBFA;--tint-2:#DED3F4;--on-accent:#FFFFFF;--btn:#CDBDF0;--on-btn:#2B2142;--p1:#EEE8FA;--p2:#FBEDF2;--p3:#E7F1F8;--p4:#F5F0FB}
+@media (prefers-color-scheme: dark){ :root[data-pal="lavender"]:not([data-theme="light"]){--bg:#161519;--surface:#201E24;--ink:#EAE8EE;--muted:#A6A1AF;--line:#393541;--accent:#C3AEF0;--accent-2:#CDBDF0;--tint:#292235;--tint-2:#392F4C;--on-accent:#171221;--btn:#CDBDF0;--on-btn:#2B2142;--p1:#292235;--p2:#362636;--p3:#2A3725;--p4:#262B36;color-scheme:dark}}
+:root[data-theme="dark"][data-pal="lavender"]{--bg:#161519;--surface:#201E24;--ink:#EAE8EE;--muted:#A6A1AF;--line:#393541;--accent:#C3AEF0;--accent-2:#CDBDF0;--tint:#292235;--tint-2:#392F4C;--on-accent:#171221;--btn:#CDBDF0;--on-btn:#2B2142;--p1:#292235;--p2:#362636;--p3:#2A3725;--p4:#262B36;color-scheme:dark}
+:root[data-pal="sakura"]{--bg:#FDF7F8;--surface:#FFFFFF;--ink:#2D1F23;--muted:#79676C;--line:#ECDFE2;--accent:#AD4665;--accent-2:#F5B8C8;--tint:#FBEDF1;--tint-2:#F4D3DD;--on-accent:#FFFFFF;--btn:#F5B8C8;--on-btn:#3E1F29;--p1:#FBE8EE;--p2:#EFEBF8;--p3:#E6F3EF;--p4:#FFF1EA}
+@media (prefers-color-scheme: dark){ :root[data-pal="sakura"]:not([data-theme="light"]){--bg:#191516;--surface:#241E1F;--ink:#EEE8E9;--muted:#AFA1A5;--line:#413538;--accent:#F2A3B8;--accent-2:#F5B8C8;--tint:#352227;--tint-2:#4C2F36;--on-accent:#211216;--btn:#F5B8C8;--on-btn:#3E1F29;--p1:#352227;--p2:#362D26;--p3:#253637;--p4:#362635;color-scheme:dark}}
+:root[data-theme="dark"][data-pal="sakura"]{--bg:#191516;--surface:#241E1F;--ink:#EEE8E9;--muted:#AFA1A5;--line:#413538;--accent:#F2A3B8;--accent-2:#F5B8C8;--tint:#352227;--tint-2:#4C2F36;--on-accent:#211216;--btn:#F5B8C8;--on-btn:#3E1F29;--p1:#352227;--p2:#362D26;--p3:#253637;--p4:#362635;color-scheme:dark}
+:root[data-pal="sky"]{--bg:#F6F9FC;--surface:#FFFFFF;--ink:#1F272D;--muted:#677179;--line:#DFE6EC;--accent:#2D6A9B;--accent-2:#AAD0F0;--tint:#EAF3FB;--tint-2:#CDE3F5;--on-accent:#FFFFFF;--btn:#AAD0F0;--on-btn:#17314A;--p1:#E4EFFA;--p2:#FFF0E3;--p3:#E5F4EE;--p4:#EFEDFA}
+@media (prefers-color-scheme: dark){ :root[data-pal="sky"]:not([data-theme="light"]){--bg:#151719;--surface:#1E2124;--ink:#E8EBEE;--muted:#A1A9AF;--line:#353B41;--accent:#93C3EE;--accent-2:#AAD0F0;--tint:#222C35;--tint-2:#2F3E4C;--on-accent:#121A21;--btn:#AAD0F0;--on-btn:#17314A;--p1:#222C35;--p2:#282636;--p3:#373325;--p4:#263633;color-scheme:dark}}
+:root[data-theme="dark"][data-pal="sky"]{--bg:#151719;--surface:#1E2124;--ink:#E8EBEE;--muted:#A1A9AF;--line:#353B41;--accent:#93C3EE;--accent-2:#AAD0F0;--tint:#222C35;--tint-2:#2F3E4C;--on-accent:#121A21;--btn:#AAD0F0;--on-btn:#17314A;--p1:#222C35;--p2:#282636;--p3:#373325;--p4:#263633;color-scheme:dark}
+:root[data-pal="latte"]{--bg:#FAF6F0;--surface:#FFFFFF;--ink:#2D271F;--muted:#797167;--line:#ECE6DF;--accent:#94622F;--accent-2:#E5CBA9;--tint:#F4ECE1;--tint-2:#E7D7C1;--on-accent:#FFFFFF;--btn:#E5CBA9;--on-btn:#3A2A19;--p1:#F3EADE;--p2:#E7EFE5;--p3:#E6EDF4;--p4:#F7EADB}
+@media (prefers-color-scheme: dark){ :root[data-pal="latte"]:not([data-theme="light"]){--bg:#191715;--surface:#24211E;--ink:#EEEBE8;--muted:#AFA9A1;--line:#413B35;--accent:#E3BE8E;--accent-2:#E5CBA9;--tint:#352C22;--tint-2:#4C3E2F;--on-accent:#211A12;--btn:#E5CBA9;--on-btn:#3A2A19;--p1:#352C22;--p2:#333626;--p3:#252737;--p4:#362628;color-scheme:dark}}
+:root[data-theme="dark"][data-pal="latte"]{--bg:#191715;--surface:#24211E;--ink:#EEEBE8;--muted:#AFA9A1;--line:#413B35;--accent:#E3BE8E;--accent-2:#E5CBA9;--tint:#352C22;--tint-2:#4C3E2F;--on-accent:#211A12;--btn:#E5CBA9;--on-btn:#3A2A19;--p1:#352C22;--p2:#333626;--p3:#252737;--p4:#362628;color-scheme:dark}
+:root[data-pal="lemon"]{--bg:#FCFBF4;--surface:#FFFFFF;--ink:#2D2A1F;--muted:#797667;--line:#ECE9DF;--accent:#8A6D12;--accent-2:#F3DE8A;--tint:#F8F2DA;--tint-2:#EFE2AE;--on-accent:#FFFFFF;--btn:#F3DE8A;--on-btn:#3A3010;--p1:#F9F2D2;--p2:#E5F2EC;--p3:#E8EEF8;--p4:#FBEDE6}
+@media (prefers-color-scheme: dark){ :root[data-pal="lemon"]:not([data-theme="light"]){--bg:#191815;--surface:#24231E;--ink:#EEECE8;--muted:#AFACA1;--line:#413E35;--accent:#EED673;--accent-2:#F3DE8A;--tint:#353122;--tint-2:#4C462F;--on-accent:#211E12;--btn:#F3DE8A;--on-btn:#3A3010;--p1:#353122;--p2:#2E3626;--p3:#272537;--p4:#362826;color-scheme:dark}}
+:root[data-theme="dark"][data-pal="lemon"]{--bg:#191815;--surface:#24231E;--ink:#EEECE8;--muted:#AFACA1;--line:#413E35;--accent:#EED673;--accent-2:#F3DE8A;--tint:#353122;--tint-2:#4C462F;--on-accent:#211E12;--btn:#F3DE8A;--on-btn:#3A3010;--p1:#353122;--p2:#2E3626;--p3:#272537;--p4:#362826;color-scheme:dark}
+
 /* Пастель: тёплый молочный фон, персиковые кнопки, мятные, лавандовые и небесные подложки */
 :root[data-pal="pastel"]{--bg:#FBF8F6;--surface:#FFFFFF;--ink:#2F2A33;--muted:#7C7480;--line:#EDE6E3;
   --accent:#C2603F;--accent-2:#E89A7E;--tint:#EEF5FB;--tint-2:#D7E8F6;--on-accent:#FFFFFF;--btn:#F5B9A3;--on-btn:#3B2620;
@@ -111,6 +129,7 @@ button:focus-visible,.line:focus-visible{outline:2px solid var(--accent);outline
 .settings{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:grid;gap:14px}
 .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .row>label{font-size:13px;color:var(--muted);min-width:110px}
+.palname{font-size:13px;color:var(--muted);flex-basis:100%;padding-left:120px}
 .sw{width:30px;height:30px;border-radius:50%;border:2px solid var(--surface);box-shadow:0 0 0 1px var(--line)}
 .sw[aria-pressed="true"]{box-shadow:0 0 0 2px var(--ink)}
 .seg{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden}
@@ -203,7 +222,8 @@ const plain=t=>t.replace(/\{([^|}]+)\|([^}]+)\}/g,"$1 $2");
 const pvHTML=(v,p)=>`<span class="pv"><span class="v">${esc(v)}</span> <span class="p">${esc(p)}</span></span>`;
 const pad=n=>String(n).padStart(2,"0");
 const available=Object.keys(LESSONS).map(Number).sort((a,b)=>a-b);
-function applyPal(){document.documentElement.setAttribute("data-pal",S.pal)}
+const PALS=["pastel","mint","lavender","sakura","sky","latte","lemon","orange"];
+function applyPal(){if(!PALS.includes(S.pal))S.pal="pastel";document.documentElement.setAttribute("data-pal",S.pal)}
 applyPal();
 
 let toastT;function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove("on"),1600)}
@@ -282,10 +302,10 @@ function home(){
     <div class="chips">${items.map(([n,pv])=>{const av=!!LESSONS[n];const cls=S.done[n]?"done":(n===d&&!allDone?"next":"");
       const part=pv.slice(verb.length+1);
       return `<button class="chip ${cls}" ${av?`data-go="${n}"`:"disabled"} aria-label="DAY ${n} ${pv}${av?"":" — скоро"}"><i>${pad(n)}</i>${esc(part)}</button>`}).join("")}</div></div>`).join("")+`</div>`;
-  const pals=[["pastel",0,0,"#F5B9A3"],["orange",0,0,"#E8642C"],["ocean",205,58],["plum",332,52],["forest",152,40],["graphite",212,14]];
-  const palNames={pastel:"Пастель",orange:"Апельсин",ocean:"Океан",plum:"Слива",forest:"Лес",graphite:"Графит"};
+  const pals=[["pastel", "#F5B9A3", "#E6F1FA"], ["mint", "#A8DCC6", "#E8F4EF"], ["lavender", "#CDBDF0", "#F0EBFA"], ["sakura", "#F5B8C8", "#FBEDF1"], ["sky", "#AAD0F0", "#EAF3FB"], ["latte", "#E5CBA9", "#F4ECE1"], ["lemon", "#F3DE8A", "#F8F2DA"], ["orange", "#E8642C", "#BFE6F6"]];
+  const palNames={pastel:"Пастель",mint:"Мята",lavender:"Лаванда",sakura:"Сакура",sky:"Небо",latte:"Латте",lemon:"Лимон",orange:"Апельсин"};
   h+=`<div class="foot"><div class="settings">
-    <div class="row"><label>Цвет</label>${pals.map(([k,hh,ss,hex])=>`<button class="sw" data-pal="${k}" aria-pressed="${S.pal===k}" aria-label="${palNames[k]}" title="${palNames[k]}" style="background:${hex||`hsl(${hh} ${ss}% 38%)`}"></button>`).join("")}</div>
+    <div class="row"><label>Цвет</label>${pals.map(([k,c1,c2])=>`<button class="sw" data-pal="${k}" aria-pressed="${S.pal===k}" aria-label="${palNames[k]}" title="${palNames[k]}" style="background:linear-gradient(135deg,${c1} 50%,${c2} 50%)"></button>`).join("")}<span class="palname" id="palname">${palNames[S.pal]||""}</span></div>
     <div class="row"><label>Скорость озвучки</label><div class="seg">${[0.8,0.9,1].map(r=>`<button data-rate="${r}" aria-pressed="${S.rate===r}">${r===1?"1.0":r}</button>`).join("")}</div></div>
     <button class="danger" data-reset="1">Сбросить прогресс</button>
   </div>
@@ -354,7 +374,7 @@ document.addEventListener("click",e=>{
   if(t.dataset.go){lesson(+t.dataset.go);return}
   if(t.dataset.home){home();return}
   if(t.dataset.review){review();return}
-  if(t.dataset.pal){S.pal=t.dataset.pal;save();applyPal();document.querySelectorAll(".sw").forEach(b=>b.setAttribute("aria-pressed",b.dataset.pal===S.pal));return}
+  if(t.dataset.pal){S.pal=t.dataset.pal;save();applyPal();document.querySelectorAll(".sw").forEach(b=>b.setAttribute("aria-pressed",b.dataset.pal===S.pal));const pn=document.getElementById("palname");if(pn)pn.textContent=t.title;return}
   if(t.dataset.rate){S.rate=+t.dataset.rate;save();document.querySelectorAll("[data-rate]").forEach(b=>b.setAttribute("aria-pressed",+b.dataset.rate===S.rate));return}
   if(t.dataset.reset){if(t.dataset.armed){S.done={};S.mist=[];S.days=[];save();home();toast("Прогресс сброшен");}else{t.dataset.armed="1";t.textContent="Нажмите ещё раз, чтобы сбросить";setTimeout(()=>{if(t.isConnected){delete t.dataset.armed;t.textContent="Сбросить прогресс"}},3000)}return}
   if(t.dataset.hidetr){const on=document.body.classList.toggle("hide-tr");t.setAttribute("aria-pressed",on);document.querySelectorAll(".tr.show").forEach(x=>x.classList.remove("show"));return}
