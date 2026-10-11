@@ -9,6 +9,7 @@ import json, os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMG_DIR = os.path.join(ROOT, 'docs/images')
+FONT_DIR = os.path.join(ROOT, 'docs/fonts')
 EXTS = ('jpg', 'jpeg', 'png', 'webp')
 
 
@@ -30,15 +31,18 @@ for x in days['days']:
     row['image'] = find_image(x['day'])
     slim.append(row)
 
+fonts = sorted('fonts/' + f for f in os.listdir(FONT_DIR)) if os.path.isdir(FONT_DIR) else []
+
 js = ("/* Автогенерируемый файл — правьте content/*.json и запускайте tools/build-data.py */\n"
+      "window.FONT_FILES=" + json.dumps(fonts) + ";\n"
       "window.CHAPTERS=" + json.dumps(days['chapters'], ensure_ascii=False) + ";\n"
       "window.DAYS=" + json.dumps(slim, ensure_ascii=False) + ";\n"
       "window.LESSONS=" + json.dumps(lessons, ensure_ascii=False) + ";\n")
 open(os.path.join(ROOT, 'docs/data.js'), 'w', encoding='utf-8').write(js)
 
 with_img = [r['day'] for r in slim if r['image']]
-print('docs/data.js — %d уроков, %d с полным содержанием, %d с картинкой'
-      % (len(slim), len(lessons), len(with_img)))
+print('docs/data.js — %d уроков, %d с полным содержанием, %d с картинкой, %d шрифтов'
+      % (len(slim), len(lessons), len(with_img), len(fonts)))
 missing = [d for d in range(1, 101) if d not in with_img]
 if missing:
     print('без картинки: ' + ', '.join(str(d) for d in missing))

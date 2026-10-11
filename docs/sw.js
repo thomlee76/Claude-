@@ -1,7 +1,7 @@
 /* Verb 100 — офлайн-кэш */
-var CACHE = "verb100-v1";
+var CACHE = "verb100-v2";
 var CORE = [
-  "./", "./index.html", "./app.css", "./app.js", "./data.js", "./manifest.webmanifest",
+  "./", "./index.html", "./app.css", "./app.js", "./data.js", "./fonts.css", "./manifest.webmanifest",
   "./icons/icon-180.png", "./icons/icon-192.png", "./icons/icon-512.png"
 ];
 
