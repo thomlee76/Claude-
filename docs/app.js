@@ -419,7 +419,7 @@ document.addEventListener("keydown",e=>{if(!$("viewer").classList.contains("on")
 const fb=$("furibtn");let furi=store.get("furi",true);
 function applyF(){document.body.classList.toggle("nofuri",!furi);fb.classList.toggle("on",furi)}
 fb.onclick=()=>{furi=!furi;store.set("furi",furi);applyF()};applyF();
-const PALETTES=[["sumi", "墨 먹·주홍", "#C9463D", "#F6F2EA"], ["indigo", "藍 인디고", "#2F56C8", "#F4F5F7"], ["teal", "海 청록", "#0F766E", "#F2F6F6"], ["amber", "夜 흑연·호박", "#B86E00", "#F3F3F2"], ["forest", "森 숲", "#2F6B4F", "#F3F5F0"]];
+const PALETTES=[["sumi", "墨 먹·주홍", "#C9463D", "#F6F2EA"], ["indigo", "藍 인디고", "#2F56C8", "#F4F5F7"], ["teal", "海 청록", "#0F766E", "#F2F6F6"], ["amber", "夜 흑연·호박", "#B86E00", "#F3F3F2"], ["forest", "森 숲", "#2F6B4F", "#F3F5F0"], ["sakura", "桜 벚꽃", "#D2497A", "#FAF4F6"], ["murasaki", "紫 보라", "#6B4FC9", "#F5F4F8"], ["matcha", "抹茶 말차", "#5F7F2A", "#F6F6EC"], ["sepia", "栗 세피아", "#8A5A2B", "#F5EFE6"], ["sora", "空 하늘", "#0E7FC0", "#F1F6FA"]];
 const tb=$("thbtn"),MODES=[["auto","자동"],["light","밝게"],["dark","어둡게"]],LABEL={auto:"◐",light:"☀",dark:"☾"};
 let theme=store.get("theme","auto"),palette=store.get("palette","sumi");
 function applyT(){
