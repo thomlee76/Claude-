@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 HK = '/home/claude/hk'
 OUT = '/home/claude/claude-/phrasal-verbs'
-AUDIO_DIR = '/home/claude/tts/out'
+AUDIO_DIR = "/home/claude/tts2/out"
 FILES = ['lessons.js', 'lessons2.js', 'lessons_21.js', 'lessons_41.js', 'lessons_61.js', 'lessons_81.js']
 
 app = open(f'{HK}/app.html', encoding='utf-8').read()

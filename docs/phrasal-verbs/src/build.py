@@ -2,7 +2,7 @@ import re, os, json, io, base64, glob
 from PIL import Image
 
 FILES = ['lessons.js', 'lessons2.js', 'lessons_21.js', 'lessons_41.js', 'lessons_61.js', 'lessons_81.js']
-AUDIO_DIR = '/home/claude/tts/out'
+AUDIO_DIR = "/home/claude/tts2/out"
 
 t = open('app.html', encoding='utf-8').read()
 d = '\n'.join(open(f, encoding='utf-8').read() for f in FILES)
