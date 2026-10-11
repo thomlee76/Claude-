@@ -419,10 +419,23 @@ document.addEventListener("keydown",e=>{if(!$("viewer").classList.contains("on")
 const fb=$("furibtn");let furi=store.get("furi",true);
 function applyF(){document.body.classList.toggle("nofuri",!furi);fb.classList.toggle("on",furi)}
 fb.onclick=()=>{furi=!furi;store.set("furi",furi);applyF()};applyF();
-const tb=$("thbtn"),MODES=["auto","light","dark"],LABEL={auto:"◐",light:"☀",dark:"☾"};
-let theme=store.get("theme","auto");
-function applyT(){if(theme==="auto")document.documentElement.removeAttribute("data-theme");else document.documentElement.setAttribute("data-theme",theme);tb.textContent=LABEL[theme]}
-tb.onclick=()=>{theme=MODES[(MODES.indexOf(theme)+1)%3];store.set("theme",theme);applyT()};applyT();
+const PALETTES=[["sumi", "墨 먹·주홍", "#C9463D", "#F6F2EA"], ["indigo", "藍 인디고", "#2F56C8", "#F4F5F7"], ["teal", "海 청록", "#0F766E", "#F2F6F6"], ["amber", "夜 흑연·호박", "#B86E00", "#F3F3F2"], ["forest", "森 숲", "#2F6B4F", "#F3F5F0"]];
+const tb=$("thbtn"),MODES=[["auto","자동"],["light","밝게"],["dark","어둡게"]],LABEL={auto:"◐",light:"☀",dark:"☾"};
+let theme=store.get("theme","auto"),palette=store.get("palette","sumi");
+function applyT(){
+  if(theme==="auto")document.documentElement.removeAttribute("data-theme");else document.documentElement.setAttribute("data-theme",theme);
+  document.documentElement.setAttribute("data-palette",palette);tb.textContent=LABEL[theme];
+  const pl=PALETTES.find(x=>x[0]===palette)||PALETTES[0];
+  const dark=theme==="dark"||(theme==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches);
+  const tc=document.querySelector('meta[name="theme-color"]');if(tc)tc.setAttribute("content",dark?"#15161a":pl[3]);
+}
+function drawSet(){
+  const th=$("setth");th.innerHTML="";MODES.forEach(([k,lab])=>{const b=el("button","chip"+(theme===k?" on":""),lab);b.onclick=()=>{theme=k;store.set("theme",k);applyT();drawSet()};th.appendChild(b)});
+  const pw=$("setpal");pw.innerHTML="";PALETTES.forEach(([k,lab,ac])=>{const b=el("button",palette===k?"on":"",'<i style="background:'+ac+'"></i>'+lab);b.onclick=()=>{palette=k;store.set("palette",k);applyT();drawSet()};pw.appendChild(b)});
+}
+const openSet=o=>{$("setp").classList.toggle("on",o);$("setbg").classList.toggle("on",o);if(o)drawSet()};
+tb.onclick=()=>openSet(!$("setp").classList.contains("on"));$("setbg").onclick=()=>openSet(false);
+applyT();
 route();
 
 /* ===================== PWA ===================== */
