@@ -23,6 +23,8 @@
   --tint:hsl(var(--h) 45% 94%);
   --tint-2:hsl(var(--h) 40% 88%);
   --on-accent:#fff;
+  --btn:var(--accent); --on-btn:var(--on-accent);
+  --p1:var(--tint); --p2:var(--tint); --p3:var(--tint); --p4:var(--tint);
   --good:#2E7D4F; --good-bg:#E5F3EA;
   --bad:#B4433A; --bad-bg:#FBEBE9;
   --f-display:"Bricolage Grotesque", "Golos Text", system-ui, sans-serif;
@@ -45,6 +47,20 @@
 :root[data-pal="plum"]{--h:332;--s:52%}
 :root[data-pal="forest"]{--h:152;--s:40%}
 :root[data-pal="graphite"]{--h:212;--s:14%}
+/* Пастель: тёплый молочный фон, персиковые кнопки, мятные, лавандовые и небесные подложки */
+:root[data-pal="pastel"]{--bg:#FBF8F6;--surface:#FFFFFF;--ink:#2F2A33;--muted:#7C7480;--line:#EDE6E3;
+  --accent:#C2603F;--accent-2:#E89A7E;--tint:#EEF5FB;--tint-2:#D7E8F6;--on-accent:#FFFFFF;--btn:#F5B9A3;--on-btn:#3B2620;
+  --p1:#E3F3EA;--p2:#ECE7F7;--p3:#E6F1FA;--p4:#FDEEE6}
+@media (prefers-color-scheme: dark){ :root[data-pal="pastel"]:not([data-theme="light"]){
+  --bg:#19181C;--surface:#222127;--ink:#EEEAF0;--muted:#A9A2AE;--line:#34323A;--accent:#F2A58C;--accent-2:#E8917A;
+  --tint:#22303B;--tint-2:#2C4050;--on-accent:#2A1A14;--btn:#F2A58C;--on-btn:#2A1A14;--p1:#1F3329;--p2:#2B2740;--p3:#20303D;--p4:#3A2721}}
+:root[data-theme="dark"][data-pal="pastel"]{
+  --bg:#19181C;--surface:#222127;--ink:#EEEAF0;--muted:#A9A2AE;--line:#34323A;--accent:#F2A58C;--accent-2:#E8917A;
+  --tint:#22303B;--tint-2:#2C4050;--on-accent:#2A1A14;--btn:#F2A58C;--on-btn:#2A1A14;--p1:#1F3329;--p2:#2B2740;--p3:#20303D;--p4:#3A2721}
+.stat:nth-child(1){background:var(--p3)} .stat:nth-child(2){background:var(--p1)} .stat:nth-child(3){background:var(--p2)}
+.tag.t0,.tag.t1,.tag.t2{color:var(--ink);padding:3px 10px;border-radius:999px;letter-spacing:.06em}
+.tag.t0{background:var(--p1)} .tag.t1{background:var(--p3)} .tag.t2{background:var(--p2)}
+
 /* Апельсин: как обложка книги — оранжевый акцент + небесно-голубые подложки */
 :root[data-pal="orange"]{--bg:#FFFAF5;--surface:#FFFFFF;--ink:#2B1D14;--muted:#7A6556;--line:#F0DFD2;
   --accent:#C84A17;--accent-2:#E8642C;--tint:#E6F5FC;--tint-2:#BFE6F6;--on-accent:#FFFFFF}
@@ -82,8 +98,8 @@ button:focus-visible,.line:focus-visible{outline:2px solid var(--accent);outline
 .eyebrow{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .today .pv{font-size:52px}
 .today .ru{color:var(--muted);font-size:14px}
-.btn{border:0;border-radius:12px;background:var(--accent);color:var(--on-accent);font-weight:700;padding:14px 18px;font-size:15px;width:100%}
-.btn.ghost{background:var(--tint);color:var(--accent)}
+.btn{border:0;border-radius:12px;background:var(--btn);color:var(--on-btn);font-weight:700;padding:14px 18px;font-size:15px;width:100%}
+.btn.ghost{background:var(--p4);color:var(--accent)}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
 .stat{background:var(--tint);border-radius:12px;padding:10px 12px}
 .stat b{display:block;font-family:var(--f-display);font-size:22px;font-variant-numeric:tabular-nums}
@@ -106,13 +122,13 @@ button:focus-visible,.line:focus-visible{outline:2px solid var(--accent);outline
 .sw[aria-pressed="true"]{box-shadow:0 0 0 2px var(--ink)}
 .seg{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .seg button{border:0;background:transparent;padding:6px 12px;font-size:13px}
-.seg button[aria-pressed="true"]{background:var(--accent);color:var(--on-accent)}
+.seg button[aria-pressed="true"]{background:var(--btn);color:var(--on-btn)}
 .danger{border:0;background:transparent;color:var(--bad);font-size:13px;padding:0;text-align:left}
 
 /* lesson */
 .steps{display:flex;gap:6px;max-width:560px;margin:0 auto;padding:0 16px 10px}
 .steps a{flex:1;text-align:center;font-size:12px;font-weight:600;color:var(--muted);text-decoration:none;padding:6px 4px;border-radius:8px;background:var(--tint)}
-.steps a.on{background:var(--accent);color:var(--on-accent)}
+.steps a.on{background:var(--btn);color:var(--on-btn)}
 .hero{padding-top:22px;display:grid;gap:6px}
 .hero .pv{font-size:58px}
 .hero .ru{color:var(--muted)}
@@ -125,7 +141,7 @@ button:focus-visible,.line:focus-visible{outline:2px solid var(--accent);outline
 .kws{position:absolute;left:12px;right:12px;bottom:12px;display:flex;flex-wrap:wrap;gap:6px}
 .kw{background:color-mix(in srgb,var(--surface) 90%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
   border-radius:999px;padding:5px 12px;font-family:var(--f-en);font-size:14px;font-weight:600;color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
-.kw:first-child{background:var(--accent);color:var(--on-accent)}
+.kw:first-child{background:var(--btn);color:var(--on-btn)}
 section{scroll-margin-top:120px}
 .sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:32px 0 10px}
 .sec-h h2{font-family:var(--f-display);font-size:22px;margin:0;font-weight:700}
@@ -138,7 +154,7 @@ section{scroll-margin-top:120px}
 .line:first-child{border-top:0}
 .spk{align-self:center;font-size:10px;color:var(--muted);opacity:.55;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line)}
 .spk.rec{color:var(--accent);opacity:1;border-color:var(--accent)}
-.line.playing .spk{background:var(--accent);color:var(--on-accent)}
+.line.playing .spk{background:var(--btn);color:var(--on-btn)}
 .line.playing{background:var(--tint)}
 .who{font-size:12px;font-weight:700;color:var(--accent);padding-top:3px;overflow-wrap:anywhere}
 .line>div{min-width:0}
@@ -146,7 +162,7 @@ section{scroll-margin-top:120px}
 .tr{font-size:13.5px;color:var(--muted);margin-top:2px}
 body.hide-tr .tr{filter:blur(5px);opacity:.6}
 body.hide-tr .tr.show{filter:none;opacity:1}
-.note{margin-top:12px;background:var(--tint);border-radius:var(--r);padding:14px 16px;font-size:14px}
+.note{margin-top:12px;background:var(--p4);border-radius:var(--r);padding:14px 16px;font-size:14px}
 .note b{color:var(--accent)} .note i{font-family:var(--f-en)}
 .note .eyebrow{color:var(--accent);margin-bottom:4px}
 .talk{margin-top:12px}
@@ -2939,8 +2955,8 @@ Object.assign(window.LESSONS,{
 const $=s=>document.querySelector(s);
 const store={get(k,d){try{const v=localStorage.getItem("pv100:"+k);return v==null?d:JSON.parse(v)}catch(e){return d}},
              set(k,v){try{localStorage.setItem("pv100:"+k,JSON.stringify(v))}catch(e){}}};
-let S={done:store.get("done",{}),mist:store.get("mist",[]),pal:store.get("pal2","orange"),rate:store.get("rate",0.9),days:store.get("days",[])};
-function save(){store.set("done",S.done);store.set("mist",S.mist);store.set("pal2",S.pal);store.set("rate",S.rate);store.set("days",S.days)}
+let S={done:store.get("done",{}),mist:store.get("mist",[]),pal:store.get("pal3","pastel"),rate:store.get("rate",0.9),days:store.get("days",[])};
+function save(){store.set("done",S.done);store.set("mist",S.mist);store.set("pal3",S.pal);store.set("rate",S.rate);store.set("days",S.days)}
 const esc=t=>String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;");
 const hl=t=>esc(t).replace(/\{([^|}]+)\|([^}]+)\}/g,'<b class="v">$1</b> <b class="p">$2</b>');
 const plain=t=>t.replace(/\{([^|}]+)\|([^}]+)\}/g,"$1 $2");
@@ -3026,8 +3042,8 @@ function home(){
     <div class="chips">${items.map(([n,pv])=>{const av=!!LESSONS[n];const cls=S.done[n]?"done":(n===d&&!allDone?"next":"");
       const part=pv.slice(verb.length+1);
       return `<button class="chip ${cls}" ${av?`data-go="${n}"`:"disabled"} aria-label="DAY ${n} ${pv}${av?"":" — скоро"}"><i>${pad(n)}</i>${esc(part)}</button>`}).join("")}</div></div>`).join("")+`</div>`;
-  const pals=[["orange",0,0,"#E8642C"],["ocean",205,58],["plum",332,52],["forest",152,40],["graphite",212,14]];
-  const palNames={orange:"Апельсин",ocean:"Океан",plum:"Слива",forest:"Лес",graphite:"Графит"};
+  const pals=[["pastel",0,0,"#F5B9A3"],["orange",0,0,"#E8642C"],["ocean",205,58],["plum",332,52],["forest",152,40],["graphite",212,14]];
+  const palNames={pastel:"Пастель",orange:"Апельсин",ocean:"Океан",plum:"Слива",forest:"Лес",graphite:"Графит"};
   h+=`<div class="foot"><div class="settings">
     <div class="row"><label>Цвет</label>${pals.map(([k,hh,ss,hex])=>`<button class="sw" data-pal="${k}" aria-pressed="${S.pal===k}" aria-label="${palNames[k]}" title="${palNames[k]}" style="background:${hex||`hsl(${hh} ${ss}% 38%)`}"></button>`).join("")}</div>
     <div class="row"><label>Скорость озвучки</label><div class="seg">${[0.8,0.9,1].map(r=>`<button data-rate="${r}" aria-pressed="${S.rate===r}">${r===1?"1.0":r}</button>`).join("")}</div></div>
@@ -3061,7 +3077,7 @@ function lesson(d){
    <div class="dlg" id="dlg">${L.dialog.map((l,i)=>lineHTML(l[0],l[1],l[2],i+1)).join("")}</div>
    <div class="note"><div class="eyebrow">Обратите внимание</div>${L.note}</div></section>
   <section id="s2"><div class="sec-h"><h2>Small talk</h2><span>≈ 3 мин · 3 ситуации</span></div>
-   ${L.talks.map((t,i)=>`<div class="talk"><div class="talk-h"><span class="tag">${esc(t[0])}</span><button class="play" data-playall="t${i}">▶ Слушать</button></div>
+   ${L.talks.map((t,i)=>`<div class="talk"><div class="talk-h"><span class="tag t${i}">${esc(t[0])}</span><button class="play" data-playall="t${i}">▶ Слушать</button></div>
      <div class="dlg" id="t${i}">${t[1].map(l=>lineHTML(...l)).join("")}</div></div>`).join("")}</section>
   <section id="s3"><div class="sec-h"><h2>Тест</h2><span>≈ 2 мин · ${L.quiz.length} вопросов</span></div>
    ${L.quiz.map((q,i)=>qHTML(q,i)).join("")}<div id="res"></div></section>`;
