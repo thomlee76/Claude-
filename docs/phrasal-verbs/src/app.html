@@ -238,7 +238,7 @@ function vq(v){return (v.name||"")+" "+(v.voiceURI||"")}
 function isPrem(v){return !!v&&/premium|enhanced/i.test(vq(v))}
 function vLabel(v){if(!v)return"—";const q=vq(v);return v.name+(/premium/i.test(v.name)?"":/premium/i.test(q)?" (Premium)":/enhanced/i.test(v.name)?"":/enhanced/i.test(q)?" (Enhanced)":"")}
 function vScore(v){let s=0;const q=vq(v);if(/premium/i.test(q))s+=40;else if(/enhanced|neural|natural/i.test(q))s+=25;if(/en(-|_)US/i.test(v.lang))s+=5;if(v.localService)s+=2;
-  if(/(Albert|Bad News|Bahh|Bells|Boing|Bubbles|Cellos|Good News|Jester|Organ|Superstar|Trinoids|Whisper|Wobble|Zarvox|Junior|Kathy|Ralph)/i.test(v.name))s-=100;return s}
+  if(/(Albert|Bad News|Bahh|Bells|Boing|Bubbles|Cellos|Good News|Jester|Organ|Superstar|Trinoids|Whisper|Wobble|Zarvox|Junior|Kathy|Ralph)/i.test(v.name))s-=100;if(/^Fred$/i.test(v.name))s-=20;return s}
 function bestVoice(male){const vs=voices().filter(v=>male?MALE_V.test(v.name):FEM_V.test(v.name)).sort((a,b)=>vScore(b)-vScore(a));
   return vs[0]||voices().sort((a,b)=>vScore(b)-vScore(a))[0]||null}
 function useDev(){return S.voice==="dev"||(S.voice==="auto"&&voiceInfo().prem)}
@@ -248,13 +248,14 @@ let AU=null,auClean=null;
 function stop(){queue=[];speaking=false;try{speechSynthesis.cancel()}catch(e){};if(AU){try{AU.pause()}catch(e){}}if(auClean){auClean();auClean=null}document.querySelectorAll(".line.playing").forEach(x=>x.classList.remove("playing"))}
 function sayList(items){ // items: [{text,who,el,seg}]
   const L=cur&&LESSONS[cur];
-  if(!useDev()&&L&&L.audio&&L.marks&&items.length&&items.every(it=>it.seg!=null&&L.marks[it.seg])){playSegs(items);return}
+  const isT=it=>typeof it.seg==="string";
+  if(!useDev()&&L&&items.length&&items.every(it=>segOK(L,it.seg))&&items.every(it=>isT(it)===isT(items[0]))){playSegs(items);return}
   ttsList(items)}
 function playSegs(items){
-  stop();const L=LESSONS[cur],m=L.marks;
+  stop();const L=LESSONS[cur],T=typeof items[0].seg==="string",m=T?L.tmarks:L.marks,src=T?L.taudio:L.audio,ix=it=>T?+it.seg.slice(1):it.seg;
   if(!AU){AU=new Audio();AU.preload="auto"}
-  const a=AU;if(a.dataset.src!==L.audio){a.src=L.audio;a.dataset.src=L.audio}
-  const segs=items.map(it=>({s:m[it.seg][0],e:m[it.seg][1],el:it.el})),start=segs[0].s,end=segs[segs.length-1].e;
+  const a=AU;if(a.dataset.src!==src){a.src=src;a.dataset.src=src}
+  const segs=items.map(it=>({s:m[ix(it)][0],e:m[ix(it)][1],el:it.el})),start=segs[0].s,end=segs[segs.length-1].e;
   a.playbackRate=S.rate/0.9;
   const onT=()=>{const t=a.currentTime;segs.forEach(g=>{if(g.el)g.el.classList.toggle("playing",t>=g.s-0.05&&t<g.e+0.3)});if(t>=end){a.pause();clean()}};
   const clean=()=>{a.removeEventListener("timeupdate",onT);document.querySelectorAll(".line.playing").forEach(x=>x.classList.remove("playing"))};
@@ -320,9 +321,7 @@ function home(){
   h+=`<div class="foot"><div class="settings">
     <div class="row"><label>Цвет</label>${pals.map(([k,c1,c2])=>`<button class="sw" data-pal="${k}" aria-pressed="${S.pal===k}" aria-label="${palNames[k]}" title="${palNames[k]}" style="background:linear-gradient(135deg,${c1} 50%,${c2} 50%)"></button>`).join("")}<span class="palname" id="palname">${palNames[S.pal]||""}</span></div>
     <div class="row"><label>Озвучка</label><div class="seg"><button data-voice="auto" aria-pressed="${S.voice==="auto"}">Авто</button><button data-voice="rec" aria-pressed="${S.voice==="rec"}">Запись</button><button data-voice="dev" aria-pressed="${S.voice==="dev"}">iPhone</button></div>
-      <span class="palname" id="vinfo"></span>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:6px;width:100%"><button class="btn ghost" style="width:auto;padding:6px 12px;font-size:13px" data-vtest="1">▶ Проверить голос iPhone</button></div>
-      <details style="width:100%;margin-top:6px;font-size:12px;color:var(--muted)"><summary id="vsum">Голоса на устройстве</summary><div id="vlist" style="margin-top:4px;line-height:1.5"></div></details></div>
+      <span class="palname" id="vinfo"></span></div>
     <div class="row"><label>Скорость озвучки</label><div class="seg">${[0.8,0.9,1].map(r=>`<button data-rate="${r}" aria-pressed="${S.rate===r}">${r===1?"1.0":r}</button>`).join("")}</div></div>
     <button class="danger" data-reset="1">Сбросить прогресс</button>
   </div>
@@ -332,7 +331,9 @@ function home(){
 
 /* ---------- LESSON ---------- */
 let cur=null,answers=[],reviewMode=false,reviewItems=[];
-function lineHTML(who,en,tr,seg){const sg=seg!=null&&LESSONS[cur]&&LESSONS[cur].marks?seg:null;return `<div class="line" tabindex="0" data-say="${esc(plain(en))}" data-who="${esc(who)}"${sg!=null?` data-seg="${sg}"`:""}><div class="who">${esc(who)}</div><div><div class="en">${hl(en)}</div><div class="tr">${esc(tr)}</div></div><span class="spk${sg!=null?" rec":""}" aria-hidden="true">▶</span></div>`}
+function segOK(L,seg){if(seg==null||!L)return false;if(typeof seg==="string"&&seg[0]==="t")return !!(L.taudio&&L.tmarks&&L.tmarks[+seg.slice(1)]);return !!(L.audio&&L.marks&&L.marks[seg])}
+const segOf=el=>{const s=el.dataset.seg;return s==null?null:(s[0]==="t"?s:+s)};
+function lineHTML(who,en,tr,seg){const sg=segOK(LESSONS[cur],seg)?seg:null;return `<div class="line" tabindex="0" data-say="${esc(plain(en))}" data-who="${esc(who)}"${sg!=null?` data-seg="${sg}"`:""}><div class="who">${esc(who)}</div><div><div class="en">${hl(en)}</div><div class="tr">${esc(tr)}</div></div><span class="spk${sg!=null?" rec":""}" aria-hidden="true">▶</span></div>`}
 function shuffle(n){const a=[...Array(n).keys()];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 const isRu=t=>/[а-яё]/i.test(t);
 function qHTML(q,qi,tag){
@@ -354,8 +355,8 @@ function lesson(d){
    <div class="dlg" id="dlg">${L.dialog.map((l,i)=>lineHTML(l[0],l[1],l[2],i+1)).join("")}</div>
    <div class="note"><div class="eyebrow">Обратите внимание</div>${L.note}</div></section>
   <section id="s2"><div class="sec-h"><h2>Small talk</h2><span>≈ 3 мин · 3 ситуации</span></div>
-   ${L.talks.map((t,i)=>`<div class="talk"><div class="talk-h"><span class="tag t${i}">${esc(t[0])}</span><button class="play" data-playall="t${i}">▶ Слушать</button></div>
-     <div class="dlg" id="t${i}">${t[1].map(l=>lineHTML(...l)).join("")}</div></div>`).join("")}</section>
+   ${(()=>{let o=0;return L.talks.map(t=>{const s=o;o+=t[1].length;return s})})().map((off,i)=>[L.talks[i],off]).map(([t,off],i)=>`<div class="talk"><div class="talk-h"><span class="tag t${i}">${esc(t[0])}</span><button class="play" data-playall="t${i}">▶ Слушать</button></div>
+     <div class="dlg" id="t${i}">${t[1].map((l,j)=>lineHTML(l[0],l[1],l[2],"t"+(off+j))).join("")}</div></div>`).join("")}</section>
   <section id="s3"><div class="sec-h"><h2>Тест</h2><span>≈ 2 мин · ${L.quiz.length} вопросов</span></div>
    ${L.quiz.map((q,i)=>qHTML(q,i)).join("")}<div id="res"></div></section>`;
   $("#app").innerHTML=h;window.scrollTo(0,0);startTimer();
@@ -398,7 +399,7 @@ document.addEventListener("click",e=>{
   if(t.dataset.rate){S.rate=+t.dataset.rate;save();document.querySelectorAll("[data-rate]").forEach(b=>b.setAttribute("aria-pressed",+b.dataset.rate===S.rate));return}
   if(t.dataset.reset){if(t.dataset.armed){S.done={};S.mist=[];S.days=[];save();home();toast("Прогресс сброшен");}else{t.dataset.armed="1";t.textContent="Нажмите ещё раз, чтобы сбросить";setTimeout(()=>{if(t.isConnected){delete t.dataset.armed;t.textContent="Сбросить прогресс"}},3000)}return}
   if(t.dataset.hidetr){const on=document.body.classList.toggle("hide-tr");t.setAttribute("aria-pressed",on);document.querySelectorAll(".tr.show").forEach(x=>x.classList.remove("show"));return}
-  if(t.dataset.playall){const box=$("#"+t.dataset.playall);sayList([...box.querySelectorAll(".line")].map(el=>({text:el.dataset.say,who:el.dataset.who,el,seg:el.dataset.seg!=null?+el.dataset.seg:null})));return}
+  if(t.dataset.playall){const box=$("#"+t.dataset.playall);sayList([...box.querySelectorAll(".line")].map(el=>({text:el.dataset.say,who:el.dataset.who,el,seg:segOf(el)})));return}
   if(t.matches(".opt")){
     const q=t.closest(".q");if(q.dataset.done)return;q.dataset.done="1";
     const qi=+q.dataset.qi,ok=t.dataset.i==="0";answers[qi]=ok;
@@ -411,7 +412,7 @@ document.addEventListener("click",e=>{
     save();finishCheck();return}
   if(t.matches(".steps a")){e.preventDefault();const s=$(t.getAttribute("href"));if(s)window.scrollTo({top:s.getBoundingClientRect().top+scrollY-118,behavior:"smooth"});return}
   if(t.matches(".tr")&&document.body.classList.contains("hide-tr")){t.classList.toggle("show");return}
-  const line=t.closest(".line");if(line){sayList([{text:line.dataset.say,who:line.dataset.who,el:line,seg:line.dataset.seg!=null?+line.dataset.seg:null}]);}
+  const line=t.closest(".line");if(line){sayList([{text:line.dataset.say,who:line.dataset.who,el:line,seg:segOf(line)}]);}
 });
 document.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.classList&&e.target.classList.contains("line")){e.preventDefault();e.target.click()}});
 let spyT;window.addEventListener("scroll",()=>{clearTimeout(spyT);spyT=setTimeout(()=>{if($("#steps").hidden)return;
@@ -420,7 +421,7 @@ let spyT;window.addEventListener("scroll",()=>{clearTimeout(spyT);spyT=setTimeou
 function showVoiceList(){const L=document.getElementById("vlist"),sm=document.getElementById("vsum");if(!L)return;
   const vs=voices().sort((a,b)=>vScore(b)-vScore(a));if(sm)sm.textContent="Голоса на устройстве (англ.): "+vs.length;
   L.innerHTML=vs.length?vs.map(v=>`${esc(vLabel(v))} · ${esc(v.lang)}${isPrem(v)?" ✓":""}<br><span style="opacity:.7">${esc(v.voiceURI||"")}</span>`).join("<br>"):"Браузер не передал ни одного английского голоса"}
-function showVoice(){showVoiceList();const el=document.getElementById("vinfo");if(!el)return;if(!useDev()){el.textContent=(S.voice==="auto"?"Авто: голоса Premium не найдены — играет запись. ":"")+"Ключевая фраза и диалог — записанные голоса; small talk — голос iPhone";return}
+function showVoice(){showVoiceList();const el=document.getElementById("vinfo");if(!el)return;if(!useDev()){el.textContent=(S.voice==="auto"?"Авто: ":"")+"все фразы озвучены записанными естественными голосами";return}
   const vi=voiceInfo();el.textContent=(S.voice==="auto"?"Авто: найдены голоса iPhone — ":"")+vi.text+(vi.prem?"":" · для естественного звучания скачайте голоса Premium в настройках iPhone")}
 try{speechSynthesis.getVoices();speechSynthesis.onvoiceschanged=()=>showVoice()}catch(e){}
 home();

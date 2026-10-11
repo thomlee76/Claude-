@@ -17,9 +17,12 @@ head_part, body_part = app[:cut], app[cut:]
 
 data = '\n'.join(open(f'{HK}/{f}', encoding='utf-8').read() for f in FILES)
 marks = {}
+tmarks = {}
 for j in sorted(glob.glob(AUDIO_DIR + '/day*.json')):
-    n = int(re.search(r'day(\d+)', j).group(1))
-    marks[n] = json.load(open(j))
+    m = re.search(r'day(\d+)(_t)?\.json$', j); n = int(m.group(1))
+    if m.group(2):
+        if os.path.exists(j[:-5] + '.mp3'): tmarks[n] = json.load(open(j))
+    else: marks[n] = json.load(open(j))
 
 def audio_name(n): return 'day%02d.mp3' % n
 def img_name(n): return 'day%02d.jpg' % n
@@ -52,6 +55,9 @@ for n in range(1, 101):
     a = f'{AUDIO_DIR}/day{n:02d}.mp3'
     if os.path.exists(a):
         shutil.copy(a, f'{OUT}/audio/{audio_name(n)}'); audio_files.append('audio/' + audio_name(n))
+    at = f'{AUDIO_DIR}/day{n:02d}_t.mp3'
+    if os.path.exists(at) and n in tmarks:
+        shutil.copy(at, f'{OUT}/audio/day{n:02d}_t.mp3'); audio_files.append('audio/day%02d_t.mp3' % n)
 
 # ---------- icons ----------
 def icon(sz, path):
@@ -69,13 +75,15 @@ json.dump({"name": "Фразовые глаголы 100", "short_name": "Гла�
 
 # ---------- PWA page ----------
 attach = ('\n(function(M){for(const k in M){const L=window.LESSONS[k];if(L){L.audio="audio/day"+String(k).padStart(2,"0")+".mp3";'
-          'L.marks=M[k]}}})(' + json.dumps(marks) + ');\n')
+          'L.marks=M[k]}}})(' + json.dumps(marks) + ');\n'
+          '(function(M){for(const k in M){const L=window.LESSONS[k];if(L){L.taudio="audio/day"+String(k).padStart(2,"0")+"_t.mp3";'
+          'L.tmarks=M[k]}}})(' + json.dumps(tmarks) + ');\n')
 pwa_head = ('<link rel="manifest" href="manifest.webmanifest">\n<link rel="apple-touch-icon" href="apple-touch-icon.png">\n'
             '<meta name="apple-mobile-web-app-capable" content="yes">\n<meta name="mobile-web-app-capable" content="yes">\n'
             '<meta name="apple-mobile-web-app-title" content="Глаголы 100">\n'
             '<meta name="apple-mobile-web-app-status-bar-style" content="default">\n')
 import datetime
-APP_VER = datetime.datetime.utcnow().strftime('%d.%m.%Y %H:%M')
+APP_VER = datetime.datetime.now(datetime.timezone.utc).strftime('%d.%m.%Y %H:%M')
 pwa_body = ('<script>if("serviceWorker" in navigator){const had=!!navigator.serviceWorker.controller;let rl=false;'
             'navigator.serviceWorker.addEventListener("controllerchange",()=>{if(had&&!rl){rl=true;location.reload()}});'
             'addEventListener("load",()=>{navigator.serviceWorker.register("sw.js",{updateViaCache:"none"})'
@@ -121,8 +129,11 @@ open(f'{OUT}/sw.js', 'w', encoding='utf-8').write(sw)
 def b64(p, mime): return f'data:{mime};base64,' + base64.b64encode(open(p, 'rb').read()).decode()
 off_data = re.sub(r'img:"(img/day\d+\.jpg)"', lambda m: 'img:"' + b64(f'{OUT}/{m.group(1)}', 'image/jpeg') + '"', data)
 amap = {n: b64(f'{OUT}/audio/{audio_name(n)}', 'audio/mpeg') for n in marks}
+tmap = {n: b64(f'{OUT}/audio/day%02d_t.mp3' % n, 'audio/mpeg') for n in tmarks}
 off_attach = ('\n(function(M,A){for(const k in M){const L=window.LESSONS[k];if(L){L.audio=A[k];L.marks=M[k]}}})(' +
-              json.dumps(marks) + ',' + json.dumps(amap) + ');\n')
+              json.dumps(marks) + ',' + json.dumps(amap) + ');\n'
+              '(function(M,A){for(const k in M){const L=window.LESSONS[k];if(L){L.taudio=A[k];L.tmarks=M[k]}}})(' +
+              json.dumps(tmarks) + ',' + json.dumps(tmap) + ');\n')
 open(f'{OUT}/offline/phrasal-verbs-100-offline.html', 'w', encoding='utf-8').write(page(off_data + off_attach))
 
 # ---------- sources ----------
@@ -134,4 +145,4 @@ json.dump(marks, open(f'{OUT}/src/audio_marks.json', 'w'))
 
 sz = lambda p: round(os.path.getsize(p) / 1e6, 2)
 print('index.html MB', sz(f'{OUT}/index.html'), '| offline MB', sz(f'{OUT}/offline/phrasal-verbs-100-offline.html'),
-      '| imgs', len(img_files), '| audio', len(audio_files), '| precache', len(precache), '| sw ver', ver)
+      '| imgs', len(img_files), '| talks', len(tmarks), '| audio', len(audio_files), '| precache', len(precache), '| sw ver', ver)
