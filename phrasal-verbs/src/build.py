@@ -9,11 +9,16 @@ d = '\n'.join(open(f, encoding='utf-8').read() for f in FILES)
 
 # audio: attach sprite path + segment marks to every lesson that has a recording
 marks = {}
-for j in sorted(glob.glob(AUDIO_DIR + '/day*.json')):
+tmarks = {}
+for j in sorted(glob.glob(AUDIO_DIR + '/day*_t.json')):
+    n = int(re.search(r'day(\d+)_t', j).group(1))
+    if os.path.exists(j[:-5] + '.mp3'): tmarks[n] = json.load(open(j))
+for j in sorted(glob.glob(AUDIO_DIR + '/day[0-9][0-9].json')) + sorted(glob.glob(AUDIO_DIR + '/day[0-9][0-9][0-9].json')):
     n = int(re.search(r'day(\d+)', j).group(1))
     if os.path.exists(j[:-5] + '.mp3'):
         marks[n] = json.load(open(j))
 d += '\n(function(M){for(const k in M){const L=window.LESSONS[k];if(L){L.audio="audio/day"+String(k).padStart(2,"0")+".mp3";L.marks=M[k]}}})(' + json.dumps(marks) + ');\n'
+d += '(function(M){for(const k in M){const L=window.LESSONS[k];if(L){L.taudio="audio/day"+String(k).padStart(2,"0")+"_t.mp3";L.tmarks=M[k]}}})(' + json.dumps(tmarks) + ');\n'
 
 out = t.replace('/*LESSONS*/', d)
 open('index.html', 'w', encoding='utf-8').write(out)
@@ -28,4 +33,4 @@ def datauri(p):
 html = open('index.html', encoding='utf-8').read()
 html = re.sub(r'img:"(img/day\d+\.jpg)"', lambda m: 'img:"' + datauri(m.group(1)) + '"' if os.path.exists(m.group(1)) else 'img:null', html)
 open('index.html', 'w', encoding='utf-8').write(html)
-print('lessons with audio:', len(marks), '| page size MB:', round(len(html) / 1e6, 2))
+print('lessons with audio:', len(marks), 'talks:', len(tmarks), '| page size MB:', round(len(html) / 1e6, 2))
