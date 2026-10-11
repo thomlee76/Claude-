@@ -82,7 +82,9 @@ open(f'{OUT}/index.html', 'w', encoding='utf-8').write(html)
 
 # ---------- service worker ----------
 precache = ['./', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'] + img_files + audio_files
-ver = hashlib.sha1(''.join(open(f'{OUT}/{p}', 'rb').read().hex()[:64] + p for p in precache[1:]).encode()).hexdigest()[:10]
+_h = hashlib.sha1()
+for _p in precache[1:]: _h.update(_p.encode()); _h.update(open(f'{OUT}/{_p}', 'rb').read())
+ver = _h.hexdigest()[:10]
 sw = '''const CACHE="pv100-%s";const PRECACHE=%s;
 self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(PRECACHE)).then(()=>self.skipWaiting()))});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE&&!k.startsWith("pv100-fonts")).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
