@@ -89,6 +89,20 @@
   --bg:#17110D;--surface:#211913;--ink:#F4EAE2;--muted:#B9A595;--line:#3A2C22;
   --accent:#FF8A50;--accent-2:#F07A3E;--tint:#132A35;--tint-2:#1E4253;--on-accent:#1A0E07}
 
+/* Хакерс: цвета обложки книги — оранжевая шапка, белое тело, голубые акценты, тёмно-коричневый текст */
+:root[data-pal="hackers"]{--bg:#FFF8F4;--surface:#FFFFFF;--ink:#4A1A10;--muted:#8A5A4C;--line:#F3DCD2;--accent:#EE5A2A;--accent-2:#A8DCF0;--tint:#FFE8DE;--tint-2:#FFD2C0;--on-accent:#FFFFFF;--btn:#EE5A2A;--on-btn:#FFFFFF;--p1:#FFE8DE;--p2:#E2F3FB;--p3:#FFF4CC;--p4:#E2F3FB;--hk-bar:#EE5A2A;--hk-bar-ink:#FFFFFF;--hk-bar-sub:#FFD9CB;--hk-blue:#1E7FA8;--hk-blue-bg:#A8DCF0;--hk-seg:#A8DCF0;--hk-seg-ink:#4A1A10}
+@media (prefers-color-scheme: dark){ :root[data-pal="hackers"]:not([data-theme="light"]){--bg:#1A1210;--surface:#241A17;--ink:#F3E7E2;--muted:#B99A8F;--line:#3F2D28;--accent:#FF7A4D;--accent-2:#A8DCF0;--tint:#3A2520;--tint-2:#4E3027;--on-accent:#1A1210;--btn:#FF7A4D;--on-btn:#1A1210;--p1:#3A2520;--p2:#203038;--p3:#3A3320;--p4:#203038;--hk-bar:#D94F22;--hk-bar-ink:#FFFFFF;--hk-bar-sub:#FFD9CB;--hk-blue:#8FD0EE;--hk-blue-bg:#2C4A5A;--hk-seg:#2C4A5A;--hk-seg-ink:#F3E7E2;color-scheme:dark}}
+:root[data-theme="dark"][data-pal="hackers"]{--bg:#1A1210;--surface:#241A17;--ink:#F3E7E2;--muted:#B99A8F;--line:#3F2D28;--accent:#FF7A4D;--accent-2:#A8DCF0;--tint:#3A2520;--tint-2:#4E3027;--on-accent:#1A1210;--btn:#FF7A4D;--on-btn:#1A1210;--p1:#3A2520;--p2:#203038;--p3:#3A3320;--p4:#203038;--hk-bar:#D94F22;--hk-bar-ink:#FFFFFF;--hk-bar-sub:#FFD9CB;--hk-blue:#8FD0EE;--hk-blue-bg:#2C4A5A;--hk-seg:#2C4A5A;--hk-seg-ink:#F3E7E2;color-scheme:dark}
+:root[data-pal="hackers"] .bar{background:var(--hk-bar);border-bottom:0;box-shadow:0 2px 12px rgba(120,40,10,.18)}
+:root[data-pal="hackers"] .bar h1{color:var(--hk-bar-ink)} :root[data-pal="hackers"] .bar h1 small{color:var(--hk-bar-sub)}
+:root[data-pal="hackers"] .bar .icon-btn{background:rgba(255,255,255,.18);color:#fff;border-color:transparent} :root[data-pal="hackers"] .bar .timer{color:var(--hk-bar-sub)}
+:root[data-pal="hackers"] .pv .p,:root[data-pal="hackers"] .en b.p{color:var(--hk-blue)}
+:root[data-pal="hackers"] .en b.v,:root[data-pal="hackers"] .en b.p{background:linear-gradient(transparent 62%,var(--hk-blue-bg) 62%)}
+:root[data-pal="hackers"] .chip.next{border-color:var(--hk-blue);box-shadow:inset 0 0 0 1px var(--hk-blue)}
+:root[data-pal="hackers"] .chip.done{background:var(--p2)} :root[data-pal="hackers"] .chip.done i::after{color:var(--hk-blue)}
+:root[data-pal="hackers"] .btn.ghost{background:var(--p2);color:var(--hk-blue)}
+:root[data-pal="hackers"] .seg button[aria-pressed="true"]{background:var(--hk-seg);color:var(--hk-seg-ink)}
+
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
 .wrap{max-width:560px;margin:0 auto;padding-inline:16px;padding-block:0 48px}
@@ -2983,7 +2997,7 @@ const plain=t=>t.replace(/\{([^|}]+)\|([^}]+)\}/g,"$1 $2");
 const pvHTML=(v,p)=>`<span class="pv"><span class="v">${esc(v)}</span> <span class="p">${esc(p)}</span></span>`;
 const pad=n=>String(n).padStart(2,"0");
 const available=Object.keys(LESSONS).map(Number).sort((a,b)=>a-b);
-const PALS=["pastel","mint","lavender","sakura","sky","latte","lemon","orange"];
+const PALS=["pastel","mint","lavender","sakura","sky","latte","lemon","orange","hackers"];
 function applyPal(){if(!PALS.includes(S.pal))S.pal="pastel";document.documentElement.setAttribute("data-pal",S.pal)}
 applyPal();
 
@@ -3077,8 +3091,8 @@ function home(){
     <div class="chips">${items.map(([n,pv])=>{const av=!!LESSONS[n];const cls=S.done[n]?"done":(n===d&&!allDone?"next":"");
       const part=pv.slice(verb.length+1);
       return `<button class="chip ${cls}" ${av?`data-go="${n}"`:"disabled"} aria-label="DAY ${n} ${pv}${av?"":" — скоро"}"><i>${pad(n)}</i>${esc(part)}</button>`}).join("")}</div></div>`).join("")+`</div>`;
-  const pals=[["pastel", "#F5B9A3", "#E6F1FA"], ["mint", "#A8DCC6", "#E8F4EF"], ["lavender", "#CDBDF0", "#F0EBFA"], ["sakura", "#F5B8C8", "#FBEDF1"], ["sky", "#AAD0F0", "#EAF3FB"], ["latte", "#E5CBA9", "#F4ECE1"], ["lemon", "#F3DE8A", "#F8F2DA"], ["orange", "#E8642C", "#BFE6F6"]];
-  const palNames={pastel:"Пастель",mint:"Мята",lavender:"Лаванда",sakura:"Сакура",sky:"Небо",latte:"Латте",lemon:"Лимон",orange:"Апельсин"};
+  const pals=[["pastel", "#F5B9A3", "#E6F1FA"], ["mint", "#A8DCC6", "#E8F4EF"], ["lavender", "#CDBDF0", "#F0EBFA"], ["sakura", "#F5B8C8", "#FBEDF1"], ["sky", "#AAD0F0", "#EAF3FB"], ["latte", "#E5CBA9", "#F4ECE1"], ["lemon", "#F3DE8A", "#F8F2DA"], ["orange", "#E8642C", "#BFE6F6"], ["hackers", "#EE5A2A", "#A8DCF0"]];
+  const palNames={pastel:"Пастель",mint:"Мята",lavender:"Лаванда",sakura:"Сакура",sky:"Небо",latte:"Латте",lemon:"Лимон",orange:"Апельсин",hackers:"Хакерс"};
   h+=`<div class="foot"><div class="settings">
     <div class="row"><label>Цвет</label>${pals.map(([k,c1,c2])=>`<button class="sw" data-pal="${k}" aria-pressed="${S.pal===k}" aria-label="${palNames[k]}" title="${palNames[k]}" style="background:linear-gradient(135deg,${c1} 50%,${c2} 50%)"></button>`).join("")}<span class="palname" id="palname">${palNames[S.pal]||""}</span></div>
     <div class="row"><label>Озвучка</label><div class="seg"><button data-voice="auto" aria-pressed="${S.voice==="auto"}">Авто</button><button data-voice="rec" aria-pressed="${S.voice==="rec"}">Запись</button><button data-voice="dev" aria-pressed="${S.voice==="dev"}">iPhone</button></div>
