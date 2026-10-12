@@ -1,0 +1,52 @@
+{
+  "name": "日本語 復習ノート",
+  "short_name": "日本語",
+  "description": "Preply 일본어 수업 복습 앱 — 플래시카드·퀴즈·문법·한자·회화·자료·진도",
+  "lang": "ko",
+  "dir": "ltr",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "portrait",
+  "start_url": "./index.html",
+  "scope": "./",
+  "background_color": "#F7F7F8",
+  "theme_color": "#F7F7F8",
+  "categories": [
+    "education"
+  ],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "플래시카드",
+      "short_name": "카드",
+      "url": "./index.html#flash"
+    },
+    {
+      "name": "퀴즈",
+      "short_name": "퀴즈",
+      "url": "./index.html#quiz"
+    }
+  ]
+}
