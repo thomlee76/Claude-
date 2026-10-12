@@ -1,7 +1,7 @@
 {
   "name": "日本語 復習ノート",
   "short_name": "日本語",
-  "description": "Preply LESSON 01–03 일본어 복습 앱 — 문법·단어·한자·퀴즈·회화·진도·노트",
+  "description": "Preply 일본어 수업 복습 앱 — 플래시카드·퀴즈·문법·한자·회화·자료·진도",
   "lang": "ko",
   "dir": "ltr",
   "display": "standalone",
@@ -12,8 +12,8 @@
   "orientation": "portrait",
   "start_url": "./index.html",
   "scope": "./",
-  "background_color": "#F4F5F7",
-  "theme_color": "#F4F5F7",
+  "background_color": "#F7F7F8",
+  "theme_color": "#F7F7F8",
   "categories": [
     "education"
   ],
@@ -39,14 +39,14 @@
   ],
   "shortcuts": [
     {
+      "name": "플래시카드",
+      "short_name": "카드",
+      "url": "./index.html#flash"
+    },
+    {
       "name": "퀴즈",
       "short_name": "퀴즈",
       "url": "./index.html#quiz"
-    },
-    {
-      "name": "학습",
-      "short_name": "학습",
-      "url": "./index.html#l1/gram"
     }
   ]
 }
