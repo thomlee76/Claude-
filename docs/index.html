@@ -73,7 +73,7 @@ body.sub .page{padding-bottom:40px}
 .strip{display:flex;gap:5px;height:100%;padding:6px}
 .strip .mc{flex:1;border:1px solid var(--ln);border-radius:12px;background:var(--sf);overflow:hidden;display:flex;flex-direction:column;min-width:0}
 .strip .mc:first-child{flex:2.4}
-.strip .mc .im{flex:1;display:flex;align-items:center;justify-content:center;font-size:30px;background:linear-gradient(160deg,#FDE7DF,#E2ECF8)}
+.strip .mc .im{flex:1;display:flex;align-items:center;justify-content:center;font-size:30px;background:linear-gradient(160deg,#FDE7DF,#E2ECF8);position:relative;overflow:hidden}.strip .mc .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.strip .mc .im img+span{display:none}
 .strip .mc:nth-child(2n) .im{background:linear-gradient(160deg,#E4F2EA,#F4E6F7)}.strip .mc:nth-child(3n) .im{background:linear-gradient(160deg,#FFF3C9,#E2ECF8)}
 .strip .mc .tx{padding:5px 4px 6px;text-align:center;font-weight:700;font-size:13px;line-height:1.6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .strip .mc .tx small{display:block;font-size:10px;color:var(--mu);font-weight:500}
@@ -117,6 +117,7 @@ body.sub nav{display:none}
 .fcard{background:var(--sf);border-radius:28px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,.08);margin-top:18px;display:flex;flex-direction:column;min-height:calc(100vh - 230px)}
 .fcard .hero{height:min(46vw,250px);background:linear-gradient(135deg,#FDE7DF 0%,#E2ECF8 100%);display:flex;align-items:center;justify-content:center;font-size:96px;position:relative}
 .fcard .hero.h2{background:linear-gradient(135deg,#E4F2EA,#F4E6F7)}.fcard .hero.h3{background:linear-gradient(135deg,#FFF3C9,#E2ECF8)}.fcard .hero.h4{background:linear-gradient(135deg,#E8E6FA,#FDE7DF)}
+.fcard .hero .hi{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.fcard .hero .em{position:relative}.fcard .hero .hi+.em{display:none}
 .fcard .hero .cat{position:absolute;left:16px;top:14px;font-size:12px;font-weight:700;background:rgba(255,255,255,.8);color:#333;border-radius:8px;padding:4px 9px}
 .fcard .hero .bm{position:absolute;right:16px;bottom:16px;width:48px;height:48px;border-radius:50%;background:#fff;color:#111;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.12)}
 .fcard .hero .bm svg{width:22px;height:22px;stroke:currentColor;stroke-width:2;fill:none;stroke-linejoin:round}
@@ -222,7 +223,7 @@ td.f{font-weight:700;white-space:nowrap}
 .meta{font-size:13px;color:var(--mu)}
 .lab{font-size:12px;color:var(--mu);font-weight:700;margin:12px 0 6px}
 .vrow{display:flex;align-items:flex-start;gap:10px;padding:11px 0;border-bottom:1px solid var(--ln)}.vrow:last-child{border-bottom:none}
-.vm{flex:1;min-width:0;cursor:pointer}
+.vm{flex:1;min-width:0;cursor:pointer}.vimg{flex:none;width:52px;height:52px;border-radius:12px;object-fit:cover;background:var(--sf2);margin-top:2px}
 .vw{font-size:18px;font-weight:600;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;line-height:1.9}.vr{font-size:13px;color:var(--mu);font-weight:500;display:none}body.nofuri .vr{display:inline}
 .vk{font-size:14px;color:var(--mu)}
 .vex{display:none;font-size:14px;margin-top:8px;background:var(--sf2);border-radius:10px;padding:8px 10px;line-height:1.8}.vex span{display:block;font-size:12px;color:var(--mu);line-height:1.5}
