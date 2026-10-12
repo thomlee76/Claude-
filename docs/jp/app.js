@@ -19,7 +19,7 @@ const LESSONS=GRAM.map(g=>g.l);
 const LSHORT={1:"희망·계획",2:"비교·순위",3:"날짜·색·옷",4:"희망·주문·부탁",5:"추측·날짜·거리"};
 const SECS=[["gram","문법","文"],["word","단어","語"],["kanji","한자","漢"],["talk","회화","話"],["sheets","자료","資"]];
 const L2=l=>"L"+(l<10?"0"+l:l);
-const APPV="v20";
+const APPV="v21";
 
 let known=new Set(store.get("known",[])),kknown=new Set(store.get("kknown",[]));
 const lessonOf=l=>GRAM.find(g=>g.l===l);
@@ -332,8 +332,8 @@ function renderFlash(){
     {label:peek?"뜻 바로 보기":"뜻 가리기",sub:"카드를 탭하면 가려진 부분이 보입니다",fn:()=>{peek=!peek;store.set("peek",peek);render()}},
     {label:"다시 섞기",fn:()=>render()},
     {label:"단어 목록으로",fn:()=>go("l"+(l||R.lesson)+"/word")}])}));
-  const host=el("div");v.appendChild(host);
-  const btns=el("div","fbtns",'<button class="no" id="fc-know">알고 있어요</button><button class="yes" id="fc-study">학습할게요</button>');v.appendChild(btns);
+  const host=el("div","fhost");v.appendChild(host);
+  const btns=el("div","fbtns",'<button class="fno" id="fc-know">알고 있어요</button><button class="yes" id="fc-study">학습할게요</button>');v.appendChild(btns);
   const show=()=>{host.innerHTML="";
     if(di>=deck.length){btns.classList.add("hid");
       const d=el("div","fdone",'<div class="em">🎉</div><b>'+(total?"오늘 카드 "+total+"장 완료":"외울 단어가 없습니다")+'</b><p>알고 있어요 '+nKnow+' · 학습할게요 '+nStudy+'</p>');
