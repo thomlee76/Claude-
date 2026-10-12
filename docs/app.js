@@ -19,8 +19,8 @@ const LESSONS=GRAM.map(g=>g.l);
 const LSHORT={1:"희망·계획",2:"비교·순위",3:"날짜·색·옷",4:"희망·주문·부탁",5:"추측·날짜·거리"};
 const SECS=[["gram","문법","文"],["word","단어","語"],["kanji","한자","漢"],["talk","회화","話"],["sheets","자료","資"]];
 const L2=l=>"L"+(l<10?"0"+l:l);
-const WIMG=i=>"img/w"+i+".webp";
-const APPV="v22";
+const WIMG=i=>"img/m"+i+".webp";
+const APPV="v23";
 
 let known=new Set(store.get("known",[])),kknown=new Set(store.get("kknown",[]));
 const lessonOf=l=>GRAM.find(g=>g.l===l);
@@ -568,7 +568,7 @@ function renderNote(){
 /* ===================== 오프라인 자료 상태 ===================== */
 const PCTOTAL=SHEETS.length*2+VOCAB.length;let PC=store.get("pc",{done:0,total:PCTOTAL,failed:false});if(PC.total!==PCTOTAL){PC.total=PCTOTAL;PC.done=Math.min(PC.done,PCTOTAL)}
 const pcText=()=>PC.done>=PC.total?"전체 저장됨 · 오프라인 사용 가능":(PC.failed?"일부 저장 ("+PC.done+"/"+PC.total+") · 온라인에서 이어받음":"저장 중 "+PC.done+" / "+PC.total);
-function pcRefresh(){try{caches.open("jpn-sheets-v2").then(c=>c.keys()).then(ks=>{const n=ks.filter(r=>r.url.indexOf("/sheets/")>=0||r.url.indexOf("/img/w")>=0).length;PC={done:Math.min(n,PCTOTAL),total:PCTOTAL,failed:PC.failed&&n<PCTOTAL};store.set("pc",PC);const s=$("pc-stat");if(s)s.textContent=pcText()})}catch(e){}}
+function pcRefresh(){try{caches.open("jpn-sheets-v2").then(c=>c.keys()).then(ks=>{const n=ks.filter(r=>r.url.indexOf("/sheets/")>=0||r.url.indexOf("/img/m")>=0).length;PC={done:Math.min(n,PCTOTAL),total:PCTOTAL,failed:PC.failed&&n<PCTOTAL};store.set("pc",PC);const s=$("pc-stat");if(s)s.textContent=pcText()})}catch(e){}}
 
 /* ===================== 설정 ===================== */
 const PALETTES=[["mono","墨 모노","#111113","#F7F7F8"],["sumi","朱 주홍","#C9463D","#F6F2EA"],["indigo","藍 인디고","#2F56C8","#F4F5F7"],["teal","海 청록","#0F766E","#F2F6F6"],["amber","夜 호박","#B86E00","#F3F3F2"],["forest","森 숲","#2F6B4F","#F3F5F0"],["sakura","桜 벚꽃","#D2497A","#FAF4F6"],["murasaki","紫 보라","#6B4FC9","#F5F4F8"],["matcha","抹茶 말차","#5F7F2A","#F6F6EC"],["sepia","栗 세피아","#8A5A2B","#F5EFE6"],["sora","空 하늘","#0E7FC0","#F1F6FA"],["peach","桃 복숭아","#F7C4B4","#FBF5F1","pastel"],["rose","薄紅 연분홍","#F4BFCF","#FBF4F7","pastel"],["lavender","藤 라벤더","#CFC4F0","#F7F5FB","pastel"],["mint","薄荷 민트","#B8E3D6","#F2F9F6","pastel"],["mizu","水色 하늘색","#BBD8F2","#F3F7FB","pastel"],["butter","卵 버터","#F6E3A6","#FBF8EF","pastel"]];
