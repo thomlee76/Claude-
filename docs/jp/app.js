@@ -6,6 +6,12 @@ const store={get(k,d){try{const v=localStorage.getItem("jpn:"+k);return v===null
 const ESC=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 const F=s=>String(s).replace(/([0-9０-９,]*[一-龯々〆%]+)（([ぁ-ゖー・ァ-ヶ]+)）/g,"<ruby>$1<rt>$2</rt></ruby>");
 const SH=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const isKana=c=>/[ぁ-ゖァ-ヺー・]/.test(c);
+function RW(w,r){if(!/[一-龯々〆]/.test(w)||!r||w===r)return ESC(w);
+  let a=0;while(a<w.length&&a<r.length&&isKana(w[a])&&w[a]===r[a])a++;
+  let b=0;while(b<w.length-a&&b<r.length-a&&isKana(w[w.length-1-b])&&w[w.length-1-b]===r[r.length-1-b])b++;
+  const core=w.slice(a,w.length-b),rc=r.slice(a,r.length-b);if(!core||!rc)return ESC(w);
+  return ESC(w.slice(0,a))+'<ruby>'+ESC(core)+'<rt>'+ESC(rc)+'</rt></ruby>'+ESC(w.slice(w.length-b))}
 const el=(tag,cls,html)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(html!=null)e.innerHTML=html;return e};
 const SFILE=s=>"l"+s.l+"-"+(s.p<10?"0"+s.p:s.p);
 const KLABEL={gram:"문법",word:"단어",kanji:"한자",talk:"회화",sum:"정리"};
@@ -13,7 +19,7 @@ const LESSONS=GRAM.map(g=>g.l);
 const LSHORT={1:"희망·계획",2:"비교·순위",3:"날짜·색·옷",4:"희망·주문·부탁",5:"추측·날짜·거리"};
 const SECS=[["gram","문법","文"],["word","단어","語"],["kanji","한자","漢"],["talk","회화","話"],["sheets","자료","資"]];
 const L2=l=>"L"+(l<10?"0"+l:l);
-const APPV="v18";
+const APPV="v19";
 
 let known=new Set(store.get("known",[])),kknown=new Set(store.get("kknown",[]));
 const lessonOf=l=>GRAM.find(g=>g.l===l);
@@ -127,7 +133,7 @@ function homeCard(o){
 }
 function stripArt(pairs){
   const six=pairs.slice(0,6);
-  return '<div class="strip">'+six.map(([v])=>'<div class="mc"><div class="im">'+(v[7]||"✎")+'</div><div class="tx jp">'+ESC(v[0])+'<small>'+ESC(v[2])+'</small></div></div>').join("")+'</div>';
+  return '<div class="strip">'+six.map(([v])=>'<div class="mc"><div class="im">'+(v[7]||"✎")+'</div><div class="tx jp">'+RW(v[0],v[1])+'<small>'+ESC(v[2])+'</small></div></div>').join("")+'</div>';
 }
 function sheetArt(list){return '<div class="sg">'+list.slice(0,5).map(s=>'<img src="sheets/thumb/'+SFILE(s)+'.webp" alt="" loading="lazy">').join("")+'</div>'}
 function darkArt(glyph,sub,sheet){return '<div class="art dark">'+(sheet?'<img src="sheets/thumb/'+SFILE(sheet)+'.webp" alt="">':"")+'<span class="g">'+glyph+'</span><span class="s">'+sub+'</span></div>'}
@@ -175,7 +181,7 @@ function renderLib(){
   const res=el("div","sres hid");v.appendChild(res);
   const doSearch=()=>{libq=inp.value.trim();res.innerHTML="";if(libq.length<1){res.classList.add("hid");return}
     const q=libq.toLowerCase();let out=[];
-    VOCAB.forEach((x,i)=>{if(x[0].includes(q)||x[1].includes(q)||x[2].toLowerCase().includes(q))out.push(['<b class="jp">'+ESC(x[0])+'</b><em>'+ESC(x[1])+'</em> '+ESC(x[2]),L2(x[5])+" 단어",()=>go("l"+x[5]+"/word")])});
+    VOCAB.forEach((x,i)=>{if(x[0].includes(q)||x[1].includes(q)||x[2].toLowerCase().includes(q))out.push(['<b class="jp">'+RW(x[0],x[1])+'</b><em>'+ESC(x[1])+'</em> '+ESC(x[2]),L2(x[5])+" 단어",()=>go("l"+x[5]+"/word")])});
     KANJI.forEach((x,i)=>{if(x[0].includes(q)||x[1].includes(q)||x[2].toLowerCase().includes(q))out.push(['<b class="jp">'+ESC(x[0])+'</b><em>'+ESC(x[1])+'</em> '+ESC(x[2]),L2(x[4])+" 한자",()=>go("l"+x[4]+"/kanji")])});
     if(!out.length)res.appendChild(el("div","ri",'<span>결과 없음</span>'));
     out.slice(0,30).forEach(([h,m,fn])=>{const r=el("button","ri",'<div>'+h+'</div><span>'+m+' ›</span>');r.style.width="100%";r.onclick=fn;res.appendChild(r)});
@@ -251,7 +257,7 @@ function vocabRows(pairs,host){
   pairs.forEach(([v,i])=>{
     if(v[6]!==cur){cur=v[6];c=card(ESC(cur),pairs.filter(([x])=>x[6]===cur).length+"개");host.appendChild(c)}
     const r=el("div","vrow"+(known.has(i)?" kn":""));
-    r.innerHTML='<div class="vm"><div class="vw jp">'+ESC(v[0])+'<span class="vr">'+ESC(v[1])+'</span></div><div class="vk">'+ESC(v[2])+'</div>'+
+    r.innerHTML='<div class="vm"><div class="vw jp">'+RW(v[0],v[1])+'<span class="vr">'+ESC(v[1])+'</span></div><div class="vk">'+ESC(v[2])+'</div>'+
       '<div class="vex jp">'+F(v[3])+'<span>'+ESC(v[4])+'</span></div></div><button class="kb" type="button" aria-label="외움 표시">✓</button>';
     r.querySelector(".vm").onclick=()=>r.classList.toggle("open");
     r.querySelector(".kb").onclick=e=>{e.stopPropagation();toggleKnown(i);r.classList.toggle("kn",known.has(i))};
@@ -336,7 +342,7 @@ function renderFlash(){
     const idx=deck[di],w=VOCAB[idx],cat=(w[6]||"").replace(/^L\d /,""),hn=(idx%4)+1;
     const c=el("div","fcard"+(peek?" peek":""));
     c.innerHTML='<div class="hero h'+hn+'"><span class="cat">'+ESC(cat)+'</span>'+(w[7]||"✎")+'<button class="bm" aria-label="자료">'+ICO.bm+'</button></div>'+
-      '<div class="body"><div class="w jp"><span>'+ESC(w[0])+'</span><span class="spk" aria-hidden="true">'+(di+1)+'/'+total+'</span></div><div class="rd jp">['+ESC(w[1])+']</div>'+
+      '<div class="body"><div class="w jp"><span>'+RW(w[0],w[1])+'</span><span class="spk" aria-hidden="true">'+(di+1)+'/'+total+'</span></div><div class="rd jp">['+ESC(w[1])+']</div>'+
       '<div class="pos"><i>'+(cat.length>2?cat.slice(0,2):"뜻")+'</i>'+ESC(w[2])+'</div><div class="sep"></div>'+
       '<div class="exj jp">'+F(w[3])+'</div><div class="exk">'+ESC(w[4])+'</div>'+
       '<div class="foot"><span class="lv">'+L2(w[5])+'</span><button class="tip">목록 ›</button></div></div>';
@@ -364,11 +370,11 @@ function wordQ(i,type){
   const v=VOCAB[i],T=tiers(VOCAB,i,x=>x[6]===v[6],x=>x[5]===v[5]);
   if(type==="read"){if(v[0]===v[1])return null;return mkQ("「"+v[0]+"」의 읽기는?",v[1],distract(VOCAB,i,1,T,3),v[0]+"（"+v[1]+"） "+v[2],v[5],"단어 읽기","w"+i+"r")}
   if(type==="jp")return mkQ("「"+v[2]+"」을/를 일본어로?",v[0],distract(VOCAB,i,0,T,3),v[0]+"（"+v[1]+"） "+v[2],v[5],"뜻→단어","w"+i+"j");
-  return mkQ("「"+v[0]+"」의 뜻은?",v[2],distract(VOCAB,i,2,T,3),v[0]+"（"+v[1]+"） "+v[2],v[5],"단어 뜻","w"+i+"m");
+  return mkQ("「"+RW(v[0],v[1])+"」의 뜻은?",v[2],distract(VOCAB,i,2,T,3),v[0]+"（"+v[1]+"） "+v[2],v[5],"단어 뜻","w"+i+"m");
 }
 function kanjiQ(i,type){
   const k=KANJI[i],T=tiers(KANJI,i,x=>x[4]===k[4],x=>true);
-  if(type==="mean")return mkQ("「"+k[0]+"」의 뜻은?",k[2],distract(KANJI,i,2,T,3),k[0]+" "+k[1]+" · "+k[2]+" — "+k[3],k[4],"한자 뜻","k"+i+"m");
+  if(type==="mean")return mkQ("「"+RW(k[0],k[1])+"」의 뜻은?",k[2],distract(KANJI,i,2,T,3),k[0]+" "+k[1]+" · "+k[2]+" — "+k[3],k[4],"한자 뜻","k"+i+"m");
   return mkQ("「"+k[0]+"」의 읽기는?",k[1],distract(KANJI,i,1,T,3),k[0]+" "+k[1]+" · "+k[2]+" — "+k[3],k[4],"한자 읽기","k"+i+"r");
 }
 const gramQ=i=>{const q=QUIZ[i];return{q:q[0],opts:q[1],ans:q[2],expl:q[3],l:q[4],type:"문법·"+q[5],key:"g"+i,base:"g"+i}};
