@@ -19,7 +19,7 @@ const LESSONS=GRAM.map(g=>g.l);
 const LSHORT={1:"희망·계획",2:"비교·순위",3:"날짜·색·옷",4:"희망·주문·부탁",5:"추측·날짜·거리"};
 const SECS=[["gram","문법","文"],["word","단어","語"],["kanji","한자","漢"],["talk","회화","話"],["sheets","자료","資"]];
 const L2=l=>"L"+(l<10?"0"+l:l);
-const APPV="v19";
+const APPV="v20";
 
 let known=new Set(store.get("known",[])),kknown=new Set(store.get("kknown",[]));
 const lessonOf=l=>GRAM.find(g=>g.l===l);
@@ -563,6 +563,11 @@ function renderNote(){
   v.appendChild(a);
 }
 
+/* ===================== 오프라인 자료 상태 ===================== */
+let PC=store.get("pc",{done:0,total:SHEETS.length*2,failed:false});
+const pcText=()=>PC.done>=PC.total?"전체 저장됨 · 오프라인 사용 가능":(PC.failed?"일부 저장 ("+PC.done+"/"+PC.total+") · 온라인에서 이어받음":"저장 중 "+PC.done+" / "+PC.total);
+function pcRefresh(){try{caches.open("jpn-sheets-v2").then(c=>c.keys()).then(ks=>{const n=ks.filter(r=>r.url.indexOf("/sheets/")>=0).length;PC={done:Math.min(n,SHEETS.length*2),total:SHEETS.length*2,failed:PC.failed&&n<SHEETS.length*2};store.set("pc",PC);const s=$("pc-stat");if(s)s.textContent=pcText()})}catch(e){}}
+
 /* ===================== 설정 ===================== */
 const PALETTES=[["mono","墨 모노","#111113","#F7F7F8"],["sumi","朱 주홍","#C9463D","#F6F2EA"],["indigo","藍 인디고","#2F56C8","#F4F5F7"],["teal","海 청록","#0F766E","#F2F6F6"],["amber","夜 호박","#B86E00","#F3F3F2"],["forest","森 숲","#2F6B4F","#F3F5F0"],["sakura","桜 벚꽃","#D2497A","#FAF4F6"],["murasaki","紫 보라","#6B4FC9","#F5F4F8"],["matcha","抹茶 말차","#5F7F2A","#F6F6EC"],["sepia","栗 세피아","#8A5A2B","#F5EFE6"],["sora","空 하늘","#0E7FC0","#F1F6FA"],["peach","桃 복숭아","#F7C4B4","#FBF5F1","pastel"],["rose","薄紅 연분홍","#F4BFCF","#FBF4F7","pastel"],["lavender","藤 라벤더","#CFC4F0","#F7F5FB","pastel"],["mint","薄荷 민트","#B8E3D6","#F2F9F6","pastel"],["mizu","水色 하늘색","#BBD8F2","#F3F7FB","pastel"],["butter","卵 버터","#F6E3A6","#FBF8EF","pastel"]];
 const MODES=[["auto","자동"],["light","밝게"],["dark","어둡게"]];
@@ -592,6 +597,9 @@ function renderSet(){
   r2.appendChild(pw);v.appendChild(r2);
   v.appendChild(el("div","sect","데이터"));
   const r3=el("div","rows");
+  const pcr=el("button","srow",'<div>오프라인 자료<span class="d" id="pc-stat">'+pcText()+'</span></div><span class="v">다시 확인</span>');
+  pcr.onclick=()=>{pcRefresh();if(navigator.serviceWorker&&navigator.serviceWorker.controller)navigator.serviceWorker.controller.postMessage({type:"precache",urls:(()=>{const t=[],f=[];SHEETS.forEach(s=>{t.push("sheets/thumb/"+SFILE(s)+".webp");f.push("sheets/"+SFILE(s)+".webp")});return t.concat(f)})()})};
+  r3.appendChild(pcr);if("caches" in window)pcRefresh();
   const ex=el("button","srow",'<div>학습 기록 내보내기<span class="d">클립보드에 JSON 복사</span></div><span class="v">›</span>');ex.onclick=()=>{const o={};["known","kknown","bests","wrong","qstats","days","note","seen"].forEach(k=>o[k]=store.get(k,null));navigator.clipboard&&navigator.clipboard.writeText(JSON.stringify(o)).then(()=>alert("복사했습니다."),()=>alert("복사할 수 없습니다."))};r3.appendChild(ex);
   const rs=el("button","srow danger",'<div>진도 기록 초기화</div><span class="v">›</span>');rs.onclick=()=>{if(!confirm("단어·한자·퀴즈·활동 기록을 모두 지웁니다."))return;known=new Set();kknown=new Set();["known","kknown"].forEach(k=>store.set(k,[]));["bests","wrong","qstats","days","seen"].forEach(k=>store.set(k,{}));render()};r3.appendChild(rs);
   v.appendChild(r3);
@@ -633,6 +641,10 @@ setTimeout(()=>{const s=$("splash");s.classList.add("off");setTimeout(()=>s.remo
       const watch=sw=>{if(!sw)return;sw.addEventListener("statechange",()=>{if(sw.state==="installed"&&navigator.serviceWorker.controller){waiting=sw;$("pwa-update").classList.add("on")}})};
       if(reg.waiting&&navigator.serviceWorker.controller){waiting=reg.waiting;$("pwa-update").classList.add("on")}
       watch(reg.installing);reg.addEventListener("updatefound",()=>watch(reg.installing))}).catch(()=>{})});
+    const sheetUrls=()=>{const t=[],f=[];SHEETS.forEach(s=>{t.push("sheets/thumb/"+SFILE(s)+".webp");f.push("sheets/"+SFILE(s)+".webp")});return t.concat(f)};
+    const askPrecache=()=>{if(!navigator.onLine)return;navigator.serviceWorker.ready.then(reg=>{if(reg.active)reg.active.postMessage({type:"precache",urls:sheetUrls()})}).catch(()=>{})};
+    navigator.serviceWorker.addEventListener("message",e=>{const d=e.data;if(!d||d.type!=="precache")return;PC={done:d.done,total:d.total,failed:d.failed};store.set("pc",PC);const s=$("pc-stat");if(s)s.textContent=pcText()});
+    window.addEventListener("load",()=>setTimeout(askPrecache,1500));window.addEventListener("online",()=>setTimeout(askPrecache,1000));
     const check=()=>{try{if(REG)REG.update()}catch(e){}};
     document.addEventListener("visibilitychange",()=>{if(!document.hidden)check()});window.addEventListener("focus",check);
     window.addEventListener("pageshow",e=>{if(e.persisted)check()});setInterval(check,30*60*1000);

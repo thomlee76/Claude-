@@ -1,7 +1,7 @@
 /* 日本語 復習ノート — 오프라인 서비스 워커
    앱 셸: 미리 캐시(cache-first) · 수업 자료: 열어본 것만 캐시(앱 업데이트해도 유지)
    외부 자원(구글 폰트): stale-while-revalidate */
-const VERSION = 'jpn-v19';
+const VERSION = 'jpn-v20';
 const SHELL = VERSION + '-shell';
 const RUNTIME = VERSION + '-runtime';
 const SHEETS = 'jpn-sheets-v2';   // 버전과 무관 — 한 번 받은 자료는 다시 받지 않음
@@ -36,8 +36,34 @@ self.addEventListener('activate', e => {
 });
 
 self.addEventListener('message', e => {
-  if (e.data === 'skipWaiting') self.skipWaiting();
+  if (e.data === 'skipWaiting') { self.skipWaiting(); return; }
+  if (e.data && e.data.type === 'precache' && Array.isArray(e.data.urls)) e.waitUntil(precache(e.data.urls));
 });
+
+// 수업 자료 전체 선다운로드: 없는 파일만 순서대로 받고 진행률을 모든 창에 알림
+let precaching = false;
+async function precache(urls) {
+  if (precaching) return;
+  precaching = true;
+  const c = await caches.open(SHEETS);
+  const total = urls.length;
+  let done = 0, failed = false;
+  const notify = () => self.clients.matchAll({ includeUncontrolled: true })
+    .then(cs => cs.forEach(x => x.postMessage({ type: 'precache', done, total, failed })));
+  for (const u of urls) {
+    const hit = await c.match(u, { ignoreSearch: true });
+    if (!hit) {
+      try {
+        const r = await fetch(u, { cache: 'no-cache' });
+        if (r && r.status === 200) await c.put(u, r); else { failed = true; break; }
+      } catch (err) { failed = true; break; }
+    }
+    done++;
+    if (done % 5 === 0) await notify();
+  }
+  await notify();
+  precaching = false;
+}
 
 function cacheFirst(req, cacheName) {
   return caches.open(cacheName).then(c =>
