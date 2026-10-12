@@ -61,14 +61,10 @@ for n in range(1, 101):
 
 # ---------- icons ----------
 def icon(sz, path):
-    im = Image.new('RGB', (sz, sz), '#E8642C'); d = ImageDraw.Draw(im)
-    f = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', int(sz * .30))
-    for txt, y, col in [('go', .20, '#FFFFFF'), ('up', .52, '#BFE6F6')]:
-        w = d.textlength(txt, font=f); d.text(((sz - w) / 2, sz * y), txt, font=f, fill=col)
-    im.save(path)
+    Image.open(f'{HK}/icon/app-icon.png').convert('RGB').resize((sz, sz), Image.LANCZOS).save(path, optimize=True)
 icon(192, f'{OUT}/icon-192.png'); icon(512, f'{OUT}/icon-512.png'); icon(180, f'{OUT}/apple-touch-icon.png')
 json.dump({"name": "Фразовые глаголы 100", "short_name": "Глаголы 100", "lang": "ru", "start_url": "./",
-           "scope": "./", "display": "standalone", "background_color": "#FFFAF5", "theme_color": "#E8642C",
+           "scope": "./", "display": "standalone", "background_color": "#FFFAF5", "theme_color": "#F06A3F",
            "icons": [{"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
                      {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"}]},
           open(f'{OUT}/manifest.webmanifest', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
