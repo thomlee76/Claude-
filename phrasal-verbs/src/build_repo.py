@@ -130,7 +130,9 @@ off_attach = ('\n(function(M,A){for(const k in M){const L=window.LESSONS[k];if(L
               json.dumps(marks) + ',' + json.dumps(amap) + ');\n'
               '(function(M,A){for(const k in M){const L=window.LESSONS[k];if(L){L.taudio=A[k];L.tmarks=M[k]}}})(' +
               json.dumps(tmarks) + ',' + json.dumps(tmap) + ');\n')
-open(f'{OUT}/offline/phrasal-verbs-100-offline.html', 'w', encoding='utf-8').write(page(off_data + off_attach))
+off_head = ('<link rel="apple-touch-icon" href="https://thomlee76.github.io/Claude-/phrasal-verbs/apple-touch-icon.png">\n'
+            '<meta name="apple-mobile-web-app-capable" content="yes">\n<meta name="apple-mobile-web-app-title" content="Глаголы 100">\n')
+open(f'{OUT}/offline/phrasal-verbs-100-offline.html', 'w', encoding='utf-8').write(page(off_data + off_attach, off_head))
 
 # ---------- sources ----------
 for f in FILES + ['app.html', 'build.py', 'build_repo.py', 'validate.js', 'plan_21_100.txt']:
