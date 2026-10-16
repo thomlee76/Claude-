@@ -14,9 +14,7 @@
 <title>Claude в работе</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Практическое руководство по Claude для руководителя зарубежных продаж: модели, Cowork, Skills, коннекторы, Claude Code, агенты и презентации.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&display=swap">
+<link rel="stylesheet" href="fonts/fonts.css">
 <style>
 /* Layout: two-column field manual — sticky contents rail on the left, ~70ch reading column, figure plates break out wider. */
 :root{
@@ -231,6 +229,13 @@ dl.gloss dt{font-weight:600;padding-right:18px}
 .toast button.ghost{background:transparent;color:var(--surface);opacity:.75;padding:9px 6px}
 .cover .dl{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font:600 14.5px/1 var(--body);color:var(--surface);background:var(--ink);padding:11px 16px;border-radius:10px;text-decoration:none}
 @media print{.toast{display:none!important}}
+.offline{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:20px}
+.offline .dl{margin-top:0}
+.off-st{display:inline-flex;align-items:center;gap:8px;font:600 14px/1.2 var(--body);padding:9px 13px;border-radius:999px;background:var(--amber-soft);color:var(--amber)}
+.off-st.ok{background:var(--ok-soft);color:var(--ok)}
+.off-st::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.off-pdf{font:600 13.5px/1 var(--body);padding:10px 13px;border-radius:10px;border:1px solid var(--rule);background:var(--surface);color:var(--ink);cursor:pointer}
+@media print{.offline{display:none!important}}
 /* print / PDF */
 @page{size:A4;margin:13mm 13mm 15mm}
 @media print{
@@ -327,7 +332,7 @@ dl.gloss dt{font-weight:600;padding-right:18px}
 <h1>Claude в работе</h1>
 <p class="sub">Модели, Cowork, Skills, коннекторы, Claude Code, агенты и презентации — для руководителя зарубежных продаж: письма партнёрам, отчёты руководству и проект Seoul Medical Center.</p>
 <ul class="facts"><li><b>7</b>разделов</li><li><b>56</b>иллюстраций</li><li><b>71</b>готовых промптов</li><li><b>46</b>тыс. слов</li></ul>
-<a class="dl" href="Claude-v-rabote.pdf" target="_blank" rel="noopener">PDF-версия для печати</a>
+<div class="offline"><a class="dl" href="Claude-v-rabote.pdf" target="_blank" rel="noopener">PDF-версия для печати</a><span class="off-st" id="offSt" hidden></span><button type="button" class="off-pdf" id="offPdf" hidden>Сохранить и PDF для офлайна (11 МБ)</button></div>
 <div class="chapters"><a href="#ch1"><span class="cn">1</span><span class="ct">Модели Claude</span><span class="cd">Fable, Opus, Sonnet, Haiku: какую модель брать под письмо, тендер или отчёт; тарифы и лимиты</span></a><a href="#ch2"><span class="cn">2</span><span class="ct">Claude Cowork</span><span class="cd">Длинные поручения с файлами и папками: разбор документов SMC, отчёты по расписанию</span></a><a href="#ch3"><span class="cn">3</span><span class="ct">Claude Skills</span><span class="cd">Навыки с вашими шаблонами писем и отчётов: Claude применяет их сам</span></a><a href="#ch4"><span class="cn">4</span><span class="ct">Коннекторы</span><span class="cd">Gmail, Calendar, Google Drive и Sheets, DeepL, Booking.com: подключение и сценарии</span></a><a href="#ch5"><span class="cn">5</span><span class="ct">Claude Code для не-программиста</span><span class="cd">Автоматизация Excel-отчётов и пакетная обработка файлов без программирования</span></a><a href="#ch6"><span class="cn">6</span><span class="ct">Агенты Claude</span><span class="cd">Агенты, субагенты, Claude in Chrome, Research и задачи по расписанию</span></a><a href="#ch7"><span class="cn">7</span><span class="ct">Презентации</span><span class="cd">От брифа до готовых слайдов: .pptx, фирменный шаблон, отчёт о запуске SMC</span></a></div>
 </header>
 <section class="chapter" id="ch0" data-num="0" data-title="Как пользоваться книгой">
@@ -3671,5 +3676,20 @@ else{const ios=/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platfor
 </script>
 
 <script>if("serviceWorker" in navigator){const had=!!navigator.serviceWorker.controller;let rl=false;navigator.serviceWorker.addEventListener("controllerchange",()=>{if(had&&!rl){rl=true;location.reload()}});addEventListener("load",()=>{navigator.serviceWorker.register("sw.js",{updateViaCache:"none"}).then(()=>navigator.serviceWorker.ready).then(r=>{if(r.active)r.active.postMessage("ensure")}).catch(()=>{})})}</script>
+<script>(function(){const LIST=["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "apple-touch-icon.png", "fonts/GolosText-cyrillic-721d01.woff2", "fonts/GolosText-latin-65c68b.woff2", "fonts/GolosText-latin-ext-52fc06.woff2", "fonts/JetBrainsMono-cyrillic-ffa6bb.woff2", "fonts/JetBrainsMono-latin-1cd702.woff2", "fonts/JetBrainsMono-latin-ext-76306e.woff2", "fonts/Literata-cyrillic-7b698c.woff2", "fonts/Literata-cyrillic-afbabc.woff2", "fonts/Literata-latin-4afe67.woff2", "fonts/Literata-latin-590e6d.woff2", "fonts/Literata-latin-ext-3f218c.woff2", "fonts/Literata-latin-ext-6b1988.woff2", "fonts/fonts.css", "img/fig-1-1.png", "img/fig-1-2.png", "img/fig-1-3.png", "img/fig-1-4.png", "img/fig-1-5.png", "img/fig-1-6.png", "img/fig-1-7.png", "img/fig-1-8.png", "img/fig-2-1.png", "img/fig-2-2.png", "img/fig-2-3.png", "img/fig-2-4.png", "img/fig-2-5.png", "img/fig-2-6.png", "img/fig-2-7.png", "img/fig-2-8.png", "img/fig-3-1.png", "img/fig-3-2.png", "img/fig-3-3.png", "img/fig-3-4.png", "img/fig-3-5.png", "img/fig-3-6.png", "img/fig-3-7.png", "img/fig-3-8.png", "img/fig-4-1.png", "img/fig-4-2.png", "img/fig-4-3.png", "img/fig-4-4.png", "img/fig-4-5.png", "img/fig-4-6.png", "img/fig-4-7.png", "img/fig-4-8.png", "img/fig-5-1.png", "img/fig-5-2.png", "img/fig-5-3.png", "img/fig-5-4.png", "img/fig-5-5.png", "img/fig-5-6.png", "img/fig-5-7.png", "img/fig-5-8.png", "img/fig-6-1.png", "img/fig-6-2.png", "img/fig-6-3.png", "img/fig-6-4.png", "img/fig-6-5.png", "img/fig-6-6.png", "img/fig-6-7.png", "img/fig-6-8.png", "img/fig-7-1.png", "img/fig-7-2.png", "img/fig-7-3.png", "img/fig-7-4.png", "img/fig-7-5.png", "img/fig-7-6.png", "img/fig-7-7.png", "img/fig-7-8.png"];const st=document.getElementById('offSt'),pb=document.getElementById('offPdf');
+if(!st||!('serviceWorker' in navigator)||!('caches' in window))return;
+const base=new URL('./',location.href);
+async function count(){let n=0;for(const p of LIST){if(await caches.match(new URL(p,base).href,{ignoreSearch:true}))n++;}return n;}
+async function pdfSaved(){return !!(await caches.match(new URL('Claude-v-rabote.pdf',base).href));}
+let tries=0;
+async function tick(){const n=await count();st.hidden=false;
+  if(n>=LIST.length){st.textContent='Доступно без интернета';st.classList.add('ok');pb.hidden=await pdfSaved();if(!pb.hidden)pb.textContent='Сохранить и PDF для офлайна (11 МБ)';return;}
+  st.classList.remove('ok');st.textContent=navigator.onLine?('Сохраняю для работы без интернета: '+n+' из '+LIST.length):('Без сети сохранено '+n+' из '+LIST.length+' — откройте книгу с интернетом');
+  tries++;if(tries%5===0&&navigator.serviceWorker.controller)navigator.serviceWorker.controller.postMessage('ensure');setTimeout(tick,1500);}
+navigator.serviceWorker.ready.then(()=>setTimeout(tick,600));
+pb.addEventListener('click',async()=>{pb.disabled=true;pb.textContent='Сохраняю PDF…';try{const c=await caches.open('cvr-files');await c.add(new URL('Claude-v-rabote.pdf',base).href);pb.textContent='PDF сохранён';setTimeout(()=>{pb.hidden=true},1500);}catch(e){pb.disabled=false;pb.textContent='Не удалось — проверьте интернет и нажмите ещё раз';}});
+if(navigator.storage&&navigator.storage.persist)navigator.storage.persist().catch(()=>{});
+})();
+</script>
 </body>
 </html>
