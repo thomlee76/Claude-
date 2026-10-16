@@ -13,18 +13,18 @@ const S=[
  [1,'branch',P.ink,'#E9E4DB','Репозиторий на GitHub',(x,y,w)=>{PILL(f,'Sign in with GitHub',x,y,{fill:P.dark,c:'#FFFFFF',size:14,w:'s',h:30,rr:8});return items(x,y+42,w,['подключите GitHub','для приватных репозиториев установите Claude GitHub App'],P.ink);}],
  [2,'globe',P.blu,P.bluT,'claude.ai/code',(x,y,w)=>items(x,y,w,['выбор репозитория и ветки','окружение Default (сеть Trusted)','режим Accept edits / Plan / Auto'],P.blu)],
  [3,'chat',P.acc,P.accT,'Задача',(x,y,w)=>{const r=R(f,x,y,w,10,{fill:P.accT,r:10});const t=T(f,'«Добавь на страницу для дистрибьюторов калькулятор цены с учётом скидки»',x+14,y+12,{size:15,w:'m',width:w-28,lh:135});r.resize(w,t.height+24);return y+t.height+24;}],
- [4,'cloud',P.pur,P.purT,'Облачная ВМ (Ubuntu 24.04)',(x,y,w)=>{let px=x,py=y;['клонирование','setup-скрипт','правки','проверки'].forEach((s,k)=>{const tw=T(f,s,0,0,{size:14,w:'s'});const ww=tw.width+24;tw.remove();if(px+ww>x+w){px=x;py+=40;}PILL(f,s,px,py,{fill:P.purT,c:P.pur,size:14,w:'s',h:30,rr:8});px+=ww;if(k<3){if(px+30>x+w){px=x;py+=40;}else{A(f,px+5,py+15,px+21,py+15,{c:P.pur,sw:2,head:6});px+=28;}}});return py+30;}],
+ [4,'cloud',P.pur,P.purT,'Облачная ВМ (Ubuntu 24.04)',(x,y,w)=>{const L=['клонирование','setup-скрипт','правки','проверки'];const ws=L.map(s=>{const tw=T(f,s,0,0,{size:14,w:'s'});const v=tw.width+24;tw.remove();return v;});let px=x,py=y;L.forEach((s,k)=>{PILL(f,s,px,py,{fill:P.purT,c:P.pur,size:14,w:'s',h:30,rr:8});px+=ws[k];if(k<3){if(px+28+ws[k+1]>x+w){px=x;py+=40;}else{A(f,px+5,py+15,px+21,py+15,{c:P.pur,sw:2,head:6});px+=28;}}});return py+30;}],
  [5,'code',P.grn,P.grnT,'Ветка и дифф',(x,y,w)=>{R(f,x,y,w,40,{fill:P.soft,r:10});T(f,'claude/price-calc',x+14,y+11,{size:14,w:'s',c:P.mut});const r1=T(f,'−18',0,y+10,{size:16,w:'b',c:P.red});r1.x=x+w-14-r1.width;const g1=T(f,'+42',0,y+10,{size:16,w:'b',c:P.grn});g1.x=r1.x-10-g1.width;return items(x,y+52,w,['построчные комментарии','кнопка Compare against'],P.grn);}],
  [6,'check',P.acc,P.accT,'Create PR',(x,y,w)=>{const bw=PILL(f,'Create PR',x,y,{fill:P.acc,c:'#FFFFFF',size:15,w:'b',h:34,rr:8,px:16});PILL(f,'Draft',x+bw+10,y,{fill:'#FFFFFF',stroke:P.line,c:P.ink,size:15,w:'s',h:34,rr:8,px:14});return items(x,y+46,w,['полный PR или черновик','далее Auto-fix при ошибках CI'],P.acc);}]];
 const st=[];let row2=0;
-S.forEach((s,i)=>{const row=Math.floor(i/3);const x=xs[i%3];if(i===3)row2=Math.max(st[0].h,st[1].h,st[2].h)+140+52;const yy=row===0?140:row2;st.push(STEP(x,yy,s[0],s[1],s[2],s[3],s[4],s[5]));});
-[0,1].forEach(row=>{const g=st.slice(row*3,row*3+3);const mh=Math.max(...g.map(o=>o.h));g.forEach(o=>{o.r.resize(cw,mh);o.h=mh;});});
+S.forEach((s,i)=>{const row=Math.floor(i/3);const x=xs[i%3];if(i===3)row2=Math.max(st[0].h,st[1].h,st[2].h)+20+140+60;const yy=row===0?140:row2;st.push(STEP(x,yy,s[0],s[1],s[2],s[3],s[4],s[5]));});
+[0,1].forEach(row=>{const g=st.slice(row*3,row*3+3);const mh=Math.max(...g.map(o=>o.h));g.forEach(o=>{o.r.resize(cw,mh+20);o.h=mh+20;});});
 const r1y=140,r1h=st[0].h,r2y=st[3].y,r2h=st[3].h;
 A(f,xs[0]+cw+6,r1y+r1h/2,xs[1]-6,r1y+r1h/2,{c:P.ink});A(f,xs[1]+cw+6,r1y+r1h/2,xs[2]-6,r1y+r1h/2,{c:P.ink});
 A(f,xs[0]+cw+6,r2y+r2h/2,xs[1]-6,r2y+r2h/2,{c:P.ink});A(f,xs[1]+cw+6,r2y+r2h/2,xs[2]-6,r2y+r2h/2,{c:P.ink});
 const midY=r1y+r1h+26;PL(f,[[xs[2]+cw/2,r1y+r1h+4],[xs[2]+cw/2,midY],[xs[0]+cw/2,midY],[xs[0]+cw/2,r2y-4]],{c:P.ink});
 const by=r2y+r2h+16;const bh=Math.max(52,700-by);
-const B=[['phone','Продолжить с телефона — вкладка Code',P.bluT,P.blu],['term','Забрать в терминал — claude --teleport',P.grnT,P.grn],['key','Доступно на Pro, Max, Team и Enterprise (премиум-места)',P.ambT,P.amb]];
+const B=[['phone','Продолжить с телефона —\nвкладка Code',P.bluT,P.blu],['term','Забрать в терминал —\nclaude --teleport',P.grnT,P.grn],['key','Доступно на Pro, Max, Team и Enterprise (премиум-места)',P.ambT,P.amb]];
 B.forEach(([ic,s,t,c],i)=>{const x=xs[i];R(f,x,by,cw,bh,{fill:t,r:14});ICON(f,ic,x+16,by+bh/2-13,26,c,2);TC(f,s,x+54,by,cw-70,bh,{size:15,w:'s',align:'LEFT',lh:128});});
 NOTE(f,'Схематично: названия кнопок и окружений — по справке claude.ai/code; оформление может отличаться.');
 
