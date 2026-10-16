@@ -137,7 +137,7 @@ def main():
     imgs = sorted(p.name for p in (ROOT / 'img').glob('*.png'))
     pre = pre_list
     h = hashlib.sha1(full.encode()) 
-    for n in pre_list[6:]: h.update((ROOT / n).read_bytes())
+    for n in pre_list[2:]: h.update((ROOT / n).read_bytes())
     sw = (SRC / 'sw-template.js').read_text(encoding='utf-8').replace('__CACHE__', 'cvr-' + h.hexdigest()[:10]).replace('__PRECACHE__', json.dumps(pre))
     (ROOT / 'sw.js').write_text(sw, encoding='utf-8')
     p2 = out[False][0]
