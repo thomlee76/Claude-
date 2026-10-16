@@ -2,6 +2,14 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
+<meta name="theme-color" content="#AE4C29">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Claude в работе">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Claude в работе</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -214,6 +222,15 @@ dl.gloss dt{font-weight:600;padding-right:18px}
 }
 @media (max-width:520px){body{font-size:16px}.lead{font-size:18px}.prompt pre{font-size:13px}.brand span{display:none}}
 
+
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:45;display:flex;align-items:center;gap:10px;width:min(560px,calc(100vw - 32px));
+  background:var(--ink);color:var(--surface);border-radius:14px;padding:10px 10px 10px 16px;box-shadow:var(--shadow);font-size:14.5px;line-height:1.35}
+.toast b{font-weight:600}
+.toast .t-txt{flex:1;min-width:0}
+.toast button{flex:none;font:600 13.5px/1 var(--body);border:0;border-radius:9px;padding:9px 12px;cursor:pointer;background:var(--surface);color:var(--ink)}
+.toast button.ghost{background:transparent;color:var(--surface);opacity:.75;padding:9px 6px}
+.cover .dl{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font:600 14.5px/1 var(--body);color:var(--surface);background:var(--ink);padding:11px 16px;border-radius:10px;text-decoration:none}
+@media print{.toast{display:none!important}}
 /* print / PDF */
 @page{size:A4;margin:13mm 13mm 15mm}
 @media print{
@@ -310,6 +327,7 @@ dl.gloss dt{font-weight:600;padding-right:18px}
 <h1>Claude в работе</h1>
 <p class="sub">Модели, Cowork, Skills, коннекторы, Claude Code, агенты и презентации — для руководителя зарубежных продаж: письма партнёрам, отчёты руководству и проект Seoul Medical Center.</p>
 <ul class="facts"><li><b>7</b>разделов</li><li><b>56</b>иллюстраций</li><li><b>71</b>готовых промптов</li><li><b>46</b>тыс. слов</li></ul>
+<a class="dl" href="Claude-v-rabote.pdf" target="_blank" rel="noopener">PDF-версия для печати</a>
 <div class="chapters"><a href="#ch1"><span class="cn">1</span><span class="ct">Модели Claude</span><span class="cd">Fable, Opus, Sonnet, Haiku: какую модель брать под письмо, тендер или отчёт; тарифы и лимиты</span></a><a href="#ch2"><span class="cn">2</span><span class="ct">Claude Cowork</span><span class="cd">Длинные поручения с файлами и папками: разбор документов SMC, отчёты по расписанию</span></a><a href="#ch3"><span class="cn">3</span><span class="ct">Claude Skills</span><span class="cd">Навыки с вашими шаблонами писем и отчётов: Claude применяет их сам</span></a><a href="#ch4"><span class="cn">4</span><span class="ct">Коннекторы</span><span class="cd">Gmail, Calendar, Google Drive и Sheets, DeepL, Booking.com: подключение и сценарии</span></a><a href="#ch5"><span class="cn">5</span><span class="ct">Claude Code для не-программиста</span><span class="cd">Автоматизация Excel-отчётов и пакетная обработка файлов без программирования</span></a><a href="#ch6"><span class="cn">6</span><span class="ct">Агенты Claude</span><span class="cd">Агенты, субагенты, Claude in Chrome, Research и задачи по расписанию</span></a><a href="#ch7"><span class="cn">7</span><span class="ct">Презентации</span><span class="cd">От брифа до готовых слайдов: .pptx, фирменный шаблон, отчёт о запуске SMC</span></a></div>
 </header>
 <section class="chapter" id="ch0" data-num="0" data-title="Как пользоваться книгой">
@@ -3542,6 +3560,7 @@ C. Follow-up для рассылки после выставки: 5 слайдо
 </div>
 </main>
 </div>
+<div class="toast" id="toast" hidden><span class="t-txt" id="toastTxt"></span><button type="button" id="toastGo">Продолжить</button><button type="button" class="ghost" id="toastX" aria-label="Закрыть">✕</button></div>
 <div class="lightbox" id="lightbox" hidden><img id="lbImg" alt=""><button class="iconbtn close" aria-label="Закрыть"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
 
 <script>
@@ -3635,8 +3654,22 @@ q.addEventListener('keydown',e=>{const items=$$('a',res);if(e.key==='ArrowDown'|
   else if(e.key==='Enter'&&items.length){(items[sel]||items[0]).click();}});
 res.addEventListener('click',e=>{if(e.target.closest('a')){hideRes();q.blur();}});
 document.addEventListener('click',e=>{if(!e.target.closest('.search'))hideRes();});
+
+/* продолжить чтение + подсказка установки */
+const toastEl=$('#toast'),toastTxt=$('#toastTxt'),toastGo=$('#toastGo');let toastAct=null;
+function toast(html,btn,act){toastTxt.innerHTML=html;toastGo.textContent=btn;toastGo.hidden=!btn;toastAct=act;toastEl.hidden=false;}
+toastGo.addEventListener('click',()=>{toastEl.hidden=true;toastAct&&toastAct();});$('#toastX').addEventListener('click',()=>{toastEl.hidden=true;if(toastAct===null)store.set('hintDone',1);});
+let saveT=0;addEventListener('scroll',()=>{clearTimeout(saveT);saveT=setTimeout(()=>{const a=$('#toc a.cur')||$('#toc li.active > a');if(a&&scrollY>600)store.set('last',a.getAttribute('href'));},600);},{passive:true});
+const last=store.get('last');
+if(last&&!location.hash&&document.querySelector(last)){const el=document.querySelector(last);const ch=el.closest('.chapter');
+  toast('Продолжить с места, где вы остановились: <b>'+esc((ch&&ch.id!==el.id?('Раздел '+ch.dataset.num+' · '):'')+el.textContent)+'</b>','Продолжить',()=>el.scrollIntoView());}
+else{const ios=/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  const standalone=navigator.standalone||matchMedia('(display-mode: standalone)').matches;
+  if(ios&&!standalone&&window.self===window.top&&location.protocol==='https:'&&!store.get('hintDone'))
+    toast('Установите книгу как приложение: нажмите <b>Поделиться</b> внизу Safari, затем <b>На экран «Домой»</b>. Книга будет работать и без интернета.','',null);}
 })();
 </script>
 
+<script>if("serviceWorker" in navigator){const had=!!navigator.serviceWorker.controller;let rl=false;navigator.serviceWorker.addEventListener("controllerchange",()=>{if(had&&!rl){rl=true;location.reload()}});addEventListener("load",()=>{navigator.serviceWorker.register("sw.js",{updateViaCache:"none"}).then(()=>navigator.serviceWorker.ready).then(r=>{if(r.active)r.active.postMessage("ensure")}).catch(()=>{})})}</script>
 </body>
 </html>

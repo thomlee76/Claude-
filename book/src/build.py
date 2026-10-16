@@ -99,6 +99,7 @@ def main():
 <h1>Claude в работе</h1>
 <p class="sub">Модели, Cowork, Skills, коннекторы, Claude Code, агенты и презентации — для руководителя зарубежных продаж: письма партнёрам, отчёты руководству и проект Seoul Medical Center.</p>
 <ul class="facts"><li><b>7</b>разделов</li><li><b>{total_f}</b>иллюстраций</li><li><b>{total_p}</b>готовых промптов</li><li><b>{round(total_w/1000)}</b>тыс. слов</li></ul>
+{{{{PDF}}}}
 <div class="chapters">{cards}</div>
 </header>'''
         content = '\n'.join(c['html'] for c in allch)
@@ -112,12 +113,29 @@ def main():
     full = ('<!doctype html>\n<html lang="ru">\n<head>\n<meta charset="utf-8">\n'
             '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
             + head + '</head>\n<body>\n' + body + '\n</body>\n</html>\n')
+    pwa_head = ('<meta name="theme-color" content="#AE4C29">\n<link rel="manifest" href="manifest.webmanifest">\n'
+                '<link rel="apple-touch-icon" href="apple-touch-icon.png">\n<link rel="icon" href="icon-192.png">\n'
+                '<meta name="apple-mobile-web-app-capable" content="yes">\n<meta name="mobile-web-app-capable" content="yes">\n'
+                '<meta name="apple-mobile-web-app-title" content="Claude в работе">\n<meta name="apple-mobile-web-app-status-bar-style" content="default">\n')
+    sw_reg = ('<script>if("serviceWorker" in navigator){const had=!!navigator.serviceWorker.controller;let rl=false;'
+              'navigator.serviceWorker.addEventListener("controllerchange",()=>{if(had&&!rl){rl=true;location.reload()}});'
+              'addEventListener("load",()=>{navigator.serviceWorker.register("sw.js",{updateViaCache:"none"}).then(()=>navigator.serviceWorker.ready)'
+              '.then(r=>{if(r.active)r.active.postMessage("ensure")}).catch(()=>{})})}</script>\n')
+    pdf_link = '<a class="dl" href="Claude-v-rabote.pdf" target="_blank" rel="noopener">PDF-версия для печати</a>'
+    full = full.replace('<meta name="viewport"', pwa_head + '<meta name="viewport"', 1).replace('{{PDF}}', pdf_link).replace('</body>', sw_reg + '</body>')
     (ROOT / 'index.html').write_text(full, encoding='utf-8')
+    import hashlib
+    imgs = sorted(p.name for p in (ROOT / 'img').glob('*.png'))
+    pre = ['./', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'] + ['img/' + n for n in imgs]
+    h = hashlib.sha1(full.encode()) 
+    for n in imgs: h.update((ROOT / 'img' / n).read_bytes())
+    sw = (SRC / 'sw-template.js').read_text(encoding='utf-8').replace('__CACHE__', 'cvr-' + h.hexdigest()[:10]).replace('__PRECACHE__', json.dumps(pre))
+    (ROOT / 'sw.js').write_text(sw, encoding='utf-8')
     p2 = out[False][0]
     i = p2.index('<header class="topbar">')
     (ROOT / 'print.html').write_text('<!doctype html>\n<html lang="ru">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n'
-                                     + p2[:i] + '</head>\n<body>\n' + p2[i:] + '\n</body>\n</html>\n', encoding='utf-8')
-    OUT_ART.write_text(page, encoding='utf-8')
+                                     + p2[:i] + '</head>\n<body>\n' + p2[i:].replace('{{PDF}}','') + '\n</body>\n</html>\n', encoding='utf-8')
+    OUT_ART.write_text(page.replace('{{PDF}}', ''), encoding='utf-8')
     missing = [f'fig-{k}.png' for k in spec if not (ROOT / 'img' / f'fig-{k}.png').exists()]
     print(f'words={total_w} prompts={total_p} figs={total_f} missing_images={len(missing)}')
 
