@@ -223,6 +223,13 @@ dl.gloss dt{font-weight:600;padding-right:18px}
 .toast button.ghost{background:transparent;color:var(--surface);opacity:.75;padding:9px 6px}
 .cover .dl{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font:600 14.5px/1 var(--body);color:var(--surface);background:var(--ink);padding:11px 16px;border-radius:10px;text-decoration:none}
 @media print{.toast{display:none!important}}
+.offline{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:20px}
+.offline .dl{margin-top:0}
+.off-st{display:inline-flex;align-items:center;gap:8px;font:600 14px/1.2 var(--body);padding:9px 13px;border-radius:999px;background:var(--amber-soft);color:var(--amber)}
+.off-st.ok{background:var(--ok-soft);color:var(--ok)}
+.off-st::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.off-pdf{font:600 13.5px/1 var(--body);padding:10px 13px;border-radius:10px;border:1px solid var(--rule);background:var(--surface);color:var(--ink);cursor:pointer}
+@media print{.offline{display:none!important}}
 /* print / PDF */
 @page{size:A4;margin:13mm 13mm 15mm}
 @media print{

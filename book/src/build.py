@@ -121,14 +121,23 @@ def main():
               'navigator.serviceWorker.addEventListener("controllerchange",()=>{if(had&&!rl){rl=true;location.reload()}});'
               'addEventListener("load",()=>{navigator.serviceWorker.register("sw.js",{updateViaCache:"none"}).then(()=>navigator.serviceWorker.ready)'
               '.then(r=>{if(r.active)r.active.postMessage("ensure")}).catch(()=>{})})}</script>\n')
-    pdf_link = '<a class="dl" href="Claude-v-rabote.pdf" target="_blank" rel="noopener">PDF-версия для печати</a>'
+    pdf_link = ('<div class="offline"><a class="dl" href="Claude-v-rabote.pdf" target="_blank" rel="noopener">PDF-версия для печати</a>'
+                '<span class="off-st" id="offSt" hidden></span><button type="button" class="off-pdf" id="offPdf" hidden>Сохранить и PDF для офлайна (11 МБ)</button></div>')
+    import re as _re
+    full = _re.sub(r'<link rel="preconnect"[^>]*>\n', '', full)
+    full = _re.sub(r'<link rel="stylesheet" href="https://fonts.googleapis.com[^"]*">', '<link rel="stylesheet" href="fonts/fonts.css">', full)
+    fonts = sorted('fonts/' + p.name for p in (ROOT / 'fonts').iterdir())
+    imgs0 = sorted('img/' + p.name for p in (ROOT / 'img').glob('*.png'))
+    pre_list = ['./', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'] + fonts + imgs0
+    off_js = (SRC / 'offline.js').read_text(encoding='utf-8').replace('__LIST__', json.dumps(pre_list))
+    sw_reg = sw_reg + '<script>' + off_js + '</script>\n'
     full = full.replace('<meta name="viewport"', pwa_head + '<meta name="viewport"', 1).replace('{{PDF}}', pdf_link).replace('</body>', sw_reg + '</body>')
     (ROOT / 'index.html').write_text(full, encoding='utf-8')
     import hashlib
     imgs = sorted(p.name for p in (ROOT / 'img').glob('*.png'))
-    pre = ['./', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'] + ['img/' + n for n in imgs]
+    pre = pre_list
     h = hashlib.sha1(full.encode()) 
-    for n in imgs: h.update((ROOT / 'img' / n).read_bytes())
+    for n in pre_list[6:]: h.update((ROOT / n).read_bytes())
     sw = (SRC / 'sw-template.js').read_text(encoding='utf-8').replace('__CACHE__', 'cvr-' + h.hexdigest()[:10]).replace('__PRECACHE__', json.dumps(pre))
     (ROOT / 'sw.js').write_text(sw, encoding='utf-8')
     p2 = out[False][0]

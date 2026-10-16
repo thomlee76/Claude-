@@ -1,5 +1,7 @@
 const CACHE="__CACHE__";const PRECACHE=__PRECACHE__;
-self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(PRECACHE.slice(0,6))).then(()=>self.skipWaiting()))});
+self.addEventListener("install",e=>{e.waitUntil((async()=>{const c=await caches.open(CACHE);await c.addAll(PRECACHE.slice(0,6));
+  const rest=PRECACHE.slice(6);for(let i=0;i<rest.length;i+=8){await Promise.all(rest.slice(i,i+8).map(p=>c.add(p).catch(()=>{})))}
+  await self.skipWaiting()})())});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k.startsWith("cvr-")&&k!==CACHE&&k!=="cvr-fonts"&&k!=="cvr-files").map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
 async function ensure(){const c=await caches.open(CACHE);const have=new Set((await c.keys()).map(r=>new URL(r.url).pathname));
   const base=new URL("./",self.registration.scope);const miss=PRECACHE.filter(p=>!have.has(new URL(p,base).pathname));
