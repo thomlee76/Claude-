@@ -1,0 +1,66 @@
+<section class="chapter appendix" id="glossary" data-num="Б" data-title="Глоссарий">
+<h2>Глоссарий</h2>
+<p class="lead">Термины, которые встречаются в книге, в алфавитном порядке. Английское название дано так, как оно выглядит в интерфейсе Claude.</p>
+<dl class="gloss">
+<dt>Агент (agent)</dt><dd>Режим работы, в котором Claude сам планирует шаги, пользуется инструментами (поиск, файлы, браузер, коннекторы) и проверяет результат, пока задача не выполнена. Раздел 6.</dd>
+<dt>Артефакт (artifact)</dt><dd>Отдельный результат в окне рядом с чатом: документ, веб-страница, набор слайдов, небольшое приложение. Его можно править, скачивать и показывать коллегам.</dd>
+<dt>Задача по расписанию (Scheduled task)</dt><dd>Поручение, которое Claude выполняет сам по графику: каждый день, по будням или раз в неделю. Например, бриф по почте к 8:30. Разделы 2 и 6.</dd>
+<dt>Изолированная среда (sandbox)</dt><dd>Отдельная виртуальная машина, в которой Claude выполняет код и работает с файлами, не затрагивая ваш компьютер.</dd>
+<dt>Коннектор (connector)</dt><dd>Подключение Claude к внешнему сервису: Gmail, Google Calendar, Google Drive, Notion, DeepL, Booking.com и другим. Включается в <em>Customize → Connectors</em>. Раздел 4.</dd>
+<dt>Контекстное окно (context window)</dt><dd>Объём текста, который модель держит в голове в одном диалоге. У актуальных моделей — 1 млн токенов. Рис. 1.8.</dd>
+<dt>Навык (skill)</dt><dd>Папка с инструкциями (файл SKILL.md, шаблоны, справочники), которую Claude подключает сам, когда задача ей соответствует. Раздел 3.</dd>
+<dt>Плагин (plugin)</dt><dd>Готовый набор навыков, коннекторов и команд, который устанавливается одним действием.</dd>
+<dt>Проект (Project)</dt><dd>Рабочее пространство в claude.ai с собственными файлами и инструкциями. Подходит для долгой работы над одной темой, например над проектом SMC.</dd>
+<dt>Промпт (prompt)</dt><dd>Запрос или поручение, которое вы пишете Claude. Хороший промпт описывает цель, контекст, формат результата и ограничения.</dd>
+<dt>Режим разрешений (permission mode)</dt><dd>В Claude Code — насколько самостоятельно Claude действует: спрашивает о каждом шаге, сам правит файлы, только планирует или работает автономно. Рис. 5.3.</dd>
+<dt>Субагент (subagent)</dt><dd>Помощник, которому основной агент поручает часть работы. Несколько субагентов могут работать параллельно. Рис. 6.3.</dd>
+<dt>Токен (token)</dt><dd>Единица текста, которой модель считает объём. В английском тексте это примерно три четверти слова, русский текст расходует токенов больше. По токенам считаются цены API и лимиты.</dd>
+<dt>Уровень усилий (Effort)</dt><dd>Настройка глубины работы модели: Low, Medium, High, Extra high, Max. Чем выше уровень, тем тщательнее ответ и тем быстрее расходуется лимит. Рис. 1.5.</dd>
+<dt>Adaptive thinking</dt><dd>Адаптивное мышление: модель сама решает, сколько размышлять перед ответом. У моделей 5.5 и Fable 5.1 включено всегда.</dd>
+<dt>API</dt><dd>Программный доступ к моделям Claude с оплатой за токены. Нужен, если компания встраивает Claude в собственные системы.</dd>
+<dt>CLAUDE.md</dt><dd>Файл с постоянными инструкциями для Claude Code в папке проекта: правила, структура данных, формат отчётов. Рис. 5.4.</dd>
+<dt>Claude Code</dt><dd>Инструмент Claude для работы с файлами, данными и программами: в терминале, приложении Claude Desktop и в браузере. Раздел 5.</dd>
+<dt>Claude in Chrome</dt><dd>Расширение для браузера Chrome, с которым Claude открывает сайты, заполняет формы и собирает данные от вашего имени. Рис. 6.4.</dd>
+<dt>Cowork</dt><dd>Режим, в котором Claude выполняет длинные многошаговые поручения с файлами и папками, отчитываясь о ходе работы. Раздел 2.</dd>
+<dt>MCP (Model Context Protocol)</dt><dd>Открытый стандарт, по которому Claude подключается к внешним сервисам. На нём построены коннекторы.</dd>
+<dt>Prompt injection</dt><dd>Скрытая инструкция во входящем письме, документе или на сайте, которая пытается заставить Claude сделать то, чего вы не просили. Главный риск при работе с коннекторами и агентами.</dd>
+<dt>Research</dt><dd>Режим исследования: Claude сам проводит десятки поисков, читает источники и готовит отчёт со ссылками.</dd>
+</dl>
+</section>
+
+<section class="chapter appendix" id="figma" data-num="В" data-title="Иллюстрации в Figma">
+<h2>Иллюстрации в Figma</h2>
+<p class="lead">Все 56 иллюстраций книги нарисованы в Figma: по два файла на раздел, по четыре рисунка в каждом файле. Исходники можно открыть, отредактировать и использовать в своих презентациях.</p>
+<table class="t figma-files">
+<thead><tr><th>Раздел</th><th>Рисунки 1–4</th><th>Рисунки 5–8</th></tr></thead>
+<tbody>
+<tr><td>1. Модели Claude</td><td><a href="https://www.figma.com/design/7aItQGOQXu7r0QqjZebV85" target="_blank" rel="noopener">01 Модели · часть 1</a></td><td><a href="https://www.figma.com/design/zJ5vVDRJ4xBuN2BsA4JtKj" target="_blank" rel="noopener">01 Модели · часть 2</a></td></tr>
+<tr><td>2. Claude Cowork</td><td><a href="https://www.figma.com/design/9WJCVO6DNsc3KWrL2SGnzE" target="_blank" rel="noopener">02 Cowork · часть 1</a></td><td><a href="https://www.figma.com/design/MvDtTWL7zo7gkRWp66io6B" target="_blank" rel="noopener">02 Cowork · часть 2</a></td></tr>
+<tr><td>3. Claude Skills</td><td><a href="https://www.figma.com/design/tdaAfDH92GaPAHsO2IWEqg" target="_blank" rel="noopener">03 Skills · часть 1</a></td><td><a href="https://www.figma.com/design/qSjkanUWVfauD3kCOHEuUs" target="_blank" rel="noopener">03 Skills · часть 2</a></td></tr>
+<tr><td>4. Коннекторы</td><td><a href="https://www.figma.com/design/vLKbDUOPhab6osgZqi0LrN" target="_blank" rel="noopener">04 Коннекторы · часть 1</a></td><td><a href="https://www.figma.com/design/WxHlZ5mY1OGGwQodPq1dqD" target="_blank" rel="noopener">04 Коннекторы · часть 2</a></td></tr>
+<tr><td>5. Claude Code</td><td><a href="https://www.figma.com/design/msnECjRwyTcGO82HzpgxS6" target="_blank" rel="noopener">05 Claude Code · часть 1</a></td><td><a href="https://www.figma.com/design/X2K0BKOAKcxFt3y3Ua770P" target="_blank" rel="noopener">05 Claude Code · часть 2</a></td></tr>
+<tr><td>6. Агенты</td><td><a href="https://www.figma.com/design/L7fdsgbNDu2HOASHYobFbU" target="_blank" rel="noopener">06 Агенты · часть 1</a></td><td><a href="https://www.figma.com/design/f10Izw83ps7hP4Mm11Nr9V" target="_blank" rel="noopener">06 Агенты · часть 2</a></td></tr>
+<tr><td>7. Презентации</td><td><a href="https://www.figma.com/design/Mb7EKvZ07HzHC1yJyqwg0k" target="_blank" rel="noopener">07 Презентации · часть 1</a></td><td><a href="https://www.figma.com/design/HvvmyOpA43S4xF6tXacqmQ" target="_blank" rel="noopener">07 Презентации · часть 2</a></td></tr>
+</tbody>
+</table>
+</section>
+
+<section class="chapter appendix" id="sources" data-num="Г" data-title="Источники">
+<h2>Источники</h2>
+<p class="lead">Факты в книге сверены с официальными материалами Anthropic на 16 октября 2026 года. Если что-то изменилось, эти страницы — первое место для проверки.</p>
+<table class="t">
+<thead><tr><th>Тема</th><th>Где проверять</th></tr></thead>
+<tbody>
+<tr><td>Модели, цены API, контекст</td><td>platform.claude.com/docs/en/about-claude/models/overview, …/pricing</td></tr>
+<tr><td>Тарифы подписки и лимиты</td><td>claude.com/pricing, support.claude.com (статьи Usage limits, Max plan)</td></tr>
+<tr><td>Выбор модели и Effort в приложении</td><td>support.claude.com, статья «Changing the model, effort and thinking settings»</td></tr>
+<tr><td>Cowork и задачи по расписанию</td><td>support.claude.com, статьи «Get started with Claude Cowork», «Schedule recurring tasks»</td></tr>
+<tr><td>Skills</td><td>support.claude.com «Use skills in Claude», platform.claude.com/docs/en/agents-and-tools/agent-skills</td></tr>
+<tr><td>Коннекторы</td><td>support.claude.com «Use connectors», «Google Workspace connectors», claude.com/marketplace/connectors</td></tr>
+<tr><td>Claude Code</td><td>code.claude.com/docs (overview, permission-modes, memory, settings, claude-code-on-the-web)</td></tr>
+<tr><td>Агенты, Claude in Chrome, Research</td><td>support.claude.com «Get started with Claude in Chrome», «Use Research», platform.claude.com/docs/en/managed-agents</td></tr>
+<tr><td>Презентации и файлы</td><td>support.claude.com «Create and edit files», «What are artifacts», claude.com/docs/office-agents/powerpoint</td></tr>
+<tr><td>Безопасность</td><td>support.claude.com «Use Claude Cowork safely», «Using Claude in Chrome safely», privacy.claude.com</td></tr>
+</tbody>
+</table>
+</section>
