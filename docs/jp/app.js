@@ -20,7 +20,7 @@ const LSHORT={1:"희망·계획",2:"비교·순위",3:"날짜·색·옷",4:"희�
 const SECS=[["gram","문법","文"],["word","단어","語"],["kanji","한자","漢"],["talk","회화","話"],["sheets","자료","資"]];
 const L2=l=>"L"+(l<10?"0"+l:l);
 const WIMG=i=>"img/m"+i+".webp";
-const APPV="v24";
+const APPV="v25";
 
 let known=new Set(store.get("known",[])),kknown=new Set(store.get("kknown",[]));
 const lessonOf=l=>GRAM.find(g=>g.l===l);
