@@ -16,11 +16,11 @@ const el=(tag,cls,html)=>{const e=document.createElement(tag);if(cls)e.className
 const SFILE=s=>"l"+s.l+"-"+(s.p<10?"0"+s.p:s.p);
 const KLABEL={gram:"문법",word:"단어",kanji:"한자",talk:"회화",sum:"정리"};
 const LESSONS=GRAM.map(g=>g.l);
-const LSHORT={1:"희망·계획",2:"비교·순위",3:"날짜·색·옷",4:"희망·주문·부탁",5:"추측·날짜·거리"};
+const LSHORT={1:"희망·계획",2:"비교·순위",3:"날짜·색·옷",4:"희망·주문·부탁",5:"추측·날짜·거리",6:"역접·변화·교토"};
 const SECS=[["gram","문법","文"],["word","단어","語"],["kanji","한자","漢"],["talk","회화","話"],["sheets","자료","資"]];
 const L2=l=>"L"+(l<10?"0"+l:l);
 const WIMG=i=>"img/m"+i+".webp";
-const APPV="v23";
+const APPV="v24";
 
 let known=new Set(store.get("known",[])),kknown=new Set(store.get("kknown",[]));
 const lessonOf=l=>GRAM.find(g=>g.l===l);
