@@ -1,0 +1,277 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Cheongdam Harrison Hospital — брошюра (RU)</title><style>
+@page { size: A4; margin: 0; }
+:root{--navy:#14284B;--navy2:#21406F;--gold:#B08D57;--gold2:#D9C3A0;--sand:#F5F1EA;--ink:#1E2430;--muted:#5D6676;--line:#E4DCCD;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#fff}
+body{font-family:'Inter',sans-serif;color:var(--ink);font-size:8.6pt;line-height:1.42;-webkit-print-color-adjust:exact;print-color-adjust:exact;font-feature-settings:"ss01","cv11"}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;background:#fff}
+.page:last-child{page-break-after:auto}
+.inner{position:absolute;inset:0;padding:13mm 13mm 15mm}
+h1,h2,h3,h4{font-family:'Inter Display','Inter',sans-serif;color:var(--navy);line-height:1.15}
+.sec-head{display:flex;align-items:flex-end;gap:5mm;border-bottom:.4mm solid var(--navy);padding-bottom:2.5mm;margin-bottom:4.5mm}
+.sec-num{font-family:'Inter Display';font-weight:300;font-size:30pt;color:var(--gold);line-height:.9}
+.sec-head h2{font-size:19pt;font-weight:700;letter-spacing:-.2pt}
+.sec-head .kick{font-size:7.4pt;letter-spacing:1.6pt;text-transform:uppercase;color:var(--muted);margin-bottom:1mm}
+.foot{position:absolute;left:13mm;right:13mm;bottom:7mm;display:flex;justify-content:space-between;font-size:6.8pt;color:var(--muted);border-top:.2mm solid var(--line);padding-top:2mm;letter-spacing:.3pt}
+.foot b{color:var(--navy);letter-spacing:1.2pt}
+.lead{font-size:10pt;line-height:1.5;color:var(--ink)}
+.muted{color:var(--muted)}
+.gold{color:var(--gold)}
+h3{font-size:11.5pt;font-weight:700;margin-bottom:1.6mm}
+h4{font-size:9pt;font-weight:700;margin-bottom:1mm}
+.card{background:var(--sand);border-radius:2.2mm;padding:3.6mm 4mm}
+.card.line{background:#fff;border:.25mm solid var(--line)}
+.tag{display:inline-block;font-size:6.6pt;letter-spacing:1.1pt;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:1mm}
+ul.dots{list-style:none}
+ul.dots li{position:relative;padding-left:3.2mm;margin-bottom:.7mm}
+ul.dots li:before{content:"";position:absolute;left:0;top:1.55mm;width:1.3mm;height:1.3mm;border-radius:50%;background:var(--gold)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:4mm}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:3.5mm}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm}
+.ph{width:100%;object-fit:cover;border-radius:2mm;display:block}
+.cap{font-size:6.6pt;color:var(--muted);margin-top:1mm}
+table{border-collapse:collapse;width:100%}
+.wordmark{display:flex;flex-direction:column;line-height:1}
+.wordmark .a{font-family:'Inter Display';font-weight:800;letter-spacing:3.2pt;font-size:13pt;color:var(--navy)}
+.wordmark .b{font-size:6.8pt;letter-spacing:3.4pt;color:var(--gold);margin-top:1.3mm;font-weight:600}
+
+/* COVER */
+.cover .hero{position:absolute;left:0;right:0;top:0;height:158mm}
+.cover .hero img{width:100%;height:100%;object-fit:cover}
+.cover .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,40,75,.55) 0%,rgba(20,40,75,.05) 38%,rgba(20,40,75,0) 60%,rgba(20,40,75,.65) 100%)}
+.cover .top{position:absolute;left:13mm;right:13mm;top:12mm;display:flex;justify-content:space-between;align-items:flex-start;z-index:2}
+.cover .top .wordmark .a{color:#fff}
+.cover .top .wordmark .b{color:var(--gold2)}
+.cover .top .lang{color:#fff;font-size:7pt;letter-spacing:2pt;border:.25mm solid rgba(255,255,255,.7);padding:1.3mm 2.6mm;border-radius:5mm}
+.cover .herotxt{position:absolute;left:13mm;right:13mm;bottom:149mm;z-index:2;color:#fff}
+.cover .body{position:absolute;left:13mm;right:13mm;top:166mm}
+.cover h1{font-size:25pt;font-weight:700;letter-spacing:-.4pt;margin-bottom:3.5mm}
+.cover h1 span{color:var(--gold)}
+.cover .sub{font-size:10.2pt;color:var(--muted);margin-bottom:6mm;line-height:1.45}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:.4mm solid var(--navy);border-bottom:.25mm solid var(--line)}
+.stat{padding:3.4mm 2.6mm 3.4mm 0}
+.stat+.stat{padding-left:3.2mm;border-left:.25mm solid var(--line)}
+.stat .n{font-family:'Inter Display';font-weight:700;font-size:20pt;color:var(--navy);line-height:1}
+.stat .n small{font-size:11pt;color:var(--gold)}
+.stat .t{font-size:7.2pt;color:var(--muted);margin-top:1.4mm;line-height:1.3}
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin-top:6mm}
+.pillar{border-left:.6mm solid var(--gold);padding:.4mm 0 .4mm 2.6mm}
+.pillar b{display:block;font-size:8.6pt;color:var(--navy);margin-bottom:.6mm}
+.pillar span{font-size:7.3pt;color:var(--muted);line-height:1.35;display:block}
+.cover .bottom{position:absolute;left:13mm;right:13mm;bottom:10mm;display:flex;justify-content:space-between;align-items:flex-end;background:var(--navy);color:#fff;border-radius:2.4mm;padding:4mm 5mm}
+.cover .bottom .c1{font-size:7.4pt;line-height:1.55}
+.cover .bottom .c1 b{font-size:10pt;letter-spacing:.3pt}
+.cover .bottom .c2{text-align:right;font-size:7.2pt;line-height:1.5;color:var(--gold2)}
+
+/* ABOUT */
+.mvv{display:grid;grid-template-columns:1.05fr 1fr;gap:4mm;margin-top:4mm}
+.vision{display:grid;grid-template-columns:repeat(4,1fr);gap:2mm;margin-top:1.6mm}
+.vision div{background:var(--navy);color:#fff;border-radius:1.6mm;padding:2.2mm 1mm;text-align:center;font-weight:600;font-size:7.6pt;line-height:1.2}
+.vision div small{display:block;color:var(--gold2);font-weight:400;font-size:6.4pt;margin-top:.6mm}
+.values li{margin-bottom:.9mm}
+.story{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin-top:4mm}
+.story .s{border-top:.5mm solid var(--gold);padding-top:2mm}
+.story .s b{display:block;color:var(--navy);font-size:8.6pt;margin-bottom:.8mm}
+.story .s p{font-size:7.4pt;color:var(--muted);line-height:1.38}
+.floors{width:100%;font-size:7.5pt}
+.floors td{padding:1.15mm 1.5mm;border-bottom:.2mm solid var(--line);vertical-align:top}
+.floors td:first-child{width:11mm;font-weight:700;color:var(--gold)}
+.eq{display:grid;grid-template-columns:1fr 1fr;gap:.6mm 3mm;font-size:7.3pt}
+.eq div{border-bottom:.2mm dotted var(--line);padding:.6mm 0;display:flex;justify-content:space-between;gap:2mm}
+.eq div span:last-child{color:var(--muted);text-align:right;white-space:nowrap}
+
+/* DOCTORS */
+.centers{display:grid;grid-template-columns:repeat(3,1fr);gap:2.4mm;margin-bottom:4mm}
+.center{background:var(--sand);border-radius:1.8mm;padding:2.6mm 3mm}
+.center b{color:var(--navy);font-size:8.6pt;display:block;margin-bottom:.6mm}
+.center span{font-size:7.1pt;color:var(--muted);line-height:1.35;display:block}
+.docs{display:grid;grid-template-columns:1fr 1fr;gap:3mm}
+.doc{display:grid;grid-template-columns:24mm 1fr;gap:3.2mm;border:.25mm solid var(--line);border-radius:2mm;padding:2.6mm;align-items:start}
+.doc img{width:24mm;height:30mm;object-fit:cover;object-position:top;border-radius:1.4mm;background:var(--sand)}
+.doc .role{font-size:6.5pt;letter-spacing:1pt;text-transform:uppercase;color:var(--gold);font-weight:700}
+.doc h4{font-size:10pt;margin:.4mm 0 .2mm}
+.doc .pos{font-size:7.2pt;color:var(--navy2);font-weight:600;margin-bottom:1mm}
+.doc .spec{font-size:7.2pt;margin-bottom:1mm}
+.doc ul.dots li{font-size:6.9pt;color:var(--muted);margin-bottom:.3mm;line-height:1.3}
+.doc ul.dots li:before{top:1.25mm;width:1mm;height:1mm}
+
+/* METHODS */
+.band{position:relative;height:23mm;border-radius:2.4mm;overflow:hidden;margin-bottom:4mm}
+.band img{width:100%;height:100%;object-fit:cover}
+.band .txt{position:absolute;left:6mm;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;color:#fff;max-width:100mm;text-shadow:0 0 6px rgba(10,30,70,.6)}
+.band .txt b{font-size:12pt;font-family:'Inter Display';margin-bottom:1mm}
+.band .txt span{font-size:8pt;line-height:1.4;opacity:.95}
+.m-block{margin-bottom:3mm}
+.m-block ul.dots li{font-size:7.5pt;margin-bottom:.35mm;line-height:1.35}
+.m-block ul.dots li:before{top:1.25mm}
+.m-block p.small{line-height:1.38}
+.m-title{display:flex;align-items:baseline;gap:2.4mm;margin-bottom:1.4mm}
+.m-title i{font-style:normal;font-family:'Inter Display';font-weight:700;color:var(--gold);font-size:11pt}
+.m-title h3{margin:0}
+.cmp{font-size:7.3pt}
+.cmp th{background:var(--navy);color:#fff;font-weight:600;padding:1.1mm 1.8mm;text-align:left}
+.cmp td{padding:.8mm 1.8mm;border-bottom:.2mm solid var(--line);vertical-align:top}
+.cmp td:first-child{color:var(--muted);font-weight:600;width:24%}
+.cmp td.hi{color:var(--navy);font-weight:600}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2mm;margin-top:2mm}
+.steps div{background:var(--sand);border-radius:1.6mm;padding:1.5mm 2.2mm;font-size:7pt;line-height:1.3}
+.steps div b{display:block;color:var(--gold);font-size:8pt;margin-bottom:.4mm}
+.chips{display:flex;flex-wrap:wrap;gap:1.4mm}
+.chips span{background:#fff;border:.25mm solid var(--gold2);color:var(--navy);border-radius:4mm;padding:.5mm 2mm;font-size:6.8pt}
+.small{font-size:7.4pt}
+
+/* PROCEDURES */
+.proc{font-size:7.1pt;line-height:1.32}
+.proc th{background:var(--navy);color:#fff;text-align:left;padding:1.6mm 2mm;font-weight:600;font-size:7.4pt}
+.proc th:first-child{border-top-left-radius:1.6mm}
+.proc th:last-child{border-top-right-radius:1.6mm}
+.proc td{padding:1.9mm 2mm;border-bottom:.25mm solid var(--line);vertical-align:top}
+.proc td:first-child{width:21mm;font-weight:700;color:var(--navy);font-size:7.8pt}
+.proc td:first-child small{display:block;font-weight:400;color:var(--gold);font-size:6.4pt;margin-top:.5mm;letter-spacing:.4pt}
+.proc tr:nth-child(even) td{background:#FBF9F5}
+.proc ul{list-style:none}
+.proc li{padding-left:2.4mm;position:relative;margin-bottom:.25mm}
+.proc li:before{content:"–";position:absolute;left:0;color:var(--gold)}
+.diag{display:grid;grid-template-columns:repeat(4,1fr);gap:2mm;margin-top:3.4mm}
+.diag div{background:var(--sand);border-radius:1.6mm;padding:2mm 2.4mm;font-size:7pt;line-height:1.32}
+.diag div b{color:var(--navy);display:block;font-size:7.8pt;margin-bottom:.4mm}
+
+/* CONTACTS */
+.ct-hero{display:grid;grid-template-columns:1.25fr 1fr;gap:4mm}
+.ct-main{background:var(--navy);color:#fff;border-radius:2.4mm;padding:5mm}
+.ct-main h3{color:#fff;font-size:12pt}
+.ct-row{display:grid;grid-template-columns:24mm 1fr;gap:2mm;padding:1.5mm 0;border-bottom:.2mm solid rgba(255,255,255,.18);font-size:8pt}
+.ct-row:last-child{border-bottom:none}
+.ct-row span:first-child{color:var(--gold2);font-size:6.8pt;letter-spacing:.9pt;text-transform:uppercase;padding-top:.4mm}
+.ct-row b{font-size:10.5pt}
+.qrs{display:grid;grid-template-columns:1fr 1fr;gap:3mm}
+.qr{border:.25mm solid var(--line);border-radius:2mm;padding:3mm;text-align:center;font-size:7pt}
+.qr img{width:23mm;height:23mm;display:block;margin:0 auto 1.6mm}
+.qr b{color:var(--navy);display:block;font-size:7.8pt}
+.hours{font-size:7.5pt}
+.hours td{padding:1.15mm 1.6mm;border-bottom:.2mm solid var(--line);vertical-align:top}
+.hours td:first-child{font-weight:600;color:var(--navy)}
+.hours td:last-child{text-align:right;white-space:nowrap}
+.sched{font-size:6.9pt;text-align:center}
+.sched th{background:var(--navy);color:#fff;font-weight:600;padding:1.1mm .8mm}
+.sched td{padding:1mm .8mm;border-bottom:.2mm solid var(--line)}
+.sched td:first-child{text-align:left;font-weight:600;color:var(--navy);white-space:nowrap}
+.sched td.o{color:var(--navy);font-weight:700}
+.sched td.s{color:var(--gold)}
+.journey{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:1.6mm}
+.journey div:last-child{margin-right:0!important}
+.journey div{position:relative;padding:2.4mm 2.4mm 2.4mm 2.4mm;background:var(--sand);font-size:6.9pt;line-height:1.3;margin-right:2mm;border-radius:1.6mm}
+.journey div b{display:block;color:var(--navy);font-size:7.8pt;margin-bottom:.5mm}
+.journey div i{font-style:normal;color:var(--gold);font-weight:700;font-size:9pt;display:block}
+.intl{display:grid;grid-template-columns:repeat(4,1fr);background:var(--navy);border-radius:2.2mm;margin-top:5mm;padding:3.6mm 0}
+.intl div{padding:0 4mm;color:#fff;font-size:7.2pt;line-height:1.38}
+.intl div+div{border-left:.25mm solid rgba(255,255,255,.2)}
+.intl b{display:block;color:var(--gold2);font-family:'Inter Display';font-size:10.5pt;margin-bottom:.8mm}
+body.ru .lead{font-size:9.3pt}
+body.ru .sec-head h2{font-size:17.5pt}
+body.ru .story .s p{font-size:7.1pt}
+body.ru .intl div{font-size:6.9pt}
+body.ru .values li{font-size:8.2pt}
+body.ru .centers .center span{font-size:6.9pt}
+body.ru .doc ul.dots li{font-size:6.7pt}
+body.ru .doc .spec{font-size:7pt}
+body.ru .m-block ul.dots li{font-size:7.2pt}
+body.ru .small{font-size:7.15pt}
+body.ru .proc{font-size:6.85pt}
+body.ru .proc td{padding:1.05mm 1.8mm}
+body.ru .intl{margin-top:3.6mm}
+body.ru .story{margin-top:3.2mm}
+body.ru .mvv{margin-top:3.2mm}
+body.ru .docs{gap:2.4mm}
+body.ru .doc{padding:2.2mm}
+body.ru .centers{margin-bottom:3.2mm}
+body.ru .diag div{font-size:6.8pt}
+body.ru .ct-row{font-size:7.7pt}
+body.ru .journey div{font-size:6.7pt}
+body.ru .e-img{display:none}
+.note{font-size:6.6pt;color:var(--muted);line-height:1.4}
+</style></head><body class="ru">
+<section class="page cover">
+<div class="hero"><img src="assets/lobby.jpg"></div>
+<div class="top"><div class="wordmark"><span class="a">CHEONGDAM HARRISON</span><span class="b">HOSPITAL · SEOUL · KOREA</span></div><div class="lang">РУССКИЙ</div></div>
+<div class="body">
+<h1>Лечение позвоночника<br>и суставов <span>в центре Сеула</span></h1>
+<div class="sub">Специализированная клиника позвоночника и суставов в районе Каннам: малоинвазивная эндоскопическая хирургия позвоночника, роботизированное эндопротезирование, безоперационное лечение боли и реабилитация — от диагностики до восстановления в одном здании.</div>
+<div class="stats"><div class="stat"><div class="n">3 000<small>+</small></div><div class="t">эндопротезирований суставов выполнил руководитель Центра суставов</div></div><div class="stat"><div class="n">5 000<small>+</small></div><div class="t">артроскопических операций в практике руководителя Центра суставов</div></div><div class="stat"><div class="n">0,5<small> мм</small></div><div class="t">точность резекции кости при роботизированном эндопротезировании (ROSA)</div></div><div class="stat"><div class="n">5</div><div class="t">специализированных центров: позвоночник, суставы, боль, реабилитация, терапия</div></div></div>
+<div class="pillars"><div class="pillar"><b>Эндоскопия позвоночника</b><span>Минимальный разрез, местная анестезия, быстрое возвращение к обычной жизни</span></div><div class="pillar"><b>Роботизированная хирургия</b><span>Эндопротезирование колена с роботом ROSA по индивидуальному плану</span></div><div class="pillar"><b>Лечение без операции</b><span>Блокады под контролем УЗИ и рентгена, регенеративные инъекции, УВТ</span></div><div class="pillar"><b>Реабилитация</b><span>Мануальная терапия и система тренировки ходьбы Sky Walking</span></div></div>
+</div>
+<div class="bottom"><div class="c1"><b>+82-2-333-8801</b><br>646 Samseong-ro, Gangnam-gu, Сеул 06084, Корея · ст. метро Cheongdam (линия 7), выход 6</div><div class="c2">harrisonhospital.co.kr<br>Онлайн-консультация для иностранных пациентов:<br>harrisonhospital.co.kr/online</div></div>
+</section><section class="page"><div class="inner">
+<div class="sec-head"><div class="sec-num">01</div><div><div class="kick">Кто мы</div><h2>О клинике</h2></div></div>
+<div class="grid2" style="grid-template-columns:1.25fr 1fr;gap:5mm">
+ <div><p class="lead">Cheongdam Harrison Hospital (Чхондам Харрисон) — специализированная клиника позвоночника и суставов в районе Каннам, Сеул. Клиника создана, чтобы сделать признанные во всём мире корейские технологии лечения позвоночника, прежде всего эндоскопическую хирургию, доступнее для пациентов и предлагать более совершенное и эффективное лечение на основе многолетних исследований.</p><p style="margin-top:2.4mm">Корейская школа лечения позвоночника получила международное признание: ежегодно врачи из разных стран приезжают в Корею учиться эндоскопической хирургии. Хирурги клиники разработали новый эндоскопический метод лечения стеноза позвоночного канала, впервые в мире описали методику двуручной бипортальной эндоскопической операции и обучают иностранных врачей по программе стажировок H-STEP.</p></div>
+ <div><img class="ph" src="assets/or.jpg" style="height:44mm"><div class="cap">Хирургический центр Harrison — операционная (4 этаж)</div></div>
+</div>
+<div class="mvv">
+ <div class="card"><span class="tag">Миссия</span><h3 style="font-size:10.5pt">Клиника, ориентированная на пациента, которая идёт дальше и создаёт инновационную медицину</h3>
+  <span class="tag" style="margin-top:2mm">Видение</span><div class="vision"><div>Забота<small>любовь к людям</small></div><div>Самостоятельность<small>свои технологии</small></div><div>Созидание<small>новые методы</small></div><div>Практичность<small>нужное лечение</small></div></div></div>
+ <div class="card line"><span class="tag">Ключевые ценности</span><ul class="dots values"><li>Уважение к жизни и к каждому пациенту</li><li>Открытое общение с пациентом и его семьёй</li><li>Понимание неудобств и переживаний пациента</li><li>Взаимное доверие между пациентом и клиникой</li><li>Стремление к постоянным исследованиям и новым задачам</li></ul></div>
+</div>
+<div class="story"><div class="s"><b>Позвоночник</b><p>Опора тела: каждый его отдел связан с внутренними органами. Восстанавливая позвоночник, мы возвращаем качество жизни.</p></div><div class="s"><b>Лидерство</b><p>Продвижение корейской школы хирургии позвоночника в мире как признанного медицинского наследия.</p></div><div class="s"><b>Исследования</b><p>Постоянная работа над более безопасными методами с меньшим числом осложнений и быстрым восстановлением.</p></div><div class="s"><b>Благотворительность</b><p>Медицинское волонтёрство, подготовка специалистов, проект 2026 года по лечению корё-сарам из Узбекистана.</p></div></div>
+<div class="grid2" style="grid-template-columns:1fr 1fr;gap:5mm;margin-top:4.5mm">
+ <div><h4>Здание клиники — поэтажный план</h4><table class="floors"><tr><td>B2</td><td>Реабилитационный центр Sky Walking</td></tr><tr><td>B1</td><td>МРТ, КТ, рентген, денситометрия, термография, ЭЭГ</td></tr><tr><td>2F</td><td>Кабинеты 1, 2, 7 · регистратура · консультации по хирургии позвоночника</td></tr><tr><td>3F</td><td>Кабинеты 3–6 · лечение боли · консультации по хирургии суставов</td></tr><tr><td>4F</td><td>Хирургический центр Harrison (операционные)</td></tr><tr><td>5–7F</td><td>Стационар (палаты 501–504, 601–604, 701–704)</td></tr><tr><td>8F</td><td>VIP-палаты 1–4 · лаунж</td></tr><tr><td>9F</td><td>Конференц-зал · сад на крыше</td></tr><tr><td>+</td><td>Кабинеты ЛФК, мануальной терапии и физиотерапии</td></tr></table></div>
+ <div><h4>Диагностическое и лечебное оборудование</h4><div class="eq"><div><span>МРТ 1,5 Тл</span><span>HDxt</span></div><div><span>КТ 16-срезовый</span><span>LightSpeed 16</span></div><div><span>С-дуга</span><span>KMC-650P</span></div><div><span>Цифровой рентген</span><span>GXR-52S</span></div><div><span>УЗИ</span><span>RS80 · P5</span></div><div><span>Денситометр</span><span>DexxumT</span></div><div><span>Термография (DITI)</span><span>IRIS-8000</span></div><div><span>Анализ волн мозга</span><span>UNO-Check</span></div><div><span>Тест боли и чувствит.</span><span>PS-3100</span></div><div><span>Фокусная УВТ</span><span>PiezoClast</span></div><div><span>УВТ + магнитотерапия</span><span>Optimus Pro</span></div><div><span>Хирургический робот</span><span>ROSA</span></div></div>
+  <div class="grid3" style="gap:2mm;margin-top:3mm"><div><img class="ph" src="assets/vip.jpg" style="height:19mm"><div class="cap">VIP-палата (8F)</div></div><div><img class="ph" src="assets/rehab.jpg" style="height:19mm"><div class="cap">Реабилитация Sky Walking (B2)</div></div><div><img class="ph" src="assets/xray.jpg" style="height:19mm"><div class="cap">Диагностика (B1)</div></div></div>
+ </div>
+</div>
+<div class="intl"><div><b>Впервые в мире</b>Двуручная бипортальная эндоскопия позвоночника — методика д-ра Хо Дон Хва</div><div><b>JNS Spine</b>Статья клиники — на обложке июльского номера международного журнала</div><div><b>H-STEP</b>Стажировки иностранных хирургов по эндоскопии позвоночника</div><div><b>Узбекистан 2026</b>Лечение корё-сарам в рамках проекта медицинской помощи района Каннам</div></div>
+</div><div class="foot"><span><b>CHEONGDAM HARRISON HOSPITAL</b> &nbsp;·&nbsp; Сеул, Корея</span><span>harrisonhospital.co.kr &nbsp;·&nbsp; 2 / 6</span></div></section><section class="page"><div class="inner">
+<div class="sec-head"><div class="sec-num">02</div><div><div class="kick">Отделения и специалисты</div><h2>Отделения и врачи</h2></div></div>
+<div class="centers"><div class="center"><b>Центр позвоночника</b><span>Грыжи поясничных и шейных дисков, стеноз, спондилолистез, ОЗПС, компрессионные переломы, синдром «прямой шеи»</span></div><div class="center"><b>Центр суставов</b><span>Роботизированная хирургия · колено, плечо, тазобедренный сустав · переломы · спортивные травмы и регенеративная медицина</span></div><div class="center"><b>Центр лечения боли</b><span>Блокады под контролем УЗИ и рентгена, пролотерапия, УВТ, гидродиссекция</span></div><div class="center"><b>Мануальная терапия и реабилитация</b><span>Индивидуальная мануальная терапия, система Sky Walking, послеоперационная реабилитация</span></div><div class="center"><b>Центр терапии</b><span>Сердце и сосуды, ЖКТ, органы дыхания, эндокринология, чекапы, вакцинация, снижение веса</span></div><div class="center"><b>Лучевая диагностика</b><span>Описание МРТ и КТ опорно-двигательного аппарата, УЗИ-диагностика</span></div></div>
+<div class="docs"><div class="doc"><img src="assets/doc_kim.jpg"><div><div class="role">Нейрохирургия</div><h4>Ким Хён Сон</h4><div class="pos">Главный врач · Центр позвоночника</div><div class="spec">Сложные операции на позвоночнике, эндоскопическая хирургия</div><ul class="dots"><li>Ранее — руководитель Центра позвоночника, Gangnam Nanoori Hospital</li><li>Экс-президент Корейского общества эндоскопической хирургии позвоночника</li><li>Член правления Корейского общества малоинвазивной хирургии позвоночника</li></ul></div></div><div class="doc"><img src="assets/doc_heo.jpg"><div><div class="role">Нейрохирургия</div><h4>Хо Дон Хва</h4><div class="pos">Генеральный директор · Центр позвоночника</div><div class="spec">Сложные операции на позвоночнике, эндоскопическая хирургия</div><ul class="dots"><li>Ранее — руководитель Центра эндоскопии позвоночника, Seoul Bumin Hospital</li><li>Ранее — руководитель Центра эндоскопии позвоночника, Champodonamu Hospital</li><li>Вице-президент Корейского общества бипортальной эндоскопии позвоночника</li></ul></div></div><div class="doc"><img src="assets/doc_oh.jpg"><div><div class="role">Нейрохирургия</div><h4>О Сон Хун</h4><div class="pos">Почётный главный врач · Центр позвоночника</div><div class="spec">Эндоскопическая хирургия позвоночника</div><ul class="dots"><li>Экс-президент Корейского общества малоинвазивной хирургии позвоночника (KONISS)</li><li>Ранее — главный врач Incheon Nanoori Hospital</li><li>Экс-президент Корейского общества эндопротезирования позвоночника</li></ul></div></div><div class="doc"><img src="assets/doc_kimdw.jpg"><div><div class="role">Нейрохирургия</div><h4>Ким Дон Ук</h4><div class="pos">Заведующий отделением · Центр позвоночника</div><div class="spec">Эндоскопическая хирургия, грыжи дисков, стеноз позвоночного канала</div><ul class="dots"><li>Сертифицированный нейрохирург</li><li>Выпускник медицинского факультета Университета Ыльджи</li><li>Интернатура — больница Университета Ыльджи (Тэджон)</li></ul></div></div><div class="doc"><img src="assets/doc_ryu.jpg"><div><div class="role">Ортопедия</div><h4>Рю Сын Ёль</h4><div class="pos">Главный врач · Центр суставов</div><div class="spec">Колено и плечо, артроскопия, остеотомия, эндопротезирование, переломы, спортивные травмы</div><ul class="dots"><li>Ранее — клинический профессор отделения коленного сустава, Сеульская национальная университетская больница</li><li>Ранее — руководитель Центра суставов, Mokdong Himchan Hospital</li><li>3 000+ эндопротезирований · 5 000+ артроскопий</li></ul></div></div><div class="doc"><img src="assets/doc_leejh.jpg"><div><div class="role">Анестезиология и лечение боли</div><h4>Ли Джи Хван</h4><div class="pos">Руководитель Центра лечения боли</div><div class="spec">Безоперационное лечение, блокады; общая, эпидуральная, спинальная и регионарная анестезия</div><ul class="dots"><li>Ранее — главный врач Gangnam Nanoori Hospital</li><li>Ранее — главный врач Suwon Wiltse Memorial Hospital</li><li>Подготовка в Samsung Medical Center</li></ul></div></div><div class="doc"><img src="assets/doc_song.jpg"><div><div class="role">Семейная медицина</div><h4>Сон И Ран</h4><div class="pos">Руководитель Центра терапии</div><div class="spec">Хронические заболевания, вакцинация, менопауза, снижение веса, хроническая усталость</div><ul class="dots"><li>Индивидуальные обследования с учётом анамнеза и наследственности</li><li>Ранняя диагностика заболеваний внутренних органов</li></ul></div></div><div class="doc"><img src="assets/doc_leeyj.jpg"><div><div class="role">Лучевая диагностика</div><h4>Ли Ён Джу</h4><div class="pos">Руководитель отделения лучевой диагностики</div><div class="spec">МРТ и КТ опорно-двигательного аппарата, УЗИ-диагностика</div><ul class="dots"><li>Описание МРТ / КТ при патологии позвоночника и суставов</li><li>Ультразвуковая диагностика</li></ul></div></div></div>
+</div><div class="foot"><span><b>CHEONGDAM HARRISON HOSPITAL</b> &nbsp;·&nbsp; Сеул, Корея</span><span>harrisonhospital.co.kr &nbsp;·&nbsp; 3 / 6</span></div></section><section class="page"><div class="inner">
+<div class="sec-head"><div class="sec-num">03</div><div><div class="kick">Ключевые технологии</div><h2>Методы лечения</h2></div></div>
+<div class="band"><img src="assets/spine_bg.jpg"><div class="txt"><b>Сначала — точный диагноз, затем — наименее инвазивное лечение</b><span>План лечения составляется после детального осмотра, обследования и при необходимости — консилиума специалистов нескольких центров.</span></div></div>
+<div class="m-block"><div class="m-title"><i>A</i><h3>Эндоскопическая хирургия позвоночника</h3></div>
+ <div class="grid2" style="grid-template-columns:1fr 1.05fr;gap:4mm">
+  <div><p class="small">Лечение грыж межпозвонковых дисков поясничного и шейного отделов и стеноза позвоночного канала через минимальный разрез. Мышцы и связки практически не травмируются; операция выполняется под местной анестезией, хирург видит очаг непосредственно через эндоскоп под контролем визуализации в реальном времени. Эндоскопически выполняются дискэктомия, декомпрессия нервов и спондилодез.</p><h4 style="margin-top:2mm">Преимущества</h4><ul class="dots"><li>Минимальный разрез — меньше травма мышц и рубец</li><li>Возможна при болезнях сердца и почек, сахарном диабете</li><li>Подходит пожилым пациентам — без рисков общего наркоза</li><li>Быстрое восстановление и возвращение к обычной жизни</li><li>Точность: удаляется только утолщённая связка или грыжа диска</li></ul></div>
+  <div><table class="cmp"><tr><th></th><th>Бипортальная (UBE)</th><th>Однопортальная</th></tr><tr><td>Доступ</td><td>Два малых разреза: для эндоскопа и для инструментов</td><td>Один разрез</td></tr><tr><td>Сильная сторона</td><td>Широкий объём вмешательства, высокая точность</td><td>Минимальная площадь повреждения мышц и кости</td></tr><tr><td>Закрытие раны</td><td>Медицинский клей без швов — минимальный рубец</td><td>Медицинский клей без швов — минимальный рубец</td></tr></table>
+   <p class="small" style="margin-top:1.6mm"><b style="color:var(--navy)">Показания:</b> грыжа диска и стеноз; рецидив после операции или консервативного лечения; нет эффекта от консервативной терапии; пожилые пациенты и пациенты с хроническими заболеваниями, которым не подходит обычная операция.</p></div>
+ </div>
+ <div class="steps"><div><b>01</b>Определение очага с помощью С-дуги (ЭОП)</div><div><b>02</b>Минимальный разрез и введение эндоскопа</div><div><b>03</b>Операция под прямым эндоскопическим контролем</div><div><b>04</b>Закрытие разреза медицинским клеем без швов</div></div>
+</div>
+<div class="m-block"><div class="m-title"><i>B</i><h3>Роботизированное эндопротезирование (ROSA)</h3></div>
+ <div class="grid2" style="grid-template-columns:1fr 1.05fr;gap:4mm">
+  <div><p class="small">Робот не заменяет хирурга — он с высокой точностью выполняет план, составленный врачом. Операция планируется индивидуально с учётом состояния сустава, степени деформации и оси конечности на основе опыта более 3 000 эндопротезирований.</p><ul class="dots"><li>Минимальная частота осложнений после внедрения робота</li><li>Пациенты 70–80 лет могут рано начинать ходить</li><li>Опыт: 3 000+ эндопротезирований коленного и тазобедренного суставов</li></ul><div class="steps" style="grid-template-columns:1fr 1fr"><div><b>01</b>Точное планирование резекции и положения импланта</div><div><b>02</b>Резекция кости с ассистенцией робота</div><div><b>03</b>Установка импланта, проверка баланса связок и оси</div><div><b>04</b>Обучение ходьбе и поэтапная реабилитация</div></div></div>
+  <div><table class="cmp"><colgroup><col style="width:27%"><col style="width:33%"><col></colgroup><tr><th>Параметр</th><th>Обычная операция</th><th>С роботом</th></tr><tr><td>Резекция кости</td><td>Зависит от опыта хирурга</td><td class="hi">Точность до 0,5 мм</td></tr><tr><td>Баланс связок</td><td>Ручная проверка</td><td class="hi">Датчики в реальном времени</td></tr><tr><td>Кровопотеря, травма тканей</td><td>Относительно больше</td><td class="hi">Минимальные</td></tr><tr><td>Восстановление</td><td>Относительно дольше</td><td class="hi">Ранняя ходьба</td></tr><tr><td>Срок службы протеза</td><td>Стандартный</td><td class="hi">Дольше благодаря точной установке</td></tr><tr><td>Разрез</td><td>Стандартный</td><td class="hi">Меньше обычного</td></tr></table></div>
+ </div>
+</div>
+<div class="grid3" style="gap:3mm">
+ <div class="card"><div class="m-title"><i>C</i><h4 style="margin:0;font-size:9.2pt">Регенеративная терапия</h4></div><p class="small" style="margin-bottom:1.6mm">Если операцию хочется избежать или отложить: артроз, частичный разрыв вращательной манжеты, хронические травмы связок и сухожилий.</p><div class="chips"><span>PRP</span><span>Стволовые клетки BMAC</span><span>Коллаген / гиалуронат</span><span>Пролотерапия</span><span>УВТ</span></div></div>
+ <div class="card"><div class="m-title"><i>D</i><h4 style="margin:0;font-size:9.2pt">Малоинвазивное лечение боли</h4></div><p class="small" style="margin-bottom:1.6mm">Источник боли точно определяется под УЗИ или рентгеном; большинство пациентов возвращаются к обычной жизни в тот же день.</p><div class="chips"><span>Блокада под УЗИ</span><span>Блокада под рентгеном</span><span>Пролотерапия</span><span>УВТ</span><span>Гидродиссекция</span></div></div>
+ <div class="card"><div class="m-title"><i>E</i><h4 style="margin:0;font-size:9.2pt">Мануальная терапия и Sky Walking</h4></div><p class="small">Индивидуальная мануальная терапия: коррекция суставов и позвоночника, миофасциальный релиз. Система разгрузки веса Sky Walking помогает снова ходить при слабости ног, нарушении равновесия или боли.</p><img class="ph e-img" src="assets/rehab2.jpg" style="height:24mm;margin-top:2mm"></div>
+</div>
+</div><div class="foot"><span><b>CHEONGDAM HARRISON HOSPITAL</b> &nbsp;·&nbsp; Сеул, Корея</span><span>harrisonhospital.co.kr &nbsp;·&nbsp; 4 / 6</span></div></section><section class="page"><div class="inner">
+<div class="sec-head"><div class="sec-num">04</div><div><div class="kick">Что мы лечим</div><h2>Операционные и неоперационные процедуры</h2></div></div>
+<p class="small" style="margin:-1.4mm 0 3mm">Лечение всегда начинается с наименее инвазивного метода. Операция рекомендуется, если консервативная терапия не помогает или появляются слабость в мышцах, онемение и другие неврологические симптомы.</p>
+<table class="proc"><tr><th>Направление</th><th style="width:28%">Основные заболевания</th><th style="width:27%">Лечение без операции</th><th>Хирургическое лечение</th></tr><tr><td>Позвоночник<small>Нейрохирургия</small></td><td><ul class=""><li>Грыжа поясничного диска</li><li>Грыжа шейного диска</li><li>Стеноз позвоночного канала</li><li>Спондилолистез</li><li>Оссификация задней продольной связки (ОЗПС)</li><li>Остеопоротический компрессионный перелом</li><li>Синдром «прямой шеи»</li></ul></td><td><ul class=""><li>Медикаменты и физиотерапия</li><li>Блокады нервов</li><li>Чрескожная эпидуральная невропластика (катетерный адгезиолизис)</li><li>Мануальная терапия</li></ul></td><td><ul class=""><li>Эндоскопическая дискэктомия (одно- / бипортальная)</li><li>Эндоскопическая фораминотомия и декомпрессия</li><li>Эндоскопический или микроскопический межтеловой спондилодез</li><li>Микрохирургическое эндопротезирование шейного диска</li></ul></td></tr><tr><td>Колено<small>Ортопедия</small></td><td><ul class=""><li>Остеоартроз</li><li>Разрыв мениска</li><li>Разрыв передней / задней крестообразной связки</li><li>Повреждение хряща</li><li>О- и Х-образная деформация ног</li><li>Бурсит, тендинит, хондромаляция надколенника</li></ul></td><td><ul class=""><li>PRP-инъекции</li><li>Терапия стволовыми клетками BMAC</li><li>УВТ (ESWT)</li><li>Внутрисуставные инъекции (хрящ, коллаген, пролотерапия)</li></ul></td><td><ul class=""><li>Артроскопия: шов / резекция мениска, регенерация хряща</li><li>Корригирующая остеотомия</li><li>Регенерация хряща стволовыми клетками (Cartistem, MegaCarti)</li><li>Частичное эндопротезирование (UKR)</li><li>Тотальное эндопротезирование с роботом ROSA</li></ul></td></tr><tr><td>Плечо<small>Ортопедия</small></td><td><ul class=""><li>Разрыв вращательной манжеты</li><li>«Замороженное плечо»</li><li>Импинджмент, кальцифицирующий тендинит</li><li>Вывих / нестабильность, SLAP-повреждение</li><li>Повреждение акромиально-ключичного сустава</li></ul></td><td><ul class=""><li>УВТ (кальцифицирующий тендинит)</li><li>Инъекции PRP / коллагена</li><li>Мануальная терапия и реабилитация</li></ul></td><td><ul class=""><li>Артроскопия: шов вращательной манжеты, восстановление суставной губы</li><li>Артроскопия при тяжёлом «замороженном плече», артрозе АКС</li><li>Эндопротезирование плечевого сустава</li></ul></td></tr><tr><td>Тазобедрен&shy;ный сустав<small>Ортопедия</small></td><td><ul class=""><li>Дисплазия</li><li>Асептический некроз головки бедренной кости</li><li>Коксартроз</li></ul></td><td><ul class=""><li>Медикаменты, физиотерапия, инъекции</li></ul></td><td><ul class=""><li>Тотальное эндопротезирование с поэтапной реабилитацией</li></ul></td></tr><tr><td>Переломы<small>Травматология</small></td><td><ul class=""><li>Стрессовые переломы</li><li>Переломы плеча, запястья, бедра, лодыжки</li><li>Переломы позвоночника</li></ul></td><td><ul class=""><li>Гипс / ортез</li><li>Лечение и профилактика остеопороза (DEXA)</li></ul></td><td><ul class=""><li>Интрамедуллярный остеосинтез</li><li>Остеосинтез пластинами и винтами</li><li>Эндопротезирование при переломе бедра у пожилых</li><li>Программа ранней реабилитации пожилых пациентов</li></ul></td></tr><tr><td>Спортивные травмы<small>Спортивная и регенеративная медицина</small></td><td><ul class=""><li>Разрывы и ушибы мышц</li><li>Повреждение связок голеностопа, привычное подворачивание</li><li>Подошвенный фасциит</li><li>Разрыв / тендинит ахиллова сухожилия</li><li>Повреждение связок колена</li><li>«Локоть теннисиста / гольфиста»</li></ul></td><td><ul class=""><li>УВТ (ESWT)</li><li>Инъекции под контролем УЗИ</li><li>PRP-инъекции</li><li>Программа спортивной реабилитации</li></ul></td><td><ul class=""><li>Артроскопическая реконструкция / шов связок</li></ul></td></tr><tr><td>Боль и невралгии<small>Центр лечения боли</small></td><td><ul class=""><li>Хроническая боль в шее и спине</li><li>Боль в нервах, суставах, мышцах</li><li>Дискогенная боль, нейропатия</li><li>Постгерпетическая невралгия</li></ul></td><td><ul class=""><li>Блокады под УЗИ / рентгеном</li><li>Пролотерапия, УВТ, гидродиссекция</li><li>Мануальная терапия, CPM, криотерапия</li></ul></td><td><ul class=""><li>Безоперационный центр — при необходимости операцию проводит Центр позвоночника или суставов</li></ul></td></tr></table>
+<div class="diag"><div><b>Диагностика</b>МРТ, КТ, рентген, УЗИ, термография DITI, денситометрия, анализы крови, ЭКГ</div><div><b>Клиника остеопороза</b>Безболезненная DEXA за 10 минут, оценка по T-критерию, лечение и наблюдение для профилактики повторных переломов</div><div><b>Терапия</b>Гипертония, диабет, липиды, щитовидная железа, печень, ЖКТ, лёгкие; ЭКГ, ЭхоКГ, УЗИ брюшной полости и щитовидной железы, онкомаркеры</div><div><b>Профилактика</b>Вакцинация, капельницы, анализ нутриентов, программы снижения веса и лечения хронической усталости</div></div>
+<div class="grid3" style="gap:3mm;margin-top:3.4mm"><div><img class="ph" src="assets/or_entr.jpg" style="height:22mm"><div class="cap">Хирургический центр Harrison (4F)</div></div><div><img class="ph" src="assets/ward.jpg" style="height:22mm"><div class="cap">Палата стационара (7F)</div></div><div><img class="ph" src="assets/consult.jpg" style="height:22mm"><div class="cap">Кабинет консультаций (2F)</div></div></div>
+</div><div class="foot"><span><b>CHEONGDAM HARRISON HOSPITAL</b> &nbsp;·&nbsp; Сеул, Корея</span><span>harrisonhospital.co.kr &nbsp;·&nbsp; 5 / 6</span></div></section><section class="page"><div class="inner">
+<div class="sec-head"><div class="sec-num">05</div><div><div class="kick">Как с нами связаться</div><h2>Контакты и информация для пациентов</h2></div></div>
+<div class="ct-hero">
+ <div class="ct-main"><h3>Cheongdam Harrison Hospital</h3><div class="ct-row"><span>Адрес</span><span>646 Samseong-ro, Gangnam-gu, Seoul 06084, Республика Корея<br>Madi Building, этажи B3–B1 и 2–9</span></div><div class="ct-row"><span>Телефон</span><span><b>+82-2-333-8801</b></span></div><div class="ct-row"><span>Факс</span><span>+82-2-333-8815</span></div><div class="ct-row"><span>Сайт</span><span>harrisonhospital.co.kr</span></div><div class="ct-row"><span>Онлайн</span><span>Консультация специалиста для пациентов из-за рубежа: harrisonhospital.co.kr/online</span></div><div class="ct-row"><span>Запись</span><span>По телефону +82-2-333-8801 (быстрее всего) или через Naver Booking</span></div></div>
+ <div style="display:flex;flex-direction:column;gap:3mm">
+  <div class="qrs"><div class="qr"><img src="assets/qr_site.svg"><b>Сайт клиники</b>harrisonhospital.co.kr</div><div class="qr"><img src="assets/qr_online.svg"><b>Онлайн-консультация</b>harrisonhospital.co.kr/online</div></div>
+  <div class="card" style="padding:3mm 3.4mm"><h4>Как добраться</h4><ul class="dots"><li>Метро: станция Cheongdam (линия 7), выход 6 — 100 м прямо</li><li>На автомобиле: 646 Samseong-ro; у главного здания встречает сотрудник парковки</li><li>Местное время: Сеул, KST (UTC+9)</li></ul></div>
+ </div>
+</div>
+<div class="grid2" style="grid-template-columns:.9fr 1.1fr;gap:4.5mm;margin-top:4.5mm">
+ <div><h4>Часы работы</h4><table class="hours"><tr><td>Пн–Пт · нейрохирургия, ортопедия, лечение боли</td><td>09:00–18:00</td></tr><tr><td>Пн–Пт · терапия</td><td>09:00–17:00</td></tr><tr><td>Обед (будни)</td><td>13:00–14:00</td></tr><tr><td>Суббота · по записи</td><td>09:00–13:00</td></tr><tr><td>Воскресенье и праздники</td><td>выходной</td></tr></table><p class="note" style="margin-top:1.4mm">Регистрация завершается за 30 минут до закрытия. Терапевтическое отделение в субботу не работает. Справки по телефону: Пн–Пт 09:00–18:00, Сб 09:00–13:00.</p></div>
+ <div><h4>Расписание приёма врачей</h4><table class="sched"><tr><th rowspan="2" style="text-align:left">Врач</th><th colspan="2">Пн</th><th colspan="2">Вт</th><th colspan="2">Ср</th><th colspan="2">Чт</th><th colspan="2">Пт</th></tr><tr><th style="font-weight:400;background:var(--navy2)">утро</th><th style="font-weight:400;background:var(--navy2)">день</th><th style="font-weight:400;background:var(--navy2)">утро</th><th style="font-weight:400;background:var(--navy2)">день</th><th style="font-weight:400;background:var(--navy2)">утро</th><th style="font-weight:400;background:var(--navy2)">день</th><th style="font-weight:400;background:var(--navy2)">утро</th><th style="font-weight:400;background:var(--navy2)">день</th><th style="font-weight:400;background:var(--navy2)">утро</th><th style="font-weight:400;background:var(--navy2)">день</th></tr><tr><td>Ким Хён Сон</td><td class="o">●</td><td class="s">◆</td><td class="s">◆</td><td class="s">◆</td><td class="o">●</td><td class="o">●</td><td class="s">◆</td><td class="s">◆</td><td class="o">●</td><td class="o">●</td></tr><tr><td>Хо Дон Хва</td><td class="s">◆</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="s">◆</td><td class="s">◆</td><td class="o">●</td><td class="o">●</td><td class="s">◆</td><td class="s">◆</td></tr><tr><td>О Сон Хун</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="">·</td><td class="o">●</td><td class="">·</td><td class="">·</td><td class="">·</td><td class="">·</td><td class="">·</td></tr><tr><td>Ким Дон Ук</td><td class="s">◆</td><td class="o">●</td><td class="s">◆</td><td class="o">●</td><td class="s">◆</td><td class="o">●</td><td class="s">◆</td><td class="o">●</td><td class="s">◆</td><td class="o">●</td></tr><tr><td>Рю Сын Ёль</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="s">◆</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="s">◆</td></tr><tr><td>Ли Джи Хван</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="o">●</td></tr><tr><td>Сон И Ран</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="o">●</td></tr></table><p class="note" style="margin-top:1.4mm">● приём пациентов &nbsp;◆ операции. Д-р Ли Джи Хван (Центр лечения боли) принимает только в порядке живой очереди, без предварительной записи. Расписание может меняться — уточняйте при записи.</p></div>
+</div>
+<h4 style="margin-top:4.2mm">Ваш визит шаг за шагом</h4>
+<div class="journey"><div><i>01</i><b>Запись</b>Телефон, Naver Booking или онлайн-консультация для иностранцев</div><div><i>02</i><b>Регистрация</b>Иностранным пациентам необходим паспорт</div><div><i>03</i><b>Обследование</b>МРТ, КТ, УЗИ, DITI, денситометрия, рентген, анализы, ЭКГ — по показаниям</div><div><i>04</i><b>План лечения</b>Безоперационное лечение (3F, Центр боли) или консультация хирурга</div><div><i>05</i><b>Оплата</b>Расчёт, затем выписка или следующий визит</div></div>
+<div class="grid2" style="grid-template-columns:1fr 1fr;gap:4.5mm;margin-top:4mm">
+ <div class="card line" style="padding:3mm 3.4mm"><h4>Парковка</h4><p class="small">Механизированная парковка-башня. Для пациентов бесплатно 4 часа по чеку (приём, госпитализация / выписка, день операции). Работает Пн–Пт 08:50–18:00, Сб 08:50–13:00. Крупные внедорожники, минивэны, электромобили и лимузины не принимаются — рекомендуем общественный транспорт.</p></div>
+ <div class="card line" style="padding:3mm 3.4mm"><h4>Мы в соцсетях</h4><p class="small">YouTube: @Harrisonhospital<br>Instagram: @harrisonhospital<br>Naver Blog: blog.naver.com/harrisonhospital2023</p></div>
+</div>
+<div class="card" style="margin-top:4mm;padding:3.2mm 4mm;display:grid;grid-template-columns:40mm 1fr;gap:4mm;align-items:center"><div><span class="tag">Партнёры</span><h4 style="font-size:10pt;margin:0">Сеть медицинского сотрудничества</h4></div><p class="small">Клиника сотрудничает с 17 университетскими больницами Сеула и пригородов, в том числе с Сеульской национальной университетской больницей, Gangnam Severance, больницами Корейского университета (Анам, Куро), университетов Ханян, Конкук, Чунан и Женского университета Ихва, — для направления пациента к профильным специалистам при необходимости.</p></div>
+<p class="note" style="margin-top:3mm">Информация подготовлена по материалам официального сайта harrisonhospital.co.kr (октябрь 2026 г.). Метод лечения определяется индивидуально после обследования. Стоимость лечения сообщается на консультации.</p>
+</div><div class="foot"><span><b>CHEONGDAM HARRISON HOSPITAL</b> &nbsp;·&nbsp; Сеул, Корея</span><span>harrisonhospital.co.kr &nbsp;·&nbsp; 6 / 6</span></div></section>
+</body></html>
