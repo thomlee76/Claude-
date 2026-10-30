@@ -17,10 +17,11 @@ const SFILE=s=>"l"+s.l+"-"+(s.p<10?"0"+s.p:s.p);
 const KLABEL={gram:"문법",word:"단어",kanji:"한자",talk:"회화",sum:"정리"};
 const LESSONS=GRAM.map(g=>g.l);
 const LSHORT={1:"희망·계획",2:"비교·순위",3:"날짜·색·옷",4:"희망·주문·부탁",5:"추측·날짜·거리",6:"역접·변화·교토",7:"목적·변화·출장"};
-const SECS=[["gram","문법","文"],["word","단어","語"],["kanji","한자","漢"],["talk","회화","話"],["sheets","자료","資"]];
+const SECS=[["gram","문법","文"],["word","단어","語"],["kanji","한자","漢"],["talk","회화","話"],["sheets","자료","資"],["video","영상","映"]];
+const VIDEO=l=>"video/lesson0"+l+".mp4";
 const L2=l=>"L"+(l<10?"0"+l:l);
 const WIMG=i=>"img/m"+i+".webp";
-const APPV="v26";
+const APPV="v27";
 
 let known=new Set(store.get("known",[])),kknown=new Set(store.get("kknown",[]));
 const lessonOf=l=>GRAM.find(g=>g.l===l);
@@ -215,7 +216,7 @@ function renderLessonDetail(){
   v.appendChild(el("div","lhd",'<div class="k">LESSON '+(l<10?"0"+l:l)+'</div><b>'+ESC(g.title)+'</b><p>'+ESC(g.desc||"")+'</p>'));
   const vs=vocabOf(l),ks=kanjiOf(l),kw=vs.filter(([,i])=>known.has(i)).length,kk=ks.filter(([,i])=>kknown.has(i)).length,ds=DLGS.filter(d=>d.l===l),sh=sheetsOf(0,l);
   const rows=el("div","rows");
-  [["gram","문법","文",g.items.length+"개"],["word","단어","語",kw+" / "+vs.length],["kanji","한자","漢",kk+" / "+ks.length],["talk","회화","話",ds.length+"편"],["sheets","자료","資",sh.length+"장"]].forEach(([k,lab,gl,m])=>{
+  [["gram","문법","文",g.items.length+"개"],["word","단어","語",kw+" / "+vs.length],["kanji","한자","漢",kk+" / "+ks.length],["talk","회화","話",ds.length+"편"],["sheets","자료","資",sh.length+"장"],["video","영상","映","10~15분"]].forEach(([k,lab,gl,m])=>{
     const r=el("button","r",'<span class="g">'+gl+'</span>'+lab+'<span>'+m+'</span><span class="ch">›</span>');r.onclick=()=>go("l"+l+"/"+k);rows.appendChild(r)});
   v.appendChild(rows);
   const two=el("div","two");const a=el("button","bigbtn w","플래시카드");a.onclick=()=>go("flash/"+l);const b=el("button","bigbtn","퀴즈 시작");b.onclick=()=>go("quiz/"+l);two.appendChild(a);two.appendChild(b);v.appendChild(two);
@@ -226,9 +227,9 @@ function renderLessonDetail(){
 function markSeen(k){const s=store.get("seen",{});if(!s[k]){s[k]=1;store.set("seen",s)}}
 function renderSection(){
   const v=$("view"),l=R.lesson,sec=R.sec,lab=SECS.find(s=>s[0]===sec)[1];
-  const sh=sec==="sheets"?[]:sheetsOf(sec,l);
+  const sh=(sec==="sheets"||sec==="video")?[]:sheetsOf(sec,l);
   v.appendChild(topbar({back:"l"+l,title:L2(l)+" · "+lab,right:sh.length?'<span style="font-size:13px;font-weight:700">자료</span>':"",onRight:sh.length?()=>openViewer(sh,0):null}));
-  ({gram:renderGram,word:renderWord,kanji:renderKanji,talk:renderTalk,sheets:renderSheets})[sec]();
+  ({gram:renderGram,word:renderWord,kanji:renderKanji,talk:renderTalk,sheets:renderSheets,video:renderVideo})[sec]();
 }
 function gramCard(it){
   const c=el("div","card gram");
@@ -313,6 +314,14 @@ function renderTalk(){
     sp.forEach((q,i)=>{const d=el("div","sq",'<div class="q jp">'+(i+1)+'. '+F(q[0])+'</div><div class="reveal jp">'+F(q[1])+'</div>');d.onclick=()=>d.classList.toggle("on");c.appendChild(d)});
     v.appendChild(c);
   }
+}
+function renderVideo(){
+  const v=$("view"),l=R.lesson,g=lessonOf(l);markSeen("v"+l);
+  const c=el("div","vidwrap");
+  c.innerHTML='<video controls playsinline preload="metadata" src="'+VIDEO(l)+'"></video>'+
+    '<div class="vidinfo"><b>'+L2(l)+' 복습 영상</b><p>'+ESC(g.title)+'</p><p class="muted">문법 → 단어 → 회화 순서로 10~15분. 일본어 설명이 중심이고, 핵심 포인트만 한국어로 보충합니다. 인터넷 연결이 필요합니다.</p>'+
+    '<a class="bigbtn w" href="'+VIDEO(l)+'" download>영상 파일 저장</a></div>';
+  v.appendChild(c);
 }
 function renderSheets(){
   const v=$("view"),list=sheetsOf(0,R.lesson);markSeen("s"+R.lesson);
