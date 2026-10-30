@@ -346,7 +346,7 @@ def page_contacts(t):
 <div class="diag" style="margin-top:0">{feats}</div>
 <h4 style="margin-top:4.4mm">{c["journey_t"]}</h4>
 <div class="journey" style="grid-template-columns:repeat(4,1fr)">{journey}</div>
-<div class="grid3" style="gap:3mm;margin-top:4.4mm"><img class="ph" src="assets/smc_reception.jpg" style="height:46mm"><img class="ph" src="assets/smc_room.jpg" style="height:46mm"><img class="ph" src="assets/smc_doctor.jpg" style="height:46mm"></div>
+<div class="grid3" style="gap:3mm;margin-top:4.4mm"><div><img class="ph" src="assets/smc_waiting.jpg" style="height:42mm"><div class="cap">{c["caps"][0]}</div></div><div><img class="ph" src="assets/smc_xray.jpg" style="height:42mm"><div class="cap">{c["caps"][1]}</div></div><div><img class="ph" src="assets/smc_doctor.jpg" style="height:42mm;object-position:70% 50%"><div class="cap">{c["caps"][2]}</div></div></div>
 <p class="note" style="margin-top:3mm">{c["disclaimer"]}</p>
 </div>{foot(t, 6)}</section>'''
 
