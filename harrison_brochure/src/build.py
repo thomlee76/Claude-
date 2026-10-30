@@ -42,7 +42,7 @@ table{border-collapse:collapse;width:100%}
 .wordmark .b{font-size:6.8pt;letter-spacing:3.4pt;color:var(--gold);margin-top:1.3mm;font-weight:600}
 
 /* COVER */
-.cover .hero{position:absolute;left:0;right:0;top:0;height:158mm}
+.cover .hero{position:absolute;left:0;right:0;top:0;height:150mm}
 .cover .hero img{width:100%;height:100%;object-fit:cover}
 .cover .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,40,75,.55) 0%,rgba(20,40,75,.05) 38%,rgba(20,40,75,0) 60%,rgba(20,40,75,.65) 100%)}
 .cover .top{position:absolute;left:13mm;right:13mm;top:12mm;display:flex;justify-content:space-between;align-items:flex-start;z-index:2}
@@ -50,7 +50,7 @@ table{border-collapse:collapse;width:100%}
 .cover .top .wordmark .b{color:var(--gold2)}
 .cover .top .lang{color:#fff;font-size:7pt;letter-spacing:2pt;border:.25mm solid rgba(255,255,255,.7);padding:1.3mm 2.6mm;border-radius:5mm}
 .cover .herotxt{position:absolute;left:13mm;right:13mm;bottom:149mm;z-index:2;color:#fff}
-.cover .body{position:absolute;left:13mm;right:13mm;top:166mm}
+.cover .body{position:absolute;left:13mm;right:13mm;top:158mm}
 .cover h1{font-size:25pt;font-weight:700;letter-spacing:-.4pt;margin-bottom:3.5mm}
 .cover h1 span{color:var(--gold)}
 .cover .sub{font-size:10.2pt;color:var(--muted);margin-bottom:6mm;line-height:1.45}
@@ -145,7 +145,7 @@ table{border-collapse:collapse;width:100%}
 /* CONTACTS */
 .ct-hero{display:grid;grid-template-columns:1.25fr 1fr;gap:4mm}
 .ct-main{background:var(--navy);color:#fff;border-radius:2.4mm;padding:5mm}
-.ct-main h3{color:#fff;font-size:12pt}
+.ct-main h3{color:#fff;font-size:12pt}\n.ct-main .ct-row b{font-size:12pt}
 .ct-row{display:grid;grid-template-columns:24mm 1fr;gap:2mm;padding:1.5mm 0;border-bottom:.2mm solid rgba(255,255,255,.18);font-size:8pt}
 .ct-row:last-child{border-bottom:none}
 .ct-row span:first-child{color:var(--gold2);font-size:6.8pt;letter-spacing:.9pt;text-transform:uppercase;padding-top:.4mm}
@@ -195,12 +195,16 @@ body.ru .diag div{font-size:6.8pt}
 body.ru .ct-row{font-size:7.7pt}
 body.ru .journey div{font-size:6.7pt}
 body.ru .e-img{display:none}
+.svcs{display:grid;grid-template-columns:repeat(6,1fr);gap:2mm;margin:1.6mm 0 3mm}
+.svc{border:.25mm solid var(--gold2);border-radius:1.6mm;padding:2mm 2.2mm;background:#fff}
+.svc b{display:block;color:var(--navy);font-size:7.8pt;line-height:1.2;min-height:6.4mm}
+.svc span{color:var(--gold);font-weight:700;font-size:9pt;font-family:'Inter Display'}
 .note{font-size:6.6pt;color:var(--muted);line-height:1.4}
 """
 
 
 def foot(t, n):
-    return f'<div class="foot"><span><b>CHEONGDAM HARRISON HOSPITAL</b> &nbsp;·&nbsp; {t["city"]}</span><span>harrisonhospital.co.kr &nbsp;·&nbsp; {n} / 6</span></div>'
+    return f'<div class="foot"><span><b>CHEONGDAM HARRISON HOSPITAL</b> &nbsp;·&nbsp; {t["city"]}</span><span>Seoul Medical Center, {t["almaty"]} &nbsp;·&nbsp; +7 771 933 39 39 &nbsp;·&nbsp; {n} / 6</span></div>'
 
 
 def head(num, kick, title):
@@ -224,7 +228,7 @@ def page_cover(t):
 <div class="stats">{stats}</div>
 <div class="pillars">{pillars}</div>
 </div>
-<div class="bottom"><div class="c1"><b>+82-2-333-8801</b><br>{c["addr"]}</div><div class="c2">harrisonhospital.co.kr<br>{c["online"]}</div></div>
+<div class="bottom"><div class="c1"><span style="color:var(--gold2);font-size:6.6pt;letter-spacing:1.4pt;text-transform:uppercase">{c["ct_label"]}</span><br><b>+7 771 933 39 39</b><br>{c["addr"]}</div><div class="c2"><img src="assets/smc_logo_white.svg" style="height:6mm;display:block;margin:0 0 1.6mm auto">seoulmed.kz<br>WhatsApp +7 771 799 95 26</div></div>
 </section>'''
 
 
@@ -324,39 +328,25 @@ def page_proc(t):
 def page_contacts(t):
     c = t['contacts']
     rows = ''.join(f'<div class="ct-row"><span>{a}</span><span>{b}</span></div>' for a, b in c['rows'])
-    hours = ''.join(f'<tr><td>{a}</td><td>{b}</td></tr>' for a, b in c['hours'])
-    days = c['days']
-    srows = ''
-    for name, slots in c['sched']:
-        cells = ''
-        for s in slots:
-            cls = 'o' if s == 'O' else ('s' if s == 'S' else '')
-            lab = c['lbl'][s]
-            cells += f'<td class="{cls}">{lab}</td>'
-        srows += f'<tr><td>{name}</td>{cells}</tr>'
-    dh = ''.join(f'<th colspan="2">{d}</th>' for d in days)
-    ap = ''.join(f'<th style="font-weight:400;background:var(--navy2)">{c["am"]}</th><th style="font-weight:400;background:var(--navy2)">{c["pm"]}</th>' for _ in days)
+    services = ''.join(f'<div class="svc"><b>{x}</b><span>{p}</span></div>' for x, p in c['services'])
+    feats = ''.join(f'<div><b>{a}</b>{b}</div>' for a, b in c['feats'])
     journey = ''.join(f'<div><i>0{i+1}</i><b>{a}</b>{b}</div>' for i, (a, b) in enumerate(c['journey']))
     return f'''<section class="page"><div class="inner">
 {head("05", c["kick"], c["title"])}
+<p class="lead" style="margin:-1mm 0 4mm">{c["lead"]}</p>
 <div class="ct-hero">
- <div class="ct-main"><h3>{c["main_t"]}</h3>{rows}</div>
+ <div class="ct-main"><img src="assets/smc_logo_white.svg" style="height:8.5mm;display:block;margin-bottom:2.4mm"><div style="color:var(--gold2);font-size:7.4pt;letter-spacing:1.4pt;text-transform:uppercase;margin-bottom:2mm">{c["main_sub"]}</div>{rows}</div>
  <div style="display:flex;flex-direction:column;gap:3mm">
-  <div class="qrs"><div class="qr"><img src="assets/qr_site.svg"><b>{c["qr1"]}</b>harrisonhospital.co.kr</div><div class="qr"><img src="assets/qr_online.svg"><b>{c["qr2"]}</b>harrisonhospital.co.kr/online</div></div>
-  <div class="card" style="padding:3mm 3.4mm"><h4>{c["way_t"]}</h4>{ul(c["way"])}</div>
+  <img class="ph" src="assets/smc_lobby.jpg" style="height:40mm">
+  <div class="qrs"><div class="qr"><img src="assets/qr_smc_site.svg"><b>{c["qr1"]}</b>seoulmed.kz</div><div class="qr"><img src="assets/qr_smc_wa.svg"><b>WhatsApp</b>+7 771 799 95 26</div></div>
  </div>
 </div>
-<div class="grid2" style="grid-template-columns:.9fr 1.1fr;gap:4.5mm;margin-top:4.5mm">
- <div><h4>{c["hours_t"]}</h4><table class="hours">{hours}</table><p class="note" style="margin-top:1.4mm">{c["hours_note"]}</p></div>
- <div><h4>{c["sched_t"]}</h4><table class="sched"><tr><th rowspan="2" style="text-align:left">{c["doc"]}</th>{dh}</tr><tr>{ap}</tr>{srows}</table><p class="note" style="margin-top:1.4mm">{c["sched_note"]}</p></div>
-</div>
-<h4 style="margin-top:4.2mm">{c["journey_t"]}</h4>
-<div class="journey">{journey}</div>
-<div class="grid2" style="grid-template-columns:1fr 1fr;gap:4.5mm;margin-top:4mm">
- <div class="card line" style="padding:3mm 3.4mm"><h4>{c["park_t"]}</h4><p class="small">{c["park"]}</p></div>
- <div class="card line" style="padding:3mm 3.4mm"><h4>{c["social_t"]}</h4><p class="small">{c["social"]}</p></div>
-</div>
-<div class="card" style="margin-top:4mm;padding:3.2mm 4mm;display:grid;grid-template-columns:40mm 1fr;gap:4mm;align-items:center"><div><span class="tag">{c["net_k"]}</span><h4 style="font-size:10pt;margin:0">{c["net_t"]}</h4></div><p class="small">{c["net"]}</p></div>
+<h4 style="margin-top:4.6mm">{c["serv_t"]}</h4>
+<div class="svcs">{services}</div>
+<div class="diag" style="margin-top:0">{feats}</div>
+<h4 style="margin-top:4.4mm">{c["journey_t"]}</h4>
+<div class="journey" style="grid-template-columns:repeat(4,1fr)">{journey}</div>
+<div class="grid3" style="gap:3mm;margin-top:4.4mm"><img class="ph" src="assets/smc_reception.jpg" style="height:46mm"><img class="ph" src="assets/smc_room.jpg" style="height:46mm"><img class="ph" src="assets/smc_doctor.jpg" style="height:46mm"></div>
 <p class="note" style="margin-top:3mm">{c["disclaimer"]}</p>
 </div>{foot(t, 6)}</section>'''
 
