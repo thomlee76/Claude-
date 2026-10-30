@@ -3,559 +3,592 @@
 <head>
 <meta charset="utf-8">
 <title>Human Medical Imaging — брошюра</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 @page { size: A4; margin: 0; }
 :root{
-  --g:#2E9B3E; --g2:#3BA94C; --gd:#1D5C2D; --gl:#E8F5EA; --gl2:#F3FAF4;
-  --ink:#1E2633; --muted:#5B6573; --line:#DCE6DE; --bg:#F4F6F8; --red:#D9534F;
+  --g:#2E9B3E; --lime:#9DBA2E; --forest:#123A20; --forest2:#1C5230;
+  --mint:#EEF6EA; --paper:#FAFBF7; --ink:#172019; --muted:#5E6A61; --line:#D6E2D2;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:#fff}
-body{font-family:'Inter',sans-serif;color:var(--ink);font-size:8.7pt;line-height:1.45;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;background:#fff}
+body{font-family:'Inter',sans-serif;color:var(--ink);font-size:8.6pt;line-height:1.48;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;background:var(--paper)}
 .page:last-child{page-break-after:auto}
-.inner{position:absolute;inset:0;padding:13mm 13mm 16mm}
-h1,h2,h3,h4{font-family:'Inter Display','Inter',sans-serif;line-height:1.15;color:var(--ink)}
+h1,h2,h3,h4{font-family:'Montserrat','Inter',sans-serif;line-height:1.12;color:var(--ink)}
 .g{color:var(--g)}
-.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:6mm}
-.topbar img{height:9mm}
-.topbar .pn{font-size:7pt;letter-spacing:2pt;color:var(--muted);text-transform:uppercase}
-.sec{display:flex;gap:3mm;align-items:stretch;margin-bottom:5mm}
-.sec:before{content:"";width:1.4mm;border-radius:1mm;background:var(--g2)}
-.sec .k{font-size:7.2pt;letter-spacing:1.8pt;text-transform:uppercase;color:var(--g);font-weight:700;margin-bottom:.8mm}
-.sec h2{font-size:21pt;font-weight:800;letter-spacing:-.3pt}
-.lead{font-size:10.2pt;line-height:1.5}
+
+/* sidebar */
+.side{position:absolute;left:0;top:0;bottom:0;width:17mm;background:var(--g);color:#fff}
+.side .n{position:absolute;top:13mm;left:0;right:0;text-align:center;font-family:'Montserrat';font-weight:900;font-size:17pt;letter-spacing:-.5pt}
+.side .n:after{content:"";display:block;width:6mm;height:.6mm;background:var(--lime);margin:2.4mm auto 0}
+.side .t{position:absolute;left:50%;top:150mm;transform:translate(-50%,-50%) rotate(-90deg);white-space:nowrap;font-family:'Montserrat';font-weight:700;font-size:8pt;letter-spacing:4pt;text-transform:uppercase;opacity:.92}
+.side .pg{position:absolute;bottom:9mm;left:0;right:0;text-align:center;font-size:7pt;opacity:.8}
+.content{position:absolute;left:28mm;right:13mm;top:13mm;bottom:15mm}
+.foot{position:absolute;left:28mm;right:13mm;bottom:7mm;display:flex;justify-content:space-between;font-size:6.7pt;color:var(--muted)}
+.foot b{color:var(--forest2)}
+
+.lbl{font-family:'Montserrat';font-size:7pt;font-weight:800;letter-spacing:2.4pt;text-transform:uppercase;color:var(--lime)}
+.ttl{font-size:25pt;font-weight:900;letter-spacing:-.6pt;margin:1.6mm 0 0}
+.ttl em{font-style:normal;color:var(--g)}
+.rule{height:.4mm;background:var(--ink);margin:4.5mm 0 5mm;position:relative}
+.rule:before{content:"";position:absolute;left:0;top:-.5mm;width:22mm;height:1.4mm;background:var(--g)}
+.lead{font-size:10.4pt;line-height:1.55}
 .muted{color:var(--muted)}
 .small{font-size:7.8pt}
-.card{background:#fff;border:.3mm solid var(--line);border-radius:3mm;padding:4mm}
-.card.top{border-top:1.2mm solid var(--g2)}
-.card.soft{background:var(--gl2);border-color:#D3EBD7}
-.card.dark{background:var(--ink);border-color:var(--ink);color:#fff}
-.card.green{background:var(--g2);border-color:var(--g2);color:#fff}
-h3{font-size:12pt;font-weight:800;margin-bottom:1.6mm}
-h4{font-size:9.6pt;font-weight:800;margin-bottom:1mm}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:4mm}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:3.5mm}
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm}
-.ph{width:100%;object-fit:cover;border-radius:3mm;display:block}
-.cap{font-size:6.8pt;color:var(--muted);margin-top:1.2mm}
-ul.chk{list-style:none}
-ul.chk li{position:relative;padding-left:5.2mm;margin-bottom:1.6mm}
-ul.chk li:before{content:"";position:absolute;left:0;top:.6mm;width:3.4mm;height:3.4mm;border-radius:50%;background:var(--g2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.4l2.6 2.6L12 5.6' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/80% no-repeat}
-ul.dot{list-style:none}
-ul.dot li{position:relative;padding-left:3.4mm;margin-bottom:.9mm}
-ul.dot li:before{content:"";position:absolute;left:0;top:1.6mm;width:1.4mm;height:1.4mm;border-radius:50%;background:var(--g2)}
-.chips{display:flex;flex-wrap:wrap;gap:1.6mm}
-.chips span{background:var(--gl);color:var(--gd);border-radius:5mm;padding:1mm 2.8mm;font-size:7.6pt;font-weight:600}
-.num{font-family:'Inter Display';font-weight:800;color:var(--g);line-height:1}
-.foot{position:absolute;left:13mm;right:13mm;bottom:7mm;display:flex;justify-content:space-between;align-items:center;font-size:6.8pt;color:var(--muted);border-top:.25mm solid var(--line);padding-top:2.2mm}
-.foot b{color:var(--gd)}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:6mm}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm}
+.ph{display:block;width:100%;object-fit:cover}
+.tick{border-top:.4mm solid var(--ink);padding-top:2.6mm}
+.tick.lime{border-top:1.2mm solid var(--lime)}
+.tick h4{font-size:9.4pt;font-weight:800;margin-bottom:1.2mm}
+ol.nl{list-style:none;counter-reset:n}
+ol.nl li{counter-increment:n;position:relative;padding-left:9mm;margin-bottom:2.4mm}
+ol.nl li:before{content:counter(n,decimal-leading-zero);position:absolute;left:0;top:-.4mm;font-family:'Montserrat';font-weight:900;color:var(--g);font-size:10pt}
+ul.dash{list-style:none}
+ul.dash li{position:relative;padding-left:4.4mm;margin-bottom:1mm}
+ul.dash li:before{content:"";position:absolute;left:0;top:1.95mm;width:2.6mm;height:.6mm;background:var(--g)}
 
-/* cover */
-.cover{background:var(--bg)}
-.cover .logo{position:absolute;left:14mm;top:14mm;height:13mm}
-.cover .panel{position:absolute;right:13mm;top:30mm;width:84mm;height:118mm;background:var(--g2);border-radius:6mm;overflow:hidden}
-.cover .panel .shape{position:absolute;right:-22mm;bottom:-18mm;width:80mm;opacity:.22}
-.cover .panel .grey1{position:absolute}
-.cover .doc{position:absolute;right:15mm;top:16mm;height:132mm;filter:drop-shadow(0 3mm 4mm rgba(0,0,0,.12))}
-.cover .ttl{position:absolute;left:14mm;top:46mm;width:98mm}
-.cover h1{font-size:32pt;font-weight:900;color:var(--g);letter-spacing:-.6pt;line-height:1.02}
-.cover .sub{font-size:11pt;font-weight:700;margin-top:5mm;color:var(--ink)}
-.cover .tag{font-size:10pt;color:var(--muted);margin-top:3mm;line-height:1.5}
-.cover .bar{width:14mm;height:1.3mm;background:var(--g2);border-radius:1mm;margin-top:6mm}
-.cover .pills{display:flex;gap:2mm;margin-top:6mm;flex-wrap:wrap}
-.cover .pills span{border:.35mm solid var(--g2);color:var(--gd);background:#fff;border-radius:5mm;padding:1.2mm 3.2mm;font-size:7.8pt;font-weight:700}
-.cover .drname{position:absolute;right:17mm;top:152mm;text-align:right;font-size:7.6pt;color:var(--muted)}
-.cover .drname b{display:block;color:var(--ink);font-size:9pt}
-.cover .stats{position:absolute;left:13mm;right:13mm;top:172mm;display:grid;grid-template-columns:repeat(4,1fr);gap:3mm}
-.cover .stat{background:#fff;border-radius:3.5mm;padding:6.5mm 3mm;text-align:center;box-shadow:0 .6mm 2mm rgba(30,38,51,.06)}
-.cover .stat .num{font-size:26pt;color:var(--g)}
-.cover .stat div{font-size:7.8pt;color:var(--muted);margin-top:1.8mm;line-height:1.3}
-.cover .why{position:absolute;left:13mm;right:13mm;top:214mm;display:grid;grid-template-columns:repeat(3,1fr);gap:3mm}
-.cover .why div{background:#fff;border-radius:3.5mm;padding:5mm 4.4mm;min-height:30mm;border-left:1.2mm solid var(--g2)}
-.cover .why b{display:block;font-size:9pt;margin-bottom:.8mm}
-.cover .why span{font-size:7.6pt;color:var(--muted);line-height:1.38;display:block}
-.cover .bottom{position:absolute;left:13mm;right:13mm;bottom:12mm;background:var(--gd);color:#fff;border-radius:4mm;padding:5mm 6mm;display:grid;grid-template-columns:1fr auto;align-items:center;gap:6mm}
-.cover .bottom .l{font-size:7.6pt;line-height:1.55}
-.cover .bottom .l .k{color:#BFE6C5;font-size:6.8pt;letter-spacing:1.6pt;text-transform:uppercase}
-.cover .bottom .l b{font-size:13pt;display:block;margin:.6mm 0}
-.cover .bottom .r{text-align:right;font-size:7.6pt;line-height:1.6;color:#DDF1E0}
-.cover .bottom .r img{height:7mm;display:block;margin:0 0 1.6mm auto}
+/* ===== COVER ===== */
+.cover{background:var(--forest)}
+.cover .bg{position:absolute;inset:0 0 45mm 0}
+.cover .bg img{width:100%;height:100%;object-fit:cover;object-position:35% 40%}
+.cover .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,58,32,.55) 0%,rgba(18,58,32,.12) 28%,rgba(18,58,32,.6) 52%,rgba(18,58,32,.97) 72%,rgba(18,58,32,1) 100%)}
+.cover .logo{position:absolute;left:14mm;top:13mm;height:12mm;z-index:2}
+.cover .loc{position:absolute;right:14mm;top:16mm;z-index:2;color:#fff;font-family:'Montserrat';font-weight:700;font-size:7.4pt;letter-spacing:3pt;text-transform:uppercase}
+.cover .hero{position:absolute;left:14mm;right:14mm;top:112mm;z-index:2;color:#fff}
+.cover .hero h1{color:#fff;font-size:38pt;font-weight:900;letter-spacing:-1.2pt;line-height:1.0;margin-top:3mm}
+.cover .hero h1 span{color:var(--lime)}
+.cover .hero p{font-size:10.6pt;line-height:1.5;margin-top:5mm;max-width:150mm;color:#E4EFE3}
+.cover .nums{position:absolute;left:14mm;right:14mm;top:192mm;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);color:#fff}
+.cover .nums div{padding:0 4mm;border-left:.3mm solid rgba(255,255,255,.35)}
+.cover .nums div:first-child{padding-left:0;border-left:none}
+.cover .nums b{display:block;font-family:'Montserrat';font-weight:900;font-size:24pt;letter-spacing:-.6pt;color:#fff}
+.cover .nums span{font-size:7.6pt;color:#CFE3CC;line-height:1.3;display:block;margin-top:1mm}
+.cover .three{position:absolute;left:14mm;right:14mm;top:222mm;z-index:2;display:flex;gap:2.4mm}
+.cover .three span{border:.35mm solid var(--lime);color:#fff;border-radius:6mm;padding:1.4mm 4mm;font-family:'Montserrat';font-weight:700;font-size:7.6pt}
+.cover .band{position:absolute;left:0;right:0;bottom:0;height:46mm;background:#fff;display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:7mm;padding:0 14mm}
+.cover .band .k{font-family:'Montserrat';font-size:6.8pt;font-weight:800;letter-spacing:2.2pt;text-transform:uppercase;color:var(--g)}
+.cover .band .ph1{font-family:'Montserrat';font-size:19pt;font-weight:900;color:var(--ink);margin:1mm 0 .6mm;letter-spacing:-.3pt}
+.cover .band .ad{font-size:8pt;color:var(--muted);line-height:1.5}
+.cover .band .smc{height:10mm}
+.cover .band .qr{text-align:center;font-size:6.6pt;color:var(--muted)}
+.cover .band .qr img{width:22mm;height:22mm;display:block;margin-bottom:1mm}
 
-/* page 2 */
-.quote{background:var(--gl2);border-radius:4mm;padding:7mm 9mm 6mm;position:relative}
-.quote:before{content:"\201C";position:absolute;left:5mm;top:-1mm;font-family:'Inter Display';font-size:46pt;color:var(--g2);font-weight:900}
-.quote p{font-family:'Inter Display';font-size:13.5pt;font-weight:600;line-height:1.38;padding-left:6mm}
-.quote .who{font-size:8pt;color:var(--muted);margin-top:3mm;padding-left:6mm}
-.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:3.5mm}
-.tri .c{border-radius:3.5mm;padding:4.2mm 4mm;color:#fff;min-height:36mm}
-.tri .c b{font-family:'Inter Display';font-size:11.5pt;display:block;margin-bottom:.6mm}
-.tri .c i{font-style:normal;font-size:7pt;letter-spacing:1.2pt;text-transform:uppercase;opacity:.85;display:block;margin-bottom:2.4mm}
-.tri .c span{font-size:8pt;line-height:1.45;display:block}
+/* ===== P2 ===== */
+.quote{font-family:'Montserrat';font-weight:700;font-size:15pt;line-height:1.32;color:var(--forest);position:relative;padding-top:15mm;margin-top:3mm}
+.quote:before{content:"\201C";position:absolute;left:-1mm;top:-5mm;font-size:72pt;color:var(--lime);font-weight:900}
+.quote small{display:block;font-family:'Inter';font-weight:500;font-size:7.8pt;color:var(--muted);margin-top:4mm}
+.bleedR{position:absolute;right:0;width:88mm}
+.row3{border-top:.4mm solid var(--ink)}
+.row3 > div{display:grid;grid-template-columns:16mm 52mm 1fr;gap:4mm;padding:6.6mm 0;border-bottom:.25mm solid var(--line);align-items:start}
+.row3 .no{font-family:'Montserrat';font-weight:900;font-size:22pt;color:var(--g);line-height:.9}
+.row3 h4{font-size:10.5pt;font-weight:800}
+.row3 h4 small{display:block;font-family:'Inter';font-weight:600;font-size:6.6pt;letter-spacing:1.4pt;color:var(--lime);margin-top:1mm;text-transform:uppercase}
 
-/* page 3 */
-.flow{display:grid;grid-template-columns:1fr 8mm 1.1fr 8mm 1fr;align-items:center}
-.flow .b{border-radius:3mm;padding:3.4mm;text-align:center;font-size:7.6pt;line-height:1.35;min-height:24mm;display:flex;flex-direction:column;justify-content:center}
-.flow .b b{display:block;font-size:8.6pt;margin-bottom:.8mm}
-.flow .arr{text-align:center;color:var(--g2);font-size:15pt;font-weight:900}
-.teams{display:flex;flex-wrap:wrap;gap:1.6mm}
-.teams span{background:var(--gl);color:var(--gd);border-radius:1.6mm;padding:1.6mm 2mm;font-size:7.3pt;font-weight:600;text-align:center}
+/* ===== P3 ===== */
+.band-dark{background:var(--forest);color:#fff;margin:0 -13mm 0 0;padding:6mm 13mm 6mm 6mm;border-radius:4mm 0 0 4mm}
+.band-dark h3{color:#fff;font-size:15pt;font-weight:900;margin:1.2mm 0 4mm}
+.band-dark .bn{display:grid;grid-template-columns:repeat(4,1fr)}
+.band-dark .bn div{padding:0 3.4mm;border-left:.3mm solid rgba(255,255,255,.25)}
+.band-dark .bn div:first-child{padding-left:0;border-left:none}
+.band-dark .bn b{display:block;font-family:'Montserrat';font-weight:900;font-size:25pt;color:var(--lime);line-height:1}
+.band-dark .bn span{font-size:7.4pt;color:#D3E6CF;display:block;margin-top:1.4mm;line-height:1.3}
+.route{display:grid;grid-template-columns:1fr 1fr 1fr;position:relative;margin-top:3mm}
+.route:before{content:"";position:absolute;left:16%;right:16%;top:3.2mm;height:.5mm;background:var(--line)}
+.route div{text-align:center;padding:0 3mm;position:relative}
+.route i{display:block;width:6.4mm;height:6.4mm;border-radius:50%;background:#fff;border:.6mm solid var(--g);margin:0 auto 2.4mm}
+.route .mid i{background:var(--g);box-shadow:0 0 0 1.4mm var(--mint)}
+.route .end i{border-color:#C9473F}
+.route b{display:block;font-family:'Montserrat';font-size:8.6pt;font-weight:800;margin-bottom:.8mm}
+.route span{font-size:7.4pt;color:var(--muted)}
+.tags{font-size:9pt;line-height:2}
+.tags span:after{content:"  /  ";color:var(--lime);font-weight:700;white-space:pre}
+.tags span:last-child:after{content:""}
 
-/* page 4 */
-.no3{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm}
-.no3 div{background:var(--gl);border-radius:3mm;text-align:center;padding:3mm 2mm}
-.no3 b{display:block;font-family:'Inter Display';font-weight:900;color:var(--g);font-size:12.5pt;line-height:1.1}
-.no3 span{font-size:7.4pt;color:var(--gd);font-weight:600}
-.dir{border:.3mm solid var(--line);border-radius:3mm;padding:3.4mm 3.2mm;background:#fff}
-.dir .ic{width:9mm;height:9mm;border-radius:2.4mm;background:var(--gl);display:flex;align-items:center;justify-content:center;margin-bottom:2.4mm}
-.dir .k{font-size:6.8pt;letter-spacing:1.1pt;text-transform:uppercase;color:var(--g);font-weight:700}
-.dir h4{margin:.6mm 0 1.4mm;font-size:9.4pt}
-.dir p{font-size:7.4pt;color:var(--muted);line-height:1.4}
+/* ===== P4 ===== */
+.hero4{display:grid;grid-template-columns:1fr 78mm;gap:6mm;align-items:start}
+.monbox{position:relative;background:var(--forest);margin-right:-13mm;border-radius:4mm 0 0 4mm;height:62mm;overflow:hidden}
+.monbox img{position:absolute;left:5mm;top:5mm;width:calc(100% - 9mm);height:52mm;object-fit:contain}
+.state{display:grid;grid-template-columns:repeat(3,1fr);border-top:.4mm solid var(--ink);border-bottom:.4mm solid var(--ink);margin:5mm 0}
+.state div{padding:3.6mm 3mm;text-align:center}
+.state div+div{border-left:.25mm solid var(--line)}
+.state b{display:block;font-family:'Montserrat';font-weight:900;font-size:13pt;color:var(--g);line-height:1.1}
+.state span{font-size:7.2pt;color:var(--muted)}
+.dis{columns:3;column-gap:5mm;font-size:7.9pt}
+.dis li{break-inside:avoid}
+.d4{display:grid;grid-template-columns:1fr 1fr;border-top:.4mm solid var(--ink)}
+.d4 > div{padding:3.4mm 4mm 3.4mm 0;border-bottom:.25mm solid var(--line);display:grid;grid-template-columns:13mm 1fr;gap:2mm}
+.d4 > div:nth-child(odd){border-right:.25mm solid var(--line)}
+.d4 > div:nth-child(even){padding-left:4mm}
+.d4 .no{font-family:'Montserrat';font-weight:900;font-size:20pt;color:var(--lime);line-height:.9}
+.d4 .k{font-size:6.6pt;font-weight:700;letter-spacing:1.3pt;text-transform:uppercase;color:var(--g)}
+.d4 h4{font-size:9.6pt;font-weight:800;margin:.6mm 0 1mm}
+.d4 p{font-size:7.6pt;color:var(--muted)}
 
-/* page 5 */
-.doc{display:grid;grid-template-columns:44mm 1fr;gap:5mm;align-items:end;background:var(--gl2);border-radius:4mm;overflow:hidden;padding:5mm 5mm 0 0}
-.doc .pic{height:62mm;display:flex;align-items:flex-end;justify-content:center;background:linear-gradient(180deg,transparent 30%,#DDF0E0 30%)}
-.doc .pic img{height:62mm}
-.doc .txt{padding-bottom:5mm;align-self:start}
-.doc .role{font-size:7pt;letter-spacing:1.2pt;text-transform:uppercase;color:var(--g);font-weight:700}
-.doc h3{font-size:14pt;margin:.8mm 0 .6mm}
-.doc .pos{font-size:8pt;color:var(--muted);margin-bottom:2.6mm}
-.doc ul.dot li{font-size:8pt;margin-bottom:.8mm}
-.heads{width:100%;border-collapse:collapse;font-size:7.6pt}
-.heads td{padding:1.5mm 2mm;border-bottom:.25mm solid var(--line)}
-.heads td:first-child{font-weight:700;color:var(--gd);width:45%}
+/* ===== P5 ===== */
+.docs{display:grid;grid-template-columns:1fr 1fr;gap:5mm}
+.dc .pic{height:86mm;background:linear-gradient(180deg,var(--mint) 0%,#DDEDD7 100%);border-radius:4mm;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;position:relative}
+.dc .pic img{height:82mm}
+.dc .pic .tag{position:absolute;left:4mm;top:4mm;background:var(--g);color:#fff;font-family:'Montserrat';font-weight:800;font-size:6.6pt;letter-spacing:1.4pt;padding:1.2mm 2.6mm;border-radius:5mm;text-transform:uppercase}
+.dc h3{font-size:13.5pt;font-weight:900;margin:4mm 0 .6mm}
+.dc .pos{font-size:7.8pt;color:var(--g);font-weight:600;margin-bottom:2.4mm}
+.dc ul.dash li{font-size:7.8pt}
+.pae{position:absolute;left:17mm;right:0;bottom:0;height:86mm}
+.pae img{width:100%;height:100%;object-fit:cover;object-position:60% 35%}
+.pae:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,58,32,.96) 0%,rgba(18,58,32,.86) 46%,rgba(18,58,32,0) 78%)}
+.pae .tx{position:absolute;left:11mm;top:9mm;width:96mm;z-index:2;color:#fff}
+.pae .tx h3{color:#fff;font-size:17pt;font-weight:900;margin:1.6mm 0 3mm}
+.pae .tx h3 span{color:var(--lime)}
+.pae .tx p{font-size:8.2pt;color:#E1EEDD;line-height:1.5}
+.pae .tx .fu{margin-top:3.6mm;border-left:1mm solid var(--lime);padding-left:3mm;font-size:7.8pt;color:#E1EEDD}
+.pae .tx .fu b{color:#fff;display:block;font-family:'Montserrat';font-size:8.6pt;margin-bottom:.4mm}
+.pae .foot2{position:absolute;left:11mm;right:13mm;bottom:7mm;z-index:2;display:flex;justify-content:space-between;font-size:6.7pt;color:#CFE3CC}
 
-/* page 6 */
-.vs{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:3.5mm;overflow:hidden}
-.vs div{padding:4.5mm;text-align:center}
-.vs .a{background:#EEF0F3}
-.vs .b{background:var(--g2);color:#fff}
-.vs b{font-family:'Inter Display';font-size:12pt;display:block;margin-bottom:1mm}
-.vs span{font-size:8pt}
-.cmp{width:100%;border-collapse:separate;border-spacing:0;font-size:7.8pt;border-radius:3mm;overflow:hidden}
-.cmp th{padding:2.2mm 2.6mm;text-align:left;font-weight:700;color:#fff;background:var(--ink)}
-.cmp th.gr{background:var(--g2)}
-.cmp td{padding:2mm 2.6mm;border-bottom:.25mm solid var(--line);background:#fff}
-.cmp td:first-child{font-weight:700;color:var(--muted);background:var(--bg)}
-.cmp td.gr{background:var(--gl);color:var(--gd);font-weight:700}
+/* ===== P6 ===== */
+.split{display:grid;grid-template-columns:1fr 1fr;border-radius:3mm;overflow:hidden}
+.split div{padding:4mm 5mm}
+.split .a{background:#ECEFEA}
+.split .b{background:var(--g);color:#fff}
+.split .k{font-size:6.6pt;font-weight:800;letter-spacing:1.6pt;text-transform:uppercase;opacity:.75}
+.split b{display:block;font-family:'Montserrat';font-weight:900;font-size:12pt;margin:.8mm 0}
+.split span{font-size:8pt}
+.mech h4{font-size:10pt;font-weight:800;margin-bottom:1.6mm}
+.mech h4 i{font-style:normal;color:var(--lime);font-size:13pt;margin-right:1.4mm}
+table.cmp{width:100%;border-collapse:collapse;font-size:7.9pt}
+table.cmp th{text-align:left;padding:2mm 2.4mm;font-family:'Montserrat';font-weight:800;font-size:7.6pt;border-bottom:.4mm solid var(--ink)}
+table.cmp th.gr{color:var(--g)}
+table.cmp td{padding:2.1mm 2.4mm;border-bottom:.25mm solid var(--line)}
+table.cmp td:first-child{color:var(--muted);font-weight:600}
+table.cmp td.gr{font-weight:700;color:var(--forest2);background:var(--mint)}
 
-/* page 7 */
-.case{border:.3mm solid var(--line);border-radius:3.5mm;padding:3.6mm;background:#fff}
-.case .hd{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:1.6mm}
-.case .hd b{font-family:'Inter Display';font-size:10pt}
-.case .hd span{font-size:7pt;color:var(--g);font-weight:700;letter-spacing:.8pt;text-transform:uppercase}
-.ba{display:grid;grid-template-columns:1fr 6mm 1fr;align-items:center;gap:1mm}
-.ba img{width:100%;height:27mm;object-fit:cover;border-radius:2mm}
-.ba .ar{color:var(--g2);font-weight:900;text-align:center;font-size:13pt}
-.ba .lb{font-size:6.6pt;color:var(--muted);text-align:center;margin-top:.6mm}
-.mk{display:grid;gap:1.4mm;margin-top:2.4mm}
-.mk div{display:grid;grid-template-columns:15mm 1fr auto;align-items:center;gap:2mm;font-size:7.2pt}
-.mk .bars{position:relative;height:3.2mm;background:#E8ECEF;border-radius:2mm;overflow:hidden}
-.mk .bars i{position:absolute;left:0;top:0;bottom:0;background:var(--g2);border-radius:2mm}
-.mk em{font-style:normal;font-weight:700;color:var(--gd);white-space:nowrap}
-.ind{display:grid;grid-template-columns:repeat(4,1fr);gap:2.6mm}
-.ind div{background:#fff;border:.3mm solid var(--line);border-top:1.1mm solid var(--g2);border-radius:3mm;padding:3mm}
-.ind i{font-style:normal;display:inline-flex;width:5.4mm;height:5.4mm;border-radius:50%;background:var(--g2);color:#fff;font-weight:800;font-size:7.6pt;align-items:center;justify-content:center;margin-bottom:1.4mm}
-.ind b{display:block;font-size:8.4pt;margin-bottom:.8mm}
-.ind span{font-size:7.2pt;color:var(--muted);line-height:1.38;display:block}
-
-/* page 8 */
-.ct{display:grid;grid-template-columns:1.2fr 1fr;gap:4mm}
-.ct .main{background:var(--gd);color:#fff;border-radius:4mm;padding:6mm}
-.ct-row{display:grid;grid-template-columns:24mm 1fr;gap:2mm;padding:1.8mm 0;border-bottom:.25mm solid rgba(255,255,255,.16);font-size:8.4pt}
-.ct-row:last-child{border-bottom:none}
-.ct-row span:first-child{color:#BFE6C5;font-size:6.8pt;letter-spacing:1.1pt;text-transform:uppercase;padding-top:.5mm}
-.ct-row b{font-size:13pt}
-.qr{border:.3mm solid var(--line);border-radius:3mm;padding:3mm;text-align:center;font-size:7.2pt;background:#fff}
-.qr img{width:24mm;height:24mm;display:block;margin:0 auto 1.6mm}
-.qr b{display:block;color:var(--gd);font-size:8pt}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm}
-.steps div{background:var(--gl2);border:.3mm solid #D3EBD7;border-radius:3mm;padding:3.4mm;font-size:7.6pt;line-height:1.38}
-.steps i{font-style:normal;font-family:'Inter Display';font-weight:900;color:var(--g2);font-size:13pt;display:block}
-.steps b{display:block;font-size:8.6pt;margin:.4mm 0 .6mm}
-.closing{background:var(--g2);color:#fff;border-radius:4mm;padding:7mm 8mm;position:relative;overflow:hidden}
-.closing img.sh{position:absolute;right:-14mm;top:-12mm;width:56mm;opacity:.25}
-.closing img.lg{height:9mm;margin-bottom:3mm;position:relative}
-.closing p{font-family:'Inter Display';font-weight:700;font-size:13pt;line-height:1.35;position:relative;max-width:150mm}
+.qband{position:absolute;left:17mm;right:0;bottom:0;height:37mm;background:var(--forest);padding:6mm 13mm 0 11mm}
+.qband p{font-family:'Montserrat';font-weight:800;font-size:11.5pt;line-height:1.35;color:#fff;border-left:1.4mm solid var(--lime);padding-left:5mm}
+.qband p span{color:var(--lime)}
+.qband ~ .foot{color:#CFE3CC}
+.qband ~ .foot b{color:#fff}
+/* ===== P7 ===== */
+.case{border-top:.4mm solid var(--ink);padding-top:3mm}
+.case .hd{display:flex;justify-content:space-between;align-items:baseline;gap:3mm}
+.case .hd h4{font-size:10pt;font-weight:800}
+.case .hd span{font-size:6.8pt;font-weight:700;letter-spacing:1.2pt;text-transform:uppercase;color:var(--g);white-space:nowrap}
+.case p{font-size:7.8pt;color:var(--muted);margin:1.4mm 0 2.4mm}
+.ba{display:grid;grid-template-columns:1fr 5mm 1fr;align-items:center}
+.ba img{width:100%;height:26mm;object-fit:cover;border-radius:1.6mm}
+.ba i{font-style:normal;text-align:center;color:var(--g);font-weight:900}
+.capc{font-size:6.6pt;color:var(--muted);text-align:center;margin-top:.8mm}
+.mk{display:grid;gap:1.5mm;margin-top:2.6mm}
+.mk div{display:grid;grid-template-columns:13mm 1fr 22mm;align-items:center;gap:2mm;font-size:7.3pt}
+.mk .b{height:2.6mm;background:#E3E9E1;border-radius:2mm;position:relative;overflow:hidden}
+.mk .b i{position:absolute;left:0;top:0;bottom:0;background:var(--g);border-radius:2mm}
+.mk em{font-style:normal;font-weight:800;color:var(--forest2);text-align:right;font-family:'Montserrat'}
+.fa{background:var(--forest);color:#fff;border-radius:3mm;padding:4.4mm 5mm;display:grid;grid-template-columns:55mm 1fr;gap:5mm;align-items:center}
+.fa h4{color:#fff;font-size:11.5pt;font-weight:900}
+.fa h4 span{color:var(--lime)}
+.fa p{font-size:7.8pt;color:#D7E8D3}
+.ind{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm}
+.ind div{border-top:1.2mm solid var(--lime);padding-top:2.4mm}
+.ind .no{font-family:'Montserrat';font-weight:900;color:var(--g);font-size:15pt;line-height:1}
+.ind b{display:block;font-family:'Montserrat';font-size:8.4pt;font-weight:800;margin:1.2mm 0 .8mm}
+.ind span{font-size:7.3pt;color:var(--muted);line-height:1.38;display:block}
 .note{font-size:6.6pt;color:var(--muted);line-height:1.45}
+
+/* ===== P8 ===== */
+.last{background:var(--forest);color:#fff}
+.last .ttl{color:#fff}
+.last .rule{background:rgba(255,255,255,.6)}
+.last .rule:before{background:var(--lime)}
+.last .lead{color:#E1EEDD}
+.ctbox{display:grid;grid-template-columns:1.25fr 1fr;gap:6mm;margin-top:5mm}
+.ctr{display:grid;grid-template-columns:23mm 1fr;gap:2mm;padding:2.2mm 0;border-bottom:.25mm solid rgba(255,255,255,.18);font-size:8.6pt}
+.ctr span:first-child{color:var(--lime);font-family:'Montserrat';font-size:6.6pt;font-weight:800;letter-spacing:1.4pt;text-transform:uppercase;padding-top:.6mm}
+.ctr b{font-family:'Montserrat';font-size:15pt;font-weight:900}
+.qrs{display:grid;grid-template-columns:1fr 1fr;gap:3mm}
+.qrs div{background:#fff;border-radius:3mm;padding:3.4mm;text-align:center;color:var(--ink);font-size:7pt}
+.qrs img{width:25mm;height:25mm;display:block;margin:0 auto 1.6mm}
+.qrs b{display:block;font-family:'Montserrat';font-size:8pt;color:var(--forest2)}
+.st4{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm;margin-top:3mm}
+.st4 div{border-top:1.2mm solid var(--lime);padding-top:2.4mm;font-size:7.6pt;color:#D7E8D3;line-height:1.42}
+.st4 i{font-style:normal;font-family:'Montserrat';font-weight:900;color:var(--lime);font-size:13pt;display:block}
+.st4 b{display:block;font-family:'Montserrat';color:#fff;font-size:8.8pt;margin:.6mm 0 .8mm}
+.slogan{position:absolute;left:17mm;right:0;bottom:0;height:70mm;background:var(--g);overflow:hidden}
+.slogan .sh{position:absolute;right:-16mm;top:-14mm;width:72mm;opacity:.22}
+.slogan .lg{position:absolute;left:11mm;top:9mm;height:9mm}
+.slogan p{position:absolute;left:11mm;right:36mm;top:26mm;font-family:'Montserrat';font-weight:800;font-size:16pt;line-height:1.3;color:#fff}
+.slogan .nt{position:absolute;left:11mm;right:13mm;bottom:6mm;font-size:6.4pt;color:#E1F0DC;line-height:1.4}
 </style>
 </head>
 <body>
 
-<!-- ============ 1. COVER ============ -->
+<!-- ================= 1. COVER ================= -->
 <section class="page cover">
-  <img class="logo" src="assets/logo.png" alt="">
-  <div class="panel"><img class="shape" src="assets/logo_shape_white.png" alt=""></div>
-  <img class="doc" src="assets/dr_kim.png" alt="">
-  <div class="ttl">
-    <h1>Human Medical Imaging Center</h1>
-    <div class="sub">Центр лучевой диагностики и интервенционной радиологии · Сеул, Корея</div>
-    <div class="tag">От диагностики до лечения — мы устанавливаем новые стандарты в радиологии.</div>
-    <div class="bar"></div>
-    <div class="pills"><span>Диагностика</span><span>Интервенция</span><span>Телерадиология</span></div>
+  <div class="bg"><img src="assets/proc1.jpg" alt=""></div>
+  <img class="logo" src="assets/logo_white.png" alt="">
+  <div class="loc">Сеул · Корея</div>
+  <div class="hero">
+    <div class="lbl">Human Medical Imaging &amp; Intervention Center</div>
+    <h1>Точная диагностика.<br><span>Лечение без разрезов.</span></h1>
+    <p>Центр лучевой диагностики и интервенционной радиологии: от диагностики до лечения — новые стандарты в радиологии.</p>
   </div>
-  <div class="drname"><b>Д-р Ким Сон Хён, M.D., Ph.D.</b>Генеральный директор</div>
-  <div class="stats">
-    <div class="stat"><div class="num">150+</div><div>врачей-радиологов в сети</div></div>
-    <div class="stat"><div class="num">8</div><div>узких специализаций</div></div>
-    <div class="stat"><div class="num">№1</div><div>телерадиология в Корее</div></div>
-    <div class="stat"><div class="num">1250+</div><div>партнёрских больниц</div></div>
+  <div class="nums">
+    <div><b>150+</b><span>врачей-радиологов в сети</span></div>
+    <div><b>8</b><span>узких специализаций</span></div>
+    <div><b>№1</b><span>телерадиология в Корее</span></div>
+    <div><b>1250+</b><span>партнёрских больниц</span></div>
   </div>
-  <div class="why">
-    <div><b>Уровень университетских клиник</b><span>Радиологи — бывшие профессора ведущих университетских больниц Сеула</span></div>
-    <div><b>Лечение без разрезов</b><span>Интервенционные процедуры под контролем визуализации, без общего наркоза</span></div>
-    <div><b>Диагноз в тот же день</b><span>Система ONE-STOP: от обследования до заключения за один день</span></div>
-  </div>
-  <div class="bottom">
-    <div class="l"><span class="k">Консультации в Казахстане</span><b>+7 771 933 39 39</b>Seoul Medical Center · г. Алматы, ул. Сатпаева, 90/26</div>
-    <div class="r"><img src="assets/smc_logo_white.svg" alt="">seoulmed.kz<br>WhatsApp +7 771 799 95 26</div>
+  <div class="three"><span>Диагностика</span><span>Интервенция</span><span>Телерадиология</span><span>Онкология (IAC)</span></div>
+  <div class="band">
+    <div>
+      <div class="k">Консультации в Казахстане</div>
+      <div class="ph1">+7 771 933 39 39</div>
+      <div class="ad">Seoul Medical Center · г. Алматы, ул. Сатпаева, 90/26<br>seoulmed.kz · WhatsApp +7 771 799 95 26</div>
+    </div>
+    <img class="smc" src="assets/smc_logo.svg" alt="">
+    <div class="qr"><img src="assets/qr_smc_wa.svg" alt="">WhatsApp</div>
   </div>
 </section>
 
-<!-- ============ 2. ABOUT ============ -->
-<section class="page"><div class="inner">
-  <div class="topbar"><img src="assets/logo.png" alt=""><span class="pn">О центре</span></div>
-  <div class="sec"><div><div class="k">Кто мы</div><h2>О Центре Human Medical Imaging</h2></div></div>
-
-  <div class="quote">
-    <p>Наша миссия — через радиологию сокращать разрыв в региональном здравоохранении и способствовать повышению качества медицинской помощи.</p>
-    <div class="who">— Д-р Ким Сон Хён, генеральный директор Human Medical Imaging Center</div>
-  </div>
-
-  <div class="grid2" style="grid-template-columns:1.1fr 1fr;gap:6mm;margin-top:4.5mm">
-    <div>
-      <h3 style="font-size:13pt">Точная диагностика и интервенционные процедуры. <span class="g">Радиологическая помощь университетского уровня — быстрее и доступнее.</span></h3>
-      <p class="lead" style="font-size:9.4pt;margin:3mm 0 4mm">Специализированный радиологический центр, где бывшие профессора университетов проводят МРТ, КТ, УЗИ и другие современные исследования, осмотры, процедуры и дистанционную интерпретацию снимков.</p>
-      <ul class="chk">
-        <li>Работают радиологи — бывшие профессора ведущих университетских клиник Сеула</li>
-        <li>Передовое диагностическое оборудование и инфраструктура уровня университетских больниц</li>
-        <li>Специализированные клиники: диагностика, щитовидная железа, молочная железа, лечение боли</li>
-      </ul>
+<!-- ================= 2. ABOUT ================= -->
+<section class="page">
+  <div class="side"><div class="n">01</div><div class="t">О центре</div><div class="pg">2 / 8</div></div>
+  <img class="bleedR ph" src="assets/doctors_pair.jpg" style="top:0;height:104mm;object-position:62% 40%" alt="">
+  <div class="content">
+    <div style="width:84mm">
+      <div class="lbl">Кто мы</div>
+      <h2 class="ttl">О Центре <em>Human Medical Imaging</em></h2>
+      <div class="quote">Наша миссия — через радиологию сокращать разрыв в региональном здравоохранении и способствовать повышению качества медицинской помощи.<small>— Д-р Ким Сон Хён, генеральный директор</small></div>
     </div>
-    <div>
-      <img class="ph" src="assets/doctors_pair.jpg" style="height:56mm;object-position:60% 40%">
-      <div class="cap">Врачи центра интервенции Human Medical Imaging</div>
-    </div>
-  </div>
 
-  <div class="sec" style="margin-top:4.5mm;margin-bottom:3.4mm"><div><div class="k">Структура</div><h2 style="font-size:16pt">Три центра — одна система помощи</h2></div></div>
-  <div class="tri">
-    <div class="c" style="background:#5FC06C"><b>Центр лучевой диагностики</b><i>Radiology Diagnosis Center</i><span>Оборудование уровня университетской клиники и междисциплинарная работа узких специалистов: быстрая и точная диагностика — от раннего выявления заболеваний до дифференциации тяжёлых патологий.</span></div>
-    <div class="c" style="background:var(--g2)"><b>Центр интервенции</b><i>Intervention Center</i><span>Безоперационные микрососудистые методы лечения без общего наркоза и хирургических разрезов: минимальная нагрузка на организм и наилучшие результаты лечения.</span></div>
-    <div class="c" style="background:var(--gd)"><b>Центр телерадиологии</b><i>Tele-Radiology Center</i><span>Крупнейшая в стране сеть расшифровки медицинских снимков: медицинские услуги университетского уровня в любой точке страны.</span></div>
-  </div>
-  <div class="grid2" style="gap:3.5mm;margin-top:4mm">
-    <img class="ph" src="assets/proc1.jpg" style="height:28mm">
-    <img class="ph" src="assets/proc2.jpg" style="height:28mm">
-  </div>
-</div>
-<div class="foot"><span><b>Human Medical Imaging &amp; Intervention Center</b> · Сеул, Корея</span><span>Консультации: Seoul Medical Center, Алматы · +7 771 933 39 39 · 2 / 8</span></div>
-</section>
-
-<!-- ============ 3. DIAGNOSTICS + TELERADIOLOGY ============ -->
-<section class="page"><div class="inner">
-  <div class="topbar"><img src="assets/logo.png" alt=""><span class="pn">Диагностика</span></div>
-  <div class="sec"><div><div class="k">Radiology Diagnosis Center</div><h2>Центр лучевой диагностики</h2></div></div>
-
-  <div class="grid2" style="grid-template-columns:1.15fr 1fr;gap:5mm;align-items:center">
-    <div style="display:grid;gap:3mm">
-      <div class="card top"><h4>Специализированная диагностика</h4><p class="small muted">МРТ/МРА, КТ и УЗИ для диагностики и обследования. Работа специализированных клиник: диагностика, щитовидная железа, молочная железа, лечение боли.</p></div>
-      <div class="card top"><h4>Диагноз и описание в тот же день</h4><p class="small muted">Специалисты сети интерпретируют результаты в день обследования. Система ONE-STOP: от диагностики до заключения за один день — для спокойствия пациента.</p></div>
-      <div class="card top"><h4>Сеть сотрудничества с больницами</h4><p class="small muted">Тесное сотрудничество с крупными медицинскими центрами для быстрой передачи пациентов в сложных случаях.</p></div>
-    </div>
-    <img src="assets/equipment.png" style="width:100%" alt="">
-  </div>
-
-  <h4 style="margin:4mm 0 2.2mm">Маршрут пациента</h4>
-  <div class="flow">
-    <div class="b" style="background:var(--bg)"><b>Медучреждения 1–2 уровня</b>Первичный осмотр и направление (экономия времени и средств)</div>
-    <div class="arr">⇄</div>
-    <div class="b" style="background:var(--g2);color:#fff"><b style="font-size:10pt">Human Medical Imaging</b>Точная диагностика и заключение в тот же день</div>
-    <div class="arr">→</div>
-    <div class="b" style="background:#fff;border:.35mm solid var(--red)"><b style="color:var(--red)">Крупные больницы 3-го уровня</b>Fast-Track: приоритетное лечение тяжёлых заболеваний</div>
-  </div>
-
-  <div class="sec" style="margin-top:5mm;margin-bottom:3.4mm"><div><div class="k">Tele-Radiology Center</div><h2 style="font-size:16pt">Центр дистанционного описания снимков №1 в Корее</h2></div></div>
-  <div class="grid4" style="margin-bottom:3.4mm">
-    <div class="card soft" style="text-align:center;padding:3.6mm 2mm"><div class="num" style="font-size:20pt">150+</div><div class="small muted" style="margin-top:1mm">радиологов по специальностям</div></div>
-    <div class="card soft" style="text-align:center;padding:3.6mm 2mm"><div class="num" style="font-size:20pt">15 лет</div><div class="small muted" style="margin-top:1mm">опыта и около 1 млрд снимков</div></div>
-    <div class="card soft" style="text-align:center;padding:3.6mm 2mm"><div class="num" style="font-size:20pt">48 ч</div><div class="small muted" style="margin-top:1mm">гарантированный срок планового описания</div></div>
-    <div class="card soft" style="text-align:center;padding:3.6mm 2mm"><div class="num" style="font-size:20pt">1250</div><div class="small muted" style="margin-top:1mm">больниц-партнёров</div></div>
-  </div>
-  <div class="grid2" style="gap:4mm">
-    <div>
-      <ul class="chk small">
-        <li><b>Описание в реальном времени:</b> плановое, экстренное и ночное</li>
-        <li><b>Выделенный координатор</b> на связи с лечащим врачом, быстрое назначение профильного радиолога</li>
-        <li><b>Автоматическая передача</b> снимков DICOM и результатов, связь с предыдущими исследованиями</li>
-      </ul>
-    </div>
-    <div>
-      <div class="small muted" style="margin-bottom:1.6mm">Профильные команды радиологов:</div>
-      <div class="teams"><span>Нейро / голова и шея</span><span>Брюшная полость</span><span>Опорно-двигательный аппарат</span><span>Молочная железа</span><span>Грудная клетка / сердце</span><span>Педиатрия</span><span>Ангио / интервенция</span></div>
-    </div>
-  </div>
-
-  <h4 style="margin:4mm 0 2.2mm">Как работает дистанционное описание</h4>
-  <div class="steps" style="grid-template-columns:repeat(4,1fr)">
-    <div><i>01</i><b>Передача снимков</b>Клиника-заказчик отправляет МРТ, КТ, рентген с сервера — автопередача DICOM</div>
-    <div><i>02</i><b>Координатор</b>Выделенный координатор на связи с лечащим врачом в реальном времени</div>
-    <div><i>03</i><b>Профильный радиолог</b>Описание плановых и экстренных исследований узким специалистом</div>
-    <div><i>04</i><b>Заключение</b>Автоматическая передача результата, связь с предыдущими снимками</div>
-  </div>
-</div>
-<div class="foot"><span><b>Human Medical Imaging &amp; Intervention Center</b> · Сеул, Корея</span><span>Консультации: Seoul Medical Center, Алматы · +7 771 933 39 39 · 3 / 8</span></div>
-</section>
-
-<!-- ============ 4. INTERVENTION ============ -->
-<section class="page"><div class="inner">
-  <div class="topbar"><img src="assets/logo.png" alt=""><span class="pn">Интервенция</span></div>
-  <div class="sec"><div><div class="k">Intervention Center</div><h2>Центр интервенции</h2></div></div>
-
-  <div class="grid2" style="grid-template-columns:1.2fr 1fr;gap:5mm;align-items:center">
-    <div>
-      <h4 style="font-size:11pt;margin-bottom:2.6mm">Что такое интервенция?</h4>
-      <ul class="chk">
-        <li><b>Минимально инвазивные процедуры под визуальным контролем.</b> Микроинструменты (катетеры и др.) вводятся в тело под контролем рентгена, УЗИ или КТ в реальном времени — без хирургических разрезов.</li>
-        <li><b>Прокол и местная анестезия.</b> Доступ к поражённому участку (сосудам, опухолям) — через прокол размером с иглу, без общего наркоза и больших разрезов.</li>
-        <li><b>Быстрое восстановление и минимум побочных эффектов.</b> Меньше боли и кровопотери, короче реабилитация, ниже нагрузка на организм.</li>
-      </ul>
-    </div>
-    <img src="assets/monitors.png" style="width:100%;max-height:50mm;object-fit:contain" alt="">
-  </div>
-
-  <div class="no3" style="margin-top:4mm">
-    <div><b>Без общего наркоза</b><span>местная анестезия</span></div>
-    <div><b>Без разрезов</b><span>прокол размером с иглу</span></div>
-    <div><b>Минимум кровопотери</b><span>быстрое восстановление</span></div>
-  </div>
-
-  <div class="card soft" style="margin-top:5mm;padding:4.5mm 5mm">
-    <h3 style="font-size:12.5pt"><span class="g">Более 50 заболеваний</span> поддаются лечению с помощью интервенционных процедур</h3>
-    <div class="chips" style="margin-top:2.4mm">
-      <span>Аневризма головного мозга</span><span>Сердечно-сосудистые заболевания</span><span>Тромбоз глубоких вен</span><span>Рак печени</span><span>Проблемы с доступом для диализа</span><span>Заболевания желчевыводящих путей</span><span>Желудочно-кишечные заболевания</span><span>Окклюзия артерий нижних конечностей</span><span>Заболевания периферических артерий</span><span>Урологические заболевания</span><span>Миома матки и аденомиоз</span><span>Варикозное расширение вен</span><span>Тазовое венозное полнокровие</span><span>Варикоцеле</span><span>Узлы щитовидной железы</span>
-    </div>
-  </div>
-
-  <div class="sec" style="margin-top:6mm;margin-bottom:3.6mm"><div><div class="k">Ключевые процедуры</div><h2 style="font-size:16pt">4 основных направления</h2></div></div>
-  <div class="grid4">
-    <div class="dir"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E9B3E" stroke-width="2.2" stroke-linecap="round"><path d="M10 3h4M12 3v5M8 8h8l-1 13H9z"/><path d="M9.5 13h5"/></svg></div><div class="k">Для химиотерапии</div><h4>PICC / Хемопорт</h4><p>Установка PICC или хемопорта при необходимости частого внутривенного введения лекарств.</p></div>
-    <div class="dir"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E9B3E" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="6" r="2.6"/><path d="M8 21v-5l-2-4 6-2 6 2-2 4v5"/></svg></div><div class="k">При миоме матки</div><h4>Эмболизация маточных артерий</h4><p>Безопасная процедура: выборочно блокирует сосуды миомы при полном сохранении матки.</p></div>
-    <div class="dir"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E9B3E" stroke-width="2.2" stroke-linecap="round"><circle cx="10" cy="14" r="5"/><path d="M14 10l6-6M15 4h5v5"/></svg></div><div class="k">При аденоме простаты</div><h4>Эмболизация артерий простаты (PAE)</h4><p>Современная PAE значительно снижает риск таких побочных эффектов, как половая дисфункция и недержание.</p></div>
-    <div class="dir"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="#2E9B3E"><path d="M12 2.5C9 7 6 10.4 6 14a6 6 0 0 0 12 0c0-3.6-3-7-6-11.5z"/></svg></div><div class="k">Для гемодиализа</div><h4>Реканализация доступа для диализа</h4><p>Безопасное расширение суженных или закупоренных артериовенозных фистул баллонным катетером.</p></div>
-  </div>
-
-</div>
-<div class="foot"><span><b>Human Medical Imaging &amp; Intervention Center</b> · Сеул, Корея</span><span>Консультации: Seoul Medical Center, Алматы · +7 771 933 39 39 · 4 / 8</span></div>
-</section>
-
-<!-- ============ 5. EXPERTS + PAE ============ -->
-<section class="page"><div class="inner">
-  <div class="topbar"><img src="assets/logo.png" alt=""><span class="pn">Эксперты</span></div>
-  <div class="sec"><div><div class="k">Интервенционная радиология</div><h2>Представляем <span class="g">0,1% экспертов</span></h2></div></div>
-
-  <div class="doc">
-    <div class="pic"><img src="assets/dr_kim.png" alt=""></div>
-    <div class="txt">
-      <div class="role">Главный врач · M.D., Ph.D.</div>
-      <h3>Д-р Ким Сон Хён</h3>
-      <div class="pos">Генеральный директор и руководитель центра интервенции Human Medical Imaging, специалист по радиологии</div>
-      <ul class="dot">
-        <li>Профессор отделения радиологии Сеульского национального университета</li>
-        <li>Профессор больницы Сеульского национального университета в Пундане</li>
-        <li>Президент Корейской ассоциации врачей-радиологов</li>
-        <li>Руководитель центров интервенции больниц H+ Yangji и New Korea</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="doc" style="margin-top:4mm">
-    <div class="pic"><img src="assets/dr_jeon.png" alt=""></div>
-    <div class="txt">
-      <div class="role">Главный врач · M.D.</div>
-      <h3>Д-р Чон Ён Сик</h3>
-      <div class="pos">Врач центра интервенции Human Medical Imaging, специалист по радиологии</div>
-      <ul class="dot">
-        <li>Руководитель центра интервенции больницы SAM</li>
-        <li>Инструктор Корейского общества интервенционной радиологии</li>
-        <li>Финансовый директор Корейского общества ITA радиологии</li>
-        <li>Член комитета по медицинским изделиям Министерства безопасности пищевых продуктов и лекарств</li>
-        <li>Полноправный член Европейского общества сердечно-сосудистой и интервенционной радиологии (CIRSE)</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="grid2" style="grid-template-columns:1fr 1.05fr;gap:5mm;margin-top:6mm">
-    <div>
-      <div class="k" style="font-size:7.2pt;letter-spacing:1.8pt;color:var(--g);font-weight:700;text-transform:uppercase">Центр PAE</div>
-      <h3 style="font-size:15pt;margin:1mm 0 2mm">Эмболизация артерий простаты — <span class="g">№1 в Азии</span></h3>
-      <p class="small">Рекордное количество процедур в Азии. Центр Human Medical Imaging — признанный лидер в области PAE: богатый клинический опыт и накопленные данные позволяют достигать наиболее безопасных и эффективных результатов.</p>
-      <div class="card soft" style="margin-top:3mm;padding:3.4mm 4mm"><h4 class="g">Система последующего наблюдения</h4><p class="small">Мы берём на себя ответственность за восстановление и предотвращаем рецидивы с помощью регулярного контроля (follow-up) после процедуры.</p></div>
-    </div>
-    <img class="ph" src="assets/pae.jpg" style="height:76mm">
-  </div>
-</div>
-<div class="foot"><span><b>Human Medical Imaging &amp; Intervention Center</b> · Сеул, Корея</span><span>Консультации: Seoul Medical Center, Алматы · +7 771 933 39 39 · 5 / 8</span></div>
-</section>
-
-<!-- ============ 6. IAC METHOD ============ -->
-<section class="page"><div class="inner">
-  <div class="topbar"><img src="assets/logo.png" alt=""><span class="pn">Онкология</span></div>
-  <div class="sec"><div><div class="k">Внутриартериальная химиотерапия (IAC)</div><h2>Локальная таргетная терапия рака</h2></div></div>
-  <p class="lead" style="margin-bottom:4mm">Метод, <span class="g" style="font-weight:700">преодолевающий границы стандартной химиотерапии</span>: препарат доставляется прямо в артерию, питающую опухоль. Это не просто другой путь введения, а начало прецизионной медицины.</p>
-
-  <div class="vs">
-    <div class="a"><b>Стандартная химиотерапия</b><span>Внутривенное лечение, воздействующее на весь организм</span></div>
-    <div class="b"><b>Внутриартериальная терапия</b><span>Локальное лечение с учётом сосудистых особенностей опухоли</span></div>
-  </div>
-
-  <div class="grid2" style="gap:4mm;margin-top:5mm">
-    <div class="card top">
-      <h4>1. Суперселективное высококонцентрированное введение</h4>
-      <p class="small muted" style="margin-bottom:2mm">Ангиография точно определяет питающую артерию опухоли (feeding artery). Препарат вводится прямо в неё: общая доза значительно меньше, а концентрация в опухоли — сверхвысокая.</p>
-      <svg viewBox="0 0 300 150" style="width:100%;height:auto;display:block">
-        <line x1="30" y1="125" x2="290" y2="125" stroke="#1E2633" stroke-width="1.4"/>
-        <line x1="30" y1="125" x2="30" y2="12" stroke="#1E2633" stroke-width="1.4"/>
-        <path d="M70 125 C120 125 125 22 160 22 C195 22 200 125 250 125 Z" fill="#E8F5EA"/>
-        <path d="M70 125 C120 125 125 22 160 22 C195 22 200 125 250 125" fill="none" stroke="#3BA94C" stroke-width="2.6"/>
-        <line x1="30" y1="88" x2="290" y2="88" stroke="#D9534F" stroke-width="1.6"/>
-        <path d="M30 118 C80 113 100 108 130 111 C170 115 200 110 230 112 C255 114 270 118 285 120" fill="none" stroke="#5B6573" stroke-width="1.6" stroke-dasharray="4 3"/>
-        <text x="160" y="15" text-anchor="middle" font-size="9" font-weight="700" fill="#1D5C2D">Концентрация в опухоли</text>
-                        <text x="34" y="10" font-size="7.4" fill="#5B6573">Доза</text>
-        <text x="290" y="139" text-anchor="end" font-size="7.4" fill="#5B6573">Время</text>
-      </svg>
-      <div style="display:flex;flex-wrap:wrap;gap:1mm 4mm;font-size:6.9pt;color:var(--muted);margin-top:1mm">
-        <span><b style="color:#3BA94C">━</b> в опухоли</span><span><b style="color:#D9534F">━</b> порог системной токсичности</span><span><b>┅</b> в крови</span>
+    <div class="cols2" style="margin-top:14mm;gap:7mm">
+      <div>
+        <h3 style="font-size:12.5pt;font-weight:800">Радиологическая помощь университетского уровня — <span class="g">быстрее и доступнее</span></h3>
+        <p class="lead" style="font-size:9pt;margin-top:2.6mm">Специализированный центр, где бывшие профессора университетов проводят МРТ, КТ, УЗИ и другие современные исследования, осмотры, процедуры и дистанционную интерпретацию снимков.</p>
       </div>
-    </div>
-    <div class="card top">
-      <h4>2. Двойной эффект (Double Effect)</h4>
-      <p class="small muted" style="margin-bottom:2mm">Комплексный метод: уничтожает опухоль и одновременно создаёт «неблагоприятную среду», в которой раку трудно расти.</p>
-      <div style="display:grid;grid-template-columns:1fr 30mm;gap:3mm;align-items:center">
-        <ul class="chk small">
-          <li><b class="g">Прямой удар:</b> высокая концентрация противоопухолевых препаратов непосредственно в злокачественной опухоли</li>
-          <li><b class="g">Блокада ангиогенеза:</b> подавление неоангиогенеза и окклюзия сосудов, питающих рост и рецидив рака</li>
+      <div style="padding-top:1mm">
+        <ul class="dash">
+          <li>Радиологи — бывшие профессора ведущих университетских клиник Сеула</li>
+          <li>Диагностическое оборудование и инфраструктура уровня университетских больниц</li>
+          <li>Специализированные клиники: диагностика, щитовидная железа, молочная железа, лечение боли</li>
         </ul>
-        <img src="assets/tumor.png" style="width:100%" alt="">
+      </div>
+    </div>
+
+    <div class="lbl" style="margin-top:9mm">Структура</div>
+    <h3 style="font-size:15pt;font-weight:900;margin:1.2mm 0 4mm">Три центра — одна система помощи</h3>
+    <div class="row3">
+      <div><span class="no">01</span><h4>Центр лучевой диагностики<small>Radiology Diagnosis</small></h4><p class="small muted">Оборудование уровня университетской клиники и работа узких специалистов: быстрая и точная диагностика — от раннего выявления заболеваний до дифференциации тяжёлых патологий.</p></div>
+      <div><span class="no">02</span><h4>Центр интервенции<small>Intervention</small></h4><p class="small muted">Безоперационные микрососудистые методы лечения без общего наркоза и хирургических разрезов: минимальная нагрузка на организм и наилучшие результаты.</p></div>
+      <div><span class="no">03</span><h4>Центр телерадиологии<small>Tele-Radiology</small></h4><p class="small muted">Крупнейшая в стране сеть расшифровки медицинских снимков: помощь университетского уровня в любой точке страны.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span><b>Human Medical Imaging &amp; Intervention Center</b></span><span>Консультации: Seoul Medical Center, Алматы · +7 771 933 39 39</span></div>
+</section>
+
+<!-- ================= 3. DIAGNOSTICS ================= -->
+<section class="page">
+  <div class="side"><div class="n">02</div><div class="t">Диагностика</div><div class="pg">3 / 8</div></div>
+  <div class="content">
+    <div class="lbl">Radiology Diagnosis Center</div>
+    <h2 class="ttl">Центр <em>лучевой</em> диагностики</h2>
+    <div class="rule"></div>
+
+    <div style="display:grid;grid-template-columns:1fr 70mm;gap:5mm;align-items:center">
+      <div style="display:grid;gap:4mm">
+        <div class="tick"><h4>Специализированная диагностика</h4><p class="small muted">МРТ/МРА, КТ и УЗИ для диагностики и обследования. Специализированные клиники: диагностика, щитовидная железа, молочная железа, лечение боли.</p></div>
+        <div class="tick"><h4>Диагноз и описание в тот же день</h4><p class="small muted">Специалисты сети интерпретируют результаты в день обследования. Система ONE-STOP — от диагностики до заключения за один день.</p></div>
+        <div class="tick"><h4>Сеть сотрудничества с больницами</h4><p class="small muted">Тесная связь с крупными медицинскими центрами для быстрой передачи пациентов в сложных случаях.</p></div>
+      </div>
+      <img src="assets/equipment.png" style="width:100%" alt="">
+    </div>
+
+    <h4 style="font-size:9.6pt;margin:8mm 0 1.4mm">Маршрут пациента</h4>
+    <div class="route">
+      <div><i></i><b>Медучреждения 1–2 уровня</b><span>Первичный осмотр и направление — экономия времени и средств</span></div>
+      <div class="mid"><i></i><b class="g">Human Medical Imaging</b><span>Точная диагностика и заключение в тот же день</span></div>
+      <div class="end"><i></i><b style="color:#C9473F">Больницы 3-го уровня</b><span>Fast-Track: приоритетное лечение тяжёлых заболеваний</span></div>
+    </div>
+
+    <div class="band-dark" style="margin-top:9mm;padding-top:8mm;padding-bottom:8mm">
+      <div class="lbl">Tele-Radiology Center</div>
+      <h3>Центр дистанционного описания снимков №1 в Корее</h3>
+      <div class="bn">
+        <div><b>150+</b><span>радиологов по специальностям</span></div>
+        <div><b>15 лет</b><span>опыта, около 1 млрд снимков</span></div>
+        <div><b>48 ч</b><span>гарантированный срок планового описания</span></div>
+        <div><b>1250</b><span>больниц-партнёров</span></div>
+      </div>
+    </div>
+
+    <div class="cols2" style="margin-top:8mm;gap:7mm">
+      <div>
+        <h4 style="font-size:9.6pt;margin-bottom:2.4mm">Как работает дистанционное описание</h4>
+        <ol class="nl" style="font-size:8.4pt">
+          <li><b>Передача снимков.</b> Клиника отправляет МРТ, КТ, рентген с сервера — автопередача DICOM</li>
+          <li><b>Координатор</b> на связи с лечащим врачом в реальном времени</li>
+          <li><b>Профильный радиолог</b> описывает плановые и экстренные (в т.ч. ночные) исследования</li>
+          <li><b>Заключение</b> передаётся автоматически, со связью с предыдущими снимками</li>
+        </ol>
+      </div>
+      <div>
+        <h4 style="font-size:9.6pt;margin-bottom:2.4mm">Профильные команды радиологов</h4>
+        <div class="tags"><span>Нейро / голова и шея</span> <span>Брюшная полость</span> <span>Опорно-двигательный аппарат</span> <span>Молочная железа</span> <span>Грудная клетка / сердце</span> <span>Педиатрия</span> <span>Ангио / интервенция</span></div>
       </div>
     </div>
   </div>
-
-  <h4 style="margin:5mm 0 2.4mm">Смена парадигмы: от системного лечения к прицельной терапии</h4>
-  <table class="cmp">
-    <tr><th style="width:26%">Критерий</th><th>Обычная внутривенная химиотерапия</th><th class="gr">Внутриартериальная химиотерапия</th></tr>
-    <tr><td>Путь введения</td><td>Системный кровоток</td><td class="gr">Питающая артерия опухоли</td></tr>
-    <tr><td>Концентрация в опухоли</td><td>Низкая</td><td class="gr">Чрезвычайно высокая</td></tr>
-    <tr><td>Системные побочные эффекты</td><td>Серьёзные</td><td class="gr">Минимизированы</td></tr>
-    <tr><td>Повседневная жизнь</td><td>Госпитализация и борьба с побочными эффектами</td><td class="gr">Амбулаторное лечение, привычный образ жизни</td></tr>
-  </table>
-
-  <div class="grid3" style="margin-top:4.5mm">
-    <div class="card soft"><h4 class="g">Привычный образ жизни</h4><p class="small">При хорошем состоянии возможно амбулаторное лечение без госпитализации — дома и на работе ритм жизни сохраняется.</p></div>
-    <div class="card soft"><h4 class="g">Низкая токсичность</h4><p class="small">Минимальное количество препарата концентрируется в целевой зоне: тошнота, выпадение волос и упадок сил практически отсутствуют.</p></div>
-    <div class="card soft"><h4 class="g">Неблагоприятная среда для опухоли</h4><p class="small">Помимо уничтожения раковых тканей, вокруг опухоли создаётся среда, препятствующая её росту.</p></div>
-  </div>
-</div>
-<div class="foot"><span><b>Human Medical Imaging &amp; Intervention Center</b> · Сеул, Корея</span><span>Консультации: Seoul Medical Center, Алматы · +7 771 933 39 39 · 6 / 8</span></div>
+  <div class="foot"><span><b>Human Medical Imaging &amp; Intervention Center</b></span><span>Консультации: Seoul Medical Center, Алматы · +7 771 933 39 39</span></div>
 </section>
 
-<!-- ============ 7. CASES + INDICATIONS ============ -->
-<section class="page"><div class="inner">
-  <div class="topbar"><img src="assets/logo.png" alt=""><span class="pn">Онкология</span></div>
-  <div class="sec"><div><div class="k">Внутриартериальная химиотерапия</div><h2>Клинические случаи</h2></div></div>
-
-  <div class="case">
-    <div class="hd"><b>Случай 1. Распространённый рак молочной железы</b><span>Женщина, 63 года</span></div>
-    <p class="small muted" style="margin-bottom:2.4mm">Множественные метастазы в печень и лёгкие после завершённого стандартного лечения (неоадъювантная химиотерапия, операция, лучевая, таргетная и гормональная терапия). В 2022 г. принято решение о внутриартериальной химиотерапии — препарат вводился только в питающие артерии метастазов.</p>
-    <div class="grid2" style="gap:4mm">
-      <div><div class="ba"><img src="assets/lung_before.jpg"><span class="ar">→</span><img src="assets/lung_after.jpg"></div><div class="lb" style="font-size:6.6pt;color:var(--muted);text-align:center;margin-top:.8mm">Лёгкие: до и после лечения</div></div>
-      <div><div class="ba"><img src="assets/liver_before.jpg"><span class="ar">→</span><img src="assets/liver_after.jpg"></div><div class="lb" style="font-size:6.6pt;color:var(--muted);text-align:center;margin-top:.8mm">Печень: до и после лечения</div></div>
+<!-- ================= 4. INTERVENTION ================= -->
+<section class="page">
+  <div class="side"><div class="n">03</div><div class="t">Интервенция</div><div class="pg">4 / 8</div></div>
+  <div class="content">
+    <div class="hero4">
+      <div>
+        <div class="lbl">Intervention Center</div>
+        <h2 class="ttl">Центр <em>интервенции</em></h2>
+        <div class="rule"></div>
+        <p class="lead" style="font-size:9.4pt"><b>Интервенция</b> — минимально инвазивные процедуры под визуальным контролем: катетеры и другие микроинструменты вводятся в тело под рентгеном, УЗИ или КТ в реальном времени. Доступ к сосудам и опухолям — через прокол размером с иглу, под местной анестезией.</p>
+        <p class="small muted" style="margin-top:2.6mm">В отличие от традиционных операций — меньше боли и кровопотери, короче реабилитация, ниже нагрузка на организм.</p>
+      </div>
+      <div class="monbox"><img src="assets/monitors.png" alt=""></div>
     </div>
-    <div class="note" style="margin-top:2mm">Онкомаркеры до → после лечения (полоса — доля от исходного уровня):</div>
-    <div class="mk" style="margin-top:1mm">
-      <div><span>CA19-9</span><span class="bars"><i style="width:1.5%"></i></span><em>492 → 1,87</em></div>
-      <div><span>CA125</span><span class="bars"><i style="width:24%"></i></span><em>322 → 77,2</em></div>
-      <div><span>CEA</span><span class="bars"><i style="width:44%"></i></span><em>111 → 48,3</em></div>
+
+    <div class="state">
+      <div><b>Без общего наркоза</b><span>местная анестезия</span></div>
+      <div><b>Без разрезов</b><span>прокол размером с иглу</span></div>
+      <div><b>Минимум кровопотери</b><span>быстрое восстановление</span></div>
+    </div>
+
+    <h3 style="font-size:14pt;font-weight:900;margin-bottom:3mm"><span class="g">50+ заболеваний</span> лечатся интервенционными методами</h3>
+    <ul class="dash dis">
+      <li>Аневризма головного мозга</li><li>Сердечно-сосудистые заболевания</li><li>Тромбоз глубоких вен</li><li>Рак печени</li><li>Проблемы доступа для диализа</li><li>Заболевания желчевыводящих путей</li><li>Желудочно-кишечные заболевания</li><li>Окклюзия артерий нижних конечностей</li><li>Заболевания периферических артерий</li><li>Урологические заболевания</li><li>Миома матки и аденомиоз</li><li>Варикозное расширение вен</li><li>Тазовое венозное полнокровие</li><li>Варикоцеле</li><li>Узлы щитовидной железы</li>
+    </ul>
+
+    <div class="lbl" style="margin-top:6mm">Ключевые процедуры</div>
+    <h3 style="font-size:14pt;font-weight:900;margin:1.2mm 0 3.4mm">4 основных направления</h3>
+    <div class="d4">
+      <div><span class="no">01</span><div><div class="k">Для химиотерапии</div><h4>PICC / Хемопорт</h4><p>Установка PICC или хемопорта при необходимости частого внутривенного введения лекарств.</p></div></div>
+      <div><span class="no">02</span><div><div class="k">При миоме матки</div><h4>Эмболизация маточных артерий</h4><p>Выборочно блокирует сосуды миомы при полном сохранении матки.</p></div></div>
+      <div><span class="no">03</span><div><div class="k">При аденоме простаты</div><h4>Эмболизация артерий простаты (PAE)</h4><p>Значительно снижает риск половой дисфункции и недержания.</p></div></div>
+      <div><span class="no">04</span><div><div class="k">Для гемодиализа</div><h4>Реканализация доступа для диализа</h4><p>Расширение суженных или закупоренных артериовенозных фистул баллонным катетером.</p></div></div>
+    </div>
+
+    <img class="ph" src="assets/proc2.jpg" style="height:28mm;border-radius:3mm;margin-top:5mm;object-position:50% 35%" alt="">
+  </div>
+  <div class="foot"><span><b>Human Medical Imaging &amp; Intervention Center</b></span><span>Консультации: Seoul Medical Center, Алматы · +7 771 933 39 39</span></div>
+</section>
+
+<!-- ================= 5. EXPERTS + PAE ================= -->
+<section class="page">
+  <div class="side"><div class="n">04</div><div class="t">Эксперты</div><div class="pg">5 / 8</div></div>
+  <div class="content">
+    <div class="lbl">Интервенционная радиология</div>
+    <h2 class="ttl">Команда <em>0,1% лучших</em> экспертов</h2>
+    <div class="rule"></div>
+    <div class="docs">
+      <div class="dc">
+        <div class="pic"><span class="tag">M.D., Ph.D.</span><img src="assets/dr_kim.png" alt=""></div>
+        <h3>Д-р Ким Сон Хён</h3>
+        <div class="pos">Генеральный директор, руководитель центра интервенции</div>
+        <ul class="dash">
+          <li>Профессор отделения радиологии Сеульского национального университета</li>
+          <li>Профессор больницы СНУ в Пундане</li>
+          <li>Президент Корейской ассоциации врачей-радиологов</li>
+          <li>Руководитель центров интервенции больниц H+ Yangji и New Korea</li>
+        </ul>
+      </div>
+      <div class="dc">
+        <div class="pic"><span class="tag">M.D.</span><img src="assets/dr_jeon.png" alt=""></div>
+        <h3>Д-р Чон Ён Сик</h3>
+        <div class="pos">Главный врач центра интервенции</div>
+        <ul class="dash">
+          <li>Руководитель центра интервенции больницы SAM</li>
+          <li>Инструктор Корейского общества интервенционной радиологии</li>
+          <li>Финансовый директор Корейского общества ITA радиологии</li>
+          <li>Член комитета по медизделиям Министерства безопасности пищевых продуктов и лекарств</li>
+          <li>Член CIRSE (Европейское общество сердечно-сосудистой и интервенционной радиологии)</li>
+        </ul>
+      </div>
     </div>
   </div>
+  <div class="pae">
+    <img src="assets/pae.jpg" alt="">
+    <div class="tx">
+      <div class="lbl">Центр PAE</div>
+      <h3>Эмболизация артерий простаты — <span>№1 в Азии</span></h3>
+      <p>Рекордное количество процедур в Азии. Богатый клинический опыт и накопленные данные позволяют достигать наиболее безопасных и эффективных результатов.</p>
+      <div class="fu"><b>Система последующего наблюдения</b>Регулярный контроль (follow-up) после процедуры для восстановления и профилактики рецидивов.</div>
+    </div>
+    <div class="foot2"><span>Human Medical Imaging &amp; Intervention Center</span><span>Консультации: Seoul Medical Center, Алматы · +7 771 933 39 39</span></div>
+  </div>
+</section>
 
-  <div class="grid2" style="gap:4mm;margin-top:3.6mm">
+<!-- ================= 6. IAC ================= -->
+<section class="page">
+  <div class="side"><div class="n">05</div><div class="t">Онкология</div><div class="pg">6 / 8</div></div>
+  <div class="content">
+    <div class="lbl">Внутриартериальная химиотерапия · IAC</div>
+    <h2 class="ttl">Локальная <em>таргетная</em> терапия рака</h2>
+    <div class="rule"></div>
+    <p class="lead">Препарат доставляется прямо в артерию, питающую опухоль. Это не просто другой путь введения, а начало <b class="g">прецизионной медицины</b> — метод, преодолевающий границы стандартной химиотерапии.</p>
+
+    <div class="split" style="margin-top:4mm">
+      <div class="a"><div class="k">Было</div><b>Стандартная химиотерапия</b><span>Внутривенное лечение, воздействующее на весь организм</span></div>
+      <div class="b"><div class="k">Стало</div><b>Внутриартериальная терапия</b><span>Локальное лечение с учётом сосудистых особенностей опухоли</span></div>
+    </div>
+
+    <div class="cols2 mech" style="margin-top:6mm;gap:7mm">
+      <div>
+        <h4><i>1</i>Суперселективное высококонцентрированное введение</h4>
+        <p class="small muted">Ангиография находит питающую артерию опухоли (feeding artery). Общая доза значительно меньше, а концентрация в опухоли — сверхвысокая.</p>
+        <svg viewBox="0 0 300 140" style="width:100%;height:auto;display:block;margin-top:2mm">
+          <line x1="28" y1="118" x2="292" y2="118" stroke="#172019" stroke-width="1.3"/>
+          <line x1="28" y1="118" x2="28" y2="10" stroke="#172019" stroke-width="1.3"/>
+          <path d="M72 118 C120 118 126 20 160 20 C194 20 200 118 248 118 Z" fill="#EEF6EA"/>
+          <path d="M72 118 C120 118 126 20 160 20 C194 20 200 118 248 118" fill="none" stroke="#2E9B3E" stroke-width="2.6"/>
+          <line x1="28" y1="82" x2="292" y2="82" stroke="#C9473F" stroke-width="1.5"/>
+          <path d="M28 111 C80 106 100 101 130 104 C170 108 200 103 230 105 C255 107 272 111 288 113" fill="none" stroke="#5E6A61" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <text x="160" y="12" text-anchor="middle" font-size="8.6" font-weight="700" fill="#1C5230">в опухоли</text>
+          <text x="32" y="8" font-size="7" fill="#5E6A61">Доза</text>
+          <text x="292" y="132" text-anchor="end" font-size="7" fill="#5E6A61">Время</text>
+        </svg>
+        <div style="display:flex;gap:4mm;font-size:6.8pt;color:var(--muted)"><span><b style="color:#2E9B3E">━</b> в опухоли</span><span><b style="color:#C9473F">━</b> порог токсичности</span><span><b>┅</b> в крови</span></div>
+      </div>
+      <div>
+        <h4><i>2</i>Двойной эффект (Double Effect)</h4>
+        <p class="small muted">Уничтожает опухоль и одновременно создаёт «неблагоприятную среду», в которой раку трудно расти.</p>
+        <div style="display:grid;grid-template-columns:1fr 30mm;gap:3mm;align-items:center;margin-top:2.4mm">
+          <ul class="dash small">
+            <li><b class="g">Прямой удар</b> — высокая концентрация препарата в самой опухоли</li>
+            <li><b class="g">Блокада ангиогенеза</b> — подавление роста новых сосудов и окклюзия сосудов, питающих рост и рецидив рака</li>
+          </ul>
+          <img src="assets/tumor.png" style="width:100%" alt="">
+        </div>
+      </div>
+    </div>
+
+    <h4 style="font-size:9.6pt;margin:6mm 0 1mm">Сравнение подходов</h4>
+    <table class="cmp">
+      <tr><th style="width:27%">Критерий</th><th>Обычная внутривенная</th><th class="gr">Внутриартериальная</th></tr>
+      <tr><td>Путь введения</td><td>Системный кровоток</td><td class="gr">Питающая артерия опухоли</td></tr>
+      <tr><td>Концентрация в опухоли</td><td>Низкая</td><td class="gr">Чрезвычайно высокая</td></tr>
+      <tr><td>Системные побочные эффекты</td><td>Серьёзные</td><td class="gr">Минимизированы</td></tr>
+      <tr><td>Повседневная жизнь</td><td>Госпитализация и борьба с побочными эффектами</td><td class="gr">Амбулаторное лечение, привычный ритм жизни</td></tr>
+    </table>
+
+    <div class="cols3" style="margin-top:4.5mm">
+      <div class="tick lime"><h4>Привычный образ жизни</h4><p class="small muted">При хорошем состоянии — амбулаторно, без госпитализации.</p></div>
+      <div class="tick lime"><h4>Низкая токсичность</h4><p class="small muted">Тошнота, выпадение волос и упадок сил практически отсутствуют.</p></div>
+      <div class="tick lime"><h4>Среда против опухоли</h4><p class="small muted">Вокруг опухоли создаются условия, препятствующие её росту.</p></div>
+    </div>
+  </div>
+  <div class="qband"><p>Для пациентов, столкнувшихся с ограничениями стандартного лечения или тяжело переносящих токсичность химиотерапии, это — <span>новый ключ к победе над раком</span> с сохранением качества жизни.</p></div>
+  <div class="foot"><span><b>Human Medical Imaging &amp; Intervention Center</b></span><span>Консультации: Seoul Medical Center, Алматы · +7 771 933 39 39</span></div>
+</section>
+
+<!-- ================= 7. CASES ================= -->
+<section class="page">
+  <div class="side"><div class="n">06</div><div class="t">Клинические случаи</div><div class="pg">7 / 8</div></div>
+  <div class="content">
+    <div class="lbl">Внутриартериальная химиотерапия</div>
+    <h2 class="ttl">Результаты <em>в цифрах</em> и снимках</h2>
+    <div class="rule"></div>
+
     <div class="case">
-      <div class="hd"><b>Случай 2. Рак груди 4 стадии</b><span>Женщина, 61 год</span></div>
-      <p class="small muted">Отказ от высокотоксичной системной химиотерапии; массивное подмышечное образование. В 2025 г. — интенсивное внутриартериальное введение препаратов. Регрессия опухоли и контроль плеврального выпота позволили вернуться к нормальной жизни.</p>
+      <div class="hd"><h4>Случай 1 · Распространённый рак молочной железы</h4><span>Женщина, 63 года</span></div>
+      <p>Множественные метастазы в печень и лёгкие после завершённого стандартного лечения. В 2022 г. — внутриартериальная химиотерапия: препарат вводился только в питающие артерии метастазов.</p>
+      <div class="cols2" style="gap:5mm">
+        <div><div class="ba"><img src="assets/lung_before.jpg"><i>→</i><img src="assets/lung_after.jpg"></div><div class="capc">Лёгкие: до → после</div></div>
+        <div><div class="ba"><img src="assets/liver_before.jpg"><i>→</i><img src="assets/liver_after.jpg"></div><div class="capc">Печень: до → после</div></div>
+      </div>
       <div class="mk">
-        <div><span>CEA</span><span class="bars"><i style="width:48%"></i></span><em>49,2 → 23,8</em></div>
-        <div><span>CA15-3</span><span class="bars"><i style="width:62%"></i></span><em>39,8 → 24,8</em></div>
+        <div><span>CA19-9</span><span class="b"><i style="width:1.5%"></i></span><em>492 → 1,87</em></div>
+        <div><span>CA125</span><span class="b"><i style="width:24%"></i></span><em>322 → 77,2</em></div>
+        <div><span>CEA</span><span class="b"><i style="width:44%"></i></span><em>111 → 48,3</em></div>
       </div>
     </div>
-    <div class="case">
-      <div class="hd"><b>Случай 3. Холангиокарцинома 7,8 см</b><span>Мужчина, 69 лет</span></div>
-      <p class="small muted" style="margin-bottom:2mm">Рецидив после резекции печени и прогрессирование после трёх линий химиотерапии. Внутриартериальная химиотерапия позволила добиться регрессии множественных очагов в печени.</p>
-      <div class="ba"><img src="assets/case3_before.jpg" style="height:22mm"><span class="ar">→</span><img src="assets/case3_after.jpg" style="height:22mm"></div>
+
+    <div class="cols2" style="gap:6mm;margin-top:5mm">
+      <div class="case">
+        <div class="hd"><h4>Случай 2 · Рак груди 4 ст.</h4><span>Женщина, 61 год</span></div>
+        <p>Отказ от высокотоксичной системной химиотерапии, массивное подмышечное образование. В 2025 г. — внутриартериальное введение. Регрессия опухоли и контроль плеврального выпота позволили вернуться к нормальной жизни.</p>
+        <div class="mk">
+          <div><span>CEA</span><span class="b"><i style="width:48%"></i></span><em>49,2 → 23,8</em></div>
+          <div><span>CA15-3</span><span class="b"><i style="width:62%"></i></span><em>39,8 → 24,8</em></div>
+        </div>
+      </div>
+      <div class="case">
+        <div class="hd"><h4>Случай 3 · Холангиокарцинома</h4><span>Мужчина, 69 лет</span></div>
+        <p>Опухоль 7,8 см, рецидив после резекции печени и прогрессирование после трёх линий химиотерапии. Итог IAC — регрессия множественных очагов в печени.</p>
+        <div class="ba"><img src="assets/case3_before.jpg" style="height:22mm"><i>→</i><img src="assets/case3_after.jpg" style="height:22mm"></div>
+      </div>
     </div>
-  </div>
 
-  <div class="card green" style="margin-top:3.6mm;padding:4mm 5mm;display:grid;grid-template-columns:1fr 1.5fr;gap:5mm;align-items:center">
-    <div><h3 style="color:#fff;font-size:13pt;margin:0">Feeding Artery — уязвимость любой солидной опухоли</h3></div>
-    <p class="small">Стандартное лечение зависит от органа, в котором возник рак. Внутриартериальная химиотерапия выходит за эти рамки: она нацелена на питающую артерию, которая есть у каждой солидной опухоли, — <b>рак лёгких, молочной железы, печени, желчных протоков</b>.</p>
-  </div>
+    <div class="fa" style="margin-top:5mm">
+      <h4>Feeding Artery — <span>уязвимость любой солидной опухоли</span></h4>
+      <p>Стандартное лечение зависит от органа, в котором возник рак. Внутриартериальная химиотерапия нацелена на питающую артерию, которая есть у каждой солидной опухоли: рак лёгких, молочной железы, печени, желчных протоков.</p>
+    </div>
 
-  <h4 style="margin:4.4mm 0 2.4mm">Показания: кому необходима внутриартериальная химиотерапия?</h4>
-  <div class="ind">
-    <div><i>1</i><b>Неудача стандартного лечения</b><span>Прогрессирующий рак, при котором операция, химио- и лучевая терапия больше не дают эффекта</span></div>
-    <div><i>2</i><b>Ухудшение общего состояния</b><span>Тяжело переносится высокотоксичная системная химиотерапия из-за побочных эффектов или упадка сил</span></div>
-    <div><i>3</i><b>Сохранение качества жизни</b><span>Желание избежать тяжёлых побочных эффектов и лечиться амбулаторно</span></div>
-    <div><i>4</i><b>Ограниченная инфраструктура</b><span>Иностранные пациенты и жители регионов, где сложно получить нужное лечение</span></div>
+    <div class="cols2" style="gap:5mm;margin-top:5mm">
+      <div><img class="ph" src="assets/angio_lung.jpg" style="height:29mm;border-radius:2mm;object-position:40% 45%"><div class="capc">Ангиография: введение в питающую артерию метастаза в лёгком (случай 1)</div></div>
+      <div><img class="ph" src="assets/angio_liver.jpg" style="height:29mm;border-radius:2mm"><div class="capc">Ангиография: введение в питающую артерию метастаза в печени (случай 1)</div></div>
+    </div>
+
+    <h4 style="font-size:9.6pt;margin:5mm 0 2.6mm">Кому показана внутриартериальная химиотерапия</h4>
+    <div class="ind">
+      <div><span class="no">01</span><b>Неудача стандартного лечения</b><span>Операция, химио- и лучевая терапия больше не дают эффекта</span></div>
+      <div><span class="no">02</span><b>Тяжёлое общее состояние</b><span>Системная химиотерапия плохо переносится из-за побочных эффектов</span></div>
+      <div><span class="no">03</span><b>Качество жизни</b><span>Желание избежать тяжёлых побочных эффектов и лечиться амбулаторно</span></div>
+      <div><span class="no">04</span><b>Ограниченный доступ</b><span>Иностранные пациенты и жители регионов без нужной инфраструктуры</span></div>
+    </div>
+    <p class="note" style="margin-top:3mm">Клинические случаи — по материалам Human Medical Imaging Center. Результаты индивидуальны; возможность процедуры определяет врач после обследования.</p>
   </div>
-  <p class="note" style="margin-top:2.6mm">Клинические случаи приведены по материалам Human Medical Imaging Center. Результаты лечения индивидуальны; возможность проведения процедуры определяет врач после обследования.</p>
-</div>
-<div class="foot"><span><b>Human Medical Imaging &amp; Intervention Center</b> · Сеул, Корея</span><span>Консультации: Seoul Medical Center, Алматы · +7 771 933 39 39 · 7 / 8</span></div>
+  <div class="foot"><span><b>Human Medical Imaging &amp; Intervention Center</b></span><span>Консультации: Seoul Medical Center, Алматы · +7 771 933 39 39</span></div>
 </section>
 
-<!-- ============ 8. CONTACTS ============ -->
-<section class="page"><div class="inner">
-  <div class="topbar"><img src="assets/logo.png" alt=""><span class="pn">Контакты</span></div>
-  <div class="sec"><div><div class="k">Контакты в Казахстане</div><h2>Контакты для связи</h2></div></div>
-  <p class="lead" style="margin-bottom:5mm">По вопросам консультаций, диагностики и лечения в Human Medical Imaging Center обращайтесь в <b class="g">Seoul Medical Center</b> в Алматы.</p>
+<!-- ================= 8. CONTACTS ================= -->
+<section class="page last">
+  <div class="side"><div class="n">07</div><div class="t">Контакты</div><div class="pg">8 / 8</div></div>
+  <div class="content">
+    <div class="lbl">Контакты в Казахстане</div>
+    <h2 class="ttl">Свяжитесь с нами</h2>
+    <div class="rule"></div>
+    <p class="lead">По вопросам консультаций, диагностики и лечения в Human Medical Imaging Center обращайтесь в <b style="color:#fff">Seoul Medical Center</b> в Алматы.</p>
 
-  <div class="ct">
-    <div class="main">
-      <img src="assets/smc_logo_white.svg" style="height:9mm;display:block;margin-bottom:2.4mm" alt="">
-      <div style="color:#BFE6C5;font-size:7.4pt;letter-spacing:1.4pt;text-transform:uppercase;margin-bottom:2.4mm">Диагностический центр · Алматы</div>
-      <div class="ct-row"><span>Адрес</span><span>г. Алматы, Бостандыкский район,<br>ул. Сатпаева, 90/26</span></div>
-      <div class="ct-row"><span>Телефон</span><span><b>+7 771 933 39 39</b></span></div>
-      <div class="ct-row"><span>WhatsApp</span><span>+7 771 799 95 26</span></div>
-      <div class="ct-row"><span>E-mail</span><span>marketing@sghealthcare.kz</span></div>
-      <div class="ct-row"><span>Сайт</span><span>seoulmed.kz</span></div>
-      <div class="ct-row"><span>Instagram</span><span>@seoulmed.kz</span></div>
-      <div class="ct-row"><span>Часы работы</span><span>Пн–Пт 08:00–24:00 · Сб 08:00–20:00 · Вс выходной</span></div>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:3mm">
-      <img class="ph" src="assets/smc_lobby.jpg" style="height:44mm">
-      <div class="grid2" style="gap:3mm">
-        <div class="qr"><img src="assets/qr_smc_site.svg" alt=""><b>Сайт</b>seoulmed.kz</div>
-        <div class="qr"><img src="assets/qr_smc_wa.svg" alt=""><b>WhatsApp</b>+7 771 799 95 26</div>
+    <div class="ctbox" style="margin-top:7mm">
+      <div>
+        <img src="assets/smc_logo_white.svg" style="height:10mm;display:block;margin-bottom:3mm" alt="">
+        <div class="ctr"><span>Телефон</span><span><b>+7 771 933 39 39</b></span></div>
+        <div class="ctr"><span>WhatsApp</span><span>+7 771 799 95 26</span></div>
+        <div class="ctr"><span>Адрес</span><span>г. Алматы, Бостандыкский район, ул. Сатпаева, 90/26</span></div>
+        <div class="ctr"><span>E-mail</span><span>marketing@sghealthcare.kz</span></div>
+        <div class="ctr"><span>Сайт</span><span>seoulmed.kz · Instagram @seoulmed.kz</span></div>
+        <div class="ctr"><span>Часы</span><span>Пн–Пт 08:00–24:00 · Сб 08:00–20:00 · Вс выходной</span></div>
+      </div>
+      <div>
+        <img class="ph" src="assets/smc_lobby.jpg" style="height:40mm;border-radius:3mm;margin-bottom:3mm" alt="">
+        <div class="qrs">
+          <div><img src="assets/qr_smc_site.svg" alt=""><b>Сайт</b>seoulmed.kz</div>
+          <div><img src="assets/qr_smc_wa.svg" alt=""><b>WhatsApp</b>+7 771 799 95 26</div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <h4 style="margin:6mm 0 2.6mm">Как проходит обследование в Seoul Medical Center</h4>
-  <div class="steps">
-    <div><i>01</i><b>Заявка</b>Через сайт, по телефону или WhatsApp — подбираем обследование и удобное время</div>
-    <div><i>02</i><b>Без очередей</b>Приём строго по записи</div>
-    <div><i>03</i><b>Обследование</b>МРТ, КТ, УЗИ, рентген, анализы, Check-up на оборудовании SG Healthcare (Корея)</div>
-    <div><i>04</i><b>Результат</b>В день обращения; заключение готово в течение 24 часов, есть возможность телемедицины</div>
+    <h4 style="color:#fff;font-size:9.6pt;margin-top:7mm">Как проходит обследование в Seoul Medical Center</h4>
+    <div class="st4">
+      <div><i>01</i><b>Заявка</b>Сайт, телефон или WhatsApp — подбираем обследование и время</div>
+      <div><i>02</i><b>Без очередей</b>Приём строго по записи</div>
+      <div><i>03</i><b>Обследование</b>МРТ, КТ, УЗИ, рентген, анализы, Check-up на оборудовании SG Healthcare</div>
+      <div><i>04</i><b>Результат</b>В день обращения; заключение — в течение 24 часов, возможна телемедицина</div>
+    </div>
   </div>
-
-  <div class="closing" style="margin-top:7mm">
+  <div class="slogan">
     <img class="sh" src="assets/logo_shape_white.png" alt="">
     <img class="lg" src="assets/logo_white.png" alt="">
     <p>Ваш надёжный медицинский партнёр, стремящийся повысить качество жизни и уровень медицинской помощи.</p>
+    <div class="nt">Информация о Human Medical Imaging Center — по материалам презентации центра; контакты Seoul Medical Center — по данным seoulmed.kz (октябрь 2026 г.). Метод лечения определяется индивидуально после обследования.</div>
   </div>
-
-  <p class="note" style="margin-top:4mm">Информация о Human Medical Imaging Center — по материалам презентации центра; контакты Seoul Medical Center — по данным seoulmed.kz (октябрь 2026 г.). Метод лечения определяется индивидуально после обследования.</p>
-</div>
-<div class="foot"><span><b>Human Medical Imaging &amp; Intervention Center</b> · Сеул, Корея</span><span>Консультации: Seoul Medical Center, Алматы · +7 771 933 39 39 · 8 / 8</span></div>
 </section>
 
 </body>
