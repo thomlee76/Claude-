@@ -1,0 +1,648 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Невидимая половина Claude</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: справочник-«паспорт оборудования» — шапка с прогрессом, слева оглавление, справа модули-главы */
+:root{
+  --bg:#F2F4F3; --surface:#FFFFFF; --ink:#14232A; --muted:#55666B; --line:#D3DCDB;
+  --accent:#0B6E78; --accent-soft:#DCEEEF; --warm:#A85A16; --warm-soft:#F6E7D8; --code:#E9EFED;
+  --f-display:"Unbounded", "Golos Text", system-ui, sans-serif;
+  --f-body:"Golos Text", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0E1518; --surface:#152024; --ink:#DCE6E7; --muted:#93A5A9; --line:#263439;
+  --accent:#4CC3CC; --accent-soft:#16363A; --warm:#E0A15E; --warm-soft:#3A2A19; --code:#1A282C; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0E1518; --surface:#152024; --ink:#DCE6E7; --muted:#93A5A9; --line:#263439;
+  --accent:#4CC3CC; --accent-soft:#16363A; --warm:#E0A15E; --warm-soft:#3A2A19; --code:#1A282C; color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--bg); color:var(--ink); font-family:var(--f-body); font-size:16px; line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left,0px)); padding-right:max(16px, env(safe-area-inset-right,0px))}
+body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px); z-index:10; background:var(--bg)}
+a{color:var(--accent)}
+a:focus-visible, button:focus-visible, input:focus-visible+label, label:focus-within{outline:2px solid var(--accent); outline-offset:2px}
+.wrap{max-width:1180px; margin:0 auto}
+
+/* Header */
+header.top{padding-block:40px 24px; display:grid; gap:18px}
+.eyebrow{font-family:var(--f-mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+h1{font-family:var(--f-display); font-weight:700; font-size:clamp(28px,5vw,46px); line-height:1.12; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.lede{max-width:66ch; margin:0; color:var(--muted); font-size:17px}
+.used{display:flex; flex-wrap:wrap; gap:8px; align-items:center; font-size:14px}
+.used span.tag{font-family:var(--f-mono); font-size:12px; padding:3px 8px; border:1px solid var(--line); border-radius:4px; color:var(--muted); text-decoration:line-through; text-decoration-color:var(--muted)}
+
+/* Sticky progress bar */
+.bar{position:sticky; top:env(safe-area-inset-top,0px); z-index:5; background:var(--bg); border-bottom:1px solid var(--line); padding-block:12px}
+.bar-in{display:flex; flex-wrap:wrap; gap:12px 20px; align-items:center; justify-content:space-between}
+.meter{display:flex; align-items:center; gap:12px; min-width:0; flex:1 1 260px}
+.meter-track{flex:1; height:8px; background:var(--line); border-radius:4px; overflow:hidden; min-width:80px}
+.meter-fill{height:100%; width:0; background:var(--accent); transition:width .3s}
+.meter-label{font-family:var(--f-mono); font-size:13px; font-variant-numeric:tabular-nums; white-space:nowrap}
+.filters{display:flex; flex-wrap:wrap; gap:6px}
+.chip{font:500 14px var(--f-body); padding:6px 12px; border-radius:999px; border:1px solid var(--line); background:var(--surface); color:var(--ink); cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink); color:var(--bg); border-color:var(--ink)}
+
+/* Body grid */
+.layout{display:grid; grid-template-columns:240px minmax(0,1fr); gap:40px; padding-block:28px 64px}
+@media (max-width:900px){ .layout{grid-template-columns:minmax(0,1fr)} aside.toc{display:none} }
+aside.toc{position:sticky; top:calc(env(safe-area-inset-top,0px) + 80px); align-self:start; max-height:calc(100vh - 110px); overflow:auto; font-size:14px}
+.toc h3{font-family:var(--f-mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:18px 0 6px; font-weight:600}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc a{display:flex; gap:8px; text-decoration:none; color:var(--ink); padding:4px 6px; border-radius:4px}
+.toc a:hover{background:var(--accent-soft)}
+.toc a .n{font-family:var(--f-mono); color:var(--muted); font-size:12px; min-width:22px; padding-top:2px}
+.toc a.done{color:var(--muted); text-decoration:line-through}
+
+main{display:grid; gap:28px; min-width:0}
+.part{display:grid; gap:4px; padding-top:12px}
+.part h2{font-family:var(--f-display); font-weight:500; font-size:22px; margin:0}
+.part p{margin:0; color:var(--muted); max-width:70ch}
+
+/* Chapter */
+article.ch{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:24px clamp(16px,3vw,32px); display:grid; gap:18px; scroll-margin-top:90px}
+article.ch.is-done{opacity:.72}
+.ch-head{display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:4px 18px; align-items:start}
+.ch-num{font-family:var(--f-mono); font-weight:600; font-size:28px; color:var(--accent); line-height:1; padding-top:4px}
+.ch-head h3{font-family:var(--f-display); font-weight:500; font-size:clamp(18px,2.4vw,22px); line-height:1.25; margin:0; text-wrap:balance}
+.meta{grid-column:2; display:flex; flex-wrap:wrap; gap:6px 14px; font-size:13px; color:var(--muted); font-family:var(--f-mono)}
+.prio{display:inline-flex; gap:3px; align-items:center}
+.prio i{width:8px; height:8px; border-radius:2px; background:var(--line); display:inline-block}
+.prio[data-p="3"] i, .prio[data-p="2"] i:nth-child(-n+2), .prio[data-p="1"] i:first-child{background:var(--warm)}
+.done-toggle{grid-row:1/3; grid-column:3; display:flex; align-items:center; gap:8px; font-size:14px; cursor:pointer; user-select:none; white-space:nowrap; padding:6px 10px; border:1px solid var(--line); border-radius:6px}
+.done-toggle input{width:18px; height:18px; accent-color:var(--accent); margin:0}
+@media (max-width:560px){ .ch-head{grid-template-columns:auto minmax(0,1fr)} .done-toggle{grid-column:1/-1; grid-row:auto; justify-self:start} }
+
+.cols{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px 28px}
+@media (max-width:720px){ .cols{grid-template-columns:minmax(0,1fr)} }
+.blk h4{font-family:var(--f-mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 6px; font-weight:600}
+.blk p, .blk ul, .blk ol{margin:0; max-width:68ch}
+.blk ul, .blk ol{padding-left:20px; display:grid; gap:4px}
+.blk.why{background:var(--accent-soft); border-radius:8px; padding:14px 16px}
+.blk.warn{background:var(--warm-soft); border-radius:8px; padding:14px 16px}
+code, kbd{font-family:var(--f-mono); font-size:.88em; background:var(--code); padding:1px 5px; border-radius:4px}
+kbd{border:1px solid var(--line)}
+
+.try{border:1px dashed var(--accent); border-radius:8px; padding:14px 16px; display:grid; gap:10px}
+.try-top{display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap}
+.try-top h4{margin:0}
+.try pre{margin:0; white-space:pre-wrap; word-break:break-word; font-family:var(--f-mono); font-size:13.5px; line-height:1.55; background:var(--code); padding:12px 14px; border-radius:6px; overflow-x:auto}
+.copy{font:600 13px var(--f-body); padding:6px 12px; border-radius:6px; border:1px solid var(--accent); background:transparent; color:var(--accent); cursor:pointer}
+.copy:hover{background:var(--accent-soft)}
+.src{font-size:13px; color:var(--muted)}
+
+/* Plan + unavailable */
+.panel{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:24px clamp(16px,3vw,32px); display:grid; gap:14px}
+.panel h2{font-family:var(--f-display); font-weight:500; font-size:22px; margin:0}
+.plan{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px}
+@media (max-width:720px){ .plan{grid-template-columns:minmax(0,1fr)} }
+.plan h3{font-family:var(--f-mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 8px}
+.plan ol{margin:0; padding:0; list-style:none; display:grid; gap:6px}
+.plan li{display:grid; grid-template-columns:56px minmax(0,1fr); gap:10px; font-size:15px}
+.plan li b{font-family:var(--f-mono); font-weight:600; color:var(--accent); font-size:13px; padding-top:2px}
+.plan a{text-decoration:none}
+.na{display:grid; gap:10px}
+.na div{display:grid; grid-template-columns:180px minmax(0,1fr); gap:12px; font-size:15px; border-top:1px solid var(--line); padding-top:10px}
+@media (max-width:560px){ .na div{grid-template-columns:minmax(0,1fr); gap:2px} }
+.na b{font-weight:600}
+footer{padding-block:0 48px; color:var(--muted); font-size:13px}
+.hidden-ch{display:none}
+@media (prefers-reduced-motion: reduce){ *{transition:none!important} }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow">Справочник · для 이성 · по состоянию на 31 октября 2026</div>
+    <h1>Невидимая половина Claude</h1>
+    <p class="lede">16 функций Claude и Claude Code, которыми вы пока не пользуетесь. Отобраны по нашей переписке, расставлены по пользе для работы в продажах медоборудования (СНГ и Латинская Америка) и для SMC Almaty. В каждой главе: что это, зачем лично вам, как начать и готовый запрос, который можно скопировать.</p>
+    <div class="used"><span class="eyebrow">Уже освоено, здесь не повторяется:</span>
+      <span class="tag">коннекторы</span><span class="tag">свои коннекторы</span><span class="tag">скиллы</span><span class="tag">проекты</span><span class="tag">память</span><span class="tag">веб-поиск</span><span class="tag">генерация картинок</span>
+    </div>
+  </header>
+</div>
+
+<div class="bar">
+  <div class="wrap bar-in">
+    <div class="meter" aria-live="polite">
+      <div class="meter-track"><div class="meter-fill" id="fill"></div></div>
+      <span class="meter-label" id="mlabel">0 из 16 опробовано</span>
+    </div>
+    <div class="filters" role="group" aria-label="Фильтр глав">
+      <button class="chip" id="f-all" aria-pressed="true" data-f="all">Все</button>
+      <button class="chip" id="f-app" aria-pressed="false" data-f="app">Claude</button>
+      <button class="chip" id="f-code" aria-pressed="false" data-f="code">Claude Code</button>
+      <button class="chip" id="f-todo" aria-pressed="false" data-f="todo">Ещё не опробовано</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap layout">
+  <aside class="toc" aria-label="Оглавление">
+    <h3>Claude</h3>
+    <ol id="toc-app"></ol>
+    <h3>Claude Code</h3>
+    <ol id="toc-code"></ol>
+    <h3>Дальше</h3>
+    <ol><li><a href="#plan"><span class="n">→</span>План на 2 недели</a></li><li><a href="#na"><span class="n">×</span>Пока недоступно</a></li></ol>
+  </aside>
+
+  <main>
+    <section class="part" data-part="app">
+      <div class="eyebrow">Часть I</div>
+      <h2>Claude: приложение и чат</h2>
+      <p>Всё, что работает без программирования: в веб-версии, десктоп-приложении и на телефоне.</p>
+    </section>
+
+    <!-- 01 -->
+    <article class="ch" id="ch-01" data-part="app">
+      <div class="ch-head">
+        <span class="ch-num">01</span>
+        <h3>Запланированные задачи: Claude работает, пока вас нет</h3>
+        <div class="meta"><span class="prio" data-p="3" title="Польза: высокая"><i></i><i></i><i></i></span><span>5 минут на запуск</span></div>
+        <label class="done-toggle"><input type="checkbox" id="done-01"><span>Опробовал</span></label>
+      </div>
+      <div class="cols">
+        <div class="blk"><h4>Что это</h4><p>Задание, которое Claude выполняет сам по расписанию: каждый будний день, раз в неделю или один раз в нужное время. Результат приходит без вашего запроса. Создаётся одной фразой в чате.</p></div>
+        <div class="blk why"><h4>Зачем вам</h4><ul>
+          <li>Утренний бриф: встречи из календаря, письма Gmail без ответа, 3 главные задачи дня.</li>
+          <li>Пятничная сводка по поставкам и дебиторке (ваш скилл overseas-project-receivables).</li>
+          <li>Напоминание сделать follow-up дистрибьютору, если тот молчит 3 дня.</li>
+        </ul></div>
+        <div class="blk"><h4>Как начать</h4><ol>
+          <li>Напишите в чате, что и когда делать. Обязательно укажите часовой пояс: вы часто бываете в Алматы.</li>
+          <li>Я создам задачу и скажу, требует ли она подтверждения при каждом запуске.</li>
+          <li>Для готового утреннего брифа есть команда <code>/morning</code>.</li>
+        </ol></div>
+        <div class="blk warn"><h4>Учтите</h4><p>Каждый запуск идёт в новой сессии: она видит ваши коннекторы, но не этот чат. Поэтому задание пишется полностью, без ссылок на «как вчера». Почта ECOUNT задачам недоступна.</p></div>
+      </div>
+      <div class="try"><div class="try-top"><h4 class="eyebrow">Скопируйте и отправьте</h4><button class="copy" type="button">Копировать</button></div>
+<pre>Каждый будний день в 8:40 по сеульскому времени присылай мне утренний бриф на русском: встречи сегодня из Google Calendar, письма в Gmail без ответа старше 2 дней, 3 главные задачи. Не больше 10 строк.</pre></div>
+      <div class="src">Подробнее о задачах по расписанию в Claude Code: <a href="https://code.claude.com/docs/en/routines.md" target="_blank" rel="noopener">code.claude.com/docs/routines</a></div>
+    </article>
+
+    <!-- 02 -->
+    <article class="ch" id="ch-02" data-part="app">
+      <div class="ch-head">
+        <span class="ch-num">02</span>
+        <h3>Claude в браузере: сайты без коннектора</h3>
+        <div class="meta"><span class="prio" data-p="3" title="Польза: высокая"><i></i><i></i><i></i></span><span>10 минут на настройку</span></div>
+        <label class="done-toggle"><input type="checkbox" id="done-02"><span>Опробовал</span></label>
+      </div>
+      <div class="cols">
+        <div class="blk"><h4>Что это</h4><p>Claude сам открывает сайты, нажимает кнопки, заполняет поля и читает страницы. Два варианта: <b>Claude in Chrome</b> работает как расширение в вашем Chrome, с вашими входами на сайты; <b>встроенный браузер</b> открывается панелью внутри десктоп-приложения Claude, со своими входами. У вас по умолчанию выбран встроенный.</p></div>
+        <div class="blk why"><h4>Зачем вам</h4><ul>
+          <li>ECOUNT: найти документы в электронном согласовании, сверить командировочные расходы.</li>
+          <li>goszakup.gov.kz и ЕИС: свежие тендеры на рентген и УЗИ.</li>
+          <li>Реестры НЦЭЛС и Росздравнадзора: зарегистрирован ли конкурент.</li>
+        </ul></div>
+        <div class="blk"><h4>Как начать</h4><ol>
+          <li>Для Chrome: установите расширение «Claude in Chrome» и войдите тем же аккаунтом.</li>
+          <li>Для встроенного браузера откройте этот чат в десктоп-приложении Claude.</li>
+          <li>Первый раз на каждом сайте Claude спросит разрешение.</li>
+        </ol></div>
+        <div class="blk warn"><h4>Учтите</h4><p>Оплату, отправку форм и вход с паролем подтверждаете вы сами. Сайты с капчей могут не пускать. Браузер работает медленнее коннектора, поэтому для Gmail и Google Drive по-прежнему лучше коннекторы.</p></div>
+      </div>
+      <div class="try"><div class="try-top"><h4 class="eyebrow">Скопируйте и отправьте</h4><button class="copy" type="button">Копировать</button></div>
+<pre>Открой goszakup.gov.kz и найди объявления за последние 14 дней по словам «рентген», «цифровой рентгенографический», «флюорограф». Сведи в таблицу: заказчик, предмет, сумма в тенге, срок подачи, ссылка.</pre></div>
+      <div class="src">Справка: <a href="https://support.claude.com/en/collections/18031491-claude-in-chrome" target="_blank" rel="noopener">Claude in Chrome — Help Center</a></div>
+    </article>
+
+    <!-- 03 -->
+    <article class="ch" id="ch-03" data-part="app">
+      <div class="ch-head">
+        <span class="ch-num">03</span>
+        <h3>Research: исследование вместо поиска</h3>
+        <div class="meta"><span class="prio" data-p="3" title="Польза: высокая"><i></i><i></i><i></i></span><span>1 запрос · 5–30 минут ожидания</span></div>
+        <label class="done-toggle"><input type="checkbox" id="done-03"><span>Опробовал</span></label>
+      </div>
+      <div class="cols">
+        <div class="blk"><h4>Что это</h4><p>Обычный веб-поиск делает 1–3 запроса. В режиме Research Claude сам проводит десятки поисков, сверяет источники между собой и выдаёт структурированный отчёт со ссылками на каждый факт.</p></div>
+        <div class="blk why"><h4>Зачем вам</h4><ul>
+          <li>Оценка рынка DR-рентгена в стране перед поиском дистрибьютора.</li>
+          <li>Порядок и сроки регистрации медизделия в ЕАЭС, INVIMA, ANVISA.</li>
+          <li>Профиль компании-кандидата в дистрибьюторы (вместе со скиллом distributor-due-diligence).</li>
+        </ul></div>
+        <div class="blk"><h4>Как начать</h4><ol>
+          <li>Включите Research в меню инструментов под полем ввода.</li>
+          <li>Сформулируйте вопрос с рамками: страна, период, нужные цифры, формат результата.</li>
+          <li>Пока идёт исследование, можно заниматься другим.</li>
+        </ol></div>
+        <div class="blk warn"><h4>Учтите</h4><p>Режим тратит заметно больше лимита и времени. Для простых фактов он избыточен. Ключевые цифры перед отправкой руководству проверяйте по приложенным ссылкам.</p></div>
+      </div>
+      <div class="try"><div class="try-top"><h4 class="eyebrow">Скопируйте и отправьте</h4><button class="copy" type="button">Копировать</button></div>
+<pre>Рынок цифровых рентген-систем (DR) в Колумбии, 2024–2026: объём закупок, топ-5 поставщиков и их дистрибьюторы, регистрация в INVIMA (класс, сроки, стоимость), крупнейшие государственные тендеры. Итог: таблица и 5 выводов для выхода нового бренда.</pre></div>
+      <div class="src">Справка: <a href="https://support.claude.com/en/articles/11088861-use-research-on-claude" target="_blank" rel="noopener">Use research on Claude</a> · <a href="https://support.claude.com/en/articles/11095361-when-should-i-use-web-search-extended-thinking-and-research" target="_blank" rel="noopener">когда что использовать</a></div>
+    </article>
+
+    <!-- 04 -->
+    <article class="ch" id="ch-04" data-part="app">
+      <div class="ch-head">
+        <span class="ch-num">04</span>
+        <h3>Слайды, Документы, Дизайн, Дашборды</h3>
+        <div class="meta"><span class="prio" data-p="3" title="Польза: высокая"><i></i><i></i><i></i></span><span>1 запрос на результат</span></div>
+        <label class="done-toggle"><input type="checkbox" id="done-04"><span>Опробовал</span></label>
+      </div>
+      <div class="cols">
+        <div class="blk"><h4>Что это</h4><p>Вместо файла Claude создаёт живой документ со ссылкой, который можно править самому прямо в редакторе:</p><ul>
+          <li><b>Slides</b>: презентация 16:9, скачивается в PowerPoint или PDF, отправляется в Google Slides.</li>
+          <li><b>Docs</b>: документ с экспортом в .docx, PDF, Markdown.</li>
+          <li><b>Design</b>: постеры, баннеры, лендинги, макеты экранов.</li>
+          <li><b>Dashboard</b>: графики и таблицы, у каждой цифры виден источник (бета).</li>
+        </ul></div>
+        <div class="blk why"><h4>Зачем вам</h4><ul>
+          <li>Презентация линейки SG Healthcare для нового дистрибьютора на испанском: потом скачать .pptx.</li>
+          <li>КП или договор поставки в Docs, отправка в .docx.</li>
+          <li>Афиша чек-ап программы SMC Almaty на русском и казахском.</li>
+          <li>Дашборд дебиторки по странам из Google Sheets для 전무님.</li>
+        </ul></div>
+        <div class="blk"><h4>Как начать</h4><ol>
+          <li>Просто попросите: «сделай презентацию…», «оформи как документ…».</li>
+          <li>Откроется редактор: поменяйте текст сами или попросите правки в чате.</li>
+          <li>Скачайте в нужном формате или поделитесь ссылкой.</li>
+        </ol></div>
+        <div class="blk warn"><h4>Учтите</h4><p>С 8 октября Docs, Slides и Design доступны на всех планах. Анимационные ролики Claude Motion есть только на Team и Enterprise, на вашем Max их нет. Ссылка приватна, пока вы сами ею не поделитесь.</p></div>
+      </div>
+      <div class="try"><div class="try-top"><h4 class="eyebrow">Скопируйте и отправьте</h4><button class="copy" type="button">Копировать</button></div>
+<pre>Сделай презентацию на испанском, 8 слайдов, для потенциального дистрибьютора в Перу: компания SG Healthcare, линейка рентген-систем и беспроводных детекторов, преимущества против китайских брендов, сервис и обучение, условия партнёрства, следующие шаги. Деловой стиль, без воды.</pre></div>
+      <div class="src">Справка: <a href="https://support.claude.com/en/articles/16923645-get-started-with-claude-docs" target="_blank" rel="noopener">Docs</a> · <a href="https://support.claude.com/en/articles/14604416-get-started-with-claude-design" target="_blank" rel="noopener">Design</a> · <a href="https://support.claude.com/en/articles/17454700-get-started-with-claude-dashboards" target="_blank" rel="noopener">Dashboards</a></div>
+    </article>
+
+    <!-- 05 -->
+    <article class="ch" id="ch-05" data-part="app">
+      <div class="ch-head">
+        <span class="ch-num">05</span>
+        <h3>Голосовой режим: разговор вместо набора</h3>
+        <div class="meta"><span class="prio" data-p="2" title="Польза: средняя"><i></i><i></i><i></i></span><span>2 минуты</span></div>
+        <label class="done-toggle"><input type="checkbox" id="done-05"><span>Опробовал</span></label>
+      </div>
+      <div class="cols">
+        <div class="blk"><h4>Что это</h4><p>Разговор с Claude голосом в мобильном приложении. Есть поддержка CarPlay. Голос выбирается в «Настройки → Голос», этот пункт есть в вашем приложении.</p></div>
+        <div class="blk why"><h4>Зачем вам</h4><ul>
+          <li>Сразу после встречи надиктовать итоги, пока свежо. Скилл trip-report потом соберёт из них отчёт.</li>
+          <li>Практика японского и английского вслух со скиллом language-study-coach.</li>
+          <li>Вопросы и планирование в дороге между Гури и Чамсилем или в такси на выезде.</li>
+        </ul></div>
+        <div class="blk"><h4>Как начать</h4><ol>
+          <li>В приложении Claude нажмите значок голоса рядом с полем ввода.</li>
+          <li>Говорите на русском, корейском или английском, язык можно смешивать.</li>
+          <li>Расшифровка разговора остаётся в чате.</li>
+        </ol></div>
+        <div class="blk warn"><h4>Учтите</h4><p>Названия моделей и фамилии голос иногда распознаёт неточно. Ключевые названия лучше проверить в расшифровке.</p></div>
+      </div>
+      <div class="try"><div class="try-top"><h4 class="eyebrow">Скажите голосом</h4><button class="copy" type="button">Копировать</button></div>
+<pre>Сейчас надиктую итоги встречи с дистрибьютором. Ничего не сокращай, только запиши. Когда скажу «готово», оформи как отчёт о командировке.</pre></div>
+    </article>
+
+    <!-- 06 -->
+    <article class="ch" id="ch-06" data-part="app">
+      <div class="ch-head">
+        <span class="ch-num">06</span>
+        <h3>Claude внутри Google Docs, Sheets и Slides</h3>
+        <div class="meta"><span class="prio" data-p="2" title="Польза: средняя"><i></i><i></i><i></i></span><span>5 минут на установку</span></div>
+        <label class="done-toggle"><input type="checkbox" id="done-06"><span>Опробовал</span></label>
+      </div>
+      <div class="cols">
+        <div class="blk"><h4>Что это</h4><p>Дополнение для Google Workspace (бета, на платных планах). Claude открывается панелью сбоку прямо в файле, видит выделенный фрагмент и правит на месте. В Sheets пишет формулы, сводные таблицы и графики. По умолчанию каждую правку показывает карточкой и ждёт вашего «да».</p></div>
+        <div class="blk why"><h4>Зачем вам</h4><ul>
+          <li>Прайс-лист: формулы пересчёта в USD, KZT, RUB и наценка по странам.</li>
+          <li>Трекер поставок и инсталляций: подсветка просроченных этапов.</li>
+          <li>Правка КП в Google Docs без копирования текста в чат.</li>
+        </ul></div>
+        <div class="blk"><h4>Как начать</h4><ol>
+          <li>Google Workspace Marketplace → установите «Claude for Google Workspace».</li>
+          <li>Откройте файл → Расширения → Claude → Open Claude.</li>
+          <li>Войдите аккаунтом Claude: подтянутся ваши скиллы и коннекторы.</li>
+        </ol></div>
+        <div class="blk warn"><h4>Учтите</h4><p>Работает только с Google-файлами, не с Excel на компьютере. На корпоративном Google-аккаунте установку может разрешать только администратор.</p></div>
+      </div>
+      <div class="try"><div class="try-top"><h4 class="eyebrow">Напишите в панели Claude в Sheets</h4><button class="copy" type="button">Копировать</button></div>
+<pre>Добавь столбцы «Цена KZT» и «Цена RUB» по курсу из ячеек H1 и H2, и столбец «Маржа %». Подсвети строки, где маржа ниже 18%.</pre></div>
+      <div class="src">Справка: <a href="https://support.claude.com/en/articles/16951679-use-claude-in-google-docs-sheets-and-slides" target="_blank" rel="noopener">Use Claude in Google Docs, Sheets, and Slides</a></div>
+    </article>
+
+    <!-- 07 -->
+    <article class="ch" id="ch-07" data-part="app">
+      <div class="ch-head">
+        <span class="ch-num">07</span>
+        <h3>Файлы и приложения на вашем компьютере</h3>
+        <div class="meta"><span class="prio" data-p="2" title="Польза: средняя"><i></i><i></i><i></i></span><span>10 минут</span></div>
+        <label class="done-toggle"><input type="checkbox" id="done-07"><span>Опробовал</span></label>
+      </div>
+      <div class="cols">
+        <div class="blk"><h4>Что это</h4><p>Чат можно связать с вашим компьютером через десктоп-приложение Claude. Тогда Claude работает с папками, которые вы подключили: читает, ищет, переименовывает, раскладывает, конвертирует. С функцией computer use он видит экран и управляет программами кликами и вводом текста.</p></div>
+        <div class="blk why"><h4>Зачем вам</h4><ul>
+          <li>Разобрать «Загрузки» после командировки: инвойсы, счета, сканы визиток → по папкам стран.</li>
+          <li>Пакетно переименовать PDF по шаблону «дата_страна_контрагент» (ваш скилл doc-smartorg).</li>
+          <li>Заполнить форму в десктоп-программе, у которой нет веб-версии.</li>
+        </ul></div>
+        <div class="blk"><h4>Как начать</h4><ol>
+          <li>Откройте этот чат в десктоп-приложении Claude на нужном компьютере.</li>
+          <li>Выберите связь с компьютером и подключите одну рабочую папку.</li>
+          <li>Начните с безопасного: «покажи, что в папке» и только потом «разложи».</li>
+        </ol></div>
+        <div class="blk warn"><h4>Учтите</h4><p>Удаление файлов требует вашего отдельного разрешения. Компьютер должен быть включён, а приложение открыто. Папки с подписанными договорами лучше не подключать.</p></div>
+      </div>
+      <div class="try"><div class="try-top"><h4 class="eyebrow">Скопируйте и отправьте</h4><button class="copy" type="button">Копировать</button></div>
+<pre>В подключённой папке «Загрузки» найди все файлы за последние 2 недели. Сначала покажи план: какие файлы в какую папку страны (KZ, RU, UZ, PE, CO) и с каким новым именем «ГГГГ-ММ-ДД_страна_контрагент». Ничего не перемещай до моего «да».</pre></div>
+    </article>
+
+    <!-- 08 -->
+    <article class="ch" id="ch-08" data-part="app">
+      <div class="ch-head">
+        <span class="ch-num">08</span>
+        <h3>Две настройки, которые вы видели, но не трогали</h3>
+        <div class="meta"><span class="prio" data-p="2" title="Польза: средняя"><i></i><i></i><i></i></span><span>3 минуты</span></div>
+        <label class="done-toggle"><input type="checkbox" id="done-08"><span>Опробовал</span></label>
+      </div>
+      <div class="cols">
+        <div class="blk"><h4>Файлы памяти</h4><p>«Настройки → Функции → Файлы памяти» показывает, что я о вас помню: профиль, проекты, людей, предпочтения. Устаревшее можно поправить там же или словами в чате: «запомни…», «забудь…», «исправь: теперь я…».</p></div>
+        <div class="blk"><h4>Доступ к инструментам</h4><p>Там же три режима. «Авто»: я выбираю сам. «По запросу»: инструменты подгружаются при необходимости, а по описанию в приложении точность в длинных чатах падает. «Всегда доступно»: всё готово с начала, точность выше.</p></div>
+        <div class="blk why"><h4>Зачем вам</h4><ul>
+          <li>У вас 28 коннекторов. Если я начну путать инструменты, переключите режим на «Всегда доступно».</li>
+          <li>Раз в месяц проверяйте память: после смены дистрибьютора или проекта факты устаревают.</li>
+        </ul></div>
+        <div class="blk warn"><h4>Учтите</h4><p>Чем меньше лишних коннекторов, тем точнее выбор инструмента при любом режиме. Spotify, Indeed, Base44 и Figma по-прежнему кандидаты на отключение.</p></div>
+      </div>
+      <div class="try"><div class="try-top"><h4 class="eyebrow">Скопируйте и отправьте</h4><button class="copy" type="button">Копировать</button></div>
+<pre>Покажи списком, что ты помнишь обо мне по работе: компании, проекты, люди, предпочтения по отчётам. Отметь, что могло устареть за последний месяц.</pre></div>
+    </article>
+
+    <!-- 09 -->
+    <article class="ch" id="ch-09" data-part="app">
+      <div class="ch-head">
+        <span class="ch-num">09</span>
+        <h3>Плагины: скиллы и коннекторы одним пакетом</h3>
+        <div class="meta"><span class="prio" data-p="1" title="Польза: низкая"><i></i><i></i><i></i></span><span>знать, что есть</span></div>
+        <label class="done-toggle"><input type="checkbox" id="done-09"><span>Опробовал</span></label>
+      </div>
+      <div class="cols">
+        <div class="blk"><h4>Что это</h4><p>Плагин объединяет набор скиллов и коннекторов, а в Claude Code ещё команды, хуки и моды. Ставится одной кнопкой из общего каталога, где теперь лежат и скиллы, и коннекторы, и плагины. Примеры: Claude for Legal, Claude for Financial Advisors.</p></div>
+        <div class="blk why"><h4>Зачем вам</h4><p>Готового плагина для продаж медтехники пока нет. Но если появится плагин для продаж или CRM, он одним действием поставит и скиллы, и коннекторы, без ручной настройки по отдельности.</p></div>
+      </div>
+      <div class="src">Справка: <a href="https://support.claude.com/en/articles/13837440-use-plugins-in-claude" target="_blank" rel="noopener">Use plugins in Claude</a> · <a href="https://support.claude.com/en/articles/14328846-browse-skills-connectors-and-plugins-in-one-directory" target="_blank" rel="noopener">общий каталог</a></div>
+    </article>
+
+    <section class="part" data-part="code">
+      <div class="eyebrow">Часть II</div>
+      <h2>Claude Code: глубже, чем на курсе</h2>
+      <p>Базу вы прошли на курсе FastCampus. Здесь то, что обычно остаётся за кадром. Claude Code работает не только с кодом: он хорошо обрабатывает папки с документами, Excel и PDF.</p>
+    </section>
+
+    <!-- 10 -->
+    <article class="ch" id="ch-10" data-part="code">
+      <div class="ch-head">
+        <span class="ch-num">10</span>
+        <h3>CLAUDE.md: постоянная инструкция к папке</h3>
+        <div class="meta"><span class="prio" data-p="3" title="Польза: высокая"><i></i><i></i><i></i></span><span>10 минут</span></div>
+        <label class="done-toggle"><input type="checkbox" id="done-10"><span>Опробовал</span></label>
+      </div>
+      <div class="cols">
+        <div class="blk"><h4>Что это</h4><p>Файл <code>CLAUDE.md</code> в рабочей папке Claude Code читает при каждом запуске. Туда записываются правила, термины и структура папок, чтобы не объяснять их заново. Есть и личный глобальный файл <code>~/.claude/CLAUDE.md</code> для всех проектов сразу.</p></div>
+        <div class="blk why"><h4>Зачем вам</h4><ul>
+          <li>Папка с отчётами о командировках: правила имён файлов, валюты, шаблон.</li>
+          <li>Глоссарий: Jumong, Dominus, модели детекторов, названия дистрибьюторов по странам.</li>
+        </ul></div>
+        <div class="blk"><h4>Как начать</h4><ol>
+          <li>В папке запустите <code>claude</code>, затем <code>/init</code>: Claude создаст черновик.</li>
+          <li><code>/memory</code> открывает файл для правки.</li>
+          <li>Держите файл коротким: 20–60 строк конкретных правил.</li>
+        </ol></div>
+        <div class="blk warn"><h4>Учтите</h4><p>Это не то же самое, что память в приложении Claude. CLAUDE.md относится только к Claude Code и только к той папке, где лежит.</p></div>
+      </div>
+      <div class="try"><div class="try-top"><h4 class="eyebrow">Пример содержимого CLAUDE.md</h4><button class="copy" type="button">Копировать</button></div>
+<pre># Папка: отчёты и документы по СНГ и LatAm
+- Имена файлов: ГГГГ-ММ-ДД_страна(KZ/RU/UZ/PE/CO)_контрагент_тип.ext
+- Суммы всегда с валютой и Incoterms (EXW/CIF/DDP)
+- Отчёты руководству на корейском, 보고체, формат trip-report
+- Никогда не изменять файлы в папке /contracts_signed
+- Модели: Jumong (рентген), Dominus (КТ); детекторы — OEM Rayence</pre></div>
+      <div class="src">Документация: <a href="https://code.claude.com/docs/en/memory.md" target="_blank" rel="noopener">Memory (CLAUDE.md)</a></div>
+    </article>
+
+    <!-- 11 -->
+    <article class="ch" id="ch-11" data-part="code">
+      <div class="ch-head">
+        <span class="ch-num">11</span>
+        <h3>Режим плана и откат изменений</h3>
+        <div class="meta"><span class="prio" data-p="3" title="Польза: высокая"><i></i><i></i><i></i></span><span>2 минуты</span></div>
+        <label class="done-toggle"><input type="checkbox" id="done-11"><span>Опробовал</span></label>
+      </div>
+      <div class="cols">
+        <div class="blk"><h4>Что это</h4><p><kbd>Shift</kbd>+<kbd>Tab</kbd> переключает режимы разрешений. В режиме плана Claude только читает и предлагает план, ничего не меняя. Сразу в нём можно запустить командой <code>claude --permission-mode plan</code>. Каждая правка файлов сохраняется как точка отката: <kbd>Esc</kbd> <kbd>Esc</kbd> или <code>/rewind</code> возвращают к прежнему состоянию.</p></div>
+        <div class="blk why"><h4>Зачем вам</h4><ul>
+          <li>Перед массовой правкой 40 Excel-файлов сначала увидеть план.</li>
+          <li>Если переименование пошло не так, откатить одной командой.</li>
+        </ul></div>
+        <div class="blk warn"><h4>Учтите</h4><p>Откат возвращает только правки, которые сделал сам Claude. Отправленное письмо или действие на сайте этим не отменить.</p></div>
+      </div>
+      <div class="try"><div class="try-top"><h4 class="eyebrow">В терминале</h4><button class="copy" type="button">Копировать</button></div>
+<pre>claude --permission-mode plan
+> Объедини все инвойсы из папки ./invoices_2026 в один Excel: дата, страна, контрагент, сумма, валюта. Сначала покажи план.</pre></div>
+      <div class="src">Документация: <a href="https://code.claude.com/docs/en/common-workflows.md" target="_blank" rel="noopener">Common workflows</a> · <a href="https://code.claude.com/docs/en/how-claude-code-works.md" target="_blank" rel="noopener">checkpoints</a></div>
+    </article>
+
+    <!-- 12 -->
+    <article class="ch" id="ch-12" data-part="code">
+      <div class="ch-head">
+        <span class="ch-num">12</span>
+        <h3>Remote Control: начать на ПК, продолжить с телефона</h3>
+        <div class="meta"><span class="prio" data-p="2" title="Польза: средняя"><i></i><i></i><i></i></span><span>1 команда</span></div>
+        <label class="done-toggle"><input type="checkbox" id="done-12"><span>Опробовал</span></label>
+      </div>
+      <div class="cols">
+        <div class="blk"><h4>Что это</h4><p>Сессия Claude Code продолжает работать на вашем компьютере, с вашими файлами, а вы смотрите за ней и отвечаете из приложения Claude на телефоне или на claude.ai/code. С телефона можно отправить фото или файл прямо в эту сессию.</p></div>
+        <div class="blk why"><h4>Зачем вам</h4><ul>
+          <li>Запустили в офисе обработку отчётов и спокойно уехали в аэропорт.</li>
+          <li>Claude задал вопрос, а вы ответили из такси.</li>
+        </ul></div>
+        <div class="blk"><h4>Как начать</h4><ol>
+          <li>В работающей сессии введите <code>/remote-control</code>.</li>
+          <li>Откройте приложение Claude на телефоне: сессия появится там.</li>
+        </ol></div>
+        <div class="blk warn"><h4>Учтите</h4><p>Компьютер должен оставаться включённым и в сети. Если он уснёт, сессия встанет.</p></div>
+      </div>
+      <div class="src">Документация: <a href="https://code.claude.com/docs/en/remote-control.md" target="_blank" rel="noopener">Remote Control</a></div>
+    </article>
+
+    <!-- 13 -->
+    <article class="ch" id="ch-13" data-part="code">
+      <div class="ch-head">
+        <span class="ch-num">13</span>
+        <h3>Субагенты: параллельная работа</h3>
+        <div class="meta"><span class="prio" data-p="2" title="Польза: средняя"><i></i><i></i><i></i></span><span>5 минут</span></div>
+        <label class="done-toggle"><input type="checkbox" id="done-13"><span>Опробовал</span></label>
+      </div>
+      <div class="cols">
+        <div class="blk"><h4>Что это</h4><p>Claude Code запускает помощников, у каждого свой отдельный контекст. Они параллельно решают подзадачи и возвращают только итог. Своих постоянных субагентов можно создать командой <code>/agents</code>, они хранятся в <code>.claude/agents/</code>.</p></div>
+        <div class="blk why"><h4>Зачем вам</h4><ul>
+          <li>Проверка регистрации детектора и 3 конкурентов в 5 странах: по субагенту на страну, итог в одной таблице.</li>
+          <li>Постоянный субагент-«проверяющий», который сверяет цифры в отчёте с исходными файлами.</li>
+        </ul></div>
+        <div class="blk warn"><h4>Учтите</h4><p>Параллельная работа быстрее, но лимит расходует пропорционально числу субагентов.</p></div>
+      </div>
+      <div class="try"><div class="try-top"><h4 class="eyebrow">В Claude Code</h4><button class="copy" type="button">Копировать</button></div>
+<pre>Запусти 5 субагентов параллельно, по одному на страну (KZ, RU, UZ, PE, CO). Каждый: какие беспроводные плоские детекторы зарегистрированы в стране, у каких производителей, по открытым реестрам. Итог: одна сводная таблица со ссылками.</pre></div>
+      <div class="src">Документация: <a href="https://code.claude.com/docs/en/sub-agents.md" target="_blank" rel="noopener">Subagents</a></div>
+    </article>
+
+    <!-- 14 -->
+    <article class="ch" id="ch-14" data-part="code">
+      <div class="ch-head">
+        <span class="ch-num">14</span>
+        <h3>Хуки и моды: автоматические правила</h3>
+        <div class="meta"><span class="prio" data-p="1" title="Польза: низкая"><i></i><i></i><i></i></span><span>продвинутое</span></div>
+        <label class="done-toggle"><input type="checkbox" id="done-14"><span>Опробовал</span></label>
+      </div>
+      <div class="cols">
+        <div class="blk"><h4>Что это</h4><p><b>Хук</b> — скрипт, который срабатывает на событие: до или после действия Claude, при старте сессии. Настраивается командой <code>/hooks</code>. <b>Моды</b> появились 1 октября 2026: небольшие функции на TypeScript, которые меняют поведение и интерфейс Claude Code. Ставятся в составе плагинов.</p></div>
+        <div class="blk why"><h4>Зачем вам</h4><p>«Предохранитель»: Claude Code физически не сможет изменить файлы в папке с подписанными договорами, даже по ошибке. Писать код самому не нужно, попросите Claude Code сделать хук за вас.</p></div>
+      </div>
+      <div class="try"><div class="try-top"><h4 class="eyebrow">В Claude Code</h4><button class="copy" type="button">Копировать</button></div>
+<pre>Создай хук, который блокирует любые изменения и удаление файлов в папке ./contracts_signed и пишет мне причину. Покажи настройку, прежде чем сохранять.</pre></div>
+      <div class="src">Документация: <a href="https://code.claude.com/docs/en/hooks-guide.md" target="_blank" rel="noopener">Hooks</a> · <a href="https://code.claude.com/docs/en/plugins/mods/overview.md" target="_blank" rel="noopener">Mods</a></div>
+    </article>
+
+    <!-- 15 -->
+    <article class="ch" id="ch-15" data-part="code">
+      <div class="ch-head">
+        <span class="ch-num">15</span>
+        <h3>claude -p: задача одной командой или ярлыком</h3>
+        <div class="meta"><span class="prio" data-p="1" title="Польза: низкая"><i></i><i></i><i></i></span><span>15 минут</span></div>
+        <label class="done-toggle"><input type="checkbox" id="done-15"><span>Опробовал</span></label>
+      </div>
+      <div class="cols">
+        <div class="blk"><h4>Что это</h4><p><code>claude -p "задача"</code> выполняет одно задание без диалога, выводит результат и завершает работу. Эту команду можно положить в ярлык или скрипт и запускать двойным щелчком.</p></div>
+        <div class="blk why"><h4>Зачем вам</h4><p>Ярлык на рабочем столе «Собрать чеки командировки в Excel», который каждый раз делает одно и то же одинаково.</p></div>
+      </div>
+      <div class="try"><div class="try-top"><h4 class="eyebrow">В терминале</h4><button class="copy" type="button">Копировать</button></div>
+<pre>claude -p "Собери все PDF и фото чеков из ./receipts в receipts_summary.xlsx: дата, страна, категория, сумма, валюта, имя файла"</pre></div>
+      <div class="src">Документация: <a href="https://code.claude.com/docs/en/headless.md" target="_blank" rel="noopener">Headless mode</a></div>
+    </article>
+
+    <!-- 16 -->
+    <article class="ch" id="ch-16" data-part="code">
+      <div class="ch-head">
+        <span class="ch-num">16</span>
+        <h3>Облачные сессии: работа, пока ноутбук закрыт</h3>
+        <div class="meta"><span class="prio" data-p="1" title="Польза: низкая"><i></i><i></i><i></i></span><span>для работы с кодом</span></div>
+        <label class="done-toggle"><input type="checkbox" id="done-16"><span>Опробовал</span></label>
+      </div>
+      <div class="cols">
+        <div class="blk"><h4>Что это</h4><p>Claude Code запускается в облаке: на claude.ai/code, во вкладке Code мобильного приложения или командой <code>claude --cloud "задача"</code>. Сессия работает, даже когда ноутбук закрыт. <code>claude --teleport</code> забирает её к себе на компьютер, <code>/schedule</code> ставит задачу по расписанию.</p></div>
+        <div class="blk warn"><h4>Честно</h4><p>Облачные сессии рассчитаны на код в GitHub, и без репозитория пользы мало. Для ваших задач по расписанию удобнее глава 01, а для работы с удалённого компьютера — глава 12. Знать эту функцию полезно, внедрять сейчас нет смысла.</p></div>
+      </div>
+      <div class="src">Документация: <a href="https://code.claude.com/docs/en/claude-code-on-the-web.md" target="_blank" rel="noopener">Claude Code in the cloud</a> · <a href="https://code.claude.com/docs/en/routines.md" target="_blank" rel="noopener">Scheduled tasks</a></div>
+    </article>
+
+    <section class="panel" id="plan">
+      <div class="eyebrow">Маршрут</div>
+      <h2>План на 2 недели: по 10–15 минут в день</h2>
+      <div class="plan">
+        <div><h3>Неделя 1 · Claude</h3><ol>
+          <li><b>День 1</b><span><a href="#ch-01">Утренний бриф по расписанию</a></span></li>
+          <li><b>День 2</b><span><a href="#ch-04">Презентация для дистрибьютора в Slides</a></span></li>
+          <li><b>День 3</b><span><a href="#ch-02">Тендеры на goszakup через браузер</a></span></li>
+          <li><b>День 4</b><span><a href="#ch-03">Research по одной стране LatAm</a></span></li>
+          <li><b>День 5</b><span><a href="#ch-05">Надиктовать итоги встречи голосом</a></span></li>
+        </ol></div>
+        <div><h3>Неделя 2 · углубление</h3><ol>
+          <li><b>День 6</b><span><a href="#ch-08">Проверить память и режим инструментов</a></span></li>
+          <li><b>День 7</b><span><a href="#ch-06">Claude в Google Sheets: прайс-лист</a></span></li>
+          <li><b>День 8</b><span><a href="#ch-10">CLAUDE.md для рабочей папки</a></span></li>
+          <li><b>День 9</b><span><a href="#ch-11">План и откат на папке с инвойсами</a></span></li>
+          <li><b>День 10</b><span><a href="#ch-12">Remote Control перед поездкой</a></span></li>
+        </ol></div>
+      </div>
+    </section>
+
+    <section class="panel" id="na">
+      <div class="eyebrow">Чтобы не искать зря</div>
+      <h2>Пока недоступно на вашем плане или в вашей стране</h2>
+      <div class="na">
+        <div><b>Claude Duet</b><span>Ассистент на отдельном облачном компьютере: сам разбирает почту и календарь. Пока только для US-аккаунтов Pro и Max по приглашению из листа ожидания.</span></div>
+        <div><b>Claude Motion</b><span>Анимированные ролики-объяснения с выгрузкой в MP4. Только на Team и Enterprise.</span></div>
+        <div><b>Корпоративная почта ECOUNT</b><span>Коннектора нет. Возможные варианты: пересылка копий в Gmail (с согласия IT) или пересылка нужных писем мне вручную.</span></div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="wrap"><footer>Составлено 31.10.2026 по официальной документации Claude и Claude Code. Интерфейс меняется: если пункт меню называется иначе, ищите по смыслу. Отметки «Опробовал» хранятся только в этом браузере.</footer></div>
+
+<script>
+(function(){
+  var KEY='claude-guide-done-v1';
+  var done={};
+  try{ done=JSON.parse(localStorage.getItem(KEY)||'{}')||{}; }catch(e){ done={}; }
+  var chapters=[].slice.call(document.querySelectorAll('article.ch'));
+  var total=chapters.length;
+  var tocApp=document.getElementById('toc-app'), tocCode=document.getElementById('toc-code');
+
+  chapters.forEach(function(ch){
+    var id=ch.id, num=ch.querySelector('.ch-num').textContent, title=ch.querySelector('h3').textContent;
+    var li=document.createElement('li');
+    var a=document.createElement('a'); a.href='#'+id; a.id='toc-'+id;
+    a.innerHTML='<span class="n">'+num+'</span><span></span>';
+    a.lastChild.textContent=title;
+    li.appendChild(a);
+    (ch.dataset.part==='code'?tocCode:tocApp).appendChild(li);
+    var cb=ch.querySelector('input[type=checkbox]');
+    cb.checked=!!done[id];
+    cb.addEventListener('change',function(){
+      done[id]=cb.checked;
+      try{ localStorage.setItem(KEY,JSON.stringify(done)); }catch(e){}
+      render();
+    });
+  });
+
+  var filter='all';
+  function render(){
+    var n=0;
+    chapters.forEach(function(ch){
+      var d=!!done[ch.id]; if(d) n++;
+      ch.classList.toggle('is-done',d);
+      var t=document.getElementById('toc-'+ch.id); if(t) t.classList.toggle('done',d);
+      var show = filter==='all' || (filter==='todo' && !d) || ch.dataset.part===filter;
+      ch.classList.toggle('hidden-ch',!show);
+    });
+    document.querySelectorAll('section.part').forEach(function(p){
+      p.classList.toggle('hidden-ch', !(filter==='all'||filter==='todo'||p.dataset.part===filter));
+    });
+    document.getElementById('fill').style.width=(n/total*100)+'%';
+    document.getElementById('mlabel').textContent=n+' из '+total+' опробовано';
+  }
+
+  document.querySelectorAll('.chip').forEach(function(b){
+    b.addEventListener('click',function(){
+      filter=b.dataset.f;
+      document.querySelectorAll('.chip').forEach(function(x){ x.setAttribute('aria-pressed', x===b?'true':'false'); });
+      render();
+    });
+  });
+
+  document.querySelectorAll('.copy').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var pre=btn.closest('.try').querySelector('pre');
+      var text=pre.textContent.trim();
+      function ok(){ btn.textContent='Скопировано'; setTimeout(function(){btn.textContent='Копировать';},1600); }
+      function fallback(){
+        var r=document.createRange(); r.selectNodeContents(pre);
+        var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        btn.textContent='Выделено — нажмите Копировать';
+        setTimeout(function(){btn.textContent='Копировать';},2400);
+      }
+      try{
+        if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(ok,fallback); }
+        else fallback();
+      }catch(e){ fallback(); }
+    });
+  });
+  render();
+})();
+</script>
+
+</body></html>
