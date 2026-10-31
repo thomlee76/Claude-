@@ -1,8 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" fill="#000"/>
-<g fill="none" stroke-linecap="round" stroke-width="44" transform="rotate(-90 256 256)">
-<circle cx="256" cy="256" r="178" stroke="#FA2D55" opacity=".25"/><circle cx="256" cy="256" r="178" stroke="#FA2D55" stroke-dasharray="1118" stroke-dashoffset="330"/>
-<circle cx="256" cy="256" r="126" stroke="#B6F23C" opacity=".25"/><circle cx="256" cy="256" r="126" stroke="#B6F23C" stroke-dasharray="792" stroke-dashoffset="320"/>
-<circle cx="256" cy="256" r="74" stroke="#2FD4F5" opacity=".25"/><circle cx="256" cy="256" r="74" stroke="#2FD4F5" stroke-dasharray="465" stroke-dashoffset="150"/>
-</g>
-<g transform="translate(256 256)" stroke="#fff" stroke-width="12" stroke-linecap="round"><path d="M0-26V26M-26 0H26M-18-18L18 18M18-18L-18 18"/></g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs><radialGradient id="bg" cx="50%" cy="20%" r="90%"><stop offset="0" stop-color="#1D1F40"/><stop offset=".65" stop-color="#06070B"/></radialGradient>
+<radialGradient id="lit" cx="70%" cy="35%" r="80%"><stop offset="0" stop-color="#FFFBF2"/><stop offset=".6" stop-color="#F0E5D2"/><stop offset="1" stop-color="#B9A98F"/></radialGradient>
+<radialGradient id="dk" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#2A2D3D"/><stop offset="1" stop-color="#0E1017"/></radialGradient></defs>
+<rect width="512" height="512" fill="url(#bg)"/>
+<g transform="translate(256 262)">
+<ellipse rx="214" ry="66" transform="rotate(-15)" fill="none" stroke="#FF6A4D" stroke-width="7" opacity=".45"/>
+<circle r="122" fill="url(#dk)"/>
+<path d="M0-122A122 122 0 0 1 0 122A54 122 0 0 0 0-122z" fill="url(#lit)"/>
+<circle cx="52" cy="-30" r="14" fill="#A99878" opacity=".55"/><circle cx="74" cy="40" r="9" fill="#A99878" opacity=".5"/>
+<g transform="rotate(-15)"><circle cx="194" cy="-28" r="13" fill="#63E1FF"/><path d="M-214 0A214 66 0 0 0 214 0" fill="none" stroke="#FF6A4D" stroke-width="7" stroke-linecap="round"/><circle cx="-164" cy="42.4" r="16" fill="#FF6A4D"/></g>
+</g></svg>

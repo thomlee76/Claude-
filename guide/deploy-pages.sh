@@ -9,6 +9,7 @@ TMP=$(mktemp -d); git worktree add -q "$TMP" origin/$PAGES
 rm -rf "$TMP/$DEST"; mkdir -p "$TMP/$DEST"
 for f in index.html sw.js manifest.webmanifest apple-touch-icon.png icon-192.png icon-512.png; do cp guide/$f "$TMP/$DEST/"; done
 
+cp -r guide/fonts "$TMP/$DEST/"
 cd "$TMP"; git add -A $DEST
 if git diff --cached --quiet; then echo "нет изменений"; else
 git commit -qm "Справочник «Невидимая половина Claude»: обновление (docs/claude-16)
