@@ -2,7 +2,7 @@
 """Озвучка сценария: python3 tts.py ch-01 [ch-02 ...]
 Читает scripts/<id>.json, синтезирует каждую фразу голосом Piper, пишет build/<id>/voice.wav и build/<id>/timeline.json
 (начало/конец каждой сцены, момент начала каждого фрагмента say, субтитры по фразам).
-Голос: переменная VOICE (путь к .onnx), по умолчанию ru_RU-dmitri-medium в папке VOICES."""
+Голос: переменная VOICE (путь к .onnx), по умолчанию ru_RU-denis-medium в папке VOICES."""
 import json, os, re, sys, wave
 from pathlib import Path
 import numpy as np
@@ -10,7 +10,7 @@ from piper import PiperVoice
 from piper.config import SynthesisConfig
 
 R = Path(__file__).resolve().parent
-VOICE = os.environ.get('VOICE') or str(Path(os.environ.get('VOICES', '.')) / 'ru_RU-dmitri-medium.onnx')
+VOICE = os.environ.get('VOICE') or str(Path(os.environ.get('VOICES', '.')) / 'ru_RU-denis-medium.onnx')
 LEAD, SENT_GAP, SEG_GAP, TAIL, FINALE = 0.6, 0.28, 0.55, 1.0, 4.0
 
 def sentences(s):
