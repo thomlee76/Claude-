@@ -8,10 +8,10 @@ git fetch -q origin $PAGES
 TMP=$(mktemp -d); git worktree add -q "$TMP" origin/$PAGES
 rm -rf "$TMP/$DEST"; mkdir -p "$TMP/$DEST"
 for f in index.html sw.js manifest.webmanifest apple-touch-icon.png icon-192.png icon-512.png; do cp guide/$f "$TMP/$DEST/"; done
-cp -r guide/fonts "$TMP/$DEST/"
+
 cd "$TMP"; git add -A $DEST
 if git diff --cached --quiet; then echo "нет изменений"; else
-git commit -qm "Справочник «Невидимая половина Claude»: приложение для iPhone (docs/claude-16)
+git commit -qm "Справочник «Невидимая половина Claude»: обновление (docs/claude-16)
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01PrJN9HGzceweAP4YJhZkcm"
