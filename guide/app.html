@@ -401,7 +401,7 @@ let cur=null,from='sum';
 function openCh(id,push){const c=CH.find(x=>x.id===id);if(!c)return;cur=c;const i=CH.indexOf(c),pv=CH[i-1],nx=CH[i+1],on=!!done[c.id];
   let h='<div class="dh"><div class="cubebox"><div class="cube">'+cubeHTML(c.num,GR[c.part])+'</div></div><h1>'+esc(c.title)+'</h1></div>';
   h+='<div class="chips"><span class="chip">'+(c.part==='app'?'Claude':'Claude Code')+'</span><span class="chip">польза '+dots(c.prio)+'</span>'+c.meta.map(m=>'<span class="chip">'+esc(m)+'</span>').join('')+'</div>';
-  const vs=(D.videos||{})[c.id];if(vs)h+='<section class="card vid"><video id="dvid" controls playsinline preload="none" poster="video/'+c.id+'.jpg" src="video/'+c.id+'.mp4"></video><div class="vm"><b>▶ ВИДЕОУРОК</b><span>'+fmt(vs)+' · работает без интернета после просмотра</span></div></section>';
+  const vs=(D.videos||{})[c.id];if(vs)h+='<section class="card vid"><video id="dvid" controls playsinline preload="none" poster="video/'+c.id+'.jpg" src="video/'+c.id+'.mp4"></video><div class="vm"><b>▶ ВИДЕОУРОК</b><span>'+fmt(vs)+' · с озвучкой и субтитрами</span></div></section>';
   h+='<button class="mark'+(on?' on':'')+'" id="dtg">'+(on?'✓ Опробовано — спутник светится':'Отметить: опробовал')+'</button>';
   c.blocks.forEach(b=>{h+='<section class="card blk '+b.kind+'"><h4>'+esc(b.title)+'</h4>'+b.html+'</section>';});
   if(c.try)h+='<section class="card try"><div class="try-h"><span>'+esc(c.try.label)+'</span><button class="copy" id="dcp">Копировать</button></div><pre id="dpre">'+esc(c.try.text)+'</pre></section>';
