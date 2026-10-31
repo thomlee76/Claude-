@@ -319,7 +319,7 @@ let running=false;function kick(){if(!running){running=true;t0=performance.now()
 function frame(now){if(tab!=='sum'||document.hidden){running=false;return}const dt=Math.min(.05,(now-t0)/1000);t0=now;if(!RM){rot+=dt*.18;}shown+=(target-shown)*Math.min(1,dt*2.6);if(RM)shown=target;
   const c=cx2;c.setTransform(DPR,0,0,DPR,0,0);c.clearRect(0,0,W,H);const S=Math.min(W,H*1.08),cx=W/2,cy=H*.40,R=S*.2;
   c.save();c.translate(cx,cy);
-  /* свечение */const gl=c.createRadialGradient(0,0,R*.6,0,0,R*2.1);gl.addColorStop(0,'rgba(243,235,221,'+(0.08+shown*.22)+')');gl.addColorStop(1,'rgba(243,235,221,0)');c.fillStyle=gl;c.fillRect(-R*2.2,-R*2.2,R*4.4,R*4.4);
+  /* свечение */const gl=c.createRadialGradient(0,0,R*.6,0,0,R*2.1);gl.addColorStop(0,'rgba(243,235,221,'+(0.08+shown*.22)+')');gl.addColorStop(1,'rgba(243,235,221,0)');c.fillStyle=gl;c.fillRect(-W,-H,W*2,H*2);
   const O=[{R:S*.46,incl:1.22,beta:-.22,col:COL.app,list:APP,sp:.13},{R:S*.36,incl:1.12,beta:.30,col:COL.code,list:CODE,sp:-.17}];
   const t=now/1000;sats=[];
   O.forEach(o=>{drawOrbit(c,o.R,o.incl,o.beta,o.col,false);o.list.forEach((ch,i)=>{const a=(i/o.list.length)*Math.PI*2+(RM?0:t*o.sp);const p=orbitPts(o.R,o.incl,o.beta,a);sats.push({p,ch,col:o.col});});});
