@@ -1,7 +1,12 @@
-const CACHE="cl16-b3f3beb9d7";const PRECACHE=["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "apple-touch-icon.png", "fonts/Unbounded-cyrillic-cb504d.woff2", "fonts/Unbounded-latin-37e641.woff2", "fonts/fonts.css"];
+const CACHE="cl16-cf818e3017";const PRECACHE=["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "apple-touch-icon.png", "fonts/Unbounded-cyrillic-cb504d.woff2", "fonts/Unbounded-latin-37e641.woff2", "fonts/fonts.css", "video/ch-01.jpg", "video/ch-02.jpg", "video/ch-03.jpg", "video/ch-04.jpg", "video/ch-05.jpg", "video/ch-06.jpg", "video/ch-07.jpg", "video/ch-08.jpg", "video/ch-09.jpg", "video/ch-10.jpg", "video/ch-11.jpg", "video/ch-12.jpg", "video/ch-13.jpg", "video/ch-14.jpg", "video/ch-15.jpg", "video/ch-16.jpg"];const VC="cl16-video";
 self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(PRECACHE)).then(()=>self.skipWaiting()))});
-self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k.startsWith("cl16-")&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
+self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k.startsWith("cl16-")&&k!==CACHE&&k!==VC).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
+async function ranged(req,res){const range=req.headers.get("range");if(!range)return res;const buf=await res.arrayBuffer();const m=/bytes=(\d*)-(\d*)/.exec(range);
+  let s=m&&m[1]?+m[1]:0,e=m&&m[2]?+m[2]:buf.byteLength-1;e=Math.min(e,buf.byteLength-1);
+  return new Response(buf.slice(s,e+1),{status:206,statusText:"Partial Content",headers:{"Content-Type":"video/mp4","Content-Range":`bytes ${s}-${e}/${buf.byteLength}`,"Content-Length":String(e-s+1),"Accept-Ranges":"bytes"}})}
 self.addEventListener("fetch",e=>{const u=new URL(e.request.url);if(e.request.method!=="GET"||u.origin!==location.origin)return;
+  if(u.pathname.endsWith(".mp4")){e.respondWith((async()=>{const c=await caches.open(VC);const key=new URL("video/"+u.pathname.split("/").pop(),self.registration.scope).href;
+    const hit=await c.match(key);if(hit)return ranged(e.request,hit.clone());try{return await fetch(e.request)}catch(err){return Response.error()}})());return}
   if(e.request.mode==="navigate"||u.pathname.endsWith("/index.html")){
     e.respondWith((async()=>{const c=await caches.open(CACHE);
       try{const ctl=new AbortController();const t=setTimeout(()=>ctl.abort(),4000);
