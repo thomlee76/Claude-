@@ -2,12 +2,11 @@
 """Озвучка сценария: python3 tts.py ch-01 [ch-02 ...]
 Читает scripts/<id>.json, синтезирует каждую фразу голосом Piper, пишет build/<id>/voice.wav и build/<id>/timeline.json
 (начало/конец каждой сцены, момент начала каждого фрагмента say, субтитры по фразам).
-Голос: переменная VOICE (путь к .onnx), по умолчанию ru_RU-denis-medium в папке VOICES."""
+Движок: ENGINE=silero (по умолчанию; модель v4_ru.pt в SILERO, голос SPEAKER=xenia) или ENGINE=piper (VOICE — путь к .onnx).
+Silero читает только кириллицу — латиница переводится словарём ru_say.py."""
 import json, os, re, sys, wave
 from pathlib import Path
 import numpy as np
-from piper import PiperVoice
-from piper.config import SynthesisConfig
 
 R = Path(__file__).resolve().parent
 VOICE = os.environ.get('VOICE') or str(Path(os.environ.get('VOICES', '.')) / 'ru_RU-denis-medium.onnx')
@@ -17,10 +16,25 @@ def sentences(s):
     parts = re.split(r'(?<=[.!?…])\s+', s.strip())
     return [p for p in parts if p]
 
+def engine():
+    if os.environ.get('ENGINE', 'silero') == 'piper':
+        from piper import PiperVoice
+        from piper.config import SynthesisConfig
+        v = PiperVoice.load(VOICE)
+        cfg = SynthesisConfig(length_scale=float(os.environ.get('RATE', '1.0')), noise_scale=0.6, noise_w_scale=0.75)
+        return v.config.sample_rate, lambda t: np.concatenate([c.audio_int16_array for c in v.synthesize(t, syn_config=cfg)])
+    import torch
+    sys.path.insert(0, str(R)); from ru_say import ru
+    torch.set_num_threads(int(os.environ.get('THREADS', '4')))
+    m = torch.package.PackageImporter(os.environ.get('SILERO', 'v4_ru.pt')).load_pickle('tts_models', 'model')
+    spk, sr = os.environ.get('SPEAKER', 'xenia'), 48000
+    def syn(t):
+        a = m.apply_tts(text=ru(t), speaker=spk, sample_rate=sr, put_accent=True, put_yo=True).numpy()
+        return (a * 32767 * 0.95).clip(-32768, 32767).astype(np.int16)
+    return sr, syn
+
 def main(ids):
-    v = PiperVoice.load(VOICE)
-    sr = v.config.sample_rate
-    cfg = SynthesisConfig(length_scale=float(os.environ.get('RATE', '1.0')), noise_scale=0.6, noise_w_scale=0.75)
+    sr, syn = engine()
     for id_ in ids:
         sc = json.loads((R / 'scripts' / f'{id_}.json').read_text(encoding='utf-8'))
         out = R / 'build' / id_; out.mkdir(parents=True, exist_ok=True)
@@ -37,7 +51,7 @@ def main(ids):
                 marks.append(round(t, 3))
                 for j, sen in enumerate(sentences(seg)):
                     if j: sil(SENT_GAP)
-                    pcm = np.concatenate([c.audio_int16_array for c in v.synthesize(sen, syn_config=cfg)])
+                    pcm = syn(sen)
                     d = len(pcm) / sr
                     subs.append({'a': round(t, 3), 'b': round(t + d, 3), 'text': sen})
                     audio.append(pcm); t += d
