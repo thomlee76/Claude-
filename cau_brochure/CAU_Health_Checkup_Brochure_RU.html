@@ -1,0 +1,411 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Chung-Ang University Hospital — чекап</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>@page { size: A4; margin: 0; }
+:root{
+  --b:#0055AA; --navy:#0A2E5C; --navy2:#0E3D78; --c:#3CB5C3; --cl:#E6F5F7; --red:#D81818;
+  --ink:#16202E; --muted:#5B6676; --line:#DCE3EA; --bg:#F4F7FA;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#fff}
+body{font-family:'Inter',sans-serif;color:var(--ink);font-size:8.4pt;line-height:1.45;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;background:#fff}
+.page:last-child{page-break-after:auto}
+h1,h2,h3,h4{font-family:'Manrope','Inter',sans-serif;line-height:1.15;color:var(--ink)}
+.in{position:absolute;left:14mm;right:14mm;top:10mm;bottom:16mm}
+.ph{display:block;width:100%;object-fit:cover;border-radius:2.6mm}
+.cap{font-size:6.8pt;color:var(--muted);margin-top:1.2mm}
+.lead{font-size:9.8pt;line-height:1.55}
+.sm{font-size:8.2pt;color:var(--muted)}
+.note{font-size:6.7pt;color:var(--muted);line-height:1.45}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:6mm}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm}
+h4{font-size:9.4pt;font-weight:800;margin-bottom:2mm}
+.sub{font-size:13pt;font-weight:800;margin:6mm 0 3mm}
+
+/* header & title */
+.hd{display:flex;justify-content:space-between;align-items:center;padding-bottom:3mm;border-bottom:.3mm solid var(--line)}
+.hd img{height:8mm}
+.hd span{font-family:'Manrope';font-weight:700;font-size:7pt;letter-spacing:1.6pt;text-transform:uppercase;color:var(--muted)}
+.ttl{display:flex;gap:4mm;align-items:center;margin:6mm 0 5mm}
+.mk{position:relative;width:11mm;height:11mm;flex:none}
+.mk em{position:absolute;width:7mm;height:7mm;border-radius:1.2mm}
+.mk em:first-child{left:0;top:0;background:var(--c)}
+.mk em:last-child{right:0;bottom:0;background:var(--b);mix-blend-mode:multiply}
+.ttl .no{font-family:'Manrope';font-weight:800;font-size:7.4pt;letter-spacing:2pt;color:var(--c)}
+.ttl h2{font-size:22pt;font-weight:800;letter-spacing:-.4pt;color:var(--navy)}
+.ft{position:absolute;left:14mm;right:14mm;bottom:7mm;display:flex;justify-content:space-between;align-items:center;gap:4mm;font-size:6.7pt;color:var(--muted);border-top:.3mm solid var(--line);padding-top:2.2mm}
+.ft b{color:var(--navy)}
+.ft .pn{font-family:'Manrope';font-weight:800;color:#fff;background:var(--b);border-radius:1mm;padding:.6mm 1.8mm;font-size:7pt}
+
+/* lists */
+.chips{display:flex;flex-wrap:wrap;gap:1.4mm}
+.chips span{background:var(--cl);color:var(--navy);border-radius:1.4mm;padding:.9mm 2.2mm;font-size:7.4pt;font-weight:500}
+ul.dash{list-style:none}
+ul.dash li{position:relative;padding-left:4mm;margin-bottom:.9mm}
+ul.dash li:before{content:"";position:absolute;left:0;top:1.9mm;width:2.4mm;height:.6mm;background:var(--c)}
+ul.chk{list-style:none}
+ul.chk li{position:relative;padding-left:6mm;margin-bottom:1.8mm;font-size:8.6pt}
+ul.chk li:before{content:"";position:absolute;left:0;top:.5mm;width:3.8mm;height:3.8mm;border-radius:1mm;background:var(--b) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.4l2.6 2.6L12 5.6' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/80% no-repeat}
+
+/* price */
+.pr{display:flex;flex-direction:column;align-items:flex-end;line-height:1.15}
+.pr s{color:#97A1AE;font-size:7pt}
+.pr b{font-family:'Manrope';font-weight:800;color:var(--b);font-size:9.6pt;white-space:nowrap}
+
+/* ===== cover ===== */
+.cover{background:var(--navy)}
+.cover .hero{position:absolute;left:0;right:0;top:0;height:182mm}
+.cover .hero img{width:100%;height:100%;object-fit:cover;object-position:62% 30%}
+.cover .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,46,92,.55) 0%,rgba(10,46,92,.05) 35%,rgba(10,46,92,.55) 62%,rgba(10,46,92,.96) 82%,rgba(10,46,92,1) 100%)}
+.cover .lg{position:absolute;left:14mm;top:13mm;height:11mm;z-index:2}
+.cover .badge{position:absolute;right:14mm;top:12mm;z-index:2;width:30mm;height:30mm;border-radius:50%;background:var(--red);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 1.5mm 4mm rgba(0,0,0,.25)}
+.cover .badge b{font-family:'Manrope';font-weight:800;font-size:19pt;line-height:1}
+.cover .badge span{font-size:6.8pt;line-height:1.25;margin-top:1mm}
+.cover .txt{position:absolute;left:14mm;right:14mm;top:138mm;z-index:2;color:#fff}
+.cover .kick{font-family:'Manrope';font-weight:700;font-size:7.4pt;letter-spacing:2.2pt;text-transform:uppercase;color:var(--c)}
+.cover h1{color:#fff;font-size:29pt;font-weight:800;letter-spacing:-.6pt;line-height:1.08;margin-top:3mm}
+.cover h1 span{color:var(--c)}
+.cover .txt p{font-size:10pt;line-height:1.55;color:#D5E2F0;margin-top:4.5mm;max-width:165mm}
+.cover .facts{position:absolute;left:14mm;right:14mm;top:208mm;display:grid;grid-template-columns:repeat(4,1fr);gap:3mm}
+.cover .facts div{border-top:1mm solid var(--c);padding-top:2.6mm;color:#fff}
+.cover .facts b{display:block;font-family:'Manrope';font-weight:800;font-size:19pt;line-height:1}
+.cover .facts span{display:block;font-size:7.6pt;color:#B9CDE3;margin-top:1.6mm;line-height:1.3}
+.cover .bar{position:absolute;left:0;right:0;bottom:0;height:46mm;background:#fff;display:grid;grid-template-columns:1fr auto auto;gap:7mm;align-items:center;padding:0 14mm}
+.cover .bar .k{font-family:'Manrope';font-weight:800;font-size:6.8pt;letter-spacing:1.8pt;text-transform:uppercase;color:var(--b)}
+.cover .bar .ph{font-family:'Manrope';font-weight:800;font-size:19pt;color:var(--navy);margin:1mm 0 .6mm;border-radius:0;width:auto}
+.cover .bar .ad{font-size:7.8pt;color:var(--muted)}
+.cover .bar > img{height:10mm}
+.cover .bar .qr{text-align:center;font-size:6.6pt;color:var(--muted)}
+.cover .bar .qr img{width:22mm;height:22mm;display:block;margin-bottom:1mm}
+
+/* ===== about ===== */
+.ab{display:grid;grid-template-columns:1.25fr 1fr;gap:6mm;align-items:start}
+.qual{display:grid;grid-template-columns:1.6fr 1fr;gap:0;margin-top:8mm;border-radius:3mm;overflow:hidden}
+.qual .q1{background:var(--navy);color:#fff;padding:5mm 6mm}
+.qual .q2{background:var(--cl);padding:5mm 6mm}
+.qual .k{font-family:'Manrope';font-weight:800;font-size:6.8pt;letter-spacing:1.6pt;text-transform:uppercase;color:var(--c);margin-bottom:1.4mm}
+.qual .q2 .k{color:var(--b)}
+.qual h3{color:#fff;font-size:14pt;font-weight:800}
+.qual h3 span{color:var(--c)}
+.qual p{font-size:7.8pt;color:#C6D6E8;margin-top:2mm}
+.qual ul li{font-size:8.2pt}
+.nums{display:grid;grid-template-columns:repeat(5,1fr);margin-top:8mm;border-top:.4mm solid var(--navy);border-bottom:.3mm solid var(--line)}
+.nums div{padding:3.4mm 2.6mm}
+.nums div+div{border-left:.3mm solid var(--line)}
+.nums b{display:block;font-family:'Manrope';font-weight:800;font-size:18pt;color:var(--b);line-height:1}
+.nums span{font-size:7.2pt;color:var(--muted);display:block;margin-top:1.2mm;line-height:1.3}
+
+/* ===== center ===== */
+.ladder{display:grid;grid-template-columns:repeat(4,1fr);gap:2.6mm;align-items:end}
+.ladder .st{border-radius:2.6mm;padding:3.6mm 3.4mm;color:#fff;display:flex;flex-direction:column}
+.ladder .s0{background:#7FCBD4;min-height:42mm}
+.ladder .s1{background:var(--c);min-height:50mm}
+.ladder .s2{background:var(--b);min-height:58mm}
+.ladder .s3{background:var(--navy);min-height:66mm}
+.ladder i{font-style:normal;font-family:'Manrope';font-weight:800;font-size:8pt;opacity:.8}
+.ladder b{font-family:'Manrope';font-weight:800;font-size:11.5pt;margin:.6mm 0 1.4mm}
+.ladder span{font-size:7.4pt;line-height:1.35;opacity:.95}
+.ladder em{font-style:normal;font-family:'Manrope';font-weight:800;font-size:9pt;margin-top:auto;padding-top:2mm}
+.intl{display:grid;grid-template-columns:62mm 1fr;margin-top:8mm;border-radius:3mm;overflow:hidden;background:var(--bg)}
+.intl img{width:100%;height:100%;object-fit:cover;object-position:62% 50%;min-height:40mm}
+.intl .tx{padding:7mm 6mm}
+.intl .k{font-family:'Manrope';font-weight:800;font-size:6.8pt;letter-spacing:1.4pt;text-transform:uppercase;color:var(--c)}
+.intl h3{font-size:13pt;font-weight:800;color:var(--navy);margin:1.2mm 0 2mm}
+.intl p{font-size:8.2pt;color:var(--ink)}
+
+/* ===== basic ===== */
+.pcards{display:grid;grid-template-columns:repeat(3,1fr);gap:3.4mm;margin-top:5mm}
+.pc{border:.3mm solid var(--line);border-radius:3mm;padding:4mm;position:relative;background:#fff}
+.pc .who{font-family:'Manrope';font-weight:800;font-size:6.8pt;letter-spacing:1.4pt;text-transform:uppercase;color:var(--c)}
+.pc.f .who{color:#C2408A}
+.pc h3{font-size:12pt;font-weight:800;color:var(--navy);margin:.6mm 0 2mm}
+.pc .pr{align-items:flex-start}
+.pc .pr b{font-size:15pt}
+.pc p{font-size:7.6pt;color:var(--muted);margin-top:2.4mm}
+.pc p b{color:var(--ink);font-weight:600}
+.pc.hl{background:var(--navy);border-color:var(--navy)}
+.pc.hl h3,.pc.hl .pr b{color:#fff}
+.pc.hl p{color:#B9CDE3}.pc.hl p b{color:#fff}
+.bgs{display:grid;grid-template-columns:1fr;gap:3.4mm}
+.bg h4{font-size:8.6pt;color:var(--b);margin-bottom:1.6mm}
+.tip{margin-top:5mm;border-left:1.2mm solid var(--c);background:var(--cl);padding:3mm 4mm;font-size:8.2pt}
+.tip b{color:var(--navy)}
+
+/* tables */
+.gh{display:flex;align-items:center;gap:2.4mm;font-family:'Manrope';font-weight:800;font-size:11pt;color:var(--navy);margin:5mm 0 2mm}
+.gh i{font-style:normal;width:6.4mm;height:6.4mm;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:9pt;background:var(--b)}
+.gh.f i{background:#C2408A}
+.gh span{font-family:'Inter';font-weight:500;font-size:7.6pt;color:var(--muted)}
+table.pt,table.add{width:100%;border-collapse:collapse}
+table.pt th,table.add th{text-align:left;font-family:'Manrope';font-weight:800;font-size:7pt;letter-spacing:.8pt;text-transform:uppercase;color:var(--muted);padding:1.6mm 2mm;border-bottom:.45mm solid var(--navy)}
+th.p,td.p{text-align:right;width:24mm}
+table.pt td{padding:2.3mm 2mm;border-bottom:.3mm solid var(--line);vertical-align:middle}
+table.pt td.n{font-family:'Manrope';font-weight:700;font-size:8.6pt;color:var(--navy);width:52mm}
+table.pt td.d{font-size:7.8pt}
+.mini{background:var(--bg);border-radius:2.4mm;padding:3.2mm 3.6mm;font-size:7.6pt;color:var(--muted)}
+.mini b{display:block;font-family:'Manrope';color:var(--navy);font-size:8.8pt;margin-bottom:.6mm}
+
+/* plus */
+.pl2{display:grid;grid-template-columns:1fr 1fr;gap:3.4mm}
+.pc2{border:.3mm solid var(--line);border-radius:3mm;padding:4mm;background:#fff}
+.pc2 .who{font-family:'Manrope';font-weight:800;font-size:6.8pt;letter-spacing:1.4pt;text-transform:uppercase;color:var(--c)}
+.pc2 h3{font-size:10.4pt;font-weight:800;color:var(--navy);margin:.6mm 0 2mm;min-height:9mm}
+.pc2 .pr{align-items:flex-start}
+.pc2 .pr b{font-size:15pt}
+.pc2 .pp{font-size:7.4pt;font-weight:600;color:var(--muted);margin:2.6mm 0 1.4mm}
+.pc2 .chips span{font-size:7.1pt}
+.pc2.dark{background:var(--navy);border-color:var(--navy)}
+.pc2.dark h3,.pc2.dark .pr b{color:#fff}
+.pc2.dark .pp{color:#B9CDE3}
+.pc2.dark .chips span{background:rgba(60,181,195,.22);color:#fff}
+.plus.f .pc2 .who{color:#C2408A}
+.plus.f .pc2.dark .who{color:#F3A6CE}
+
+/* diamond */
+.dia{background:#fff}
+.dtop{position:relative;height:88mm;background:var(--navy);overflow:hidden}
+.dtop > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 40%;opacity:.38}
+.dtop .dt{position:absolute;left:14mm;right:14mm;top:12mm;color:#fff}
+.dtop .lg{height:9mm;margin-bottom:12mm}
+.dtop .no{font-family:'Manrope';font-weight:800;font-size:7.4pt;letter-spacing:2pt;color:var(--c);text-transform:uppercase}
+.dtop h2{color:#fff;font-size:30pt;font-weight:800;letter-spacing:-.6pt;margin:1.6mm 0 3mm}
+.dtop p{font-size:9.6pt;color:#D5E2F0;max-width:140mm}
+.in2{position:absolute;left:14mm;right:14mm;top:80mm;bottom:16mm}
+.dp{display:grid;grid-template-columns:1.2fr 1.2fr 1fr 1fr;gap:3mm}
+.dpc{background:#fff;border-radius:3mm;padding:4mm;box-shadow:0 1mm 4mm rgba(10,46,92,.16);border-top:1.2mm solid var(--c)}
+.dpc .who{font-family:'Manrope';font-weight:800;font-size:7pt;letter-spacing:1.2pt;text-transform:uppercase;color:var(--muted);margin-bottom:1.4mm}
+.dpc .pr{align-items:flex-start}
+.dpc .pr b{font-size:17pt}
+.dpi{background:var(--cl);border-radius:3mm;padding:4mm;font-size:7.6pt;color:var(--muted);margin-top:4mm}
+.dpi b{display:block;font-family:'Manrope';color:var(--navy);font-size:10pt;margin-bottom:.6mm}
+.dtab{width:100%;border-collapse:collapse;margin-top:5mm}
+.dtab td{padding:2.9mm 2.4mm;border-bottom:.3mm solid var(--line);font-size:8.2pt;vertical-align:top}
+.dtab td.n{font-family:'Manrope';font-weight:800;color:var(--navy);width:46mm;font-size:8.6pt}
+.dtab tr:nth-child(odd) td{background:var(--bg)}
+.dtab tr.mm td.n{color:var(--b)}
+.dtab tr.ff td.n{color:#C2408A}
+
+/* additional */
+table.add td{padding:1.55mm 2mm;border-bottom:.25mm solid var(--line);vertical-align:middle}
+table.add tr.g td{background:var(--navy);color:#fff;font-family:'Manrope';font-weight:800;font-size:8pt;letter-spacing:.4pt;padding:1.6mm 2.4mm}
+table.add td.n{font-family:'Manrope';font-weight:700;font-size:8.2pt;color:var(--navy);width:58mm}
+table.add td.d{font-size:7.5pt;color:var(--muted)}
+table.add .pr b{font-size:8.8pt}
+table.add .pr s{font-size:6.6pt}
+
+/* contacts */
+.last{background:var(--navy);color:#fff}
+.last .hd{border-color:rgba(255,255,255,.2)}
+.last .hd span{color:#9FC3DD}
+.last .ttl h2{color:#fff}
+.last .mk em:last-child{background:#fff;mix-blend-mode:normal;opacity:.9}
+.last .lead{color:#D5E2F0}
+.ct{display:grid;grid-template-columns:1.2fr 1fr;gap:6mm;margin-top:6mm}
+.cb{background:rgba(255,255,255,.06);border-radius:3mm;padding:5mm 6mm}
+.cb .r{display:grid;grid-template-columns:22mm 1fr;gap:2mm;padding:2.1mm 0;border-bottom:.25mm solid rgba(255,255,255,.14);font-size:8.6pt}
+.cb .r:last-child{border-bottom:none}
+.cb .r span{font-family:'Manrope';font-weight:800;font-size:6.6pt;letter-spacing:1.2pt;text-transform:uppercase;color:var(--c);padding-top:.7mm}
+.cb .r b{font-family:'Manrope';font-weight:800;font-size:15pt}
+.qrs{display:grid;grid-template-columns:1fr 1fr;gap:3mm;margin-top:3mm}
+.qrs div{background:#fff;border-radius:2.6mm;padding:3mm;text-align:center;color:var(--ink);font-size:7pt}
+.qrs img{width:24mm;height:24mm;display:block;margin:0 auto 1.4mm}
+.qrs b{display:block;font-family:'Manrope';color:var(--navy);font-size:8pt}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:3.4mm}
+.steps div{border-top:1.2mm solid var(--c);padding-top:2.6mm;font-size:7.8pt;color:#C6D6E8;line-height:1.42}
+.steps i{font-style:normal;font-family:'Manrope';font-weight:800;color:var(--c);font-size:13pt;display:block}
+.steps b{display:block;font-family:'Manrope';color:#fff;font-size:9pt;margin:.6mm 0 .8mm}
+.last .ft{border-color:rgba(255,255,255,.2);color:#9FC3DD}
+.last .ft b{color:#fff}
+.last .ft .pn{background:var(--c)}
+.pr small{font-size:.55em;font-weight:700;opacity:.75;margin-left:.6mm}
+.pr s small{font-size:1em}
+.close{position:absolute;left:0;right:0;bottom:0;height:72mm;overflow:hidden;background:var(--b)}
+.close .bgp{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 35%;opacity:.28;mix-blend-mode:luminosity}
+.close .cx{position:absolute;left:14mm;right:14mm;top:12mm;color:#fff}
+.close .cx img{height:10mm;margin-bottom:5mm}
+.close p{font-family:'Manrope';font-weight:800;font-size:17pt;line-height:1.25}
+.close p span{color:#BDEBF0}
+.last .ft{z-index:2}
+</style></head><body>
+<section class="page cover">
+<div class="hero"><img src="assets/doctor_tablet.jpg" alt=""></div>
+<img class="lg" src="assets/cau_logo_white.png" alt="">
+<div class="badge"><b>−20%</b><span>на программы<br>обследования</span></div>
+<div class="txt">
+  <div class="kick">Центр укрепления здоровья · Health Promotion Center</div>
+  <h1>Комплексное обследование<br>в&nbsp;университетской клинике <span>Сеула</span></h1>
+  <p>Chung-Ang University Hospital — многопрофильная университетская больница с 1968 года. Программы чекапа от базовой до двухдневной «Даймонд» с VVIP-палатой.</p>
+</div>
+<div class="facts">
+  <div><b>1968</b><span>год основания</span></div>
+  <div><b>752</b><span>койки, 17 отделений стационара</span></div>
+  <div><b>1 класс</b><span>по 4 видам рака — 3 раза подряд</span></div>
+  <div><b>RU</b><span>русскоязычный координатор в клинике</span></div>
+</div>
+<div class="bar">
+  <div class="c1"><div class="k">Запись и консультации в Казахстане</div><div class="ph">+7 771 933 39 39</div><div class="ad">Seoul Medical Center · г. Алматы, ул. Сатпаева, 90/26 · seoulmed.kz</div></div>
+  <img src="assets/smc_logo.svg" alt="">
+  <div class="qr"><img src="assets/qr_wa.svg" alt=""><span>WhatsApp</span></div>
+</div>
+</section><section class="page"><div class="in">
+<header class="hd"><img src="assets/cau_logo.png" alt=""><span>О клинике</span></header>
+<div class="ttl"><i class="mk"><em></em><em></em></i><div><div class="no">01</div><h2>Chung-Ang University Hospital</h2></div></div>
+<div class="ab">
+  <div>
+    <p class="lead">Университетская больница <b>Чунан</b> (중앙대학교병원) открыта в&nbsp;1968 году и входит в медицинский центр Университета Чунан в Сеуле. Это больница высшего уровня, которая специализируется на тяжёлых, неотложных и редких заболеваниях.</p>
+    <p class="sm" style="margin-top:3mm">Миссия клиники — лучшая медицинская помощь, исследования и обучение ради здоровья и счастливой жизни людей. Клиника последовательно развивает инфраструктуру для лечения сложных и редких заболеваний.</p>
+  </div>
+  <img class="ph" src="assets/doctor_coat.jpg" style="height:58mm;object-position:30% 50%" alt="">
+</div>
+
+<div class="qual">
+  <div class="q1"><div class="k">Государственная оценка качества</div><h3>1 класс по всем 4 видам онкологии — <span>3 раза подряд</span></h3><p>По результатам оценки Министерства здравоохранения Кореи и HIRA: рак толстой кишки, желудка, молочной железы и лёгких.</p></div>
+  <div class="q2"><div class="k">Также 1 класс</div><ul class="dash"><li>Острый инсульт</li><li>Аортокоронарное шунтирование</li><li>Гемодиализ</li><li>Реанимация взрослых и новорождённых</li></ul></div>
+</div>
+
+<div class="nums">
+  <div><b>752</b><span>койки</span></div><div><b>194</b><span>палаты</span></div><div><b>17</b><span>отделений стационара</span></div><div><b>2</b><span>корпуса: Чунан-гван (15 эт.) и Даджон-гван (10 эт.)</span></div><div><b>607</b><span>мест на парковке</span></div>
+</div>
+
+<div class="cols2" style="margin-top:9mm">
+  <div><h4>Онкологический центр — 12 клиник</h4><div class="chips"><span>Печень, желчные пути, поджелудочная</span><span>Щитовидная железа</span><span>Колоректальный рак</span><span>Голова и шея (ЛОР)</span><span>Гинекологическая онкология</span><span>Рак желудка</span><span>Рак молочной железы</span><span>Простата, мочевой пузырь, почки</span><span>Лёгкие и пищевод</span><span>Гематология и онкология</span><span>Центральные венозные доступы</span><span>Психоонкология</span></div></div>
+  <div><h4>Специализированные центры</h4><div class="chips"><span>Диабетологический центр</span><span>Центр мочекаменной болезни</span><span>Центр гемодиализа</span><span>Центр интервенционной радиологии</span><span>Центр трансплантации органов</span><span>Клиника редких заболеваний</span></div><h4 style="margin-top:4mm">Ключевые ценности</h4><div class="chips"><span>Профессионализм</span><span>Справедливость</span><span>Изменения и инновации</span><span>Общение и единство</span><span>Сочувствие и забота</span></div></div>
+</div>
+</div><footer class="ft"><span><b>Chung-Ang University Hospital</b> · Сеул, Корея</span><span>Запись и консультации: <b>Seoul Medical Center</b>, Алматы · +7 771 933 39 39</span><span class="pn">02</span></footer></section><section class="page"><div class="in">
+<header class="hd"><img src="assets/cau_logo.png" alt=""><span>Центр здоровья</span></header>
+<div class="ttl"><i class="mk"><em></em><em></em></i><div><div class="no">02</div><h2>Чекап в Chung-Ang</h2></div></div>
+<div class="cols2" style="grid-template-columns:1.05fr 1fr;align-items:start">
+  <div>
+    <p class="lead">Центр укрепления здоровья (Health Promotion Center) проводит обследования в одном месте: от лабораторных анализов до МРТ, КТ, ПЭТ-КТ и эндоскопии под седацией. Запись ведут медсёстры, специализирующиеся на чекапах.</p>
+    <ul class="chk" style="margin-top:4mm">
+      <li>Программы отдельно для мужчин и женщин</li>
+      <li>Обследование отдельных систем: мозг, сердце, лёгкие, ЖКТ</li>
+      <li>«Даймонд» — 2 дня в VVIP-палате, все системы организма</li>
+      <li>Более 40 дополнительных обследований к любому пакету</li>
+    </ul>
+  </div>
+  <div><img class="ph" src="assets/lobby.jpg" style="height:56mm" alt=""><div class="cap">Центр укрепления здоровья Chung-Ang University Hospital</div></div>
+</div>
+
+<h3 class="sub">Выберите уровень программы</h3>
+<div class="ladder"><div class="st s0"><i>1</i><b>Базовая</b><span>Ежегодный чекап: анализы, УЗИ, гастроскопия</span><em>от 686 400 KRW</em></div><div class="st s1"><i>2</i><b>Специализированная</b><span>Базовая + углублённое обследование одной системы</span><em>от 1 008 000 KRW</em></div><div class="st s2"><i>3</i><b>Плюс</b><span>Онкоскрининг или «Премиум» с мозгом и сердцем</span><em>от 2 676 800 KRW</em></div><div class="st s3"><i>4</i><b>Даймонд</b><span>2 дня, VVIP-палата, все системы организма</span><em>от 6 182 400 KRW</em></div></div>
+<p class="note" style="margin-top:2mm">Цены со скидкой 20%, в южнокорейских вонах (KRW). Полный состав программ — на следующих страницах.</p>
+
+<div class="intl">
+  <img src="assets/intl.jpg" alt="">
+  <div class="tx">
+    <div class="k">International Healthcare Center · с 2014 года</div>
+    <h3>Русскоязычный координатор в клинике</h3>
+    <p>В международном центре постоянно работают координаторы, говорящие по-английски и по-русски. Пациента сопровождают 1:1 на всех этапах: запись на приём и обследования, оплата, госпитализация и выписка, медицинские заключения и диски со снимками.</p>
+  </div>
+</div>
+</div><footer class="ft"><span><b>Chung-Ang University Hospital</b> · Сеул, Корея</span><span>Запись и консультации: <b>Seoul Medical Center</b>, Алматы · +7 771 933 39 39</span><span class="pn">03</span></footer></section><section class="page"><div class="in">
+<header class="hd"><img src="assets/cau_logo.png" alt=""><span>Программы обследования</span></header>
+<div class="ttl"><i class="mk"><em></em><em></em></i><div><div class="no">03</div><h2>Базовая программа</h2></div></div>
+<p class="lead">Ежегодный чекап для взрослых: оценка общего состояния, работы основных органов, ранние признаки диабета, болезней печени, почек и щитовидной железы, онкомаркеры.</p>
+
+<div class="pcards">
+  <div class="pc m"><div class="who">Мужчины</div><h3>Стандартная</h3><div class="pr"><s>936&#8239;000 <small>KRW</small></s><b>748&#8239;800 <small>KRW</small></b></div><p>Состав ниже + онкомаркеры: <b>печень, кишечник, поджелудочная, предстательная железа</b></p></div>
+  <div class="pc f"><div class="who">Женщины</div><h3>Базовая</h3><div class="pr"><s>858&#8239;000 <small>KRW</small></s><b>686&#8239;400 <small>KRW</small></b></div><p>Состав ниже + онкомаркеры: <b>печень, кишечник, поджелудочная железа</b></p></div>
+  <div class="pc f hl"><div class="who">Женщины</div><h3>Стандартная</h3><div class="pr"><s>1&#8239;014&#8239;000 <small>KRW</small></s><b>811&#8239;200 <small>KRW</small></b></div><p>Базовая + <b>маммография, анализ на рак шейки матки, женские гормоны, онкомаркеры яичников и молочной железы</b></p></div>
+</div>
+
+<h3 class="sub">Что входит в базовую часть</h3>
+<div class="bgs"><div class="bg"><h4>Общий осмотр и функциональная диагностика</h4><div class="chips"><span>Антропометрия, индекс массы тела</span><span>Офтальмология: глазное давление, глазное дно, острота зрения</span><span>Аудиометрия</span><span>Спирометрия</span><span>Рентген грудной клетки (2 проекции)</span><span>ЭКГ</span></div></div><div class="bg"><h4>Анализы крови и мочи</h4><div class="chips"><span>Группа крови</span><span>Общий анализ крови</span><span>Гепатиты A, B, C</span><span>Функция печени</span><span>Функция почек</span><span>Функция щитовидной железы</span><span>Водно-электролитный баланс</span><span>Диабет: глюкоза, гликированный гемоглобин</span><span>Липидный профиль</span><span>Мочевая кислота</span><span>Ревматоидный фактор</span><span>Сифилис, ВИЧ</span><span>Общий анализ мочи</span></div></div><div class="bg"><h4>Инструментальные исследования</h4><div class="chips"><span>УЗИ органов брюшной полости</span><span>Гастроскопия (без седации)</span></div></div></div>
+
+<div class="tip"><b>Совет:</b> к любой программе можно добавить отдельные обследования — колоноскопию, КТ, МРТ, УЗИ, ПЭТ-КТ и др. со скидкой 20% (стр. 08–09).</div>
+<img class="ph" src="assets/tech.jpg" style="height:62mm;margin-top:5mm;object-position:50% 40%" alt="">
+</div><footer class="ft"><span><b>Chung-Ang University Hospital</b> · Сеул, Корея</span><span>Запись и консультации: <b>Seoul Medical Center</b>, Алматы · +7 771 933 39 39</span><span class="pn">04</span></footer></section><section class="page"><div class="in">
+<header class="hd"><img src="assets/cau_logo.png" alt=""><span>Программы обследования</span></header>
+<div class="ttl"><i class="mk"><em></em><em></em></i><div><div class="no">04</div><h2>Специализированное детальное обследование</h2></div></div>
+<p class="lead">Стандартная программа плюс углублённое обследование выбранной системы организма. Подходит, если есть жалобы, наследственная предрасположенность или факторы риска.</p>
+<div class="gh m"><i>♂</i>Для мужчин <span>· основа — Стандартная программа для мужчин</span></div>
+<table class="pt"><thead><tr><th>Программа</th><th>Стандартная программа +</th><th class="p">KRW</th></tr></thead><tr><td class="n">Детальное обследование для мужчин</td><td class="d">+ УЗИ предстательной железы, анализ крови на мужские гормоны</td><td class="p"><div class="pr"><s>1&#8239;274&#8239;000</s><b>1&#8239;019&#8239;200</b></div></td></tr><tr><td class="n">Детальное обследование лёгких</td><td class="d">+ низкодозная КТ грудной клетки</td><td class="p"><div class="pr"><s>1&#8239;260&#8239;000</s><b>1&#8239;008&#8239;000</b></div></td></tr><tr><td class="n">Детальное обследование ЖКТ</td><td class="d">+ колоноскопия (под седацией), КТ брюшной полости и таза</td><td class="p"><div class="pr"><s>1&#8239;834&#8239;000</s><b>1&#8239;467&#8239;200</b></div></td></tr><tr><td class="n">Детальное обследование сердечно-сосудистой системы</td><td class="d">+ скрининговый анализ крови на заболевания сердца, тест на атеросклероз, эхокардиография, КТ коронарных артерий</td><td class="p"><div class="pr"><s>1&#8239;960&#8239;000</s><b>1&#8239;568&#8239;000</b></div></td></tr><tr><td class="n">Детальное обследование головного мозга</td><td class="d">+ скрининговый анализ крови на заболевания мозга, тест на атеросклероз, МРТ и МРА головного мозга, УЗИ сонных артерий</td><td class="p"><div class="pr"><s>2&#8239;870&#8239;000</s><b>2&#8239;296&#8239;000</b></div></td></tr></table>
+<div class="gh f"><i>♀</i>Для женщин <span>· основа — Стандартная программа для женщин</span></div>
+<table class="pt"><thead><tr><th>Программа</th><th>Стандартная программа +</th><th class="p">KRW</th></tr></thead><tr><td class="n">Детальное обследование для женщин</td><td class="d">+ трансвагинальное УЗИ, УЗИ молочных желёз, тест на ВПЧ, денситометрия</td><td class="p"><div class="pr"><s>1&#8239;750&#8239;000</s><b>1&#8239;400&#8239;000</b></div></td></tr><tr><td class="n">Детальное обследование лёгких</td><td class="d">+ низкодозная КТ грудной клетки</td><td class="p"><div class="pr"><s>1&#8239;302&#8239;000</s><b>1&#8239;041&#8239;600</b></div></td></tr><tr><td class="n">Детальное обследование ЖКТ</td><td class="d">+ колоноскопия (под седацией), КТ брюшной полости и таза</td><td class="p"><div class="pr"><s>1&#8239;904&#8239;000</s><b>1&#8239;523&#8239;200</b></div></td></tr><tr><td class="n">Детальное обследование сердечно-сосудистой системы</td><td class="d">+ скрининговый анализ крови на заболевания сердца, тест на атеросклероз, эхокардиография, КТ коронарных артерий</td><td class="p"><div class="pr"><s>2&#8239;030&#8239;000</s><b>1&#8239;624&#8239;000</b></div></td></tr><tr><td class="n">Детальное обследование головного мозга</td><td class="d">+ скрининговый анализ крови на заболевания мозга, тест на атеросклероз, МРТ и МРА головного мозга, УЗИ сонных артерий</td><td class="p"><div class="pr"><s>2&#8239;940&#8239;000</s><b>2&#8239;352&#8239;000</b></div></td></tr></table>
+<div class="cols3" style="margin-top:5mm">
+  <div class="mini"><b>Лёгкие</b>Курильщикам и бывшим курильщикам, при длительном кашле</div>
+  <div class="mini"><b>Сердце, мозг</b>При гипертонии, диабете, высоком холестерине, инсультах и инфарктах у родственников</div>
+  <div class="mini"><b>ЖКТ</b>После 45 лет, при семейной истории рака кишечника</div>
+</div>
+<p class="note" style="margin-top:2.6mm">Рекомендации носят общий характер; программу подбирают с учётом возраста, жалоб и анамнеза.</p>
+</div><footer class="ft"><span><b>Chung-Ang University Hospital</b> · Сеул, Корея</span><span>Запись и консультации: <b>Seoul Medical Center</b>, Алматы · +7 771 933 39 39</span><span class="pn">05</span></footer></section><section class="page"><div class="in">
+<header class="hd"><img src="assets/cau_logo.png" alt=""><span>Программы обследования</span></header>
+<div class="ttl"><i class="mk"><em></em><em></em></i><div><div class="no">05</div><h2>Детальное обследование «Плюс»</h2></div></div>
+<p class="lead">Расширенный онкоскрининг: лёгкие, щитовидная железа, ЖКТ, органы малого таза и мужская или женская онкология. «Премиум» дополнительно включает МРТ головного мозга и КТ коронарных артерий.</p>
+<div class="plus m">
+  <div class="gh m"><i>♂</i>Программы для мужчин «Плюс»</div>
+  <div class="pl2">
+    <div class="pc2"><div class="who">Онкоскрининг</div><h3>Детальное обследование на онкологические заболевания</h3><div class="pr"><s>3&#8239;346&#8239;000 <small>KRW</small></s><b>2&#8239;676&#8239;800 <small>KRW</small></b></div><p class="pp">Стандартная программа +</p><div class="chips"><span>Низкодозная КТ грудной клетки</span><span>УЗИ щитовидной железы</span><span>Денситометрия</span><span>Витамин D</span><span>Эхокардиография</span><span>УЗИ сонных артерий</span><span>УЗИ предстательной железы</span><span>Мужские гормоны</span><span>Колоноскопия (под седацией)</span><span>КТ брюшной полости и таза</span></div></div>
+    <div class="pc2 dark"><div class="who">Премиум</div><h3>Детальная программа «Премиум»</h3><div class="pr"><s>5&#8239;334&#8239;000 <small>KRW</small></s><b>4&#8239;267&#8239;200 <small>KRW</small></b></div><p class="pp">Всё из онкоскрининга +</p><div class="chips"><span>Скрининговый анализ крови на заболевания мозга и сердца</span><span>Тест на атеросклероз</span><span>МРТ и МРА головного мозга</span><span>КТ коронарных артерий</span></div></div>
+  </div>
+</div>
+<div class="plus f">
+  <div class="gh f"><i>♀</i>Программы для женщин «Плюс»</div>
+  <div class="pl2">
+    <div class="pc2"><div class="who">Онкоскрининг</div><h3>Детальное обследование на онкологические заболевания</h3><div class="pr"><s>3&#8239;696&#8239;000 <small>KRW</small></s><b>2&#8239;956&#8239;800 <small>KRW</small></b></div><p class="pp">Стандартная программа +</p><div class="chips"><span>Низкодозная КТ грудной клетки</span><span>УЗИ щитовидной железы</span><span>Денситометрия</span><span>Витамин D</span><span>Эхокардиография</span><span>УЗИ сонных артерий</span><span>Трансвагинальное УЗИ</span><span>Тест ДНК ВПЧ</span><span>УЗИ молочных желёз</span><span>Колоноскопия (под седацией)</span><span>КТ брюшной полости и таза</span></div></div>
+    <div class="pc2 dark"><div class="who">Премиум</div><h3>Детальная программа «Премиум»</h3><div class="pr"><s>5&#8239;684&#8239;000 <small>KRW</small></s><b>4&#8239;547&#8239;200 <small>KRW</small></b></div><p class="pp">Всё из онкоскрининга +</p><div class="chips"><span>Скрининговый анализ крови на заболевания мозга и сердца</span><span>Тест на атеросклероз</span><span>МРТ и МРА головного мозга</span><span>КТ коронарных артерий</span></div></div>
+  </div>
+</div>
+<div class="tip" style="margin-top:6mm"><b>Важно:</b> во всех программах «Плюс» колоноскопия проводится под седацией (во сне). Гастроскопию из базовой части также можно провести под седацией — доплата 112&#8239;000 KRW.</div>
+</div><footer class="ft"><span><b>Chung-Ang University Hospital</b> · Сеул, Корея</span><span>Запись и консультации: <b>Seoul Medical Center</b>, Алматы · +7 771 933 39 39</span><span class="pn">06</span></footer></section><section class="page dia">
+<div class="dtop">
+  <img src="assets/doctor_coat.jpg" alt="">
+  <div class="dt">
+    <img class="lg" src="assets/cau_logo_white.png" alt="">
+    <div class="no">06 · Премиальная программа</div>
+    <h2>Программа «Даймонд»</h2>
+    <p>Двухдневное обследование всех основных систем организма с размещением в VVIP-палате. Самая полная программа Центра укрепления здоровья.</p>
+  </div>
+</div>
+<div class="in2">
+  <div class="dp">
+    <div class="dpc"><div class="who">Мужчины · 2 дня</div><div class="pr"><s>7&#8239;728&#8239;000 <small>KRW</small></s><b>6&#8239;182&#8239;400 <small>KRW</small></b></div></div>
+    <div class="dpc"><div class="who">Женщины · 2 дня</div><div class="pr"><s>8&#8239;078&#8239;000 <small>KRW</small></s><b>6&#8239;462&#8239;400 <small>KRW</small></b></div></div>
+    <div class="dpi"><b>1 ночь, 2 дня</b>в VVIP-палате, пн–пт</div>
+    <div class="dpi"><b>11 направлений</b>от мозга и сердца до аллергии</div>
+  </div>
+  <table class="dtab"><tr><td class="n">Базовая часть</td><td>Стандартная программа для мужчин / для женщин</td></tr><tr><td class="n">Головной мозг</td><td>Скрининговый анализ крови на заболевания мозга, МРТ и МРА головного мозга + МРТ гиппокампа, УЗИ сонных артерий</td></tr><tr><td class="n">Сердце и сосуды</td><td>Скрининговый анализ крови на заболевания сердца, тест на атеросклероз, эхокардиография, КТ коронарных артерий</td></tr><tr><td class="n">Лёгкие</td><td>Низкодозная КТ грудной клетки</td></tr><tr><td class="n">Пищеварительная система</td><td>Колоноскопия (под седацией), КТ брюшной полости и таза</td></tr><tr><td class="n">Эндокринная система</td><td>КТ абдоминального ожирения, денситометрия, витамин D, УЗИ щитовидной железы</td></tr><tr><td class="n">Позвоночник</td><td>На выбор: МРТ шейного отдела + рентген или МРТ поясничного отдела + рентген</td></tr><tr><td class="n">Аллергия</td><td>Анализ крови на 105 аллергенов (MAST)</td></tr><tr class="mm"><td class="n">Для мужчин</td><td>Мужские гормоны, УЗИ предстательной железы</td></tr><tr class="ff"><td class="n">Для женщин</td><td>Тест ДНК ВПЧ, трансвагинальное УЗИ, УЗИ молочных желёз</td></tr><tr><td class="n">Другое</td><td>Анализ крови на анемию, определение биологического возраста</td></tr></table>
+  <div class="cols3" style="margin-top:5mm">
+    <div class="mini"><b>VVIP-палата</b>Отдельная палата повышенной комфортности на время обследования</div>
+    <div class="mini"><b>Всё за 2 дня</b>МРТ, КТ, УЗИ, эндоскопия и анализы — без повторных визитов</div>
+    <div class="mini"><b>Индивидуальный план</b>При повторном прохождении медсестра центра составляет программу с учётом здоровья пациента</div>
+  </div>
+</div>
+<footer class="ft"><span><b>Chung-Ang University Hospital</b> · Сеул, Корея</span><span>Запись и консультации: <b>Seoul Medical Center</b>, Алматы · +7 771 933 39 39</span><span class="pn">07</span></footer>
+</section><section class="page"><div class="in">
+<header class="hd"><img src="assets/cau_logo.png" alt=""><span>Можно добавить к любому пакету · скидка 20%</span></header>
+<div class="ttl"><i class="mk"><em></em><em></em></i><div><div class="no">07</div><h2>Дополнительные обследования</h2></div></div>
+<table class="add"><thead><tr><th>Обследование</th><th>Что выявляет</th><th class="p">KRW</th></tr></thead><tr class="g"><td colspan="3">Пищеварительная система</td></tr><tr><td class="n">Колоноскопия</td><td class="d">Воспаление, язвы, полипы, рак кишечника</td><td class="p"><div class="pr"><s>252&#8239;000</s><b>202&#8239;000</b></div></td></tr><tr><td class="n">Седация</td><td class="d">Гастро- или колоноскопия во сне</td><td class="p"><div class="pr"><s>140&#8239;000</s><b>112&#8239;000</b></div></td></tr><tr><td class="n">КТ брюшной полости и таза</td><td class="d">Болезни печени, гепатобилиарный рак, болезни почек, рак поджелудочной железы, мочевого пузыря, яичников</td><td class="p"><div class="pr"><s>420&#8239;000</s><b>336&#8239;000</b></div></td></tr><tr class="g"><td colspan="3">Обмен веществ и сосуды</td></tr><tr><td class="n">КТ абдоминального ожирения</td><td class="d">Степень ожирения по объёму подкожного и висцерального жира</td><td class="p"><div class="pr"><s>84&#8239;000</s><b>68&#8239;000</b></div></td></tr><tr><td class="n">Анализ жирных кислот</td><td class="d">Состояние сосудов по уровню омега-3 и омега-6 в крови</td><td class="p"><div class="pr"><s>280&#8239;000</s><b>224&#8239;000</b></div></td></tr><tr><td class="n">Тест на атеросклероз (ABI)</td><td class="d">Степень атеросклероза периферических артерий</td><td class="p"><div class="pr"><s>84&#8239;000</s><b>68&#8239;000</b></div></td></tr><tr class="g"><td colspan="3">ПЭТ-КТ</td></tr><tr><td class="n">ПЭТ-КТ: головной мозг + туловище</td><td class="d">Раннее выявление онкологии, определение стадии, поиск метастазов</td><td class="p"><div class="pr"><b>1&#8239;680&#8239;000</b></div></td></tr><tr><td class="n">ПЭТ-КТ: туловище</td><td class="d">Раннее выявление онкологии, определение стадии, поиск метастазов</td><td class="p"><div class="pr"><b>1&#8239;330&#8239;000</b></div></td></tr><tr><td class="n">ПЭТ-КТ с допамином (FP-CIT)</td><td class="d">Выявление болезни Паркинсона и других нарушений</td><td class="p"><div class="pr"><b>1&#8239;540&#8239;000</b></div></td></tr><tr><td class="n">ПЭТ-КТ с амилоидом</td><td class="d">Выявление болезни Альцгеймера и других причин когнитивных нарушений</td><td class="p"><div class="pr"><b>1&#8239;120&#8239;000</b></div></td></tr><tr class="g"><td colspan="3">Антивозрастная медицина</td></tr><tr><td class="n">Витамин D</td><td class="d">Здоровье костей, хроническая усталость, метаболический синдром</td><td class="p"><div class="pr"><s>70&#8239;000</s><b>56&#8239;000</b></div></td></tr><tr><td class="n">Биологический возраст</td><td class="d">Общее состояние здоровья и скорость старения</td><td class="p"><div class="pr"><s>42&#8239;000</s><b>34&#8239;000</b></div></td></tr><tr><td class="n">Теломеры</td><td class="d">Оценка скорости старения на основе теломерной теории</td><td class="p"><div class="pr"><s>420&#8239;000</s><b>336&#8239;000</b></div></td></tr><tr><td class="n">Активные формы кислорода и антиоксиданты</td><td class="d">Оксидативный стресс и старение — данные для коррекции образа жизни</td><td class="p"><div class="pr"><s>84&#8239;000</s><b>68&#8239;000</b></div></td></tr><tr class="g"><td colspan="3">Для женщин</td></tr><tr><td class="n">Трансвагинальное УЗИ</td><td class="d">Миомы, заболевания эндометрия, рак и кисты яичников</td><td class="p"><div class="pr"><s>168&#8239;000</s><b>135&#8239;000</b></div></td></tr><tr><td class="n">Тест ДНК ВПЧ</td><td class="d">Вирусы папилломы человека, вызывающие рак шейки матки</td><td class="p"><div class="pr"><s>140&#8239;000</s><b>112&#8239;000</b></div></td></tr><tr><td class="n">УЗИ молочных желёз</td><td class="d">Кисты, узловые образования, рак молочной железы</td><td class="p"><div class="pr"><s>266&#8239;000</s><b>213&#8239;000</b></div></td></tr><tr><td class="n">УЗИ щитовидной железы</td><td class="d">Кисты, тиреоидит, рак щитовидной железы</td><td class="p"><div class="pr"><s>224&#8239;000</s><b>180&#8239;000</b></div></td></tr><tr><td class="n">Денситометрия</td><td class="d">Диагностика остеопороза</td><td class="p"><div class="pr"><s>98&#8239;000</s><b>79&#8239;000</b></div></td></tr></table>
+</div><footer class="ft"><span><b>Chung-Ang University Hospital</b> · Сеул, Корея</span><span>Запись и консультации: <b>Seoul Medical Center</b>, Алматы · +7 771 933 39 39</span><span class="pn">08</span></footer></section><section class="page"><div class="in">
+<header class="hd"><img src="assets/cau_logo.png" alt=""><span>Можно добавить к любому пакету · скидка 20%</span></header>
+<div class="ttl"><i class="mk"><em></em><em></em></i><div><div class="no">08</div><h2>Дополнительные обследования (продолжение)</h2></div></div>
+<table class="add"><thead><tr><th>Обследование</th><th>Что выявляет</th><th class="p">KRW</th></tr></thead><tr class="g"><td colspan="3">Для мужчин и лёгкие</td></tr><tr><td class="n">УЗИ предстательной железы</td><td class="d">Аденома и рак предстательной железы</td><td class="p"><div class="pr"><s>224&#8239;000</s><b>180&#8239;000</b></div></td></tr><tr><td class="n">Низкодозная КТ грудной клетки</td><td class="d">Бронхолёгочные заболевания, ранняя диагностика рака лёгких</td><td class="p"><div class="pr"><s>252&#8239;000</s><b>202&#8239;000</b></div></td></tr><tr class="g"><td colspan="3">Сердце и сосуды</td></tr><tr><td class="n">Эхокардиография</td><td class="d">Сердечная недостаточность, болезни клапанов, врождённые пороки</td><td class="p"><div class="pr"><s>350&#8239;000</s><b>280&#8239;000</b></div></td></tr><tr><td class="n">КТ: кальциноз коронарных артерий</td><td class="d">Стенокардия, причины ишемической болезни, атеросклероз коронарных артерий</td><td class="p"><div class="pr"><s>252&#8239;000</s><b>202&#8239;000</b></div></td></tr><tr><td class="n">КТ-коронарография</td><td class="d">Окклюзия и стеноз коронарных артерий, инфаркт миокарда</td><td class="p"><div class="pr"><s>490&#8239;000</s><b>392&#8239;000</b></div></td></tr><tr class="g"><td colspan="3">Головной мозг</td></tr><tr><td class="n">МРТ + МРА головного мозга</td><td class="d">Инсульт, кровоизлияние, опухоль, цереброваскулярные болезни, аневризма</td><td class="p"><div class="pr"><s>1&#8239;540&#8239;000</s><b>1&#8239;232&#8239;000</b></div></td></tr><tr><td class="n">МРТ головного мозга</td><td class="d">Ишемический инсульт, кровоизлияние, опухоль</td><td class="p"><div class="pr"><s>840&#8239;000</s><b>672&#8239;000</b></div></td></tr><tr><td class="n">МРА головного мозга</td><td class="d">Цереброваскулярные болезни, стеноз сосудов, аневризма</td><td class="p"><div class="pr"><s>840&#8239;000</s><b>672&#8239;000</b></div></td></tr><tr><td class="n">КТ головного мозга</td><td class="d">Инсульт, опухоль, аневризма, цереброваскулярные болезни</td><td class="p"><div class="pr"><s>420&#8239;000</s><b>336&#8239;000</b></div></td></tr><tr><td class="n">УЗИ сонных артерий</td><td class="d">Атеросклероз и сужение сонных артерий</td><td class="p"><div class="pr"><s>280&#8239;000</s><b>224&#8239;000</b></div></td></tr><tr><td class="n">КТ сосудов головного мозга</td><td class="d">Ишемический инсульт, кровоизлияние, опухоль</td><td class="p"><div class="pr"><s>252&#8239;000</s><b>202&#8239;000</b></div></td></tr><tr><td class="n">МРТ + МРА + МРТ гиппокампа</td><td class="d">Детальное обследование мозга, включая диагностику деменции</td><td class="p"><div class="pr"><s>1&#8239;960&#8239;000</s><b>1&#8239;568&#8239;000</b></div></td></tr><tr class="g"><td colspan="3">Опорно-двигательный аппарат</td></tr><tr><td class="n">МРТ + рентген шейного отдела</td><td class="d">Позвонки и нервные корешки шейного отдела</td><td class="p"><div class="pr"><s>882&#8239;000</s><b>706&#8239;000</b></div></td></tr><tr><td class="n">МРТ + рентген поясничного отдела</td><td class="d">Позвонки и нервные корешки поясничного отдела</td><td class="p"><div class="pr"><s>882&#8239;000</s><b>706&#8239;000</b></div></td></tr><tr><td class="n">МРТ + рентген плечевого сустава</td><td class="d">Плечевой сустав</td><td class="p"><div class="pr"><s>882&#8239;000</s><b>706&#8239;000</b></div></td></tr><tr><td class="n">МРТ + рентген локтевого сустава</td><td class="d">Локтевой сустав</td><td class="p"><div class="pr"><s>882&#8239;000</s><b>706&#8239;000</b></div></td></tr><tr><td class="n">МРТ + рентген коленного сустава</td><td class="d">Коленный сустав</td><td class="p"><div class="pr"><s>882&#8239;000</s><b>706&#8239;000</b></div></td></tr><tr class="g"><td colspan="3">Аллергия</td></tr><tr><td class="n">Анализ на 105 аллергенов (MAST)</td><td class="d">Респираторные и пищевые аллергены, домашняя пыль, клещи и др.</td><td class="p"><div class="pr"><s>252&#8239;000</s><b>202&#8239;000</b></div></td></tr></table>
+</div><footer class="ft"><span><b>Chung-Ang University Hospital</b> · Сеул, Корея</span><span>Запись и консультации: <b>Seoul Medical Center</b>, Алматы · +7 771 933 39 39</span><span class="pn">09</span></footer></section><section class="page last"><div class="in">
+<header class="hd"><img src="assets/cau_logo_white.png" alt=""><span>Контакты</span></header>
+<div class="ttl"><i class="mk"><em></em><em></em></i><div><div class="no">10</div><h2>Запись и консультации в Казахстане</h2></div></div>
+<p class="lead">По вопросам программ обследования в Chung-Ang University Hospital обращайтесь в <b>Seoul Medical Center</b> в Алматы.</p>
+<div class="ct">
+  <div class="cb">
+    <img src="assets/smc_logo_white.svg" style="height:10mm;display:block;margin-bottom:3.4mm" alt="">
+    <div class="r"><span>Телефон</span><b>+7 771 933 39 39</b></div>
+    <div class="r"><span>WhatsApp</span>+7 771 799 95 26</div>
+    <div class="r"><span>Адрес</span>г. Алматы, Бостандыкский район, ул. Сатпаева, 90/26</div>
+    <div class="r"><span>E-mail</span>marketing@sghealthcare.kz</div>
+    <div class="r"><span>Сайт</span>seoulmed.kz · Instagram @seoulmed.kz</div>
+    <div class="r"><span>Часы</span>Пн–Пт 08:00–24:00 · Сб 08:00–20:00 · Вс выходной</div>
+  </div>
+  <div>
+    <img class="ph" src="assets/smc_lobby.jpg" style="height:42mm;border-radius:2.6mm" alt="">
+    <div class="qrs"><div><img src="assets/qr_site.svg" alt=""><b>Сайт</b>seoulmed.kz</div><div><img src="assets/qr_wa.svg" alt=""><b>WhatsApp</b>+7 771 799 95 26</div></div>
+  </div>
+</div>
+<h3 class="sub" style="color:#fff">Как пройти обследование</h3>
+<div class="steps"><div><i>01</i><b>Консультация</b>Позвоните или напишите в WhatsApp в Seoul Medical Center в Алматы</div><div><i>02</i><b>Подбор программы</b>Подберём пакет и дополнительные обследования под ваш возраст и жалобы</div><div><i>03</i><b>Обследование в Сеуле</b>Чекап в Chung-Ang University Hospital с русскоязычным координатором</div><div><i>04</i><b>Результаты</b>Заключения врачей и снимки на диске; консультация по дальнейшим шагам</div></div>
+<p class="note" style="margin-top:6mm;color:#9FC3DD">Сведения о клинике — по данным официального сайта Chung-Ang University Hospital; программы и цены — по прайс-листу Центра укрепления здоровья, со скидкой 20%, в южнокорейских вонах (KRW). Цены и состав программ могут меняться — уточняйте при записи. Контакты Seoul Medical Center — по данным seoulmed.kz (ноябрь 2026 г.).</p>
+</div>
+<div class="close"><img class="bgp" src="assets/doctor_tablet.jpg" alt=""><div class="cx"><img src="assets/cau_logo_white.png" alt=""><p>Университетский уровень диагностики —<br><span>с заботой о каждом пациенте с 1968 года</span></p></div></div>
+<footer class="ft"><span><b>Chung-Ang University Hospital</b> · Сеул, Корея</span><span>Seoul Medical Center · Алматы</span><span class="pn">10</span></footer>
+</section>
+</body></html>
