@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Business English B1</title>
+<title>Слова: English B1 · 日本語 N5</title>
 <meta name="description" content="Деловой квартал из 300 слов английского уровня B1: каждое слово — окно в башне. Карточки, тесты, интервальное повторение, озвучка. Работает без интернета.">
 <meta name="theme-color" content="#070912">
 <link rel="manifest" href="manifest.webmanifest">
@@ -11,7 +11,7 @@
 <link rel="icon" href="icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="English B1">
+<meta name="apple-mobile-web-app-title" content="Слова B1·N5">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
@@ -41,9 +41,16 @@ button,input{font:inherit;color:inherit;background:none;border:0;padding:0;curso
   -webkit-backdrop-filter:blur(22px) saturate(1.4);backdrop-filter:blur(22px) saturate(1.4);border-bottom:1px solid var(--edge);
   text-align:center;font:600 16px var(--d);letter-spacing:1.5px;text-transform:uppercase;opacity:0;transform:translateY(-6px);pointer-events:none;transition:.22s}
 .mini.on{opacity:1;transform:none}
+.head h1{white-space:nowrap}
 .head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:calc(env(safe-area-inset-top,0px) + 24px) 2px 8px}
 .eye{font:600 11.5px var(--f);letter-spacing:1.8px;text-transform:uppercase;color:var(--sub)}
 .head h1{margin:4px 0 0;font:700 40px/1 var(--d);letter-spacing:.5px;text-transform:uppercase}
+.hr{display:flex;align-items:center;gap:8px;flex:none}
+.lang{position:relative;display:grid;grid-template-columns:1fr 1fr;padding:3px;border-radius:12px;background:rgba(16,21,42,.9);border:1px solid var(--edge)}
+.lang .li{position:absolute;top:3px;bottom:3px;left:3px;width:calc((100% - 6px)/2);border-radius:9px;background:linear-gradient(180deg,rgba(255,198,92,.3),rgba(255,198,92,.1));border:1px solid rgba(255,198,92,.5);transition:transform .35s cubic-bezier(.3,1.3,.4,1)}
+.lang.ja .li{transform:translateX(100%)}
+.lang button{position:relative;z-index:1;min-width:40px;padding:8px 6px;font:700 14px var(--d);letter-spacing:.5px;text-align:center;color:#A3A8B8}
+.lang button[aria-pressed="true"]{color:var(--gold)}
 .ava{flex:none;width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font:700 16px var(--d);letter-spacing:.5px;color:#0A0A0A;
   background:linear-gradient(150deg,var(--gold2),var(--gold) 55%,#C98A22);box-shadow:0 8px 20px -8px rgba(255,198,92,.7),inset 0 1px 0 rgba(255,255,255,.6)}
 .card{position:relative;display:block;border-radius:18px;padding:18px;
@@ -264,6 +271,10 @@ button,input{font:inherit;color:inherit;background:none;border:0;padding:0;curso
 .pop{animation:pop .5s cubic-bezier(.3,1.4,.4,1)}
 @keyframes shake{20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
 .shake{animation:shake .4s}
+ruby rt{font-size:.55em;color:var(--sub);font-family:var(--f)}
+.ja-w{font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",sans-serif!important;letter-spacing:0!important}
+.blk.hj{border-color:rgba(91,140,255,.35)}.blk.hj h4{color:var(--blue)}.blk.hj p{margin:0;font-size:16px;line-height:1.6}
+@media (max-width:390px){.head h1{font-size:33px}}
 @media (max-width:370px){.num{font-size:28px}.badge .pct{font-size:44px}.head h1{font-size:34px}.whead h1{font-size:36px}.fcard .w{font-size:34px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
@@ -275,7 +286,7 @@ button,input{font:inherit;color:inherit;background:none;border:0;padding:0;curso
 
 <!-- ===== КВАРТАЛ ===== -->
 <section class="view" id="v-sum" data-view="sum">
-  <div class="head"><div><div class="eye" id="eye1"></div><h1>Квартал</h1></div><button class="ava" data-ava aria-label="Настройки">B1</button></div>
+  <div class="head"><div><div class="eye" id="eye1"></div><h1>Квартал</h1></div><div class="hr"><div class="lang" role="group" aria-label="Курс"><span class="li"></span><button data-course="en">EN</button><button data-course="ja">日本</button></div><button class="ava" data-ava aria-label="Настройки">B1</button></div></div>
   <div class="hero">
     <div class="citybox"><canvas id="city" aria-label="Деловой квартал: 12 башен — 12 тем, окна — слова. Поверните пальцем, нажмите на башню"></canvas>
       <div class="badge"><div class="pct" id="pct">0%</div><div class="pn" id="pn"></div></div></div>
@@ -296,7 +307,7 @@ button,input{font:inherit;color:inherit;background:none;border:0;padding:0;curso
 
 <!-- ===== СЛОВА ===== -->
 <section class="view" id="v-list" data-view="list" hidden>
-  <div class="head"><div><div class="eye" id="eye2">300 слов · 12 тем</div><h1>Слова</h1></div><button class="ava" data-ava aria-label="Настройки">B1</button></div>
+  <div class="head"><div><div class="eye" id="eye2">300 слов · 12 тем</div><h1>Слова</h1></div><div class="hr"><div class="lang" role="group" aria-label="Курс"><span class="li"></span><button data-course="en">EN</button><button data-course="ja">日本</button></div><button class="ava" data-ava aria-label="Настройки">B1</button></div></div>
   <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="q" type="search" placeholder="Поиск: invoice или счёт" autocomplete="off" autocapitalize="off" spellcheck="false"></label>
   <div class="seg" role="group" aria-label="Фильтр"><span class="ind" id="segInd"></span>
     <button data-f="all" aria-pressed="true">Все</button><button data-f="new" aria-pressed="false">Новые</button><button data-f="learn" aria-pressed="false">Учу</button><button data-f="known" aria-pressed="false">Выучено</button></div>
@@ -306,7 +317,7 @@ button,input{font:inherit;color:inherit;background:none;border:0;padding:0;curso
 
 <!-- ===== ПРАКТИКА ===== -->
 <section class="view" id="v-prac" data-view="prac" hidden>
-  <div class="head"><div><div class="eye">10 вопросов · 3–5 минут</div><h1>Практика</h1></div><button class="ava" data-ava aria-label="Настройки">B1</button></div>
+  <div class="head"><div><div class="eye">10 вопросов · 3–5 минут</div><h1>Практика</h1></div><div class="hr"><div class="lang" role="group" aria-label="Курс"><span class="li"></span><button data-course="en">EN</button><button data-course="ja">日本</button></div><button class="ava" data-ava aria-label="Настройки">B1</button></div></div>
   <div class="eye" style="margin:6px 2px 8px">Тема</div>
   <div class="topics" id="ptps"></div>
   <div class="sect"><div><h3>Режимы</h3><p>Сначала слова «к повторению», затем новые</p></div></div>
@@ -346,13 +357,16 @@ const D=__DATA__;
 const $=s=>document.querySelector(s),$$=s=>Array.from(document.querySelectorAll(s));
 const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const T=D.topics,W=T.flatMap(t=>t.words.map(w=>Object.assign(w,{t:t.id}))),BY={};W.forEach(w=>BY[w.id]=w);
-const TCOL=['#FFC65C','#2FE6C8','#FF5D8F','#5B8CFF','#A68BFF','#FF8A4C','#7CE38B','#4CC9F0','#F472B6','#C6F432','#E8B07A','#7DD3FC'];
+let CUR='en';try{CUR=localStorage.getItem('vocab-course')==='ja'?'ja':'en'}catch(e){}
+const C=D.courses[CUR],JA=CUR==='ja';
+const T=C.topics,W=T.flatMap(t=>t.words.map(w=>Object.assign(w,{t:t.id}))),BY={};W.forEach(w=>BY[w.id]=w);
+const TCOL=JA?['#FF7EA6','#E8483A','#FFC65C','#7CE38B','#5B8CFF','#A68BFF','#2FE6C8','#FF9A5C','#F2B6D0','#C6F432','#4CC9F0','#E8B07A']:['#FFC65C','#2FE6C8','#FF5D8F','#5B8CFF','#A68BFF','#FF8A4C','#7CE38B','#4CC9F0','#F472B6','#C6F432','#E8B07A','#7DD3FC'];
+const JW=JA?' ja-w':'';
 const TGR=i=>'linear-gradient(150deg,'+TCOL[i]+','+shade(TCOL[i],.7)+')';
 function shade(h,k){const n=parseInt(h.slice(1),16);const r=(n>>16)*k|0,g=(n>>8&255)*k|0,b=(n&255)*k|0;return 'rgb('+r+','+g+','+b+')';}
 
 /* ===== состояние ===== */
-const KEY='b1-words-v1';let S={w:{},days:{},goal:10,voice:'auto',auto:1};
+const KEY=JA?'n5-words-v1':'b1-words-v1';let S={w:{},days:{},goal:10,voice:'auto',auto:1};
 try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s)S=Object.assign(S,s)}catch(e){}
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
 const DAY=864e5,INT=[0,1,3,7,14,30,60];/* дни до повтора по коробкам 1..6 */
@@ -372,15 +386,15 @@ function resetWord(id){delete S.w[id];save();}
 
 /* ===== озвучка ===== */
 let VOICE=null;const SS=window.speechSynthesis;
-function pickVoice(){if(!SS)return;const vs=SS.getVoices().filter(v=>/^en[-_]/i.test(v.lang));if(!vs.length)return;
-  const score=v=>(/en[-_]GB/i.test(v.lang)?4:/en[-_]US/i.test(v.lang)?3:1)+(/premium|enhanced|neural|natural/i.test(v.name)?3:0)+(/daniel|serena|kate|samantha|ava|allison|stephanie|arthur|martha/i.test(v.name)?2:0)-(/compact|eloquence|fred|albert|bad|bahh|bells|boing|bubbles|cellos|wobble|whisper|zarvox|trinoids|organ|jester|junior|ralph|kathy|superstar|grandma|grandpa|rocko|sandy|shelley|flo|reed/i.test(v.name)?6:0);
+function pickVoice(){if(!SS)return;const vs=SS.getVoices().filter(v=>JA?/^ja[-_]/i.test(v.lang):/^en[-_]/i.test(v.lang));if(!vs.length)return;
+  const score=v=>(JA?(/kyoko|otoya|o-ren|hattori|haruka|nanami/i.test(v.name)?3:0):0)+(/en[-_]GB/i.test(v.lang)?4:/en[-_]US/i.test(v.lang)?3:1)+(/premium|enhanced|neural|natural/i.test(v.name)?3:0)+(/daniel|serena|kate|samantha|ava|allison|stephanie|arthur|martha/i.test(v.name)?2:0)-(/compact|eloquence|fred|albert|bad|bahh|bells|boing|bubbles|cellos|wobble|whisper|zarvox|trinoids|organ|jester|junior|ralph|kathy|superstar|grandma|grandpa|rocko|sandy|shelley|flo|reed/i.test(v.name)?6:0);
   VOICE=vs.sort((a,b)=>score(b)-score(a))[0];}
 if(SS){pickVoice();SS.onvoiceschanged=pickVoice;}
 const AU=new Audio();AU.preload='auto';
-function useTTS(){return S.voice==='ios'||(S.voice==='auto'&&VOICE)}
-function speak(w,kind){const text=kind==='ex'?w.ex:w.w;
-  if(useTTS()&&SS&&VOICE){try{SS.cancel();const u=new SpeechSynthesisUtterance(text);u.voice=VOICE;u.lang=VOICE.lang;u.rate=kind==='ex'?.92:.85;SS.speak(u);return}catch(e){}}
-  if(D.audio){try{AU.pause();AU.src='audio/'+w.id+(kind==='ex'?'-e':'-w')+'.m4a';AU.currentTime=0;AU.play().catch(()=>{})}catch(e){}}}
+function useTTS(){return JA||S.voice==='ios'||(S.voice==='auto'&&VOICE)}
+function speak(w,kind){const text=kind==='ex'?w.ex:(JA?w.kana:w.w);
+  if(useTTS()&&SS&&(VOICE||JA)){try{SS.cancel();const u=new SpeechSynthesisUtterance(text);if(VOICE)u.voice=VOICE;u.lang=VOICE?VOICE.lang:'ja-JP';u.rate=JA?(kind==='ex'?.85:.8):(kind==='ex'?.92:.85);SS.speak(u);return}catch(e){}}
+  if(C.audio){try{AU.pause();AU.src='audio/'+w.id+(kind==='ex'?'-e':'-w')+'.m4a';AU.currentTime=0;AU.play().catch(()=>{})}catch(e){}}}
 const SPK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="M15.5 9a4 4 0 010 6M18.3 6.5a7.5 7.5 0 010 11"/></svg>';
 
 /* ===== небо ===== */
@@ -394,7 +408,7 @@ const cv=$('#city'),cx2=cv.getContext('2d');let Wd=0,Hd=0,DPR=1;
 /* типы зданий: блоки снизу вверх; p — окон на фасад на этаж; на каждом этаже 4 фасада */
 const BT={A:[{w:.58,d:.52,fl:4,p:2,fh:.15}],B:[{w:.36,d:.36,fl:7,p:1,fh:.18}],C:[{w:.62,d:.54,fl:2,p:2,fh:.15},{w:.4,d:.36,fl:3,p:1,fh:.17}],
   D:[{w:.54,d:.5,fl:1,p:2,fh:.17},{w:.4,d:.4,fl:5,p:1,fh:.17}],E:[{w:.64,d:.34,fl:4,p:2,fh:.14}],F:[{w:.52,d:.5,fl:3,p:2,fh:.14},{w:.32,d:.32,fl:1,p:1,fh:.16}]};
-const LAYOUT=['C','B','A','D','E','F','B','C','D','A','F','E'],SPIRE={B:.32,D:.26};
+const LAYOUT=JA?['B','D','A','C','F','E','D','B','E','C','A','F']:['C','B','A','D','E','F','B','C','D','A','F','E'],SPIRE={B:.32,D:.26};
 const BLD=T.map((tp,i)=>{const c=i%4,r=i/4|0,bx=(c-1.5)*1.02,by=(r-1)*1.08;let z=0,slot=0;
   const blocks=BT[LAYOUT[i]].map(b=>{const o=Object.assign({},b,{z0:z,s0:slot,z1:z+b.fl*b.fh});z=o.z1;slot+=b.fl*4*b.p;return o;});
   return {tp,i,bx,by,blocks,h:z,spire:SPIRE[LAYOUT[i]]||0,col:TCOL[i]};});
@@ -474,7 +488,7 @@ addEventListener('resize',size);
 /* ===== сводка ===== */
 function towerHTML(n,col,frac){const wc='rgba(255,210,122,'+(.2+frac*.8).toFixed(2)+')';return '<div class="fc f1" style="--wc:'+wc+'"></div><div class="fc f2" style="--wc:'+wc+'"></div><div class="fc f3" style="--wc:'+wc+'"></div><div class="fc f4" style="--wc:'+wc+'"></div><div class="tp" style="--tc:'+col+'">'+n+'</div>';}
 function passHTML(big,lbl,on){const bg=on?'linear-gradient(140deg,#FFE3A3,#FFC65C 45%,#2FE6C8 140%)':'linear-gradient(140deg,#2A3150,#151A30)',c=on?'#10131F':'#A3A8B8';
-  return '<div class="sd fr" style="background:'+bg+';color:'+c+'"><span class="chip"></span><span class="lb">Пропуск · B1</span><span class="lb" style="opacity:.6">Business English</span><span class="nn">'+big+'<small>'+lbl+'</small></span></div><div class="sd bk"><div class="bc"></div><span>BUSINESS·DISTRICT</span></div>';}
+  return '<div class="sd fr" style="background:'+bg+';color:'+c+'"><span class="chip"></span><span class="lb">Пропуск · '+(JA?'N5':'B1')+'</span><span class="lb" style="opacity:.6">'+(JA?'日本語':'Business English')+'</span><span class="nn">'+big+'<small>'+lbl+'</small></span></div><div class="sd bk"><div class="bc"></div><span>BUSINESS·DISTRICT</span></div>';}
 function shaftHTML(n,g){const segs=Math.min(g,20);let h='';for(let i=1;i<segs;i++)h+='<div class="fl" style="bottom:'+(i/segs*100)+'%">'+(segs<=10||i%2===0?'<span>'+(i*g/segs|0)+'</span>':'')+'</div>';
   const p=Math.min(1,n/g),ch=Math.max(16,100/segs*1.4);return h+'<div class="cable" style="height:calc('+((1-p)*100)+'% - '+(p*0)+'px)"></div><div class="cab" style="height:'+ch+'%;bottom:calc('+(p*(100-ch))+'% )"></div>';}
 function streak(){let n=0;const d=new Date();const k=x=>x.getFullYear()+'-'+String(x.getMonth()+1).padStart(2,'0')+'-'+String(x.getDate()).padStart(2,'0');
@@ -500,7 +514,7 @@ function renderSum(){const c=counts();target=mastery(W);$('#pn').textContent=pha
   else{$('#tw').innerHTML=towerHTML('✓','#FFC65C',1);$('#nx-t').textContent='Все башни построены';$('#nx-n').textContent='300';$('#nx-k').textContent='зажгите все окна';$('#c-next').dataset.t='';}
   const sk=streak();$('#pass').innerHTML=passHTML(sk,' '+plural(sk,'день','дня','дней'),sk>0);$('#st-b').textContent=sk?(sk+' '+plural(sk,'день','дня','дней')+' подряд'):'Серия не начата';$('#st-k').textContent=(dayRec().t?'сегодня отмечено':'потренируйтесь сегодня');
   const [act,ans]=weekSVG($('#weeksvg'));$('#w1').textContent=act+'/7';$('#w2').textContent=ans;
-  $('#eye1').textContent=c.known+' из 300 окон горит · B1';$('#foot').textContent='300 частотных слов делового английского уровня B1 в 12 темах. Начатое слово достраивает этаж, выученное — зажигает окно: 4 верных ответа подряд с интервалами 1, 3, 7 и 14 дней. Прогресс хранится на этом устройстве.';}
+  $('#eye1').textContent=(JA?'日本語 N5 · ':'English B1 · ')+c.known+' из 300 окон горит';$('#foot').textContent=C.meta.foot+' Начатое слово достраивает этаж, выученное — зажигает окно: 4 верных ответа подряд с интервалами 1, 3, 7 и 14 дней. Прогресс хранится на этом устройстве.';}
 function plural(n,a,b,c){n=Math.abs(n)%100;const m=n%10;if(n>10&&n<20)return c;if(m>1&&m<5)return b;if(m===1)return a;return c;}
 
 /* ===== список ===== */
@@ -508,9 +522,9 @@ let lfilter='all',ltopic='all',lq='';
 function tpChips(el,cur,attr){el.innerHTML='<button class="tp" '+attr+'="all" aria-pressed="'+(cur==='all')+'">Все темы</button>'+T.map((tp,i)=>'<button class="tp" '+attr+'="'+tp.id+'" aria-pressed="'+(cur===tp.id)+'">'+(i+1)+'. '+esc(tp.ru)+'</button>').join('');}
 function bx(id){const b=box(id);return '<span class="bx">'+[1,2,3,4].map(i=>'<i class="'+(b>=i?'on':'')+'"></i>').join('')+'</span>';}
 function rowHTML(w){const s=status(w.id),ti=T.findIndex(t=>t.id===w.t);return '<div class="card tilt row'+(s==='known'?' known':'')+'" data-w="'+w.id+'" role="button" tabindex="0"><span class="flip'+(s==='known'?' on':'')+'"><span class="in"><span class="fa" style="background:'+TGR(ti)+'">'+w.id.slice(4)+'</span><span class="fa bk">✓</span></span></span>'+
-  '<div style="min-width:0"><div class="ti">'+esc(w.w)+'<span class="ip">'+esc(w.ipa)+'</span></div><div class="mt">'+bx(w.id)+esc(w.ru)+'</div></div><button class="say" data-say="'+w.id+'" aria-label="Произнести">'+SPK+'</button></div>';}
+  '<div style="min-width:0"><div class="ti"><span class="'+JW+'">'+esc(w.w)+'</span><span class="ip'+JW+'">'+esc(w.ipa)+'</span></div><div class="mt">'+bx(w.id)+esc(w.ru)+'</div></div><button class="say" data-say="'+w.id+'" aria-label="Произнести">'+SPK+'</button></div>';}
 function renderList(){tpChips($('#tps'),ltopic,'data-lt');const q=lq.trim().toLowerCase();let h='',n=0;
-  T.forEach((tp,i)=>{if(ltopic!=='all'&&ltopic!==tp.id)return;const items=tp.words.filter(w=>(lfilter==='all'||status(w.id)===lfilter)&&(!q||w.w.toLowerCase().includes(q)||w.ru.toLowerCase().includes(q)||(w.ru2||'').toLowerCase().includes(q)));if(!items.length)return;n+=items.length;
+  T.forEach((tp,i)=>{if(ltopic!=='all'&&ltopic!==tp.id)return;const items=tp.words.filter(w=>(lfilter==='all'||status(w.id)===lfilter)&&(!q||w.w.toLowerCase().includes(q)||(w.kana||'').includes(q)||(w.rom||'').includes(q)||w.ru.toLowerCase().includes(q)||(w.ru2||'').toLowerCase().includes(q)));if(!items.length)return;n+=items.length;
     const kn=tp.words.filter(w=>status(w.id)==='known').length;
     h+='<div class="sect"><div><h3>'+(i+1)+'. '+esc(tp.ru)+'</h3><p>'+esc(tp.en)+'</p></div><span class="pg">'+kn+'/25</span></div>'+items.map(rowHTML).join('');});
   $('#list').innerHTML=h||'<p class="foot">Ничего не найдено.</p>';$('#eye2').textContent=(q||lfilter!=='all'||ltopic!=='all')?n+' из 300 слов':'300 слов · 12 тем';bindTilt();}
@@ -519,7 +533,9 @@ $('#q').addEventListener('input',e=>{lq=e.target.value;renderList();});
 
 /* ===== практика ===== */
 let ptopic='all';
-const MODES=[['mix','★','var(--gold)','Тренировка дня','Новые слова + повторение, разные задания'],['flash','Aa','var(--violet)','Карточки','Слово → вспомните перевод, переверните'],
+const MODES=JA?[['mix','★','var(--gold)','Тренировка дня','Новые слова + повторение, разные задания'],['flash','あ','var(--violet)','Карточки','Слово → вспомните перевод на корейский'],
+  ['en2ru','日','var(--teal)','Выбор перевода','Японское слово → 4 варианта на корейском'],['ru2en','한','var(--pink)','Перевод на японский','Корейское слово → 4 варианта'],
+  ['read','読','#FF8A4C','Как читается?','Кандзи → выберите чтение каной'],['gap','__','#E8483A','Вставьте слово','Пропуск в японском предложении'],['listen','♪','var(--blue)','На слух','Послушайте и выберите перевод']]:[['mix','★','var(--gold)','Тренировка дня','Новые слова + повторение, разные задания'],['flash','Aa','var(--violet)','Карточки','Слово → вспомните перевод, переверните'],
   ['en2ru','EN','var(--teal)','Выбор перевода','Английское слово → 4 варианта'],['ru2en','RU','var(--pink)','Перевод на английский','Русское слово → 4 варианта'],
   ['gap','__','#FF8A4C','Вставьте слово','Пропуск в деловом предложении'],['listen','♪','var(--blue)','На слух','Послушайте слово и выберите перевод']];
 function renderPrac(){tpChips($('#ptps'),ptopic,'data-pt');$('#modes').innerHTML=MODES.map(m=>'<button class="card tilt mode" data-mode="'+m[0]+'"><span class="ic" style="background:'+m[2]+'">'+m[1]+'</span><span><b>'+m[3]+'</b><span>'+m[4]+'</span></span><span class="k">›</span></button>').join('');
@@ -533,7 +549,7 @@ function pool(topic){return topic==='all'?W:T.find(t=>t.id===topic).words}
 function pickWords(topic,n){const P=pool(topic);const d=shuffle(P.filter(w=>due(w.id))).sort((a,b)=>S.w[a.id].d-S.w[b.id].d);
   const l=shuffle(P.filter(w=>status(w.id)==='learn'&&!due(w.id)));const nw=P.filter(w=>!S.w[w.id]);const k=shuffle(P.filter(w=>status(w.id)==='known'&&!due(w.id)));
   return [...d,...nw,...l,...k].slice(0,n);}
-function buildSession(mode,topic){const types=['en2ru','ru2en','gap'].concat(D.audio||VOICE?['listen']:[]);let q=[];
+function buildSession(mode,topic){const types=['en2ru','ru2en','gap'].concat(JA?['read']:[]).concat(C.audio||VOICE?['listen']:[]);let q=[];
   if(mode==='mix'){const c=counts();const dueW=W.filter(w=>due(w.id)).sort((a,b)=>S.w[a.id].d-S.w[b.id].d).slice(0,20);
     const d=dayRec();let nn=Math.max(0,S.goal-d.n);if(!nn&&!dueW.length)nn=10;const nt=(topic==='all'?W:pool(topic)).filter(w=>!S.w[w.id]).slice(0,nn);
     nt.forEach(w=>q.push({w,type:'intro',isNew:true}));
@@ -544,7 +560,7 @@ function buildSession(mode,topic){const types=['en2ru','ru2en','gap'].concat(D.a
     q=q.filter((it,i)=>!(it.type!=='intro'&&it.isNew&&q.findIndex(x=>x.w===it.w&&x.type==='intro')>i));
     if(!q.length)q=pickWords(topic,10).map(w=>({w,type:types[Math.random()*types.length|0]}));}
   else if(mode==='hard'){q=W.filter(w=>S.w[w.id]&&S.w[w.id].x>0).sort((a,b)=>S.w[b.id].x-S.w[a.id].x).slice(0,10).map(w=>({w,type:types[Math.random()*types.length|0]}));}
-  else q=pickWords(topic,10).map(w=>({w,type:mode,isNew:!S.w[w.id]}));
+  else q=pickWords(topic,10).map(w=>({w,type:mode==='read'&&w.kana===w.w?'en2ru':mode,isNew:!S.w[w.id]}));
   return q;}
 function startSession(mode,topic){Q=buildSession(mode,topic||'all');if(!Q.length)return;qi=0;sesStat={ok:0,bad:0,newW:new Set(),up:0,known0:counts().known};
   const s=$('#ses');s.classList.add('open');s.setAttribute('aria-hidden','false');s.scrollTop=0;history.pushState({ses:1},'','#train');showQ();}
@@ -555,26 +571,32 @@ function distract(w,field,n){const same=W.filter(x=>x!==w&&x.t===w.t&&x[field]!=
   const out=[],seen=new Set([w[field].toLowerCase()]);for(const x of [...shuffle(samePos),...shuffle(same),...shuffle(other)]){const v=x[field];if(seen.has(v.toLowerCase()))continue;seen.add(v.toLowerCase());out.push(v);if(out.length>=n)break;}return out;}
 function progress(){$('#pbar').style.width=(qi/Q.length*100)+'%';$('#pcount').textContent=Math.min(qi+1,Q.length)+'/'+Q.length;}
 function showQ(){progress();if(qi>=Q.length)return showResult();const it=Q[qi],w=it.w,st_=$('#stage');let h='';
-  if(it.type==='intro'||it.type==='flash'){h='<div class="qlbl">'+(it.type==='intro'?'Новое слово':'Вспомните перевод')+'</div><div class="fcard" id="fc"><div class="in"><div class="side fr"><div class="pos">'+esc(w.pos)+' · '+esc(w.cefr)+'</div><div class="w">'+esc(w.w)+'</div><div class="ip">'+esc(w.ipa)+'</div><button class="say big" data-sayw="'+w.id+'" aria-label="Произнести">'+SPK+'</button><div class="hint">Нажмите на карточку, чтобы перевернуть</div></div>'+
-      '<div class="side bk"><div class="w" style="font-size:24px">'+esc(w.w)+'</div><div class="tr">'+esc(w.ru)+'</div>'+(w.ru2?'<div class="exr">'+esc(w.ru2)+'</div>':'')+'<div class="ex">'+hl(w)+'</div><div class="exr">'+esc(w.exRu)+'</div>'+(w.note?'<div class="exr" style="color:var(--amber)">'+esc(w.note)+'</div>':'')+'</div></div></div>';
+  if(it.type==='intro'||it.type==='flash'){h='<div class="qlbl">'+(it.type==='intro'?'Новое слово':'Вспомните перевод')+'</div><div class="fcard" id="fc"><div class="in"><div class="side fr"><div class="pos">'+esc(w.pos)+' · '+esc(w.cefr)+'</div><div class="w'+JW+'">'+esc(w.w)+'</div><div class="ip">'+esc(w.ipa)+(JA&&w.rom&&w.ipa!==w.rom?' · '+esc(w.rom):'')+'</div><button class="say big" data-sayw="'+w.id+'" aria-label="Произнести">'+SPK+'</button><div class="hint">Нажмите на карточку, чтобы перевернуть</div></div>'+
+      '<div class="side bk"><div class="w'+JW+'" style="font-size:24px">'+esc(w.w)+'</div><div class="tr">'+esc(w.ru)+'</div>'+(w.ru2?'<div class="exr">'+esc(w.ru2)+'</div>':'')+'<div class="ex">'+hl(w)+'</div><div class="exr">'+esc(w.exRu)+'</div>'+(w.hanja?'<div class="exr" style="color:var(--blue)">'+esc(w.hanja)+'</div>':'')+(w.note?'<div class="exr" style="color:var(--pink)">'+esc(w.note)+'</div>':'')+'</div></div></div>';
     h+=it.type==='intro'?'<div id="act"><button class="wide" id="flipb">Показать перевод</button></div>':'<div id="act"><button class="wide" id="flipb">Показать ответ</button></div>';}
   else{let prompt='',opts=[],ans='';
-    if(it.type==='en2ru'||it.type==='listen'){ans=w.ru;opts=shuffle([ans,...distract(w,'ru',3)]);
+    if(it.type==='read'){ans=w.kana;const kj=W.filter(x=>x!==w&&x.kana!==w.kana);opts=shuffle([ans,...shuffle(kj.filter(x=>x.t===w.t&&x.kana.length>=w.kana.length-1&&x.kana.length<=w.kana.length+1)).concat(shuffle(kj)).map(x=>x.kana).filter((v,i,a)=>a.indexOf(v)===i).slice(0,3)]);
+      prompt='<div class="qlbl">Как читается?</div><div class="card qcard"><div class="w'+JW+'" style="font-size:48px">'+esc(w.w)+'</div><div class="k">'+esc(w.ru)+'</div></div>';}
+    else if(it.type==='en2ru'||it.type==='listen'){ans=w.ru;opts=shuffle([ans,...distract(w,'ru',3)]);
       prompt=it.type==='listen'?'<div class="qlbl">Послушайте и выберите перевод</div><div class="card qcard"><button class="say big" data-sayw="'+w.id+'" aria-label="Ещё раз">'+SPK+'</button><div class="k">Нажмите, чтобы послушать ещё раз</div></div>'
-        :'<div class="qlbl">Выберите перевод</div><div class="card qcard"><div class="w">'+esc(w.w)+'</div><div class="k" style="font-family:var(--ipa)">'+esc(w.ipa)+'</div><button class="say" data-sayw="'+w.id+'" aria-label="Произнести">'+SPK+'</button></div>';}
+        :'<div class="qlbl">Выберите перевод</div><div class="card qcard"><div class="w'+JW+'">'+esc(w.w)+'</div><div class="k" style="font-family:var(--ipa)">'+esc(w.ipa)+'</div><button class="say" data-sayw="'+w.id+'" aria-label="Произнести">'+SPK+'</button></div>';}
     else if(it.type==='ru2en'){ans=w.w;opts=shuffle([ans,...distract(w,'w',3)]);prompt='<div class="qlbl">Как это по-английски?</div><div class="card qcard"><div class="ru">'+esc(w.ru)+'</div>'+(w.ru2?'<div class="k">'+esc(w.ru2)+'</div>':'')+'</div>';}
     else if(it.type==='gap'){ans=w.w;opts=shuffle([ans,...distract(w,'w',3)]);const g=esc(w.ex).replace(esc(w.exw),'<u>&nbsp;?&nbsp;</u>');
       prompt='<div class="qlbl">Вставьте слово</div><div class="card qcard"><div class="gap">'+g+'</div><div class="k">'+esc(w.exRu)+'</div></div>';}
-    h=prompt+'<div class="opts">'+opts.map(o=>'<button class="opt" data-o="'+esc(o)+'">'+esc(o)+'</button>').join('')+'</div><div id="act"></div>';it.ans=ans;}
+    h=prompt+'<div class="opts">'+opts.map(o=>'<button class="opt'+(JA&&it.type!=='en2ru'&&it.type!=='listen'?JW:'')+'" data-o="'+esc(o)+'">'+esc(o)+'</button>').join('')+'</div><div id="act"></div>';it.ans=ans;}
   st_.innerHTML=h;st_.classList.remove('view');void st_.offsetWidth;st_.classList.add('view');
   if(S.auto&&(it.type==='intro'||it.type==='flash'||it.type==='en2ru'||it.type==='listen'))setTimeout(()=>speak(w,'w'),it.type==='listen'?150:350);}
-function hl(w){return esc(w.ex).replace(esc(w.exw),'<mark>'+esc(w.exw)+'</mark>')}
+function hl(w){if(!w.exR)return esc(w.ex).replace(esc(w.exw),'<mark>'+esc(w.exw)+'</mark>');
+  const tk=[];w.exR.replace(/\{([^|{}]+)\|([^{}]+)\}|([^{]+?)(?=\{|$)/g,(m,b,r,p)=>{if(b)tk.push([b,r]);else if(p)for(const ch of p)tk.push([ch,null]);return ''});
+  const a=w.ex.indexOf(w.exw),z=a+w.exw.length;let pos=0,h='',open=false;
+  tk.forEach(([b,r])=>{const s0=pos,s1=pos+b.length;pos=s1;const inM=a>=0&&s0<z&&s1>a;if(inM&&!open){h+='<mark>';open=true}if(!inM&&open){h+='</mark>';open=false}h+=r?'<ruby>'+esc(b)+'<rt>'+esc(r)+'</rt></ruby>':esc(b);});
+  return '<span class="'+JW+'">'+h+(open?'</mark>':'')+'</span>';}
 function answer(btn){const it=Q[qi],w=it.w,ok=btn.dataset.o===it.ans;$$('.opt').forEach(b=>{b.disabled=true;if(b.dataset.o===it.ans)b.classList.add('ok')});
   if(!ok){btn.classList.add('bad','shake');}else btn.classList.add('pop');
   const b0=box(w.id);grade(w.id,ok,it.isNew);if(ok){sesStat.ok++;if(box(w.id)>b0)sesStat.up++;}else{sesStat.bad++;if(!Q.slice(qi+1).some(x=>x.w===w))Q.splice(Math.min(Q.length,qi+3),0,{w,type:it.type==='gap'?'en2ru':it.type,retry:1});}
   if(it.isNew)sesStat.newW.add(w.id);
   $('#act').innerHTML='<div class="fb '+(ok?'ok':'bad')+'"><div><b>'+(ok?'Верно':'Правильно: '+esc(it.ans))+'</b><div>'+esc(w.w)+' — '+esc(w.ru)+'</div><div class="k" style="margin-top:4px">'+hl(w)+'</div></div><button class="say" data-sayex="'+w.id+'" aria-label="Пример">'+SPK+'</button></div><button class="wide" id="nextb">Дальше</button>';
-  if(S.auto&&(it.type==='ru2en'||it.type==='gap'))speak(w,'w');}
+  if(S.auto&&(it.type==='ru2en'||it.type==='gap'||it.type==='read'))speak(w,'w');}
 function flipCard(){const it=Q[qi],fc=$('#fc');fc.classList.add('on');
   if(it.type==='intro')$('#act').innerHTML='<button class="wide" id="introok">Понятно, дальше</button><button class="ghost" id="knowb">Я уже знаю это слово</button>';
   else $('#act').innerHTML='<div class="two"><button class="n" id="fno">Не вспомнил</button><button class="y" id="fyes">Вспомнил</button></div>';}
@@ -604,16 +626,18 @@ $('#sx').addEventListener('click',()=>history.back());
 /* ===== слово ===== */
 let curW=null,from='list';
 function openW(id,push){const w=BY[id];if(!w)return;curW=w;const ti=T.findIndex(t=>t.id===w.t),tp=T[ti],i=tp.words.indexOf(w),pv=tp.words[i-1],nx=tp.words[i+1],s=S.w[id],b=box(id);
-  let h='<div class="whead"><div><h1>'+esc(w.w)+'</h1><div class="ip">'+esc(w.ipa)+'</div></div><button class="say big" data-sw="'+id+'" aria-label="Произнести">'+SPK+'</button></div>';
+  const L=JA?{tr:'번역 · перевод',ex:'예문 · пример',col:'자주 쓰는 표현',note:'설명 · объяснение',hj:'한자 풀이 · ханча'}:{tr:'Перевод',ex:'Пример',col:'Частые сочетания',note:'Обратите внимание',hj:''};
+  let h='<div class="whead"><div><h1 class="'+JW+'">'+esc(w.w)+'</h1><div class="ip">'+esc(w.ipa)+(JA&&w.rom&&w.ipa!==w.rom?' · '+esc(w.rom):'')+'</div></div><button class="say big" data-sw="'+id+'" aria-label="Произнести">'+SPK+'</button></div>';
   h+='<div class="chips"><span class="chip">'+esc(w.pos)+'</span><span class="chip">'+esc(w.cefr)+'</span><span class="chip" style="color:'+TCOL[ti]+'">'+(ti+1)+'. '+esc(tp.ru)+'</span></div>';
-  h+='<section class="card blk"><h4>Перевод</h4><div class="tr">'+esc(w.ru)+'</div>'+(w.ru2?'<div class="tr2">Также: '+esc(w.ru2)+'</div>':'')+'</section>';
-  h+='<section class="card blk"><h4>Пример</h4><div class="exen"><div>'+hl(w)+'</div><button class="say" data-se="'+id+'" aria-label="Произнести пример">'+SPK+'</button></div><div class="exru">'+esc(w.exRu)+'</div></section>';
-  h+='<section class="card blk"><h4>Частые сочетания</h4><div class="cols">'+w.col.map(c=>'<span>'+esc(c)+'</span>').join('')+'</div></section>';
-  if(w.note)h+='<section class="card blk note"><h4>Обратите внимание</h4><p>'+esc(w.note)+'</p></section>';
+  h+='<section class="card blk"><h4>'+L.tr+'</h4><div class="tr">'+esc(w.ru)+'</div>'+(w.ru2?'<div class="tr2">'+(JA?'그 밖에: ':'Также: ')+esc(w.ru2)+'</div>':'')+'</section>';
+  if(w.hanja)h+='<section class="card blk hj"><h4>'+L.hj+'</h4><p>'+esc(w.hanja)+'</p></section>';
+  h+='<section class="card blk"><h4>'+L.ex+'</h4><div class="exen"><div>'+hl(w)+'</div><button class="say" data-se="'+id+'" aria-label="Произнести пример">'+SPK+'</button></div><div class="exru">'+esc(w.exRu)+'</div></section>';
+  h+='<section class="card blk"><h4>'+L.col+'</h4><div class="cols">'+w.col.map(c=>'<span class="'+JW+'">'+esc(c)+'</span>').join('')+'</div></section>';
+  if(w.note)h+='<section class="card blk note"><h4>'+L.note+'</h4><p>'+esc(w.note)+'</p></section>';
   const stt=status(id),lbl={new:'Новое слово',learn:'Учу',known:'Выучено'}[stt];
   h+='<section class="card blk"><h4>Ваш прогресс · '+lbl+'</h4><div class="lvl">'+[1,2,3,4].map(k=>'<i class="'+(b>=k?'on':'')+'"></i>').join('')+'</div><div class="k">'+(s?('Правильно '+s.c+' · ошибок '+s.x+(s.b<6?' · следующее повторение '+when(s.d):'')):'Ещё не изучалось')+'</div>'+
     '<div class="acts"><button class="pri" id="wlearn">Тренировать</button>'+(stt==='known'?'<button id="wreset">Учить заново</button>':'<button id="wknow">Я знаю это слово</button>')+'</div></section>';
-  h+='<div class="nav2">'+(pv?'<button class="card" data-w="'+pv.id+'">‹ назад<b>'+esc(pv.w)+'</b></button>':'<span></span>')+(nx?'<button class="card" data-w="'+nx.id+'" style="text-align:right">дальше ›<b>'+esc(nx.w)+'</b></button>':'')+'</div>';
+  h+='<div class="nav2">'+(pv?'<button class="card" data-w="'+pv.id+'">‹ назад<b class="'+JW+'">'+esc(pv.w)+'</b></button>':'<span></span>')+(nx?'<button class="card" data-w="'+nx.id+'" style="text-align:right">дальше ›<b class="'+JW+'">'+esc(nx.w)+'</b></button>':'')+'</div>';
   $('#dbody').innerHTML=h;const d=$('#detail');$('#backLbl').textContent={sum:'Квартал',list:'Слова',prac:'Практика'}[from];d.scrollTop=0;d.classList.add('open');d.setAttribute('aria-hidden','false');
   if(push!==false)history.pushState({w:id},'','#'+id);}
 function when(ts){const d=Math.round((ts-Date.now())/DAY);if(ts<=Date.now())return 'сегодня';if(d<=0)return 'сегодня позже';if(d===1)return 'завтра';return 'через '+d+' '+plural(d,'день','дня','дней');}
@@ -656,11 +680,11 @@ function bindTilt(){if(RM)return;$$('.tilt').forEach(el=>{if(el._t)return;el._t=
 function onScroll(){$('#mini').classList.toggle('on',scrollY>60)}addEventListener('scroll',onScroll,{passive:true});
 
 /* ===== настройки ===== */
-const sh=$('#sheet');$('#s-lede').textContent=D.meta.lede;
+const sh=$('#sheet');$('#s-lede').textContent=C.meta.lede;
 function renderSheet(){$('#pk-goal').innerHTML=[5,10,15,20].map(n=>'<button data-goal="'+n+'" aria-pressed="'+(S.goal===n)+'">'+n+'</button>').join('');
-  $('#pk-voice').innerHTML=[['auto','Авто'],['ios','Голос iPhone'],['file','Встроенный']].map(v=>'<button data-voice="'+v[0]+'" aria-pressed="'+(S.voice===v[0])+'">'+v[1]+'</button>').join('');
+  $('#pk-voice').innerHTML=(JA?[['auto','Голос iPhone']]:[['auto','Авто'],['ios','Голос iPhone'],['file','Встроенный']]).map(v=>'<button data-voice="'+v[0]+'" aria-pressed="'+(S.voice===v[0])+'">'+v[1]+'</button>').join('');
   $('#pk-auto').innerHTML=[[1,'Включена'],[0,'Выключена']].map(v=>'<button data-auto="'+v[0]+'" aria-pressed="'+(S.auto===v[0])+'">'+v[1]+'</button>').join('');
-  $('#vinfo').textContent=VOICE?'Голос iPhone: '+VOICE.name+' ('+VOICE.lang+'). Встроенный — записанная британская озвучка, работает всегда. Более естественные голоса iPhone: Настройки → Универсальный доступ → Устная речь → Голоса → English.':'Голос iPhone недоступен — используется встроенная британская озвучка.';}
+  $('#vinfo').textContent=JA?(VOICE?'Японский голос iPhone: '+VOICE.name+'. Работает без интернета.':'Японский голос не найден. Установите: Настройки → Универсальный доступ → Устная речь → Голоса → Японский (Kyoko или Otoya).'):VOICE?'Голос iPhone: '+VOICE.name+' ('+VOICE.lang+'). Встроенный — записанная британская озвучка, работает всегда. Более естественные голоса iPhone: Настройки → Универсальный доступ → Устная речь → Голоса → English.':'Голос iPhone недоступен — используется встроенная британская озвучка.';}
 $$('[data-ava]').forEach(b=>b.addEventListener('click',()=>{renderSheet();sh.hidden=false}));
 sh.addEventListener('click',e=>{if(e.target===sh||e.target.id==='s-close'){sh.hidden=true;return}const b=e.target.closest('button');if(!b)return;
   if(b.dataset.goal){S.goal=+b.dataset.goal;save();renderSheet();renderSum();}
@@ -669,6 +693,10 @@ sh.addEventListener('click',e=>{if(e.target===sh||e.target.id==='s-close'){sh.hi
 $('#s-reset').addEventListener('click',e=>{const b=e.currentTarget;if(b.dataset.c!=='1'){b.dataset.c='1';b.textContent='Точно сбросить?';setTimeout(()=>{b.dataset.c='';b.textContent='Сбросить прогресс'},3000);return;}
   S.w={};S.days={};save();b.dataset.c='';b.textContent='Сбросить прогресс';sh.hidden=true;renderAll();});
 
+$$('.ava').forEach(a=>a.textContent=JA?'N5':'B1');
+$$('.lang').forEach(l=>{l.classList.toggle('ja',JA);l.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.course===CUR))});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-course]');if(!b)return;e.stopPropagation();if(b.dataset.course===CUR)return;try{localStorage.setItem('vocab-course',b.dataset.course)}catch(err){}
+  $$('.lang').forEach(l=>{l.classList.toggle('ja',b.dataset.course==='ja');l.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b||x.dataset.course===b.dataset.course))});document.body.style.transition='opacity .25s';setTimeout(()=>{document.body.style.opacity=0},120);setTimeout(()=>{location.replace(location.pathname)},380);},true);
 size();syncSeg();renderAll();bindTilt();
 if(location.hash&&BY[location.hash.slice(1)]){history.replaceState({w:location.hash.slice(1)},'');openW(location.hash.slice(1),false);}else if(location.hash==='#train')history.replaceState(null,'',location.pathname);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden){t0=performance.now();renderSum();kick()}});
