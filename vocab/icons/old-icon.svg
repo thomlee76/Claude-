@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs><radialGradient id="bg" cx="50%" cy="20%" r="90%"><stop offset="0" stop-color="#1F1D46"/><stop offset=".65" stop-color="#06070B"/></radialGradient>
+<radialGradient id="lit" cx="70%" cy="35%" r="80%"><stop offset="0" stop-color="#FFFBF2"/><stop offset=".6" stop-color="#F0E5D2"/><stop offset="1" stop-color="#B9A98F"/></radialGradient>
+<radialGradient id="dk" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#2A2D3D"/><stop offset="1" stop-color="#0E1017"/></radialGradient></defs>
+<rect width="512" height="512" fill="url(#bg)"/>
+<g transform="translate(256 256)">
+<ellipse rx="214" ry="66" transform="rotate(-15)" fill="none" stroke="#9C7CFF" stroke-width="7" opacity=".45"/>
+<circle r="132" fill="url(#dk)"/>
+<path d="M0-132A132 132 0 0 1 0 132A58 132 0 0 0 0-132z" fill="url(#lit)"/>
+<text x="-62" y="28" text-anchor="middle" font-family="Unbounded, Arial Black, sans-serif" font-weight="800" font-size="84" fill="#D4FF4F">Aa</text>
+<g transform="rotate(-15)"><path d="M-214 0A214 66 0 0 0 214 0" fill="none" stroke="#9C7CFF" stroke-width="7" stroke-linecap="round"/><circle cx="-164" cy="42.4" r="16" fill="#D4FF4F"/><circle cx="194" cy="-28" r="12" fill="#63E1FF"/></g>
+</g></svg>
