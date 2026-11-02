@@ -301,7 +301,7 @@ ruby rt{font-size:.55em;color:var(--sub);font-family:var(--f)}
   <button class="card tilt" id="c-week" style="width:100%;margin-top:12px"><h2>Неделя</h2><span class="arrow">›</span><div class="k" style="margin-top:6px">высота дома — ответы за день, свет — день с тренировкой</div>
     <svg class="weeksvg" id="weeksvg" aria-hidden="true"></svg>
     <div class="wk"><span>Дней с тренировкой · <b id="w1"></b></span><span>Ответов · <b id="w2"></b></span></div></button>
-  <button class="btn" data-go="list">Все 300 слов</button>
+  <button class="btn" data-go="list" id="allw">Все 300 слов</button>
   <p class="foot" id="foot"></p>
 </section>
 
@@ -362,6 +362,7 @@ const C=D.courses[CUR],JA=CUR==='ja';
 const T=C.topics,W=T.flatMap(t=>t.words.map(w=>Object.assign(w,{t:t.id}))),BY={};W.forEach(w=>BY[w.id]=w);
 const TCOL=JA?['#FF7EA6','#E8483A','#FFC65C','#7CE38B','#5B8CFF','#A68BFF','#2FE6C8','#FF9A5C','#F2B6D0','#C6F432','#4CC9F0','#E8B07A']:['#FFC65C','#2FE6C8','#FF5D8F','#5B8CFF','#A68BFF','#FF8A4C','#7CE38B','#4CC9F0','#F472B6','#C6F432','#E8B07A','#7DD3FC'];
 const JW=JA?' ja-w':'';
+while(TCOL.length<T.length)TCOL.push(TCOL[TCOL.length-12]);
 const TGR=i=>'linear-gradient(150deg,'+TCOL[i]+','+shade(TCOL[i],.7)+')';
 function shade(h,k){const n=parseInt(h.slice(1),16);const r=(n>>16)*k|0,g=(n>>8&255)*k|0,b=(n&255)*k|0;return 'rgb('+r+','+g+','+b+')';}
 
@@ -375,7 +376,7 @@ const st=id=>S.w[id];
 const box=id=>(S.w[id]||{}).b||0;
 const status=id=>{const b=box(id);return !S.w[id]?'new':b>=4?'known':'learn'};
 const due=id=>{const s=S.w[id];return s&&s.b<6&&s.d<=Date.now()};
-const mastery=list=>list.reduce((a,w)=>a+Math.min(box(w.id),4)/4,0)/list.length;
+const mastery=list=>list.length?list.reduce((a,w)=>a+Math.min(box(w.id),4)/4,0)/list.length:0;
 function dayRec(){const k=today();return S.days[k]||(S.days[k]={n:0,r:0,ok:0,t:0})}
 function grade(id,ok,isNew){const now=Date.now();let s=S.w[id];const d=dayRec();d.t++;if(ok)d.ok++;
   if(!s){s=S.w[id]={b:0,d:now,c:0,x:0};d.n++;}else if(!isNew)d.r++;
@@ -406,10 +407,12 @@ $$('.arrow').forEach(a=>a.innerHTML=arrowSVG);
 /* ===== квартал: 12 башен, окна = слова ===== */
 const cv=$('#city'),cx2=cv.getContext('2d');let Wd=0,Hd=0,DPR=1;
 /* типы зданий: блоки снизу вверх; p — окон на фасад на этаж; на каждом этаже 4 фасада */
-const BT={A:[{w:.58,d:.52,fl:4,p:2,fh:.15}],B:[{w:.36,d:.36,fl:7,p:1,fh:.18}],C:[{w:.62,d:.54,fl:2,p:2,fh:.15},{w:.4,d:.36,fl:3,p:1,fh:.17}],
+const BT0={A:[{w:.58,d:.52,fl:4,p:2,fh:.15}],B:[{w:.36,d:.36,fl:7,p:1,fh:.18}],C:[{w:.62,d:.54,fl:2,p:2,fh:.15},{w:.4,d:.36,fl:3,p:1,fh:.17}],
   D:[{w:.54,d:.5,fl:1,p:2,fh:.17},{w:.4,d:.4,fl:5,p:1,fh:.17}],E:[{w:.64,d:.34,fl:4,p:2,fh:.14}],F:[{w:.52,d:.5,fl:3,p:2,fh:.14},{w:.32,d:.32,fl:1,p:1,fh:.16}]};
-const LAYOUT=JA?['B','D','A','C','F','E','D','B','E','C','A','F']:['C','B','A','D','E','F','B','C','D','A','F','E'],SPIRE={B:.32,D:.26};
-const BLD=T.map((tp,i)=>{const c=i%4,r=i/4|0,bx=(c-1.5)*1.02,by=(r-1)*1.08;let z=0,slot=0;
+const LAYOUT0=JA?['B','D','A','C','F','E','D','B','E','C','A','F']:['C','B','A','D','E','F','B','C','D','A','F','E'],SPIRE={B:.32,D:.26};
+const GC=T.length>12?5:4,GR=Math.ceil(T.length/GC),SX=1.02,SY=1.08,GX=GC*SX/2+.25,GY=GR*SY/2+.28;
+const BT=BT0,LAYOUT=T.map((t,i)=>LAYOUT0[i%LAYOUT0.length]);
+const BLD=T.map((tp,i)=>{const c=i%GC,r=i/GC|0,bx=(c-(GC-1)/2)*SX,by=(r-(GR-1)/2)*SY;let z=0,slot=0;
   const blocks=BT[LAYOUT[i]].map(b=>{const o=Object.assign({},b,{z0:z,s0:slot,z1:z+b.fl*b.fh});z=o.z1;slot+=b.fl*4*b.p;return o;});
   return {tp,i,bx,by,blocks,h:z,spire:SPIRE[LAYOUT[i]]||0,col:TCOL[i]};});
 let yaw=.72,yawV=0,drag=null,t0=performance.now(),hits=[],shown=0,target=0,WS=[];
@@ -421,12 +424,12 @@ function mix(h,k,base){const a=parseInt(h.slice(1),16),b=parseInt((base||'#12183
 /* состояние окна слова: 0 — новое, 1..3 — учу, 4 — выучено; due — пора повторить */
 function wstate(w){const s=S.w[w.id];if(!s)return {k:0};return {k:Math.min(4,s.b||1),due:s.b<6&&s.d<=Date.now()};}
 function faces(bx,by,hw,hd){return [[[bx+hw,by+hd],[bx-hw,by+hd],0,1],[[bx-hw,by+hd],[bx-hw,by-hd],-1,0],[[bx-hw,by-hd],[bx+hw,by-hd],0,-1],[[bx+hw,by-hd],[bx+hw,by+hd],1,0]];}
-function drawGround(c,t){const g=[[-2.3,-1.9],[2.3,-1.9],[2.3,1.9],[-2.3,1.9]].map(p=>P(p[0],p[1],0));
+function drawGround(c,t){const g=[[-GX,-GY],[GX,-GY],[GX,GY],[-GX,GY]].map(p=>P(p[0],p[1],0));
   quad(c,g[0],g[1],g[2],g[3]);const gr=c.createLinearGradient(0,Math.min(...g.map(p=>p[1])),0,Math.max(...g.map(p=>p[1])));gr.addColorStop(0,'#0C1022');gr.addColorStop(1,'#131936');c.fillStyle=gr;c.fill();
   c.strokeStyle='rgba(91,140,255,.25)';c.lineWidth=1;c.stroke();
-  /* сетка-чертёж */c.strokeStyle='rgba(91,140,255,.07)';for(let k=-2.2;k<=2.21;k+=.2){let a=P(k,-1.9,0),b=P(k,1.9,0);c.beginPath();c.moveTo(a[0],a[1]);c.lineTo(b[0],b[1]);c.stroke();}
-  for(let k=-1.8;k<=1.81;k+=.2){let a=P(-2.3,k,0),b=P(2.3,k,0);c.beginPath();c.moveTo(a[0],a[1]);c.lineTo(b[0],b[1]);c.stroke();}
-  /* улицы */const streets=[...[-1.53,-.51,.51,1.53].map(x=>[[x,-1.9],[x,1.9]]),...[-.54,.54,-1.62,1.62].map(y=>[[-2.3,y],[2.3,y]])];
+  /* сетка-чертёж */c.strokeStyle='rgba(91,140,255,.07)';for(let k=-GX+.1;k<=GX-.09;k+=.2){let a=P(k,-GY,0),b=P(k,GY,0);c.beginPath();c.moveTo(a[0],a[1]);c.lineTo(b[0],b[1]);c.stroke();}
+  for(let k=-GY+.1;k<=GY-.09;k+=.2){let a=P(-GX,k,0),b=P(GX,k,0);c.beginPath();c.moveTo(a[0],a[1]);c.lineTo(b[0],b[1]);c.stroke();}
+  /* улицы */const streets=[...Array.from({length:GC+1},(_,c)=>(c-GC/2)*SX).map(x=>[[x,-GY],[x,GY]]),...Array.from({length:GR+1},(_,r)=>(r-GR/2)*SY).map(y=>[[-GX,y],[GX,y]])];
   c.lineCap='round';streets.forEach(([a,b])=>{const A=P(a[0],a[1],0),B=P(b[0],b[1],0);c.strokeStyle='rgba(20,26,52,.95)';c.lineWidth=Math.max(3,sc*.09);c.beginPath();c.moveTo(A[0],A[1]);c.lineTo(B[0],B[1]);c.stroke();
     c.strokeStyle='rgba(255,198,92,.16)';c.lineWidth=1;c.setLineDash([3,5]);c.stroke();c.setLineDash([]);});
   /* машины */if(!RM)streets.forEach(([a,b],i)=>{for(let j=0;j<2;j++){const len=Math.hypot(b[0]-a[0],b[1]-a[1]);let u=((t*(.09+i%3*.03)/len)+j*.5+i*.13)%1;if(j)u=1-u;
@@ -469,14 +472,14 @@ let running=false;function kick(){if(!running){running=true;t0=performance.now()
 function frame(now){if(tab!=='sum'||document.hidden){running=false;return}const dt=Math.min(.05,(now-t0)/1000);t0=now;const t=now/1000;
   if(!drag){yawV+=((RM?0:.07)-yawV)*Math.min(1,dt*1.5);yaw+=yawV*dt;}cs=Math.cos(yaw);sn=Math.sin(yaw);
   shown+=(target-shown)*Math.min(1,dt*2.6);if(RM)shown=target;
-  const c=cx2;c.setTransform(DPR,0,0,DPR,0,0);c.clearRect(0,0,Wd,Hd);sc=Math.min(Wd/5.6,Hd/4.1);ox=Wd/2;oy=Hd*.6;
+  const c=cx2;c.setTransform(DPR,0,0,DPR,0,0);c.clearRect(0,0,Wd,Hd);sc=Math.min(Wd/(GX*2+1),Hd/(GY*2+.3));ox=Wd/2;oy=Hd*(GR>3?.62:.6);
   /* свечение города */const gl=c.createRadialGradient(ox,oy-sc*.4,sc*.2,ox,oy-sc*.4,sc*3);gl.addColorStop(0,'rgba(255,170,90,'+(0.05+shown*.16)+')');gl.addColorStop(1,'rgba(255,170,90,0)');c.fillStyle=gl;c.fillRect(0,0,Wd,Hd);
   drawGround(c,t);const nt=nextTopic();hits=[];
   BLD.map(B=>({B,d:B.bx*sn+B.by*cs})).sort((a,b)=>a.d-b.d).forEach(({B,d})=>{drawBuilding(c,B,t,nt&&nt.id===B.tp.id);
     const hw=Math.max(...B.blocks.map(b=>b.w))/2+.05,hd=Math.max(...B.blocks.map(b=>b.d))/2+.05,pts=[];[0,B.h+B.spire].forEach(z=>[[1,1],[1,-1],[-1,1],[-1,-1]].forEach(s=>pts.push(P(B.bx+s[0]*hw,B.by+s[1]*hd,z))));
     hits.push({id:B.tp.id,d,x0:Math.min(...pts.map(p=>p[0])),x1:Math.max(...pts.map(p=>p[0])),y0:Math.min(...pts.map(p=>p[1])),y1:Math.max(...pts.map(p=>p[1]))});});
   $('#pct').textContent=Math.round(shown*100)+'%';requestAnimationFrame(frame);}
-function phaseName(f,started){if(!started)return 'Котлован · начните с 10 слов';if(f<.05)return 'Фундамент';if(f<.25)return 'Первые этажи';if(f<.5)return 'Квартал растёт';if(f<.85)return 'Огни Сити';if(f<1)return 'Почти сдан';return 'Квартал сдан · все 300 слов';}
+function phaseName(f,started){if(!started)return 'Котлован · начните с 10 слов';if(f<.05)return 'Фундамент';if(f<.25)return 'Первые этажи';if(f<.5)return 'Квартал растёт';if(f<.85)return 'Огни Сити';if(f<1)return 'Почти сдан';return 'Квартал сдан · все '+W.length+' слов';}
 cv.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,y0:yaw,moved:0,t:performance.now()};});
 addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag.x;drag.moved=Math.max(drag.moved,Math.abs(dx),Math.abs(e.clientY-drag.y));if(Math.abs(dx)>4){const ny=drag.y0-dx*.012;yawV=(ny-yaw)/Math.max(.016,(performance.now()-drag.t)/1000);drag.t=performance.now();yaw=ny;drag.y0=yaw;drag.x=e.clientX;}});
 addEventListener('pointerup',e=>{if(!drag)return;const d=drag;drag=null;yawV=Math.max(-3,Math.min(3,yawV));
@@ -511,10 +514,10 @@ function renderSum(){const c=counts();target=mastery(W);$('#pn').textContent=pha
   $('#td-go').textContent=(newLeft||dueN)?'Поехали ›':'Ещё 10 слов ›';
   const nt=nextTopic(),ti=nt?T.indexOf(nt):-1;
   if(nt){const lw=nt.words.filter(w=>status(w.id)==='known').length;$('#tw').innerHTML=towerHTML(String(ti+1).padStart(2,'0'),TCOL[ti],lw/25);$('#nx-t').textContent=nt.ru;$('#nx-n').textContent=lw+'/25';$('#nx-k').textContent='окон горит · '+nt.en;$('#c-next').dataset.t=nt.id;}
-  else{$('#tw').innerHTML=towerHTML('✓','#FFC65C',1);$('#nx-t').textContent='Все башни построены';$('#nx-n').textContent='300';$('#nx-k').textContent='зажгите все окна';$('#c-next').dataset.t='';}
+  else{$('#tw').innerHTML=towerHTML('✓','#FFC65C',1);$('#nx-t').textContent='Все башни построены';$('#nx-n').textContent=String(W.length);$('#nx-k').textContent='зажгите все окна';$('#c-next').dataset.t='';}
   const sk=streak();$('#pass').innerHTML=passHTML(sk,' '+plural(sk,'день','дня','дней'),sk>0);$('#st-b').textContent=sk?(sk+' '+plural(sk,'день','дня','дней')+' подряд'):'Серия не начата';$('#st-k').textContent=(dayRec().t?'сегодня отмечено':'потренируйтесь сегодня');
   const [act,ans]=weekSVG($('#weeksvg'));$('#w1').textContent=act+'/7';$('#w2').textContent=ans;
-  $('#eye1').textContent=(JA?'日本語 N5 · ':'English B1 · ')+c.known+' из 300 окон горит';$('#foot').textContent=C.meta.foot+' Начатое слово достраивает этаж, выученное — зажигает окно: 4 верных ответа подряд с интервалами 1, 3, 7 и 14 дней. Прогресс хранится на этом устройстве.';}
+  $('#eye1').textContent=(JA?'日本語 N5 · ':'English B1 · ')+c.known+'/'+W.length+' окон';$('#foot').textContent=C.meta.foot+' Начатое слово достраивает этаж, выученное — зажигает окно: 4 верных ответа подряд с интервалами 1, 3, 7 и 14 дней. Прогресс хранится на этом устройстве.';}
 function plural(n,a,b,c){n=Math.abs(n)%100;const m=n%10;if(n>10&&n<20)return c;if(m>1&&m<5)return b;if(m===1)return a;return c;}
 
 /* ===== список ===== */
@@ -527,7 +530,7 @@ function renderList(){tpChips($('#tps'),ltopic,'data-lt');const q=lq.trim().toLo
   T.forEach((tp,i)=>{if(ltopic!=='all'&&ltopic!==tp.id)return;const items=tp.words.filter(w=>(lfilter==='all'||status(w.id)===lfilter)&&(!q||w.w.toLowerCase().includes(q)||(w.kana||'').includes(q)||(w.rom||'').includes(q)||w.ru.toLowerCase().includes(q)||(w.ru2||'').toLowerCase().includes(q)));if(!items.length)return;n+=items.length;
     const kn=tp.words.filter(w=>status(w.id)==='known').length;
     h+='<div class="sect"><div><h3>'+(i+1)+'. '+esc(tp.ru)+'</h3><p>'+esc(tp.en)+'</p></div><span class="pg">'+kn+'/25</span></div>'+items.map(rowHTML).join('');});
-  $('#list').innerHTML=h||'<p class="foot">Ничего не найдено.</p>';$('#eye2').textContent=(q||lfilter!=='all'||ltopic!=='all')?n+' из 300 слов':'300 слов · 12 тем';bindTilt();}
+  $('#list').innerHTML=h||'<p class="foot">Ничего не найдено.</p>';$('#eye2').textContent=(q||lfilter!=='all'||ltopic!=='all')?n+' из '+W.length+' слов':W.length+' слов · '+T.length+' тем';bindTilt();}
 function syncSeg(){const fs=['all','new','learn','known'];$$('.seg button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.f===lfilter));$('#segInd').style.transform='translateX('+fs.indexOf(lfilter)*100+'%)';}
 $('#q').addEventListener('input',e=>{lq=e.target.value;renderList();});
 
@@ -693,7 +696,7 @@ sh.addEventListener('click',e=>{if(e.target===sh||e.target.id==='s-close'){sh.hi
 $('#s-reset').addEventListener('click',e=>{const b=e.currentTarget;if(b.dataset.c!=='1'){b.dataset.c='1';b.textContent='Точно сбросить?';setTimeout(()=>{b.dataset.c='';b.textContent='Сбросить прогресс'},3000);return;}
   S.w={};S.days={};save();b.dataset.c='';b.textContent='Сбросить прогресс';sh.hidden=true;renderAll();});
 
-$$('.ava').forEach(a=>a.textContent=JA?'N5':'B1');
+$$('.ava').forEach(a=>a.textContent=JA?'N5':'B1');if(JA)$('#q').placeholder='Поиск: 人, ひと или 사람';$('#allw').textContent='Все '+W.length+' слов';$('.tip').textContent=T.length+' башен — '+T.length+' тем, каждое окно — слово. Поверните квартал пальцем, нажмите на башню';
 $$('.lang').forEach(l=>{l.classList.toggle('ja',JA);l.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.course===CUR))});
 document.addEventListener('click',e=>{const b=e.target.closest('[data-course]');if(!b)return;e.stopPropagation();if(b.dataset.course===CUR)return;try{localStorage.setItem('vocab-course',b.dataset.course)}catch(err){}
   $$('.lang').forEach(l=>{l.classList.toggle('ja',b.dataset.course==='ja');l.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b||x.dataset.course===b.dataset.course))});document.body.style.transition='opacity .25s';setTimeout(()=>{document.body.style.opacity=0},120);setTimeout(()=>{location.replace(location.pathname)},380);},true);
