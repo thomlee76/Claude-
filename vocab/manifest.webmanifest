@@ -1,7 +1,7 @@
 {
- "name": "Business English B1 — 300 слов",
- "short_name": "English B1",
- "description": "300 частотных слов делового английского уровня B1",
+ "name": "EN · 日本 — English B1 и 日本語 N5",
+ "short_name": "EN · 日本",
+ "description": "300 слов делового английского B1 и 500 японских слов N5",
  "lang": "ru",
  "start_url": "./",
  "scope": "./",
@@ -9,8 +9,21 @@
  "background_color": "#06070B",
  "theme_color": "#06070B",
  "icons": [
-  {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
-  {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"},
-  {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
  ]
 }
