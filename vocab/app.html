@@ -630,7 +630,7 @@ $('#sx').addEventListener('click',()=>history.back());
 let curW=null,from='list';
 function openW(id,push){const w=BY[id];if(!w)return;curW=w;const ti=T.findIndex(t=>t.id===w.t),tp=T[ti],i=tp.words.indexOf(w),pv=tp.words[i-1],nx=tp.words[i+1],s=S.w[id],b=box(id);
   const L=JA?{tr:'번역 · перевод',ex:'예문 · пример',col:'자주 쓰는 표현',note:'설명 · объяснение',hj:'한자 풀이 · ханча'}:{tr:'Перевод',ex:'Пример',col:'Частые сочетания',note:'Обратите внимание',hj:''};
-  let h='<div class="whead"><div><h1 class="'+JW+'">'+esc(w.w)+'</h1><div class="ip">'+esc(w.ipa)+(JA&&w.rom&&w.ipa!==w.rom?' · '+esc(w.rom):'')+'</div></div><button class="say big" data-sw="'+id+'" aria-label="Произнести">'+SPK+'</button></div>';
+  let h='<div class="whead"><div><h1 class="'+JW+'"'+(w.w.length>(JA?6:14)?' style="font-size:'+(JA?30:34)+'px"':'')+'>'+esc(w.w)+'</h1><div class="ip">'+esc(w.ipa)+(JA&&w.rom&&w.ipa!==w.rom?' · '+esc(w.rom):'')+'</div></div><button class="say big" data-sw="'+id+'" aria-label="Произнести">'+SPK+'</button></div>';
   h+='<div class="chips"><span class="chip">'+esc(w.pos)+'</span><span class="chip">'+esc(w.cefr)+'</span><span class="chip" style="color:'+TCOL[ti]+'">'+(ti+1)+'. '+esc(tp.ru)+'</span></div>';
   h+='<section class="card blk"><h4>'+L.tr+'</h4><div class="tr">'+esc(w.ru)+'</div>'+(w.ru2?'<div class="tr2">'+(JA?'그 밖에: ':'Также: ')+esc(w.ru2)+'</div>':'')+'</section>';
   if(w.hanja)h+='<section class="card blk hj"><h4>'+L.hj+'</h4><p>'+esc(w.hanja)+'</p></section>';
