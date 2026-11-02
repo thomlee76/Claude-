@@ -1,0 +1,427 @@
+[
+ {
+  "id": "t03-01",
+  "w": "sale",
+  "pos": "noun",
+  "ipa": "/seɪl/",
+  "ru": "продажа",
+  "ru2": "распродажа; sales — объём продаж, отдел продаж",
+  "ex": "This was our biggest sale in Kazakhstan last year.",
+  "exw": "sale",
+  "exRu": "Это была наша самая крупная продажа в Казахстане за прошлый год.",
+  "col": [
+   "for sale",
+   "sales figures"
+  ],
+  "note": "for sale — продаётся; on sale — в продаже (BrE) / со скидкой (AmE)",
+  "cefr": "A2"
+ },
+ {
+  "id": "t03-02",
+  "w": "sell",
+  "pos": "verb",
+  "ipa": "/sel/",
+  "ru": "продавать",
+  "ru2": "продаваться (sell well)",
+  "ex": "Our partner in Mexico sold twelve ultrasound machines last quarter.",
+  "exw": "sold",
+  "exRu": "В прошлом квартале наш партнёр в Мексике продал двенадцать аппаратов УЗИ.",
+  "col": [
+   "sell well",
+   "sell sth to sb"
+  ],
+  "note": "sell – sold – sold",
+  "cefr": "A2"
+ },
+ {
+  "id": "t03-03",
+  "w": "customer",
+  "pos": "noun",
+  "ipa": "/ˈkʌstəmə/",
+  "ru": "покупатель, клиент",
+  "ru2": "заказчик",
+  "ex": "The customer wants the equipment delivered before the end of June.",
+  "exw": "customer",
+  "exRu": "Покупатель хочет получить оборудование до конца июня.",
+  "col": [
+   "customer service",
+   "regular customer"
+  ],
+  "note": "Не путать с customs — таможня",
+  "cefr": "A2"
+ },
+ {
+  "id": "t03-04",
+  "w": "client",
+  "pos": "noun",
+  "ipa": "/klaɪənt/",
+  "ru": "клиент",
+  "ru2": "заказчик",
+  "ex": "Our biggest client is a private diagnostic centre in Almaty.",
+  "exw": "client",
+  "exRu": "Наш крупнейший клиент — частный диагностический центр в Алматы.",
+  "col": [
+   "key client",
+   "meet a client"
+  ],
+  "note": "client — обычно для услуг и долгих отношений; customer — покупатель товара",
+  "cefr": "B1"
+ },
+ {
+  "id": "t03-05",
+  "w": "buyer",
+  "pos": "noun",
+  "ipa": "/baɪə/",
+  "ru": "покупатель",
+  "ru2": "закупщик, байер",
+  "ex": "The hospital's buyer wants to see our price list first.",
+  "exw": "buyer",
+  "exRu": "Закупщик больницы хочет сначала увидеть наш прайс-лист.",
+  "col": [
+   "potential buyer",
+   "first-time buyer"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t03-06",
+  "w": "distributor",
+  "pos": "noun",
+  "ipa": "/dɪˈstrɪbjətə/",
+  "ru": "дистрибьютор",
+  "ru2": "оптовый поставщик",
+  "ex": "We are looking for a new distributor in Peru.",
+  "exw": "distributor",
+  "exRu": "Мы ищем нового дистрибьютора в Перу.",
+  "col": [
+   "exclusive distributor",
+   "local distributor"
+  ],
+  "note": "Ударение на второй слог: dis-TRI-bu-tor",
+  "cefr": "B2"
+ },
+ {
+  "id": "t03-07",
+  "w": "dealer",
+  "pos": "noun",
+  "ipa": "/ˈdiːlə/",
+  "ru": "дилер",
+  "ru2": "торговец",
+  "ex": "Our dealer in Guadalajara has sold all the portable X-ray units.",
+  "exw": "dealer",
+  "exRu": "Наш дилер в Гвадалахаре продал все переносные рентгеновские аппараты.",
+  "col": [
+   "authorised dealer",
+   "car dealer"
+  ],
+  "note": "dealer обычно продаёт конечным клиентам; distributor работает оптом на территории",
+  "cefr": "B2"
+ },
+ {
+  "id": "t03-08",
+  "w": "order",
+  "pos": "noun",
+  "ipa": "/ˈɔːdə/",
+  "ru": "заказ",
+  "ru2": "порядок, приказ; заказывать (v)",
+  "ex": "We received an order for three digital detectors from Chile.",
+  "exw": "order",
+  "exRu": "Мы получили из Чили заказ на три цифровых детектора.",
+  "col": [
+   "place an order",
+   "order confirmation"
+  ],
+  "note": "place an order (не make an order); in order to — чтобы",
+  "cefr": "A2"
+ },
+ {
+  "id": "t03-09",
+  "w": "purchase",
+  "pos": "verb",
+  "ipa": "/ˈpɜːtʃəs/",
+  "ru": "закупать, приобретать",
+  "ru2": "покупка, закупка (n)",
+  "ex": "The clinic plans to purchase two new ultrasound systems this year.",
+  "exw": "purchase",
+  "exRu": "В этом году клиника планирует приобрести две новые УЗИ-системы.",
+  "col": [
+   "purchase equipment",
+   "purchase order"
+  ],
+  "note": "Официальнее, чем buy; purchase order (PO) — заказ на закупку",
+  "cefr": "B1"
+ },
+ {
+  "id": "t03-10",
+  "w": "price",
+  "pos": "noun",
+  "ipa": "/praɪs/",
+  "ru": "цена",
+  "ru2": "стоимость; оценивать (v)",
+  "ex": "The price includes delivery and installation at the hospital in Almaty.",
+  "exw": "price",
+  "exRu": "В цену входят доставка и установка в больнице в Алматы.",
+  "col": [
+   "price list",
+   "lower the price"
+  ],
+  "note": "price — цена; prize — приз",
+  "cefr": "A2"
+ },
+ {
+  "id": "t03-11",
+  "w": "discount",
+  "pos": "noun",
+  "ipa": "/ˈdɪskaʊnt/",
+  "ru": "скидка",
+  "ru2": "дисконт",
+  "ex": "The distributor asked for a fifteen percent discount on large orders.",
+  "exw": "discount",
+  "exRu": "Дистрибьютор попросил скидку пятнадцать процентов на крупные заказы.",
+  "col": [
+   "give a discount",
+   "volume discount"
+  ],
+  "note": "discount on sth: a discount on the detectors",
+  "cefr": "B1"
+ },
+ {
+  "id": "t03-12",
+  "w": "quote",
+  "pos": "noun",
+  "ipa": "/kwəʊt/",
+  "ru": "ценовое предложение",
+  "ru2": "цитата; назначать цену, цитировать (v)",
+  "ex": "Could you send me a quote for five mobile X-ray units?",
+  "exw": "quote",
+  "exRu": "Не могли бы вы прислать мне цену на пять мобильных рентгеновских аппаратов?",
+  "col": [
+   "send a quote",
+   "get a quote"
+  ],
+  "note": "Разговорный вариант; в документах — quotation",
+  "cefr": "B2"
+ },
+ {
+  "id": "t03-13",
+  "w": "deal",
+  "pos": "noun",
+  "ipa": "/diːl/",
+  "ru": "сделка",
+  "ru2": "договорённость; a great deal — много",
+  "ex": "We closed the deal with the private hospital network in May.",
+  "exw": "deal",
+  "exRu": "В мае мы заключили сделку с сетью частных больниц.",
+  "col": [
+   "close a deal",
+   "make a deal"
+  ],
+  "note": "Глагол deal – dealt – dealt; deal with sth — заниматься чем-то",
+  "cefr": "B1"
+ },
+ {
+  "id": "t03-14",
+  "w": "demand",
+  "pos": "noun",
+  "ipa": "/dɪˈmɑːnd/",
+  "ru": "спрос",
+  "ru2": "требование; требовать (v)",
+  "ex": "There is growing demand for portable ultrasound in rural Kazakhstan.",
+  "exw": "demand",
+  "exRu": "В сельских районах Казахстана растёт спрос на портативные УЗИ-аппараты.",
+  "col": [
+   "high demand",
+   "demand for"
+  ],
+  "note": "demand for sth — спрос на; глагол demand — требовать, а не просить",
+  "cefr": "B2"
+ },
+ {
+  "id": "t03-15",
+  "w": "target",
+  "pos": "noun",
+  "ipa": "/ˈtɑːɡɪt/",
+  "ru": "план, цель",
+  "ru2": "мишень; целевой (adj)",
+  "ex": "We met our sales target for Latin America this quarter.",
+  "exw": "target",
+  "exRu": "В этом квартале мы выполнили план продаж по Латинской Америке.",
+  "col": [
+   "sales target",
+   "meet a target"
+  ],
+  "note": "meet/hit a target — выполнить план",
+  "cefr": "B1"
+ },
+ {
+  "id": "t03-16",
+  "w": "commission",
+  "pos": "noun",
+  "ipa": "/kəˈmɪʃn/",
+  "ru": "комиссионные",
+  "ru2": "комиссия (орган); заказ",
+  "ex": "Our sales agents earn a five percent commission on each sale.",
+  "exw": "commission",
+  "exRu": "Наши торговые агенты получают пять процентов комиссионных с каждой продажи.",
+  "col": [
+   "earn commission",
+   "commission on sales"
+  ],
+  "note": "work on commission — работать за процент",
+  "cefr": "B2"
+ },
+ {
+  "id": "t03-17",
+  "w": "retail",
+  "pos": "adj",
+  "ipa": "/ˈriːteɪl/",
+  "ru": "розничный",
+  "ru2": "розница (n)",
+  "ex": "The retail price in Chile is higher because of import taxes.",
+  "exw": "retail",
+  "exRu": "Розничная цена в Чили выше из-за импортных пошлин.",
+  "col": [
+   "retail price",
+   "retail store"
+  ],
+  "note": "retailer — розничный продавец",
+  "cefr": "B2"
+ },
+ {
+  "id": "t03-18",
+  "w": "wholesale",
+  "pos": "adj",
+  "ipa": "/ˈhəʊlseɪl/",
+  "ru": "оптовый",
+  "ru2": "опт (n), оптом (adv); массовый",
+  "ex": "Distributors buy at wholesale prices and sell to hospitals.",
+  "exw": "wholesale",
+  "exRu": "Дистрибьюторы закупают по оптовым ценам и продают больницам.",
+  "col": [
+   "wholesale price",
+   "wholesale market"
+  ],
+  "note": "wholesaler — оптовик",
+  "cefr": "B2"
+ },
+ {
+  "id": "t03-19",
+  "w": "competitive",
+  "pos": "adj",
+  "ipa": "/kəmˈpetətɪv/",
+  "ru": "конкурентоспособный",
+  "ru2": "конкурентный, соревновательный",
+  "ex": "Our prices are very competitive compared with European brands.",
+  "exw": "competitive",
+  "exRu": "По сравнению с европейскими брендами наши цены очень привлекательны.",
+  "col": [
+   "competitive price",
+   "highly competitive"
+  ],
+  "note": "competitive price — выгодная, конкурентная цена",
+  "cefr": "B2"
+ },
+ {
+  "id": "t03-20",
+  "w": "catalogue",
+  "pos": "noun",
+  "ipa": "/ˈkætəlɒɡ/",
+  "ru": "каталог",
+  "ru2": "перечень",
+  "ex": "I've attached our latest catalogue with all ultrasound models.",
+  "exw": "catalogue",
+  "exRu": "Во вложении — наш новый каталог со всеми моделями УЗИ.",
+  "col": [
+   "product catalogue",
+   "online catalogue"
+  ],
+  "note": "BrE catalogue, AmE catalog",
+  "cefr": "B1"
+ },
+ {
+  "id": "t03-21",
+  "w": "sample",
+  "pos": "noun",
+  "ipa": "/sɑːmpl/",
+  "ru": "образец",
+  "ru2": "проба, выборка",
+  "ex": "The supplier sent us free samples of the new detector cables.",
+  "exw": "samples",
+  "exRu": "Поставщик прислал нам бесплатные образцы новых кабелей для детектора.",
+  "col": [
+   "free sample",
+   "product sample"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t03-22",
+  "w": "lead",
+  "pos": "noun",
+  "ipa": "/liːd/",
+  "ru": "лид, потенциальный клиент",
+  "ru2": "лидерство, первенство; вести (v)",
+  "ex": "We got five new leads from the medical exhibition in Almaty.",
+  "exw": "leads",
+  "exRu": "С медицинской выставки в Алматы мы получили пять новых потенциальных клиентов.",
+  "col": [
+   "generate leads",
+   "sales lead"
+  ],
+  "note": "lead /liːd/ — лид; lead /led/ — свинец (защита от рентгена)",
+  "cefr": "B2"
+ },
+ {
+  "id": "t03-23",
+  "w": "prospect",
+  "pos": "noun",
+  "ipa": "/ˈprɒspekt/",
+  "ru": "потенциальный клиент",
+  "ru2": "перспектива, шансы",
+  "ex": "The private clinic in Santiago is our most promising prospect.",
+  "exw": "prospect",
+  "exRu": "Частная клиника в Сантьяго — наш самый перспективный потенциальный клиент.",
+  "col": [
+   "good prospect",
+   "sales prospects"
+  ],
+  "note": "Ложный друг: проспект — avenue (улица), brochure (буклет)",
+  "cefr": "B2"
+ },
+ {
+  "id": "t03-24",
+  "w": "loyalty",
+  "pos": "noun",
+  "ipa": "/ˈlɔɪəlti/",
+  "ru": "лояльность",
+  "ru2": "верность, преданность",
+  "ex": "Good after-sales service builds customer loyalty in every market.",
+  "exw": "loyalty",
+  "exRu": "Хороший послепродажный сервис укрепляет лояльность клиентов на любом рынке.",
+  "col": [
+   "customer loyalty",
+   "brand loyalty"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t03-25",
+  "w": "margin",
+  "pos": "noun",
+  "ipa": "/ˈmɑːdʒɪn/",
+  "ru": "маржа, наценка",
+  "ru2": "поле (страницы), запас, разница",
+  "ex": "The distributor's margin on each X-ray system is about twenty percent.",
+  "exw": "margin",
+  "exRu": "Маржа дистрибьютора на каждой рентгеновской системе — около двадцати процентов.",
+  "col": [
+   "profit margin",
+   "low margin"
+  ],
+  "note": "",
+  "cefr": "B2"
+ }
+]

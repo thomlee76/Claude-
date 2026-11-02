@@ -1,0 +1,427 @@
+[
+ {
+  "id": "t02-01",
+  "w": "meeting",
+  "pos": "noun",
+  "ipa": "/ˈmiːtɪŋ/",
+  "ru": "встреча, совещание",
+  "ru2": "собрание",
+  "ex": "Let's arrange a meeting with the distributor next Tuesday.",
+  "exw": "meeting",
+  "exRu": "Давайте назначим встречу с дистрибьютором на следующий вторник.",
+  "col": [
+   "arrange a meeting",
+   "hold a meeting"
+  ],
+  "note": "have/hold a meeting (не make a meeting)",
+  "cefr": "A2"
+ },
+ {
+  "id": "t02-02",
+  "w": "agenda",
+  "pos": "noun",
+  "ipa": "/əˈdʒendə/",
+  "ru": "повестка дня",
+  "ru2": "программа, план; скрытые цели",
+  "ex": "The first item on the agenda is the Almaty project.",
+  "exw": "agenda",
+  "exRu": "Первый вопрос повестки — проект в Алматы.",
+  "col": [
+   "set the agenda",
+   "agenda item"
+  ],
+  "note": "hidden agenda — скрытые мотивы, тайный умысел",
+  "cefr": "B1"
+ },
+ {
+  "id": "t02-03",
+  "w": "discuss",
+  "pos": "verb",
+  "ipa": "/dɪˈskʌs/",
+  "ru": "обсуждать",
+  "ru2": "обговаривать",
+  "ex": "We need to discuss the delivery terms with our partner in Chile.",
+  "exw": "discuss",
+  "exRu": "Нам нужно обсудить условия поставки с нашим партнёром в Чили.",
+  "col": [
+   "discuss a problem",
+   "discuss in detail"
+  ],
+  "note": "Без предлога: discuss the price (не discuss about)",
+  "cefr": "B1"
+ },
+ {
+  "id": "t02-04",
+  "w": "negotiate",
+  "pos": "verb",
+  "ipa": "/nɪˈɡəʊʃieɪt/",
+  "ru": "вести переговоры",
+  "ru2": "договариваться, согласовывать",
+  "ex": "It took us three weeks to negotiate the contract with the hospital.",
+  "exw": "negotiate",
+  "exRu": "На согласование контракта с больницей у нас ушло три недели.",
+  "col": [
+   "negotiate a contract",
+   "negotiate with"
+  ],
+  "note": "negotiate a deal (без предлога), но negotiate with sb",
+  "cefr": "B2"
+ },
+ {
+  "id": "t02-05",
+  "w": "negotiation",
+  "pos": "noun",
+  "ipa": "/nɪˌɡəʊʃiˈeɪʃn/",
+  "ru": "переговоры",
+  "ru2": "обсуждение условий",
+  "ex": "After long negotiations, the distributor accepted our payment terms.",
+  "exw": "negotiations",
+  "exRu": "После долгих переговоров дистрибьютор согласился на наши условия оплаты.",
+  "col": [
+   "price negotiations",
+   "under negotiation"
+  ],
+  "note": "В значении «переговоры» обычно во мн. ч.: negotiations",
+  "cefr": "B2"
+ },
+ {
+  "id": "t02-06",
+  "w": "agree",
+  "pos": "verb",
+  "ipa": "/əˈɡriː/",
+  "ru": "соглашаться",
+  "ru2": "договориться, согласовать",
+  "ex": "We agreed on a delivery date in early March.",
+  "exw": "agreed",
+  "exRu": "Мы договорились о дате поставки в начале марта.",
+  "col": [
+   "agree on a price",
+   "agree with sb"
+  ],
+  "note": "I agree (не I am agree); agree with sb, agree on/to sth",
+  "cefr": "A2"
+ },
+ {
+  "id": "t02-07",
+  "w": "agreement",
+  "pos": "noun",
+  "ipa": "/əˈɡriːmənt/",
+  "ru": "соглашение, договор",
+  "ru2": "согласие",
+  "ex": "We signed a three-year distribution agreement with a partner in Mexico.",
+  "exw": "agreement",
+  "exRu": "Мы подписали дистрибьюторский договор на три года с партнёром в Мексике.",
+  "col": [
+   "sign an agreement",
+   "reach an agreement"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t02-08",
+  "w": "disagree",
+  "pos": "verb",
+  "ipa": "/ˌdɪsəˈɡriː/",
+  "ru": "не соглашаться",
+  "ru2": "расходиться во мнениях",
+  "ex": "I'm afraid I disagree with you about the delivery schedule.",
+  "exw": "disagree",
+  "exRu": "Боюсь, я не согласен с вами насчёт графика поставок.",
+  "col": [
+   "strongly disagree",
+   "disagree with sb"
+  ],
+  "note": "I disagree (не I am not agree / I am disagree)",
+  "cefr": "B1"
+ },
+ {
+  "id": "t02-09",
+  "w": "suggest",
+  "pos": "verb",
+  "ipa": "/səˈdʒest/",
+  "ru": "предлагать",
+  "ru2": "советовать, намекать",
+  "ex": "I suggest that we meet the hospital director in person.",
+  "exw": "suggest",
+  "exRu": "Предлагаю встретиться с главврачом лично.",
+  "col": [
+   "suggest an idea",
+   "suggest doing sth"
+  ],
+  "note": "suggest doing / suggest that…; нельзя suggest sb to do",
+  "cefr": "B1"
+ },
+ {
+  "id": "t02-10",
+  "w": "proposal",
+  "pos": "noun",
+  "ipa": "/prəˈpəʊzl/",
+  "ru": "предложение",
+  "ru2": "проект, план; предложение руки",
+  "ex": "Please send us a written proposal for the diagnostic centre equipment.",
+  "exw": "proposal",
+  "exRu": "Пришлите, пожалуйста, письменное предложение по оборудованию для диагностического центра.",
+  "col": [
+   "make a proposal",
+   "commercial proposal"
+  ],
+  "note": "Коммерческое предложение — commercial proposal, offer или quotation",
+  "cefr": "B2"
+ },
+ {
+  "id": "t02-11",
+  "w": "offer",
+  "pos": "noun",
+  "ipa": "/ˈɒfə/",
+  "ru": "предложение",
+  "ru2": "скидка, акция (special offer); предлагать (v)",
+  "ex": "The hospital accepted our offer for two ultrasound machines.",
+  "exw": "offer",
+  "exRu": "Больница приняла наше предложение на два аппарата УЗИ.",
+  "col": [
+   "accept an offer",
+   "make an offer"
+  ],
+  "note": "Глагол: offer sb sth — offer them a discount",
+  "cefr": "B1"
+ },
+ {
+  "id": "t02-12",
+  "w": "decision",
+  "pos": "noun",
+  "ipa": "/dɪˈsɪʒn/",
+  "ru": "решение",
+  "ru2": "постановление",
+  "ex": "The ministry will make a decision on the tender next month.",
+  "exw": "decision",
+  "exRu": "Министерство примет решение по тендеру в следующем месяце.",
+  "col": [
+   "make a decision",
+   "final decision"
+  ],
+  "note": "make a decision (в BrE также take a decision), не do a decision",
+  "cefr": "B1"
+ },
+ {
+  "id": "t02-13",
+  "w": "decide",
+  "pos": "verb",
+  "ipa": "/dɪˈsaɪd/",
+  "ru": "решать",
+  "ru2": "принимать решение",
+  "ex": "We decided to work with a new distributor in Chile.",
+  "exw": "decided",
+  "exRu": "Мы решили работать с новым дистрибьютором в Чили.",
+  "col": [
+   "decide to do",
+   "decide on"
+  ],
+  "note": "decide to do sth (не decide doing)",
+  "cefr": "A2"
+ },
+ {
+  "id": "t02-14",
+  "w": "compromise",
+  "pos": "noun",
+  "ipa": "/ˈkɒmprəmaɪz/",
+  "ru": "компромисс",
+  "ru2": "идти на компромисс (v); подвергать риску (v)",
+  "ex": "After two hours, both sides finally reached a compromise on price.",
+  "exw": "compromise",
+  "exRu": "Через два часа стороны наконец нашли компромисс по цене.",
+  "col": [
+   "reach a compromise",
+   "find a compromise"
+  ],
+  "note": "Ударение на первый слог: COM-pro-mise",
+  "cefr": "B2"
+ },
+ {
+  "id": "t02-15",
+  "w": "point",
+  "pos": "noun",
+  "ipa": "/pɔɪnt/",
+  "ru": "довод, замечание",
+  "ru2": "пункт, точка, смысл, балл",
+  "ex": "That's a good point, but the budget is still too small.",
+  "exw": "point",
+  "exRu": "Справедливое замечание, но бюджет всё равно слишком маленький.",
+  "col": [
+   "make a point",
+   "good point"
+  ],
+  "note": "What's the point? — Какой смысл?",
+  "cefr": "B1"
+ },
+ {
+  "id": "t02-16",
+  "w": "opinion",
+  "pos": "noun",
+  "ipa": "/əˈpɪnjən/",
+  "ru": "мнение",
+  "ru2": "точка зрения",
+  "ex": "In my opinion, we should not lower the price any further.",
+  "exw": "opinion",
+  "exRu": "По-моему, снижать цену дальше не стоит.",
+  "col": [
+   "in my opinion",
+   "share an opinion"
+  ],
+  "note": "in my opinion (не on/by my opinion)",
+  "cefr": "B1"
+ },
+ {
+  "id": "t02-17",
+  "w": "issue",
+  "pos": "noun",
+  "ipa": "/ˈɪʃuː/",
+  "ru": "вопрос, проблема",
+  "ru2": "выпуск (журнала); выдача (документа)",
+  "ex": "The main issue is the delay in customs clearance in Almaty.",
+  "exw": "issue",
+  "exRu": "Главная проблема — задержка с таможенным оформлением в Алматы.",
+  "col": [
+   "discuss an issue",
+   "key issue"
+  ],
+  "note": "Мягче, чем problem; BrE также /ˈɪsjuː/",
+  "cefr": "B2"
+ },
+ {
+  "id": "t02-18",
+  "w": "solution",
+  "pos": "noun",
+  "ipa": "/səˈluːʃn/",
+  "ru": "решение (проблемы)",
+  "ru2": "выход; раствор",
+  "ex": "We need a quick solution to the problem with the detector.",
+  "exw": "solution",
+  "exRu": "Нам нужно быстро решить проблему с детектором.",
+  "col": [
+   "find a solution",
+   "solution to a problem"
+  ],
+  "note": "solution to (не for) a problem; решение-выбор — decision",
+  "cefr": "B1"
+ },
+ {
+  "id": "t02-19",
+  "w": "attend",
+  "pos": "verb",
+  "ipa": "/əˈtend/",
+  "ru": "присутствовать, посещать",
+  "ru2": "участвовать",
+  "ex": "Five dealers from Mexico will attend the training in Seoul.",
+  "exw": "attend",
+  "exRu": "Пять дилеров из Мексики примут участие в обучении в Сеуле.",
+  "col": [
+   "attend a meeting",
+   "attend a conference"
+  ],
+  "note": "Без предлога: attend a meeting (не attend at/to)",
+  "cefr": "B1"
+ },
+ {
+  "id": "t02-20",
+  "w": "chair",
+  "pos": "verb",
+  "ipa": "/tʃeə/",
+  "ru": "вести (собрание)",
+  "ru2": "председательствовать; стул, председатель (n)",
+  "ex": "The regional director will chair tomorrow's meeting with distributors.",
+  "exw": "chair",
+  "exRu": "Завтрашнее совещание с дистрибьюторами проведёт региональный директор.",
+  "col": [
+   "chair a meeting",
+   "chair a committee"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t02-21",
+  "w": "minutes",
+  "pos": "noun",
+  "ipa": "/ˈmɪnɪts/",
+  "ru": "протокол (собрания)",
+  "ru2": "минуты",
+  "ex": "Could you take the minutes at today's meeting, please?",
+  "exw": "minutes",
+  "exRu": "Не могли бы вы вести протокол сегодняшнего совещания?",
+  "col": [
+   "take the minutes",
+   "approve the minutes"
+  ],
+  "note": "В этом значении всегда мн. ч.: the minutes of the meeting",
+  "cefr": "B2"
+ },
+ {
+  "id": "t02-22",
+  "w": "summary",
+  "pos": "noun",
+  "ipa": "/ˈsʌməri/",
+  "ru": "краткое изложение",
+  "ru2": "сводка, резюме",
+  "ex": "I'll send everyone a short summary of the meeting today.",
+  "exw": "summary",
+  "exRu": "Сегодня я разошлю всем краткие итоги встречи.",
+  "col": [
+   "brief summary",
+   "in summary"
+  ],
+  "note": "Резюме о себе — CV (BrE) / résumé (AmE), не summary",
+  "cefr": "B1"
+ },
+ {
+  "id": "t02-23",
+  "w": "conclusion",
+  "pos": "noun",
+  "ipa": "/kənˈkluːʒn/",
+  "ru": "вывод",
+  "ru2": "заключение, завершение",
+  "ex": "We came to the conclusion that we need a local service centre.",
+  "exw": "conclusion",
+  "exRu": "Мы пришли к выводу, что нам нужен местный сервисный центр.",
+  "col": [
+   "come to a conclusion",
+   "in conclusion"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t02-24",
+  "w": "follow up",
+  "pos": "phrasal verb",
+  "ipa": "/ˌfɒləʊ ˈʌp/",
+  "ru": "связаться повторно",
+  "ru2": "проконтролировать, довести до конца; follow-up (n)",
+  "ex": "I'll follow up with the hospital after the demo next week.",
+  "exw": "follow up",
+  "exRu": "После демонстрации на следующей неделе я ещё раз свяжусь с больницей.",
+  "col": [
+   "follow up on an email",
+   "follow up with a client"
+  ],
+  "note": "Глагол — follow up (раздельно), существительное — follow-up",
+  "cefr": "B2"
+ },
+ {
+  "id": "t02-25",
+  "w": "persuade",
+  "pos": "verb",
+  "ipa": "/pəˈsweɪd/",
+  "ru": "убедить, уговорить",
+  "ru2": "склонить",
+  "ex": "We finally persuaded the clinic to buy the digital system.",
+  "exw": "persuaded",
+  "exRu": "В итоге мы уговорили клинику купить цифровую систему.",
+  "col": [
+   "persuade sb to do sth",
+   "try to persuade"
+  ],
+  "note": "persuade — склонить к действию; convince — убедить в мысли",
+  "cefr": "B1"
+ }
+]

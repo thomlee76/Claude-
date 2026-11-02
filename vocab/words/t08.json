@@ -1,0 +1,427 @@
+[
+ {
+  "id": "t08-01",
+  "w": "produce",
+  "pos": "verb",
+  "ipa": "/prəˈdjuːs/",
+  "ru": "производить, выпускать",
+  "ru2": "создавать, предъявлять (документ)",
+  "ex": "The factory produces about two hundred digital detectors a month.",
+  "exw": "produces",
+  "exRu": "Завод выпускает около двухсот цифровых детекторов в месяц.",
+  "col": [
+   "produce goods",
+   "produce a report"
+  ],
+  "note": "сущ. produce /ˈprɒdjuːs/ = сельхозпродукция; ударение меняется",
+  "cefr": "B1"
+ },
+ {
+  "id": "t08-02",
+  "w": "production",
+  "pos": "noun",
+  "ipa": "/prəˈdʌkʃn/",
+  "ru": "производство",
+  "ru2": "",
+  "ex": "Production of the new model will start in Korea next spring.",
+  "exw": "Production",
+  "exRu": "Производство новой модели начнётся в Корее следующей весной.",
+  "col": [
+   "production line",
+   "mass production"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t08-03",
+  "w": "manufacture",
+  "pos": "verb",
+  "ipa": "/ˌmænjuˈfæktʃə/",
+  "ru": "производить, изготавливать",
+  "ru2": "производство (n)",
+  "ex": "This company manufactures X-ray tubes for several medical brands.",
+  "exw": "manufactures",
+  "exRu": "Эта компания изготавливает рентгеновские трубки для нескольких медицинских брендов.",
+  "col": [
+   "manufacture products",
+   "manufactured in Korea"
+  ],
+  "note": "ударение на третьем слоге: manuFACture",
+  "cefr": "B2"
+ },
+ {
+  "id": "t08-04",
+  "w": "manufacturer",
+  "pos": "noun",
+  "ipa": "/ˌmænjuˈfæktʃərə/",
+  "ru": "производитель",
+  "ru2": "",
+  "ex": "As the manufacturer, we provide a two-year warranty on all systems.",
+  "exw": "manufacturer",
+  "exRu": "Как производитель, мы даём двухлетнюю гарантию на все системы.",
+  "col": [
+   "equipment manufacturer",
+   "contact the manufacturer"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t08-05",
+  "w": "factory",
+  "pos": "noun",
+  "ipa": "/ˈfæktri/",
+  "ru": "завод, фабрика",
+  "ru2": "",
+  "ex": "Our partners from Mexico want to visit the factory in Korea.",
+  "exw": "factory",
+  "exRu": "Наши партнёры из Мексики хотят посетить завод в Корее.",
+  "col": [
+   "factory visit",
+   "factory worker"
+  ],
+  "note": "",
+  "cefr": "A2"
+ },
+ {
+  "id": "t08-06",
+  "w": "plant",
+  "pos": "noun",
+  "ipa": "/plɑːnt/",
+  "ru": "завод",
+  "ru2": "растение; сажать (v)",
+  "ex": "The new plant near Seoul employs more than five hundred workers.",
+  "exw": "plant",
+  "exRu": "На новом заводе под Сеулом работает более пятисот человек.",
+  "col": [
+   "manufacturing plant",
+   "power plant"
+  ],
+  "note": "в деловом тексте plant обычно = завод, а не растение",
+  "cefr": "B2"
+ },
+ {
+  "id": "t08-07",
+  "w": "equipment",
+  "pos": "noun",
+  "ipa": "/ɪˈkwɪpmənt/",
+  "ru": "оборудование",
+  "ru2": "",
+  "ex": "The hospital ordered new diagnostic equipment for its radiology department.",
+  "exw": "equipment",
+  "exRu": "Больница заказала новое диагностическое оборудование для отделения радиологии.",
+  "col": [
+   "medical equipment",
+   "piece of equipment"
+  ],
+  "note": "неисчисляемое: нельзя «equipments»; одна единица — a piece of equipment",
+  "cefr": "B1"
+ },
+ {
+  "id": "t08-08",
+  "w": "device",
+  "pos": "noun",
+  "ipa": "/dɪˈvaɪs/",
+  "ru": "устройство, прибор",
+  "ru2": "",
+  "ex": "This small device lets doctors see ultrasound images on a tablet.",
+  "exw": "device",
+  "exRu": "Этот небольшой прибор позволяет врачам смотреть УЗИ-снимки на планшете.",
+  "col": [
+   "medical device",
+   "mobile device"
+  ],
+  "note": "medical device = медицинское изделие (термин регистрации)",
+  "cefr": "B1"
+ },
+ {
+  "id": "t08-09",
+  "w": "quality",
+  "pos": "noun",
+  "ipa": "/ˈkwɒləti/",
+  "ru": "качество",
+  "ru2": "",
+  "ex": "Customers in Chile are happy with the image quality of our scanners.",
+  "exw": "quality",
+  "exRu": "Клиенты в Чили довольны качеством изображения наших сканеров.",
+  "col": [
+   "quality control",
+   "high quality"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t08-10",
+  "w": "standard",
+  "pos": "noun",
+  "ipa": "/ˈstændəd/",
+  "ru": "стандарт, норма",
+  "ru2": "стандартный (adj)",
+  "ex": "All our devices meet international safety standards for medical equipment.",
+  "exw": "standards",
+  "exRu": "Все наши приборы соответствуют международным нормам безопасности для медоборудования.",
+  "col": [
+   "meet standards",
+   "safety standards"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t08-11",
+  "w": "test",
+  "pos": "verb",
+  "ipa": "/test/",
+  "ru": "испытывать, проверять",
+  "ru2": "тест, испытание (n)",
+  "ex": "Engineers test every detector before it leaves the factory.",
+  "exw": "test",
+  "exRu": "Инженеры проверяют каждый детектор перед отправкой с завода.",
+  "col": [
+   "test a product",
+   "test results"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t08-12",
+  "w": "inspect",
+  "pos": "verb",
+  "ipa": "/ɪnˈspekt/",
+  "ru": "осматривать, проверять",
+  "ru2": "",
+  "ex": "A local engineer will inspect the X-ray room before installation.",
+  "exw": "inspect",
+  "exRu": "Перед монтажом местный инженер осмотрит рентгеновский кабинет.",
+  "col": [
+   "inspect goods",
+   "inspect carefully"
+  ],
+  "note": "сущ. inspection — инспекция, приёмка",
+  "cefr": "B2"
+ },
+ {
+  "id": "t08-13",
+  "w": "defect",
+  "pos": "noun",
+  "ipa": "/ˈdiːfekt/",
+  "ru": "дефект, брак",
+  "ru2": "",
+  "ex": "The hospital reported a defect in the monitor of one ultrasound unit.",
+  "exw": "defect",
+  "exRu": "Больница сообщила о дефекте монитора на одном из УЗИ-аппаратов.",
+  "col": [
+   "manufacturing defect",
+   "defect rate"
+  ],
+  "note": "глагол defect /dɪˈfekt/ = перейти на другую сторону",
+  "cefr": "B2"
+ },
+ {
+  "id": "t08-14",
+  "w": "fault",
+  "pos": "noun",
+  "ipa": "/fɔːlt/",
+  "ru": "неисправность",
+  "ru2": "вина",
+  "ex": "The engineer found a fault in the power supply of the detector.",
+  "exw": "fault",
+  "exRu": "Инженер обнаружил неисправность в блоке питания детектора.",
+  "col": [
+   "technical fault",
+   "report a fault"
+  ],
+  "note": "It's my fault = это моя вина",
+  "cefr": "B1"
+ },
+ {
+  "id": "t08-15",
+  "w": "repair",
+  "pos": "verb",
+  "ipa": "/rɪˈpeə/",
+  "ru": "ремонтировать",
+  "ru2": "ремонт (n)",
+  "ex": "Our service team repaired the scanner in Almaty within two days.",
+  "exw": "repaired",
+  "exRu": "Наша сервисная команда починила сканер в Алматы за два дня.",
+  "col": [
+   "repair equipment",
+   "repair costs"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t08-16",
+  "w": "maintenance",
+  "pos": "noun",
+  "ipa": "/ˈmeɪntənəns/",
+  "ru": "техобслуживание",
+  "ru2": "содержание, поддержка",
+  "ex": "Regular maintenance helps the X-ray system work without problems for years.",
+  "exw": "maintenance",
+  "exRu": "Регулярное техобслуживание помогает рентгеновской системе годами работать без сбоев.",
+  "col": [
+   "maintenance contract",
+   "regular maintenance"
+  ],
+  "note": "ударение на первом слоге; глагол — maintain /meɪnˈteɪn/",
+  "cefr": "B2"
+ },
+ {
+  "id": "t08-17",
+  "w": "spare part",
+  "pos": "noun",
+  "ipa": "/ˌspeə ˈpɑːt/",
+  "ru": "запчасть",
+  "ru2": "",
+  "ex": "We keep the most common spare parts in our warehouse in Almaty.",
+  "exw": "spare parts",
+  "exRu": "Самые ходовые запчасти мы держим на складе в Алматы.",
+  "col": [
+   "order spare parts",
+   "spare parts list"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t08-18",
+  "w": "install",
+  "pos": "verb",
+  "ipa": "/ɪnˈstɔːl/",
+  "ru": "устанавливать, монтировать",
+  "ru2": "",
+  "ex": "Our engineers will install the X-ray system in the diagnostic centre in May.",
+  "exw": "install",
+  "exRu": "Наши инженеры смонтируют рентгеновскую систему в диагностическом центре в мае.",
+  "col": [
+   "install equipment",
+   "installation date"
+  ],
+  "note": "сущ. installation — монтаж, установка",
+  "cefr": "B1"
+ },
+ {
+  "id": "t08-19",
+  "w": "improve",
+  "pos": "verb",
+  "ipa": "/ɪmˈpruːv/",
+  "ru": "улучшать",
+  "ru2": "",
+  "ex": "The new software improves image quality and reduces the radiation dose.",
+  "exw": "improves",
+  "exRu": "Новое ПО повышает качество снимков и снижает дозу облучения.",
+  "col": [
+   "improve quality",
+   "improve efficiency"
+  ],
+  "note": "",
+  "cefr": "A2"
+ },
+ {
+  "id": "t08-20",
+  "w": "develop",
+  "pos": "verb",
+  "ipa": "/dɪˈveləp/",
+  "ru": "разрабатывать",
+  "ru2": "развивать(ся)",
+  "ex": "The R&D team in Seoul is developing a lighter portable detector.",
+  "exw": "developing",
+  "exRu": "Отдел разработок в Сеуле создаёт более лёгкий переносной детектор.",
+  "col": [
+   "develop a product",
+   "develop a market"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t08-21",
+  "w": "design",
+  "pos": "noun",
+  "ipa": "/dɪˈzaɪn/",
+  "ru": "конструкция, проект",
+  "ru2": "дизайн; проектировать (v)",
+  "ex": "The new design makes the detector lighter and easier to clean.",
+  "exw": "design",
+  "exRu": "Благодаря новой конструкции детектор стал легче, и его проще чистить.",
+  "col": [
+   "product design",
+   "design fault"
+  ],
+  "note": "design — не только «дизайн», но и конструкция, проект, чертёж",
+  "cefr": "B1"
+ },
+ {
+  "id": "t08-22",
+  "w": "technology",
+  "pos": "noun",
+  "ipa": "/tekˈnɒlədʒi/",
+  "ru": "технология, техника",
+  "ru2": "",
+  "ex": "This ultrasound system uses the latest technology to produce clear images.",
+  "exw": "technology",
+  "exRu": "В этой УЗИ-системе применяются новейшие технологии для получения чётких снимков.",
+  "col": [
+   "latest technology",
+   "technology company"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t08-23",
+  "w": "material",
+  "pos": "noun",
+  "ipa": "/məˈtɪəriəl/",
+  "ru": "материал",
+  "ru2": "сырьё, рекламные материалы",
+  "ex": "The cost of raw materials has gone up, so prices will rise.",
+  "exw": "materials",
+  "exRu": "Сырьё подорожало, поэтому цены вырастут.",
+  "col": [
+   "raw materials",
+   "marketing materials"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t08-24",
+  "w": "process",
+  "pos": "noun",
+  "ipa": "/ˈprəʊses/",
+  "ru": "процесс",
+  "ru2": "обрабатывать (v)",
+  "ex": "We have changed the production process to reduce the number of defects.",
+  "exw": "process",
+  "exRu": "Мы изменили производственный процесс, чтобы уменьшить количество брака.",
+  "col": [
+   "production process",
+   "approval process"
+  ],
+  "note": "BrE /ˈprəʊses/, AmE /ˈprɑːses/",
+  "cefr": "B1"
+ },
+ {
+  "id": "t08-25",
+  "w": "capacity",
+  "pos": "noun",
+  "ipa": "/kəˈpæsəti/",
+  "ru": "мощность (производства)",
+  "ru2": "вместимость, ёмкость; должность (in my capacity as)",
+  "ex": "The factory is working at full capacity because of the large tender orders.",
+  "exw": "capacity",
+  "exRu": "Завод загружен на полную мощность из-за крупных тендерных заказов.",
+  "col": [
+   "full capacity",
+   "production capacity"
+  ],
+  "note": "in my capacity as manager = в качестве менеджера",
+  "cefr": "B2"
+ }
+]

@@ -1,0 +1,427 @@
+[
+ {
+  "id": "t09-01",
+  "w": "project",
+  "pos": "noun",
+  "ipa": "/ˈprɒdʒekt/",
+  "ru": "проект",
+  "ru2": "",
+  "ex": "The project in Almaty includes a new diagnostic centre with four X-ray rooms.",
+  "exw": "project",
+  "exRu": "Проект в Алматы включает новый диагностический центр с четырьмя рентгеновскими кабинетами.",
+  "col": [
+   "project manager",
+   "launch a project"
+  ],
+  "note": "глагол project /prəˈdʒekt/ = прогнозировать",
+  "cefr": "A2"
+ },
+ {
+  "id": "t09-02",
+  "w": "plan",
+  "pos": "noun",
+  "ipa": "/plæn/",
+  "ru": "план",
+  "ru2": "планировать (v)",
+  "ex": "We need a clear plan before we sign the contract with the distributor.",
+  "exw": "plan",
+  "exRu": "Прежде чем подписывать договор с дистрибьютором, нам нужен чёткий план.",
+  "col": [
+   "business plan",
+   "make a plan"
+  ],
+  "note": "",
+  "cefr": "A2"
+ },
+ {
+  "id": "t09-03",
+  "w": "schedule",
+  "pos": "noun",
+  "ipa": "/ˈʃedjuːl/",
+  "ru": "график, расписание",
+  "ru2": "назначать, планировать (v)",
+  "ex": "According to the schedule, installation should finish by the end of June.",
+  "exw": "schedule",
+  "exRu": "По графику монтаж должен завершиться к концу июня.",
+  "col": [
+   "on schedule",
+   "behind schedule"
+  ],
+  "note": "BrE /ˈʃedjuːl/, AmE /ˈskedʒuːl/",
+  "cefr": "B1"
+ },
+ {
+  "id": "t09-04",
+  "w": "deadline",
+  "pos": "noun",
+  "ipa": "/ˈdedlaɪn/",
+  "ru": "крайний срок",
+  "ru2": "",
+  "ex": "The deadline for the tender documents is Friday at five o'clock.",
+  "exw": "deadline",
+  "exRu": "Документы на тендер нужно подать до пятницы, 17:00.",
+  "col": [
+   "meet a deadline",
+   "miss a deadline"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t09-05",
+  "w": "task",
+  "pos": "noun",
+  "ipa": "/tɑːsk/",
+  "ru": "задача, задание",
+  "ru2": "",
+  "ex": "My first task this week is to prepare the price list for Chile.",
+  "exw": "task",
+  "exRu": "Моя первая задача на этой неделе — подготовить прайс-лист для Чили.",
+  "col": [
+   "main task",
+   "complete a task"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t09-06",
+  "w": "priority",
+  "pos": "noun",
+  "ipa": "/praɪˈɒrəti/",
+  "ru": "приоритет",
+  "ru2": "",
+  "ex": "Our top priority is to finish the installation before the hospital opens.",
+  "exw": "priority",
+  "exRu": "Для нас сейчас главное — закончить монтаж до открытия больницы.",
+  "col": [
+   "top priority",
+   "set priorities"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t09-07",
+  "w": "progress",
+  "pos": "noun",
+  "ipa": "/ˈprəʊɡres/",
+  "ru": "ход работ, прогресс",
+  "ru2": "продвигаться (v)",
+  "ex": "Please send me a short report on the progress of the Almaty project.",
+  "exw": "progress",
+  "exRu": "Пришлите мне, пожалуйста, краткий отчёт о ходе проекта в Алматы.",
+  "col": [
+   "make progress",
+   "progress report"
+  ],
+  "note": "неисчисляемое: make progress, не «a progress»; глагол /prəˈɡres/",
+  "cefr": "B1"
+ },
+ {
+  "id": "t09-08",
+  "w": "stage",
+  "pos": "noun",
+  "ipa": "/steɪdʒ/",
+  "ru": "этап, стадия",
+  "ru2": "сцена",
+  "ex": "At this stage, we are still waiting for the building to be ready.",
+  "exw": "stage",
+  "exRu": "На данном этапе мы всё ещё ждём готовности здания.",
+  "col": [
+   "at this stage",
+   "early stage"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t09-09",
+  "w": "resource",
+  "pos": "noun",
+  "ipa": "/rɪˈzɔːs/",
+  "ru": "ресурс",
+  "ru2": "",
+  "ex": "We do not have enough resources to run two projects at the same time.",
+  "exw": "resources",
+  "exRu": "У нас не хватает ресурсов, чтобы вести два проекта одновременно.",
+  "col": [
+   "human resources",
+   "limited resources"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t09-10",
+  "w": "risk",
+  "pos": "noun",
+  "ipa": "/rɪsk/",
+  "ru": "риск",
+  "ru2": "",
+  "ex": "There is a risk that the equipment will arrive after the opening date.",
+  "exw": "risk",
+  "exRu": "Есть риск, что оборудование придёт уже после открытия.",
+  "col": [
+   "reduce the risk",
+   "take a risk"
+  ],
+  "note": "take a risk, а не «make a risk»",
+  "cefr": "B1"
+ },
+ {
+  "id": "t09-11",
+  "w": "problem",
+  "pos": "noun",
+  "ipa": "/ˈprɒbləm/",
+  "ru": "проблема",
+  "ru2": "задача (мат.)",
+  "ex": "The main problem is that the hospital has not paid the advance yet.",
+  "exw": "problem",
+  "exRu": "Главная проблема в том, что больница ещё не внесла аванс.",
+  "col": [
+   "solve a problem",
+   "technical problem"
+  ],
+  "note": "",
+  "cefr": "A2"
+ },
+ {
+  "id": "t09-12",
+  "w": "solve",
+  "pos": "verb",
+  "ipa": "/sɒlv/",
+  "ru": "решать",
+  "ru2": "",
+  "ex": "Our service engineer solved the software problem in less than an hour.",
+  "exw": "solved",
+  "exRu": "Наш сервисный инженер решил проблему с ПО меньше чем за час.",
+  "col": [
+   "solve a problem",
+   "solve an issue"
+  ],
+  "note": "solve a problem, но make a decision («принять решение»)",
+  "cefr": "B1"
+ },
+ {
+  "id": "t09-13",
+  "w": "achieve",
+  "pos": "verb",
+  "ipa": "/əˈtʃiːv/",
+  "ru": "достигать",
+  "ru2": "",
+  "ex": "We achieved our sales target in Latin America two months early.",
+  "exw": "achieved",
+  "exRu": "Мы выполнили план продаж по Латинской Америке на два месяца раньше срока.",
+  "col": [
+   "achieve a goal",
+   "achieve results"
+  ],
+  "note": "achieve a target = выполнить план",
+  "cefr": "B1"
+ },
+ {
+  "id": "t09-14",
+  "w": "complete",
+  "pos": "verb",
+  "ipa": "/kəmˈpliːt/",
+  "ru": "завершать",
+  "ru2": "полный, законченный (adj)",
+  "ex": "The builders completed the X-ray room two weeks ahead of schedule.",
+  "exw": "completed",
+  "exRu": "Строители закончили рентгеновский кабинет на две недели раньше графика.",
+  "col": [
+   "complete a project",
+   "complete a form"
+  ],
+  "note": "complete a form = заполнить анкету",
+  "cefr": "B1"
+ },
+ {
+  "id": "t09-15",
+  "w": "result",
+  "pos": "noun",
+  "ipa": "/rɪˈzʌlt/",
+  "ru": "результат",
+  "ru2": "",
+  "ex": "The first results of the pilot project in Mexico look very good.",
+  "exw": "results",
+  "exRu": "Первые итоги пилотного проекта в Мексике выглядят очень хорошо.",
+  "col": [
+   "as a result",
+   "get results"
+  ],
+  "note": "as a result = в результате, поэтому",
+  "cefr": "A2"
+ },
+ {
+  "id": "t09-16",
+  "w": "estimate",
+  "pos": "verb",
+  "ipa": "/ˈestɪmeɪt/",
+  "ru": "оценивать (примерно)",
+  "ru2": "оценка, смета (n)",
+  "ex": "We estimate that the whole project will cost about two million dollars.",
+  "exw": "estimate",
+  "exRu": "По нашей оценке, весь проект обойдётся примерно в два миллиона долларов.",
+  "col": [
+   "estimate the cost",
+   "estimated time"
+  ],
+  "note": "глагол /ˈestɪmeɪt/, сущ. /ˈestɪmət/ (оценка, смета)",
+  "cefr": "B2"
+ },
+ {
+  "id": "t09-17",
+  "w": "manage",
+  "pos": "verb",
+  "ipa": "/ˈmænɪdʒ/",
+  "ru": "руководить, управлять",
+  "ru2": "справляться, суметь",
+  "ex": "Aliya manages the project on the hospital side and reports to the director.",
+  "exw": "manages",
+  "exRu": "Со стороны больницы проектом руководит Алия, она подчиняется директору.",
+  "col": [
+   "manage a project",
+   "manage a team"
+  ],
+  "note": "manage to do sth = суметь что-то сделать",
+  "cefr": "B1"
+ },
+ {
+  "id": "t09-18",
+  "w": "organise",
+  "pos": "verb",
+  "ipa": "/ˈɔːɡənaɪz/",
+  "ru": "организовывать",
+  "ru2": "",
+  "ex": "Could you organise a training session for the radiologists after installation?",
+  "exw": "organise",
+  "exRu": "Не могли бы вы организовать обучение для рентгенологов после монтажа?",
+  "col": [
+   "organise a meeting",
+   "well organised"
+  ],
+  "note": "BrE organise, AmE organize",
+  "cefr": "B1"
+ },
+ {
+  "id": "t09-19",
+  "w": "update",
+  "pos": "noun",
+  "ipa": "/ˈʌpdeɪt/",
+  "ru": "свежая информация",
+  "ru2": "обновление; обновлять (v)",
+  "ex": "Can you give me a quick update on the customs situation?",
+  "exw": "update",
+  "exRu": "Расскажите коротко, как сейчас обстоят дела с таможней?",
+  "col": [
+   "give an update",
+   "latest update"
+  ],
+  "note": "глагол /ˌʌpˈdeɪt/; keep sb updated = держать в курсе",
+  "cefr": "B1"
+ },
+ {
+  "id": "t09-20",
+  "w": "review",
+  "pos": "verb",
+  "ipa": "/rɪˈvjuː/",
+  "ru": "пересматривать, анализировать",
+  "ru2": "обзор, отзыв, проверка (n)",
+  "ex": "We will review the budget at the end of each project stage.",
+  "exw": "review",
+  "exRu": "Бюджет мы будем пересматривать в конце каждого этапа проекта.",
+  "col": [
+   "review a contract",
+   "review the budget"
+  ],
+  "note": "review a contract = проверить, изучить договор",
+  "cefr": "B2"
+ },
+ {
+  "id": "t09-21",
+  "w": "option",
+  "pos": "noun",
+  "ipa": "/ɒpʃn/",
+  "ru": "вариант",
+  "ru2": "",
+  "ex": "We have two options: send the goods by air or by sea.",
+  "exw": "options",
+  "exRu": "У нас два варианта: отправить товар самолётом или морем.",
+  "col": [
+   "best option",
+   "consider options"
+  ],
+  "note": "option = вариант, выбор, а не только «опция»",
+  "cefr": "B1"
+ },
+ {
+  "id": "t09-22",
+  "w": "requirement",
+  "pos": "noun",
+  "ipa": "/rɪˈkwaɪəmənt/",
+  "ru": "требование",
+  "ru2": "",
+  "ex": "The hospital sent us its technical requirements for the new ultrasound systems.",
+  "exw": "requirements",
+  "exRu": "Больница прислала нам технические требования к новым УЗИ-системам.",
+  "col": [
+   "meet requirements",
+   "technical requirements"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t09-23",
+  "w": "efficient",
+  "pos": "adj",
+  "ipa": "/ɪˈfɪʃnt/",
+  "ru": "эффективный (экономичный)",
+  "ru2": "",
+  "ex": "The new booking system is more efficient and saves the clinic time.",
+  "exw": "efficient",
+  "exRu": "Новая система записи работает эффективнее и экономит клинике время.",
+  "col": [
+   "energy efficient",
+   "efficient way"
+  ],
+  "note": "efficient — без лишних затрат; effective — даёт нужный результат",
+  "cefr": "B1"
+ },
+ {
+  "id": "t09-24",
+  "w": "effective",
+  "pos": "adj",
+  "ipa": "/ɪˈfektɪv/",
+  "ru": "действенный, результативный",
+  "ru2": "вступающий в силу",
+  "ex": "Online training was very effective for the distributor's new engineers.",
+  "exw": "effective",
+  "exRu": "Онлайн-обучение отлично сработало для новых инженеров дистрибьютора.",
+  "col": [
+   "effective solution",
+   "cost-effective"
+  ],
+  "note": "effective from 1 May = вступает в силу с 1 мая",
+  "cefr": "B1"
+ },
+ {
+  "id": "t09-25",
+  "w": "postpone",
+  "pos": "verb",
+  "ipa": "/pəˈspəʊn/",
+  "ru": "откладывать, переносить",
+  "ru2": "",
+  "ex": "The hospital asked us to postpone the installation until the building is ready.",
+  "exw": "postpone",
+  "exRu": "Больница попросила перенести монтаж, пока здание не будет готово.",
+  "col": [
+   "postpone a meeting",
+   "postpone until"
+  ],
+  "note": "postpone sth to/until (дата); разг. синоним — put off",
+  "cefr": "B2"
+ }
+]

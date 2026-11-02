@@ -1,0 +1,427 @@
+[
+ {
+  "id": "t05-01",
+  "w": "cost",
+  "pos": "noun",
+  "ipa": "/kɒst/",
+  "ru": "стоимость",
+  "ru2": "затраты, издержки; (гл.) стоить",
+  "ex": "The cost of shipping to Almaty has gone up by fifteen percent.",
+  "exw": "cost",
+  "exRu": "Стоимость доставки в Алматы выросла на пятнадцать процентов.",
+  "col": [
+   "reduce costs",
+   "shipping costs"
+  ],
+  "note": "Гл.: cost – cost – cost (неправильный)",
+  "cefr": "B1"
+ },
+ {
+  "id": "t05-02",
+  "w": "expense",
+  "pos": "noun",
+  "ipa": "/ɪkˈspens/",
+  "ru": "расход",
+  "ru2": "затраты; expenses — командировочные расходы",
+  "ex": "Please send me all your receipts so I can pay your travel expenses.",
+  "exw": "expenses",
+  "exRu": "Пришлите мне все чеки, чтобы я мог возместить ваши командировочные.",
+  "col": [
+   "travel expenses",
+   "expense report"
+  ],
+  "note": "expenses (мн.) — расходы сотрудника, которые возмещает компания",
+  "cefr": "B2"
+ },
+ {
+  "id": "t05-03",
+  "w": "budget",
+  "pos": "noun",
+  "ipa": "/ˈbʌdʒɪt/",
+  "ru": "бюджет",
+  "ru2": "",
+  "ex": "The hospital's budget for new equipment will be approved in March.",
+  "exw": "budget",
+  "exRu": "Бюджет больницы на новое оборудование утвердят в марте.",
+  "col": [
+   "within budget",
+   "marketing budget"
+  ],
+  "note": "on/within budget — в рамках бюджета; over budget — сверх бюджета",
+  "cefr": "B1"
+ },
+ {
+  "id": "t05-04",
+  "w": "profit",
+  "pos": "noun",
+  "ipa": "/ˈprɒfɪt/",
+  "ru": "прибыль",
+  "ru2": "",
+  "ex": "Our profit in Latin America grew despite weaker local currencies.",
+  "exw": "profit",
+  "exRu": "Наша прибыль в Латинской Америке выросла, несмотря на ослабление местных валют.",
+  "col": [
+   "make a profit",
+   "net profit"
+  ],
+  "note": "make a profit (не «do a profit»)",
+  "cefr": "B1"
+ },
+ {
+  "id": "t05-05",
+  "w": "loss",
+  "pos": "noun",
+  "ipa": "/lɒs/",
+  "ru": "убыток",
+  "ru2": "потеря, утрата",
+  "ex": "The branch made a loss last year because of currency problems.",
+  "exw": "loss",
+  "exRu": "В прошлом году филиал оказался в убытке из-за валютных проблем.",
+  "col": [
+   "make a loss",
+   "net loss"
+  ],
+  "note": "make a loss — понести убыток",
+  "cefr": "B1"
+ },
+ {
+  "id": "t05-06",
+  "w": "income",
+  "pos": "noun",
+  "ipa": "/ˈɪnkʌm/",
+  "ru": "доход",
+  "ru2": "",
+  "ex": "Service contracts give us a steady income between big equipment sales.",
+  "exw": "income",
+  "exRu": "Сервисные контракты дают нам стабильный доход между крупными продажами оборудования.",
+  "col": [
+   "steady income",
+   "source of income"
+  ],
+  "note": "income — доход (в т.ч. личный); выручка компании от продаж — revenue",
+  "cefr": "B1"
+ },
+ {
+  "id": "t05-07",
+  "w": "revenue",
+  "pos": "noun",
+  "ipa": "/ˈrevənjuː/",
+  "ru": "выручка",
+  "ru2": "доход, поступления",
+  "ex": "Revenue from ultrasound sales in Kazakhstan doubled in the last two years.",
+  "exw": "Revenue",
+  "exRu": "Выручка от продаж УЗИ в Казахстане за последние два года удвоилась.",
+  "col": [
+   "annual revenue",
+   "generate revenue"
+  ],
+  "note": "Ударение на 1-й слог: REvenue",
+  "cefr": "B2"
+ },
+ {
+  "id": "t05-08",
+  "w": "turnover",
+  "pos": "noun",
+  "ipa": "/ˈtɜːnəʊvə/",
+  "ru": "оборот",
+  "ru2": "текучесть (кадров)",
+  "ex": "The distributor has an annual turnover of about five million dollars.",
+  "exw": "turnover",
+  "exRu": "Годовой оборот дистрибьютора — около пяти миллионов долларов.",
+  "col": [
+   "annual turnover",
+   "staff turnover"
+  ],
+  "note": "staff turnover — текучесть кадров",
+  "cefr": "B2"
+ },
+ {
+  "id": "t05-09",
+  "w": "tax",
+  "pos": "noun",
+  "ipa": "/tæks/",
+  "ru": "налог",
+  "ru2": "",
+  "ex": "Is VAT included in the price, or do we pay tax separately?",
+  "exw": "tax",
+  "exRu": "НДС входит в цену или налог оплачивается отдельно?",
+  "col": [
+   "pay tax",
+   "tax rate"
+  ],
+  "note": "VAT — НДС; pay tax on sth — платить налог с чего-л.",
+  "cefr": "B1"
+ },
+ {
+  "id": "t05-10",
+  "w": "payment",
+  "pos": "noun",
+  "ipa": "/ˈpeɪmənt/",
+  "ru": "оплата",
+  "ru2": "платёж",
+  "ex": "We have not received the second payment from the distributor in Chile.",
+  "exw": "payment",
+  "exRu": "Мы так и не получили второй платёж от дистрибьютора в Чили.",
+  "col": [
+   "make a payment",
+   "payment terms"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t05-11",
+  "w": "invoice",
+  "pos": "noun",
+  "ipa": "/ˈɪnvɔɪs/",
+  "ru": "счёт (на оплату)",
+  "ru2": "счёт-фактура, инвойс; (гл.) выставить счёт",
+  "ex": "Please check the invoice and confirm the bank details before payment.",
+  "exw": "invoice",
+  "exRu": "Пожалуйста, проверьте счёт и подтвердите банковские реквизиты перед оплатой.",
+  "col": [
+   "send an invoice",
+   "pay an invoice"
+  ],
+  "note": "invoice — счёт поставщика покупателю; bill — счёт за услуги, в ресторане",
+  "cefr": "B2"
+ },
+ {
+  "id": "t05-12",
+  "w": "bill",
+  "pos": "noun",
+  "ipa": "/bɪl/",
+  "ru": "счёт",
+  "ru2": "законопроект; (AmE) банкнота",
+  "ex": "The hotel added the conference room to my bill by mistake.",
+  "exw": "bill",
+  "exRu": "Отель по ошибке включил конференц-зал в мой счёт.",
+  "col": [
+   "pay the bill",
+   "electricity bill"
+  ],
+  "note": "AmE: bill — банкнота (BrE note); счёт в ресторане в AmE — check",
+  "cefr": "A2"
+ },
+ {
+  "id": "t05-13",
+  "w": "account",
+  "pos": "noun",
+  "ipa": "/əˈkaʊnt/",
+  "ru": "счёт (в банке)",
+  "ru2": "клиент (key account); accounts — бухгалтерская отчётность",
+  "ex": "Please transfer the money to our account in Seoul by Friday.",
+  "exw": "account",
+  "exRu": "Пожалуйста, переведите деньги на наш счёт в Сеуле до пятницы.",
+  "col": [
+   "bank account",
+   "open an account"
+  ],
+  "note": "accounts — бухгалтерская отчётность; key account — ключевой клиент",
+  "cefr": "B1"
+ },
+ {
+  "id": "t05-14",
+  "w": "transfer",
+  "pos": "noun",
+  "ipa": "/ˈtrænsfɜː/",
+  "ru": "перевод (денег)",
+  "ru2": "перемещение, трансфер; (гл.) переводить",
+  "ex": "The bank transfer from Mexico usually takes three or four days.",
+  "exw": "transfer",
+  "exRu": "Банковский перевод из Мексики обычно идёт три-четыре дня.",
+  "col": [
+   "bank transfer",
+   "make a transfer"
+  ],
+  "note": "Сущ. /ˈtrænsfɜː/, гл. /trænsˈfɜː/ — ударение меняется",
+  "cefr": "B2"
+ },
+ {
+  "id": "t05-15",
+  "w": "cash",
+  "pos": "noun",
+  "ipa": "/kæʃ/",
+  "ru": "наличные",
+  "ru2": "денежные средства",
+  "ex": "The dealer wants a discount if he pays the full amount in cash.",
+  "exw": "cash",
+  "exRu": "Дилер хочет скидку, если заплатит всю сумму наличными.",
+  "col": [
+   "pay in cash",
+   "cash flow"
+  ],
+  "note": "pay in cash / by card; cash flow — движение денежных средств",
+  "cefr": "A2"
+ },
+ {
+  "id": "t05-16",
+  "w": "currency",
+  "pos": "noun",
+  "ipa": "/ˈkʌrənsi/",
+  "ru": "валюта",
+  "ru2": "",
+  "ex": "Our contracts with Kazakhstan are usually in US dollars, not local currency.",
+  "exw": "currency",
+  "exRu": "Контракты с Казахстаном у нас обычно в долларах США, а не в местной валюте.",
+  "col": [
+   "foreign currency",
+   "local currency"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t05-17",
+  "w": "exchange rate",
+  "pos": "noun",
+  "ipa": "/ɪksˈtʃeɪndʒ reɪt/",
+  "ru": "валютный курс",
+  "ru2": "обменный курс",
+  "ex": "Because of the exchange rate, our prices in pesos went up again.",
+  "exw": "exchange rate",
+  "exRu": "Из-за курса наши цены в песо снова выросли.",
+  "col": [
+   "current exchange rate",
+   "exchange rate risk"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t05-18",
+  "w": "debt",
+  "pos": "noun",
+  "ipa": "/det/",
+  "ru": "долг",
+  "ru2": "задолженность",
+  "ex": "The distributor still has a large debt for last year's shipments.",
+  "exw": "debt",
+  "exRu": "У дистрибьютора всё ещё большой долг за прошлогодние поставки.",
+  "col": [
+   "pay off a debt",
+   "be in debt"
+  ],
+  "note": "b не читается: /det/",
+  "cefr": "B1"
+ },
+ {
+  "id": "t05-19",
+  "w": "loan",
+  "pos": "noun",
+  "ipa": "/ləʊn/",
+  "ru": "кредит",
+  "ru2": "заём, ссуда",
+  "ex": "The clinic took a bank loan to buy two new X-ray systems.",
+  "exw": "loan",
+  "exRu": "Клиника взяла банковский кредит на покупку двух новых рентген-систем.",
+  "col": [
+   "take out a loan",
+   "repay a loan"
+  ],
+  "note": "loan — кредит (сумма в долг); credit — чаще отсрочка платежа",
+  "cefr": "B1"
+ },
+ {
+  "id": "t05-20",
+  "w": "invest",
+  "pos": "verb",
+  "ipa": "/ɪnˈvest/",
+  "ru": "инвестировать",
+  "ru2": "вкладывать (деньги, время, силы)",
+  "ex": "The government plans to invest heavily in regional hospitals next year.",
+  "exw": "invest",
+  "exRu": "В следующем году государство собирается вложить крупные средства в региональные больницы.",
+  "col": [
+   "invest in",
+   "invest money"
+  ],
+  "note": "Управление: invest in sth",
+  "cefr": "B1"
+ },
+ {
+  "id": "t05-21",
+  "w": "investment",
+  "pos": "noun",
+  "ipa": "/ɪnˈvestmənt/",
+  "ru": "инвестиция",
+  "ru2": "вложение, капиталовложение",
+  "ex": "The diagnostic centre in Almaty is a big investment for our partner.",
+  "exw": "investment",
+  "exRu": "Диагностический центр в Алматы — крупное вложение для нашего партнёра.",
+  "col": [
+   "return on investment",
+   "make an investment"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t05-22",
+  "w": "interest",
+  "pos": "noun",
+  "ipa": "/ˈɪntrəst/",
+  "ru": "проценты",
+  "ru2": "интерес; доля, участие",
+  "ex": "The bank charges eight percent interest on the loan for the equipment.",
+  "exw": "interest",
+  "exRu": "Банк берёт восемь процентов годовых по кредиту на оборудование.",
+  "col": [
+   "interest rate",
+   "pay interest"
+  ],
+  "note": "В значении «проценты» — неисчисляемое: не «interests»",
+  "cefr": "B2"
+ },
+ {
+  "id": "t05-23",
+  "w": "balance",
+  "pos": "noun",
+  "ipa": "/ˈbæləns/",
+  "ru": "остаток (суммы)",
+  "ru2": "баланс, сальдо; равновесие",
+  "ex": "The client paid 30% in advance and will pay the balance after installation.",
+  "exw": "balance",
+  "exRu": "Клиент внёс 30% предоплаты, а остаток заплатит после монтажа.",
+  "col": [
+   "outstanding balance",
+   "bank balance"
+  ],
+  "note": "the balance — оставшаяся к оплате часть суммы",
+  "cefr": "B2"
+ },
+ {
+  "id": "t05-24",
+  "w": "receipt",
+  "pos": "noun",
+  "ipa": "/rɪˈsiːt/",
+  "ru": "чек",
+  "ru2": "квитанция; получение (on receipt of)",
+  "ex": "Keep the taxi receipt, or the company won't pay you back.",
+  "exw": "receipt",
+  "exRu": "Сохраните чек за такси, иначе компания не возместит расходы.",
+  "col": [
+   "keep the receipt",
+   "on receipt of"
+  ],
+  "note": "p не читается: /rɪˈsiːt/; on receipt of payment — по получении оплаты",
+  "cefr": "B1"
+ },
+ {
+  "id": "t05-25",
+  "w": "deposit",
+  "pos": "noun",
+  "ipa": "/dɪˈpɒzɪt/",
+  "ru": "предоплата",
+  "ru2": "задаток; вклад (в банке)",
+  "ex": "The hospital must pay a 20% deposit before we start production.",
+  "exw": "deposit",
+  "exRu": "Больница должна внести 20% предоплаты, прежде чем мы запустим производство.",
+  "col": [
+   "pay a deposit",
+   "bank deposit"
+  ],
+  "note": "",
+  "cefr": "B1"
+ }
+]

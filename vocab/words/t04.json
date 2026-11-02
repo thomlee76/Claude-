@@ -1,0 +1,427 @@
+[
+ {
+  "id": "t04-01",
+  "w": "marketing",
+  "pos": "noun",
+  "ipa": "/ˈmɑːkɪtɪŋ/",
+  "ru": "маркетинг",
+  "ru2": "",
+  "ex": "Our marketing team is preparing new brochures for the Almaty exhibition.",
+  "exw": "marketing",
+  "exRu": "Наш отдел маркетинга готовит новые брошюры к выставке в Алматы.",
+  "col": [
+   "marketing strategy",
+   "marketing budget"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t04-02",
+  "w": "advertise",
+  "pos": "verb",
+  "ipa": "/ˈædvətaɪz/",
+  "ru": "рекламировать",
+  "ru2": "давать объявление (о вакансии)",
+  "ex": "We advertise our ultrasound systems in medical journals across Latin America.",
+  "exw": "advertise",
+  "exRu": "Мы рекламируем наши УЗИ-системы в медицинских журналах по всей Латинской Америке.",
+  "col": [
+   "advertise a product",
+   "advertise a job"
+  ],
+  "note": "Ударение на 1-й слог; без предлога: advertise a product",
+  "cefr": "B1"
+ },
+ {
+  "id": "t04-03",
+  "w": "advertising",
+  "pos": "noun",
+  "ipa": "/ˈædvətaɪzɪŋ/",
+  "ru": "реклама",
+  "ru2": "рекламное дело",
+  "ex": "We cut our advertising budget and focused on direct visits to hospitals.",
+  "exw": "advertising",
+  "exRu": "Мы урезали бюджет на рекламу и сделали ставку на личные визиты в больницы.",
+  "col": [
+   "advertising campaign",
+   "advertising agency"
+  ],
+  "note": "Неисчисляемое: не «an advertising»; одно объявление — an advert / an ad",
+  "cefr": "B1"
+ },
+ {
+  "id": "t04-04",
+  "w": "campaign",
+  "pos": "noun",
+  "ipa": "/kæmˈpeɪn/",
+  "ru": "кампания",
+  "ru2": "",
+  "ex": "The new email campaign brought us twenty enquiries from private clinics.",
+  "exw": "campaign",
+  "exRu": "Новая email-рассылка принесла нам двадцать запросов от частных клиник.",
+  "col": [
+   "advertising campaign",
+   "launch a campaign"
+  ],
+  "note": "g не читается: /kæmˈpeɪn/",
+  "cefr": "B1"
+ },
+ {
+  "id": "t04-05",
+  "w": "brand",
+  "pos": "noun",
+  "ipa": "/brænd/",
+  "ru": "бренд",
+  "ru2": "марка, торговая марка",
+  "ex": "Doctors in Chile already know our brand and trust its quality.",
+  "exw": "brand",
+  "exRu": "Врачи в Чили уже знают нашу марку и доверяют её качеству.",
+  "col": [
+   "brand name",
+   "brand loyalty"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t04-06",
+  "w": "promote",
+  "pos": "verb",
+  "ipa": "/prəˈməʊt/",
+  "ru": "продвигать",
+  "ru2": "рекламировать, повышать в должности",
+  "ex": "Our distributor will promote the new X-ray system at regional conferences.",
+  "exw": "promote",
+  "exRu": "Наш дистрибьютор будет продвигать новую рентген-систему на региональных конференциях.",
+  "col": [
+   "promote a product",
+   "promote sales"
+  ],
+  "note": "be promoted — получить повышение по службе",
+  "cefr": "B1"
+ },
+ {
+  "id": "t04-07",
+  "w": "launch",
+  "pos": "verb",
+  "ipa": "/lɔːntʃ/",
+  "ru": "выводить на рынок",
+  "ru2": "запускать; запуск, вывод на рынок (сущ.)",
+  "ex": "We plan to launch the new portable ultrasound in Mexico next spring.",
+  "exw": "launch",
+  "exRu": "Новый портативный УЗИ-аппарат мы планируем вывести на рынок Мексики следующей весной.",
+  "col": [
+   "launch a product",
+   "product launch"
+  ],
+  "note": "Также сущ.: a product launch — запуск продукта",
+  "cefr": "B2"
+ },
+ {
+  "id": "t04-08",
+  "w": "consumer",
+  "pos": "noun",
+  "ipa": "/kənˈsjuːmə/",
+  "ru": "потребитель",
+  "ru2": "",
+  "ex": "Most consumers read online reviews before they buy a new phone.",
+  "exw": "consumers",
+  "exRu": "Большинство покупателей читают отзывы в интернете, прежде чем купить новый телефон.",
+  "col": [
+   "consumer goods",
+   "consumer demand"
+  ],
+  "note": "consumer — потребитель вообще; customer — клиент конкретной фирмы",
+  "cefr": "B1"
+ },
+ {
+  "id": "t04-09",
+  "w": "survey",
+  "pos": "noun",
+  "ipa": "/ˈsɜːveɪ/",
+  "ru": "опрос",
+  "ru2": "обследование, осмотр",
+  "ex": "We sent a short survey to all our distributors about customer service.",
+  "exw": "survey",
+  "exRu": "Мы разослали всем дистрибьюторам короткую анкету о качестве обслуживания.",
+  "col": [
+   "carry out a survey",
+   "customer survey"
+  ],
+  "note": "Глагол survey /səˈveɪ/ — ударение переходит на 2-й слог",
+  "cefr": "B1"
+ },
+ {
+  "id": "t04-10",
+  "w": "research",
+  "pos": "noun",
+  "ipa": "/rɪˈsɜːtʃ/",
+  "ru": "исследование",
+  "ru2": "изыскания; (гл.) исследовать",
+  "ex": "Market research shows strong demand for digital X-ray in Kazakhstan.",
+  "exw": "research",
+  "exRu": "Исследование рынка показывает высокий спрос на цифровой рентген в Казахстане.",
+  "col": [
+   "market research",
+   "do research"
+  ],
+  "note": "Неисчисляемое: не «researches»; do research. Возможно и /ˈriːsɜːtʃ/",
+  "cefr": "B1"
+ },
+ {
+  "id": "t04-11",
+  "w": "trend",
+  "pos": "noun",
+  "ipa": "/trend/",
+  "ru": "тенденция",
+  "ru2": "тренд, мода",
+  "ex": "The main trend in hospitals is moving from film to digital imaging.",
+  "exw": "trend",
+  "exRu": "Главная тенденция в больницах — переход с плёнки на цифровую визуализацию.",
+  "col": [
+   "market trend",
+   "the latest trends"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t04-12",
+  "w": "image",
+  "pos": "noun",
+  "ipa": "/ˈɪmɪdʒ/",
+  "ru": "имидж",
+  "ru2": "изображение, снимок",
+  "ex": "A cheap stand at the exhibition could damage our company's image.",
+  "exw": "image",
+  "exRu": "Дешёвый стенд на выставке может навредить имиджу компании.",
+  "col": [
+   "brand image",
+   "improve the image"
+  ],
+  "note": "В медтехнике image — снимок (X-ray image), в маркетинге — имидж",
+  "cefr": "B1"
+ },
+ {
+  "id": "t04-13",
+  "w": "logo",
+  "pos": "noun",
+  "ipa": "/ˈləʊɡəʊ/",
+  "ru": "логотип",
+  "ru2": "",
+  "ex": "Please put the distributor's logo next to ours on the brochure.",
+  "exw": "logo",
+  "exRu": "Пожалуйста, поставьте логотип дистрибьютора рядом с нашим на брошюре.",
+  "col": [
+   "company logo",
+   "design a logo"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t04-14",
+  "w": "slogan",
+  "pos": "noun",
+  "ipa": "/ˈsləʊɡən/",
+  "ru": "слоган",
+  "ru2": "лозунг",
+  "ex": "Head office in Seoul wants a short slogan for the new detector.",
+  "exw": "slogan",
+  "exRu": "Головной офис в Сеуле хочет короткий слоган для нового детектора.",
+  "col": [
+   "advertising slogan",
+   "catchy slogan"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t04-15",
+  "w": "feature",
+  "pos": "noun",
+  "ipa": "/ˈfiːtʃə/",
+  "ru": "функция",
+  "ru2": "особенность, характеристика; статья в журнале",
+  "ex": "The most popular feature of this detector is its wireless connection.",
+  "exw": "feature",
+  "exRu": "Самая востребованная функция этого детектора — беспроводное подключение.",
+  "col": [
+   "key feature",
+   "new features"
+  ],
+  "note": "feature — что продукт умеет; benefit — что это даёт клиенту",
+  "cefr": "B1"
+ },
+ {
+  "id": "t04-16",
+  "w": "benefit",
+  "pos": "noun",
+  "ipa": "/ˈbenɪfɪt/",
+  "ru": "выгода",
+  "ru2": "польза, преимущество; пособие",
+  "ex": "The main benefit for clinics is shorter waiting times for patients.",
+  "exw": "benefit",
+  "exRu": "Главная выгода для клиник — пациентам приходится меньше ждать.",
+  "col": [
+   "main benefit",
+   "benefit for customers"
+  ],
+  "note": "Также гл.: benefit from sth — извлекать пользу из чего-л.",
+  "cefr": "B1"
+ },
+ {
+  "id": "t04-17",
+  "w": "advantage",
+  "pos": "noun",
+  "ipa": "/ədˈvɑːntɪdʒ/",
+  "ru": "преимущество",
+  "ru2": "",
+  "ex": "Our biggest advantage over competitors is fast service in the region.",
+  "exw": "advantage",
+  "exRu": "Наше главное преимущество перед конкурентами — быстрый сервис в регионе.",
+  "col": [
+   "competitive advantage",
+   "take advantage of"
+  ],
+  "note": "advantage over sb — преимущество перед кем-л.; take advantage of — воспользоваться",
+  "cefr": "B1"
+ },
+ {
+  "id": "t04-18",
+  "w": "website",
+  "pos": "noun",
+  "ipa": "/ˈwebsaɪt/",
+  "ru": "сайт",
+  "ru2": "",
+  "ex": "Clinics can download product brochures in Russian from our website.",
+  "exw": "website",
+  "exRu": "Клиники могут скачать брошюры о продукции на русском с нашего сайта.",
+  "col": [
+   "company website",
+   "visit the website"
+  ],
+  "note": "on the website (не «in the website»)",
+  "cefr": "A2"
+ },
+ {
+  "id": "t04-19",
+  "w": "social media",
+  "pos": "noun",
+  "ipa": "/ˌsəʊʃl ˈmiːdiə/",
+  "ru": "соцсети",
+  "ru2": "социальные сети",
+  "ex": "We share photos from installations on social media to attract new clients.",
+  "exw": "social media",
+  "exRu": "Мы выкладываем фото с инсталляций в соцсетях, чтобы привлечь новых клиентов.",
+  "col": [
+   "on social media",
+   "social media campaign"
+  ],
+  "note": "Обычно без артикля: on social media",
+  "cefr": "B1"
+ },
+ {
+  "id": "t04-20",
+  "w": "audience",
+  "pos": "noun",
+  "ipa": "/ˈɔːdiəns/",
+  "ru": "аудитория",
+  "ru2": "зрители, публика",
+  "ex": "Our target audience is radiologists and hospital purchasing managers.",
+  "exw": "audience",
+  "exRu": "Наша целевая аудитория — рентгенологи и менеджеры по закупкам в больницах.",
+  "col": [
+   "target audience",
+   "wide audience"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t04-21",
+  "w": "reputation",
+  "pos": "noun",
+  "ipa": "/ˌrepjuˈteɪʃn/",
+  "ru": "репутация",
+  "ru2": "",
+  "ex": "The distributor has an excellent reputation among hospitals in Almaty.",
+  "exw": "reputation",
+  "exRu": "У дистрибьютора отличная репутация среди больниц Алматы.",
+  "col": [
+   "good reputation",
+   "damage a reputation"
+  ],
+  "note": "have a reputation for sth — славиться чем-л.",
+  "cefr": "B1"
+ },
+ {
+  "id": "t04-22",
+  "w": "competition",
+  "pos": "noun",
+  "ipa": "/ˌkɒmpəˈtɪʃn/",
+  "ru": "конкуренция",
+  "ru2": "конкурс, соревнование; конкуренты",
+  "ex": "Competition in the ultrasound market in Mexico is getting stronger every year.",
+  "exw": "Competition",
+  "exRu": "Конкуренция на рынке УЗИ в Мексике с каждым годом усиливается.",
+  "col": [
+   "strong competition",
+   "face competition"
+  ],
+  "note": "В бизнесе — конкуренция; the competition — также «конкуренты»",
+  "cefr": "B1"
+ },
+ {
+  "id": "t04-23",
+  "w": "segment",
+  "pos": "noun",
+  "ipa": "/ˈseɡmənt/",
+  "ru": "сегмент",
+  "ru2": "часть",
+  "ex": "Private clinics are the fastest-growing segment of our market in Chile.",
+  "exw": "segment",
+  "exRu": "Частные клиники — самый быстрорастущий сегмент нашего рынка в Чили.",
+  "col": [
+   "market segment",
+   "customer segment"
+  ],
+  "note": "Гл. segment /seɡˈment/ — сегментировать",
+  "cefr": "B2"
+ },
+ {
+  "id": "t04-24",
+  "w": "awareness",
+  "pos": "noun",
+  "ipa": "/əˈweənəs/",
+  "ru": "узнаваемость",
+  "ru2": "осведомлённость, понимание",
+  "ex": "The webinars helped to raise awareness of our brand among radiologists.",
+  "exw": "awareness",
+  "exRu": "Вебинары помогли повысить узнаваемость нашего бренда среди рентгенологов.",
+  "col": [
+   "brand awareness",
+   "raise awareness"
+  ],
+  "note": "raise awareness of sth — повышать осведомлённость о чём-л.",
+  "cefr": "B2"
+ },
+ {
+  "id": "t04-25",
+  "w": "leaflet",
+  "pos": "noun",
+  "ipa": "/ˈliːflət/",
+  "ru": "листовка",
+  "ru2": "буклет, проспект",
+  "ex": "We left leaflets about the new detector at every hospital we visited.",
+  "exw": "leaflets",
+  "exRu": "В каждой больнице, где мы были, мы оставили листовки о новом детекторе.",
+  "col": [
+   "hand out leaflets",
+   "product leaflet"
+  ],
+  "note": "Британское слово; в AmE чаще flyer",
+  "cefr": "B1"
+ }
+]

@@ -1,0 +1,427 @@
+[
+ {
+  "id": "t11-01",
+  "w": "job",
+  "pos": "noun",
+  "ipa": "/dʒɒb/",
+  "ru": "работа, должность",
+  "ru2": "задача, задание",
+  "ex": "She got a job as a sales manager at a medical equipment company.",
+  "exw": "job",
+  "exRu": "Она устроилась менеджером по продажам в компанию медицинского оборудования.",
+  "col": [
+   "apply for a job",
+   "full-time job"
+  ],
+  "note": "job — исчисляемое (a job), work — неисчисляемое (не a work)",
+  "cefr": "A2"
+ },
+ {
+  "id": "t11-02",
+  "w": "career",
+  "pos": "noun",
+  "ipa": "/kəˈrɪə/",
+  "ru": "карьера",
+  "ru2": "профессия",
+  "ex": "He started his career as a service engineer for X-ray equipment.",
+  "exw": "career",
+  "exRu": "Он начинал карьеру сервисным инженером по рентгеновскому оборудованию.",
+  "col": [
+   "career path",
+   "career opportunities"
+  ],
+  "note": "Ударение на втором слоге: ca-REER",
+  "cefr": "B1"
+ },
+ {
+  "id": "t11-03",
+  "w": "position",
+  "pos": "noun",
+  "ipa": "/pəˈzɪʃn/",
+  "ru": "должность",
+  "ru2": "положение, позиция",
+  "ex": "We have an open position for a regional manager in Latin America.",
+  "exw": "position",
+  "exRu": "У нас открыта вакансия регионального менеджера по Латинской Америке.",
+  "col": [
+   "apply for a position",
+   "senior position"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t11-04",
+  "w": "apply",
+  "pos": "verb",
+  "ipa": "/əˈplaɪ/",
+  "ru": "подавать заявление",
+  "ru2": "применять",
+  "ex": "I applied for the export manager job last month.",
+  "exw": "applied",
+  "exRu": "В прошлом месяце я подал резюме на должность менеджера по экспорту.",
+  "col": [
+   "apply for a job",
+   "apply online"
+  ],
+  "note": "apply for a job / to a company",
+  "cefr": "B1"
+ },
+ {
+  "id": "t11-05",
+  "w": "application",
+  "pos": "noun",
+  "ipa": "/ˌæplɪˈkeɪʃn/",
+  "ru": "заявление, заявка",
+  "ru2": "применение; приложение (программа)",
+  "ex": "Please send your application and CV to the HR department.",
+  "exw": "application",
+  "exRu": "Пожалуйста, отправьте заявление и резюме в отдел кадров.",
+  "col": [
+   "job application",
+   "application form"
+  ],
+  "note": "CV (BrE) = résumé (AmE) — резюме",
+  "cefr": "B1"
+ },
+ {
+  "id": "t11-06",
+  "w": "candidate",
+  "pos": "noun",
+  "ipa": "/ˈkændɪdət/",
+  "ru": "кандидат",
+  "ru2": "",
+  "ex": "We interviewed three candidates for the sales position in Kazakhstan.",
+  "exw": "candidates",
+  "exRu": "Мы провели собеседования с тремя кандидатами на должность продажника в Казахстане.",
+  "col": [
+   "strong candidate",
+   "suitable candidate"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t11-07",
+  "w": "interview",
+  "pos": "noun",
+  "ipa": "/ˈɪntəvjuː/",
+  "ru": "собеседование",
+  "ru2": "интервью; проводить собеседование (глагол)",
+  "ex": "The interview with the new engineer is at ten o'clock tomorrow.",
+  "exw": "interview",
+  "exRu": "Собеседование с новым инженером завтра в десять.",
+  "col": [
+   "job interview",
+   "have an interview"
+  ],
+  "note": "",
+  "cefr": "A2"
+ },
+ {
+  "id": "t11-08",
+  "w": "hire",
+  "pos": "verb",
+  "ipa": "/haɪə/",
+  "ru": "нанимать",
+  "ru2": "брать напрокат (BrE)",
+  "ex": "We plan to hire two more service engineers next year.",
+  "exw": "hire",
+  "exRu": "В следующем году мы планируем нанять ещё двух сервисных инженеров.",
+  "col": [
+   "hire staff",
+   "hire a new manager"
+  ],
+  "note": "BrE также «взять напрокат»: hire a car",
+  "cefr": "B1"
+ },
+ {
+  "id": "t11-09",
+  "w": "recruit",
+  "pos": "verb",
+  "ipa": "/rɪˈkruːt/",
+  "ru": "набирать (персонал)",
+  "ru2": "",
+  "ex": "Our distributor in Mexico is recruiting new sales representatives.",
+  "exw": "recruiting",
+  "exRu": "Наш дистрибьютор в Мексике набирает новых торговых представителей.",
+  "col": [
+   "recruit staff",
+   "recruit new employees"
+  ],
+  "note": "сущ. recruitment — подбор персонала",
+  "cefr": "B2"
+ },
+ {
+  "id": "t11-10",
+  "w": "salary",
+  "pos": "noun",
+  "ipa": "/ˈsæləri/",
+  "ru": "зарплата, оклад",
+  "ru2": "",
+  "ex": "The salary for this position depends on experience.",
+  "exw": "salary",
+  "exRu": "Оклад на этой должности зависит от опыта.",
+  "col": [
+   "annual salary",
+   "salary increase"
+  ],
+  "note": "salary — оклад (в месяц/год); wages — почасовая или недельная оплата",
+  "cefr": "B1"
+ },
+ {
+  "id": "t11-11",
+  "w": "bonus",
+  "pos": "noun",
+  "ipa": "/ˈbəʊnəs/",
+  "ru": "премия",
+  "ru2": "",
+  "ex": "Every manager gets a bonus if the team reaches its sales target.",
+  "exw": "bonus",
+  "exRu": "Каждый менеджер получает премию, если команда выполняет план продаж.",
+  "col": [
+   "annual bonus",
+   "performance bonus"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t11-12",
+  "w": "experience",
+  "pos": "noun",
+  "ipa": "/ɪkˈspɪəriəns/",
+  "ru": "опыт (работы)",
+  "ru2": "впечатление, случай",
+  "ex": "She has five years' experience in selling medical equipment.",
+  "exw": "experience",
+  "exRu": "У неё пять лет опыта продаж медицинского оборудования.",
+  "col": [
+   "work experience",
+   "experience in sales"
+  ],
+  "note": "Опыт — неисчисл. (much experience); an experience — случай, впечатление",
+  "cefr": "A2"
+ },
+ {
+  "id": "t11-13",
+  "w": "skill",
+  "pos": "noun",
+  "ipa": "/skɪl/",
+  "ru": "навык",
+  "ru2": "умение",
+  "ex": "Good communication skills are important for working with distributors.",
+  "exw": "skills",
+  "exRu": "Для работы с дистрибьюторами важны хорошие коммуникативные навыки.",
+  "col": [
+   "communication skills",
+   "language skills"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t11-14",
+  "w": "qualification",
+  "pos": "noun",
+  "ipa": "/ˌkwɒlɪfɪˈkeɪʃn/",
+  "ru": "квалификация (диплом)",
+  "ru2": "",
+  "ex": "Applicants must have a degree or similar qualification in engineering.",
+  "exw": "qualification",
+  "exRu": "Кандидаты должны иметь инженерное образование или аналогичную квалификацию.",
+  "col": [
+   "professional qualification",
+   "academic qualifications"
+  ],
+  "note": "Часто = диплом, сертификат об образовании",
+  "cefr": "B1"
+ },
+ {
+  "id": "t11-15",
+  "w": "training",
+  "pos": "noun",
+  "ipa": "/ˈtreɪnɪŋ/",
+  "ru": "обучение",
+  "ru2": "тренировка",
+  "ex": "Our engineers will provide training for the hospital staff in Almaty.",
+  "exw": "training",
+  "exRu": "Наши инженеры проведут обучение для персонала больницы в Алматы.",
+  "col": [
+   "training course",
+   "provide training"
+  ],
+  "note": "Неисчисляемое: some training (не trainings)",
+  "cefr": "B1"
+ },
+ {
+  "id": "t11-16",
+  "w": "promotion",
+  "pos": "noun",
+  "ipa": "/prəˈməʊʃn/",
+  "ru": "повышение (в должности)",
+  "ru2": "продвижение товара, промоакция",
+  "ex": "After two successful years, he got a promotion to sales director.",
+  "exw": "promotion",
+  "exRu": "После двух успешных лет его повысили до директора по продажам.",
+  "col": [
+   "get a promotion",
+   "promotion to manager"
+  ],
+  "note": "Глагол: be promoted — получить повышение",
+  "cefr": "B1"
+ },
+ {
+  "id": "t11-17",
+  "w": "resign",
+  "pos": "verb",
+  "ipa": "/rɪˈzaɪn/",
+  "ru": "уволиться (сам)",
+  "ru2": "уйти в отставку",
+  "ex": "Our logistics manager resigned last month to start his own business.",
+  "exw": "resigned",
+  "exRu": "Наш менеджер по логистике уволился в прошлом месяце, чтобы открыть своё дело.",
+  "col": [
+   "resign from a job",
+   "decide to resign"
+  ],
+  "note": "resign ≠ be fired (быть уволенным); сущ. resignation",
+  "cefr": "B2"
+ },
+ {
+  "id": "t11-18",
+  "w": "retire",
+  "pos": "verb",
+  "ipa": "/rɪˈtaɪə/",
+  "ru": "выйти на пенсию",
+  "ru2": "",
+  "ex": "Our director will retire next year after thirty years with the company.",
+  "exw": "retire",
+  "exRu": "Наш директор уходит на пенсию в следующем году после тридцати лет в компании.",
+  "col": [
+   "retire early",
+   "retire from work"
+  ],
+  "note": "retirement — пенсия (период жизни), pension — пенсия (деньги)",
+  "cefr": "B1"
+ },
+ {
+  "id": "t11-19",
+  "w": "full-time",
+  "pos": "adj",
+  "ipa": "/ˌfʊl ˈtaɪm/",
+  "ru": "на полную ставку",
+  "ru2": "",
+  "ex": "We are looking for a full-time engineer for our Almaty office.",
+  "exw": "full-time",
+  "exRu": "Мы ищем инженера на полную ставку в наш офис в Алматы.",
+  "col": [
+   "full-time job",
+   "work full-time"
+  ],
+  "note": "Перед существительным ударение смещается: a FULL-time job",
+  "cefr": "B1"
+ },
+ {
+  "id": "t11-20",
+  "w": "part-time",
+  "pos": "adj",
+  "ipa": "/ˌpɑːt ˈtaɪm/",
+  "ru": "на неполную ставку",
+  "ru2": "",
+  "ex": "Two students have part-time jobs in our marketing department.",
+  "exw": "part-time",
+  "exRu": "Двое студентов работают у нас в отделе маркетинга на полставки.",
+  "col": [
+   "part-time job",
+   "work part-time"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t11-21",
+  "w": "workload",
+  "pos": "noun",
+  "ipa": "/ˈwɜːkləʊd/",
+  "ru": "рабочая нагрузка",
+  "ru2": "",
+  "ex": "Our workload is very heavy before a tender deadline.",
+  "exw": "workload",
+  "exRu": "Перед сроком подачи тендера у нас очень большая нагрузка.",
+  "col": [
+   "heavy workload",
+   "manage your workload"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t11-22",
+  "w": "responsibility",
+  "pos": "noun",
+  "ipa": "/rɪˌspɒnsəˈbɪləti/",
+  "ru": "обязанность",
+  "ru2": "ответственность",
+  "ex": "My main responsibility is managing distributors in the CIS countries.",
+  "exw": "responsibility",
+  "exRu": "Моя главная обязанность — работа с дистрибьюторами в странах СНГ.",
+  "col": [
+   "take responsibility for",
+   "main responsibilities"
+  ],
+  "note": "take responsibility for sth — взять ответственность за",
+  "cefr": "B1"
+ },
+ {
+  "id": "t11-23",
+  "w": "performance",
+  "pos": "noun",
+  "ipa": "/pəˈfɔːməns/",
+  "ru": "результаты работы",
+  "ru2": "выступление; характеристики (оборудования)",
+  "ex": "The manager discussed each employee's performance at the end of the year.",
+  "exw": "performance",
+  "exRu": "В конце года руководитель обсудил с каждым сотрудником результаты его работы.",
+  "col": [
+   "performance review",
+   "job performance"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t11-24",
+  "w": "leave",
+  "pos": "noun",
+  "ipa": "/liːv/",
+  "ru": "отпуск",
+  "ru2": "уходить, уезжать (глагол)",
+  "ex": "I'll be on leave next week, so please contact my colleague.",
+  "exw": "leave",
+  "exRu": "На следующей неделе я в отпуске, поэтому обращайтесь, пожалуйста, к моему коллеге.",
+  "col": [
+   "annual leave",
+   "sick leave"
+  ],
+  "note": "be on leave — быть в отпуске; sick leave — больничный",
+  "cefr": "B2"
+ },
+ {
+  "id": "t11-25",
+  "w": "overtime",
+  "pos": "noun",
+  "ipa": "/ˈəʊvətaɪm/",
+  "ru": "сверхурочная работа",
+  "ru2": "",
+  "ex": "Engineers get paid for overtime during busy installation periods.",
+  "exw": "overtime",
+  "exRu": "В напряжённые периоды монтажа инженерам оплачивают сверхурочные.",
+  "col": [
+   "overtime pay",
+   "work overtime"
+  ],
+  "note": "work overtime — работать сверхурочно (здесь наречие)",
+  "cefr": "B2"
+ }
+]

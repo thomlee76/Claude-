@@ -1,0 +1,427 @@
+[
+ {
+  "id": "t10-01",
+  "w": "email",
+  "pos": "noun",
+  "ipa": "/ˈiːmeɪl/",
+  "ru": "электронное письмо",
+  "ru2": "отправить по почте (глагол)",
+  "ex": "I sent the distributor in Mexico an email about the new prices.",
+  "exw": "email",
+  "exRu": "Я отправил дистрибьютору в Мексике письмо о новых ценах.",
+  "col": [
+   "send an email",
+   "reply to an email"
+  ],
+  "note": "Также глагол: email sb — написать кому-то по почте",
+  "cefr": "A2"
+ },
+ {
+  "id": "t10-02",
+  "w": "reply",
+  "pos": "verb",
+  "ipa": "/rɪˈplaɪ/",
+  "ru": "отвечать",
+  "ru2": "ответ (сущ.)",
+  "ex": "Please reply to this email by Friday so we can finalise the order.",
+  "exw": "reply",
+  "exRu": "Пожалуйста, ответьте на это письмо до пятницы, чтобы мы могли оформить заказ.",
+  "col": [
+   "reply to an email",
+   "reply promptly"
+  ],
+  "note": "reply to sth — с предлогом to (не reply an email)",
+  "cefr": "A2"
+ },
+ {
+  "id": "t10-03",
+  "w": "respond",
+  "pos": "verb",
+  "ipa": "/rɪˈspɒnd/",
+  "ru": "отвечать",
+  "ru2": "реагировать",
+  "ex": "The head office in Seoul usually responds to our questions within two days.",
+  "exw": "responds",
+  "exRu": "Головной офис в Сеуле обычно отвечает на наши вопросы в течение двух дней.",
+  "col": [
+   "respond to a request",
+   "respond quickly"
+  ],
+  "note": "respond to sth — официальнее, чем reply; сущ. response",
+  "cefr": "B1"
+ },
+ {
+  "id": "t10-04",
+  "w": "inform",
+  "pos": "verb",
+  "ipa": "/ɪnˈfɔːm/",
+  "ru": "сообщать, уведомлять",
+  "ru2": "информировать",
+  "ex": "We will inform you as soon as the X-ray units are shipped.",
+  "exw": "inform",
+  "exRu": "Мы сообщим вам, как только рентгеновские аппараты будут отгружены.",
+  "col": [
+   "inform sb about sth",
+   "keep sb informed"
+  ],
+  "note": "inform sb of/about sth (не inform to sb); information — неисчисляемое",
+  "cefr": "B1"
+ },
+ {
+  "id": "t10-05",
+  "w": "attach",
+  "pos": "verb",
+  "ipa": "/əˈtætʃ/",
+  "ru": "прилагать, прикреплять",
+  "ru2": "",
+  "ex": "I have attached the price list and the technical specifications.",
+  "exw": "attached",
+  "exRu": "Прилагаю прайс-лист и технические характеристики.",
+  "col": [
+   "attach a file",
+   "please find attached"
+  ],
+  "note": "Please find attached… — стандартная фраза в письмах",
+  "cefr": "B1"
+ },
+ {
+  "id": "t10-06",
+  "w": "attachment",
+  "pos": "noun",
+  "ipa": "/əˈtætʃmənt/",
+  "ru": "вложение (файл)",
+  "ru2": "привязанность",
+  "ex": "The attachment was too large, so I sent the catalogue in two emails.",
+  "exw": "attachment",
+  "exRu": "Вложение было слишком большим, поэтому я отправил каталог двумя письмами.",
+  "col": [
+   "open an attachment",
+   "send as an attachment"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t10-07",
+  "w": "forward",
+  "pos": "verb",
+  "ipa": "/ˈfɔːwəd/",
+  "ru": "пересылать",
+  "ru2": "вперёд (нареч.)",
+  "ex": "Could you forward me the hospital's reply from yesterday?",
+  "exw": "forward",
+  "exRu": "Перешлите мне, пожалуйста, вчерашний ответ из больницы.",
+  "col": [
+   "forward an email",
+   "forward sth to sb"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t10-08",
+  "w": "contact",
+  "pos": "verb",
+  "ipa": "/ˈkɒntækt/",
+  "ru": "связываться",
+  "ru2": "контакт, контактное лицо (сущ.)",
+  "ex": "Please contact our service engineer if the detector stops working.",
+  "exw": "contact",
+  "exRu": "Если детектор перестанет работать, свяжитесь с нашим сервисным инженером.",
+  "col": [
+   "contact us",
+   "contact details"
+  ],
+  "note": "contact sb — без предлога (не contact with sb)",
+  "cefr": "B1"
+ },
+ {
+  "id": "t10-09",
+  "w": "call back",
+  "pos": "phrasal verb",
+  "ipa": "/ˌkɔːl ˈbæk/",
+  "ru": "перезвонить",
+  "ru2": "",
+  "ex": "The distributor in Chile asked me to call back after three o'clock.",
+  "exw": "call back",
+  "exRu": "Дистрибьютор из Чили попросил меня перезвонить после трёх.",
+  "col": [
+   "call sb back",
+   "call back later"
+  ],
+  "note": "Местоимение — в середину: call me back, call him back",
+  "cefr": "A2"
+ },
+ {
+  "id": "t10-10",
+  "w": "confirm",
+  "pos": "verb",
+  "ipa": "/kənˈfɜːm/",
+  "ru": "подтверждать",
+  "ru2": "",
+  "ex": "Can you confirm the delivery date for the ultrasound systems?",
+  "exw": "confirm",
+  "exRu": "Можете подтвердить дату поставки УЗИ-аппаратов?",
+  "col": [
+   "confirm an order",
+   "confirm in writing"
+  ],
+  "note": "сущ. confirmation — подтверждение",
+  "cefr": "B1"
+ },
+ {
+  "id": "t10-11",
+  "w": "request",
+  "pos": "noun",
+  "ipa": "/rɪˈkwest/",
+  "ru": "запрос, просьба",
+  "ru2": "запрашивать (глагол)",
+  "ex": "We received a request for a quotation from a clinic in Almaty.",
+  "exw": "request",
+  "exRu": "Мы получили от клиники в Алматы запрос коммерческого предложения.",
+  "col": [
+   "make a request",
+   "at your request"
+  ],
+  "note": "сущ.: a request for sth; глагол: request sth (без for)",
+  "cefr": "B1"
+ },
+ {
+  "id": "t10-12",
+  "w": "enquiry",
+  "pos": "noun",
+  "ipa": "/ɪnˈkwaɪəri/",
+  "ru": "запрос (информации)",
+  "ru2": "расследование",
+  "ex": "Thank you for your enquiry about our digital detectors.",
+  "exw": "enquiry",
+  "exRu": "Благодарим вас за запрос о наших цифровых детекторах.",
+  "col": [
+   "make an enquiry",
+   "deal with an enquiry"
+  ],
+  "note": "BrE enquiry, AmE inquiry; an enquiry about sth",
+  "cefr": "B1"
+ },
+ {
+  "id": "t10-13",
+  "w": "complaint",
+  "pos": "noun",
+  "ipa": "/kəmˈpleɪnt/",
+  "ru": "жалоба, претензия",
+  "ru2": "рекламация",
+  "ex": "The hospital made a complaint about the late delivery of spare parts.",
+  "exw": "complaint",
+  "exRu": "Больница подала жалобу на задержку поставки запчастей.",
+  "col": [
+   "make a complaint",
+   "deal with a complaint"
+  ],
+  "note": "Глагол: complain about sth (не complain on)",
+  "cefr": "B1"
+ },
+ {
+  "id": "t10-14",
+  "w": "apologise",
+  "pos": "verb",
+  "ipa": "/əˈpɒlədʒaɪz/",
+  "ru": "извиняться",
+  "ru2": "",
+  "ex": "We apologise for the delay in shipping your order.",
+  "exw": "apologise",
+  "exRu": "Приносим извинения за задержку с отгрузкой вашего заказа.",
+  "col": [
+   "apologise for the delay",
+   "apologise to a customer"
+  ],
+  "note": "apologise to sb for sth; AmE apologize",
+  "cefr": "B1"
+ },
+ {
+  "id": "t10-15",
+  "w": "regards",
+  "pos": "noun",
+  "ipa": "/rɪˈɡɑːdz/",
+  "ru": "с уважением (в подписи)",
+  "ru2": "привет, наилучшие пожелания",
+  "ex": "I usually end my emails to partners with 'Kind regards' and my name.",
+  "exw": "regards",
+  "exRu": "Письма партнёрам я обычно заканчиваю фразой «С уважением» и своим именем.",
+  "col": [
+   "Kind regards",
+   "Best regards"
+  ],
+  "note": "Give my regards to… — передайте привет; with regard to (без s) — относительно",
+  "cefr": "B1"
+ },
+ {
+  "id": "t10-16",
+  "w": "report",
+  "pos": "noun",
+  "ipa": "/rɪˈpɔːt/",
+  "ru": "отчёт",
+  "ru2": "доклад; сообщать (глагол)",
+  "ex": "I need to send the monthly sales report to Seoul by Monday.",
+  "exw": "report",
+  "exRu": "Мне нужно отправить в Сеул ежемесячный отчёт о продажах до понедельника.",
+  "col": [
+   "write a report",
+   "sales report"
+  ],
+  "note": "report to sb — подчиняться кому-то: I report to the sales director",
+  "cefr": "B1"
+ },
+ {
+  "id": "t10-17",
+  "w": "presentation",
+  "pos": "noun",
+  "ipa": "/ˌpreznˈteɪʃn/",
+  "ru": "презентация",
+  "ru2": "",
+  "ex": "I gave a short presentation of the new X-ray system to the doctors.",
+  "exw": "presentation",
+  "exRu": "Я провёл для врачей короткую презентацию новой рентгеновской системы.",
+  "col": [
+   "give a presentation",
+   "presentation slides"
+  ],
+  "note": "give/make a presentation — провести презентацию",
+  "cefr": "B1"
+ },
+ {
+  "id": "t10-18",
+  "w": "explain",
+  "pos": "verb",
+  "ipa": "/ɪkˈspleɪn/",
+  "ru": "объяснять",
+  "ru2": "",
+  "ex": "Could you explain the new payment terms to our distributor?",
+  "exw": "explain",
+  "exRu": "Не могли бы вы объяснить нашему дистрибьютору новые условия оплаты?",
+  "col": [
+   "explain the reason",
+   "explain in detail"
+  ],
+  "note": "explain sth to sb (не explain sb sth)",
+  "cefr": "A2"
+ },
+ {
+  "id": "t10-19",
+  "w": "mention",
+  "pos": "verb",
+  "ipa": "/menʃn/",
+  "ru": "упоминать",
+  "ru2": "",
+  "ex": "The client mentioned that they need training for their radiologists.",
+  "exw": "mentioned",
+  "exRu": "Клиент упомянул, что их рентгенологам нужно обучение.",
+  "col": [
+   "mention briefly",
+   "as mentioned above"
+  ],
+  "note": "mention sth — без about; Don't mention it — не за что",
+  "cefr": "B1"
+ },
+ {
+  "id": "t10-20",
+  "w": "remind",
+  "pos": "verb",
+  "ipa": "/rɪˈmaɪnd/",
+  "ru": "напоминать",
+  "ru2": "",
+  "ex": "Can you remind the customer that the invoice is due next week?",
+  "exw": "remind",
+  "exRu": "Можете напомнить клиенту, что счёт нужно оплатить на следующей неделе?",
+  "col": [
+   "remind sb to do sth",
+   "remind sb about sth"
+  ],
+  "note": "remind ≠ remember (помнить): remind sb to do / about sth",
+  "cefr": "B1"
+ },
+ {
+  "id": "t10-21",
+  "w": "available",
+  "pos": "adj",
+  "ipa": "/əˈveɪləbl/",
+  "ru": "свободный, доступный",
+  "ru2": "в наличии",
+  "ex": "Are you available for a short call on Thursday afternoon?",
+  "exw": "available",
+  "exRu": "У вас будет время на короткий звонок в четверг после обеда?",
+  "col": [
+   "available for a meeting",
+   "available in stock"
+  ],
+  "note": "О человеке — свободен; о товаре — есть в наличии",
+  "cefr": "B1"
+ },
+ {
+  "id": "t10-22",
+  "w": "urgent",
+  "pos": "adj",
+  "ipa": "/ˈɜːdʒənt/",
+  "ru": "срочный",
+  "ru2": "",
+  "ex": "We have an urgent order from a hospital in Almaty.",
+  "exw": "urgent",
+  "exRu": "У нас срочный заказ от больницы в Алматы.",
+  "col": [
+   "urgent request",
+   "urgent matter"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t10-23",
+  "w": "appreciate",
+  "pos": "verb",
+  "ipa": "/əˈpriːʃieɪt/",
+  "ru": "быть признательным",
+  "ru2": "ценить, понимать",
+  "ex": "We would appreciate it if you could send the documents today.",
+  "exw": "appreciate",
+  "exRu": "Будем признательны, если вы пришлёте документы сегодня.",
+  "col": [
+   "appreciate your help",
+   "I'd appreciate it if"
+  ],
+  "note": "I'd appreciate it if… — не пропускайте it",
+  "cefr": "B1"
+ },
+ {
+  "id": "t10-24",
+  "w": "clarify",
+  "pos": "verb",
+  "ipa": "/ˈklærəfaɪ/",
+  "ru": "уточнять, прояснять",
+  "ru2": "",
+  "ex": "Could you clarify which detector size the clinic needs?",
+  "exw": "clarify",
+  "exRu": "Уточните, пожалуйста, какой размер детектора нужен клинике.",
+  "col": [
+   "clarify the details",
+   "clarify a point"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t10-25",
+  "w": "feedback",
+  "pos": "noun",
+  "ipa": "/ˈfiːdbæk/",
+  "ru": "обратная связь, отзыв",
+  "ru2": "",
+  "ex": "The doctors gave us very positive feedback on the new ultrasound system.",
+  "exw": "feedback",
+  "exRu": "Врачи дали очень положительный отзыв о новой УЗИ-системе.",
+  "col": [
+   "give feedback",
+   "positive feedback"
+  ],
+  "note": "Неисчисляемое: some feedback (не a feedback, feedbacks)",
+  "cefr": "B2"
+ }
+]

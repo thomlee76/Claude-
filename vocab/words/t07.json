@@ -1,0 +1,427 @@
+[
+ {
+  "id": "t07-01",
+  "w": "supply",
+  "pos": "verb",
+  "ipa": "/səˈplaɪ/",
+  "ru": "поставлять",
+  "ru2": "снабжать; поставка, запас (n)",
+  "ex": "We supply X-ray equipment to hospitals in Kazakhstan and Uzbekistan.",
+  "exw": "supply",
+  "exRu": "Мы поставляем рентгеновское оборудование в больницы Казахстана и Узбекистана.",
+  "col": [
+   "supply goods to",
+   "supply chain"
+  ],
+  "note": "supply sth to sb / supply sb with sth",
+  "cefr": "B1"
+ },
+ {
+  "id": "t07-02",
+  "w": "supplier",
+  "pos": "noun",
+  "ipa": "/səˈplaɪə/",
+  "ru": "поставщик",
+  "ru2": "",
+  "ex": "We are looking for a new supplier of packaging materials.",
+  "exw": "supplier",
+  "exRu": "Мы ищем нового поставщика упаковочных материалов.",
+  "col": [
+   "main supplier",
+   "change suppliers"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t07-03",
+  "w": "delivery",
+  "pos": "noun",
+  "ipa": "/dɪˈlɪvəri/",
+  "ru": "поставка, доставка",
+  "ru2": "роды (мед.)",
+  "ex": "The delivery of the ultrasound scanners to Almaty is planned for March.",
+  "exw": "delivery",
+  "exRu": "Поставка УЗИ-сканеров в Алматы запланирована на март.",
+  "col": [
+   "delivery date",
+   "delivery time"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t07-04",
+  "w": "deliver",
+  "pos": "verb",
+  "ipa": "/dɪˈlɪvə/",
+  "ru": "доставлять, поставлять",
+  "ru2": "выполнять (обещание), произносить (речь)",
+  "ex": "Can you deliver the detectors to the hospital by Friday?",
+  "exw": "deliver",
+  "exRu": "Сможете доставить детекторы в больницу к пятнице?",
+  "col": [
+   "deliver on time",
+   "deliver results"
+  ],
+  "note": "deliver sth to sb (не «deliver sb sth»); deliver on a promise = выполнить обещание",
+  "cefr": "B1"
+ },
+ {
+  "id": "t07-05",
+  "w": "shipment",
+  "pos": "noun",
+  "ipa": "/ˈʃɪpmənt/",
+  "ru": "партия товара, отгрузка",
+  "ru2": "",
+  "ex": "The next shipment of spare parts will leave Seoul next week.",
+  "exw": "shipment",
+  "exRu": "Следующая партия запчастей отправится из Сеула на следующей неделе.",
+  "col": [
+   "track a shipment",
+   "shipment date"
+  ],
+  "note": "shipment — любая отправка груза, не только морем",
+  "cefr": "B2"
+ },
+ {
+  "id": "t07-06",
+  "w": "ship",
+  "pos": "verb",
+  "ipa": "/ʃɪp/",
+  "ru": "отправлять, отгружать",
+  "ru2": "корабль, судно (n)",
+  "ex": "We will ship the order to Mexico as soon as payment arrives.",
+  "exw": "ship",
+  "exRu": "Мы отправим заказ в Мексику, как только поступит оплата.",
+  "col": [
+   "ship goods",
+   "ready to ship"
+  ],
+  "note": "ship — отправлять любым транспортом, не только кораблём",
+  "cefr": "B2"
+ },
+ {
+  "id": "t07-07",
+  "w": "transport",
+  "pos": "noun",
+  "ipa": "/ˈtrænspɔːt/",
+  "ru": "перевозка, транспорт",
+  "ru2": "перевозить (v)",
+  "ex": "Transport costs to Chile have increased by fifteen percent this year.",
+  "exw": "Transport",
+  "exRu": "Расходы на доставку в Чили за этот год выросли на пятнадцать процентов.",
+  "col": [
+   "transport costs",
+   "road transport"
+  ],
+  "note": "BrE transport = AmE transportation; глагол — /trænˈspɔːt/",
+  "cefr": "A2"
+ },
+ {
+  "id": "t07-08",
+  "w": "warehouse",
+  "pos": "noun",
+  "ipa": "/ˈweəhaʊs/",
+  "ru": "склад",
+  "ru2": "",
+  "ex": "Our distributor keeps all the equipment in a warehouse near the airport.",
+  "exw": "warehouse",
+  "exRu": "Наш дистрибьютор хранит всё оборудование на складе рядом с аэропортом.",
+  "col": [
+   "bonded warehouse",
+   "warehouse manager"
+  ],
+  "note": "bonded warehouse = таможенный склад",
+  "cefr": "B2"
+ },
+ {
+  "id": "t07-09",
+  "w": "stock",
+  "pos": "noun",
+  "ipa": "/stɒk/",
+  "ru": "запас, наличие товара",
+  "ru2": "акции, ассортимент",
+  "ex": "We have only three portable X-ray units in stock right now.",
+  "exw": "stock",
+  "exRu": "Сейчас в наличии у нас всего три переносных рентгеновских аппарата.",
+  "col": [
+   "in stock",
+   "out of stock"
+  ],
+  "note": "BrE stock = AmE inventory (товарные запасы)",
+  "cefr": "B1"
+ },
+ {
+  "id": "t07-10",
+  "w": "goods",
+  "pos": "noun",
+  "ipa": "/ɡʊdz/",
+  "ru": "товары",
+  "ru2": "груз",
+  "ex": "All goods must be checked carefully before they leave the warehouse.",
+  "exw": "goods",
+  "exRu": "Перед отгрузкой со склада весь товар нужно тщательно проверить.",
+  "col": [
+   "deliver goods",
+   "consumer goods"
+  ],
+  "note": "только мн. ч.: the goods are ready, нельзя «a good»",
+  "cefr": "B1"
+ },
+ {
+  "id": "t07-11",
+  "w": "cargo",
+  "pos": "noun",
+  "ipa": "/ˈkɑːɡəʊ/",
+  "ru": "груз",
+  "ru2": "",
+  "ex": "The cargo was loaded onto a plane to Santiago this morning.",
+  "exw": "cargo",
+  "exRu": "Груз сегодня утром погрузили на самолёт до Сантьяго.",
+  "col": [
+   "air cargo",
+   "cargo insurance"
+  ],
+  "note": "мн. ч. cargoes",
+  "cefr": "B2"
+ },
+ {
+  "id": "t07-12",
+  "w": "freight",
+  "pos": "noun",
+  "ipa": "/freɪt/",
+  "ru": "грузоперевозка, фрахт",
+  "ru2": "груз, стоимость перевозки",
+  "ex": "The price does not include freight and insurance to Almaty.",
+  "exw": "freight",
+  "exRu": "Цена не включает доставку и страховку до Алматы.",
+  "col": [
+   "freight forwarder",
+   "air freight"
+  ],
+  "note": "freight forwarder = экспедитор; gh не читается",
+  "cefr": "B2"
+ },
+ {
+  "id": "t07-13",
+  "w": "customs",
+  "pos": "noun",
+  "ipa": "/ˈkʌstəmz/",
+  "ru": "таможня",
+  "ru2": "",
+  "ex": "The equipment is still waiting for customs clearance in Kazakhstan.",
+  "exw": "customs",
+  "exRu": "Оборудование всё ещё ждёт таможенного оформления в Казахстане.",
+  "col": [
+   "customs clearance",
+   "go through customs"
+  ],
+  "note": "customs (таможня) ≠ custom (обычай); всегда с -s",
+  "cefr": "B1"
+ },
+ {
+  "id": "t07-14",
+  "w": "packaging",
+  "pos": "noun",
+  "ipa": "/ˈpækɪdʒɪŋ/",
+  "ru": "упаковка",
+  "ru2": "",
+  "ex": "Please use strong packaging because the detectors are very sensitive.",
+  "exw": "packaging",
+  "exRu": "Используйте, пожалуйста, прочную упаковку: детекторы очень чувствительные.",
+  "col": [
+   "original packaging",
+   "packaging materials"
+  ],
+  "note": "packaging — упаковочный материал; package — посылка, пакет",
+  "cefr": "B2"
+ },
+ {
+  "id": "t07-15",
+  "w": "container",
+  "pos": "noun",
+  "ipa": "/kənˈteɪnə/",
+  "ru": "контейнер",
+  "ru2": "ёмкость",
+  "ex": "We need one forty-foot container for the whole order to Chile.",
+  "exw": "container",
+  "exRu": "Для всего заказа в Чили нам нужен один сорокафутовый контейнер.",
+  "col": [
+   "shipping container",
+   "container ship"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t07-16",
+  "w": "track",
+  "pos": "verb",
+  "ipa": "/træk/",
+  "ru": "отслеживать",
+  "ru2": "дорожка, трек (n)",
+  "ex": "You can track the shipment online with this number.",
+  "exw": "track",
+  "exRu": "Отследить груз можно онлайн по этому номеру.",
+  "col": [
+   "track a shipment",
+   "tracking number"
+  ],
+  "note": "keep track of = следить за, вести учёт",
+  "cefr": "B2"
+ },
+ {
+  "id": "t07-17",
+  "w": "arrive",
+  "pos": "verb",
+  "ipa": "/əˈraɪv/",
+  "ru": "прибывать, поступать",
+  "ru2": "",
+  "ex": "The ultrasound systems should arrive at the port of Veracruz next Tuesday.",
+  "exw": "arrive",
+  "exRu": "УЗИ-системы должны прибыть в порт Веракрус в следующий вторник.",
+  "col": [
+   "arrive on time",
+   "arrive at the port"
+  ],
+  "note": "arrive in (город, страна) / at (порт, здание); никогда не arrive to",
+  "cefr": "A2"
+ },
+ {
+  "id": "t07-18",
+  "w": "delay",
+  "pos": "noun",
+  "ipa": "/dɪˈleɪ/",
+  "ru": "задержка",
+  "ru2": "задерживать, откладывать (v)",
+  "ex": "There was a two-week delay because of problems at the border.",
+  "exw": "delay",
+  "exRu": "Из-за проблем на границе поставка задержалась на две недели.",
+  "col": [
+   "without delay",
+   "cause a delay"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t07-19",
+  "w": "quantity",
+  "pos": "noun",
+  "ipa": "/ˈkwɒntəti/",
+  "ru": "количество",
+  "ru2": "",
+  "ex": "Please check the quantity of each item against the packing list.",
+  "exw": "quantity",
+  "exRu": "Пожалуйста, сверьте количество по каждой позиции с упаковочным листом.",
+  "col": [
+   "minimum quantity",
+   "large quantities"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t07-20",
+  "w": "carrier",
+  "pos": "noun",
+  "ipa": "/ˈkæriə/",
+  "ru": "перевозчик",
+  "ru2": "авиакомпания, оператор связи",
+  "ex": "The carrier is responsible for the goods until they reach the warehouse.",
+  "exw": "carrier",
+  "exRu": "Перевозчик отвечает за груз, пока тот не доставлен на склад.",
+  "col": [
+   "air carrier",
+   "choose a carrier"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t07-21",
+  "w": "dispatch",
+  "pos": "verb",
+  "ipa": "/dɪˈspætʃ/",
+  "ru": "отправлять, отгружать",
+  "ru2": "отправка (n)",
+  "ex": "We dispatched the spare parts from Seoul yesterday by express courier.",
+  "exw": "dispatched",
+  "exRu": "Вчера мы отправили запчасти из Сеула экспресс-курьером.",
+  "col": [
+   "dispatch goods",
+   "dispatch date"
+  ],
+  "note": "BrE dispatch (реже despatch); в AmE чаще ship",
+  "cefr": "B2"
+ },
+ {
+  "id": "t07-22",
+  "w": "storage",
+  "pos": "noun",
+  "ipa": "/ˈstɔːrɪdʒ/",
+  "ru": "хранение",
+  "ru2": "память (компьютера)",
+  "ex": "Storage conditions for the detectors are described in the user manual.",
+  "exw": "Storage",
+  "exRu": "Условия хранения детекторов описаны в руководстве пользователя.",
+  "col": [
+   "storage conditions",
+   "storage costs"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t07-23",
+  "w": "import",
+  "pos": "verb",
+  "ipa": "/ɪmˈpɔːt/",
+  "ru": "ввозить, импортировать",
+  "ru2": "импорт, ввоз (n)",
+  "ex": "Our partner imports medical equipment into Kazakhstan under a special licence.",
+  "exw": "imports",
+  "exRu": "Наш партнёр ввозит медицинское оборудование в Казахстан по специальной лицензии.",
+  "col": [
+   "import goods",
+   "import duty"
+  ],
+  "note": "глагол /ɪmˈpɔːt/, сущ. /ˈɪmpɔːt/ — ударение меняется",
+  "cefr": "B1"
+ },
+ {
+  "id": "t07-24",
+  "w": "export",
+  "pos": "verb",
+  "ipa": "/ɪkˈspɔːt/",
+  "ru": "экспортировать",
+  "ru2": "экспорт (n)",
+  "ex": "Our head office exports ultrasound systems to more than forty countries.",
+  "exw": "exports",
+  "exRu": "Наш головной офис экспортирует УЗИ-системы более чем в сорок стран.",
+  "col": [
+   "export goods",
+   "export licence"
+  ],
+  "note": "глагол /ɪkˈspɔːt/, сущ. /ˈekspɔːt/ — ударение меняется",
+  "cefr": "B1"
+ },
+ {
+  "id": "t07-25",
+  "w": "damage",
+  "pos": "noun",
+  "ipa": "/ˈdæmɪdʒ/",
+  "ru": "повреждение, ущерб",
+  "ru2": "повреждать (v)",
+  "ex": "We found some damage to the boxes when the shipment arrived.",
+  "exw": "damage",
+  "exRu": "Когда груз пришёл, мы обнаружили повреждения на коробках.",
+  "col": [
+   "cause damage",
+   "damage to the goods"
+  ],
+  "note": "неисчисляемое; damages (мн.) = денежная компенсация по суду",
+  "cefr": "B1"
+ }
+]

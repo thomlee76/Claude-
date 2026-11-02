@@ -1,0 +1,427 @@
+[
+ {
+  "id": "t12-01",
+  "w": "business trip",
+  "pos": "noun",
+  "ipa": "/ˈbɪznəs trɪp/",
+  "ru": "командировка",
+  "ru2": "",
+  "ex": "Next month I'm going on a business trip to Mexico and Chile.",
+  "exw": "business trip",
+  "exRu": "В следующем месяце я еду в командировку в Мексику и Чили.",
+  "col": [
+   "go on a business trip",
+   "be away on a business trip"
+  ],
+  "note": "go on a business trip (не go to a business trip)",
+  "cefr": "B1"
+ },
+ {
+  "id": "t12-02",
+  "w": "flight",
+  "pos": "noun",
+  "ipa": "/flaɪt/",
+  "ru": "рейс, перелёт",
+  "ru2": "",
+  "ex": "My flight from Seoul to Almaty was delayed by three hours.",
+  "exw": "flight",
+  "exRu": "Мой рейс из Сеула в Алматы задержали на три часа.",
+  "col": [
+   "book a flight",
+   "connecting flight"
+  ],
+  "note": "",
+  "cefr": "A2"
+ },
+ {
+  "id": "t12-03",
+  "w": "book",
+  "pos": "verb",
+  "ipa": "/bʊk/",
+  "ru": "бронировать",
+  "ru2": "книга (сущ.)",
+  "ex": "Could you book a hotel near the exhibition centre for me?",
+  "exw": "book",
+  "exRu": "Не могли бы вы забронировать мне гостиницу рядом с выставочным центром?",
+  "col": [
+   "book a flight",
+   "book a meeting room"
+  ],
+  "note": "be fully booked — всё занято, мест нет",
+  "cefr": "A2"
+ },
+ {
+  "id": "t12-04",
+  "w": "reservation",
+  "pos": "noun",
+  "ipa": "/ˌrezəˈveɪʃn/",
+  "ru": "бронь, бронирование",
+  "ru2": "оговорка, сомнение",
+  "ex": "I have a reservation for three nights at the hotel.",
+  "exw": "reservation",
+  "exRu": "У меня забронирован номер в гостинице на три ночи.",
+  "col": [
+   "make a reservation",
+   "confirm a reservation"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t12-05",
+  "w": "accommodation",
+  "pos": "noun",
+  "ipa": "/əˌkɒməˈdeɪʃn/",
+  "ru": "жильё, проживание",
+  "ru2": "",
+  "ex": "The distributor will arrange accommodation for our engineers in Almaty.",
+  "exw": "accommodation",
+  "exRu": "Дистрибьютор организует проживание для наших инженеров в Алматы.",
+  "col": [
+   "arrange accommodation",
+   "hotel accommodation"
+  ],
+  "note": "BrE — неисчисл. (не accommodations); пишется: двойные cc и mm",
+  "cefr": "B1"
+ },
+ {
+  "id": "t12-06",
+  "w": "check in",
+  "pos": "phrasal verb",
+  "ipa": "/ˌtʃek ˈɪn/",
+  "ru": "зарегистрироваться",
+  "ru2": "заселиться в отель, пройти регистрацию на рейс",
+  "ex": "We can check in at the hotel after two o'clock.",
+  "exw": "check in",
+  "exRu": "Заселиться в гостиницу можно после двух часов.",
+  "col": [
+   "check in at the hotel",
+   "check in online"
+  ],
+  "note": "сущ. пишется через дефис: check-in desk",
+  "cefr": "A2"
+ },
+ {
+  "id": "t12-07",
+  "w": "check out",
+  "pos": "phrasal verb",
+  "ipa": "/ˌtʃek ˈaʊt/",
+  "ru": "выехать из отеля",
+  "ru2": "проверить, посмотреть (разг.)",
+  "ex": "Please remember to check out of the hotel before noon.",
+  "exw": "check out",
+  "exRu": "Не забудьте выехать из гостиницы до полудня.",
+  "col": [
+   "check out of the hotel",
+   "check out early"
+  ],
+  "note": "check out of a hotel; сущ. check-out",
+  "cefr": "B1"
+ },
+ {
+  "id": "t12-08",
+  "w": "visa",
+  "pos": "noun",
+  "ipa": "/ˈviːzə/",
+  "ru": "виза",
+  "ru2": "",
+  "ex": "Our engineer applied for a visa three weeks before the installation.",
+  "exw": "visa",
+  "exRu": "Наш инженер подал документы на визу за три недели до монтажа.",
+  "col": [
+   "apply for a visa",
+   "visa requirements"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t12-09",
+  "w": "passport",
+  "pos": "noun",
+  "ipa": "/ˈpɑːspɔːt/",
+  "ru": "паспорт (заграничный)",
+  "ru2": "",
+  "ex": "Make sure your passport is valid for at least six months.",
+  "exw": "passport",
+  "exRu": "Убедитесь, что ваш паспорт действителен ещё минимум полгода.",
+  "col": [
+   "valid passport",
+   "passport control"
+  ],
+  "note": "",
+  "cefr": "A2"
+ },
+ {
+  "id": "t12-10",
+  "w": "departure",
+  "pos": "noun",
+  "ipa": "/dɪˈpɑːtʃə/",
+  "ru": "отправление, вылет",
+  "ru2": "уход, отъезд",
+  "ex": "Please be at the airport two hours before departure.",
+  "exw": "departure",
+  "exRu": "Пожалуйста, будьте в аэропорту за два часа до вылета.",
+  "col": [
+   "departure time",
+   "departure lounge"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t12-11",
+  "w": "arrival",
+  "pos": "noun",
+  "ipa": "/əˈraɪvl/",
+  "ru": "прибытие",
+  "ru2": "прилёт",
+  "ex": "Please send me your arrival time so the driver can meet you.",
+  "exw": "arrival",
+  "exRu": "Пришлите мне время прилёта, чтобы водитель мог вас встретить.",
+  "col": [
+   "arrival time",
+   "on arrival"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t12-12",
+  "w": "luggage",
+  "pos": "noun",
+  "ipa": "/ˈlʌɡɪdʒ/",
+  "ru": "багаж",
+  "ru2": "",
+  "ex": "I took the product samples in my hand luggage.",
+  "exw": "luggage",
+  "exRu": "Образцы продукции я вёз в ручной клади.",
+  "col": [
+   "hand luggage",
+   "lost luggage"
+  ],
+  "note": "Неисчисл.: a piece of luggage (не luggages); AmE чаще baggage",
+  "cefr": "A2"
+ },
+ {
+  "id": "t12-13",
+  "w": "conference",
+  "pos": "noun",
+  "ipa": "/ˈkɒnfərəns/",
+  "ru": "конференция",
+  "ru2": "",
+  "ex": "We are presenting our new detector at a radiology conference in Mexico City.",
+  "exw": "conference",
+  "exRu": "Мы представляем наш новый детектор на конференции по радиологии в Мехико.",
+  "col": [
+   "attend a conference",
+   "conference call"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t12-14",
+  "w": "exhibition",
+  "pos": "noun",
+  "ipa": "/ˌeksɪˈbɪʃn/",
+  "ru": "выставка",
+  "ru2": "",
+  "ex": "Our stand at the medical exhibition attracted many visitors.",
+  "exw": "exhibition",
+  "exRu": "Наш стенд на медицинской выставке привлёк много посетителей.",
+  "col": [
+   "exhibition stand",
+   "international exhibition"
+  ],
+  "note": "h не читается: ex-i-BI-tion",
+  "cefr": "B1"
+ },
+ {
+  "id": "t12-15",
+  "w": "trade fair",
+  "pos": "noun",
+  "ipa": "/ˈtreɪd feə/",
+  "ru": "отраслевая выставка, ярмарка",
+  "ru2": "",
+  "ex": "We met three new distributors at a trade fair in Germany.",
+  "exw": "trade fair",
+  "exRu": "На отраслевой выставке в Германии мы познакомились с тремя новыми дистрибьюторами.",
+  "col": [
+   "attend a trade fair",
+   "trade fair stand"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t12-16",
+  "w": "event",
+  "pos": "noun",
+  "ipa": "/ɪˈvent/",
+  "ru": "мероприятие",
+  "ru2": "событие",
+  "ex": "The company organised a training event for doctors and engineers.",
+  "exw": "event",
+  "exRu": "Компания организовала обучающее мероприятие для врачей и инженеров.",
+  "col": [
+   "organise an event",
+   "corporate event"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t12-17",
+  "w": "venue",
+  "pos": "noun",
+  "ipa": "/ˈvenjuː/",
+  "ru": "место проведения",
+  "ru2": "",
+  "ex": "The hotel conference hall is a good venue for the product launch.",
+  "exw": "venue",
+  "exRu": "Конференц-зал гостиницы — хорошее место для презентации нового продукта.",
+  "col": [
+   "conference venue",
+   "choose a venue"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t12-18",
+  "w": "invitation",
+  "pos": "noun",
+  "ipa": "/ˌɪnvɪˈteɪʃn/",
+  "ru": "приглашение",
+  "ru2": "",
+  "ex": "We received an invitation to the opening of the new diagnostic centre.",
+  "exw": "invitation",
+  "exRu": "Мы получили приглашение на открытие нового диагностического центра.",
+  "col": [
+   "accept an invitation",
+   "letter of invitation"
+  ],
+  "note": "invitation to sth; letter of invitation — приглашение для визы",
+  "cefr": "B1"
+ },
+ {
+  "id": "t12-19",
+  "w": "guest",
+  "pos": "noun",
+  "ipa": "/ɡest/",
+  "ru": "гость",
+  "ru2": "",
+  "ex": "Our guests from Seoul will arrive at the Almaty office on Tuesday.",
+  "exw": "guests",
+  "exRu": "Наши гости из Сеула приедут в алматинский офис во вторник.",
+  "col": [
+   "guest speaker",
+   "special guest"
+  ],
+  "note": "",
+  "cefr": "A2"
+ },
+ {
+  "id": "t12-20",
+  "w": "host",
+  "pos": "verb",
+  "ipa": "/həʊst/",
+  "ru": "принимать, проводить",
+  "ru2": "хозяин, принимающая сторона (сущ.)",
+  "ex": "Our company will host a meeting for all Latin American distributors.",
+  "exw": "host",
+  "exRu": "Наша компания проведёт у себя встречу всех латиноамериканских дистрибьюторов.",
+  "col": [
+   "host a conference",
+   "host a delegation"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t12-21",
+  "w": "itinerary",
+  "pos": "noun",
+  "ipa": "/aɪˈtɪnərəri/",
+  "ru": "маршрут, программа поездки",
+  "ru2": "",
+  "ex": "I'll email you the itinerary for your visit to the hospitals in Chile.",
+  "exw": "itinerary",
+  "exRu": "Я пришлю вам по почте программу вашего визита в больницы Чили.",
+  "col": [
+   "travel itinerary",
+   "detailed itinerary"
+  ],
+  "note": "Ударение на второй слог: i-TIN-e-ra-ry",
+  "cefr": "B2"
+ },
+ {
+  "id": "t12-22",
+  "w": "visit",
+  "pos": "verb",
+  "ipa": "/ˈvɪzɪt/",
+  "ru": "посещать",
+  "ru2": "визит (сущ.)",
+  "ex": "Next week I will visit two clinics and our distributor in Almaty.",
+  "exw": "visit",
+  "exRu": "На следующей неделе я посещу две клиники и нашего дистрибьютора в Алматы.",
+  "col": [
+   "visit a customer",
+   "visit a factory"
+  ],
+  "note": "visit sb/sth — без предлога; но сущ.: a visit to",
+  "cefr": "A2"
+ },
+ {
+  "id": "t12-23",
+  "w": "abroad",
+  "pos": "adv",
+  "ipa": "/əˈbrɔːd/",
+  "ru": "за границей, за границу",
+  "ru2": "",
+  "ex": "I travel abroad about once a month to meet our partners.",
+  "exw": "abroad",
+  "exRu": "Я езжу за границу примерно раз в месяц на встречи с партнёрами.",
+  "col": [
+   "travel abroad",
+   "work abroad"
+  ],
+  "note": "Без предлога: go abroad (не go to abroad)",
+  "cefr": "B1"
+ },
+ {
+  "id": "t12-24",
+  "w": "refund",
+  "pos": "noun",
+  "ipa": "/ˈriːfʌnd/",
+  "ru": "возврат денег",
+  "ru2": "возмещать (глагол)",
+  "ex": "The airline gave me a full refund for the cancelled flight.",
+  "exw": "refund",
+  "exRu": "Авиакомпания полностью вернула мне деньги за отменённый рейс.",
+  "col": [
+   "full refund",
+   "ask for a refund"
+  ],
+  "note": "Глагол refund — ударение на 2-й слог: /rɪˈfʌnd/",
+  "cefr": "B1"
+ },
+ {
+  "id": "t12-25",
+  "w": "delegation",
+  "pos": "noun",
+  "ipa": "/ˌdelɪˈɡeɪʃn/",
+  "ru": "делегация",
+  "ru2": "делегирование (полномочий)",
+  "ex": "A delegation of doctors from Kazakhstan visited our factory in Korea.",
+  "exw": "delegation",
+  "exRu": "Делегация врачей из Казахстана посетила наш завод в Корее.",
+  "col": [
+   "trade delegation",
+   "head a delegation"
+  ],
+  "note": "",
+  "cefr": "B2"
+ }
+]

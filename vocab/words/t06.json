@@ -1,0 +1,427 @@
+[
+ {
+  "id": "t06-01",
+  "w": "contract",
+  "pos": "noun",
+  "ipa": "/ˈkɒntrækt/",
+  "ru": "договор",
+  "ru2": "контракт",
+  "ex": "We signed a three-year contract with a new distributor in Uzbekistan.",
+  "exw": "contract",
+  "exRu": "Мы подписали трёхлетний договор с новым дистрибьютором в Узбекистане.",
+  "col": [
+   "sign a contract",
+   "break a contract"
+  ],
+  "note": "Гл. contract /kənˈtrækt/ — ударение меняется",
+  "cefr": "B1"
+ },
+ {
+  "id": "t06-02",
+  "w": "sign",
+  "pos": "verb",
+  "ipa": "/saɪn/",
+  "ru": "подписывать",
+  "ru2": "знак, вывеска (сущ.)",
+  "ex": "The director will sign the agreement when he returns from Seoul.",
+  "exw": "sign",
+  "exRu": "Директор подпишет соглашение, когда вернётся из Сеула.",
+  "col": [
+   "sign a contract",
+   "sign here"
+  ],
+  "note": "g не читается: /saɪn/",
+  "cefr": "A2"
+ },
+ {
+  "id": "t06-03",
+  "w": "signature",
+  "pos": "noun",
+  "ipa": "/ˈsɪɡnətʃə/",
+  "ru": "подпись",
+  "ru2": "",
+  "ex": "The contract is not valid without the signature of both directors.",
+  "exw": "signature",
+  "exRu": "Без подписи обоих директоров договор недействителен.",
+  "col": [
+   "electronic signature",
+   "signature and stamp"
+  ],
+  "note": "Здесь g читается: /ˈsɪɡnətʃə/ (в отличие от sign)",
+  "cefr": "B1"
+ },
+ {
+  "id": "t06-04",
+  "w": "draft",
+  "pos": "noun",
+  "ipa": "/drɑːft/",
+  "ru": "проект (документа)",
+  "ru2": "черновик; (гл.) составлять проект",
+  "ex": "Our lawyer sent the first draft of the distribution agreement yesterday.",
+  "exw": "draft",
+  "exRu": "Вчера наш юрист прислал первый вариант дистрибьюторского соглашения.",
+  "col": [
+   "first draft",
+   "draft contract"
+  ],
+  "note": "draft contract — проект договора",
+  "cefr": "B2"
+ },
+ {
+  "id": "t06-05",
+  "w": "clause",
+  "pos": "noun",
+  "ipa": "/klɔːz/",
+  "ru": "пункт (договора)",
+  "ru2": "статья, оговорка; (грам.) придаточное",
+  "ex": "Please check the payment clause before we send the contract to Mexico.",
+  "exw": "clause",
+  "exRu": "Пожалуйста, проверьте пункт об оплате, прежде чем отправлять договор в Мексику.",
+  "col": [
+   "payment clause",
+   "exclusivity clause"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t06-06",
+  "w": "condition",
+  "pos": "noun",
+  "ipa": "/kənˈdɪʃn/",
+  "ru": "условие",
+  "ru2": "состояние",
+  "ex": "One condition of the deal is that you train the hospital engineers.",
+  "exw": "condition",
+  "exRu": "Одно из условий сделки — обучение инженеров больницы с вашей стороны.",
+  "col": [
+   "on condition that",
+   "conditions of sale"
+  ],
+  "note": "in good condition — в хорошем состоянии",
+  "cefr": "B1"
+ },
+ {
+  "id": "t06-07",
+  "w": "terms",
+  "pos": "noun",
+  "ipa": "/tɜːmz/",
+  "ru": "условия",
+  "ru2": "сроки; термины",
+  "ex": "The payment terms are 30% in advance and 70% after delivery.",
+  "exw": "terms",
+  "exRu": "Условия оплаты: 30% предоплата и 70% после поставки.",
+  "col": [
+   "payment terms",
+   "terms and conditions"
+  ],
+  "note": "В значении «условия» — только мн. ч.; term — срок, термин",
+  "cefr": "B2"
+ },
+ {
+  "id": "t06-08",
+  "w": "valid",
+  "pos": "adj",
+  "ipa": "/ˈvælɪd/",
+  "ru": "действительный",
+  "ru2": "имеющий силу; обоснованный",
+  "ex": "Our price quote is valid for sixty days from today.",
+  "exw": "valid",
+  "exRu": "Наше ценовое предложение действует шестьдесят дней с сегодняшнего дня.",
+  "col": [
+   "valid until",
+   "valid for a year"
+  ],
+  "note": "valid for (срок) / valid until (дата)",
+  "cefr": "B2"
+ },
+ {
+  "id": "t06-09",
+  "w": "expire",
+  "pos": "verb",
+  "ipa": "/ɪkˈspaɪə/",
+  "ru": "истекать (о сроке)",
+  "ru2": "терять силу",
+  "ex": "Our registration certificate in Kazakhstan expires in May, so we must renew it.",
+  "exw": "expires",
+  "exRu": "Срок нашего регистрационного удостоверения в Казахстане истекает в мае, его надо продлить.",
+  "col": [
+   "the contract expires",
+   "expiry date"
+  ],
+  "note": "Сущ.: expiry (BrE) / expiration (AmE)",
+  "cefr": "B2"
+ },
+ {
+  "id": "t06-10",
+  "w": "renew",
+  "pos": "verb",
+  "ipa": "/rɪˈnjuː/",
+  "ru": "продлевать",
+  "ru2": "возобновлять, обновлять",
+  "ex": "We decided to renew the agreement with our Chilean partner for two more years.",
+  "exw": "renew",
+  "exRu": "Мы решили продлить соглашение с чилийским партнёром ещё на два года.",
+  "col": [
+   "renew a contract",
+   "renew a licence"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t06-11",
+  "w": "cancel",
+  "pos": "verb",
+  "ipa": "/kænsl/",
+  "ru": "отменять",
+  "ru2": "расторгать, аннулировать",
+  "ex": "The hospital cancelled its order after the tender was postponed.",
+  "exw": "cancelled",
+  "exRu": "Больница отменила заказ после того, как тендер перенесли.",
+  "col": [
+   "cancel an order",
+   "cancel a contract"
+  ],
+  "note": "BrE: cancelled, cancelling (двойная l); AmE: canceled",
+  "cefr": "B1"
+ },
+ {
+  "id": "t06-12",
+  "w": "penalty",
+  "pos": "noun",
+  "ipa": "/ˈpenəlti/",
+  "ru": "штраф",
+  "ru2": "неустойка; наказание",
+  "ex": "The contract includes a penalty for every week of late delivery.",
+  "exw": "penalty",
+  "exRu": "Договор предусматривает штраф за каждую неделю просрочки поставки.",
+  "col": [
+   "late delivery penalty",
+   "pay a penalty"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t06-13",
+  "w": "warranty",
+  "pos": "noun",
+  "ipa": "/ˈwɒrənti/",
+  "ru": "гарантия",
+  "ru2": "гарантийный срок",
+  "ex": "The detector comes with a two-year warranty on all parts.",
+  "exw": "warranty",
+  "exRu": "На все детали детектора даётся гарантия два года.",
+  "col": [
+   "under warranty",
+   "warranty period"
+  ],
+  "note": "warranty — гарантия на товар; guarantee — шире (обещание, банковская гарантия)",
+  "cefr": "B2"
+ },
+ {
+  "id": "t06-14",
+  "w": "guarantee",
+  "pos": "noun",
+  "ipa": "/ˌɡærənˈtiː/",
+  "ru": "гарантия",
+  "ru2": "поручительство; (гл.) гарантировать",
+  "ex": "The bank guarantee must be ready before we can take part in the tender.",
+  "exw": "guarantee",
+  "exRu": "Банковская гарантия должна быть готова до того, как мы сможем участвовать в тендере.",
+  "col": [
+   "bank guarantee",
+   "money-back guarantee"
+  ],
+  "note": "Ударение на последний слог; u не читается",
+  "cefr": "B1"
+ },
+ {
+  "id": "t06-15",
+  "w": "licence",
+  "pos": "noun",
+  "ipa": "/laɪsns/",
+  "ru": "лицензия",
+  "ru2": "разрешение; водительские права",
+  "ex": "The distributor needs a special licence to import X-ray equipment.",
+  "exw": "licence",
+  "exRu": "Дистрибьютору нужна специальная лицензия на ввоз рентгеновского оборудования.",
+  "col": [
+   "import licence",
+   "apply for a licence"
+  ],
+  "note": "BrE: licence (сущ.), license (гл.); AmE: license в обоих случаях",
+  "cefr": "B1"
+ },
+ {
+  "id": "t06-16",
+  "w": "certificate",
+  "pos": "noun",
+  "ipa": "/səˈtɪfɪkət/",
+  "ru": "сертификат",
+  "ru2": "свидетельство, удостоверение",
+  "ex": "The ministry asked for a copy of the CE certificate for the detector.",
+  "exw": "certificate",
+  "exRu": "Министерство запросило копию сертификата CE на детектор.",
+  "col": [
+   "registration certificate",
+   "quality certificate"
+  ],
+  "note": "Сущ. на /-kət/; гл. certify /ˈsɜːtɪfaɪ/",
+  "cefr": "B1"
+ },
+ {
+  "id": "t06-17",
+  "w": "register",
+  "pos": "verb",
+  "ipa": "/ˈredʒɪstə/",
+  "ru": "регистрировать",
+  "ru2": "зарегистрироваться; (сущ.) реестр",
+  "ex": "It takes about eight months to register a new medical device in Kazakhstan.",
+  "exw": "register",
+  "exRu": "Регистрация нового медизделия в Казахстане занимает около восьми месяцев.",
+  "col": [
+   "register a product",
+   "register a company"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t06-18",
+  "w": "approve",
+  "pos": "verb",
+  "ipa": "/əˈpruːv/",
+  "ru": "утверждать",
+  "ru2": "одобрять",
+  "ex": "Head office must approve any discount above ten percent.",
+  "exw": "approve",
+  "exRu": "Любую скидку больше десяти процентов должен утвердить головной офис.",
+  "col": [
+   "approve a budget",
+   "approve the contract"
+  ],
+  "note": "approve sth — утвердить; approve of sb/sth — одобрять (мнение)",
+  "cefr": "B1"
+ },
+ {
+  "id": "t06-19",
+  "w": "legal",
+  "pos": "adj",
+  "ipa": "/liːɡl/",
+  "ru": "юридический",
+  "ru2": "законный, правовой",
+  "ex": "Our legal department needs a week to check the new contract.",
+  "exw": "legal",
+  "exRu": "Юридическому отделу нужна неделя, чтобы проверить новый договор.",
+  "col": [
+   "legal department",
+   "legal advice"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t06-20",
+  "w": "lawyer",
+  "pos": "noun",
+  "ipa": "/ˈlɔːjə/",
+  "ru": "юрист",
+  "ru2": "адвокат",
+  "ex": "Ask a local lawyer to check the agreement before you sign it.",
+  "exw": "lawyer",
+  "exRu": "Попросите местного юриста проверить соглашение до подписания.",
+  "col": [
+   "company lawyer",
+   "consult a lawyer"
+  ],
+  "note": "lawyer — любой юрист, не только адвокат в суде",
+  "cefr": "B1"
+ },
+ {
+  "id": "t06-21",
+  "w": "regulation",
+  "pos": "noun",
+  "ipa": "/ˌreɡjuˈleɪʃn/",
+  "ru": "норма, правило",
+  "ru2": "регулирование",
+  "ex": "New regulations require a local service engineer for every X-ray installation.",
+  "exw": "regulations",
+  "exRu": "По новым нормам на каждую установку рентгена нужен местный сервисный инженер.",
+  "col": [
+   "safety regulations",
+   "comply with regulations"
+  ],
+  "note": "Чаще мн. ч.: regulations — нормативные требования",
+  "cefr": "B2"
+ },
+ {
+  "id": "t06-22",
+  "w": "permit",
+  "pos": "noun",
+  "ipa": "/ˈpɜːmɪt/",
+  "ru": "разрешение",
+  "ru2": "пропуск; (гл.) разрешать",
+  "ex": "Our engineers need a work permit before they can install the equipment.",
+  "exw": "permit",
+  "exRu": "Нашим инженерам нужно разрешение на работу, прежде чем монтировать оборудование.",
+  "col": [
+   "work permit",
+   "import permit"
+  ],
+  "note": "Сущ. /ˈpɜːmɪt/, гл. /pəˈmɪt/ — ударение меняется",
+  "cefr": "B2"
+ },
+ {
+  "id": "t06-23",
+  "w": "confidential",
+  "pos": "adj",
+  "ipa": "/ˌkɒnfɪˈdenʃl/",
+  "ru": "конфиденциальный",
+  "ru2": "секретный",
+  "ex": "These price lists are confidential, so please do not share them with competitors.",
+  "exw": "confidential",
+  "exRu": "Эти прайс-листы конфиденциальны, не передавайте их конкурентам.",
+  "col": [
+   "strictly confidential",
+   "confidential information"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t06-24",
+  "w": "document",
+  "pos": "noun",
+  "ipa": "/ˈdɒkjumənt/",
+  "ru": "документ",
+  "ru2": "",
+  "ex": "Customs in Chile need the original documents, not scanned copies.",
+  "exw": "documents",
+  "exRu": "Чилийской таможне нужны оригиналы документов, а не сканы.",
+  "col": [
+   "shipping documents",
+   "sign a document"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t06-25",
+  "w": "copy",
+  "pos": "noun",
+  "ipa": "/ˈkɒpi/",
+  "ru": "копия",
+  "ru2": "экземпляр; (гл.) копировать",
+  "ex": "Please send me a signed copy of the contract by email.",
+  "exw": "copy",
+  "exRu": "Пожалуйста, пришлите мне подписанный экземпляр договора по почте.",
+  "col": [
+   "signed copy",
+   "hard copy"
+  ],
+  "note": "hard copy — бумажная версия; copy sb in — поставить в копию письма",
+  "cefr": "A2"
+ }
+]

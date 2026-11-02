@@ -1,0 +1,427 @@
+[
+ {
+  "id": "t01-01",
+  "w": "company",
+  "pos": "noun",
+  "ipa": "/ˈkʌmpəni/",
+  "ru": "компания",
+  "ru2": "общество, компания (друзей)",
+  "ex": "Our company sells X-ray equipment to hospitals in Kazakhstan.",
+  "exw": "company",
+  "exRu": "Наша компания поставляет рентгеновское оборудование больницам Казахстана.",
+  "col": [
+   "a large company",
+   "company policy"
+  ],
+  "note": "",
+  "cefr": "A2"
+ },
+ {
+  "id": "t01-02",
+  "w": "business",
+  "pos": "noun",
+  "ipa": "/ˈbɪznəs/",
+  "ru": "бизнес, дело",
+  "ru2": "предприятие, фирма; дело (не твоё дело)",
+  "ex": "We have done business with distributors in Mexico for ten years.",
+  "exw": "business",
+  "exRu": "Мы уже десять лет работаем с дистрибьюторами в Мексике.",
+  "col": [
+   "do business with",
+   "business trip"
+  ],
+  "note": "do business (не make business); a business — фирма, предприятие",
+  "cefr": "A2"
+ },
+ {
+  "id": "t01-03",
+  "w": "firm",
+  "pos": "noun",
+  "ipa": "/fɜːm/",
+  "ru": "фирма",
+  "ru2": "твёрдый, строгий (adj)",
+  "ex": "She works for a small law firm in the centre of Almaty.",
+  "exw": "firm",
+  "exRu": "Она работает в небольшой юридической фирме в центре Алматы.",
+  "col": [
+   "law firm",
+   "consulting firm"
+  ],
+  "note": "firm чаще о фирме услуг (юридической, консалтинговой); прилагательное firm — твёрдый",
+  "cefr": "B1"
+ },
+ {
+  "id": "t01-04",
+  "w": "headquarters",
+  "pos": "noun",
+  "ipa": "/ˌhedˈkwɔːtəz/",
+  "ru": "головной офис",
+  "ru2": "штаб-квартира, штаб",
+  "ex": "Our headquarters in Seoul must approve all new prices for distributors.",
+  "exw": "headquarters",
+  "exRu": "Все новые цены для дистрибьюторов должен утвердить наш головной офис в Сеуле.",
+  "col": [
+   "company headquarters",
+   "based at headquarters"
+  ],
+  "note": "Всегда с -s на конце, даже об одном офисе; сокращение HQ",
+  "cefr": "B2"
+ },
+ {
+  "id": "t01-05",
+  "w": "branch",
+  "pos": "noun",
+  "ipa": "/brɑːntʃ/",
+  "ru": "филиал, отделение",
+  "ru2": "ветка, отрасль (науки)",
+  "ex": "We plan to open a branch office in Mexico City next year.",
+  "exw": "branch",
+  "exRu": "В следующем году мы планируем открыть филиал в Мехико.",
+  "col": [
+   "branch office",
+   "open a branch"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t01-06",
+  "w": "department",
+  "pos": "noun",
+  "ipa": "/dɪˈpɑːtmənt/",
+  "ru": "отдел",
+  "ru2": "отделение (больницы), кафедра, министерство (AmE)",
+  "ex": "He moved to the international sales department last spring.",
+  "exw": "department",
+  "exRu": "Прошлой весной он перешёл в отдел международных продаж.",
+  "col": [
+   "sales department",
+   "head of department"
+  ],
+  "note": "",
+  "cefr": "A2"
+ },
+ {
+  "id": "t01-07",
+  "w": "management",
+  "pos": "noun",
+  "ipa": "/ˈmænɪdʒmənt/",
+  "ru": "руководство",
+  "ru2": "управление, менеджмент",
+  "ex": "Senior management will review the distributor's business plan next week.",
+  "exw": "management",
+  "exRu": "Высшее руководство рассмотрит бизнес-план дистрибьютора на следующей неделе.",
+  "col": [
+   "senior management",
+   "management team"
+  ],
+  "note": "the management — руководство (люди); management без артикля — управление",
+  "cefr": "B1"
+ },
+ {
+  "id": "t01-08",
+  "w": "manager",
+  "pos": "noun",
+  "ipa": "/ˈmænɪdʒə/",
+  "ru": "руководитель, менеджер",
+  "ru2": "управляющий, заведующий",
+  "ex": "I need to ask my manager before I can offer a bigger discount.",
+  "exw": "manager",
+  "exRu": "Прежде чем дать скидку больше, мне нужно согласовать это с руководителем.",
+  "col": [
+   "sales manager",
+   "line manager"
+  ],
+  "note": "manager — руководитель с подчинёнными; рядовой продавец — sales representative",
+  "cefr": "A2"
+ },
+ {
+  "id": "t01-09",
+  "w": "director",
+  "pos": "noun",
+  "ipa": "/daɪˈrektə/",
+  "ru": "директор",
+  "ru2": "член совета директоров, режиссёр",
+  "ex": "The sales director will join our meeting with the new distributor.",
+  "exw": "director",
+  "exRu": "Директор по продажам присоединится к нашей встрече с новым дистрибьютором.",
+  "col": [
+   "sales director",
+   "managing director"
+  ],
+  "note": "managing director (BrE) — генеральный директор; произносят и /dɪˈrektə/",
+  "cefr": "A2"
+ },
+ {
+  "id": "t01-10",
+  "w": "board",
+  "pos": "noun",
+  "ipa": "/bɔːd/",
+  "ru": "совет директоров",
+  "ru2": "правление; доска; питание (full board)",
+  "ex": "The board will make the final decision on the Almaty project.",
+  "exw": "board",
+  "exRu": "Окончательное решение по проекту в Алматы примет совет директоров.",
+  "col": [
+   "board meeting",
+   "board of directors"
+  ],
+  "note": "on board — на борту; в переносном смысле: «в команде», поддерживает проект",
+  "cefr": "B2"
+ },
+ {
+  "id": "t01-11",
+  "w": "owner",
+  "pos": "noun",
+  "ipa": "/ˈəʊnə/",
+  "ru": "владелец",
+  "ru2": "хозяин, собственник",
+  "ex": "The owner of the clinic wants to buy two ultrasound machines.",
+  "exw": "owner",
+  "exRu": "Владелец клиники хочет купить два аппарата УЗИ.",
+  "col": [
+   "business owner",
+   "previous owner"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t01-12",
+  "w": "staff",
+  "pos": "noun",
+  "ipa": "/stɑːf/",
+  "ru": "персонал, сотрудники",
+  "ru2": "штат; посох",
+  "ex": "All hospital staff will receive training on the new X-ray system.",
+  "exw": "staff",
+  "exRu": "Весь персонал больницы пройдёт обучение работе с новой рентгеновской системой.",
+  "col": [
+   "staff training",
+   "member of staff"
+  ],
+  "note": "Собирательное: не a staff; один сотрудник — a member of staff",
+  "cefr": "B1"
+ },
+ {
+  "id": "t01-13",
+  "w": "employee",
+  "pos": "noun",
+  "ipa": "/ɪmˈplɔɪiː/",
+  "ru": "сотрудник, работник",
+  "ru2": "служащий",
+  "ex": "Our distributor in Chile has about forty employees and two service engineers.",
+  "exw": "employees",
+  "exRu": "У нашего дистрибьютора в Чили около сорока сотрудников и два сервисных инженера.",
+  "col": [
+   "full-time employee",
+   "employee benefits"
+  ],
+  "note": "employee — работник, employer — работодатель; не путайте",
+  "cefr": "B1"
+ },
+ {
+  "id": "t01-14",
+  "w": "colleague",
+  "pos": "noun",
+  "ipa": "/ˈkɒliːɡ/",
+  "ru": "коллега",
+  "ru2": "сослуживец",
+  "ex": "My colleague from head office in Seoul will visit Almaty next week.",
+  "exw": "colleague",
+  "exRu": "На следующей неделе в Алматы приедет мой коллега из головного офиса в Сеуле.",
+  "col": [
+   "a close colleague",
+   "former colleague"
+  ],
+  "note": "Ударение на первый слог: /ˈkɒliːɡ/, не «коллЕга»",
+  "cefr": "B1"
+ },
+ {
+  "id": "t01-15",
+  "w": "team",
+  "pos": "noun",
+  "ipa": "/tiːm/",
+  "ru": "команда",
+  "ru2": "бригада, группа",
+  "ex": "Our service team installed the new detector in just two days.",
+  "exw": "team",
+  "exRu": "Наша сервисная команда установила новый детектор всего за два дня.",
+  "col": [
+   "team leader",
+   "work as a team"
+  ],
+  "note": "",
+  "cefr": "A2"
+ },
+ {
+  "id": "t01-16",
+  "w": "industry",
+  "pos": "noun",
+  "ipa": "/ˈɪndəstri/",
+  "ru": "отрасль",
+  "ru2": "промышленность",
+  "ex": "The medical equipment industry is growing fast in Latin America.",
+  "exw": "industry",
+  "exRu": "Рынок медицинского оборудования в Латинской Америке быстро растёт.",
+  "col": [
+   "healthcare industry",
+   "industry leader"
+  ],
+  "note": "Ударение на первый слог: IN-dustry",
+  "cefr": "B1"
+ },
+ {
+  "id": "t01-17",
+  "w": "sector",
+  "pos": "noun",
+  "ipa": "/ˈsektə/",
+  "ru": "сектор",
+  "ru2": "сфера, отрасль",
+  "ex": "Most of our clients are in the public sector, mainly state hospitals.",
+  "exw": "sector",
+  "exRu": "Большинство наших клиентов — в госсекторе, в основном государственные больницы.",
+  "col": [
+   "public sector",
+   "private sector"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t01-18",
+  "w": "competitor",
+  "pos": "noun",
+  "ipa": "/kəmˈpetɪtə/",
+  "ru": "конкурент",
+  "ru2": "участник соревнования",
+  "ex": "Our main competitor offered the hospital a much lower price.",
+  "exw": "competitor",
+  "exRu": "Наш главный конкурент предложил больнице цену намного ниже.",
+  "col": [
+   "main competitor",
+   "direct competitor"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t01-19",
+  "w": "subsidiary",
+  "pos": "noun",
+  "ipa": "/səbˈsɪdiəri/",
+  "ru": "дочерняя компания",
+  "ru2": "вспомогательный, второстепенный (adj)",
+  "ex": "The Korean manufacturer set up a subsidiary in Mexico last year.",
+  "exw": "subsidiary",
+  "exRu": "В прошлом году корейский производитель открыл дочернюю компанию в Мексике.",
+  "col": [
+   "wholly owned subsidiary",
+   "local subsidiary"
+  ],
+  "note": "subsidiary — отдельное юрлицо; branch — филиал той же компании",
+  "cefr": "B2"
+ },
+ {
+  "id": "t01-20",
+  "w": "share",
+  "pos": "noun",
+  "ipa": "/ʃeə/",
+  "ru": "доля, акция",
+  "ru2": "часть; делиться (v)",
+  "ex": "We want to increase our market share in Kazakhstan to twenty percent.",
+  "exw": "share",
+  "exRu": "Мы хотим увеличить свою долю рынка в Казахстане до двадцати процентов.",
+  "col": [
+   "market share",
+   "buy shares"
+  ],
+  "note": "shares (BrE) — акции; в AmE чаще stock",
+  "cefr": "B2"
+ },
+ {
+  "id": "t01-21",
+  "w": "growth",
+  "pos": "noun",
+  "ipa": "/ɡrəʊθ/",
+  "ru": "рост",
+  "ru2": "увеличение, развитие",
+  "ex": "The company reported strong growth in sales to Latin America.",
+  "exw": "growth",
+  "exRu": "Компания сообщила о значительном росте продаж в Латинскую Америку.",
+  "col": [
+   "rapid growth",
+   "growth rate"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t01-22",
+  "w": "strategy",
+  "pos": "noun",
+  "ipa": "/ˈstrætədʒi/",
+  "ru": "стратегия",
+  "ru2": "тактика, план действий",
+  "ex": "We need a clear strategy for selling ultrasound systems in Chile.",
+  "exw": "strategy",
+  "exRu": "Нам нужна чёткая стратегия продаж УЗИ-систем в Чили.",
+  "col": [
+   "marketing strategy",
+   "develop a strategy"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t01-23",
+  "w": "goal",
+  "pos": "noun",
+  "ipa": "/ɡəʊl/",
+  "ru": "цель",
+  "ru2": "гол, ворота (в спорте)",
+  "ex": "Our goal this year is to sign three new distributors.",
+  "exw": "goal",
+  "exRu": "Наша цель на этот год — подписать договоры с тремя новыми дистрибьюторами.",
+  "col": [
+   "achieve a goal",
+   "set a goal"
+  ],
+  "note": "",
+  "cefr": "B1"
+ },
+ {
+  "id": "t01-24",
+  "w": "structure",
+  "pos": "noun",
+  "ipa": "/ˈstrʌktʃə/",
+  "ru": "структура",
+  "ru2": "конструкция, сооружение; структурировать (v)",
+  "ex": "After the reorganisation, the company structure became much simpler.",
+  "exw": "structure",
+  "exRu": "После реорганизации структура компании стала гораздо проще.",
+  "col": [
+   "company structure",
+   "organisational structure"
+  ],
+  "note": "",
+  "cefr": "B2"
+ },
+ {
+  "id": "t01-25",
+  "w": "responsible",
+  "pos": "adj",
+  "ipa": "/rɪˈspɒnsəbl/",
+  "ru": "ответственный",
+  "ru2": "виновный, надёжный",
+  "ex": "I am responsible for sales in Kazakhstan and Central Asia.",
+  "exw": "responsible",
+  "exRu": "Я отвечаю за продажи в Казахстане и Центральной Азии.",
+  "col": [
+   "responsible for sales",
+   "fully responsible"
+  ],
+  "note": "responsible for (не of): responsible for the project",
+  "cefr": "B1"
+ }
+]
