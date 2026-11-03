@@ -7,8 +7,12 @@ course, n = sys.argv[1], int(sys.argv[2])
 if course == 'en':
     sc = json.load(open(R / 'scenes-en.json', encoding='utf-8'))
 else:
-    sc = {**json.load(open(R / 'scenes-ja-a.json', encoding='utf-8')), **json.load(open(R / 'scenes-ja-b.json', encoding='utf-8'))}
-ids = sorted(sc)[n * 20:(n + 1) * 20]
+    sc = {}
+    for f in ('scenes-ja-a.json', 'scenes-ja-b.json'):
+        if (R / f).exists(): sc.update(json.load(open(R / f, encoding='utf-8')))
+allids = sorted(sc) if course == 'en' else [f'j{t:02d}-{i:02d}' for t in range(1, 21) for i in range(1, 26)]
+ids = allids[n * 20:(n + 1) * 20]
+assert all(k in sc for k in ids), 'нет сцен для части id'
 style = ('warm cream paper, soft transparent watercolor washes, light loose ink linework, muted harmonious palette' if course == 'en'
          else 'warm cream washi paper, soft transparent watercolor washes, light loose ink linework, gentle Japanese palette (sakura pink, indigo, matcha green, vermilion)')
 lines = '\n'.join(f'{i + 1}. {sc[k].rstrip(".")}.' for i, k in enumerate(ids))
