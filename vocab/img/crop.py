@@ -42,8 +42,8 @@ def main():
             x0, x1 = cx[c][1], cx[c + 1][0]; y0, y1 = cy[r][1], cy[r + 1][0]
             w, h = x1 - x0, y1 - y0; s = min(w, h); ins = int(s * .03)
             xc, yc = x0 + w / 2, y0 + h / 2; s2 = s / 2 - ins
-            tile = im.crop((int(xc - s2), int(yc - s2), int(xc + s2), int(yc + s2))).resize((320, 320), Image.LANCZOS)
-            if k < len(ids): tile.save(out / f'{ids[k]}.webp', 'WEBP', quality=78, method=6)
+            tile = im.crop((int(xc - s2), int(yc - s2), int(xc + s2), int(yc + s2)))  # исходное разрешение, без растяжения
+            if k < len(ids): tile.save(out / f'{ids[k]}.webp', 'WEBP', quality=95, method=6)
             k += 1
     print('cuts x', [c[1] for c in cx], 'y', [c[1] for c in cy])
 
