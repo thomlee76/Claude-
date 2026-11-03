@@ -33,10 +33,12 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     im = Image.open(src).convert('RGB'); a = np.asarray(im.convert('L')).astype(float)
     colp = np.percentile(a, 8, axis=0); rowp = np.percentile(a, 8, axis=1)
-    cx = bands(colp, 5, 248); cy = bands(rowp, 4, 248)
+    import os
+    C, Rw = int(os.environ.get('COLS', 5)), int(os.environ.get('ROWS', 4))
+    cx = bands(colp, C, 248); cy = bands(rowp, Rw, 248)
     k = 0
-    for r in range(4):
-        for c in range(5):
+    for r in range(Rw):
+        for c in range(C):
             x0, x1 = cx[c][1], cx[c + 1][0]; y0, y1 = cy[r][1], cy[r + 1][0]
             w, h = x1 - x0, y1 - y0; s = min(w, h); ins = int(s * .03)
             xc, yc = x0 + w / 2, y0 + h / 2; s2 = s / 2 - ins
