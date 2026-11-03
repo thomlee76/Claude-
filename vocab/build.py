@@ -12,8 +12,15 @@ def load(base):
     return topics
 
 en = load(R)
+def mark_img(topics, sub):
+    d = R / 'img' / sub
+    for t in topics:
+        for w in t['words']:
+            if (d / f"{w['id']}.webp").exists(): w['img'] = 1
 audio = sorted('audio/' + p.name for p in (R / 'audio').glob('*.m4a')) if (R / 'audio').exists() else []
 ja = load(R / 'ja')
+mark_img(en, 'en'); mark_img(ja, 'ja')
+imgs = sorted('img/' + p.parent.name + '/' + p.name for p in (R / 'img').glob('*/*.webp'))
 for t in ja:
     for w in t['words']:  # единые поля для интерфейса
         w['ipa'] = w['rom'] if w['kana'] == w['w'] else w['kana']
@@ -28,7 +35,7 @@ data = {'courses': {
     'foot': 'JLPT N5 핵심 단어 500개, 20개 주제, 한국어 번역과 설명.'}}}}
 html = (R / 'app.html').read_text(encoding='utf-8').replace('__DATA__', json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/'))
 (R / 'index.html').write_text(html, encoding='utf-8')
-pre = ['./', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'] + sorted('fonts/' + p.name for p in (R / 'fonts').iterdir()) + (audio if len(audio) == 600 else [])
+pre = ['./', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'] + sorted('fonts/' + p.name for p in (R / 'fonts').iterdir()) + (audio if len(audio) == 600 else []) + imgs
 h = hashlib.sha1(html.encode())
 for p in pre[2:]: h.update((R / p).read_bytes())
 (R / 'sw.js').write_text((R / 'sw-template.js').read_text(encoding='utf-8').replace('__CACHE__', 'b1w-' + h.hexdigest()[:10]).replace('__PRECACHE__', json.dumps(pre)), encoding='utf-8')

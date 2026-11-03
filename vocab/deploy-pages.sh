@@ -8,7 +8,7 @@ git fetch -q origin $PAGES
 TMP=$(mktemp -d); git worktree add -q "$TMP" origin/$PAGES
 rm -rf "$TMP/$DEST"; mkdir -p "$TMP/$DEST"
 for f in index.html sw.js manifest.webmanifest apple-touch-icon.png icon-192.png icon-512.png; do cp vocab/$f "$TMP/$DEST/"; done
-cp -r vocab/fonts vocab/audio "$TMP/$DEST/"
+cp -r vocab/fonts vocab/audio "$TMP/$DEST/"; for d in en ja; do if [ -d vocab/img/$d ]; then mkdir -p "$TMP/$DEST/img/$d"; cp vocab/img/$d/*.webp "$TMP/$DEST/img/$d/"; fi; done
 cd "$TMP"; git add -A $DEST
 if git diff --cached --quiet; then echo "нет изменений"; else
 git commit -qm "Business English B1: обновление (docs/english-b1)
