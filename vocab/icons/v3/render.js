@@ -1,0 +1,5 @@
+const { chromium } = require('playwright'); const fs=require('fs');
+(async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1160,height:640}});
+let h='<link rel="stylesheet" href="http://localhost:8765/vocab/fonts/fonts.css"><body style="margin:0;background:#E9EBF0;display:grid;grid-template-columns:repeat(4,250px);gap:28px 30px;padding:24px 30px;font:600 18px -apple-system,sans-serif">';
+for(let i=1;i<=8;i++){const s=fs.readFileSync(__dirname+'/n'+i+'.svg','utf8').replace('<svg ','<svg width="250" height="250" ');h+='<div style="text-align:center"><div style="width:250px;height:250px;border-radius:56px;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.25)">'+s+'</div><div style="margin-top:8px">'+i+'</div></div>';}
+await p.goto('http://localhost:8765/vocab/fonts/fonts.css');await p.setContent(h);await p.evaluate(()=>document.fonts.load('700 80px Oswald'));await p.waitForTimeout(700);await p.screenshot({path:process.argv[2],fullPage:true});await b.close();})();
