@@ -16,7 +16,7 @@ assert all(k in sc for k in ids), 'нет сцен для части id'
 style = ('warm cream paper, soft transparent watercolor washes, light loose ink linework, muted harmonious palette' if course == 'en'
          else 'warm cream washi paper, soft transparent watercolor washes, light loose ink linework, gentle Japanese palette (sakura pink, indigo, matcha green, vermilion)')
 lines = '\n'.join(f'{i + 1}. {sc[k].rstrip(".")}.' for i, k in enumerate(ids))
-p = (f'One single image: a precise grid of 5 columns and 4 rows = 20 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border. '
+p = (f'One single image: an EXACT grid of 5 columns and 4 rows — exactly 20 equal square tiles, no more, no less, separated by thin pure-white gutters, with a thin pure-white outer border. '
      f'Every tile is its own small watercolor painting: {style}; one clear central subject with empty paper around it; consistent style across all tiles. '
      'Strictly NO text of any kind anywhere: no captions, no labels under the pictures, no letters, numbers, signs, kanji or writing.\n'
      'Tile contents in reading order (left to right, top row first):\n' + lines)
