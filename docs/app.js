@@ -16,12 +16,12 @@ const el=(tag,cls,html)=>{const e=document.createElement(tag);if(cls)e.className
 const SFILE=s=>"l"+s.l+"-"+(s.p<10?"0"+s.p:s.p);
 const KLABEL={gram:"문법",word:"단어",kanji:"한자",talk:"회화",sum:"정리"};
 const LESSONS=GRAM.map(g=>g.l);
-const LSHORT={1:"희망·계획",2:"비교·순위",3:"날짜·색·옷",4:"희망·주문·부탁",5:"추측·날짜·거리",6:"역접·변화·교토",7:"목적·변화·출장"};
+const LSHORT={1:"희망·계획",2:"비교·순위",3:"날짜·색·옷",4:"희망·주문·부탁",5:"추측·날짜·거리",6:"역접·변화·교토",7:"목적·변화·출장",8:"의무·허용·호텔"};
 const SECS=[["gram","문법","文"],["word","단어","語"],["kanji","한자","漢"],["talk","회화","話"],["sheets","자료","資"],["video","영상","映"]];
-const VIDEO=l=>"video/lesson0"+l+".mp4";
+const VIDEO=l=>"video/lesson0"+l+".mp4";const HASVIDEO=l=>l>=1&&l<=7;
 const L2=l=>"L"+(l<10?"0"+l:l);
 const WIMG=i=>"img/m"+i+".webp";
-const APPV="v27";
+const APPV="v28";
 
 let known=new Set(store.get("known",[])),kknown=new Set(store.get("kknown",[]));
 const lessonOf=l=>GRAM.find(g=>g.l===l);
@@ -216,7 +216,7 @@ function renderLessonDetail(){
   v.appendChild(el("div","lhd",'<div class="k">LESSON '+(l<10?"0"+l:l)+'</div><b>'+ESC(g.title)+'</b><p>'+ESC(g.desc||"")+'</p>'));
   const vs=vocabOf(l),ks=kanjiOf(l),kw=vs.filter(([,i])=>known.has(i)).length,kk=ks.filter(([,i])=>kknown.has(i)).length,ds=DLGS.filter(d=>d.l===l),sh=sheetsOf(0,l);
   const rows=el("div","rows");
-  [["gram","문법","文",g.items.length+"개"],["word","단어","語",kw+" / "+vs.length],["kanji","한자","漢",kk+" / "+ks.length],["talk","회화","話",ds.length+"편"],["sheets","자료","資",sh.length+"장"],["video","영상","映","10~15분"]].forEach(([k,lab,gl,m])=>{
+  [["gram","문법","文",g.items.length+"개"],["word","단어","語",kw+" / "+vs.length],["kanji","한자","漢",kk+" / "+ks.length],["talk","회화","話",ds.length+"편"],["sheets","자료","資",sh.length+"장"]].concat(HASVIDEO(l)?[["video","영상","映","10~15분"]]:[]).forEach(([k,lab,gl,m])=>{
     const r=el("button","r",'<span class="g">'+gl+'</span>'+lab+'<span>'+m+'</span><span class="ch">›</span>');r.onclick=()=>go("l"+l+"/"+k);rows.appendChild(r)});
   v.appendChild(rows);
   const two=el("div","two");const a=el("button","bigbtn w","플래시카드");a.onclick=()=>go("flash/"+l);const b=el("button","bigbtn","퀴즈 시작");b.onclick=()=>go("quiz/"+l);two.appendChild(a);two.appendChild(b);v.appendChild(two);
