@@ -1217,8 +1217,8 @@ async function decryptBuf(key, buf){
   if(u.length < 17 || String.fromCharCode(u[0],u[1],u[2],u[3]) !== 'CGE1') throw new Error('bad-format');
   return crypto.subtle.decrypt({name:'AES-GCM', iv:u.slice(4,16)}, key, u.slice(16));
 }
-async function fetchEnc(url){
-  const r = await fetch(url);
+async function fetchEnc(url, fresh){
+  const r = await fetch(url, fresh ? {cache:'reload'} : {});
   if(!r.ok) throw new Error('http-' + r.status);
   return r.arrayBuffer();
 }
@@ -1245,8 +1245,14 @@ const getKey = () => kop('readonly', s => s.get('key'));
 const putKey = k => kop('readwrite', s => s.put(k, 'key'));
 const delKey = () => kop('readwrite', s => s.delete('key'));
 
-async function unlockWith(key){
-  const data = JSON.parse(dec.decode(await decryptBuf(key, await fetchEnc('content.enc'))));
+const isNet = e => /http|fetch|Load failed|network|abort/i.test(String(e && (e.name + ' ' + e.message)));
+async function unlockWith(key, fresh){
+  let data;
+  try{ data = JSON.parse(dec.decode(await decryptBuf(key, await fetchEnc('content.enc', fresh)))); }
+  catch(e){
+    if(fresh || isNet(e) || !navigator.onLine) throw e;
+    data = JSON.parse(dec.decode(await decryptBuf(key, await fetchEnc('content.enc', true))));   // stale copy? retry from network
+  }
   CKEY = key; PARTS = data.parts; VIDEOS = data.videos;
   document.getElementById('lock').hidden = true;
   document.querySelector('.shell').hidden = false;
@@ -1263,7 +1269,7 @@ async function start(){
   const k = await getKey();
   if(k){
     try{ await unlockWith(k); return; }
-    catch(e){ if(!/http|fetch|network/i.test(String(e))) await delKey(); }
+    catch(e){ if(!isNet(e)) await delKey(); }
   }
   showLock();
 }
@@ -1278,8 +1284,7 @@ document.getElementById('lockform').onsubmit = async e => {
     await unlockWith(key);
     await putKey(key);
   }catch(err){
-    const s = String(err && (err.name + ' ' + err.message));
-    document.getElementById('lockmsg').textContent = /http|Failed to fetch|Load failed|network/i.test(s) ? '내용을 불러오지 못했습니다. 인터넷 연결을 확인한 뒤 다시 시도하세요.' : '비밀번호가 맞지 않습니다.';
+    document.getElementById('lockmsg').textContent = isNet(err) ? '내용을 불러오지 못했습니다. 인터넷 연결을 확인한 뒤 다시 시도하세요.' : '비밀번호가 맞지 않습니다.';
   }
   btn.disabled = false;
 };
