@@ -1,11 +1,11 @@
-const CACHE="__CACHE__";const PRECACHE=__PRECACHE__;
-self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(async c=>{const isM=p=>p.startsWith("audio/")||p.startsWith("img/");const core=PRECACHE.filter(p=>!isM(p)),media=PRECACHE.filter(isM);
-  await c.addAll(core);
-  /* медиа не меняются между версиями: берём из старого кэша, недостающее — из сети пачками */
-  const need=[];for(const p of media){const old=await caches.match(p);if(old)await c.put(p,old);else need.push(p);}
-  for(let i=0;i<need.length;i+=40){await c.addAll(need.slice(i,i+40)).catch(()=>{})}}).then(()=>self.skipWaiting()))});
-self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k.startsWith("b1w-")&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
+const CACHE="__CACHE__";const PRECACHE=__PRECACHE__;const MEDIA="b1w-media";
+const isMedia=u=>/\/(audio|img)\//.test(u.pathname);
+/* установка — только ядро (страница, шрифты, иконки): секунды, не минуты */
+self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(PRECACHE)).then(()=>self.skipWaiting()))});
+self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k.startsWith("b1w-")&&k!==CACHE&&k!==MEDIA).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
 self.addEventListener("fetch",e=>{const u=new URL(e.request.url);if(e.request.method!=="GET"||u.origin!==location.origin)return;
+  if(isMedia(u)){e.respondWith((async()=>{const c=await caches.open(MEDIA);const hit=await c.match(e.request);if(hit)return hit;
+    try{const r=await fetch(e.request);if(r.ok)c.put(e.request,r.clone());return r}catch(err){return Response.error()}})());return}
   if(e.request.mode==="navigate"||u.pathname.endsWith("/index.html")){
     e.respondWith((async()=>{const c=await caches.open(CACHE);
       try{const ctl=new AbortController();const t=setTimeout(()=>ctl.abort(),4000);

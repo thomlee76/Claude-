@@ -36,7 +36,7 @@ data = {'imgv': IMGV, 'courses': {
     'foot': 'JLPT N5 핵심 단어 500개, 20개 주제, 한국어 번역과 설명.'}}}}
 html = (R / 'app.html').read_text(encoding='utf-8').replace('__DATA__', json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/'))
 (R / 'index.html').write_text(html, encoding='utf-8')
-pre = ['./', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'] + sorted('fonts/' + p.name for p in (R / 'fonts').iterdir()) + (audio if len(audio) == 600 else [])  # картинки не предзагружаются: кэшируются при просмотре
+pre = ['./', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'] + sorted('fonts/' + p.name for p in (R / 'fonts').iterdir())   # медиа (озвучка, картинки) не в precache: страница докачивает их в фоне в кэш b1w-media
 h = hashlib.sha1(html.encode())
 for p in pre[2:]: h.update((R / p.split('?')[0]).read_bytes())
 (R / 'sw.js').write_text((R / 'sw-template.js').read_text(encoding='utf-8').replace('__CACHE__', 'b1w-' + h.hexdigest()[:10]).replace('__PRECACHE__', json.dumps(pre)), encoding='utf-8')
