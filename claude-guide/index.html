@@ -588,7 +588,7 @@ body{padding-bottom:env(safe-area-inset-bottom)}
 const MODE = 'pwa';
 let PARTS = [];
 let VIDEOS = {};
-const VCACHE = 'cg-video-v1';
+const VCACHE = 'cg-video-6256e62a';
 </script>
 <script>
 /* ---------------- state ---------------- */
@@ -1204,7 +1204,7 @@ refreshOffline();
 <script>
 /* ---------------- unlock: password → key → decrypt content ---------------- */
 const SALT = Uint8Array.from(atob('TnKG+a/TpjvcgxX6bYEPyw=='), c => c.charCodeAt(0));
-const ITER = 600000;
+const ITER = 1000000;
 let CKEY = null;
 const enc = new TextEncoder(), dec = new TextDecoder();
 
