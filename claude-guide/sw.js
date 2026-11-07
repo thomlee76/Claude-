@@ -1,4 +1,4 @@
-const CACHE = 'cg-4f53fef257';
+const CACHE = 'cg-c2b925dc3d';
 const VCACHE = 'cg-video-6256e62a';
 const PRECACHE = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "apple-touch-icon.png", "content.enc"];
 
@@ -28,15 +28,24 @@ self.addEventListener('fetch', e => {
     return;
   }
 
-  // App shell and content.enc: cache first, then network, then index for navigations.
+  // Shell + content.enc: network first (so a new password or content arrives at once), cache when offline.
+  const fresh = req.mode === 'navigate' || /\/(index\.html|content\.enc|sw\.js|manifest\.webmanifest)$/.test(url.pathname) || url.pathname.endsWith('/');
   e.respondWith((async () => {
+    if (fresh) {
+      try {
+        const ctrl = new AbortController();
+        const t = setTimeout(() => ctrl.abort(), 6000);
+        const res = await fetch(req, { signal: ctrl.signal, cache: 'no-cache' });
+        clearTimeout(t);
+        if (res.ok) { const c = await caches.open(CACHE); c.put(req, res.clone()).catch(() => {}); return res; }
+      } catch (err) {}
+      const hit = await caches.match(req, { ignoreSearch: true });
+      if (hit) return hit;
+      if (req.mode === 'navigate') return caches.match('index.html');
+      return Response.error();
+    }
     const hit = await caches.match(req, { ignoreSearch: true });
     if (hit) return hit;
-    try {
-      return await fetch(req);
-    } catch (err) {
-      if (req.mode === 'navigate') return caches.match('index.html');
-      throw err;
-    }
+    return fetch(req);
   })());
 });
