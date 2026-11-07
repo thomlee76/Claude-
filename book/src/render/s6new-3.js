@@ -9,12 +9,13 @@ const f=FIG(sheet,0,'6.3','Мобильное приложение: систем
 const COLS=[{x:56,name:'iOS',c:P.blu,ct:P.bluT,apps:[['chat','Messages'],['mail','Mail'],['cal','Calendar'],['map','Maps'],['list','Reminders'],['pin','геолокация']]},
  {x:608,name:'Android',c:P.grn,ct:P.grnT,apps:[['chat','сообщения'],['mail','почта'],['cal','календарь'],['alarm','будильники и таймеры'],['map','карты']]}];
 const CW=536;
+const Y0=158;
 COLS.forEach(col=>{const x=col.x;
- ICB(f,'phone',x,134,38,col.c,'#FFFFFF');T(f,col.name,x+50,138,{size:24,w:'x',c:col.c});
- const r=R(f,x,184,CW,10,{fill:P.card,stroke:P.line,r:14});
- T(f,'СИСТЕМНЫЕ ПРИЛОЖЕНИЯ · ВСЕ ТАРИФЫ',x+18,198,{size:12.5,w:'b',c:P.mut,ls:8});
- let cx=x+18,cy=224;col.apps.forEach(([ic,s])=>{const w=MW(s,14.5,'m')+52;if(cx+w>x+CW-18){cx=x+18;cy+=42;}CHIP(f,ic,s,cx,cy,col.c,col.ct);cx+=w+8;});
- r.resize(CW,cy+34+16-184);col.b=184+r.height;});
+ const r=R(f,x,Y0,CW,10,{fill:P.card,stroke:P.line,r:14});
+ ICB(f,'phone',x+16,Y0+14,34,col.c,'#FFFFFF');T(f,col.name,x+60,Y0+16,{size:22,w:'x',c:col.c});
+ const nm=f.children[f.children.length-1];T(f,'СИСТЕМНЫЕ ПРИЛОЖЕНИЯ · ВСЕ ТАРИФЫ',nm.x+nm.width+16,Y0+24,{size:12.5,w:'b',c:P.mut,ls:8});
+ let cx=x+18,cy=Y0+60;col.apps.forEach(([ic,s])=>{const w=MW(s,14.5,'m')+52;if(cx+w>x+CW-18){cx=x+18;cy+=42;}CHIP(f,ic,s,cx,cy,col.c,col.ct);cx+=w+8;});
+ r.resize(CW,cy+34+16-Y0);col.b=Y0+r.height;});
 // общие пометки
 let ny=Math.max(COLS[0].b,COLS[1].b)+12;
 const NT=['Геолокация — не на Team/Enterprise','Напоминания — только iOS','Контакты — нет доступа','Здоровье — бета, Pro/Max/Ultra, только США'];
@@ -22,20 +23,20 @@ const NW=(1088-3*10)/4;const nts=[];let nh=0;
 NT.forEach((s,i)=>{const x=56+i*(NW+10);const t=T(f,s,x+46,ny+12,{size:14,w:'m',width:NW-58,lh:128});nts.push(t);nh=Math.max(nh,t.height+24);});
 NT.forEach((s,i)=>{const x=56+i*(NW+10);const r=R(f,x,ny,NW,nh,{fill:P.ambT,r:12});f.insertChild(f.children.indexOf(nts[i]),r);ICON(f,'warn',x+14,ny+(nh-22)/2,22,P.amb,2.2);nts[i].y=ny+(nh-nts[i].height)/2;});
 // быстрый вызов
-const QY=ny+nh+12,QH=212;
+const QY=ny+nh+12,QH=210;
 COLS.forEach((col,k)=>{const x=col.x;R(f,x,QY,CW,QH,{fill:P.card,stroke:P.line,r:14});
  T(f,'БЫСТРЫЙ ВЫЗОВ · '+(k?'ANDROID 8+':'iOS 18+'),x+18,QY+14,{size:12.5,w:'b',c:P.mut,ls:8});});
 // iOS: домашний экран с виджетом
-{const x=56+18,y=QY+40;R(f,x,y,170,156,{fill:'#DCE6F1',r:18});
+{const x=56+18,y=QY+38;R(f,x,y,170,144,{fill:'#DCE6F1',r:18});
  const wd=R(f,x+12,y+12,146,70,{fill:P.card,r:14});ICB(f,'spark',x+22,y+22,30,P.accT,P.acc);T(f,'Claude',x+60,y+27,{size:14,w:'b'});R(f,x+22,y+58,126,14,{fill:P.soft,r:7});
- for(let i=0;i<4;i++)R(f,x+12+i*38,y+96,30,30,{fill:'#FFFFFF',r:8,op:0.7});
- T(f,'виджет',x+12,y+134,{size:12.5,w:'m',c:P.mut});
+ for(let i=0;i<4;i++)R(f,x+12+i*38,y+92,30,30,{fill:'#FFFFFF',r:8,op:0.7});
+ T(f,'виджет',x+12,y+124,{size:12,w:'m',c:P.mut});
  const rows=[['search','«Ask Claude»','Spotlight и Siri'],['photo','«Analyze Photo with Claude»',''],['share','меню «Поделиться»',''],['layers','Shortcuts','']];
- rows.forEach(([ic,a,b],i)=>{const ry=y+i*40;const rx=x+188;R(f,rx,ry,312,34,{fill:P.bluT,r:9});ICON(f,ic,rx+10,ry+8,18,P.blu,2);const t=T(f,a,rx+36,ry+8,{size:14.5,w:'s'});if(b)T(f,'— '+b,t.x+t.width+6,ry+8,{size:14.5,c:P.mut});});}
+ rows.forEach(([ic,a,b],i)=>{const ry=y+i*37;const rx=x+188;R(f,rx,ry,312,33,{fill:P.bluT,r:9});ICON(f,ic,rx+10,ry+8,18,P.blu,2);const t=T(f,a,rx+36,ry+8,{size:14.5,w:'s'});if(b)T(f,'— '+b,t.x+t.width+6,ry+8,{size:14.5,c:P.mut});});}
 // Android: виджет с тремя кнопками
-{const x=608+18,y=QY+40;R(f,x,y,500,156,{fill:'#DCEBE1',r:18});
- for(let i=0;i<5;i++)R(f,x+30+i*92,y+16,40,40,{fill:'#FFFFFF',r:20,op:0.7});
- const wy=y+70;R(f,x+30,wy,440,74,{fill:P.card,r:37});ICB(f,'spark',x+44,wy+14,46,P.accT,P.acc);T(f,'Claude',x+100,wy+26,{size:16,w:'b'});
+{const x=608+18,y=QY+38;R(f,x,y,500,144,{fill:'#DCEBE1',r:18});
+ for(let i=0;i<5;i++)R(f,x+30+i*92,y+14,36,36,{fill:'#FFFFFF',r:18,op:0.7});
+ const wy=y+62;R(f,x+30,wy,440,74,{fill:P.card,r:37});ICB(f,'spark',x+44,wy+14,46,P.accT,P.acc);T(f,'Claude',x+100,wy+26,{size:16,w:'b'});
  [['chat','чат'],['cam','камера'],['mic','диктовка']].forEach(([ic,s],i)=>{const bx=x+220+i*82;E(f,bx,wy+10,40,P.grn);ICON(f,ic,bx+10,wy+20,20,'#FFFFFF',2);TC(f,s,bx-20,wy+52,80,18,{size:12.5,w:'m',c:P.mut});});}
 // нижняя полоса
 const SY=QY+QH+12;const sb=R(f,56,SY,1088,40,{fill:P.dark,r:12});ICON(f,'bell',76,SY+16,24,'#F2B8A0',2);
@@ -57,15 +58,15 @@ TC(g,'Общий контекст разговора',CCX-100,CCY-34,200,60,{siz
 // Excel
 let cy=OW(XL,YT,'Excel — Sales_Oct.xlsx','GA',P.grn);
 [0,1,2].forEach(i=>{R(g,XL+14,cy+12+i*34,282,1,{fill:P.line,r:0});});
-T(g,'План Казахстан',XL+20,cy+22,{size:14.5,w:'m'});
-const old=T(g,'$1,30 млн',XL+150,cy+22,{size:14.5,c:P.mut});R(g,old.x-2,old.y+old.height/2,old.width+4,1.6,{fill:P.mut,r:0});
-R(g,XL+228,cy+16,76,30,{fill:P.ambT,r:6,stroke:P.amb,sw:2});T(g,'$1,40 млн',XL+234,cy+22,{size:14.5,w:'b',c:P.ink});
+T(g,'План Казахстан',XL+18,cy+22,{size:14,w:'m'});
+const old=T(g,'$1,30 млн',XL+136,cy+22,{size:14,c:P.mut});R(g,old.x-2,old.y+old.height/2,old.width+4,1.6,{fill:P.mut,r:0});
+R(g,XL+210,cy+15,88,30,{fill:P.ambT,r:6,stroke:P.amb,sw:2});TC(g,'$1,40 млн',XL+210,cy+15,88,30,{size:14,w:'b',c:P.ink});
 [0,1].forEach(i=>{R(g,XL+20,cy+60+i*34,100,10,{fill:'#E8E2D8',r:5});R(g,XL+150,cy+60+i*34,64,10,{fill:'#E8E2D8',r:5});R(g,XL+234,cy+60+i*34,60,10,{fill:'#E8E2D8',r:5});});
 NUM(g,1,XL+14,cy+108,{d:28,size:14});T(g,'допущение изменено',XL+50,cy+113,{size:14,w:'s',c:P.acc});
 // PowerPoint
 cy=OW(XR,YT,'PowerPoint — Отчёт_Сеул.pptx','GA',P.acc);
 R(g,XR+14,cy+10,282,92,{fill:P.soft,r:8});
-[[30,46],[60,30],[90,52],[120,22]].forEach(([dx,h],i)=>{const bx=XR+14+dx*2-20;R(g,bx,cy+94-h,22,h,{fill:'#CFC6B8',r:3});R(g,bx+26,cy+94-(i===0?72:h+8),22,i===0?72:h+8,{fill:i===0?P.acc:'#B9B2A6',r:3});});
+[[30,46],[60,30],[90,52],[120,22]].forEach(([dx,h],i)=>{const bx=XR+14+dx*2-20;R(g,bx,cy+94-h,22,h,{fill:'#CFC6B8',r:3});R(g,bx+26,cy+94-(i===0?62:h+8),22,i===0?62:h+8,{fill:i===0?P.acc:'#B9B2A6',r:3});});
 ICON(g,'up',XR+86,cy+12,18,P.acc,2.4);
 NUM(g,2,XR+14,cy+108,{d:28,size:14});T(g,'столбец на диаграмме обновлён',XR+50,cy+113,{size:14,w:'s',c:P.acc});
 // Word
@@ -76,21 +77,22 @@ NUM(g,3,XR+14,cy+108,{d:28,size:14});T(g,'цифра в абзаце обнов�
 // Outlook
 cy=OW(XL,YB,'Outlook','Бета',P.blu,{dash:true});
 T(g,'Черновик · Кому: Сеул',XL+20,cy+12,{size:14,w:'s',c:P.mut});
-[250,220,180].forEach((w,i)=>R(g,XL+20,cy+40+i*20,w,10,{fill:'#E8E2D8',r:5}));
-NUM(g,4,XL+14,cy+104,{d:28,size:14,fill:P.mut});const o4=T(g,'черновик письма в Сеул — отправка только вашим кликом',XL+50,cy+102,{size:14,w:'s',c:P.ink,width:246,lh:122});
+[250,200].forEach((w,i)=>R(g,XL+20,cy+42+i*20,w,10,{fill:'#E8E2D8',r:5}));
+NUM(g,4,XL+14,cy+98,{d:28,size:14,fill:P.mut});const o4=T(g,'черновик письма в Сеул — отправка только вашим кликом',XL+50,cy+94,{size:14,w:'s',c:P.ink,width:246,lh:122});
 // стрелки
 A(g,XL+WW-40,YT+WH+4,CCX-70,CCY-36,{c:P.acc,sw:2.6,head:11});
 A(g,CCX+70,CCY-40,XR+40,YT+WH+6,{c:P.acc,sw:2.6,head:11});
 A(g,CCX+70,CCY+28,XR+40,YB-6,{c:P.acc,sw:2.6,head:11});
 A(g,CCX-70,CCY+28,XL+WW-40,YB-6,{c:P.mut,sw:2.4,head:11,dash:true});
 // справа: ограничения
-const LX=828,LW=316;const lr=R(g,LX,136,LW,10,{fill:P.card,stroke:P.line,r:14});
-T(g,'Ограничения',LX+20,154,{size:18,w:'b'});
+const LX=828,LW=316;const LT=YT;const lr=R(g,LX,LT,LW,10,{fill:P.card,stroke:P.line,r:14});
+T(g,'Ограничения',LX+20,LT+18,{size:18,w:'b'});
 const LIM=[['user','Pro, Max, Team, Enterprise'],['doc','Word: не 2016/2019, не iPad/Android, не .doc'],['sheet','Excel: нет макросов, VBA и Data tables'],['mail','Outlook: только Exchange Online, не iOS/Android']];
-let ly=194;LIM.forEach(([ic,s])=>{ICB(g,ic,LX+18,ly,34,P.soft,P.ink);const t=T(g,s,LX+64,ly+6,{size:15,w:'m',width:LW-84,lh:132});ly=Math.max(ly+34,t.y+t.height)+18;});
-lr.resize(LW,ly-136);
-const hy=ly+14;const hr=R(g,LX,hy,LW,10,{fill:P.ambT,r:14});ICON(g,'clock',LX+18,hy+18,26,P.amb,2.2);
-const ht=T(g,'История — отдельно для каждого файла',LX+56,hy+18,{size:15,w:'s',width:LW-76,lh:130});hr.resize(LW,ht.height+36);
+const its=[];let ly=LT+58;LIM.forEach(([ic,s])=>{const k0=g.children.length;ICB(g,ic,LX+18,ly,34,P.soft,P.ink);const t=T(g,s,LX+64,ly+6,{size:15,w:'m',width:LW-84,lh:132});const h=Math.max(34,t.y+t.height-ly);its.push({nodes:g.children.slice(k0),h});ly+=h+26;});
+const hrT=T(g,'История — отдельно для каждого файла',LX+56,0,{size:15,w:'s',width:LW-76,lh:130});const HRH=hrT.height+36;const sumh0=0;
+const ITG=40;const LB=LT+58+its.reduce((a,b)=>a+b.h,0)+3*ITG+22;const hy=LB+14;const hr=R(g,LX,hy,LW,HRH,{fill:P.ambT,r:14});g.insertChild(g.children.indexOf(hrT),hr);hrT.y=hy+18;ICON(g,'clock',LX+18,hy+18,26,P.amb,2.2);
+const gap=ITG;let yy=LT+58;its.forEach(it=>{const top=Math.min(...it.nodes.map(n=>n.y));it.nodes.forEach(n=>n.y+=yy-top);yy+=it.h+gap;});
+lr.resize(LW,LB-LT);
 NOTE(g,'Цифры — условный пример. Excel, PowerPoint и Word — GA, Outlook — бета.');
 await f.screenshot({scale:1.5});await g.screenshot({scale:1.5});
 return {QY,SY,sbh:sb.height,ly,hy,o4:o4.y+o4.height,CCY};

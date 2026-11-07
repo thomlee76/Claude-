@@ -13,7 +13,7 @@ const ws=[186,252,220,160,222],G=12;const xs=[56];for(let i=1;i<5;i++)xs.push(xs
 const ev=[
  ['12.03.2026',P.ink,P.card,P.line,'Визуализации в ответе',null,['диаграммы, графики и интерактивные элементы прямо в ответе']],
  ['16.09.2026',P.acc,P.accT,P.acc,'«Новый Claude»',null,['чат и Cowork — один разговор','артефакт в любом разговоре','вкладка Artifacts','запуск Claude Docs и Claude Slides','Claude Design — в разговоре']],
- ['08.10.2026',P.grn,P.grnT,P.grn,'Выход из беты',null,['Docs, Slides, Design —\u00a0GA','Dashboards (beta)','Motion (beta)','совместное редактирование']],
+ ['08.10.2026',P.grn,P.grnT,P.grn,'Выход из беты',null,['Docs, Slides, Design\u00a0—\u00a0GA','Dashboards (beta)','Motion (beta)','совместное редактирование']],
  ['15.10.2026',P.blu,P.card,P.line,'Enterprise',null,['Claude Docs включён по умолчанию на Enterprise']],
  ['14.12.2026',P.red,P.redT,P.red,'Закрытие claude.ai/design','warn',['чаты и комментарии не переносятся','публичные ссылки перестают работать']]];
 const AX=top+46;
