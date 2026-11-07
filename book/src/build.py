@@ -125,7 +125,7 @@ def main():
               'addEventListener("load",()=>{navigator.serviceWorker.register("sw.js",{updateViaCache:"none"}).then(()=>navigator.serviceWorker.ready)'
               '.then(r=>{if(r.active)r.active.postMessage("ensure")}).catch(()=>{})})}</script>\n')
     pdf_link = ('<div class="offline"><a class="dl" href="Claude-v-rabote.pdf" target="_blank" rel="noopener">PDF-версия для печати</a>'
-                '<span class="off-st" id="offSt" hidden></span><button type="button" class="off-pdf" id="offPdf" hidden>Сохранить и PDF для офлайна (11 МБ)</button></div>')
+                '<span class="off-st" id="offSt" hidden></span><button type="button" class="off-pdf" id="offPdf" hidden>Сохранить и PDF для офлайна (16 МБ)</button></div>')
     import re as _re
     full = _re.sub(r'<link rel="preconnect"[^>]*>\n', '', full)
     full = _re.sub(r'<link rel="stylesheet" href="https://fonts.googleapis.com[^"]*">', '<link rel="stylesheet" href="fonts/fonts.css">', full)

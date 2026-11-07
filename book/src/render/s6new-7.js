@@ -28,12 +28,12 @@ COL.forEach((k,i)=>{const x=56+i*(CW+CG);R(f,x,Y0,CW,Y1-Y0,{fill:i===2?'#F1EEE9'
 // колонка 2
 {const x=56+CW+CG,sy=Y0+80;
  LAPON(f,x+22,sy+70,176,100,P.dark);T(f,'$ claude\nremote-control',x+38,sy+90,{size:13,w:'m',c:'#9BD39F',lh:130});
- R(f,x+22,sy+190,176,30,{fill:P.bluT,r:8});ICON(f,'folder',x+32,sy+196,18,P.blu,2);T(f,'файлы на компьютере',x+58,sy+196,{size:13,w:'s',c:P.blu});
+ {const fw=MW('файлы остаются на компьютере',13,'s')+40;R(f,x+16,sy+194,fw,30,{fill:P.bluT,r:8});ICON(f,'folder',x+26,sy+200,18,P.blu,2);T(f,'файлы остаются на компьютере',x+50,sy+200,{size:13,w:'s',c:P.blu});}
  const uw=MW('claude.ai/code',13.5,'b')+44;R(f,x+CW-uw-16,sy+6,uw,30,{fill:P.card,stroke:P.blu,r:15,sw:1.5});ICON(f,'globe',x+CW-uw-6,sy+12,18,P.blu,2);T(f,'claude.ai/code',x+CW-uw+18,sy+12,{size:13.5,w:'b',c:P.blu});
  PHN(f,x+272,sy+112);
  A(f,x+204,sy+92,x+CW-70,sy+42,{c:P.blu,sw:1.6,head:8});
  A(f,x+204,sy+140,x+266,sy+150,{c:P.blu,sw:1.6,head:8});
- T(f,'окно\nуправления',x+212,sy+168,{size:12.5,w:'m',c:P.blu,lh:120});
+ T(f,'окно управления:',x+22,sy+14,{size:13.5,w:'s',c:P.blu});
  let ty=sy+258;const a=T(f,'Компьютер и процесс должны работать',x+20,ty,{size:15,w:'s',width:CW-40,lh:130});
  const b=T(f,'Team/Enterprise — включает владелец',x+20,a.y+a.height+10,{size:14,c:P.mut,width:CW-40,lh:130});
  PILL(f,'подробно — раздел 8',x+20,Y1-58,{size:14,w:'s',fill:P.bluT,c:P.blu,h:34,px:14});}
@@ -49,26 +49,26 @@ NOTE(f,'Схема. Вместо Dispatch Anthropic рекомендует об�
 
 // ===== 6.8
 const g=FIG(sheet,1,'6.8','Что видит computer use и что запрещать');
-const DX=56,DY=140,DW=500,DH=448;
+const DX=56,DY=140,DW=500,DH=424;
 R(g,DX,DY,DW,DH,{fill:P.dark,r:16});R(g,DX+8,DY+8,DW-16,DH-16,{fill:'#DCE1E7',r:10});R(g,DX+8,DY+8,DW-16,22,{fill:'#C9CFD7',r:10});R(g,DX+8,DY+20,DW-16,10,{fill:'#C9CFD7',r:0});
 function MWIN(x,y,w,h,ic,title,ok){R(g,x,y,w,h,{fill:P.card,r:8});R(g,x,y,w,26,{fill:P.soft,r:8});R(g,x,y+16,w,10,{fill:P.soft,r:0});ICON(g,ic,x+8,y+5,16,ok?P.grn:P.ink,2);T(g,title,x+30,y+5,{size:12.5,w:'s'});}
 function FRM(x,y,w,h,c){R(g,x-5,y-5,w+10,h+10,{fill:null,stroke:c,sw:3,r:11});}
 // Excel
-MWIN(DX+22,DY+60,262,182,'sheet','Excel — Price_check.xlsx',1);
-for(let r=0;r<5;r++)for(let c=0;c<4;c++)R(g,DX+30+c*62,DY+96+r*26,58,20,{fill:r===0?P.grnT:'#F1ECE3',r:3});
-FRM(DX+22,DY+60,262,182,P.grn);PILL(g,'нужно для задачи',DX+30,DY+44,{size:12,w:'b',fill:P.grn,c:'#FFFFFF',h:22,px:9});
+MWIN(DX+22,DY+48,262,162,'sheet','Excel — Price_check.xlsx',1);
+for(let r=0;r<4;r++)for(let c=0;c<4;c++)R(g,DX+30+c*62,DY+82+r*24,58,19,{fill:r===0?P.grnT:'#F1ECE3',r:3});
+FRM(DX+22,DY+48,262,162,P.grn);PILL(g,'нужно для задачи',DX+32,DY+182,{size:12,w:'b',fill:P.grn,c:'#FFFFFF',h:22,px:9});
 // уведомление мессенджера
-{const x=DX+302,y=DY+44;R(g,x,y,180,58,{fill:P.card,r:12});ICB(g,'chat',x+10,y+12,32,P.bluT,P.blu);T(g,'Мессенджер',x+50,y+10,{size:12.5,w:'b'});R(g,x+50,y+32,112,9,{fill:'#E0DAD0',r:4});FRM(x,y,180,58,P.red);}
+{const x=DX+302,y=DY+42;R(g,x,y,180,58,{fill:P.card,r:12});ICB(g,'chat',x+10,y+12,32,P.bluT,P.blu);T(g,'Мессенджер',x+50,y+10,{size:12.5,w:'b'});R(g,x+50,y+32,112,9,{fill:'#E0DAD0',r:4});FRM(x,y,180,58,P.red);}
 // банк-клиент
-{const x=DX+302,y=DY+124;MWIN(x,y,180,118,'money','Банк-клиент');R(g,x+12,y+40,110,10,{fill:'#E0DAD0',r:5});T(g,'$ ••• •••',x+12,y+60,{size:16,w:'b',c:P.ink});R(g,x+12,y+92,80,10,{fill:'#E0DAD0',r:5});FRM(x,y,180,118,P.red);}
+{const x=DX+302,y=DY+114;MWIN(x,y,180,96,'money','Банк-клиент');R(g,x+12,y+36,110,9,{fill:'#E0DAD0',r:5});T(g,'$ ••• •••',x+12,y+52,{size:16,w:'b',c:P.ink});R(g,x+12,y+78,80,9,{fill:'#E0DAD0',r:5});FRM(x,y,180,96,P.red);}
 // медицинская система
-{const x=DX+22,y=DY+268;MWIN(x,y,262,150,'user','Медицинская система');R(g,x+12,y+38,238,100,{fill:'#F6F3EE',r:8});E(g,x+22,y+50,44,'#CFC6B8');
+{const x=DX+22,y=DY+236;MWIN(x,y,262,166,'user','Медицинская система');R(g,x+12,y+38,238,100,{fill:'#F6F3EE',r:8});E(g,x+22,y+50,44,'#CFC6B8');
  [[110,0.55],[150,0.35]].forEach(([w,o],i)=>{R(g,x+78,y+52+i*8,w,12,{fill:'#8E887E',r:6,op:o});});R(g,x+78,y+52,120,22,{fill:'#B9B2A6',r:11,op:0.5});
- T(g,'имя скрыто',x+78,y+78,{size:11.5,w:'m',c:P.mut});[200,170,190].forEach((w,i)=>R(g,x+22,y+100+i*12,w,7,{fill:'#E0DAD0',r:3}));FRM(x,y,262,150,P.red);}
+ T(g,'имя скрыто',x+78,y+78,{size:11.5,w:'m',c:P.mut});[200,170,190].forEach((w,i)=>R(g,x+22,y+100+i*12,w,7,{fill:'#E0DAD0',r:3}));FRM(x,y,262,166,P.red);}
 // менеджер паролей
-{const x=DX+302,y=DY+268;MWIN(x,y,180,150,'key','Менеджер паролей');[0,1,2].forEach(i=>{R(g,x+12,y+40+i*34,156,26,{fill:'#F6F3EE',r:6});T(g,'••••••••',x+22,y+44+i*34,{size:14,w:'b',c:P.mut});});FRM(x,y,180,150,P.red);}
+{const x=DX+302,y=DY+236;MWIN(x,y,180,166,'key','Менеджер паролей');[0,1,2].forEach(i=>{R(g,x+12,y+42+i*38,156,28,{fill:'#F6F3EE',r:6});T(g,'••••••••',x+22,y+47+i*38,{size:14,w:'b',c:P.mut});});FRM(x,y,180,166,P.red);}
 // легенда
-const LGY=DY+DH+12;R(g,DX,LGY,DW,34,{fill:P.redT,r:10});R(g,DX+12,LGY+9,24,16,{fill:null,stroke:P.red,sw:3,r:4});ICON(g,'eye',DX+46,LGY+7,20,P.red,2.2);T(g,'Claude увидит на скриншоте — четыре окна в красной рамке',DX+74,LGY+8,{size:14,w:'b',c:P.red});
+const LGY=DY+DH+12;R(g,DX,LGY,DW,34,{fill:P.redT,r:10});R(g,DX+12,LGY+9,24,16,{fill:null,stroke:P.red,sw:3,r:4});ICON(g,'eye',DX+46,LGY+7,20,P.red,2.2);T(g,'Claude увидит на скриншоте',DX+74,LGY+8,{size:14,w:'b',c:P.red});R(g,DX+290,LGY+9,24,16,{fill:null,stroke:P.grn,sw:3,r:4});T(g,'нужно для задачи',DX+324,LGY+8,{size:14,w:'b',c:P.grn});
 // таблица
 const TX=580,TW=564,TY=140,cw=(TW-16)/3,TB=LGY+34;
 const TC3=[{h:'Разрешить',s:'',c:P.grn,ct:P.grnT,ic:'check',it:['Excel и нужная программа','Рабочая папка из Trusted folders']},
@@ -76,7 +76,7 @@ const TC3=[{h:'Разрешить',s:'',c:P.grn,ct:P.grnT,ic:'check',it:['Excel 
  {h:'Запретить',s:'',c:P.red,ct:P.redT,ic:'x',it:['Банк-клиент и платёжные сервисы','Медицинские системы и данные пациентов','Менеджер паролей','Почта с паролями и реквизитами','Импорт cookies банков, почты и SSO']}];
 TC3.forEach((k,i)=>{const x=TX+i*(cw+8);R(g,x,TY,cw,TB-TY,{fill:k.ct,r:14});
  R(g,x,TY,cw,48,{fill:k.c,r:14});R(g,x,TY+34,cw,14,{fill:k.c,r:0});ICON(g,k.ic,x+14,TY+13,22,'#FFFFFF',2.6);T(g,k.h,x+44,TY+13,{size:17,w:'b',c:'#FFFFFF'});
- let y=TY+60;if(k.s){T(g,k.s,x+14,y,{size:13,w:'s',c:k.c,width:cw-28});y+=26;}
+ let y=TY+60;if(k.s){const st=T(g,k.s,x+14,y-2,{size:13,w:'s',c:k.c,width:cw-28,lh:125});y=st.y+st.height+8;}
  k.it.forEach(s=>{const t=T(g,s,x+18,y+10,{size:14,w:'m',width:cw-36,lh:128});const r=R(g,x+8,y,cw-16,t.height+20,{fill:P.card,r:10});g.insertChild(g.children.indexOf(t),r);y+=t.height+28;});
  k.b=y;});
 // предупреждение

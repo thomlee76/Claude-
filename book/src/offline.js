@@ -5,7 +5,7 @@ async function count(){let n=0;for(const p of LIST){if(await caches.match(new UR
 async function pdfSaved(){return !!(await caches.match(new URL('Claude-v-rabote.pdf',base).href));}
 let tries=0;
 async function tick(){const n=await count();st.hidden=false;
-  if(n>=LIST.length){st.textContent='Доступно без интернета';st.classList.add('ok');pb.hidden=await pdfSaved();if(!pb.hidden)pb.textContent='Сохранить и PDF для офлайна (11 МБ)';return;}
+  if(n>=LIST.length){st.textContent='Доступно без интернета';st.classList.add('ok');pb.hidden=await pdfSaved();if(!pb.hidden)pb.textContent='Сохранить и PDF для офлайна (16 МБ)';return;}
   st.classList.remove('ok');st.textContent=navigator.onLine?('Сохраняю для работы без интернета: '+n+' из '+LIST.length):('Без сети сохранено '+n+' из '+LIST.length+' — откройте книгу с интернетом');
   tries++;if(tries%5===0&&navigator.serviceWorker.controller)navigator.serviceWorker.controller.postMessage('ensure');setTimeout(tick,1500);}
 navigator.serviceWorker.ready.then(()=>setTimeout(tick,600));
