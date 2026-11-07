@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14233A">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="영어 드라마 B1">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>영어 드라마 B1</title>
+<meta name="description" content="4컷 만화 연재로 배우는 비즈니스 영어 B1 — 시즌 1 알마티 CT 납품 대작전, 20화.">
+<style>
+@font-face{font-family:Plex;font-weight:400;src:url(fonts/latin-400.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+2190-21FF,U+2460-24FF,U+25A0-25FF}
+@font-face{font-family:Plex;font-weight:600;src:url(fonts/latin-600.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+2190-21FF,U+2460-24FF,U+25A0-25FF}
+@font-face{font-family:Plex;font-weight:700;src:url(fonts/latin-700.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+2190-21FF,U+2460-24FF,U+25A0-25FF}
+@font-face{font-family:Plex;font-weight:400;src:url(fonts/kr-400.woff2) format("woff2")}
+@font-face{font-family:Plex;font-weight:600;src:url(fonts/kr-600.woff2) format("woff2")}
+@font-face{font-family:Plex;font-weight:700;src:url(fonts/kr-700.woff2) format("woff2")}
+:root{
+ --navy:#14233A; --paper:#FBF8F2; --card:#FFFFFF; --ink:#17202B; --muted:#4A5563; --line:#E3E6EA; --bubble:#F3F5F7;
+ --accent:#E8833A; --red:#B5361F; --green:#1F6B43; --wa:#E7F6EF; --tip:#FFF6F1; --tipline:#F0D3C4;
+ --s0:#0E6672; --s1:#2856A3; --s2:#B4501A; --s3:#6B3FA0;
+ --safe-t:env(safe-area-inset-top,0px); --safe-b:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root{
+ --paper:#0F1622; --card:#182231; --ink:#E8ECF2; --muted:#A3AEBD; --line:#2A3647; --bubble:#202C3D;
+ --wa:#173328; --tip:#2A1E19; --tipline:#4A3328; --red:#F08A73; --green:#6FD19B;
+ --s0:#4FB3BF; --s1:#7FA6E8; --s2:#E9915B; --s3:#B496E0;}}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{background:var(--paper)}
+body{font-family:Plex,-apple-system,"Apple SD Gothic Neo",sans-serif;color:var(--ink);background:var(--paper);line-height:1.5;-webkit-text-size-adjust:100%;min-height:100vh}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+input{font:inherit}
+.wrap{max-width:640px;margin:0 auto;padding:0 16px}
+/* top bar */
+.bar{position:sticky;top:0;z-index:20;background:var(--navy);color:#fff;padding:calc(var(--safe-t) + 8px) 0 8px}
+.bar .wrap{display:flex;align-items:center;gap:8px;min-height:40px}
+.bar .t{flex:1;min-width:0;font-weight:700;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ib{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:10px;flex:none}
+.ib:active{background:rgba(255,255,255,.12)}
+.ib svg{width:22px;height:22px}
+.pg{height:3px;background:rgba(255,255,255,.15);position:absolute;left:0;right:0;bottom:0}
+.pg i{display:block;height:100%;background:var(--accent);width:0}
+/* home */
+.hero{background:var(--navy);color:#fff;padding:calc(var(--safe-t) + 22px) 0 22px}
+.eyebrow{font-size:11.5px;font-weight:600;letter-spacing:.12em;color:#8FD3C8}
+.hero h1{font-size:27px;line-height:1.25;margin:6px 0 4px}
+.hero p{color:#C9D3E0;font-size:14px}
+.cover{margin-top:16px;border-radius:14px;overflow:hidden;background:#fff;display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.cover img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.prog{margin-top:16px;display:flex;align-items:center;gap:10px;font-size:13px;color:#C9D3E0}
+.prog .track{flex:1;height:8px;border-radius:4px;background:rgba(255,255,255,.15);overflow:hidden}
+.prog .track i{display:block;height:100%;background:var(--accent)}
+.cta{margin-top:14px;width:100%;min-height:52px;border-radius:12px;background:var(--accent);color:#fff;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;gap:8px}
+.sec{font-size:13px;font-weight:700;color:var(--muted);margin:22px 0 10px;letter-spacing:.04em}
+.cast{display:flex;gap:10px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.cast::-webkit-scrollbar{display:none}
+.cm{flex:none;display:flex;align-items:center;gap:7px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px 12px 5px 5px;font-size:12.5px}
+.cm b{font-weight:600}
+.cm span.r{color:var(--muted)}
+.dot{width:26px;height:26px;border-radius:50%;color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.eps{display:flex;flex-direction:column;gap:10px}
+.ep{display:flex;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;text-align:left;width:100%}
+.ep img{width:84px;height:63px;border-radius:9px;object-fit:cover;flex:none;background:#fff}
+.ep .meta{flex:1;min-width:0}
+.ep .no{font-size:11.5px;font-weight:700;color:var(--accent)}
+.ep .tt{font-weight:700;font-size:15.5px;line-height:1.3}
+.ep .gr{font-size:12.5px;color:var(--muted)}
+.chk{width:26px;height:26px;border-radius:50%;border:2px solid var(--line);flex:none;display:flex;align-items:center;justify-content:center}
+.chk.on{background:var(--green);border-color:var(--green)}
+.chk svg{width:14px;height:14px;display:none}.chk.on svg{display:block}
+.foot{margin:26px 0 calc(var(--safe-b) + 30px);display:flex;flex-direction:column;gap:10px}
+.lnk{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 14px;font-size:14.5px;text-decoration:none;color:var(--ink);min-height:48px}
+.lnk svg{width:20px;height:20px;flex:none}
+.status{font-size:12.5px;color:var(--muted);text-align:center}
+/* reader */
+.head{padding:18px 0 4px}
+.head .no{display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:13px;border-radius:6px;padding:2px 9px}
+.head h2{font-size:25px;line-height:1.25;margin:8px 0 4px}
+.head .gr{font-size:13.5px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chip{font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px}
+.tools{display:flex;gap:8px;margin:14px 0 4px}
+.tbtn{flex:1;min-height:44px;border-radius:10px;border:1px solid var(--line);background:var(--card);font-size:13.5px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:6px}
+.tbtn svg{width:18px;height:18px}
+.tbtn.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.panel{background:var(--card);border:2px solid var(--navy);border-radius:16px;overflow:hidden;margin-top:14px}
+@media (prefers-color-scheme:dark){.panel{border-color:#3A4A62}}
+.plabel{background:var(--navy);color:#fff;font-size:13px;font-weight:700;padding:6px 12px}
+.pimg{width:100%;display:block;background:#fff;aspect-ratio:300/222;object-fit:cover}
+.dlg{padding:10px 10px 12px;display:flex;flex-direction:column;gap:8px}
+.line{display:flex;gap:8px;align-items:flex-start}
+.line .dot{margin-top:4px}
+.bub{flex:1;background:var(--bubble);border-radius:4px 14px 14px 14px;padding:8px 11px;text-align:left;width:100%}
+.en{font-size:16px;line-height:1.45;font-weight:500}
+.ko{font-size:13.5px;color:var(--muted);margin-top:2px}
+.hideko .ko{filter:blur(5px);opacity:.6}
+.hideko .bub.peek .ko{filter:none;opacity:1}
+.hl{font-weight:700;border-radius:4px;padding:0 3px}
+.say{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none;margin-top:2px;color:var(--muted)}
+.say svg{width:18px;height:18px}
+.say.playing{color:var(--accent)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;margin-top:16px}
+.card h3{font-size:16px;display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.card h3 svg{width:20px;height:20px;flex:none}
+.wr{padding:8px 0;border-top:1px solid var(--line)}
+.wr:first-of-type{border-top:0}
+.wtop{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.wtop b{font-size:17px}
+.wtop span{font-size:12px;color:var(--muted);white-space:nowrap}
+.wsub{font-size:13.5px;margin-top:2px}
+.red{background:var(--tip);border-color:var(--tipline)}
+.red h3{color:var(--red)}
+.mail{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.mhead{font-size:12px;color:var(--muted);border-bottom:1px dashed var(--line);padding-bottom:6px;margin-bottom:4px}
+.ml{font-size:15px;line-height:1.55;padding:6px 0}
+.ml s{color:var(--red);opacity:.8}
+.ml .fix{color:var(--red);font-weight:700;border-bottom:2px solid var(--red)}
+.ml .why{display:block;font-size:12.5px;color:var(--muted)}
+.mission{border:1.5px dashed #8A94A3}
+.wa{background:var(--wa);border-radius:14px 14px 14px 4px;padding:9px 12px;font-size:15px;max-width:92%}
+.wa .who{font-size:12px;font-weight:700;color:var(--s0)}
+.ctx{font-size:13.5px;color:var(--muted);margin:10px 0 4px}
+.q{font-size:15.5px;line-height:1.9;padding:4px 0}
+.q input{width:6.5em;max-width:40vw;border:0;border-bottom:2px solid var(--muted);background:transparent;color:var(--ink);font-size:16px;padding:0 4px;text-align:center;border-radius:0;outline:none}
+.q input:focus{border-color:var(--accent)}
+.q input.ok{border-color:var(--green);color:var(--green);font-weight:700}
+.q input.no{border-color:var(--red);color:var(--red)}
+.q .mu{color:var(--muted);font-size:13.5px}
+.q .sol{display:block;font-size:13px;color:var(--green);line-height:1.4}
+.row2{display:flex;gap:8px;margin-top:10px}
+.btn{flex:1;min-height:46px;border-radius:11px;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;gap:6px}
+.btn.pri{background:var(--navy);color:#fff}
+@media (prefers-color-scheme:dark){.btn.pri{background:#2C4466}}
+.btn.sec2{border:1px solid var(--line);background:var(--card)}
+.score{font-size:14px;font-weight:700;margin-top:10px;text-align:center}
+.done{margin-top:18px;min-height:54px;width:100%;border-radius:12px;font-weight:700;font-size:16px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;gap:8px}
+.done.is{background:var(--card);color:var(--green);border:1.5px solid var(--green)}
+.teaser{margin-top:14px;background:var(--navy);color:#fff;border-radius:14px;padding:14px;text-align:left;width:100%;display:block}
+.teaser small{display:inline-block;background:var(--accent);border-radius:5px;padding:1px 8px;font-size:12px;font-weight:700;margin-bottom:6px}
+.teaser div{font-size:14.5px;line-height:1.45}
+.nav{display:flex;gap:8px;margin:14px 0 calc(var(--safe-b) + 28px)}
+/* sheet */
+.sheet{position:fixed;inset:0;background:rgba(10,15,25,.5);z-index:50;display:none;align-items:flex-end;justify-content:center}
+.sheet.open{display:flex}
+.sheet .in{background:var(--card);width:100%;max-width:640px;border-radius:18px 18px 0 0;padding:18px 18px calc(var(--safe-b) + 18px)}
+.sheet h4{font-size:17px;margin-bottom:10px}
+.opt{display:flex;align-items:center;justify-content:space-between;min-height:52px;border-top:1px solid var(--line);font-size:15px;gap:10px}
+.seg{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.seg button{padding:8px 12px;font-size:14px}
+.seg button.on{background:var(--navy);color:#fff}
+.sw{width:50px;height:30px;border-radius:15px;background:var(--line);position:relative;flex:none}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;transition:left .15s}
+.sw.on{background:var(--green)}.sw.on::after{left:23px}
+.toast{position:fixed;left:50%;bottom:calc(var(--safe-b) + 20px);transform:translateX(-50%);background:var(--navy);color:#fff;padding:10px 16px;border-radius:999px;font-size:14px;z-index:60;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.show{opacity:1}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div class="sheet" id="sheet"><div class="in">
+ <h4>읽기 설정</h4>
+ <div class="opt"><span>한글 번역 보기<br><small style="color:var(--muted)">끄면 흐리게 가려지고, 말풍선을 누르면 보입니다</small></span><button class="sw" id="swKo" aria-label="한글 번역 보기"></button></div>
+ <div class="opt"><span>읽어주기 속도</span><div class="seg" id="segRate"><button data-r="0.75">느리게</button><button data-r="0.9">보통</button><button data-r="1.05">빠르게</button></div></div>
+ <div class="opt"><span>진도 초기화</span><button class="tbtn" id="reset" style="flex:none;padding:0 14px">초기화</button></div>
+ <button class="btn pri" style="width:100%;margin-top:12px" id="closeSheet">닫기</button>
+</div></div>
+<div class="toast" id="toast"></div>
+<script>
+const DATA = {"cast":{"A":["Artyom","#14233A","SG Healthcare 해외영업"],"D":["Dana","#0E6672","알마티 클리닉 원장"],"P":["Mr. Park","#B4501A","본사 물류팀"],"M":["Marat","#6B3FA0","현지 운송 기사"],"J":["Jun","#2856A3","서비스 엔지니어"],"K":["Mr. Kang","#5B6472","본사 전무"],"V":["Viktor","#A3401A","경쟁사 영업"],"L":["Aliya","#8C5A1E","2호점 원장"]},"eps":[{"no":"01","title":"화물은 어디에?","grammar":"현재완료","w":[["already","이미","have + already + p.p."],["yet","아직(부정) · 벌써?(의문)","문장 끝"],["still","아직도 (짜증·재촉)","still + haven't + p.p."],["just","방금","have + just + p.p."]],"refs":["①④","①","②③","②④"],"panels":[{"label":"월요일 09:00 · 알마티 클리닉","lines":[{"s":"D","en":"Artyom, has the CT arrived {1:yet}?","ko":"아르툠, CT 아직 안 왔어요?"},{"s":"A","en":"Not {1:yet}, but it has {0:already} left Incheon!","ko":"아직요, 근데 인천에선 이미 출발했어요!"}]},{"label":"월요일 23:00 · 호텔 방","lines":[{"s":"A","en":"Mr. Park, the clinic is {2:still} waiting!","ko":"과장님, 병원이 아직도 기다려요!"},{"s":"P","en":"Relax. It has {3:just} cleared customs.","ko":"진정해요. 방금 통관됐어요."}]},{"label":"화요일 10:00 · 클리닉 입구","lines":[{"s":"M","en":"Good news: the CT has arrived.","ko":"좋은 소식: CT 도착했어요."},{"s":"M","en":"Bad news: we {2:still} haven't measured the door.","ko":"나쁜 소식: 문 치수를 아직도 안 쟀어요."}]},{"label":"화요일 15:00 · 반전","lines":[{"s":"D","en":"Relax. I've {0:already} ordered a bigger door.","ko":"진정해요. 더 큰 문 이미 주문했어요."},{"s":"A","en":"Great. I've {3:just} lost five years of my life.","ko":"다행이네요. 방금 수명이 5년 줄었습니다."}]}],"red":[["We","have shipped","shipped","the CT last Monday.","last Monday 같은 시점이 있으면 과거형"],["It","arrived already","has already arrived","in Almaty.","already는 have와 p.p. 사이"],["We","are waiting","have been waiting","for the door since Tuesday.","since는 현재완료(진행)와 함께"]],"mission":{"who":"Dana","time":"15:42","msg":"Has the engineer arrived {1:yet}? The patients are waiting!","ctx":"상황: 엔지니어는 10분 전에 공항에 착륙했고, 병원에는 아직 못 왔다.","qs":["He has ______ landed at the airport.","But he ______ hasn't arrived at the clinic.","He has ______ called a taxi. [[(이미)]]"],"ans":["just","still","already"],"acc":[["just"],["still"],["already"]]},"next":"EP.02 — 엔지니어가 탄 비행기가 취소됐다!  ▸ 미래 표현 will · be going to · be due to"},{"no":"02","title":"비행기가 취소됐다","grammar":"미래 표현","w":[["will","지금 결정 · 약속","will + 동사원형"],["be going to","이미 정한 계획","be going to + 동사원형"],["be + -ing","확정된 일정","be + 동사-ing + 미래 시간"],["be due to","~할 예정 (공식)","be due to + 동사원형"]],"refs":["①②③","③④","②","①④"],"panels":[{"label":"수요일 06:30 · 인천공항","lines":[{"s":"J","en":"My flight is cancelled! The next one {3:is due to} leave tomorrow.","ko":"비행기 취소! 다음 편은 내일 출발 예정이래요."},{"s":"A","en":"Don't panic. I{0:'ll} find another route.","ko":"당황하지 마. 내가 다른 경로 찾을게."}]},{"label":"수요일 07:10 · 화상 통화","lines":[{"s":"D","en":"I{2:'m meeting} the Health Minister on Friday.","ko":"금요일에 보건부 장관님 만나요."},{"s":"D","en":"The CT {0:will} work by then. Right?","ko":"그때까지 CT 되는 거죠?"}]},{"label":"수요일 09:00 · 항공사 카운터","lines":[{"s":"A","en":"Jun, you{1:'re going to} fly via Tashkent.","ko":"준, 타슈켄트 경유로 가는 거야."},{"s":"J","en":"Tashkent? OK... I{0:'ll} buy a ticket now.","ko":"타슈켄트요? 네... 지금 표 살게요."}]},{"label":"금요일 08:55 · 클리닉","lines":[{"s":"J","en":"Done! The first scan {3:is due to} start at nine.","ko":"끝! 첫 촬영은 9시 시작 예정이에요."},{"s":"A","en":"And I{1:'m going to} sleep for two days.","ko":"그리고 난 이틀 동안 잘 거야."}]}],"red":[["","When the engineer will arrive, I'll call you.","When the engineer arrives, I'll call you.","","when · if 뒤에는 현재형"],["Please confirm","until","by","Friday.","끝내야 하는 기한은 by"],["The CT is due to","arriving","arrive","on Friday.","be due to + 동사원형"]],"mission":{"who":"Dana","time":"18:05","msg":"When {0:will} the CT be ready? The minister is coming on Friday!","ctx":"상황: 설치는 목요일로 확정돼 있다. 너는 방금 오늘 밤 테스트 리포트를 보내주기로 결정했다.","qs":["Jun ______ (install) it on Thursday. [[(확정 일정)]]","I ______ send you the test report tonight. [[(지금 결정)]]","The first scan is due ______ start at 9:00."],"ans":["is installing","will ('ll)","to"],"acc":[["is installing"],["will","'ll"],["to"]]},"next":"EP.03 — 원장님의 2호점 견적 요청, 그리고 본사 설득  ▸ 정중한 요청"},{"no":"03","title":"전무님, 부탁이 있습니다","grammar":"정중한 요청","w":[["Could you ~?","~해 주시겠어요? (기본)","Could you + 동사원형"],["Would you mind ~ing?","~해 주셔도 될까요?","Would you mind + 동사-ing"],["Would it be possible to ~?","~가 가능할까요? (조건)","Would it be possible to + 동사원형"],["I'd appreciate it if ~","~해 주시면 감사하겠습니다","I'd appreciate it if you could + 동사원형"]],"refs":["①","②④","②","③"],"panels":[{"label":"월요일 10:00 · 원장실","lines":[{"s":"D","en":"We're opening a second clinic. {0:Could you} send me a quote for two X-rays?","ko":"2호점을 열어요. X-ray 2대 견적 보내 주실래요?"},{"s":"A","en":"Of course. I'll send it today.","ko":"물론이죠. 오늘 보내드릴게요."}]},{"label":"월요일 16:00 · 본사 화상회의","lines":[{"s":"A","en":"{2:Would it be possible to} give Dana a 10% discount?","ko":"Dana 원장님께 10% 할인이 가능할까요?"},{"s":"K","en":"{1:Would you mind} sending me the volume forecast first?","ko":"물량 예측부터 보내 주겠나?"}]},{"label":"월요일 23:00 · 호텔에서 메일","lines":[{"s":"A","en":"{3:I'd appreciate it if you could} approve it by Friday.","ko":"금요일까지 승인해 주시면 감사하겠습니다."},{"s":"K","en":"Approved. 8%, not 10%.","ko":"승인. 10%가 아니라 8%."}]},{"label":"화요일 11:00 · 반전","lines":[{"s":"D","en":"8%? OK. {1:Would you mind} adding free training?","ko":"8%? 좋아요. 무료 교육도 넣어 주실래요?"},{"s":"A","en":"...Not at all.","ko":"...물론이죠. (식은땀)"}]}],"red":[["Could you","sent","send","me the invoice?","could · would 뒤는 동사원형"],["Would you mind","to check","checking","the drawings?","mind 뒤는 -ing"],["","Please kindly send ASAP.","Could you send it as soon as possible?","","kindly·ASAP 남발은 명령조로 들림"]],"mission":{"who":"Dana","time":"09:12","msg":"{1:Would you mind} sending the brochure in Russian?","ctx":"상황: 러시아어 브로셔는 문제없이 보낼 수 있다. 너도 Dana에게 2호점 도면을 요청해야 한다.","qs":["______ at all. I'll send it today. [[(수락)]]","______ you send me the floor plan? [[(기본 요청)]]","I'd appreciate it if you ______ reply by Monday."],"ans":["Not","Could","could"],"acc":[["Not"],["Could"],["could"]]},"next":"EP.04 — 공장에서 온 소식: 생산은 끝났는데…  ▸ 수동태"},{"no":"04","title":"공장에서 온 소식","grammar":"수동태","w":[["is + p.p.","현재 · 일반 사실","am / is / are + p.p."],["was + p.p.","과거 · 끝난 일","was / were + p.p."],["has been + p.p.","지금 결과","has / have been + p.p."],["will be + p.p.","미래 · 예정","will be + p.p."]],"refs":["①","②","③④","④"],"panels":[{"label":"화요일 · 본사 공장","lines":[{"s":"P","en":"Every detector {0:is tested} three times.","ko":"디텍터는 전부 세 번씩 검사돼요."},{"s":"A","en":"So that's why they're late!","ko":"그래서 늦는 거였군요!"}]},{"label":"수요일 · 인천항","lines":[{"s":"P","en":"Good news. The X-rays {1:were shipped} this morning.","ko":"좋은 소식. X-ray가 오늘 아침 선적됐어요."},{"s":"A","en":"Finally! I'll tell Dana.","ko":"드디어! Dana에게 알릴게요."}]},{"label":"목요일 · 원장실","lines":[{"s":"D","en":"Your invoice {2:has been paid}. In one day.","ko":"인보이스 결제 완료됐어요. 하루 만에."},{"s":"A","en":"One day? That's a record!","ko":"하루요? 신기록이네요!"}]},{"label":"금요일 · 반전","lines":[{"s":"A","en":"The X-rays {3:will be installed} next Monday.","ko":"X-ray는 다음 주 월요일에 설치됩니다."},{"s":"D","en":"Good. The new door {2:has been delivered} too.","ko":"좋아요. 새 문도 배송 완료됐어요."}]}],"red":[["The goods","were arrived","arrived","yesterday.","arrive · happen은 수동태 불가"],["The contract","has signed","has been signed",".","계약서는 서명 '되는' 대상 → been 필요"],["The machine was","install","installed","last week.","수동태는 be + p.p."]],"mission":{"who":"Dana","time":"10:30","msg":"Has the payment {2:been received}? Our accountant is asking.","ctx":"상황: 본사 회계팀이 오늘 아침 입금을 확인했다. 장비는 어제 선적됐고, 다음 주에 배송된다.","qs":["Yes, it ______ (receive) this morning. [[(과거)]]","The X-rays ______ (ship) yesterday.","They will ______ (deliver) next week."],"ans":["was received","were shipped","be delivered"],"acc":[["was received"],["were shipped"],["be delivered"]]},"next":"EP.05 — 트럭이 국경에서 멈췄다  ▸ 상태 전치사 in transit · on site"},{"no":"05","title":"국경에서 멈춘 트럭","grammar":"상태 전치사","w":[["in transit","운송 중","be in transit (to + 목적지)"],["on site","현장에서","be on site / work on site"],["behind schedule","일정보다 늦게","↔ on schedule · ahead of schedule"],["in charge of","~을 담당하는","be in charge of + 명사"]],"refs":["①","④","③","②"],"panels":[{"label":"월요일 · 코르고스 국경","lines":[{"s":"M","en":"The X-rays are {0:in transit}... but we're stuck at the border.","ko":"X-ray는 운송 중인데... 국경에서 막혔어요."},{"s":"A","en":"Stuck? For how long?","ko":"막혔다고? 얼마나?"}]},{"label":"월요일 · 세관 사무실","lines":[{"s":"A","en":"Who's {3:in charge of} customs here?","ko":"여기 통관 담당이 누구죠?"},{"s":"M","en":"A man who loves very long lunches.","ko":"점심을 아주 길게 드시는 분이요."}]},{"label":"화요일 · 원장실","lines":[{"s":"D","en":"We're two days {2:behind schedule}, Artyom.","ko":"아르툠, 일정보다 이틀 늦었어요."},{"s":"A","en":"I know. I'm fixing it.","ko":"알아요. 해결하는 중입니다."}]},{"label":"화요일 · 텅 빈 촬영실","lines":[{"s":"J","en":"Good news: I'm {1:on site}.","ko":"좋은 소식: 저 현장에 왔어요."},{"s":"J","en":"Bad news: the X-rays aren't.","ko":"나쁜 소식: X-ray가 안 왔어요."}]}],"red":[["The goods are","on transit","in transit",".",null],["We will deliver","on next Monday","next Monday",".","next · last · this 앞에는 전치사 X"],["I am in charge","for","of","this project.",null]],"mission":{"who":"Dana","time":"14:20","msg":"Where is the truck now? And who is responsible?","ctx":"상황: 트럭은 알마티로 이동 중. 통관은 Marat 담당. 일정은 하루 늦어졌다.","qs":["The truck is ______ transit to Almaty.","Marat is in charge ______ customs.","We are one day ______ schedule."],"ans":["in","of","behind"],"acc":[["in"],["of"],["behind"]]},"next":"EP.06 — 경쟁사 Viktor 등장, 15% 더 싼 견적  ▸ 비교 표현"},{"no":"06","title":"더 싼 견적이 나타났다","grammar":"비교 표현","w":[["cheaper than","~보다 싼 (짧은 단어 + -er)","형용사-er + than"],["more reliable than","~보다 더 안정적인 (긴 단어)","more + 형용사 + than"],["the most ~","가장 ~한 (최상급)","the -est / the most + 형용사"],["as ~ as","~만큼 ~한 (동등 비교)","as + 형용사 + as / not as ~ as"]],"refs":["①","③","④","②"],"panels":[{"label":"월요일 · 원장실","lines":[{"s":"D","en":"Viktor's offer is 15% {0:cheaper than} yours.","ko":"Viktor 견적이 당신 것보다 15% 싸요."},{"s":"A","en":"Cheaper, yes. But is it better?","ko":"싸긴 하죠. 근데 더 좋을까요?"}]},{"label":"월요일 · 클리닉 로비","lines":[{"s":"V","en":"Our X-ray is just {3:as good as} theirs.","ko":"저희 X-ray도 저쪽만큼 좋습니다."},{"s":"A","en":"Then why did your unit at City Hospital break twice?","ko":"그럼 시립병원 장비는 왜 두 번 고장 났죠?"}]},{"label":"화요일 · 데이터 미팅","lines":[{"s":"A","en":"Our detector is lighter and {1:more reliable than} his.","ko":"저희 디텍터가 더 가볍고 안정적입니다."},{"s":"D","en":"Prove it. Send me the data.","ko":"증명해 보세요. 데이터 보내 주세요."}]},{"label":"수요일 · 결정","lines":[{"s":"D","en":"You're not as cheap as Viktor, but you're {2:the most} reliable.","ko":"Viktor만큼 싸진 않지만, 제일 믿을 만하네요."},{"s":"A","en":"I'll take that as a compliment.","ko":"칭찬으로 듣겠습니다."}]}],"red":[["","This model is more cheaper.","This model is cheaper.","","more와 -er을 함께 쓰지 않기"],["","It is very better than before.","It is much better than before.","","비교급 강조는 very가 아니라 much"],["","Our price is same as theirs.","Our price is the same as theirs.","",null]],"mission":{"who":"Dana","time":"11:05","msg":"Why should I pay more than Viktor's price?","ctx":"상황: 우리 보증 기간이 2년 더 길고, 디텍터도 더 가볍다.","qs":["Our warranty is two years ______ (long) than his.","Our detector is ______ (light).","It is the ______ (good) value on the market."],"ans":["longer","lighter","best"],"acc":[["longer"],["lighter"],["best"]]},"next":"EP.07 — 인허가 규정이 바뀌었다, 서류 40장  ▸ must · have to · should"},{"no":"07","title":"새 규정, 서류 폭탄","grammar":"의무와 조언","w":[["must","반드시 (강한 의무·규칙)","must + 동사원형"],["have to","~해야 한다 (외부 규정·상황)","have to / has to + 동사원형"],["need to","~할 필요가 있다","need to + 동사원형"],["should","~하는 게 좋다 (조언)","should + 동사원형"]],"refs":["③","①","②","④"],"panels":[{"label":"월요일 · 원장실","lines":[{"s":"D","en":"New rule: all X-rays {1:have to} be registered again.","ko":"새 규정: X-ray 전부 다시 등록해야 해요."},{"s":"A","en":"Again?!","ko":"또요?!"}]},{"label":"월요일 · 본사 화상통화","lines":[{"s":"A","en":"Mr. Park, what do we {2:need to} send?","ko":"과장님, 뭘 보내야 하죠?"},{"s":"P","en":"Only forty pages. By Friday.","ko":"겨우 40장이에요. 금요일까지."}]},{"label":"수요일 · 보건부 민원실","lines":[{"s":"M","en":"Visitors {0:must} wear a badge here.","ko":"여기선 방문자는 반드시 출입증을 달아야 해요."},{"s":"A","en":"And I {0:must} wear a smile, I guess.","ko":"미소도 반드시 달아야겠네요."}]},{"label":"금요일 · 등록 완료","lines":[{"s":"D","en":"Registered! You {3:should} bring cookies next time.","ko":"등록 완료! 다음엔 쿠키를 가져가는 게 좋아요."},{"s":"A","en":"Cookies. Noted.","ko":"쿠키. 메모했습니다."}]}],"red":[["","We must to send the documents.","We must send the documents.","","must 뒤에 to를 쓰지 않기"],["","He have to sign the contract.","He has to sign the contract.","","3인칭 단수는 has to"],["","You don't must touch it.","You mustn't touch it.","",null]],"mission":{"who":"Dana","time":"16:40","msg":"Do I need to sign anything?","ctx":"상황: 원장 서명은 규정상 필수. 공증은 필요 없다. 사본 보관은 권장 사항.","qs":["Yes, you ______ sign the application. [[(규정)]]","You ______ notarize it. [[(필요 없음)]]","You ______ keep a copy. [[(조언)]]"],"ans":["have to (must)","don't have to","should"],"acc":[["have to","must"],["don't have to"],["should"]]},"next":"EP.08 — 원장님이 10대를 사겠다는데, 조건이…  ▸ 조건문"},{"no":"08","title":"10대를 사면?","grammar":"조건문","w":[["If ~, will","~하면 ~할 것이다","If + 현재형, will + 동사원형"],["unless","~하지 않으면 (= if not)","unless + 현재형(긍정문)"],["as long as","~하기만 하면 (조건)","as long as + 현재형"],["in case","~할 경우에 대비해","in case + 현재형"]],"refs":["①","②","③","④"],"panels":[{"label":"월요일 · 협상 테이블","lines":[{"s":"D","en":"{0:If} we order ten X-rays, {0:will} you give us 12%?","ko":"10대 주문하면 12% 해 주실래요?"},{"s":"A","en":"Ten? Let me call Seoul.","ko":"10대요? 서울에 전화해 볼게요."}]},{"label":"월요일 · 본사 화상통화","lines":[{"s":"K","en":"We can't give 12% {1:unless} they pay 30% in advance.","ko":"선금 30% 안 내면 12%는 안 돼."},{"s":"A","en":"I'll tell her.","ko":"전달하겠습니다."}]},{"label":"화요일 · 원장실","lines":[{"s":"D","en":"Fine, {2:as long as} you train all my staff.","ko":"좋아요. 직원 전원 교육해 주는 조건으로."},{"s":"A","en":"Deal, {2:as long as} they don't break anything.","ko":"좋습니다. 아무것도 안 부순다는 조건으로."}]},{"label":"화요일 · 계약 서명","lines":[{"s":"A","en":"We'll send two spare detectors {3:in case} one fails.","ko":"고장 대비로 예비 디텍터 2개 보내드릴게요."},{"s":"D","en":"Perfect. Keep my number {3:in case} Viktor calls.","ko":"완벽해요. Viktor가 전화할 때 대비해 제 번호 저장해 두세요."}]}],"red":[["","If you will order today, we give a discount.","If you order today, we will give a discount.","","if절은 현재형, 주절에 will"],["","Unless you don't pay, we can't ship.","Unless you pay, we can't ship.","","unless에 이미 부정 의미"],["","In case of the price changes, we'll tell you.","In case the price changes, we'll tell you.","","in case of + 명사 / in case + 문장"]],"mission":{"who":"Dana","time":"13:15","msg":"Can you keep this price until January?","ctx":"상황: 12월 20일까지 확정하면 가격 유지. 확정 안 하면 인상된다.","qs":["We can keep the price ______ you confirm by 20 December. [[(~하기만 하면)]]","______ you confirm by then, the price will go up. [[(~하지 않으면)]]","If you ______ (confirm) today, we will ship next week."],"ans":["as long as (if)","Unless","confirm"],"acc":[["as long as","if"],["Unless"],["confirm"]]},"next":"EP.09 — 전무님께 보낼 보고 메일, 문제가 너무 많다  ▸ 연결어"},{"no":"09","title":"전무님께 보내는 메일","grammar":"연결어","w":[["however","그러나 (반대 내용)",". However, + 문장"],["therefore","그러므로 (결론)",". Therefore, + 문장"],["in addition","게다가, 또한 (추가)",". In addition, + 문장"],["as a result","그 결과 (원인 → 결과)",". As a result, + 문장"]],"refs":["①","④","①","③"],"panels":[{"label":"화요일 23:00 · 메일 초안","lines":[{"s":"A","en":"The deal is signed. {0:However}, they want free training.","ko":"계약 체결. 그러나 무료 교육을 원합니다."},{"s":"A","en":"{2:In addition}, they asked for two spare units.","ko":"게다가 예비품 2개를 요청했습니다."}]},{"label":"화요일 23:20 · 옆자리","lines":[{"s":"P","en":"You gave them everything?","ko":"다 내준 거예요?"},{"s":"A","en":"Not everything. Almost everything.","ko":"다는 아니고요. 거의 다요."}]},{"label":"수요일 08:00 · 서울 본사","lines":[{"s":"A","en":"Customs took a week. {3:As a result}, installation was delayed.","ko":"통관 1주일. 그 결과 설치가 지연됐습니다."},{"s":"K","en":"Too many problems, Artyom.","ko":"문제가 너무 많군, 아르툠."}]},{"label":"수요일 08:30 · 반전","lines":[{"s":"A","en":"{1:Therefore}, I suggest a five-year service contract.","ko":"따라서 5년 서비스 계약을 제안합니다."},{"s":"K","en":"...Good idea. Approved.","ko":"...좋은 생각이군. 승인."}]}],"red":[["","However the price is high.","However, the price is high.","","However 뒤에 쉼표"],["","The parts are late, therefore we postpone.","The parts are late. Therefore, we will postpone.","","문장을 끊고 Therefore,"],["","In addition of the warranty, we offer training.","In addition to the warranty, we offer training.","","in addition to + 명사"]],"mission":{"who":"Mr. Kang","time":"09:00","msg":"Summarize the deal in three sentences.","ctx":"상황: 10대 계약 / 12% 할인 / 서비스 계약 추가 수주 → 연간 목표 달성.","qs":["We signed for ten units. ______, we gave a 12% discount. [[(역접)]]","______, they signed a service contract. [[(추가)]]","______, we reached our annual target. [[(결과)]]"],"ans":["However","In addition","As a result"],"acc":[["However"],["In addition"],["As a result"]]},"next":"EP.10 — 2호점 오픈 파티, 불청객 등장  ▸ 관계대명사"},{"no":"10","title":"2호점 오픈 파티","grammar":"관계대명사","w":[["who","사람 + 설명","사람 + who + 동사"],["which","사물 + 설명","사물 + which + 동사"],["that","사람·사물 모두 (구어)","that = who / which"],["where","장소 + 설명","장소 + where + 주어 + 동사"]],"refs":["①④","②","④","③"],"panels":[{"label":"토요일 18:00 · 2호점","lines":[{"s":"D","en":"Meet Aliya, the doctor {0:who} will run this branch.","ko":"이 지점을 맡을 의사 Aliya예요."},{"s":"A","en":"Nice to meet you, Dr. Aliya!","ko":"반갑습니다, Aliya 선생님!"}]},{"label":"토요일 18:20 · 촬영실","lines":[{"s":"A","en":"This is the X-ray {1:which} survived the border.","ko":"이게 국경을 살아 넘은 X-ray입니다."},{"s":"L","en":"A real hero.","ko":"진정한 영웅이네요."}]},{"label":"토요일 18:40 · VIP실","lines":[{"s":"D","en":"And this is the room {3:where} the minister had his scan.","ko":"여기가 장관님이 촬영받으신 방이에요."},{"s":"A","en":"A historic room.","ko":"역사적인 방이군요."}]},{"label":"토요일 19:00 · 불청객","lines":[{"s":"V","en":"So you're the salesman {2:that} stole my client.","ko":"당신이 내 고객을 뺏어간 영업이군."},{"s":"A","en":"And you're the guy {0:who} sold the broken unit.","ko":"그리고 당신은 고장 난 장비 판 분이고요."}]}],"red":[["","The engineer which came yesterday...","The engineer who came yesterday...","","사람은 who"],["","This is the hospital which we work.","This is the hospital where we work.","","장소 + 완전한 문장 → where"],["","the manual that I sent it to you","the manual that I sent to you","","it 중복 금지"]],"mission":{"who":"Aliya","time":"10:20","msg":"Who is the engineer that will train us?","ctx":"상황: 교육 담당은 Jun(CT를 설치한 엔지니어). 지난주에 보낸 매뉴얼 사용. 장소는 파티를 했던 방.","qs":["It's Jun, the engineer ______ installed the CT.","We'll use the manual ______ I sent last week.","Training is in the room ______ we had the party."],"ans":["who","which (that)","where"],"acc":[["who"],["which","that"],["where"]]},"next":"EP.11 — 전무님이 알마티에 오신다  ▸ 동사 뒤 -ing vs to"},{"no":"11","title":"전무님이 오신다","grammar":"동사 뒤 -ing vs to","w":[["look forward to -ing","~을 기대하다","look forward to + 동사-ing"],["plan to","~할 계획이다","plan / decide / hope + to 동사원형"],["avoid -ing","~을 피하다","avoid / consider / finish + -ing"],["agree to","~하기로 동의하다","agree / promise / offer + to 동사원형"]],"refs":["②","①","③","④"],"panels":[{"label":"월요일 · 메일 알림","lines":[{"s":"K","en":"I {1:plan to} visit Almaty next week.","ko":"다음 주에 알마티 방문할 계획이네."},{"s":"A","en":"Next week?!","ko":"다음 주요?!"}]},{"label":"월요일 · 답장","lines":[{"s":"A","en":"I {0:look forward to seeing} you, sir!","ko":"뵙기를 고대하겠습니다, 전무님!"},{"s":"P","en":"Your face doesn't look forward to it.","ko":"얼굴은 전혀 고대하는 표정이 아닌데요."}]},{"label":"목요일 · 만찬 전","lines":[{"s":"D","en":"Please {2:avoid talking} about Viktor at dinner.","ko":"저녁 식사 때 Viktor 얘기는 피해 주세요."},{"s":"A","en":"Understood.","ko":"알겠습니다."}]},{"label":"목요일 · 만찬","lines":[{"s":"D","en":"Your boss {3:agreed to give} us a five-year warranty!","ko":"전무님이 5년 보증을 해 주시기로 했어요!"},{"s":"A","en":"He {3:agreed to} WHAT?","ko":"뭘 해 주신다고요?"}]}],"red":[["","I look forward to hear from you.","I look forward to hearing from you.","","이 to는 전치사 → -ing"],["","We are considering to open a branch.","We are considering opening a branch.","",null],["","They agreed paying the costs.","They agreed to pay the costs.","",null]],"mission":{"who":"Mr. Kang","time":"08:45","msg":"Did Dana agree to the dinner?","ctx":"상황: Dana가 만찬에 응했다. 그녀도 전무님을 만나길 고대한다. 식사 중 가격 얘기는 피하자고 제안하자.","qs":["Yes, she agreed ______ (join) us.","She looks forward to ______ (meet) you.","Let's avoid ______ (discuss) prices at dinner."],"ans":["to join","meeting","discussing"],"acc":[["to join"],["meeting"],["discussing"]]},"next":"EP.12 — 시연 도중 화면이 꺼졌다  ▸ 가능성과 추측"},{"no":"12","title":"시연 중 블랙아웃","grammar":"가능성과 추측","w":[["can","~할 수 있다 (능력·기능)","can + 동사원형"],["could","~할 수도 있다 (제안)","could + 동사원형"],["may","~일 수 있다 (가능성)","may + 동사원형"],["might","~일지도 모른다 (낮은 확률)","might + 동사원형"]],"refs":["③","③④","②","①"],"panels":[{"label":"월요일 · 2호점 시연","lines":[{"s":"L","en":"The screen went black! Is it broken?","ko":"화면이 꺼졌어요! 고장인가요?"},{"s":"A","en":"It {3:might} be the power supply.","ko":"전원 공급 문제일지도 모릅니다."}]},{"label":"월요일 · 서울과 통화","lines":[{"s":"J","en":"It {2:may} be a cable. Check it first.","ko":"케이블일 수 있어요. 먼저 확인해 보세요."},{"s":"A","en":"Which cable? There are fifty.","ko":"어떤 케이블? 50개는 되는데."}]},{"label":"월요일 · 재부팅","lines":[{"s":"J","en":"The system {0:can} restart in two minutes.","ko":"시스템은 2분이면 재시작할 수 있어요."},{"s":"A","en":"OK. We {1:could} try that.","ko":"좋아. 그거 해 보면 되겠네."}]},{"label":"월요일 · 범인 발견","lines":[{"s":"M","en":"Sorry... I needed to charge my phone.","ko":"죄송해요... 폰을 충전해야 해서."},{"s":"A","en":"Marat, we {1:could} buy you a power bank.","ko":"Marat, 보조배터리 사 줄 수도 있어요."}]}],"red":[["","It may arrives tomorrow.","It may arrive tomorrow.","","조동사 뒤는 동사원형"],["","Maybe it will might be late.","It might be late.","","조동사 두 개를 연달아 쓰지 않기"],["","We can to offer a discount.","We can offer a discount.","",null]],"mission":{"who":"Aliya","time":"16:30","msg":"Why is the image so dark?","ctx":"상황: 원인은 확실치 않다. 설정 문제일 수 있다. 엔지니어 원격 접속 가능. 새 장비라 하드웨어 문제일 리 없다.","qs":["It ______ be a settings problem. [[(추측)]]","Our engineer ______ connect remotely. [[(가능)]]","It ______ be the hardware. It's brand new. [[(그럴 리 없음)]]"],"ans":["might (may)","can","can't"],"acc":[["might","may"],["can"],["can't"]]},"next":"EP.13 — 전무님이 경위서를 요구하신다  ▸ 과거진행"},{"no":"13","title":"경위서를 써라","grammar":"과거진행","w":[["was -ing","~하고 있었다 (배경)","was / were + 동사-ing"],["when","~했을 때 (갑자기 생긴 일)","과거진행 + when + 과거"],["while","~하는 동안 (진행 배경)","while + 과거진행, 과거"],["was going to","~하려고 했다 (계획 변경)","was / were going to + 동사원형"]],"refs":["①②③④","①","②④","③"],"panels":[{"label":"화요일 · 본사 화상회의","lines":[{"s":"K","en":"Explain. What happened during the demo?","ko":"설명해 보게. 시연 중에 무슨 일이 있었나?"},{"s":"A","en":"We {0:were scanning} a phantom {1:when} the screen went black.","ko":"팬텀(시험용 모형) 촬영 중에 화면이 꺼졌습니다."}]},{"label":"화요일 · 회상","lines":[{"s":"A","en":"{2:While} Jun {0:was checking} the cables, Marat came in.","ko":"Jun이 케이블을 확인하는 동안 Marat이 들어왔고요."},{"s":"M","en":"I {0:was charging} my phone. It was at 2%!","ko":"폰 충전 중이었어요. 2%였다고요!"}]},{"label":"화요일 · 추궁","lines":[{"s":"A","en":"I {3:was going to} tell you, sir, but...","ko":"말씀드리려고 했는데, 그게..."},{"s":"K","en":"But you {0:were hoping} I'd never find out.","ko":"내가 모르길 바라고 있었겠지."}]},{"label":"화요일 · 반전","lines":[{"s":"K","en":"{2:While} you {0:were writing} this, Aliya sent me a thank-you letter.","ko":"자네가 이걸 쓰는 동안 Aliya 원장이 감사 편지를 보냈네."},{"s":"A","en":"...So I'm not fired?","ko":"...그럼 저 안 잘리는 겁니까?"}]}],"red":[["","When the error occurred, we scanned a patient.","When the error occurred, we were scanning a patient.","","배경 동작은 과거진행"],["","While I checked, the alarm was ringing.","While I was checking, the alarm rang.","","긴 배경 = 진행형, 짧은 사건 = 과거형"],["","We were knowing the problem.","We knew the problem.","",null]],"mission":{"who":"Mr. Kang","time":"11:10","msg":"What were you doing when Dana called?","ctx":"상황: Dana가 전화했을 때 너는 공항에서 체크인 중이었다. 다시 걸려고 했는데 탑승해 버렸다.","qs":["I ______ (check) in at the airport when she called.","I ______ (be going to) call her back, but I boarded.","______ I was boarding, she sent an email."],"ans":["was checking","was going to","While"],"acc":[["was checking"],["was going to"],["While"]]},"next":"EP.14 — 2호점 원장님이 화가 났다  ▸ 사과와 클레임 대응"},{"no":"14","title":"2호점의 분노","grammar":"사과와 클레임 대응","w":[["apologize for","~에 대해 사과드립니다","apologize for + 명사 / -ing"],["unfortunately","유감스럽게도 (나쁜 소식)","Unfortunately, + 문장"],["make sure","반드시 ~하도록 하다","make sure (that) + 문장"],["as a gesture of goodwill","성의의 표시로","As a gesture of goodwill, + 제안"]],"refs":["①","②","③","④"],"panels":[{"label":"월요일 · 2호점","lines":[{"s":"L","en":"Two detectors are broken! This is unacceptable.","ko":"디텍터가 두 개나 고장이에요! 말도 안 돼요."},{"s":"A","en":"We {0:apologize for} the trouble.","ko":"불편을 드려 사과드립니다."}]},{"label":"월요일 · 본사 통화","lines":[{"s":"P","en":"{1:Unfortunately}, the spare parts are out of stock.","ko":"유감스럽게도 예비 부품이 품절이에요."},{"s":"A","en":"Then send them from Seoul by air.","ko":"그럼 서울에서 항공으로 보내 주세요."}]},{"label":"월요일 · 해결책","lines":[{"s":"A","en":"We'll {2:make sure} Jun is here tomorrow morning.","ko":"내일 아침 Jun이 반드시 오도록 하겠습니다."},{"s":"L","en":"Make sure he brings coffee.","ko":"커피도 꼭 가져오라고 하세요."}]},{"label":"화요일 · 화해","lines":[{"s":"A","en":"{3:As a gesture of goodwill}, we'll extend the warranty.","ko":"성의의 표시로 보증 기간을 연장해 드리겠습니다."},{"s":"L","en":"...OK. You're forgiven. For now.","ko":"...좋아요. 용서할게요. 일단은."}]}],"red":[["","We apologize the delay.","We apologize for the delay.","","apologize 뒤에 for"],["","Sorry for your inconvenient.","Sorry for the inconvenience.","","inconvenient(형용사) → inconvenience(명사)"],["","We'll make sure it will not happen.","We'll make sure it doesn't happen again.","","make sure 뒤는 보통 현재형"]],"mission":{"who":"Aliya","time":"09:05","msg":"The software crashed again! What are you doing about it?","ctx":"상황: 먼저 사과. 아쉽게도 패치는 아직 준비 안 됨. 재발 방지를 약속.","qs":["We apologize ______ the problem.","______, the patch is not ready yet. [[(유감)]]","We will make ______ it doesn't happen again."],"ans":["for","Unfortunately","sure"],"acc":[["for"],["Unfortunately"],["sure"]]},"next":"EP.15 — 본사가 가격 인상을 통보했다  ▸ 숫자와 가격 표현"},{"no":"15","title":"가격이 오른다고요?","grammar":"숫자와 가격","w":[["increase by","~만큼 오르다 (차이)","increase / rise + by + 수치"],["drop to","~로 떨어지다 (결과)","drop / fall / decrease + to + 수치"],["around","약, 대략","around / about / approximately"],["per unit","대당, 개당","가격 + per unit / each"]],"refs":["①","③","④","②"],"panels":[{"label":"월요일 · 본사 공지","lines":[{"s":"K","en":"From January, prices will {0:increase by} 7%.","ko":"1월부터 가격이 7% 인상되네."},{"s":"A","en":"Dana is going to kill me.","ko":"Dana 원장님이 절 죽이려 하실 겁니다."}]},{"label":"화요일 · 원장실","lines":[{"s":"A","en":"The new price is $46,000 {3:per unit}.","ko":"새 가격은 대당 46,000달러입니다."},{"s":"D","en":"You said $43,000!","ko":"43,000달러라면서요!"}]},{"label":"화요일 · 설득","lines":[{"s":"A","en":"But the lead time has {1:dropped to} four weeks.","ko":"대신 납기가 4주로 줄었습니다."},{"s":"D","en":"Hmm. That's useful.","ko":"음. 그건 쓸모 있네요."}]},{"label":"화요일 · 반전","lines":[{"s":"D","en":"Then I'll order {2:around} twenty units before January.","ko":"그럼 1월 전에 20대쯤 주문할게요."},{"s":"A","en":"...Twenty?!","ko":"...20대요?!"}]}],"red":[["","We need 20 unit.","We need 20 units.","","2 이상은 복수형"],["","It costs $12,000 for unit.","It costs $12,000 per unit.","",null],["","a three-years warranty","a three-year warranty","","명사 앞 수식어는 단수형"]],"mission":{"who":"Dana","time":"15:50","msg":"How much will the new price be?","ctx":"상황: 현재 가격 $43,000. 7% 인상. 12월 31일 전 주문은 기존 가격 유지.","qs":["The price will increase ______ 7%. [[(차이)]]","It will go up ______ about $46,000. [[(결과)]]","Orders before 31 December stay at $43,000 ______ unit."],"ans":["by","to","per"],"acc":[["by"],["to"],["per"]]},"next":"EP.16 — 20대는 언제 오나요? 재고는 단 3대  ▸ 간접의문문"},{"no":"16","title":"20대, 언제 와요?","grammar":"간접의문문","w":[["Could you tell me ~?","~를 알려주시겠어요?","Could you tell me + 의문사 + 주어 + 동사"],["I wonder if ~","~인지 궁금합니다","I wonder if / whether + 주어 + 동사"],["Do you know ~?","~를 아세요?","Do you know + 의문사 + 주어 + 동사"],["I'd like to know ~","~를 알고 싶습니다","I'd like to know + 의문사 / if + 주어 + 동사"]],"refs":["①④","③","②","③④"],"panels":[{"label":"월요일 · 원장실","lines":[{"s":"D","en":"{0:Could you tell me} when the 20 units will arrive?","ko":"20대가 언제 도착하는지 알려 주실래요?"},{"s":"A","en":"Let me check with Seoul.","ko":"서울에 확인해 볼게요."}]},{"label":"월요일 · 본사 창고","lines":[{"s":"A","en":"{2:Do you know} how many units are in stock?","ko":"재고가 몇 대인지 아세요?"},{"s":"P","en":"Exactly three.","ko":"정확히 세 대."}]},{"label":"월요일 · 본사 화상통화","lines":[{"s":"A","en":"{1:I wonder if} the factory could add a night shift.","ko":"공장이 야간 근무를 추가할 수 있을지 궁금합니다."},{"s":"K","en":"{3:I'd like to know} who will pay for it.","ko":"그 비용은 누가 내는지 알고 싶군."}]},{"label":"화요일 · 원장실","lines":[{"s":"D","en":"{3:I'd like to know} why you look so tired.","ko":"왜 그렇게 피곤해 보이는지 알고 싶네요."},{"s":"A","en":"{0:Could you tell me} if the coffee here is free?","ko":"여기 커피가 무료인지 알려 주실래요?"}]}],"red":[["","Could you tell me when will it arrive?","Could you tell me when it will arrive?","","간접의문문은 주어 + 동사"],["","Do you know where is the office?","Do you know where the office is?","",null],["","I wonder did you get my email.","I wonder if you got my email.","","yes/no 질문은 if / whether"]],"mission":{"who":"Dana","time":"17:20","msg":"Do you know when the training will start?","ctx":"상황: 교육 시작일은 아직 미정. 본사에 물어봐야 한다. 교육 장소도 확인 필요.","qs":["Could you tell me when the training ______? (start)","I wonder ______ Jun is available next week. [[(yes/no)]]","Do you know where the training room ______? (be)"],"ans":["starts (will start)","if (whether)","is"],"acc":[["starts","will start"],["if","whether"],["is"]]},"next":"EP.17 — 서울·알마티 운명의 3자 회의  ▸ 회의 표현"},{"no":"17","title":"운명의 3자 회의","grammar":"회의 표현","w":[["Let's start with ~","시작하기","Let's start with + 안건"],["I'd like to add ~","의견 덧붙이기","I'd like to add that + 문장"],["Could you clarify ~?","확인·명확히 하기","Could you clarify + 명사 / what ~"],["To sum up, ~","정리하기","To sum up, + 결론"]],"refs":["①","②","③","④"],"panels":[{"label":"수요일 10:00 · 회의 시작","lines":[{"s":"A","en":"{0:Let's start with} the delivery schedule.","ko":"납품 일정부터 시작하겠습니다."},{"s":"D","en":"Good. My favorite topic.","ko":"좋아요. 제가 제일 좋아하는 주제죠."}]},{"label":"수요일 10:10 · 본사 발언","lines":[{"s":"K","en":"{1:I'd like to add} that we can ship ten units in December.","ko":"12월에 10대 선적 가능하다는 점을 덧붙이겠네."},{"s":"D","en":"Only ten?","ko":"10대만요?"}]},{"label":"수요일 10:20 · 확인","lines":[{"s":"D","en":"{2:Could you clarify} when the other ten will arrive?","ko":"나머지 10대가 언제 오는지 명확히 해 주실래요?"},{"s":"P","en":"Mid-February. Probably.","ko":"2월 중순이요. 아마도."}]},{"label":"수요일 10:40 · 정리","lines":[{"s":"A","en":"{3:To sum up}, ten in December and ten in February.","ko":"정리하면, 12월 10대, 2월 10대입니다."},{"s":"D","en":"And no more \"probably\".","ko":"그리고 '아마도'는 이제 그만."}]}],"red":[["","Can you explain me the terms?","Can you explain the terms to me?","","explain + 내용 + to 사람"],["","To summary, we agree.","To sum up, we agree.","","To summarize도 가능"],["","Let's discuss about the price.","Let's discuss the price.","","discuss 뒤에 about 없음"]],"mission":{"who":"Dana","time":"09:58","msg":"Shall we get started?","ctx":"상황: 네가 회의 진행자. 결제 조건부터 시작, Dana가 말한 'net 60'의 의미 확인, 마지막에 정리.","qs":["Let's start ______ the payment terms.","Could you ______ what \"net 60\" means here?","To ______ up, payment is due in 60 days."],"ans":["with","clarify","sum"],"acc":[["with"],["clarify"],["sum"]]},"next":"EP.18 — Viktor의 마지막 반격  ▸ 동의와 반대"},{"no":"18","title":"Viktor의 반격","grammar":"동의와 반대","w":[["I agree","동의합니다","I agree with + 사람 / that + 문장"],["That makes sense","일리가 있네요","That makes sense. / It makes sense to ~"],["I see your point, but","말씀은 이해하지만","I see your point, but + 반대 이유"],["I'm not sure about that","글쎄요 (부드러운 반대)","I'm not sure about + 명사 / that"]],"refs":["④","③","②","①"],"panels":[{"label":"목요일 · 원장실","lines":[{"s":"V","en":"Cancel the other ten. I can deliver tomorrow, 20% cheaper.","ko":"나머지 10대 취소하세요. 내일 납품, 20% 싸게."},{"s":"D","en":"{3:I'm not sure about that}.","ko":"글쎄요."}]},{"label":"목요일 · 긴급 미팅","lines":[{"s":"D","en":"Viktor says your delivery is too slow.","ko":"Viktor 말로는 당신 납기가 너무 느리대요."},{"s":"A","en":"{2:I see your point, but} his units break every month.","ko":"무슨 말인지 알지만, 그쪽 장비는 매달 고장 납니다."}]},{"label":"목요일 · 대안","lines":[{"s":"A","en":"What if we lend you two demo units until February?","ko":"2월까지 데모 장비 2대를 빌려드리면 어떨까요?"},{"s":"D","en":"{1:That makes sense}.","ko":"일리가 있네요."}]},{"label":"금요일 · 결론","lines":[{"s":"D","en":"Sorry, Viktor. {0:I agree} with Artyom.","ko":"미안해요 Viktor. 저는 Artyom 의견에 동의해요."},{"s":"V","en":"You'll regret this!","ko":"후회하게 될 겁니다!"}]}],"red":[["","I am agree with you.","I agree with you.","","agree는 동사 → am 불필요"],["","It makes a sense.","It makes sense.","","sense 앞에 a 없음"],["","I'm not agree.","I don't agree.","",null]],"mission":{"who":"Dana","time":"12:40","msg":"Viktor says we should switch suppliers. What do you think?","ctx":"상황: 먼저 공감하고, 품질 문제를 지적하고, 서비스 기록을 비교하자고 제안하자.","qs":["I see your ______, but quality matters more.","I'm not ______ about his offer. His units break often.","That ______ sense. Let's compare the service records."],"ans":["point","sure","makes"],"acc":[["point"],["sure"],["makes"]]},"next":"EP.19 — 데모 장비 긴급 공수, 그런데 그날은 Jun의 생일  ▸ 사역동사"},{"no":"19","title":"데모 장비를 보내라","grammar":"사역동사","w":[["have + 물건 + p.p.","(남에게) ~을 받게 하다","have + 목적어 + p.p."],["get + 사람 + to","~가 ~하도록 하다 (부탁)","get + 사람 + to + 동사원형"],["make + 사람 + 동사","~하게 만들다 (강제)","make + 목적어 + 동사원형"],["let + 사람 + 동사","~하게 해 주다 (허락)","let + 목적어 + 동사원형"]],"refs":["①","②","③","③④"],"panels":[{"label":"금요일 · 본사 통화","lines":[{"s":"A","en":"Can we {0:have} two demo units {0:shipped} by air?","ko":"데모 장비 2대 항공으로 보내 줄 수 있을까요?"},{"s":"P","en":"By air? Expensive. But OK.","ko":"항공? 비싼데. 그래도 오케이."}]},{"label":"금요일 · 일정 지시","lines":[{"s":"A","en":"I'll {1:get} Jun {1:to install} them on Monday.","ko":"월요일에 Jun이 설치하도록 할게요."},{"s":"J","en":"Monday? That's my birthday.","ko":"월요일요? 제 생일인데요."}]},{"label":"월요일 · 설치 현장","lines":[{"s":"D","en":"The new rule {2:makes} us {2:test} every unit twice.","ko":"새 규정 때문에 모든 장비를 두 번 검사해야 해요."},{"s":"J","en":"Then {3:let} me {3:start} now.","ko":"그럼 지금 시작하게 해 주세요."}]},{"label":"월요일 · 생일 저녁","lines":[{"s":"D","en":"Happy birthday, Jun! {3:Let} us {3:buy} you dinner.","ko":"생일 축하해요 Jun! 저녁은 저희가 살게요."},{"s":"J","en":"Best birthday ever.","ko":"최고의 생일이에요."}]}],"red":[["","Let me to know your opinion.","Let me know your opinion.","","let 뒤에 to 없음"],["","We will have the unit replace.","We will have the unit replaced.","","물건이 '받는' 쪽 → p.p."],["","I will get him call you.","I will get him to call you.","","get + 사람 + to"]],"mission":{"who":"Dana","time":"10:00","msg":"Can your engineer call our IT manager today?","ctx":"상황: Jun이 오늘 전화하도록 하겠다. 연락 없으면 알려 달라고 하자. 장비 점검은 금요일에 받도록 처리.","qs":["I'll get Jun ______ call him today.","______ me know if he doesn't call.","We'll have the units ______ (check) on Friday."],"ans":["to","Let","checked"],"acc":[["to"],["Let"],["checked"]]},"next":"EP.20 시즌 피날레 — 새벽 2시의 전화  ▸ 전화 영어"},{"no":"20","title":"새벽 2시의 전화","grammar":"전화 영어","w":[["I'm calling about ~","~ 건으로 전화드렸습니다","I'm calling about + 명사"],["Could I speak to ~?","~와 통화할 수 있을까요?","Could I speak to + 사람?"],["hold on","잠시 기다리다","Could you hold on a moment?"],["put you through","연결해 드리다","I'll put you through (to + 사람)"]],"refs":["①④","③","②","③"],"panels":[{"label":"토요일 02:00 · 호텔","lines":[{"s":"A","en":"Hello? This is Artyom...","ko":"여보세요? 아르툠입니다..."},{"s":"D","en":"{0:I'm calling about} big news. Wake up!","ko":"큰 소식 때문에 전화했어요. 일어나요!"}]},{"label":"토요일 02:01 · 원장실","lines":[{"s":"D","en":"The Ministry wants 50 X-rays for regional hospitals.","ko":"보건부가 지방 병원용 X-ray 50대를 원해요."},{"s":"A","en":"{2:Hold on}... did you say FIFTY?","ko":"잠깐만요... 50대라고요?"}]},{"label":"토요일 06:05 · 서울 (시차 +4)","lines":[{"s":"A","en":"{1:Could I speak to} Mr. Kang? It's urgent.","ko":"강 전무님과 통화할 수 있을까요? 급합니다."},{"s":"P","en":"He's asleep. I'll {3:put you through} anyway.","ko":"주무시는데. 그래도 연결해 줄게요."}]},{"label":"토요일 06:07 · 전무님 댁","lines":[{"s":"K","en":"Artyom... it's six in the morning.","ko":"아르툠... 아침 6시일세."},{"s":"A","en":"Sir, {0:I'm calling about} fifty X-rays.","ko":"전무님, X-ray 50대 건으로 전화드렸습니다."}]}],"red":[["","I am Lee.","This is Lee speaking.","","전화에서는 This is ~"],["","Please wait.","Could you hold on a moment, please?","","명령조보다 정중하게"],["","I will call you again back.","I'll call you back.","",null]],"mission":{"who":"보건부 대표번호","time":"09:00","msg":"Good morning, Ministry of Health. How can I help you?","ctx":"상황: 네가 보건부에 전화를 건다. 입찰 건이고, 담당자 Mr. Nurlan과 통화하고 싶다.","qs":["Hello, this ______ Artyom from SG Healthcare.","I'm calling ______ the X-ray tender.","Could I ______ to Mr. Nurlan, please?"],"ans":["is","about","speak"],"acc":[["is"],["about"],["speak"]]},"next":"시즌 2 예고 — 50대 입찰 전쟁, Viktor의 역습  ▸ B2 레벨로 돌아옵니다"}],"pdf":"english-drama-b1-season1.pdf","precacheCount":92};
+const VERSION = "bae63b6975";
+const SLOT = ["var(--s0)","var(--s1)","var(--s2)","var(--s3)"];
+const SLOTHEX = ["#0E6672","#2856A3","#B4501A","#6B3FA0"];
+const IC = {
+ back:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>',
+ gear:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>',
+ sound:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg>',
+ play:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg>',
+ stop:'<svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>',
+ eye:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg>',
+ key:'<svg viewBox="0 0 24 24" fill="none" stroke="var(--s0)" stroke-width="1.8" stroke-linecap="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M7.5 9.5h9M7.5 14.5h6"/></svg>',
+ warn:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3l9.5 17h-19z"/><path d="M12 10v4.5M12 17v.5"/></svg>',
+ pencil:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 20l1-4.5L16 4.5l3.5 3.5L8.5 19z"/><path d="M14 7l3.5 3.5"/></svg>',
+ check:'<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
+ pdf:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 14h8M8 17h5"/></svg>',
+ home:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>'
+};
+/* storage */
+const store = {
+ get(k, d){try{const v=localStorage.getItem("ed1."+k);return v===null?d:JSON.parse(v)}catch(e){return d}},
+ set(k, v){try{localStorage.setItem("ed1."+k, JSON.stringify(v))}catch(e){}}
+};
+let S = {done: store.get("done", []), last: store.get("last", null), ko: store.get("ko", true), rate: store.get("rate", 0.9), answers: store.get("answers", {})};
+const save = () => { for (const k of ["done","last","ko","rate","answers"]) store.set(k, S[k]); };
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const hl = s => esc(s).replace(/\{(\d):([^}]+)\}/g, (m, i, t) => `<span class="hl" style="color:${SLOT[i]};background:${SLOTHEX[i]}1F">${t}</span>`);
+const md = s => esc(s).replace(/\[\[(.+?)\]\]/g, '<span class="mu">$1</span>');
+const plain = s => s.replace(/\{\d:([^}]+)\}/g, "$1");
+const dot = (k, sz) => { const c = DATA.cast[k]; return c ? `<span class="dot" style="background:${c[1]}${sz ? `;width:${sz}px;height:${sz}px` : ""}">${k}</span>` : ""; };
+const $ = s => document.querySelector(s);
+const app = $("#app");
+function toast(t){const e=$("#toast");e.textContent=t;e.classList.add("show");clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove("show"),1800)}
+
+/* speech */
+let voice = null, speaking = null;
+function pickVoice(){const vs=speechSynthesis.getVoices();voice=vs.find(v=>/en[-_]US/i.test(v.lang)&&/Samantha|Google US|Aria|Jenny|Alex/i.test(v.name))||vs.find(v=>/en[-_]US/i.test(v.lang))||vs.find(v=>/^en/i.test(v.lang))||null}
+if ("speechSynthesis" in window){pickVoice();speechSynthesis.onvoiceschanged=pickVoice}
+function stopSpeak(){if(!("speechSynthesis" in window))return;speechSynthesis.cancel();document.querySelectorAll(".say.playing").forEach(b=>b.classList.remove("playing"));const pa=$("#playAll");if(pa){pa.classList.remove("on");pa.innerHTML=IC.play+"전체 듣기"};speaking=null}
+function speak(text, btn){
+ return new Promise(res=>{
+  if(!("speechSynthesis" in window)){toast("이 기기에서는 읽어주기를 지원하지 않습니다");return res()}
+  const u=new SpeechSynthesisUtterance(text.replace(/\.\.\./g,", "));u.lang="en-US";if(voice)u.voice=voice;u.rate=S.rate;
+  if(btn)btn.classList.add("playing");
+  u.onend=u.onerror=()=>{if(btn)btn.classList.remove("playing");res()};
+  speechSynthesis.speak(u);
+ });
+}
+async function playAll(ep){
+ const pa=$("#playAll");
+ if(speaking){stopSpeak();return}
+ speaking=ep.no;pa.classList.add("on");pa.innerHTML=IC.stop+"멈추기";
+ const btns=[...document.querySelectorAll(".say")];
+ for(const b of btns){if(speaking!==ep.no)break;b.closest(".panel").scrollIntoView({behavior:"smooth",block:"center"});await speak(b.dataset.t,b);await new Promise(r=>setTimeout(r,250))}
+ stopSpeak();
+}
+
+/* answer check */
+const norm = s => s.toLowerCase().replace(/[’‘]/g,"'").replace(/[.\s]+$/,"").replace(/\s+/g," ").trim();
+function grade(ep, show){
+ const inputs=[...document.querySelectorAll(".q input")];let ok=0;
+ inputs.forEach((inp,i)=>{
+  const acc=ep.mission.acc[i]||[];const v=norm(inp.value);const good=v&&acc.some(a=>norm(a)===v);
+  inp.classList.toggle("ok",good);inp.classList.toggle("no",!good&&(!!v||show));if(good)ok++;
+  const sol=inp.closest(".q").querySelector(".sol");sol.style.display=(show||!good&&v)?"block":"none";
+ });
+ S.answers[ep.no]=inputs.map(i=>i.value);save();
+ const sc=$("#score");sc.textContent=show?"정답을 확인하고 소리 내어 읽어 보세요.":`${ok} / ${inputs.length} 정답`+(ok===inputs.length?" · 완벽해요!":"");
+ if(ok===inputs.length&&!S.done.includes(ep.no)){markDone(ep.no,true)}
+}
+function markDone(no, on){
+ S.done=S.done.filter(x=>x!==no);if(on)S.done.push(no);save();
+ const b=$("#doneBtn");if(b){b.classList.toggle("is",on);b.innerHTML=on?IC.check.replace('stroke="#fff"','stroke="currentColor"')+"완료한 화입니다":"이 화 완료로 표시";}
+ if(on)toast(`EP.${no} 완료 · ${S.done.length}/20`);
+}
+
+/* views */
+function home(){
+ stopSpeak();
+ const total=DATA.eps.length,d=S.done.length,pct=Math.round(d/total*100);
+ const next=S.last||DATA.eps.find(e=>!S.done.includes(e.no))?.no||"01";
+ const nextEp=DATA.eps.find(e=>e.no===next);
+ app.innerHTML=`
+ <header class="hero"><div class="wrap">
+  <div class="eyebrow">BUSINESS ENGLISH DRAMA · B1</div>
+  <h1>시즌 1<br>알마티 CT 납품 대작전</h1>
+  <p>4컷 만화로 읽는 비즈니스 영어 20화 · 하루 1화 15분</p>
+  <div class="cover">${["01_p1","01_p2","01_p3","01_p4"].map(p=>`<img src="img/ep${p}.webp" alt="">`).join("")}</div>
+  <div class="prog"><div class="track"><i style="width:${pct}%"></i></div><span>${d}/${total}화 완료</span></div>
+  <button class="cta" data-go="${next}">${IC.play.replace('fill="currentColor"','fill="#fff" width="18" height="18"')}EP.${next} ${esc(nextEp.title)} ${S.last?"이어 읽기":"시작하기"}</button>
+ </div></header>
+ <main class="wrap">
+  <div class="sec">등장인물</div>
+  <div class="cast">${Object.entries(DATA.cast).map(([k,c])=>`<div class="cm">${dot(k)}<b>${esc(c[0])}</b><span class="r">${esc(c[2])}</span></div>`).join("")}</div>
+  <div class="sec">에피소드</div>
+  <div class="eps">${DATA.eps.map(e=>`<button class="ep" data-go="${e.no}"><img src="img/ep${e.no}_p1.webp" alt="" loading="lazy"><div class="meta"><div class="no">EP.${e.no}</div><div class="tt">${esc(e.title)}</div><div class="gr">${esc(e.grammar)} · ${e.w.map(w=>esc(w[0])).join(" · ")}</div></div><span class="chk ${S.done.includes(e.no)?"on":""}">${IC.check}</span></button>`).join("")}</div>
+  <div class="foot">
+   <a class="lnk" href="${DATA.pdf}" target="_blank" rel="noopener">${IC.pdf}<span>인쇄용 PDF (A4 가로 20장)</span></a>
+   <button class="lnk" id="openSet">${IC.gear}<span>읽기 설정</span></button>
+   <div class="status" id="offline">오프라인 준비 상태 확인 중…</div>
+  </div>
+ </main>`;
+ app.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>location.hash="#/ep/"+b.dataset.go);
+ $("#openSet").onclick=openSheet;
+ checkOffline();
+ window.scrollTo(0,0);
+}
+function reader(no){
+ stopSpeak();
+ const ep=DATA.eps.find(e=>e.no===no);if(!ep){location.hash="";return}
+ S.last=no;save();
+ const idx=DATA.eps.indexOf(ep),prev=DATA.eps[idx-1],nxt=DATA.eps[idx+1];
+ const done=S.done.includes(no);
+ const saved=S.answers[no]||[];
+ let qi=0;
+ const qhtml=ep.mission.qs.map((q,i)=>{const parts=md(q).split("______");
+   return `<div class="q"><b>${i+1}.</b> ${parts.map((p,j)=>j<parts.length-1?p+`<input autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="${i+1}번 빈칸" value="${esc(saved[qi++]||"")}">`:p).join("")}<span class="sol" style="display:none">정답: ${esc(ep.mission.ans[i]||"")}</span></div>`}).join("");
+ app.innerHTML=`
+ <div class="bar"><div class="wrap">
+  <button class="ib" id="back" aria-label="목록으로">${IC.back}</button>
+  <div class="t">EP.${no} ${esc(ep.title)}</div>
+  <button class="ib" id="openSet" aria-label="읽기 설정">${IC.gear}</button>
+ </div><div class="pg"><i id="pgbar"></i></div></div>
+ <main class="wrap ${S.ko?"":"hideko"}" id="rd">
+  <div class="head"><span class="no">EP.${no}</span><h2>${esc(ep.title)}</h2><div class="gr">오늘의 무기 · ${esc(ep.grammar)}</div>
+   <div class="chips">${ep.w.map((w,i)=>`<span class="chip" style="color:${SLOT[i]};background:${SLOTHEX[i]}1F">${esc(w[0])}</span>`).join("")}</div></div>
+  <div class="tools">
+   <button class="tbtn" id="playAll">${IC.play}전체 듣기</button>
+   <button class="tbtn ${S.ko?"on":""}" id="tKo">${IC.eye}한글 번역</button>
+  </div>
+  ${ep.panels.map((p,i)=>`<section class="panel"><div class="plabel">${"①②③④"[i]} ${esc(p.label)}</div><img class="pimg" src="img/ep${no}_p${i+1}.webp" alt="${esc(p.label)} 장면">
+   <div class="dlg">${p.lines.map(l=>`<div class="line">${dot(l.s)}<div class="bub"><div class="en">${hl(l.en)}</div><div class="ko">${esc(l.ko)}</div></div><button class="say" data-t="${esc(plain(l.en))}" aria-label="듣기">${IC.sound}</button></div>`).join("")}</div></section>`).join("")}
+  <section class="card"><h3>${IC.key}오늘의 무기 4개</h3>
+   ${ep.w.map((w,i)=>`<div class="wr"><div class="wtop"><b style="color:${SLOT[i]}">${esc(w[0])}</b><span>${ep.refs[i]?"장면 "+ep.refs[i]:""}</span></div><div class="wsub">${esc(w[1])} · <span style="color:${SLOT[i]};font-weight:600">${esc(w[2])}</span></div></div>`).join("")}
+  </section>
+  <section class="card red"><h3>${IC.warn}Artyom의 메일, 빨간펜 첨삭</h3>
+   <div class="mail"><div class="mhead">From: Artyom · 보내기 전에 잡은 실수</div>
+   ${ep.red.map(r=>`<div class="ml">${esc(r[0])} <s>${esc(r[1])}</s> <span class="fix">${esc(r[2])}</span> ${esc(r[3])}${r[4]?`<span class="why">✎ ${esc(r[4])}</span>`:""}</div>`).join("")}</div>
+  </section>
+  <section class="card mission"><h3>${IC.pencil}미션: 네가 Artyom이라면?</h3>
+   <div class="wa"><div class="who">${esc(ep.mission.who)} · ${esc(ep.mission.time)}</div>${hl(ep.mission.msg)}</div>
+   <div class="ctx">${esc(ep.mission.ctx)}</div>
+   ${qhtml}
+   <div class="row2"><button class="btn pri" id="grade">채점하기</button><button class="btn sec2" id="reveal">정답 보기</button></div>
+   <div class="score" id="score"></div>
+  </section>
+  <button class="done ${done?"is":""}" id="doneBtn"></button>
+  ${nxt?`<button class="teaser" data-go="${nxt.no}"><small>다음 화 예고</small><div>${esc(ep.next)}</div></button>`:`<div class="teaser"><small>시즌 피날레</small><div>${esc(ep.next)}</div></div>`}
+  <div class="nav">
+   ${prev?`<button class="btn sec2" data-go="${prev.no}">${IC.back.replace('stroke-width="2.2"','stroke-width="2.2" width="18" height="18"')}EP.${prev.no}</button>`:""}
+   <button class="btn sec2" id="toHome">${IC.home.replace('stroke-width="2"','stroke-width="2" width="18" height="18"')}목록</button>
+   ${nxt?`<button class="btn pri" data-go="${nxt.no}">EP.${nxt.no} →</button>`:""}
+  </div>
+ </main>`;
+ markDone(no, done); if(!done){}
+ $("#back").onclick=()=>location.hash="";
+ $("#toHome").onclick=()=>location.hash="";
+ $("#openSet").onclick=openSheet;
+ $("#playAll").onclick=()=>playAll(ep);
+ $("#tKo").onclick=()=>{S.ko=!S.ko;save();$("#rd").classList.toggle("hideko",!S.ko);$("#tKo").classList.toggle("on",S.ko);syncSheet()};
+ app.querySelectorAll(".say").forEach(b=>b.onclick=e=>{e.stopPropagation();stopSpeak();speak(b.dataset.t,b)});
+ app.querySelectorAll(".bub").forEach(b=>b.onclick=()=>b.classList.toggle("peek"));
+ app.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>location.hash="#/ep/"+b.dataset.go);
+ $("#grade").onclick=()=>grade(ep,false);
+ $("#reveal").onclick=()=>grade(ep,true);
+ app.querySelectorAll(".q input").forEach(inp=>inp.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();grade(ep,false)}}));
+ $("#doneBtn").onclick=()=>markDone(no,!S.done.includes(no));
+ // done button label without toast on load
+ const b=$("#doneBtn");b.classList.toggle("is",done);b.innerHTML=done?IC.check.replace('stroke="#fff"','stroke="currentColor" width="20" height="20"')+"완료한 화입니다":"이 화 완료로 표시";
+ const y=store.get("pos."+no,0);window.scrollTo(0,y);
+}
+/* settings sheet */
+function syncSheet(){$("#swKo").classList.toggle("on",S.ko);document.querySelectorAll("#segRate button").forEach(b=>b.classList.toggle("on",+b.dataset.r===S.rate))}
+function openSheet(){syncSheet();$("#sheet").classList.add("open")}
+$("#closeSheet").onclick=()=>$("#sheet").classList.remove("open");
+$("#sheet").onclick=e=>{if(e.target.id==="sheet")$("#sheet").classList.remove("open")};
+$("#swKo").onclick=()=>{S.ko=!S.ko;save();syncSheet();const rd=$("#rd");if(rd){rd.classList.toggle("hideko",!S.ko);$("#tKo").classList.toggle("on",S.ko)}};
+document.querySelectorAll("#segRate button").forEach(b=>b.onclick=()=>{S.rate=+b.dataset.r;save();syncSheet();speak("Let's start with the delivery schedule.")});
+$("#reset").onclick=()=>{if(!confirm("완료 표시와 미션 답안을 모두 지울까요?"))return;S.done=[];S.answers={};S.last=null;save();$("#sheet").classList.remove("open");route();toast("진도를 초기화했습니다")};
+
+/* scroll memory + progress */
+let st;window.addEventListener("scroll",()=>{const m=location.hash.match(/#\/ep\/(\d+)/);const bar=$("#pgbar");
+ if(bar){const h=document.documentElement.scrollHeight-innerHeight;bar.style.width=(h>0?Math.min(100,scrollY/h*100):0)+"%"}
+ if(m){clearTimeout(st);st=setTimeout(()=>store.set("pos."+m[1],Math.round(scrollY)),200)}},{passive:true});
+
+/* router */
+function route(){const m=location.hash.match(/#\/ep\/(\d+)/);if(m)reader(m[1]);else home()}
+window.addEventListener("hashchange",route);
+route();
+
+/* offline */
+async function checkOffline(){
+ const el=$("#offline");if(!el)return;
+ if(!("serviceWorker" in navigator)||!("caches" in window)){el.textContent="이 브라우저는 오프라인 저장을 지원하지 않습니다";return}
+ try{const c=await caches.open("ed1-"+VERSION);const n=(await c.keys()).length;const need=DATA.precacheCount;
+  el.textContent=n>=need?"✓ 오프라인 사용 준비 완료 · 인터넷 없이도 열립니다":`오프라인 저장 중… ${n}/${need}`;
+  if(n<need)setTimeout(checkOffline,1500)}catch(e){el.textContent=""}
+}
+if("serviceWorker" in navigator){
+ window.addEventListener("load",()=>{navigator.serviceWorker.register("sw.js").then(r=>{const ask=()=>r.active&&r.active.postMessage("ensure");ask();navigator.serviceWorker.ready.then(ask)}).catch(()=>{})});
+ let had=!!navigator.serviceWorker.controller,rl=false;
+ navigator.serviceWorker.addEventListener("controllerchange",()=>{if(had&&!rl){rl=true;toast("새 버전으로 업데이트되었습니다")}had=true});
+}
+</script>
+</body>
+</html>
