@@ -1,5 +1,5 @@
-const CACHE = 'cg-128d2d9f18';
-const VCACHE = 'cg-video-v1';
+const CACHE = 'cg-7f48acac42';
+const VCACHE = 'cg-video-6256e62a';
 const PRECACHE = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "apple-touch-icon.png", "content.enc"];
 
 self.addEventListener('install', e => {
