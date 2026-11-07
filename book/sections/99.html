@@ -5,10 +5,13 @@
 <dt>Агент (agent)</dt><dd>Режим работы, в котором Claude сам планирует шаги, пользуется инструментами (поиск, файлы, браузер, коннекторы) и проверяет результат, пока задача не выполнена. Раздел 9.</dd>
 <dt>Артефакт (artifact)</dt><dd>Отдельный результат в окне рядом с чатом: документ, веб-страница, набор слайдов, небольшое приложение. Его можно править, скачивать и показывать коллегам.</dd>
 <dt>Задача по расписанию (Scheduled task)</dt><dd>Поручение, которое Claude выполняет сам по графику: каждый день, по будням или раз в неделю. Например, бриф по почте к 8:30. Разделы 2 и 9.</dd>
+<dt>Дашборд (Dashboard)</dt><dd>Тип артефакта (бета, платные тарифы): живые графики по данным из подключённых источников; у каждого графика видно время обновления и запрос, на котором построено число. Раздел 5.</dd>
+<dt>Инкогнито-чат (Incognito chat)</dt><dd>Разговор, который не попадает в историю и память и не используется для обучения; хранится 30 дней. Включается значком-«призраком» в новом чате. Раздел 7.</dd>
 <dt>Изолированная среда (sandbox)</dt><dd>Отдельная виртуальная машина, в которой Claude выполняет код и работает с файлами, не затрагивая ваш компьютер.</dd>
 <dt>Коннектор (connector)</dt><dd>Подключение Claude к внешнему сервису: Gmail, Google Calendar, Google Drive, Notion, DeepL, Booking.com и другим. Включается в <em>Customize → Connectors</em>. Раздел 4.</dd>
 <dt>Контекстное окно (context window)</dt><dd>Объём текста, который модель держит в голове в одном диалоге. У актуальных моделей — 1 млн токенов. Рис. 1.8.</dd>
 <dt>Навык (skill)</dt><dd>Папка с инструкциями (файл SKILL.md, шаблоны, справочники), которую Claude подключает сам, когда задача ей соответствует. Раздел 3.</dd>
+<dt>Память (Memory)</dt><dd>Записи о вас и вашей работе, которые Claude ведёт по темам (Topics) и использует в следующих разговорах. Просматривается и правится в Settings > Your Claude. Раздел 7.</dd>
 <dt>Плагин (plugin)</dt><dd>Готовый набор навыков, коннекторов и команд, который устанавливается одним действием.</dd>
 <dt>Проект (Project)</dt><dd>Рабочее пространство в claude.ai с собственными файлами и инструкциями. Подходит для долгой работы над одной темой, например над проектом SMC.</dd>
 <dt>Промпт (prompt)</dt><dd>Запрос или поручение, которое вы пишете Claude. Хороший промпт описывает цель, контекст, формат результата и ограничения.</dd>
@@ -20,10 +23,15 @@
 <dt>API</dt><dd>Программный доступ к моделям Claude с оплатой за токены. Нужен, если компания встраивает Claude в собственные системы.</dd>
 <dt>CLAUDE.md</dt><dd>Файл с постоянными инструкциями для Claude Code в папке проекта: правила, структура данных, формат отчётов. Рис. 8.4.</dd>
 <dt>Claude Code</dt><dd>Инструмент Claude для работы с файлами, данными и программами: в терминале, приложении Claude Desktop и в браузере. Раздел 8.</dd>
+<dt>Claude Docs</dt><dd>Живой документ в Claude: вкладки, совместная правка в реальном времени, комментарии с @Claude, экспорт в Word, PDF, Markdown и Google Docs. Раздел 5.</dd>
+<dt>Claude Tag</dt><dd>Claude в Slack для Team и Enterprise (бета): сотрудник отмечает @Claude в канале и поручает задачу. Заменяет прежнее приложение Claude in Slack. Раздел 6.</dd>
 <dt>Claude in Chrome</dt><dd>Расширение для браузера Chrome, с которым Claude открывает сайты, заполняет формы и собирает данные от вашего имени. Рис. 9.4.</dd>
 <dt>Cowork</dt><dd>Режим, в котором Claude выполняет длинные многошаговые поручения с файлами и папками, отчитываясь о ходе работы. Раздел 2.</dd>
+<dt>Computer use</dt><dd>Управление экраном компьютера (бета, macOS и Windows, Pro и выше): Claude открывает разрешённые приложения, кликает и печатает. Раздел 6.</dd>
+<dt>Instructions for Claude</dt><dd>Личные инструкции, общие для всех разговоров аккаунта: кто вы, как писать, в каком формате отвечать. Раздел 7.</dd>
 <dt>MCP (Model Context Protocol)</dt><dd>Открытый стандарт, по которому Claude подключается к внешним сервисам. На нём построены коннекторы.</dd>
 <dt>Prompt injection</dt><dd>Скрытая инструкция во входящем письме, документе или на сайте, которая пытается заставить Claude сделать то, чего вы не просили. Главный риск при работе с коннекторами и агентами.</dd>
+<dt>Remote Control</dt><dd>Функция Claude Code: локальную сессию на компьютере можно продолжить с телефона или claude.ai/code; файлы остаются на компьютере. Разделы 6 и 8.</dd>
 <dt>Research</dt><dd>Режим исследования: Claude сам проводит десятки поисков, читает источники и готовит отчёт со ссылками.</dd>
 </dl>
 </section>
@@ -48,7 +56,7 @@
 
 <section class="chapter appendix" id="sources" data-num="Г" data-title="Источники">
 <h2>Источники</h2>
-<p class="lead">Факты в книге сверены с официальными материалами Anthropic на 16 октября 2026 года. Если что-то изменилось, эти страницы — первое место для проверки.</p>
+<p class="lead">Факты в разделах 1–4 и 8–10 сверены с официальными материалами Anthropic на 16 октября 2026 года, в разделах 5–7 — на 7 ноября 2026 года. Если что-то изменилось, эти страницы — первое место для проверки.</p>
 <table class="t">
 <thead><tr><th>Тема</th><th>Где проверять</th></tr></thead>
 <tbody>
@@ -61,6 +69,11 @@
 <tr><td>Claude Code</td><td>code.claude.com/docs (overview, permission-modes, memory, settings, claude-code-on-the-web)</td></tr>
 <tr><td>Агенты, Claude in Chrome, Research</td><td>support.claude.com «Get started with Claude in Chrome», «Use Research», platform.claude.com/docs/en/managed-agents</td></tr>
 <tr><td>Презентации и файлы</td><td>support.claude.com «Create and edit files», «What are artifacts», claude.com/docs/office-agents/powerpoint</td></tr>
+<tr><td>Артефакты, Claude Docs, дашборды, общий доступ</td><td>support.claude.com «What are artifacts and how do I use them», «Get started with Claude Docs», «Share artifacts»; claude.com/resources/articles/dashboards-and-motion; code.claude.com/docs/en/artifacts</td></tr>
+<tr><td>Голос, мобильное приложение, десктоп</td><td>support.claude.com «Use voice mode», «Use Claude with iOS apps», «Use Claude with Android apps», «Use the built-in browser in Claude Cowork», «Let Claude use your computer in Cowork», «Use Claude Cowork on web, desktop, and mobile»; code.claude.com/docs/en/remote-control</td></tr>
+<tr><td>Claude в Microsoft 365 и Google Workspace, Slack</td><td>claude.com/docs/office-agents (overview, excel, powerpoint, word, outlook); support.claude.com «Use Claude in Google Docs, Sheets, and Slides»; claude.com/docs/claude-tag/overview</td></tr>
+<tr><td>Память, проекты, инкогнито, приватность</td><td>support.claude.com «Use Claude's chat search and memory», «Import and export your memory», «What are projects?», «Use incognito chats», «Understanding Claude's personalization features»; privacy.claude.com</td></tr>
+<tr><td>Плагины, история изменений</td><td>support.claude.com «Use plugins in Claude», «Release notes»; claude.com/docs/cowork/changelog</td></tr>
 <tr><td>Безопасность</td><td>support.claude.com «Use Claude Cowork safely», «Using Claude in Chrome safely», privacy.claude.com</td></tr>
 </tbody>
 </table>

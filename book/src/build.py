@@ -12,9 +12,12 @@ DESC = {
  '2': 'Длинные поручения с файлами и папками: разбор документов SMC, отчёты по расписанию',
  '3': 'Навыки с вашими шаблонами писем и отчётов: Claude применяет их сам',
  '4': 'Gmail, Calendar, Google Drive и Sheets, DeepL, Booking.com: подключение и сценарии',
- '5': 'Автоматизация Excel-отчётов и пакетная обработка файлов без программирования',
- '6': 'Агенты, субагенты, Claude in Chrome, Research и задачи по расписанию',
- '7': 'От брифа до готовых слайдов: .pptx, фирменный шаблон, отчёт о запуске SMC',
+ '5': 'Claude Docs, дизайн, дашборды и мини-приложения: живые документы, которые видит команда',
+ '6': 'Голос, телефон, Excel, Word, PowerPoint, Google Workspace, Slack и ваш компьютер',
+ '7': 'Память, проекты, личные инструкции, инкогнито и плагины: Claude, который знает вашу работу',
+ '8': 'Автоматизация Excel-отчётов и пакетная обработка файлов без программирования',
+ '9': 'Агенты, субагенты, Claude in Chrome, Research и задачи по расписанию',
+ '10': 'От брифа до готовых слайдов: .pptx, фирменный шаблон, отчёт о запуске SMC',
 }
 
 def words(s):
@@ -22,7 +25,7 @@ def words(s):
 
 def load_specs():
     sp = {}
-    for f in sorted((ROOT / 'specs').glob('0*.json')):
+    for f in sorted((ROOT / 'specs').glob('[0-9]*.json')):
         for it in json.loads(f.read_text(encoding='utf-8')):
             sp[it['id']] = it
     return sp
@@ -48,7 +51,7 @@ def process(sec, spec, lazy):
         heads.append((hid, re.sub(r'<[^>]+>', '', mo.group(1))))
         return f'<h3 id="{hid}">{mo.group(1)}</h3>'
     sec = re.sub(r'<h3>(.*?)</h3>', h3, sec, flags=re.S)
-    sec = re.sub(r'<figure data-fig="(\d-\d)"></figure>', lambda mo: figure_html(mo.group(1), spec, lazy), sec)
+    sec = re.sub(r'<figure data-fig="(\d+-\d+)"></figure>', lambda mo: figure_html(mo.group(1), spec, lazy), sec)
     w = words(sec)
     nprompt = sec.count('class="prompt"')
     nfig = sec.count('class="fig"')
@@ -73,7 +76,7 @@ LIBRARY = '''<section class="chapter appendix" id="library" data-num="А" data-t
 
 def main():
     spec = load_specs()
-    files = ['00', '01', '02', '03', '04', '05', '06', '07']
+    files = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10']
     out = {}
     for lazy in (True, False):
         chs = [process((ROOT / 'sections' / f'{f}.html').read_text(encoding='utf-8'), spec, lazy) for f in files]
@@ -95,10 +98,10 @@ def main():
         total_f = sum(c['figs'] for c in chs)
         cards = ''.join(f'<a href="#{c["id"]}"><span class="cn">{c["num"]}</span><span class="ct">{html.escape(c["title"])}</span><span class="cd">{DESC[c["num"]]}</span></a>' for c in chs if c['num'] in DESC)
         cover = f'''<header class="cover" id="cover">
-<div class="eyebrow">Практическое руководство · октябрь 2026</div>
+<div class="eyebrow">Практическое руководство · октябрь 2026, дополнено 7 ноября 2026</div>
 <h1>Claude в работе</h1>
-<p class="sub">Модели, Cowork, Skills, коннекторы, Claude Code, агенты и презентации — для руководителя зарубежных продаж: письма партнёрам, отчёты руководству и проект Seoul Medical Center.</p>
-<ul class="facts"><li><b>7</b>разделов</li><li><b>{total_f}</b>иллюстраций</li><li><b>{total_p}</b>готовых промптов</li><li><b>{round(total_w/1000)}</b>тыс. слов</li></ul>
+<p class="sub">Модели, Cowork, Skills, коннекторы, артефакты и Claude Docs, Claude в Office и на телефоне, память, Claude Code, агенты и презентации — для руководителя зарубежных продаж: письма партнёрам, отчёты руководству и проект Seoul Medical Center.</p>
+<ul class="facts"><li><b>{len(DESC)}</b>разделов</li><li><b>{total_f}</b>иллюстраций</li><li><b>{total_p}</b>готовых промптов</li><li><b>{round(total_w/1000)}</b>тыс. слов</li></ul>
 {{{{PDF}}}}
 <div class="chapters">{cards}</div>
 </header>'''
