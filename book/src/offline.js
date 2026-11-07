@@ -9,6 +9,6 @@ async function tick(){const n=await count();st.hidden=false;
   st.classList.remove('ok');st.textContent=navigator.onLine?('Сохраняю для работы без интернета: '+n+' из '+LIST.length):('Без сети сохранено '+n+' из '+LIST.length+' — откройте книгу с интернетом');
   tries++;if(tries%5===0&&navigator.serviceWorker.controller)navigator.serviceWorker.controller.postMessage('ensure');setTimeout(tick,1500);}
 navigator.serviceWorker.ready.then(()=>setTimeout(tick,600));
-pb.addEventListener('click',async()=>{pb.disabled=true;pb.textContent='Сохраняю PDF…';try{const c=await caches.open('cvr-files');await c.add(new URL('Claude-v-rabote.pdf',base).href);pb.textContent='PDF сохранён';setTimeout(()=>{pb.hidden=true},1500);}catch(e){pb.disabled=false;pb.textContent='Не удалось — проверьте интернет и нажмите ещё раз';}});
+pb.addEventListener('click',async()=>{pb.disabled=true;pb.textContent='Сохраняю PDF…';try{const c=await caches.open('cvr-files-10');await c.add(new Request(new URL('Claude-v-rabote.pdf',base).href,{cache:'reload'}));pb.textContent='PDF сохранён';setTimeout(()=>{pb.hidden=true},1500);}catch(e){pb.disabled=false;pb.textContent='Не удалось — проверьте интернет и нажмите ещё раз';}});
 if(navigator.storage&&navigator.storage.persist)navigator.storage.persist().catch(()=>{});
 })();
