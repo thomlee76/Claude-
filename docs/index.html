@@ -15,7 +15,7 @@ try{if(localStorage.getItem("courses:last")==="phrasal"&&!/[?&]icon=/.test(locat
 <script>/* Ярлык: ?icon=books (варианты в icons/alt/) — iOS берёт картинку в момент «На экран Домой» */
 try{var m=location.search.match(/[?&]icon=([a-z]+)/),ic=m?m[1]:localStorage.getItem("verb100.icon");
 if(m)localStorage.setItem("verb100.icon",ic);
-if(/^(books|plus|chat|mono|split|night)$/.test(ic))document.querySelectorAll('link[rel="apple-touch-icon"]').forEach(function(l){l.href="icons/alt/"+ic+"-180.png"});}catch(e){}</script>
+if(/^(book|books|plus|chat|mono|split)$/.test(ic))document.querySelectorAll('link[rel="apple-touch-icon"]').forEach(function(l){l.href="icons/alt/"+ic+"-180.png"});}catch(e){}</script>
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
 <link rel="stylesheet" href="fonts.css">

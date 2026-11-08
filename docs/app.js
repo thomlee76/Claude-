@@ -509,9 +509,9 @@ function settingsBox() {
 }
 
 /* ---------- выбор ярлыка: картинки в icons/alt/, применяет скрипт в <head> index.html ---------- */
-var ICONS = [["book", "icons/icon-180.png"], ["books"], ["plus"], ["chat"], ["mono"], ["split"], ["night"]];
+var ICONS = [["night", "icons/icon-180.png"], ["book"], ["books"], ["plus"], ["chat"], ["mono"], ["split"]];  // night — основной
 var APP_URL = "https://thomlee76.github.io/Claude-/";
-function currentIcon() { try { return localStorage.getItem("verb100.icon") || "book"; } catch (e) { return "book"; } }
+function currentIcon() { try { return localStorage.getItem("verb100.icon") || "night"; } catch (e) { return "night"; } }
 function iconPicker() {
   var cur = currentIcon();
   return '<div><label style="font-size:14px;font-weight:500">' + ui("iconLabel") + '</label>' +
@@ -523,7 +523,7 @@ function iconPicker() {
 }
 function pickIcon(id) {
   try { localStorage.setItem("verb100.icon", id); } catch (e) {}
-  var href = id === "book" ? "icons/icon-180.png" : "icons/alt/" + id + "-180.png";
+  var href = id === "night" ? "icons/icon-180.png" : "icons/alt/" + id + "-180.png";
   document.querySelectorAll('link[rel="apple-touch-icon"]').forEach(function (l) { l.href = href; });
   var url = APP_URL + "?icon=" + id;
   var done = function () { toast(ui("iconCopied")); };

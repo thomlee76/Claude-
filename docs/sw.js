@@ -8,8 +8,8 @@ var CORE = [
   "./", "./index.html", "./app.css", "./app.js", "./data.js", "./fonts.css", "./manifest.webmanifest",
   "./icons/icon-180.png", "./icons/icon-192.png", "./icons/icon-512.png"
 ];
-var OWN = /^(|index\.html|app\.css|app\.js|data\.js|fonts\.css|manifest\.webmanifest|(fonts|icons|images)\/[^\/]+)$/;
-var FRESH = /^(|index\.html|app\.css|app\.js|data\.js|fonts\.css|manifest\.webmanifest)$/;
+var OWN = /^(|index\.html|app\.css|app\.js|data\.js|fonts\.css|manifest\.webmanifest|(fonts|images)\/[^\/]+|icons\/.+)$/;
+var FRESH = /^(|index\.html|app\.css|app\.js|data\.js|fonts\.css|manifest\.webmanifest|icons\/.+)$/;  // иконки тоже: ярлык меняется
 
 self.addEventListener("install", function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) {
