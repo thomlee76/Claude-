@@ -150,7 +150,7 @@ h1,h2,h3,h4{word-break:keep-all}
 .grp button:hover{color:var(--ink)}
 .grp button.on{color:var(--accent); font-weight:600}
 .grp .sep{padding:2px 0}
-.tabs{display:flex; gap:8px; padding:6px 0 10px; overflow-x:auto; scrollbar-width:none; scroll-behavior:smooth}
+.tabs{display:flex; gap:10px; padding:4px 0 10px; overflow-x:auto; scrollbar-width:none; scroll-behavior:smooth}
 .tabs::-webkit-scrollbar{display:none}
 .tab{
   flex:none; width:118px; background:var(--paper); border:1px solid var(--line); border-radius:12px;
@@ -166,7 +166,22 @@ h1,h2,h3,h4{word-break:keep-all}
   background:var(--good); color:#fff; font-size:9px; display:grid; place-items:center;
 }
 .tab.on.done::after{background:#fff; color:var(--accent)}
-.tabsep{flex:none; width:1px; background:var(--line-strong); margin:6px 2px}
+.tgrp{
+  flex:none; display:flex; gap:8px; align-items:stretch; position:relative;
+  padding:16px 8px 8px; margin-top:8px; border:1.5px solid var(--line-strong); border-radius:14px; background:var(--surface2);
+}
+.tgrp.cur{border-color:var(--accent); background:var(--accent-soft)}
+.tlab{
+  position:absolute; left:10px; top:-10px; display:flex; gap:6px; align-items:center;
+  background:var(--slate); color:#fff; font-size:10.5px; font-weight:600; padding:2px 8px; border-radius:6px; white-space:nowrap;
+}
+.tlab .cnt{font-family:var(--mono); font-size:9.5px; opacity:.8; font-weight:400}
+.tgrp.cur .tlab{background:var(--accent)}
+.tgrp .tab{background:var(--surface)}
+.tgrp .tab.on{background:var(--accent)}
+.pagenav a.chg{border-color:var(--accent); background:var(--accent-soft)}
+.pagenav a.chg .dir{color:var(--accent-ink); font-weight:600}
+.pagenav a.chg .tt{color:var(--accent-ink)}
 .strip::after{
   content:''; position:absolute; right:0; top:0; bottom:0; width:48px; pointer-events:none;
   background:linear-gradient(90deg, transparent, color-mix(in srgb, var(--surface) 92%, transparent));
@@ -498,6 +513,7 @@ body{padding-bottom:env(safe-area-inset-bottom)}
 .marks button.on{background:var(--accent-soft);color:var(--accent-ink);font-weight:600}
 .marks .tm{font-family:var(--mono);font-size:12px;color:var(--ink3);width:44px;flex:none;padding-top:2px}
 .toc a.vid .idx{color:var(--accent)}
+.tab.vid .n{font-size:13px;letter-spacing:0}
 .tab.vid .n::before{content:'▶ ';font-size:11px}
 .offline{padding:12px 22px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
 .offline .row{display:flex;gap:8px;align-items:center}
@@ -987,7 +1003,7 @@ function renderLesson(lesson){
   page.innerHTML = '';
   const head = el('div','lesson-head');
   const eb = el('div','eyebrow');
-  eb.appendChild(el('span',null, (lesson.video ? 'Video' : 'Lesson ' + lesson.gno) + ' · ' + lesson.part.gnum + ' ' + lesson.part.short));
+  eb.appendChild(el('span',null, (lesson.video ? 'Video' : 'Lesson ' + lesson.gno) + ' · ' + lesson.part.gnum + ' ' + lesson.part.short + ' · ' + (lesson.part.lessons.indexOf(lesson) + 1) + ' / ' + lesson.part.lessons.length));
   head.appendChild(eb);
   head.appendChild(el('h2',null,lesson.title));
   head.appendChild(el('p','intro',lesson.intro));
@@ -1012,15 +1028,17 @@ function renderLesson(lesson){
   const nav = el('div','pagenav');
   const label = l => (l.video ? '▶ ' : l.gno + '. ') + l.title;
   if(idx > 0){
-    const a = el('a','pv'); a.href = '#' + LESSONS[idx-1].id;
-    a.appendChild(el('div','dir','← 이전'));
-    a.appendChild(el('div','tt', label(LESSONS[idx-1])));
+    const pl = LESSONS[idx-1], ch = pl.part !== lesson.part;
+    const a = el('a','pv' + (ch ? ' chg' : '')); a.href = '#' + pl.id;
+    a.appendChild(el('div','dir', ch ? '← 이전 장' : '← 이전'));
+    a.appendChild(el('div','tt', ch ? pl.part.gnum + ' ' + pl.part.title : label(pl)));
     nav.appendChild(a);
   }
   if(idx < LESSONS.length - 1){
-    const a = el('a','nx'); a.href = '#' + LESSONS[idx+1].id;
-    a.appendChild(el('div','dir','다음 →'));
-    a.appendChild(el('div','tt', label(LESSONS[idx+1])));
+    const nl = LESSONS[idx+1], ch = nl.part !== lesson.part;
+    const a = el('a','nx' + (ch ? ' chg' : '')); a.href = '#' + nl.id;
+    a.appendChild(el('div','dir', ch ? '다음 장 →' : '다음 →'));
+    a.appendChild(el('div','tt', ch ? nl.part.gnum + ' ' + nl.part.title : label(nl)));
     nav.appendChild(a);
   }
   page.appendChild(nav);
@@ -1047,18 +1065,28 @@ function buildTabs(){
   });
   let active = null;
   PARTS.forEach((p, pi) => {
-    if(pi > 0) tabs.appendChild(el('span','tabsep'));
+    const box = el('div','tgrp' + (p === current.part ? ' cur' : ''));
+    const done = p.lessons.filter(l => ST.done[l.id]).length;
+    const lab = el('div','tlab');
+    lab.appendChild(el('span',null, p.gnum + ' ' + p.short));
+    lab.appendChild(el('span','cnt', done + '/' + p.lessons.length));
+    box.appendChild(lab);
     p.lessons.forEach(l => {
       const a = el('a','tab' + (l === current ? ' on' : '') + (ST.done[l.id] ? ' done' : '') + (l.video ? ' vid' : ''));
       a.href = '#' + l.id; a.title = l.title;
-      a.appendChild(el('div','n', l.video ? p.gnum : l.gno));
+      a.appendChild(el('div','n', l.video ? '영상' : l.gno));
       a.appendChild(el('div','t', l.short));
       if(l === current) active = a;
-      tabs.appendChild(a);
+      box.appendChild(a);
     });
+    tabs.appendChild(box);
   });
   if(active){
-    const left = active.offsetLeft - (tabs.clientWidth - active.offsetWidth) / 2;
+    const grp = active.parentElement;
+    const absLeft = active.offsetLeft + grp.offsetLeft;
+    let left = absLeft - (tabs.clientWidth - active.offsetWidth) / 2;
+    // keep the chapter label (group start) visible when the group fits or the active card is near its start
+    if(grp.offsetWidth <= tabs.clientWidth - 16 || active.offsetLeft < tabs.clientWidth * 0.45) left = grp.offsetLeft - 12;
     tabs.scrollTo({left: Math.max(0, left), behavior: 'auto'});
   }
 }
