@@ -20,6 +20,15 @@ for path in sorted(glob.glob(os.path.join(SRC, 'lessons_*.py'))):
             errors.append('DAY %d встречается дважды' % day)
         lessons[day] = body
 
+# Дополнительные примеры: content/src/more_*.py → M = {день: [E(...)×6]}
+more = {}
+for path in sorted(glob.glob(os.path.join(SRC, 'more_*.py'))):
+    mod = importlib.import_module(os.path.basename(path)[:-3])
+    for day, items in mod.M.items():
+        if day in more:
+            errors.append('DAY %d: доп. примеры встречаются дважды' % day)
+        more[day] = items
+
 days = {x['day']: x for x in json.load(
     open(os.path.join(ROOT, 'content/days.json'), encoding='utf-8'))['days']}
 
@@ -52,7 +61,27 @@ for day, b in sorted(lessons.items()):
             if sum(1 for o in q['options'] if o['ok']) != 1:
                 errors.append('%s: у вопроса должен быть ровно один верный вариант' % tag)
 
+def norm(t):
+    return ''.join(ch for ch in t.lower() if ch.isalnum())
+
+for day, items in sorted(more.items()):
+    tag = 'DAY %d (доп.)' % day
+    if day not in lessons:
+        errors.append('%s: нет основного урока' % tag); continue
+    if len(items) != 6:
+        errors.append('%s: %d примеров вместо 6' % (tag, len(items)))
+    seen = {norm(x['en']) for x in lessons[day]['examples'] + lessons[day]['dialogue']}
+    for x in items:
+        for lang in ('en', 'ru', 'ko'):
+            if not x.get(lang):
+                errors.append('%s: пустое поле %s в "%s"' % (tag, lang, x.get('en', '?')))
+        if norm(x['en']) in seen:
+            errors.append('%s: повтор "%s"' % (tag, x['en']))
+        seen.add(norm(x['en']))
+    lessons[day]['more'] = items
+
 missing = [d for d in range(1, 101) if d not in lessons]
+no_more = [d for d in range(1, 101) if d in lessons and d not in more]
 
 if errors:
     print('ОШИБКИ:')
@@ -68,3 +97,4 @@ if missing:
     print('без содержания: ' + ', '.join(map(str, missing)))
 else:
     print('все 100 дней с полным содержанием')
+print('доп. примеры: %d дней' % (100 - len(no_more)) + ('' if not no_more else ' (нет: ' + ', '.join(map(str, no_more)) + ')'))

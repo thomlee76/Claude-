@@ -35,6 +35,27 @@ function save() {
 
 /* ---------- строки интерфейса ---------- */
 var UI = {
+  appTitle:     ["Базовые глаголы 100", "기본 동사 100"],
+  verbs58:      ["58 глаголов", "핵심 동사 58개"],
+  todayLbl:     ["Сегодня", "오늘"],
+  chapterN:     ["Глава %1", "챕터 %1"],
+  repeatLesson: ["Повторить урок", "다시 학습"],
+  statDone:     ["пройдено", "완료"],
+  statStreak:   ["дней подряд", "연속 학습일"],
+  statDue:      ["карточек к повтору", "복습할 카드"],
+  reviewNow:    ["Повторить карточки · %1", "카드 복습하기 · %1"],
+  stepEx:       ["Примеры", "예문"],
+  stepTest:     ["Тест", "테스트"],
+  listenAll:    ["▶ Слушать все", "▶ 모두 듣기"],
+  listen2:      ["▶ Слушать", "▶ 듣기"],
+  hideTr:       ["Скрыть перевод", "번역 숨기기"],
+  moreEx:       ["Ещё примеры", "추가 예문"],
+  phrasesN:     ["%1 фраз", "%1문장"],
+  minApprox:    ["≈ %1 мин", "약 %1분"],
+  quizN:        ["%1 задания", "%1문제"],
+  pickIt:       ["Что звучит естественно", "자연스러운 표현 고르기"],
+  allRight:     ["Все ответы верные.", "모두 정답입니다."],
+  someWrong:    ["Фразы с ошибками попадут в карточки повторения.", "틀린 문장은 복습 카드로 들어갑니다."],
   greet:        ["Доброе утро", "좋은 아침입니다"],
   courseBasic:  ["Базовые глаголы", "기본 동사"],
   coursePhr:    ["Фразовые глаголы", "구동사"],
@@ -275,16 +296,16 @@ function speak(text, btn) {
   u.rate = S.rate;
   var v = voices.filter(function (x) { return x.lang === S.voice || x.lang.replace("_", "-") === S.voice; })[0];
   if (v) u.voice = v;
+  document.querySelectorAll(".playing").forEach(function (x) { x.classList.remove("playing"); });
   if (btn) {
-    btn.classList.add("active");
-    u.onend = u.onerror = function () { btn.classList.remove("active"); };
+    btn.classList.add("playing");
+    u.onend = u.onerror = function () { btn.classList.remove("playing"); };
   }
   speechSynthesis.speak(u);
 }
 
 /* ---------- утилиты DOM ---------- */
 var view = document.getElementById("view");
-var tabbar = document.getElementById("tabbar");
 function h(html) { var d = document.createElement("div"); d.innerHTML = html.trim(); return d.firstChild; }
 function esc(s) {
   return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -301,388 +322,411 @@ function shuffle(a) {
   return a;
 }
 
-/* ---------- иллюстрация ---------- */
-function illo(d) {
-  if (!d.image) {
-    return '<div class="illo"><div class="ph"><b>' + esc(d.verb) + "</b>" +
-      '<span>' + ui("noImage") + "</span></div></div>";
-  }
-  var src = (window.IMG_BASE || "images/") + d.image;
-  return '<div class="illo"><img src="' + esc(src) + '" alt="" loading="lazy"></div>';
+/* ---------- шапка и экран ---------- */
+var bar = document.getElementById("bar");
+var stepsNav = document.getElementById("steps");
+var ICON_GEAR = '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg>';
+var PLAY = '<span class="spk"><svg viewBox="0 0 10 10"><path d="M1 0l8 5-8 5z"/></svg></span>';
+
+function setBar(html, steps) {
+  bar.innerHTML = html;
+  stepsNav.innerHTML = steps || "";
+  stepsNav.hidden = !steps;
 }
-
-/* ---------- блок с видео ---------- */
-function ytCard(n) {
-  var r = ytRangeFor(n);
-  return '<div class="card tight">' +
-    '<div class="lbl" style="margin-bottom:8px">' + ui("watching") + "</div>" +
-    '<a class="row" target="_blank" rel="noopener" href="' + ytUrl(r.id) + '">' +
-      '<div class="grow" style="font-size:13.5px;line-height:1.35">' + ui("ytRange", r.from, r.to) +
-        '<div class="tr">' + ui("ytPlaylist") + "</div></div>" +
-      '<span class="pill">' + ui("open") + "</span>" +
-    "</a>" +
-    '<div class="divider" style="height:1px;background:var(--line);margin:10px 0"></div>' +
-    '<div class="row" style="gap:7px">' +
-      '<span class="tr" style="margin:0">' + ui("ytWhole") + "</span>" +
-      '<a class="pill n" target="_blank" rel="noopener" href="' + ytUrl(YT.fullKoEn) + '">' + ui("ytKoEn") + "</a>" +
-      '<a class="pill n" target="_blank" rel="noopener" href="' + ytUrl(YT.fullEn) + '">' + ui("ytEnOnly") + "</a>" +
-    "</div>" +
-  "</div>";
+function render(html) {
+  view.innerHTML = html;
+  window.scrollTo(0, 0);
 }
-
-/* ============================================================
-   ЭКРАН: СЕГОДНЯ
-   ============================================================ */
-function viewToday() {
-  var n = currentDay();
-  var d = dayData(n);
-  var b = d.base;
-  var done = doneCount();
-  var due = dueCards().length;
-  var ch = chapterOf(n);
-  var pct = done / 100;
-  var C = 2 * Math.PI * 23;
-  var st = streak();
-  var finished = done >= 100;
-
-  var html =
-  '<div class="stack">' +
-    '<nav class="course-sw" aria-label="' + ui("courseAria") + '">' +
-      '<span class="on" aria-current="page">' + ui("courseBasic") + '</span>' +
-      '<a href="phrasal-verbs/" data-course="phrasal">' + ui("coursePhr") + '</a>' +
-    '</nav>' +
-    '<div class="head">' +
-      "<div>" +
-        '<div class="sub">' + esc(humanDate(todayISO())) + "</div>" +
-        "<h1>" + (finished ? ui("courseDone") : (st > 0 ? ui("streakOn") : ui("greet"))) + "</h1>" +
-      "</div>" +
-      '<div class="row" style="gap:8px">' +
-        '<button class="iconbtn" data-go="settings" aria-label="' + ui("settings") + '"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg></button>' +
-        '<svg class="ring" viewBox="0 0 56 56" aria-label="' + ui("progressAria", done) + '">' +
-          '<circle class="bg" cx="28" cy="28" r="23"></circle>' +
-          '<circle class="fg" cx="28" cy="28" r="23" stroke-dasharray="' + C.toFixed(1) + '" stroke-dashoffset="' + (C * (1 - pct)).toFixed(1) + '" transform="rotate(-90 28 28)"></circle>' +
-          '<text x="28" y="33" text-anchor="middle">' + done + "</text>" +
-        "</svg>" +
-      "</div>" +
-    "</div>";
-
-  if (finished) {
-    html += '<div class="card"><div class="lbl">' + ui("done") + '</div><p class="mut" style="margin:6px 0 0">' + ui("doneText") + "</p></div>";
-  } else {
-    html +=
-    '<div class="hero">' +
-      '<div class="row" style="align-items:flex-start">' +
-        '<div class="grow">' +
-          '<div class="lbl">DAY ' + n + " · " + ui("chapter") + " " + ch.n + "</div>" +
-          '<div class="verb">' + esc(b.verb) + (b.sense ? " " + b.sense : "") + "</div>" +
-        "</div>" +
-        (d.full ? "" : '<span class="pill" style="background:rgba(255,255,255,.22);color:var(--on-acc)">' + ui("draft") + "</span>") +
-      "</div>" +
-      "<div>" +
-        '<div class="en">' + esc(b.en) + "</div>" +
-        '<div class="tr">' + esc(tr(b)) + "</div>" +
-      "</div>" +
-      '<button class="btn light" data-lesson="' + n + '">' + ui("startLesson") + " · " + (d.full ? ui("min12") : ui("min3")) + "</button>" +
-    "</div>";
-  }
-
-  html +=
-    '<button class="card tight row" data-go="review" style="width:100%;text-align:left">' +
-      '<div class="grow"><div class="lbl">' + ui("review") + '</div><div style="font-size:13.5px">' +
-        (due ? ui("dueCards", due) : ui("dueNone")) +
-      "</div></div>" +
-      '<span class="pill' + (due ? "" : " g") + '">' + (due ? ui("start") : "✓") + "</span>" +
-    "</button>" +
-
-    '<div class="row" style="gap:10px">' +
-      '<div class="card tight grow row"><div class="grow"><div class="lbl">' + ui("streak") + '</div><div style="font-size:13.5px">' +
-        (st ? ui("streakDays", daysWord(st)) : ui("streakNone")) +
-      '</div></div><div class="big" style="font-size:22px;color:var(--acc)">' + st + "</div></div>" +
-    "</div>" +
-
-    ytCard(n) +
-  "</div>";
-
-  render(html, "today");
+function backBtn() {
+  return '<button class="icon-btn" data-home="1" aria-label="' + ui("back") + '">←</button>';
 }
-function plural(n, a, b, c) {
-  var m = n % 100;
-  if (m >= 11 && m <= 14) return c;
-  m = n % 10;
-  if (m === 1) return a;
-  if (m >= 2 && m <= 4) return b;
-  return c;
-}
-
-/* ============================================================
-   ЭКРАН: УРОК
-   ============================================================ */
-var lessonState = null;
-var activeBuild = null;
-
-function startLesson(n) {
-  settingsOpen = false;
-  var d = dayData(n);
-  lessonState = { day: n, step: 0, quizIndex: 0, wrong: 0 };
-  renderLesson();
-}
-
-function lessonSteps() {
-  var d = dayData(lessonState.day);
-  return d.full ? ["meaning", "examples", "dialogue", "notes", "quiz"] : ["meaning"];
-}
-
-function renderLesson() {
-  var n = lessonState.day, d = dayData(n), b = d.base, f = d.full;
-  var steps = lessonSteps(), step = steps[lessonState.step];
-
-  var bar = '<div class="steps">' + steps.map(function (_, i) {
-    return '<i class="' + (i < lessonState.step ? "done" : i === lessonState.step ? "on" : "") + '"></i>';
-  }).join("") + "</div>";
-
-  var head =
-  '<div class="head">' +
-    "<div>" +
-      '<div class="sub">DAY ' + n + " / 100</div>" +
-      "<h1>" + esc(b.verb) + (b.sense ? " " + b.sense : "") + "</h1>" +
-    "</div>" +
-    '<div class="row" style="gap:8px">' + langToggle() +
-      '<button class="iconbtn" data-go="today" aria-label="' + ui("close") + '"><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button>' +
-    "</div>" +
-  "</div>";
-
-  var body = "";
-
-  if (step === "meaning") {
-    body =
-      illo(b) +
-      '<div class="card">' +
-        '<div class="lbl" style="margin-bottom:7px">' + ui("keySentence") + "</div>" +
-        '<div class="en">' + esc(b.en) + "</div>" +
-        '<div class="tr">' + esc(tr(b)) + "</div>" +
-        '<div class="row" style="gap:7px;margin-top:12px">' +
-          '<button class="pill" data-say="' + esc(b.en) + '">' + ui("listen") + "</button>" +
-          '<button class="pill n" data-rate="1">' + S.rate.toFixed(2).replace(/0$/, "") + "×</button>" +
-          '<a class="pill n" target="_blank" rel="noopener" href="' + ytUrl(ytRangeFor(n).id) + '">' + ui("ytVideo") + "</a>" +
-        "</div>" +
-      "</div>";
-    if (f) {
-      body += '<div><div class="lbl" style="margin-bottom:6px">' + ui("meaning") + '</div><p style="margin:0;font-size:14.5px;line-height:1.55">' + esc(t(f.meaning)) + "</p></div>";
-    } else {
-      body +=
-      '<div class="card">' +
-        '<div class="lbl">' + ui("draftTitle") + "</div>" +
-        '<p class="mut" style="margin:7px 0 0;font-size:14px;line-height:1.5">' + ui("draftBody") + "</p>" +
-      "</div>";
-    }
-  }
-
-  if (step === "examples") {
-    body =
-      '<div><h2 class="big" style="font-size:18px">Model Examples</h2>' +
-      '<p class="mut" style="margin:4px 0 0;font-size:13.5px">' + ui("hintExamples") + "</p></div>" +
-      '<div class="card"><div class="ex">' +
-        f.examples.map(function (e, i) {
-          return '<div class="exitem" data-toggle="' + i + '">' +
-            '<button class="play" data-say="' + esc(e.en) + '"><svg viewBox="0 0 10 10"><path d="M1 0l8 5-8 5z"/></svg></button>' +
-            '<div class="grow"><div class="en">' + esc(e.en) + '</div><div class="tr">' + esc(tr(e)) + "</div></div>" +
-          "</div>";
-        }).join("") +
-      "</div></div>";
-  }
-
-  if (step === "dialogue") {
-    body =
-      '<div><h2 class="big" style="font-size:18px">Small Talk</h2>' +
-      '<p class="mut" style="margin:4px 0 0;font-size:13.5px">' + ui("hintDialogue") + "</p></div>" +
-      '<div class="dlg">' +
-        f.dialogue.map(function (l) {
-          if (l.you) {
-            return '<div class="who" style="justify-self:end">' + l.s + " · " + ui("you") + "</div>" +
-              '<div class="bub you" data-reveal><div class="en mut">' + ui("yourLine") + '</div><div class="tr">' + esc(tr(l)) + "</div></div>";
-          }
-          return '<div class="who"' + (l.s === "B" ? ' style="justify-self:end"' : "") + ">" + l.s + "</div>" +
-            '<div class="bub ' + (l.s === "A" ? "a" : "b") + '">' +
-              '<div class="en">' + esc(l.en) + '</div><div class="tr">' + esc(tr(l)) + "</div>" +
-            "</div>";
-        }).join("") +
-      "</div>" +
-      '<button class="btn ghost" data-say-all="1">' + ui("playDialogue") + "</button>";
-  }
-
-  if (step === "notes") {
-    body =
-      '<div><h2 class="big" style="font-size:18px">Further Studies</h2>' +
-      '<p class="mut" style="margin:4px 0 0;font-size:13.5px">' + ui("hintNotes") + "</p></div>" +
-      '<div class="card">' +
-        f.notes.map(function (x, i) {
-          return '<div class="note"><b class="m">' + (i + 1) + "</b><div>" + esc(t(x)) + "</div></div>";
-        }).join("") +
-      "</div>";
-  }
-
-  if (step === "quiz") {
-    return renderQuiz();
-  }
-
-  var last = lessonState.step >= steps.length - 1;
-  var next = last
-    ? '<button class="btn teal" data-finish="1">' + ui("finishDay", n) + "</button>"
-    : '<button class="btn" data-next="1">' + ui("next") + "</button>";
-
-  render('<div class="stack">' + bar + head + body + '<div style="height:4px"></div>' + next + "</div>", null);
-}
-
 function langToggle() {
   return '<div class="seg">' +
     '<button data-lang="ru" class="' + (S.lang === "ru" ? "on" : "") + '">RU</button>' +
     '<button data-lang="ko" class="' + (S.lang === "ko" ? "on" : "") + '">한</button>' +
   "</div>";
 }
-
-/* ---------- тест ---------- */
-function renderQuiz() {
-  var n = lessonState.day, f = dayData(n).full;
-  var q = f.quiz[lessonState.quizIndex];
-  var steps = lessonSteps();
-  var bar = '<div class="steps">' + steps.map(function (_, i) {
-    return '<i class="' + (i < lessonState.step ? "done" : i === lessonState.step ? "on" : "") + '"></i>';
-  }).join("") + "</div>";
-
-  var head =
-  '<div class="head"><div><div class="sub">DAY ' + n + " · " + ui("check") + "</div><h1>" + ui("taskOf", lessonState.quizIndex + 1, f.quiz.length) + "</h1></div>" +
-  '<div class="row" style="gap:8px">' + langToggle() +
-  '<button class="iconbtn" data-go="today" aria-label="' + ui("close") + '"><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div></div>';
-
-  var body = "";
-  if (q.type === "build") {
-    var words = q.answer.split(/\s+/).filter(Boolean);
-    var pool = shuffle(words.concat(q.extra || []));
-    body =
-      '<div><div class="lbl" style="margin-bottom:6px">' + ui("buildIt") + "</div>" +
-      '<div style="font-size:15px">' + esc(S.lang === "ko" ? (q.ko || q.ru) : q.ru) + "</div></div>" +
-      '<div class="slot" id="slot"></div>' +
-      '<div class="tokens" id="pool">' + pool.map(function (w, i) {
-        return '<button class="tok" data-tok="' + i + '" data-w="' + esc(w) + '">' + esc(w) + "</button>";
-      }).join("") + "</div>" +
-      '<button class="btn ghost sm" id="clearBtn" data-clear="1" hidden>' + ui("clear") + "</button>" +
-      '<div id="verdict"></div>';
-  } else {
-    body =
-      '<div><div class="lbl" style="margin-bottom:6px">' + esc(S.lang === "ko" ? (q.q_ko || q.q_ru) : q.q_ru) + "</div></div>" +
-      '<div class="stack" id="opts">' + q.options.map(function (o, i) {
-        return '<button class="opt" data-opt="' + i + '"><span class="mk"></span><span class="en" style="font-size:15px">' + esc(o.en) + "</span></button>";
-      }).join("") + "</div>" +
-      '<div id="verdict"></div>';
-  }
-
-  render('<div class="stack">' + bar + head + body + "</div>", null);
-
-  activeBuild = null;
-  if (q.type === "build") wireBuild(q);
-  else wirePick(q);
+function courseSwitch() {
+  return '<nav class="course-sw" aria-label="' + ui("courseAria") + '">' +
+    '<span class="on" aria-current="page">' + ui("courseBasic") + "</span>" +
+    '<a href="phrasal-verbs/" data-course="phrasal">' + ui("coursePhr") + "</a>" +
+  "</nav>";
 }
 
-function wireBuild(q) {
-  var slot = document.getElementById("slot");
-  var pool = document.getElementById("pool");
-  var target = q.answer.split(/\s+/).filter(Boolean);
-  var picked = [];
+/* ---------- глагол: заголовок и подсветка форм в примерах ---------- */
+var FORMS = {
+  HAVE: "have has had having", GET: "get gets got gotten getting", MAKE: "make makes made making",
+  TAKE: "take takes took taken taking", DO: "do does did done doing", LIKE: "like likes liked liking",
+  SEE: "see sees saw seen seeing", KNOW: "know knows knew known knowing", WORK: "work works worked working",
+  GO: "go goes went gone going", WANT: "want wants wanted wanting", SAY: "say says said saying",
+  LET: "let lets letting", GIVE: "give gives gave given giving", KEEP: "keep keeps kept keeping",
+  LEAVE: "leave leaves left leaving", BRING: "bring brings brought bringing", HEAD: "head heads headed heading",
+  COME: "come comes came coming", PUT: "put puts putting", FEEL: "feel feels felt feeling",
+  TURN: "turn turns turned turning", MOVE: "move moves moved moving", RUN: "run runs ran running",
+  TRY: "try tries tried trying", STAND: "stand stands stood standing", BREAK: "break breaks broke broken breaking",
+  HURT: "hurt hurts hurting", NOTICE: "notice notices noticed noticing", EXPECT: "expect expects expected expecting",
+  LOSE: "lose loses lost losing", CATCH: "catch catches caught catching", COST: "cost costs costing",
+  OFFER: "offer offers offered offering", REQUIRE: "require requires required requiring", GAIN: "gain gains gained gaining",
+  MENTION: "mention mentions mentioned mentioning", HANDLE: "handle handles handled handling", SELL: "sell sells sold selling",
+  SUIT: "suit suits suited suiting", MISS: "miss misses missed missing", FINISH: "finish finishes finished finishing",
+  BELONG: "belong belongs belonged belonging", AFFORD: "afford affords afforded affording", GRAB: "grab grabs grabbed grabbing",
+  FIX: "fix fixes fixed fixing", DESERVE: "deserve deserves deserved deserving", MIND: "mind minds minded minding",
+  BOOK: "book books booked booking", SEEM: "seem seems seemed seeming", BOTHER: "bother bothers bothered bothering",
+  SPARE: "spare spares spared sparing", RUIN: "ruin ruins ruined ruining", OWE: "owe owes owed owing",
+  QUIT: "quit quits quitting", ARRANGE: "arrange arranges arranged arranging", SKIP: "skip skips skipped skipping",
+  SPOIL: "spoil spoils spoiled spoilt spoiling"
+};
+var formsCache = {};
+function hl(text, verb) {
+  var re = formsCache[verb] || (formsCache[verb] = new RegExp("\\b(" + (FORMS[verb] || verb.toLowerCase()).split(" ").join("|") + ")\\b", "gi"));
+  return esc(text).replace(re, '<b class="v">$1</b>');
+}
+/* ①…⑬ → кружок с цифрой: системные глифы в разных шрифтах разного размера. */
+function senseHTML(sense) {
+  if (!sense) return "";
+  return '<span class="sn">' + (sense.charCodeAt(0) - 0x2460 + 1) + "</span>";
+}
+function verbLabel(b) {
+  return esc(b.verb.toLowerCase()) + (b.sense ? " " + senseHTML(b.sense) : "");
+}
+function pvHTML(b) {
+  return '<span class="v">' + esc(b.verb.toLowerCase()) + "</span>" + senseHTML(b.sense);
+}
 
-  function redraw() {
-    slot.innerHTML = picked.map(function (w, i) {
-      return '<button class="tok" data-un="' + i + '">' + esc(w) + "</button>";
-    }).join("");
-    slot.className = "slot";
-    var cb = document.getElementById("clearBtn");
-    if (cb) cb.hidden = picked.length === 0;
-    if (picked.length === target.length) check();
-  }
-  function check() {
-    var ok = picked.join(" ") === target.join(" ");
-    slot.className = "slot " + (ok ? "ok" : "bad");
-    var v = document.getElementById("verdict");
-    if (ok) {
-      var cb2 = document.getElementById("clearBtn"); if (cb2) cb2.hidden = true;
-      v.innerHTML = '<div class="card tight"><div class="row"><div class="grow"><b style="color:var(--acc2)">' + ui("correct") + "</b> " +
-        esc(q.answer) + '</div><button class="play" data-say="' + esc(q.answer) + '"><svg viewBox="0 0 10 10"><path d="M1 0l8 5-8 5z"/></svg></button></div></div>' +
-        '<button class="btn" data-qnext="1">' + ui("next") + "</button>";
-      pushCard(lessonState.day, q.answer);
-    } else {
-      lessonState.wrong++;
-      v.innerHTML = '<div class="card tight"><b style="color:var(--acc)">' + ui("notMatching") + "</b> " + ui("rightOrder") +
-        esc(target.join(" ")) + "</div>" +
-        '<button class="btn ghost sm" data-clear="1">' + ui("tryAgain") + "</button>" +
-        '<button class="btn" data-qnext="1">' + ui("next") + "</button>";
-      pushCard(lessonState.day, q.answer, true);
+/* ============================================================
+   ГЛАВНАЯ: сегодня · статистика · карта 100 дней · настройки
+   ============================================================ */
+function home() {
+  lessonState = null; reviewState = null; stopTimer();
+  try { speechSynthesis.cancel(); } catch (e) {}
+  document.body.classList.remove("hide-tr");
+  setBar('<h1>' + ui("appTitle") + "<small>김재우의 기본 동사 100 · " + ui("verbs58") + "</small></h1>" +
+    '<button class="icon-btn" data-scroll="settings" aria-label="' + ui("settings") + '">' + ICON_GEAR + "</button>");
+
+  var n = currentDay(), b = dayData(n).base, done = doneCount(), due = dueCards().length;
+  var st = streak(), finished = done >= 100, ch = chapterOf(n);
+
+  var html = courseSwitch() +
+    '<div class="today">' +
+      '<div class="eyebrow">' + (finished ? ui("courseDone") : ui("todayLbl")) + " · DAY " + pad(n) + " · " + ui("chapterN", ch.n) + "</div>" +
+      '<div class="pv">' + pvHTML(b) + "</div>" +
+      '<div class="en">' + hl(b.en, b.verb) + "</div>" +
+      '<div class="ru">' + esc(tr(b)) + "</div>" +
+      '<button class="btn" data-lesson="' + n + '">' + (finished ? ui("repeatLesson") : ui("startLesson")) + " · " + ui("min12") + "</button>" +
+    "</div>" +
+    '<div class="stats">' +
+      '<div class="stat"><b>' + done + "<small>/100</small></b><span>" + ui("statDone") + "</span></div>" +
+      '<div class="stat"><b>' + st + "</b><span>" + ui("statStreak") + "</span></div>" +
+      '<button class="stat" data-go="review"><b>' + due + "</b><span>" + ui("statDue") + "</span></button>" +
+    "</div>" +
+    (due ? '<button class="btn ghost duebar" data-go="review">' + ui("reviewNow", due) + "</button>" : "");
+
+  /* карта: глава → глагол → дни */
+  html += '<div class="map">';
+  var chs = window.CHAPTERS, days = window.DAYS, i = 0;
+  Object.keys(chs).forEach(function (k) {
+    var c = chs[k];
+    html += '<div class="chap"><div class="eyebrow">' + ui("chapterN", k) + " · DAY " + c.from + "–" + c.to + "</div><p>" +
+      esc(S.lang === "ko" ? (c.ko || c.ru) : c.ru) + "</p></div>";
+    while (i < days.length && days[i].day <= c.to) {
+      var verb = days[i].verb, group = [];
+      while (i < days.length && days[i].verb === verb && days[i].day <= c.to) group.push(days[i++]);
+      var span = group.length > 1 ? "DAY " + group[0].day + "–" + group[group.length - 1].day : "DAY " + group[0].day;
+      html += '<div class="group"><h3>' + esc(verb.toLowerCase()) + "<span>" + span + "</span></h3><div class=\"chips\">" +
+        group.map(function (d) {
+          var cls = S.done[d.day] ? " done" : (d.day === n && !finished ? " next" : "");
+          return '<button class="chip' + cls + '" data-lesson="' + d.day + '"><i>' + pad(d.day) + "</i>" +
+            (d.sense ? senseHTML(d.sense) : esc(verb.toLowerCase())) + "</button>";
+        }).join("") + "</div></div>";
     }
-  }
+  });
+  html += "</div>";
 
-  pool.addEventListener("click", function (e) {
-    var b = e.target.closest("[data-tok]"); if (!b || b.classList.contains("used")) return;
-    b.classList.add("used");
-    picked.push(b.dataset.w);
-    redraw();
-  });
-  slot.addEventListener("click", function (e) {
-    var b = e.target.closest("[data-un]"); if (!b) return;
-    var i = +b.dataset.un, w = picked[i];
-    picked.splice(i, 1);
-    var back = Array.prototype.slice.call(pool.querySelectorAll(".tok.used")).filter(function (x) { return x.dataset.w === w; })[0];
-    if (back) back.classList.remove("used");
-    document.getElementById("verdict").innerHTML = "";
-    redraw();
-  });
-  activeBuild = function () {
-    picked = [];
-    Array.prototype.slice.call(pool.querySelectorAll(".tok")).forEach(function (x) { x.classList.remove("used"); });
-    document.getElementById("verdict").innerHTML = "";
-    redraw();
+  html += '<div class="foot">' + ytBox(n) + calendarBox() + settingsBox() +
+    '<p class="fine">' + ui("footer") + "</p></div>";
+
+  render(html);
+  wireSettings();
+}
+
+function ytBox(n) {
+  var r = ytRangeFor(n);
+  return '<div class="box"><h3>' + ui("watching") + "</h3>" +
+    '<a class="yt" target="_blank" rel="noopener" href="' + ytUrl(r.id) + '">' +
+      '<div class="grow">' + ui("ytRange", r.from, r.to) + '<div class="tr">' + ui("ytPlaylist") + "</div></div>" +
+      '<span class="pill">' + ui("open") + "</span></a>" +
+    '<div class="pillrow"><span class="mut" style="font-size:13px">' + ui("ytWhole") + "</span>" +
+      '<a class="pill" target="_blank" rel="noopener" href="' + ytUrl(YT.fullKoEn) + '">' + ui("ytKoEn") + "</a>" +
+      '<a class="pill" target="_blank" rel="noopener" href="' + ytUrl(YT.fullEn) + '">' + ui("ytEnOnly") + "</a>" +
+    "</div></div>";
+}
+
+function calendarBox() {
+  var cells = "", today = todayISO(), dates = {};
+  Object.keys(S.done).forEach(function (k) { dates[S.done[k]] = 1; });
+  for (var i = 0; i < 105; i++) {
+    var iso = addDays(S.start, i);
+    cells += '<i class="wk' + (dates[iso] ? " on" : "") + (iso === today ? " today" : "") + '"></i>';
+  }
+  return '<div class="box"><h3>' + ui("calendar") + '<span class="mut" style="font:500 12px var(--f-ui);margin-left:8px">' +
+    ui("startedOn", dateShort(S.start)) + "</span></h3>" +
+    '<div class="weeks">' + cells + '</div><p class="fine" style="margin-top:10px">' + ui("softStreak") + "</p></div>";
+}
+
+var TZS = ["Asia/Almaty", "Asia/Seoul", "Europe/Moscow", "Asia/Tashkent", "Asia/Dubai", "America/Sao_Paulo", "America/Bogota"];
+
+function settingsBox() {
+  function row(label, hint, ctrl) {
+    return '<div class="srow"><div><label>' + label + "</label>" + (hint ? '<div class="hint">' + hint + "</div>" : "") + "</div>" + ctrl + "</div>";
+  }
+  return '<div class="box settings" id="settings"><h3 style="margin:0">' + ui("settings") + "</h3>" +
+    row(ui("langLabel"), ui("langHint"), langToggle()) +
+    row(ui("theme"), "", '<div class="seg">' + ["auto", "light", "dark"].map(function (x) {
+      return '<button data-set-theme="' + x + '" class="' + (S.theme === x ? "on" : "") + '">' +
+        (x === "auto" ? ui("themeAuto") : x === "light" ? ui("themeLight") : ui("themeDark")) + "</button>";
+    }).join("") + "</div>") +
+    row(ui("speechRate"), "", '<div class="seg">' + [0.75, 0.95, 1.1].map(function (r) {
+      return '<button data-rate="' + r + '" class="' + (Math.abs(S.rate - r) < 0.01 ? "on" : "") + '">' + r + "×</button>";
+    }).join("") + "</div>") +
+    row(ui("accent"), "", '<div class="seg">' + [["en-US", "US"], ["en-GB", "UK"]].map(function (v) {
+      return '<button data-voice="' + v[0] + '" class="' + (S.voice === v[0] ? "on" : "") + '">' + v[1] + "</button>";
+    }).join("") + "</div>") +
+    row(ui("reminder"), ui("reminderHint"), '<input type="time" id="rem" value="' + esc(S.reminder) + '">') +
+    row(ui("timezone"), ui("timezoneHint"), '<select id="tz">' + TZS.map(function (z) {
+      return '<option value="' + z + '"' + (S.tz === z ? " selected" : "") + ">" + z.split("/")[1].replace("_", " ") + "</option>";
+    }).join("") + "</select>") +
+    row(ui("allowNotif"), ui("allowHint"), '<button class="pill" id="notif">' + ui("enable") + "</button>") +
+    row(ui("offline"), '<span id="offHint">' + ui("offlineHint") + "</span>", '<button class="pill" id="offBtn">' + ui("download") + "</button>") +
+    row(ui("startDate"), ui("startHint"), '<input type="date" id="start" value="' + esc(S.start) + '">') +
+    '<button class="danger" id="reset">' + ui("resetLabel") + "</button>" +
+  "</div>";
+}
+
+function wireSettings() {
+  document.getElementById("rem").onchange = function () { S.reminder = this.value; save(); scheduleReminder(); toast(ui("toastReminder", this.value)); };
+  document.getElementById("tz").onchange = function () { S.tz = this.value; save(); toast(ui("toastTz", this.value)); };
+  document.getElementById("start").onchange = function () { S.start = this.value; save(); toast(ui("toastStart", dateShort(this.value))); rerender(); };
+  document.getElementById("reset").onclick = function () {
+    if (!confirm(ui("resetConfirm"))) return;
+    S.done = {}; S.queue = []; S.errors = {}; save(); home(); toast(ui("resetDone"));
   };
-  redraw();
-}
-
-function wirePick(q) {
-  var opts = document.getElementById("opts");
-  opts.addEventListener("click", function (e) {
-    var b = e.target.closest("[data-opt]"); if (!b || opts.dataset.locked) return;
-    opts.dataset.locked = "1";
-    var i = +b.dataset.opt, o = q.options[i];
-    Array.prototype.slice.call(opts.children).forEach(function (el, j) {
-      var oo = q.options[j];
-      el.classList.add(oo.ok ? "ok" : "no");
-      el.querySelector(".mk").textContent = oo.ok ? "✓" : "✕";
+  var offBtn = document.getElementById("offBtn"), offHint = document.getElementById("offHint");
+  function showOffline() {
+    offlineStatus().then(function (st) {
+      if (!st) { offBtn.hidden = true; offHint.textContent = ui("offlineNo"); return; }
+      var ready = st.have >= st.total;
+      offHint.textContent = ready ? ui("offlineReady", Math.round(st.bytes / 1048576)) : ui("offlineHint");
+      offBtn.textContent = ready ? ui("offlineAgain") : ui("download");
     });
-    if (!o.ok) lessonState.wrong++;
-    var right = q.options.filter(function (x) { return x.ok; })[0];
-    document.getElementById("verdict").innerHTML =
-      '<div class="card tight"><b style="color:' + (o.ok ? "var(--acc2)" : "var(--acc)") + '">' +
-      (o.ok ? ui("correct") : ui("wrong")) + "</b> " + esc(t(q.why)) + "</div>" +
-      '<button class="btn" data-qnext="1">' + ui("next") + "</button>";
-    if (right) pushCard(lessonState.day, right.en, !o.ok);
-  });
+  }
+  showOffline();
+  offBtn.onclick = function () {
+    offBtn.disabled = true;
+    downloadOffline(function (d, total) { offHint.textContent = ui("downloading", d, total); })
+      .then(function () { offBtn.disabled = false; showOffline(); })
+      .catch(function () { offBtn.disabled = false; offHint.textContent = ui("offlineFail"); });
+  };
+  document.getElementById("notif").onclick = function () {
+    if (!("Notification" in window)) return toast(ui("noNotif"));
+    Notification.requestPermission().then(function (p) {
+      toast(p === "granted" ? ui("notifOn") : ui("notifOff"));
+      if (p === "granted") scheduleReminder();
+    });
+  };
 }
 
-function quizNext() {
-  var f = dayData(lessonState.day).full;
-  if (lessonState.quizIndex < f.quiz.length - 1) {
-    lessonState.quizIndex++;
-    renderQuiz();
-  } else {
-    finishLesson();
+/* ============================================================
+   УРОК: одна лента — 1 · Примеры, 2 · Small talk, 3 · Тест
+   ============================================================ */
+var lessonState = null;
+var timerId = null, tStart = 0;
+
+function startTimer() { stopTimer(); tStart = Date.now(); timerId = setInterval(tick, 1000); }
+function stopTimer() { if (timerId) clearInterval(timerId); timerId = null; tStart = 0; }
+function tick() {
+  var el = document.getElementById("timer"); if (!el || !tStart) return;
+  var s = Math.floor((Date.now() - tStart) / 1000);
+  el.textContent = Math.floor(s / 60) + ":" + pad(s % 60) + " / 12:00";
+  el.classList.toggle("over", s >= 720);
+}
+
+function startLesson(n) {
+  reviewState = null;
+  var f = dayData(n).full;
+  lessonState = { day: n, wrong: 0, answered: {}, picked: {}, choice: {}, pools: {} };
+  if (f) f.quiz.forEach(function (q, i) {
+    if (q.type === "build") {
+      lessonState.picked[i] = [];
+      lessonState.pools[i] = shuffle(q.answer.split(/\s+/).filter(Boolean).concat(q.extra || []));
+    }
+  });
+  document.body.classList.remove("hide-tr");
+  renderLesson();
+  startTimer();
+}
+
+function lineHTML(item, verb, lead, cls) {
+  return '<div class="line ' + (cls || "") + '" tabindex="0" data-line="1" data-say="' + esc(item.en) + '">' +
+    lead + '<div><div class="en">' + hl(item.en, verb) + '</div><div class="tr">' + esc(tr(item)) + "</div></div>" + PLAY + "</div>";
+}
+
+function renderLesson() {
+  var n = lessonState.day, d = dayData(n), b = d.base, f = d.full, ch = chapterOf(n);
+  setBar(backBtn() +
+    "<h1>DAY " + pad(n) + "<small>" + verbLabel(b) + "</small></h1>" +
+    '<span class="timer" id="timer">0:00 / 12:00</span>' + langToggle(),
+    f ? '<a href="#s1" class="on">1 · ' + ui("stepEx") + '</a><a href="#s2">2 · Small talk</a><a href="#s3">3 · ' + ui("stepTest") + "</a>" : "");
+  tick();
+
+  var r = ytRangeFor(n);
+  var html =
+    '<div class="hero"><div class="eyebrow">' + ui("chapterN", ch.n) + " · " + esc(S.lang === "ko" ? (ch.meta.ko || ch.meta.ru) : ch.meta.ru) + "</div>" +
+      '<div class="pv">' + pvHTML(b) + "</div></div>" +
+    '<div class="keyline" data-line="1" data-say="' + esc(b.en) + '"><div><div class="en">' + hl(b.en, b.verb) + '</div><div class="tr">' + esc(tr(b)) + "</div></div>" + PLAY + "</div>" +
+    '<div class="scene">' +
+      (b.image ? '<img src="' + esc((window.IMG_BASE || "images/") + b.image) + '" alt="">' : '<div class="ph"><div><b>' + esc(b.verb.toLowerCase()) + "</b>" + ui("noImage") + "</div></div>") +
+      '<div class="kws"><span class="kw">' + verbLabel(b) + "</span>" +
+        '<a class="kw" target="_blank" rel="noopener" href="' + ytUrl(r.id) + '">' + ui("ytVideo") + " · DAY " + r.from + "–" + r.to + "</a></div>" +
+    "</div>";
+
+  if (!f) {
+    html += '<div class="note"><div class="eyebrow">' + ui("draftTitle") + "</div><p>" + ui("draftBody") + "</p></div>" +
+      '<div style="margin-top:20px"><button class="btn" data-finish="1">' + ui("finishDay", n) + "</button></div>";
+    render(html);
+    return;
   }
+
+  html += '<div class="note"><div class="eyebrow">' + ui("meaning") + "</div><p>" + esc(t(f.meaning)) + "</p></div>";
+
+  /* 1 · примеры */
+  var more = f.more || [];
+  var total = f.examples.length + more.length;
+  html += '<section id="s1"><div class="sec-h"><h2>Model Examples</h2><span>' + ui("phrasesN", total) + "</span></div>" +
+    '<div class="tools"><button class="pill" data-playall="ex">' + ui("listenAll") + "</button>" +
+      '<button class="pill" data-hidetr="1" aria-pressed="' + document.body.classList.contains("hide-tr") + '">' + ui("hideTr") + "</button></div>" +
+    '<div class="dlg" id="ex">' + f.examples.map(function (e, i) {
+      return lineHTML(e, b.verb, '<div class="num">' + (i + 1) + "</div>", "nw");
+    }).join("") + "</div>";
+  if (more.length) {
+    html += '<div class="talk"><div class="talk-h"><span class="tag t3">' + ui("moreEx") + '</span><button class="play" data-playall="more">' + ui("listen2") + "</button></div>" +
+      '<div class="dlg" id="more">' + more.map(function (e, i) {
+        return lineHTML(e, b.verb, '<div class="num">' + (f.examples.length + i + 1) + "</div>", "nw");
+      }).join("") + "</div></div>";
+  }
+  html += "</section>";
+
+  /* 2 · small talk */
+  html += '<section id="s2"><div class="sec-h"><h2>Small Talk</h2><span>' + ui("minApprox", 2) + "</span></div>" +
+    '<div class="tools"><button class="pill" data-playall="dlg">' + ui("listenAll") + "</button></div>" +
+    '<p class="fine" style="margin:-2px 0 10px">' + ui("hintDialogue") + "</p>" +
+    '<div class="dlg" id="dlg">' + f.dialogue.map(function (l) {
+      var who = '<div class="who">' + esc(l.s) + "</div>";
+      if (l.you && !lessonState.revealed) {
+        return '<div class="line you" tabindex="0" data-reveal="1"><div class="who">' + esc(l.s) + " · " + ui("you") + "</div>" +
+          '<div><div class="en">' + ui("yourLine") + '</div><div class="tr">' + esc(tr(l)) + "</div></div>" + PLAY + "</div>";
+      }
+      return lineHTML(l, b.verb, who);
+    }).join("") + "</div>" +
+    '<div class="note"><div class="eyebrow">Further Studies</div><ol>' +
+      f.notes.map(function (x) { return "<li>" + esc(t(x)) + "</li>"; }).join("") + "</ol></div>" +
+  "</section>";
+
+  /* 3 · тест */
+  html += '<section id="s3"><div class="sec-h"><h2>' + ui("stepTest") + "</h2><span>" + ui("quizN", f.quiz.length) + "</span></div>" +
+    f.quiz.map(function (q, i) {
+      if (q.type === "build") {
+        return '<div class="q" id="q' + i + '"><div class="eyebrow">' + ui("buildIt") + "</div>" +
+          '<div class="prompt">' + esc(S.lang === "ko" ? (q.ko || q.ru) : q.ru) + "</div>" +
+          '<div class="slot" id="slot' + i + '"></div>' +
+          '<div class="tokens">' + lessonState.pools[i].map(function (w, k) {
+            return '<button class="tok" data-tok="' + i + ":" + k + '">' + esc(w) + "</button>";
+          }).join("") + "</div>" +
+          '<div class="qbtns"><button class="pill" data-clear="' + i + '">' + ui("clear") + "</button></div>" +
+          '<div class="expl" id="v' + i + '"></div></div>';
+      }
+      return '<div class="q" id="q' + i + '"><div class="eyebrow">' + ui("pickIt") + "</div>" +
+        '<div class="prompt">' + esc(S.lang === "ko" ? (q.q_ko || q.q_ru) : q.q_ru) + "</div>" +
+        '<div class="opts">' + q.options.map(function (o, j) {
+          return '<button class="opt" data-opt="' + i + ":" + j + '">' + esc(o.en) + "</button>";
+        }).join("") + "</div>" +
+        '<div class="expl" id="v' + i + '"></div></div>';
+    }).join("") +
+    '<div id="result"></div>' +
+    '<div style="margin-top:16px"><button class="btn" data-finish="1">' + ui("finishDay", n) + "</button></div>" +
+  "</section>";
+
+  render(html);
+  f.quiz.forEach(function (q, i) { drawQ(i); });
+  drawResult();
+}
+
+/* состояние одного задания → DOM (переживает перерисовку при смене языка) */
+function drawQ(i) {
+  var f = dayData(lessonState.day).full, q = f.quiz[i], v = document.getElementById("v" + i);
+  if (q.type === "build") {
+    var pool = lessonState.pools[i], picked = lessonState.picked[i];
+    var target = q.answer.split(/\s+/).filter(Boolean);
+    var slot = document.getElementById("slot" + i);
+    slot.innerHTML = picked.map(function (k, p) {
+      return '<button class="tok" data-un="' + i + ":" + p + '">' + esc(pool[k]) + "</button>";
+    }).join("");
+    document.querySelectorAll('#q' + i + ' [data-tok]').forEach(function (el) {
+      el.classList.toggle("used", picked.indexOf(+el.dataset.tok.split(":")[1]) >= 0);
+    });
+    var full = picked.length === target.length;
+    var ok = full && picked.map(function (k) { return pool[k]; }).join(" ") === target.join(" ");
+    slot.className = "slot" + (full ? (ok ? " ok" : " bad") : "");
+    document.querySelector('#q' + i + ' .qbtns').hidden = ok;
+    if (!full) { v.innerHTML = ""; return; }
+    v.innerHTML = ok
+      ? "<b>" + ui("correct") + "</b> " + esc(q.answer)
+      : "<b>" + ui("notMatching") + "</b> " + ui("rightOrder") + esc(q.answer);
+  } else {
+    var c = lessonState.choice[i];
+    if (c === undefined) return;
+    document.querySelectorAll('#q' + i + ' .opt').forEach(function (el, j) {
+      el.disabled = true;
+      el.classList.toggle("ok", q.options[j].ok);
+      el.classList.toggle("no", j === c && !q.options[j].ok);
+    });
+    v.innerHTML = "<b>" + (q.options[c].ok ? ui("correct") : ui("wrong")) + "</b> " + esc(t(q.why));
+  }
+}
+
+function answerBuild(i) {
+  var f = dayData(lessonState.day).full, q = f.quiz[i];
+  var pool = lessonState.pools[i], picked = lessonState.picked[i];
+  var target = q.answer.split(/\s+/).filter(Boolean);
+  if (picked.length !== target.length) return;
+  var ok = picked.map(function (k) { return pool[k]; }).join(" ") === target.join(" ");
+  if (lessonState.answered[i] === undefined) {
+    lessonState.answered[i] = ok;
+    if (!ok) lessonState.wrong++;
+    pushCard(lessonState.day, q.answer, !ok);
+  }
+  if (ok) speak(q.answer);
+  drawResult();
+}
+
+function drawResult() {
+  var f = dayData(lessonState.day).full, box = document.getElementById("result");
+  if (!box) return;
+  var keys = Object.keys(lessonState.answered);
+  if (keys.length < f.quiz.length) { box.innerHTML = ""; return; }
+  var ok = keys.filter(function (k) { return lessonState.answered[k]; }).length;
+  box.innerHTML = '<div class="result"><div class="score">' + ok + "/" + f.quiz.length + "</div><p>" +
+    (ok === f.quiz.length ? ui("allRight") : ui("someWrong")) + "</p></div>";
 }
 
 function finishLesson() {
   var n = lessonState.day;
-  S.done[n] = todayISO();
+  if (!S.done[n]) S.done[n] = todayISO();
   var f = dayData(n).full;
   if (f) f.examples.slice(0, 3).forEach(function (e) { pushCard(n, e.en); });
   save();
   var w = lessonState.wrong;
   toast(w ? ui("dayDoneErr", n, w) : ui("dayDoneClean", n));
-  lessonState = null;
-  go("today");
+  home();
 }
 
 /* ---------- интервальное повторение ---------- */
@@ -690,32 +734,27 @@ var INTERVALS = [1, 3, 7, 21, 60];
 function pushCard(day, en, hard) {
   var k = day + "|" + en;
   var ex = S.queue.filter(function (c) { return c.k === k; })[0];
-  var b = dayData(day).base;
-  var full = dayData(day).full;
-  var src = full ? (full.examples.concat(full.dialogue).filter(function (x) { return x.en === en; })[0]) : null;
+  var b = dayData(day).base, full = dayData(day).full;
+  var src = full ? full.examples.concat(full.dialogue, full.more || []).filter(function (x) { return x.en === en; })[0] : null;
   if (!src) src = { en: en, ru: b.ru, ko: b.ko };
-  if (ex) { if (hard) { ex.level = 0; ex.due = addDays(todayISO(), 1); } return; }
-  S.queue.push({
-    k: k, day: day, en: en,
-    ru: src.ru || b.ru, ko: src.ko || b.ko,
-    level: hard ? 0 : 0,
-    due: addDays(todayISO(), 1)
-  });
+  if (ex) { if (hard) { ex.level = 0; ex.due = addDays(todayISO(), 1); save(); } return; }
+  S.queue.push({ k: k, day: day, en: en, ru: src.ru || b.ru, ko: src.ko || b.ko, level: 0, due: addDays(todayISO(), 1) });
   save();
 }
 
 /* ============================================================
-   ЭКРАН: ПОВТОРЕНИЕ
+   ПОВТОРЕНИЕ
    ============================================================ */
 var reviewState = null;
 
 function viewReview() {
+  lessonState = null; stopTimer();
   var due = dueCards();
   if (!due.length) {
-    render('<div class="stack">' + headSimple(ui("review"), ui("srsCards")) +
-      '<div class="empty"><b>' + ui("emptyTitle") + "</b><p>" + ui("emptyBody") + "</p>" +
-      (S.queue.length ? '<span class="pill n">' + ui("inQueue", S.queue.length) + "</span>" : "") +
-      "</div></div>", "review");
+    reviewState = null;
+    setBar(backBtn() + "<h1>" + ui("review") + "<small>" + ui("srsCards") + "</small></h1>" + langToggle());
+    render('<div class="empty"><b>' + ui("emptyTitle") + "</b><p>" + ui("emptyBody") + "</p>" +
+      (S.queue.length ? '<span class="pill">' + ui("inQueue", S.queue.length) + "</span>" : "") + "</div>");
     return;
   }
   reviewState = { cards: shuffle(due), i: 0, revealed: false, right: 0 };
@@ -724,31 +763,21 @@ function viewReview() {
 
 function renderCard() {
   var r = reviewState, c = r.cards[r.i];
-  var body;
+  setBar(backBtn() + "<h1>" + ui("review") + "<small>" + ui("cardOf", r.i + 1, r.cards.length) + "</small></h1>" + langToggle());
+  var body = '<div class="card"><div class="eyebrow">DAY ' + pad(c.day) + "</div>";
   if (!r.revealed) {
-    body =
-      '<div class="card" style="padding:26px 18px;text-align:center">' +
-        '<div class="lbl">DAY ' + c.day + "</div>" +
-        '<div style="font-size:18px;margin-top:10px;line-height:1.4">' + esc(S.lang === "ko" ? c.ko : c.ru) + "</div>" +
-      "</div>" +
-      '<p class="mut" style="text-align:center;margin:0;font-size:13.5px">' + ui("sayItAloud") + "</p>" +
+    body += '<div class="ask">' + esc(S.lang === "ko" ? c.ko : c.ru) + "</div></div>" +
+      '<p class="fine" style="text-align:center;margin:12px 0">' + ui("sayItAloud") + "</p>" +
       '<button class="btn" data-reveal-card="1">' + ui("show") + "</button>";
   } else {
-    body =
-      '<div class="card" style="padding:26px 18px;text-align:center">' +
-        '<div class="lbl">DAY ' + c.day + "</div>" +
-        '<div class="en" style="font-size:19px;margin-top:10px">' + esc(c.en) + "</div>" +
-        '<div class="tr">' + esc(S.lang === "ko" ? c.ko : c.ru) + "</div>" +
-        '<button class="pill" style="margin-top:14px" data-say="' + esc(c.en) + '">' + ui("listen") + "</button>" +
-      "</div>" +
-      '<div class="btnrow">' +
-        '<button class="btn ghost" data-grade="0">' + ui("forgot") + "</button>" +
-        '<button class="btn teal" data-grade="1">' + ui("knew") + "</button>" +
-      "</div>";
+    var b = dayData(c.day).base;
+    body += '<div class="en" style="font-size:20px">' + hl(c.en, b.verb) + "</div>" +
+      '<div class="tr">' + esc(S.lang === "ko" ? c.ko : c.ru) + "</div>" +
+      '<button class="pill" data-say="' + esc(c.en) + '">' + ui("listen2") + "</button></div>" +
+      '<div class="btnrow"><button class="btn ghost" data-grade="0">' + ui("forgot") + "</button>" +
+      '<button class="btn" data-grade="1">' + ui("knew") + "</button></div>";
   }
-  render('<div class="stack">' +
-    headSimple(ui("cardOf", r.i + 1, r.cards.length), ui("review")) +
-    body + "</div>", "review");
+  render(body);
 }
 
 function grade(ok) {
@@ -758,190 +787,11 @@ function grade(ok) {
   else real.level = 0;
   real.due = addDays(todayISO(), INTERVALS[real.level]);
   save();
-  r.i++;
-  r.revealed = false;
-  if (r.i >= r.cards.length) {
-    toast(ui("reviewDone", r.right, r.cards.length));
-    reviewState = null;
-    go("today");
-  } else renderCard();
+  r.i++; r.revealed = false;
+  if (r.i >= r.cards.length) { toast(ui("reviewDone", r.right, r.cards.length)); home(); }
+  else renderCard();
 }
 
-/* ============================================================
-   ЭКРАН: КАРТА 100 ДНЕЙ
-   ============================================================ */
-function viewMap() {
-  var cur = currentDay();
-  var html = '<div class="stack">' + headSimple(ui("hundredDays"), ui("bookToc")) ;
-  var chs = window.CHAPTERS;
-  Object.keys(chs).forEach(function (k) {
-    var c = chs[k], cells = "";
-    for (var i = c.from; i <= c.to; i++) {
-      var cls = S.done[i] ? "done" : (i === cur ? "now" : (i < cur ? "" : "lock"));
-      cells += '<button class="cell ' + cls + '" data-lesson="' + i + '">' + i + "</button>";
-    }
-    var verbs = {};
-    window.DAYS.filter(function (d) { return d.day >= c.from && d.day <= c.to; })
-      .forEach(function (d) { verbs[d.verb] = (verbs[d.verb] || 0) + 1; });
-    html +=
-      '<div class="chapter">' +
-        '<div class="lbl">' + ui("chShort") + " " + k + " · " + esc(S.lang === "ko" ? (c.ko || c.ru) : c.ru) + " — DAY " + c.from + "–" + c.to + "</div>" +
-        '<div class="map">' + cells + "</div>" +
-        '<div class="pillrow">' + Object.keys(verbs).map(function (v) {
-          return '<span class="pill n">' + esc(v) + (verbs[v] > 1 ? " ×" + verbs[v] : "") + "</span>";
-        }).join("") + "</div>" +
-      "</div>";
-  });
-  render(html + "</div>", "map");
-}
-
-/* ============================================================
-   ЭКРАН: ПРОГРЕСС
-   ============================================================ */
-function viewProgress() {
-  var done = doneCount(), st = streak();
-  var verbs = {};
-  Object.keys(S.done).forEach(function (n) {
-    var b = dayData(+n).base; if (b) verbs[b.verb] = 1;
-  });
-  var phrases = S.queue.length;
-
-  var cells = "";
-  var start = S.start, today = todayISO();
-  for (var i = 0; i < 105; i++) {
-    var iso = addDays(start, i);
-    var on = Object.keys(S.done).some(function (k) { return S.done[k] === iso; });
-    cells += '<i class="wk' + (on ? " on" : "") + (iso === today ? " today" : "") + '"></i>';
-  }
-
-  render('<div class="stack">' +
-    headSimple(ui("progress"), ui("startedOn", dateShort(S.start))) +
-    '<div class="stats">' +
-      '<div class="stat"><b style="color:var(--acc2)">' + done + "</b><span>" + ui("statLessons") + "</span></div>" +
-      '<div class="stat"><b>' + phrases + "</b><span>" + ui("statPhrases") + "</span></div>" +
-      '<div class="stat"><b style="color:var(--acc)">' + Object.keys(verbs).length + "</b><span>" + ui("statVerbs") + "</span></div>" +
-    "</div>" +
-    '<div class="card">' +
-      '<div class="lbl" style="margin-bottom:10px">' + ui("calendar") + "</div>" +
-      '<div class="weeks">' + cells + "</div>" +
-      '<p class="tr" style="margin-top:10px">' + ui("softStreak") + "</p>" +
-    "</div>" +
-    '<div class="card tight row">' +
-      '<div class="grow"><div class="lbl">' + ui("streak") + '</div><div style="font-size:13.5px">' +
-        (st ? ui("streakDays", daysWord(st)) : ui("streakNone2")) + "</div></div>" +
-      '<div class="big" style="font-size:22px;color:var(--acc)">' + st + "</div>" +
-    "</div>" +
-    (S.queue.length ? '<div class="card tight"><div class="lbl" style="margin-bottom:7px">' + ui("upcoming") + "</div>" +
-      S.queue.slice().sort(function (a, b) { return a.due < b.due ? -1 : 1; }).slice(0, 4).map(function (c) {
-        return '<div class="row" style="padding:5px 0"><span class="en grow" style="font-size:13.5px">' + esc(c.en) +
-          '</span><span class="pill n">' + esc(c.due.slice(5).replace("-", ".")) + "</span></div>";
-      }).join("") + "</div>" : "") +
-  "</div>", "progress");
-}
-
-/* ============================================================
-   ЭКРАН: НАСТРОЙКИ
-   ============================================================ */
-var TZS = ["Asia/Almaty", "Asia/Seoul", "Europe/Moscow", "Asia/Tashkent", "Asia/Dubai", "America/Sao_Paulo", "America/Bogota"];
-
-function viewSettings() {
-  render('<div class="stack">' +
-    '<div class="head"><div><div class="sub">Verb 100</div><h1>' + ui("settings") + '</h1></div>' +
-    '<button class="iconbtn" data-go="today" aria-label="' + ui("back") + '"><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>' +
-
-    '<div class="card">' +
-      '<div class="field"><div><label>' + ui("langLabel") + '</label><div class="hint">' + ui("langHint") + "</div></div>" + langToggle() + "</div>" +
-      '<div class="field"><div><label>' + ui("theme") + "</label></div>" +
-        '<div class="seg">' +
-          ["auto", "light", "dark"].map(function (x) {
-            return '<button data-set-theme="' + x + '" class="' + (S.theme === x ? "on" : "") + '">' +
-              (x === "auto" ? ui("themeAuto") : x === "light" ? ui("themeLight") : ui("themeDark")) + "</button>";
-          }).join("") +
-        "</div></div>" +
-    "</div>" +
-
-    '<div class="card">' +
-      '<div class="field"><div><label>' + ui("reminder") + '</label><div class="hint">' + ui("reminderHint") + "</div></div>" +
-        '<input type="time" id="rem" value="' + esc(S.reminder) + '"></div>' +
-      '<div class="field"><div><label>' + ui("timezone") + '</label><div class="hint">' + ui("timezoneHint") + "</div></div>" +
-        '<select id="tz">' + TZS.map(function (z) {
-          return '<option value="' + z + '"' + (S.tz === z ? " selected" : "") + ">" + z.split("/")[1].replace("_", " ") + "</option>";
-        }).join("") + "</select></div>" +
-      '<div class="field"><div><label>' + ui("allowNotif") + '</label><div class="hint">' + ui("allowHint") + "</div></div>" +
-        '<button class="pill" id="notif">' + ui("enable") + "</button></div>" +
-    "</div>" +
-
-    '<div class="card">' +
-      '<div class="field"><div><label>' + ui("speechRate") + "</label></div>" +
-        '<div class="seg">' + [0.75, 0.95, 1.1].map(function (r) {
-          return '<button data-rate="' + r + '" class="' + (Math.abs(S.rate - r) < 0.01 ? "on" : "") + '">' + r + "×</button>";
-        }).join("") + "</div></div>" +
-      '<div class="field"><div><label>' + ui("accent") + "</label></div>" +
-        '<div class="seg">' + [["en-US", "US"], ["en-GB", "UK"]].map(function (v) {
-          return '<button data-voice="' + v[0] + '" class="' + (S.voice === v[0] ? "on" : "") + '">' + v[1] + "</button>";
-        }).join("") + "</div></div>" +
-    "</div>" +
-
-    '<div class="card">' +
-      '<div class="field"><div><label>' + ui("offline") + '</label><div class="hint" id="offHint">' + ui("offlineHint") + "</div></div>" +
-        '<button class="pill" id="offBtn">' + ui("download") + "</button></div>" +
-    "</div>" +
-
-    '<div class="card">' +
-      '<div class="field"><div><label>' + ui("startDate") + '</label><div class="hint">' + ui("startHint") + "</div></div>" +
-        '<input type="date" id="start" value="' + esc(S.start) + '"></div>' +
-      '<div class="field"><div><label>' + ui("resetLabel") + '</label><div class="hint">' + ui("resetHint") + "</div></div>" +
-        '<button class="pill" id="reset">' + ui("reset") + "</button></div>" +
-    "</div>" +
-
-    '<p class="mut" style="font-size:12px;text-align:center;margin:0">' + ui("footer") + "</p>" +
-  "</div>", null);
-
-  document.getElementById("rem").onchange = function () { S.reminder = this.value; save(); toast(ui("toastReminder", this.value)); };
-  document.getElementById("tz").onchange = function () { S.tz = this.value; save(); toast(ui("toastTz", this.value)); };
-  document.getElementById("start").onchange = function () { S.start = this.value; save(); toast(ui("toastStart", dateShort(this.value))); };
-  document.getElementById("reset").onclick = function () {
-    if (!confirm(ui("resetConfirm"))) return;
-    S.done = {}; S.queue = []; S.errors = {}; save(); go("today"); toast(ui("resetDone"));
-  };
-  var offBtn = document.getElementById("offBtn");
-  var offHint = document.getElementById("offHint");
-  function showOffline() {
-    offlineStatus().then(function (st) {
-      if (!st) { offBtn.hidden = true; offHint.textContent = ui("offlineNo"); return; }
-      if (st.have >= st.total) {
-        offHint.textContent = ui("offlineReady", Math.round(st.bytes / 1048576));
-        offBtn.textContent = ui("offlineAgain");
-        offBtn.classList.add("g");
-      } else {
-        offHint.textContent = ui("offlineHint");
-        offBtn.textContent = ui("download");
-        offBtn.classList.remove("g");
-      }
-    });
-  }
-  showOffline();
-  offBtn.onclick = function () {
-    offBtn.disabled = true;
-    downloadOffline(function (done, total) {
-      offHint.textContent = ui("downloading", done, total);
-    }).then(function () {
-      offBtn.disabled = false;
-      showOffline();
-    }).catch(function () {
-      offBtn.disabled = false;
-      offHint.textContent = ui("offlineFail");
-    });
-  };
-
-  document.getElementById("notif").onclick = function () {
-    if (!("Notification" in window)) return toast(ui("noNotif"));
-    Notification.requestPermission().then(function (p) {
-      toast(p === "granted" ? ui("notifOn") : ui("notifOff"));
-      if (p === "granted") scheduleReminder();
-    });
-  };
-}
 
 /* ---------- офлайн: складываем всё в кэш ---------- */
 var CACHE = "verb100-v2";
@@ -1009,62 +859,40 @@ function scheduleReminder() {
 }
 
 /* ============================================================
-   РОУТЕР
+   РОУТЕР И СОБЫТИЯ
    ============================================================ */
-function headSimple(title, sub) {
-  return '<div class="head"><div><div class="sub">' + esc(sub) + '</div><h1>' + esc(title) + "</h1></div>" +
-    '<div class="row" style="gap:8px">' + langToggle() +
-    '<button class="iconbtn" data-go="settings" aria-label="' + ui("settings") + '"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg></button></div></div>';
-}
-
-var currentTab = "today";
-var settingsOpen = false;
-
-/* Перерисовать тот экран, который открыт сейчас. */
+/* Перерисовать текущий экран, сохранив прокрутку (смена языка, темы, скорости). */
 function rerender() {
-  if (lessonState) {
-    if (lessonSteps()[lessonState.step] === "quiz") renderQuiz();
-    else renderLesson();
-    return;
-  }
-  if (reviewState) { renderCard(); return; }
-  if (settingsOpen) { viewSettings(); return; }
-  go(currentTab);
+  var y = window.scrollY;
+  if (lessonState) renderLesson();
+  else if (reviewState) renderCard();
+  else home();
+  window.scrollTo(0, y);
 }
-function render(html, tab) {
-  view.innerHTML = "";
-  view.appendChild(h('<div>' + html + "</div>"));
-  view.scrollTop = 0;
-  if (tab) {
-    currentTab = tab;
-    tabbar.hidden = false;
-    Array.prototype.slice.call(tabbar.children).forEach(function (b) {
-      b.classList.toggle("on", b.dataset.go === tab);
-    });
-  } else {
-    tabbar.hidden = true;
-  }
-  var tabNames = ["tabToday", "tabMap", "tabReview", "tabProgress"];
-  Array.prototype.slice.call(tabbar.children).forEach(function (b, i) {
-    var label = b.querySelector("span");
-    if (label) label.textContent = ui(tabNames[i]);
-  });
-  var due = dueCards().length;
-  var badge = document.getElementById("reviewBadge");
-  badge.hidden = !due;
-  badge.textContent = due;
-}
-
 function go(where) {
-  settingsOpen = (where === "settings");
-  if (where === "today") viewToday();
-  else if (where === "map") viewMap();
-  else if (where === "review") viewReview();
-  else if (where === "progress") viewProgress();
-  else if (where === "settings") viewSettings();
+  if (where === "review") viewReview();
+  else home();
 }
 
-/* ---------- делегирование событий ---------- */
+/* Озвучить несколько строк подряд с подсветкой текущей. */
+function sayList(els) {
+  if (!window.speechSynthesis) return toast(ui("noTts"));
+  speechSynthesis.cancel();
+  var i = 0;
+  (function next() {
+    document.querySelectorAll(".playing").forEach(function (x) { x.classList.remove("playing"); });
+    if (i >= els.length || !els[i].isConnected) return;
+    var el = els[i++];
+    el.classList.add("playing");
+    var u = new SpeechSynthesisUtterance(el.dataset.say);
+    u.lang = S.voice; u.rate = S.rate;
+    var v = voices.filter(function (x) { return x.lang === S.voice || x.lang.replace("_", "-") === S.voice; })[0];
+    if (v) u.voice = v;
+    u.onend = u.onerror = next;
+    speechSynthesis.speak(u);
+  })();
+}
+
 /* Переключатель курсов: «Базовые глаголы 100» ⇄ «Фразовые глаголы 100» (phrasal-verbs/).
    Последний открытый курс хранится в localStorage "courses:last" — index.html
    открывает его при запуске. */
@@ -1072,61 +900,112 @@ function setCourse(c) { try { localStorage.setItem("courses:last", c); } catch (
 setCourse("basic");
 
 document.addEventListener("click", function (e) {
-  var el;
+  var el, p;
 
   if ((el = e.target.closest("[data-course]"))) { setCourse(el.dataset.course); return; } // ссылка ведёт дальше сама
+  if ((el = e.target.closest(".steps a"))) {
+    e.preventDefault();
+    var sec = document.querySelector(el.getAttribute("href"));
+    if (sec) window.scrollTo({ top: sec.getBoundingClientRect().top + window.scrollY - 118, behavior: "smooth" });
+    return;
+  }
+  if (e.target.closest("[data-home]")) { home(); return; }
   if ((el = e.target.closest("[data-go]"))) { go(el.dataset.go); return; }
+  if ((el = e.target.closest("[data-scroll]"))) {
+    var target = document.getElementById(el.dataset.scroll);
+    if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+    return;
+  }
   if ((el = e.target.closest("[data-lesson]"))) { startLesson(+el.dataset.lesson); return; }
-  if ((el = e.target.closest("[data-say]"))) { speak(el.dataset.say, el); return; }
-  if (e.target.closest("[data-say-all]")) {
-    var f = dayData(lessonState.day).full;
-    var lines = f.dialogue.map(function (l) { return l.en; });
-    var i = 0;
-    (function next() {
-      if (i >= lines.length) return;
-      var u = new SpeechSynthesisUtterance(lines[i++]);
-      u.lang = S.voice; u.rate = S.rate;
-      var v = voices.filter(function (x) { return x.lang === S.voice; })[0];
-      if (v) u.voice = v;
-      u.onend = next;
-      speechSynthesis.speak(u);
-    })();
+  if ((el = e.target.closest("[data-lang]"))) { S.lang = el.dataset.lang; save(); rerender(); return; }
+  if ((el = e.target.closest("[data-set-theme]"))) { S.theme = el.dataset.setTheme; save(); applyTheme(); rerender(); return; }
+  if ((el = e.target.closest("[data-rate]"))) { S.rate = parseFloat(el.dataset.rate); save(); rerender(); return; }
+  if ((el = e.target.closest("[data-voice]"))) { S.voice = el.dataset.voice; save(); rerender(); return; }
+
+  /* урок */
+  if ((el = e.target.closest("[data-playall]"))) {
+    sayList(Array.prototype.slice.call(document.querySelectorAll("#" + el.dataset.playall + " [data-say]")));
     return;
   }
-  if ((el = e.target.closest("[data-lang]"))) {
-    S.lang = el.dataset.lang; save(); rerender(); return;
-  }
-  if ((el = e.target.closest("[data-set-theme]"))) {
-    S.theme = el.dataset.setTheme; save(); applyTheme(); viewSettings(); return;
-  }
-  if ((el = e.target.closest("[data-rate]"))) {
-    var r = parseFloat(el.dataset.rate);
-    if (r === 1) { var cyc = [0.75, 0.95, 1.1]; var idx = cyc.indexOf(S.rate); S.rate = cyc[(idx + 1) % cyc.length]; }
-    else S.rate = r;
-    save();
-    if (lessonState) renderLesson(); else viewSettings();
-    return;
-  }
-  if ((el = e.target.closest("[data-voice]"))) { S.voice = el.dataset.voice; save(); viewSettings(); return; }
-  if ((el = e.target.closest("[data-toggle]"))) {
-    var item = e.target.closest(".exitem");
-    if (item && !e.target.closest(".play")) item.classList.toggle("hidden");
+  if ((el = e.target.closest("[data-hidetr]"))) {
+    var on = document.body.classList.toggle("hide-tr");
+    el.setAttribute("aria-pressed", on);
+    document.querySelectorAll(".tr.show").forEach(function (x) { x.classList.remove("show"); });
     return;
   }
   if ((el = e.target.closest("[data-reveal]"))) {
+    lessonState.revealed = true;
     var line = dayData(lessonState.day).full.dialogue.filter(function (l) { return l.you; })[0];
-    el.innerHTML = '<div class="en">' + esc(line.en) + '</div><div class="tr">' + esc(tr(line)) + "</div>";
-    el.classList.remove("you"); el.classList.add("b");
-    speak(line.en);
+    var fresh = h(lineHTML(line, dayData(lessonState.day).base.verb, '<div class="who">' + esc(line.s) + " · " + ui("you") + "</div>"));
+    el.replaceWith(fresh);
+    speak(line.en, fresh);
     return;
   }
-  if (e.target.closest("[data-clear]")) { if (activeBuild) activeBuild(); return; }
-  if (e.target.closest("[data-next]")) { lessonState.step++; renderLesson(); return; }
-  if (e.target.closest("[data-qnext]")) { quizNext(); return; }
+  if ((el = e.target.closest(".tr")) && document.body.classList.contains("hide-tr")) { el.classList.toggle("show"); return; }
+  if ((el = e.target.closest("[data-tok]"))) {
+    p = el.dataset.tok.split(":"); var qi = +p[0];
+    var picked = lessonState.picked[qi];
+    if (el.classList.contains("used") || lessonState.answered[qi] === true) return;
+    var need = dayData(lessonState.day).full.quiz[qi].answer.split(/\s+/).filter(Boolean).length;
+    if (picked.length >= need) return;
+    picked.push(+p[1]);
+    drawQ(qi); answerBuild(qi);
+    return;
+  }
+  if ((el = e.target.closest("[data-un]"))) {
+    p = el.dataset.un.split(":");
+    if (lessonState.answered[+p[0]] === true) return;
+    lessonState.picked[+p[0]].splice(+p[1], 1);
+    drawQ(+p[0]);
+    return;
+  }
+  if ((el = e.target.closest("[data-clear]"))) {
+    var ci = +el.dataset.clear;
+    if (lessonState.answered[ci] === true) return;
+    lessonState.picked[ci] = [];
+    drawQ(ci);
+    return;
+  }
+  if ((el = e.target.closest("[data-opt]"))) {
+    p = el.dataset.opt.split(":"); var oi = +p[0], j = +p[1];
+    if (lessonState.choice[oi] !== undefined) return;
+    var q = dayData(lessonState.day).full.quiz[oi];
+    lessonState.choice[oi] = j;
+    lessonState.answered[oi] = !!q.options[j].ok;
+    if (!q.options[j].ok) lessonState.wrong++;
+    var right = q.options.filter(function (x) { return x.ok; })[0];
+    if (right) pushCard(lessonState.day, right.en, !q.options[j].ok);
+    drawQ(oi); drawResult();
+    return;
+  }
   if (e.target.closest("[data-finish]")) { finishLesson(); return; }
+
+  /* повторение */
   if (e.target.closest("[data-reveal-card]")) { reviewState.revealed = true; renderCard(); return; }
   if ((el = e.target.closest("[data-grade]"))) { grade(el.dataset.grade === "1"); return; }
+
+  /* строка с озвучкой (в самом конце: внутри неё нет других кнопок) */
+  if ((el = e.target.closest("[data-say]"))) { speak(el.dataset.say, el); return; }
 });
+
+document.addEventListener("keydown", function (e) {
+  if ((e.key === "Enter" || e.key === " ") && e.target.matches && e.target.matches(".line,.keyline")) { e.preventDefault(); e.target.click(); }
+});
+
+/* Вкладки урока: подсвечиваем ту, чей раздел сейчас на экране. */
+var spyT;
+window.addEventListener("scroll", function () {
+  clearTimeout(spyT);
+  spyT = setTimeout(function () {
+    if (stepsNav.hidden) return;
+    var on = 0;
+    ["s1", "s2", "s3"].forEach(function (id, i) {
+      var s = document.getElementById(id);
+      if (s && s.getBoundingClientRect().top < 160) on = i;
+    });
+    stepsNav.querySelectorAll("a").forEach(function (a, i) { a.classList.toggle("on", i === on); });
+  }, 80);
+}, { passive: true });
 
 function applyTheme() {
   if (S.theme === "auto") document.documentElement.removeAttribute("data-theme");
@@ -1135,7 +1014,7 @@ function applyTheme() {
 
 /* ---------- старт ---------- */
 applyTheme();
-go("today");
+home();
 scheduleReminder();
 
 if ("serviceWorker" in navigator) {

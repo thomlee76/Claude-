@@ -108,6 +108,38 @@
      "ko": "상태를 나타내는 have는 진행형으로 쓰지 않습니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Do you have a charger I could borrow?",
+    "ru": "У тебя есть зарядка? Можно одолжить?",
+    "ko": "충전기 있으면 좀 빌려줄 수 있어요?"
+   },
+   {
+    "en": "My sister has three kids.",
+    "ru": "У моей сестры трое детей.",
+    "ko": "제 여동생은 애가 셋 있어요."
+   },
+   {
+    "en": "I don't have a car, so I take the subway.",
+    "ru": "Машины у меня нет, так что езжу на метро.",
+    "ko": "차가 없어서 지하철 타고 다녀요."
+   },
+   {
+    "en": "Do you have this in a smaller size?",
+    "ru": "У вас есть такое на размер меньше?",
+    "ko": "이거 작은 사이즈 있어요?"
+   },
+   {
+    "en": "I have a sore throat and a slight fever.",
+    "ru": "У меня болит горло и небольшая температура.",
+    "ko": "목이 아프고 열이 좀 있어요."
+   },
+   {
+    "en": "We didn't have much money back then.",
+    "ru": "Денег у нас тогда было немного.",
+    "ko": "그때는 저희가 돈이 별로 없었어요."
+   }
   ]
  },
  "2": {
@@ -219,6 +251,38 @@
      "ko": "식사는 동작이므로 진행형을 씁니다. I have lunch at noon은 습관을 뜻합니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "What did you have for lunch?",
+    "ru": "Что ты ел на обед?",
+    "ko": "점심 뭐 먹었어요?"
+   },
+   {
+    "en": "Let's have pizza tonight.",
+    "ru": "Давай сегодня поедим пиццу.",
+    "ko": "오늘 저녁엔 피자 먹자."
+   },
+   {
+    "en": "I don't usually have breakfast on weekdays.",
+    "ru": "По будням я обычно не завтракаю.",
+    "ko": "평일엔 보통 아침을 안 먹어요."
+   },
+   {
+    "en": "Would you like to have some tea?",
+    "ru": "Хотите чаю?",
+    "ko": "차 좀 드실래요?"
+   },
+   {
+    "en": "We're having Korean barbecue for dinner.",
+    "ru": "На ужин у нас корейское барбекю.",
+    "ko": "오늘 저녁은 고기 구워 먹어요."
+   },
+   {
+    "en": "My doctor told me not to have so much caffeine.",
+    "ru": "Врач сказал мне поменьше налегать на кофеин.",
+    "ko": "의사 선생님이 카페인을 너무 많이 마시지 말래요."
+   }
   ]
  },
  "3": {
@@ -328,6 +392,38 @@
      "ru": "О текущем периоде — Continuous. She has a hard time звучит как общее свойство характера.",
      "ko": "지금 겪고 있는 상황은 진행형으로 말합니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Have a great weekend!",
+    "ru": "Хороших выходных!",
+    "ko": "주말 잘 보내세요!"
+   },
+   {
+    "en": "Did you have a nice birthday?",
+    "ru": "Хорошо отметил день рождения?",
+    "ko": "생일 잘 보냈어요?"
+   },
+   {
+    "en": "We had a blast at the beach.",
+    "ru": "Мы классно оторвались на пляже.",
+    "ko": "바닷가에서 진짜 재밌게 놀았어요."
+   },
+   {
+    "en": "I'm having a rough week at work.",
+    "ru": "У меня на работе тяжёлая неделя.",
+    "ko": "이번 주는 회사 일 때문에 너무 힘들어요."
+   },
+   {
+    "en": "I hope you have a good trip.",
+    "ru": "Хорошей тебе поездки.",
+    "ko": "여행 잘 다녀오세요."
+   },
+   {
+    "en": "I didn't have a good night. I kept waking up.",
+    "ru": "Ночь прошла так себе — всё время просыпался.",
+    "ko": "밤에 잠을 잘 못 잤어요. 계속 깼어요."
    }
   ]
  },
@@ -439,6 +535,38 @@
      "ko": "기간이 정해진 행사는 진행형이 자연스럽습니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "We're having a baby shower for Jenny next week.",
+    "ru": "На следующей неделе устраиваем Дженни бэби-шауэр.",
+    "ko": "다음 주에 제니 베이비 샤워 해요."
+   },
+   {
+    "en": "Is the school having a festival this year?",
+    "ru": "В школе в этом году будет фестиваль?",
+    "ko": "올해 학교에서 축제 해요?"
+   },
+   {
+    "en": "We're not having a big wedding.",
+    "ru": "Пышную свадьбу мы устраивать не будем.",
+    "ko": "저희는 결혼식 크게 안 해요."
+   },
+   {
+    "en": "Could we have the meeting in the small conference room?",
+    "ru": "Можно провести встречу в маленькой переговорной?",
+    "ko": "회의를 작은 회의실에서 해도 될까요?"
+   },
+   {
+    "en": "We had a farewell party for Tom yesterday.",
+    "ru": "Вчера мы устроили Тому прощальную вечеринку.",
+    "ko": "어제 톰 송별회 했어요."
+   },
+   {
+    "en": "The gym is having an open house on Sunday.",
+    "ru": "В воскресенье в спортзале день открытых дверей.",
+    "ko": "일요일에 헬스장에서 오픈 하우스 행사를 해요."
+   }
   ]
  },
  "5": {
@@ -548,6 +676,38 @@
      "ru": "have to — это обязанность, здесь она не нужна: работа уже есть как объект.",
      "ko": "여기서는 의무가 아니라 '할 일'이라는 목적어이므로 have to를 쓰지 않습니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "I have a report to finish tonight.",
+    "ru": "Мне сегодня вечером надо доделать отчёт.",
+    "ko": "오늘 밤까지 끝내야 할 보고서가 있어요."
+   },
+   {
+    "en": "Sorry, I have a few errands to run.",
+    "ru": "Извини, мне надо сбегать по делам.",
+    "ko": "죄송해요, 볼일이 좀 있어서요."
+   },
+   {
+    "en": "Do you have anything to wear to the wedding?",
+    "ru": "Тебе есть что надеть на свадьбу?",
+    "ko": "결혼식에 입고 갈 옷 있어요?"
+   },
+   {
+    "en": "I don't have anything to do this weekend.",
+    "ru": "На выходных мне совершенно нечего делать.",
+    "ko": "이번 주말엔 할 일이 하나도 없어요."
+   },
+   {
+    "en": "We have a lot of packing to do before the trip.",
+    "ru": "Перед поездкой нам ещё собираться и собираться.",
+    "ko": "여행 가기 전에 짐 쌀 게 많아요."
+   },
+   {
+    "en": "Do you have a minute? I have something to tell you.",
+    "ru": "Есть минутка? Мне надо тебе кое-что сказать.",
+    "ko": "잠깐 시간 돼요? 할 말이 있어요."
    }
   ]
  },
@@ -659,6 +819,38 @@
      "ko": "영어는 장소를 주어로 삼습니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Does your apartment have a balcony?",
+    "ru": "У тебя в квартире есть балкон?",
+    "ko": "집에 베란다 있어요?"
+   },
+   {
+    "en": "This phone has amazing battery life.",
+    "ru": "Этот телефон очень долго держит заряд.",
+    "ko": "이 폰은 배터리가 진짜 오래가요."
+   },
+   {
+    "en": "The old town has a lot of history.",
+    "ru": "У старого города богатая история.",
+    "ko": "구시가지는 역사가 깊어요."
+   },
+   {
+    "en": "This jacket doesn't have any pockets.",
+    "ru": "У этой куртки вообще нет карманов.",
+    "ko": "이 재킷은 주머니가 하나도 없어요."
+   },
+   {
+    "en": "The clinic has parking in the back.",
+    "ru": "У клиники есть парковка с обратной стороны.",
+    "ko": "그 병원은 뒤쪽에 주차장이 있어요."
+   },
+   {
+    "en": "Our new office will have a rooftop garden.",
+    "ru": "В нашем новом офисе будет сад на крыше.",
+    "ko": "새 사무실에는 옥상 정원이 있을 거예요."
+   }
   ]
  },
  "7": {
@@ -768,6 +960,38 @@
      "ru": "Thanks for having me — готовая формула, менять её не нужно.",
      "ko": "통째로 굳어진 표현입니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Let's have the neighbors over for a barbecue.",
+    "ru": "Давай позовём соседей на барбекю.",
+    "ko": "이웃들 불러서 바비큐 해요."
+   },
+   {
+    "en": "Thanks so much for having me this weekend.",
+    "ru": "Огромное спасибо, что приютили меня на выходные.",
+    "ko": "이번 주말에 재워 주셔서 정말 감사해요."
+   },
+   {
+    "en": "We had my cousins over for Christmas.",
+    "ru": "На Рождество к нам приезжали мои двоюродные братья и сёстры.",
+    "ko": "크리스마스에 사촌들을 집에 초대했어요."
+   },
+   {
+    "en": "Are you having anyone over tonight?",
+    "ru": "К тебе сегодня кто-нибудь придёт?",
+    "ko": "오늘 밤에 누구 초대했어요?"
+   },
+   {
+    "en": "My place is too small to have people over.",
+    "ru": "У меня слишком тесно, чтобы звать гостей.",
+    "ko": "우리 집은 너무 좁아서 사람을 못 불러요."
+   },
+   {
+    "en": "Would it be okay if I had a few friends over?",
+    "ru": "Ничего, если я позову пару друзей?",
+    "ko": "친구 몇 명 불러도 괜찮을까요?"
    }
   ]
  },
@@ -879,6 +1103,38 @@
      "ko": "have 뒤에는 to를 쓰지 않습니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "I'll have the hotel call you a taxi.",
+    "ru": "Я попрошу в отеле вызвать вам такси.",
+    "ko": "호텔에 택시 불러 달라고 할게요."
+   },
+   {
+    "en": "Could you have someone look at my laptop?",
+    "ru": "Можете попросить кого-нибудь посмотреть мой ноутбук?",
+    "ko": "누구한테 제 노트북 좀 봐 달라고 해 주실 수 있어요?"
+   },
+   {
+    "en": "I had the mechanic check the brakes.",
+    "ru": "Я попросил механика проверить тормоза.",
+    "ko": "정비사한테 브레이크 점검해 달라고 했어요."
+   },
+   {
+    "en": "Don't worry, I'll have Mike pick up the kids.",
+    "ru": "Не волнуйся, попрошу Майка забрать детей.",
+    "ko": "걱정 마세요, 마이크한테 애들 데려오라고 할게요."
+   },
+   {
+    "en": "We had a designer redo our logo.",
+    "ru": "Мы попросили дизайнера переделать нам логотип.",
+    "ko": "디자이너한테 로고를 다시 만들어 달라고 했어요."
+   },
+   {
+    "en": "Have the front desk send up some towels.",
+    "ru": "Попроси на ресепшене, чтобы принесли полотенца.",
+    "ko": "프런트에 수건 좀 올려 보내 달라고 하세요."
+   }
   ]
  },
  "9": {
@@ -988,6 +1244,38 @@
      "ru": "Письмо уже получено — это завершённое действие, Continuous не подходит.",
      "ko": "이미 끝난 동작이므로 진행형을 쓰지 않습니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Did you get my text?",
+    "ru": "Ты получил моё сообщение?",
+    "ko": "제 문자 받았어요?"
+   },
+   {
+    "en": "I got a new laptop last week.",
+    "ru": "На прошлой неделе я купил новый ноутбук.",
+    "ko": "지난주에 노트북 새로 샀어요."
+   },
+   {
+    "en": "Where can I get a SIM card around here?",
+    "ru": "Где тут можно купить сим-карту?",
+    "ko": "이 근처에서 유심 어디서 살 수 있어요?"
+   },
+   {
+    "en": "She got a promotion last month.",
+    "ru": "В прошлом месяце её повысили.",
+    "ko": "걔 지난달에 승진했어요."
+   },
+   {
+    "en": "I haven't gotten a reply from the supplier yet.",
+    "ru": "От поставщика ответа пока нет.",
+    "ko": "공급업체에서 아직 답장을 못 받았어요."
+   },
+   {
+    "en": "Could you get some milk on your way home?",
+    "ru": "Купишь молока по дороге домой?",
+    "ko": "집에 오는 길에 우유 좀 사 올래요?"
    }
   ]
  },
@@ -1099,6 +1387,38 @@
      "ko": "in advance 앞에는 very가 아니라 way를 씁니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "We couldn't get a table, so we ate at the bar.",
+    "ru": "Столик нам не достался, так что ели у стойки.",
+    "ko": "자리가 없어서 바에서 먹었어요."
+   },
+   {
+    "en": "Did you manage to get a parking spot?",
+    "ru": "Удалось найти место на парковке?",
+    "ko": "주차 자리 찾았어요?"
+   },
+   {
+    "en": "Do you think we can still get seats for the eight o'clock show?",
+    "ru": "Как думаешь, на восьмичасовой сеанс ещё можно взять места?",
+    "ko": "8시 공연 아직 자리 구할 수 있을까요?"
+   },
+   {
+    "en": "Go early, or you won't get a seat on the bus.",
+    "ru": "Иди пораньше, а то в автобусе не сядешь.",
+    "ko": "일찍 가요, 안 그러면 버스에서 못 앉아요."
+   },
+   {
+    "en": "I got an aisle seat this time.",
+    "ru": "В этот раз мне досталось место у прохода.",
+    "ko": "이번엔 통로 쪽 자리 잡았어요."
+   },
+   {
+    "en": "We'll never get a table at this hour.",
+    "ru": "В это время мы ни за что не найдём столик.",
+    "ko": "이 시간에는 절대 자리 못 잡아요."
+   }
   ]
  },
  "11": {
@@ -1208,6 +1528,38 @@
      "ru": "drink coffee звучит как «употреблять кофе вообще». Приглашение — get coffee.",
      "ko": "drink coffee는 습관을 말하는 느낌입니다. 약속 제안은 get coffee입니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Want to get lunch tomorrow?",
+    "ru": "Пообедаем завтра вместе?",
+    "ko": "내일 점심 같이 먹을래요?"
+   },
+   {
+    "en": "We should get dinner when you're back in town.",
+    "ru": "Как вернёшься, надо будет поужинать вместе.",
+    "ko": "다시 오면 저녁 한번 먹어요."
+   },
+   {
+    "en": "Let's get some pizza after the game.",
+    "ru": "Давай после игры поедим пиццы.",
+    "ko": "경기 끝나고 피자 먹으러 가요."
+   },
+   {
+    "en": "I can't get drinks tonight. I'm on antibiotics.",
+    "ru": "Сегодня выпить не получится — я на антибиотиках.",
+    "ko": "오늘은 술 못 마셔요. 항생제 먹고 있거든요."
+   },
+   {
+    "en": "We got brunch at that new place downtown.",
+    "ru": "Мы сходили на бранч в то новое место в центре.",
+    "ko": "시내에 새로 생긴 데서 브런치 먹었어요."
+   },
+   {
+    "en": "Do you have time to get a quick coffee?",
+    "ru": "Есть время быстренько выпить кофе?",
+    "ko": "잠깐 커피 한잔할 시간 있어요?"
    }
   ]
  },
@@ -1319,6 +1671,38 @@
      "ko": "I want은 무례하게 들립니다. Can I get이 표준입니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Can I get a refill, please?",
+    "ru": "Можно ещё подлить, пожалуйста?",
+    "ko": "리필 좀 해 주시겠어요?"
+   },
+   {
+    "en": "Can I get the dressing on the side?",
+    "ru": "Можно соус отдельно?",
+    "ko": "드레싱은 따로 주시겠어요?"
+   },
+   {
+    "en": "Could I get a glass of water, please?",
+    "ru": "Можно стакан воды, пожалуйста?",
+    "ko": "물 한 잔만 주시겠어요?"
+   },
+   {
+    "en": "Can I get a cheeseburger with no onions?",
+    "ru": "Можно чизбургер без лука?",
+    "ko": "치즈버거 양파 빼고 주세요."
+   },
+   {
+    "en": "Can we get two more beers over here?",
+    "ru": "Можно нам сюда ещё два пива?",
+    "ko": "여기 맥주 두 잔 더 주세요."
+   },
+   {
+    "en": "I got the pasta last time, and it was great.",
+    "ru": "В прошлый раз я брал пасту — было очень вкусно.",
+    "ko": "지난번에 파스타 시켰는데 맛있었어요."
+   }
   ]
  },
  "13": {
@@ -1428,6 +1812,38 @@
      "ru": "Перед home предлог to не ставится.",
      "ko": "home 앞에는 to를 쓰지 않습니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "When do you get back from Tokyo?",
+    "ru": "Когда ты возвращаешься из Токио?",
+    "ko": "도쿄에서 언제 돌아와요?"
+   },
+   {
+    "en": "Did you get home okay last night?",
+    "ru": "Ты вчера нормально добрался до дома?",
+    "ko": "어젯밤에 집에 잘 들어갔어요?"
+   },
+   {
+    "en": "I didn't get to the office until ten.",
+    "ru": "До офиса я добрался только к десяти.",
+    "ko": "열 시나 돼서야 사무실에 도착했어요."
+   },
+   {
+    "en": "What's the best way to get downtown?",
+    "ru": "Как лучше всего добраться до центра?",
+    "ko": "시내까지 어떻게 가는 게 제일 좋아요?"
+   },
+   {
+    "en": "We'll get there around noon if traffic's okay.",
+    "ru": "Если не будет пробок, доедем около полудня.",
+    "ko": "차 안 막히면 정오쯤 도착할 거예요."
+   },
+   {
+    "en": "Could you let me know when you get to the hotel?",
+    "ru": "Дадите знать, когда доберётесь до отеля?",
+    "ko": "호텔 도착하시면 알려 주시겠어요?"
    }
   ]
  },
@@ -1539,6 +1955,38 @@
      "ko": "이해는 상태이므로 진행형을 쓰지 않습니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "I still don't get how this app works.",
+    "ru": "Я до сих пор не понимаю, как работает это приложение.",
+    "ko": "이 앱 어떻게 쓰는 건지 아직도 모르겠어요."
+   },
+   {
+    "en": "Did you get what the manager said?",
+    "ru": "Ты понял, что сказал менеджер?",
+    "ko": "매니저가 한 말 이해했어요?"
+   },
+   {
+    "en": "I totally get it. You need a break.",
+    "ru": "Я тебя прекрасно понимаю. Тебе нужен отдых.",
+    "ko": "완전 이해해요. 좀 쉬셔야겠어요."
+   },
+   {
+    "en": "Sorry, I didn't quite get your name.",
+    "ru": "Простите, я не расслышал, как вас зовут.",
+    "ko": "죄송해요, 성함을 잘 못 들었어요."
+   },
+   {
+    "en": "My parents don't get why I quit my job.",
+    "ru": "Родители не понимают, почему я уволился.",
+    "ko": "부모님은 제가 왜 회사를 그만뒀는지 이해를 못 하세요."
+   },
+   {
+    "en": "I get that you're busy, but please call me back.",
+    "ru": "Понимаю, что ты занят, но перезвони, пожалуйста.",
+    "ko": "바쁜 건 알지만 전화 좀 다시 주세요."
+   }
   ]
  },
  "15": {
@@ -1648,6 +2096,38 @@
      "ru": "В разговоре изменение состояния — это get. become звучит книжно.",
      "ko": "구어에서 변화는 get으로 말합니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "It's getting late. I should head home.",
+    "ru": "Уже поздно. Мне пора домой.",
+    "ko": "벌써 늦었네요. 이제 집에 가야겠어요."
+   },
+   {
+    "en": "Your coffee's getting cold.",
+    "ru": "У тебя кофе остывает.",
+    "ko": "커피 식어요."
+   },
+   {
+    "en": "I got really nervous before the interview.",
+    "ru": "Перед собеседованием я ужасно разнервничался.",
+    "ko": "면접 전에 엄청 긴장했어요."
+   },
+   {
+    "en": "Is your cold getting any better?",
+    "ru": "Простуда хоть немного проходит?",
+    "ko": "감기는 좀 나아지고 있어요?"
+   },
+   {
+    "en": "Rent is getting crazy expensive around here.",
+    "ru": "Аренда тут становится безумно дорогой.",
+    "ko": "이 동네 월세가 말도 안 되게 비싸지고 있어요."
+   },
+   {
+    "en": "Don't get mad, but I lost your umbrella.",
+    "ru": "Только не злись, но я потерял твой зонт.",
+    "ko": "화내지 마, 근데 네 우산 잃어버렸어."
    }
   ]
  },
@@ -1759,6 +2239,38 @@
      "ko": "통증이 '생기는' 것이므로 get을 씁니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "I always get a stomachache when I'm stressed.",
+    "ru": "Когда я нервничаю, у меня всегда болит живот.",
+    "ko": "스트레스 받으면 항상 배가 아파요."
+   },
+   {
+    "en": "Did you get sick on the trip?",
+    "ru": "Ты заболел в поездке?",
+    "ko": "여행 가서 아팠어요?"
+   },
+   {
+    "en": "I got a nasty cold last week.",
+    "ru": "На прошлой неделе я сильно простудился.",
+    "ko": "지난주에 감기 심하게 걸렸어요."
+   },
+   {
+    "en": "Take a jacket, or you'll get sick.",
+    "ru": "Возьми куртку, а то заболеешь.",
+    "ko": "재킷 챙겨, 안 그러면 감기 걸려."
+   },
+   {
+    "en": "My son got the flu at school.",
+    "ru": "Сын подхватил грипп в школе.",
+    "ko": "아들이 학교에서 독감 옮아 왔어요."
+   },
+   {
+    "en": "I don't usually get seasick.",
+    "ru": "Меня обычно не укачивает на воде.",
+    "ko": "저는 보통 배멀미 안 해요."
+   }
   ]
  },
  "17": {
@@ -1868,6 +2380,38 @@
      "ru": "Срок «не позже чем» — by. until означает «вплоть до», то есть непрерывно.",
      "ko": "기한은 by, 지속은 until입니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Can you help me get this couch through the door?",
+    "ru": "Поможешь протащить этот диван в дверь?",
+    "ko": "이 소파 문으로 들이는 것 좀 도와줄래요?"
+   },
+   {
+    "en": "We need to get Grandma to the hospital.",
+    "ru": "Нужно отвезти бабушку в больницу.",
+    "ko": "할머니를 병원에 모셔다 드려야 해요."
+   },
+   {
+    "en": "I couldn't get my suitcase into the overhead bin.",
+    "ru": "Я не смог запихнуть чемодан на верхнюю полку.",
+    "ko": "캐리어를 머리 위 짐칸에 못 넣었어요."
+   },
+   {
+    "en": "I'll get the kids to school today.",
+    "ru": "Сегодня я отвезу детей в школу.",
+    "ko": "오늘은 제가 애들 학교에 데려다줄게요."
+   },
+   {
+    "en": "How did you get that piano up to the fourth floor?",
+    "ru": "Как вы затащили пианино на четвёртый этаж?",
+    "ko": "그 피아노를 4층까지 어떻게 올렸어요?"
+   },
+   {
+    "en": "Could you get this package to the post office by noon?",
+    "ru": "Можете отнести эту посылку на почту до полудня?",
+    "ko": "이 소포 정오까지 우체국에 좀 갖다주실 수 있어요?"
    }
   ]
  },
@@ -1979,6 +2523,38 @@
      "ko": "둘째 문장도 틀리진 않지만 번역투입니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Does your bedroom get a lot of light?",
+    "ru": "У тебя в спальне много света?",
+    "ko": "침실에 햇빛 잘 들어요?"
+   },
+   {
+    "en": "Seattle gets a lot of rain in the fall.",
+    "ru": "Осенью в Сиэтле много дождей.",
+    "ko": "시애틀은 가을에 비가 많이 와요."
+   },
+   {
+    "en": "Our website gets thousands of visitors a day.",
+    "ru": "На наш сайт заходят тысячи людей в день.",
+    "ko": "저희 웹사이트는 하루 방문자가 수천 명이에요."
+   },
+   {
+    "en": "This place gets a lot of tourists in summer.",
+    "ru": "Летом здесь полно туристов.",
+    "ko": "여기는 여름에 관광객이 많이 와요."
+   },
+   {
+    "en": "The cabin doesn't get any cell service.",
+    "ru": "В домике совсем не ловит связь.",
+    "ko": "그 오두막은 휴대폰이 아예 안 터져요."
+   },
+   {
+    "en": "Did your town get much snow last winter?",
+    "ru": "У вас в городе прошлой зимой много снега выпало?",
+    "ko": "지난겨울에 그 동네 눈 많이 왔어요?"
+   }
   ]
  },
  "19": {
@@ -2088,6 +2664,38 @@
      "ru": "При порядке «кому — что» предлог не нужен.",
      "ko": "사람이 먼저 오면 전치사를 쓰지 않습니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Can I get you anything to drink?",
+    "ru": "Принести вам что-нибудь попить?",
+    "ko": "마실 것 좀 드릴까요?"
+   },
+   {
+    "en": "What should we get Mom for her birthday?",
+    "ru": "Что подарим маме на день рождения?",
+    "ko": "엄마 생신 선물 뭐 사 드릴까?"
+   },
+   {
+    "en": "I got you a little something from Japan.",
+    "ru": "Я привёз тебе кое-что из Японии.",
+    "ko": "일본에서 작은 선물 하나 사 왔어요."
+   },
+   {
+    "en": "Could you get me the charger from the bedroom?",
+    "ru": "Можешь принести мне зарядку из спальни?",
+    "ko": "침실에서 충전기 좀 갖다줄래요?"
+   },
+   {
+    "en": "My company got me a new laptop.",
+    "ru": "Компания выдала мне новый ноутбук.",
+    "ko": "회사에서 새 노트북을 지급해 줬어요."
+   },
+   {
+    "en": "I didn't get him anything for Christmas.",
+    "ru": "Я ничего ему не подарил на Рождество.",
+    "ko": "크리스마스에 걔한테 아무것도 안 사 줬어요."
    }
   ]
  },
@@ -2199,6 +2807,38 @@
      "ko": "목적어 뒤에는 과거분사가 옵니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Where do you usually get your nails done?",
+    "ru": "Где ты обычно делаешь маникюр?",
+    "ko": "네일은 보통 어디서 받아요?"
+   },
+   {
+    "en": "I need to get my eyes checked.",
+    "ru": "Мне надо проверить зрение.",
+    "ko": "시력 검사 받아야 해요."
+   },
+   {
+    "en": "We're getting the kitchen remodeled next month.",
+    "ru": "В следующем месяце нам переделывают кухню.",
+    "ko": "다음 달에 주방 리모델링해요."
+   },
+   {
+    "en": "Did you get your phone screen replaced?",
+    "ru": "Ты поменял экран на телефоне?",
+    "ko": "폰 액정 교체했어요?"
+   },
+   {
+    "en": "I'm getting my suit dry-cleaned for the wedding.",
+    "ru": "Отдаю костюм в химчистку к свадьбе.",
+    "ko": "결혼식 때문에 정장 드라이클리닝 맡겼어요."
+   },
+   {
+    "en": "Can I get this gift-wrapped, please?",
+    "ru": "Можно упаковать это как подарок?",
+    "ko": "이거 선물 포장 좀 해 주시겠어요?"
+   }
   ]
  },
  "21": {
@@ -2308,6 +2948,38 @@
      "ru": "После get нужен to. Без to — это have или make.",
      "ko": "get 뒤에는 to를 씁니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Can you get your brother to help us move on Saturday?",
+    "ru": "Можешь уговорить брата помочь нам с переездом в субботу?",
+    "ko": "토요일에 이사 도와 달라고 형한테 말해 줄 수 있어?"
+   },
+   {
+    "en": "I couldn't get the baby to fall asleep last night.",
+    "ru": "Вчера никак не могла уложить малыша спать.",
+    "ko": "어젯밤에 애기를 도저히 못 재웠어요."
+   },
+   {
+    "en": "How did you get your dad to try sushi?",
+    "ru": "Как ты уговорил папу попробовать суши?",
+    "ko": "아빠가 초밥을 드시게 어떻게 한 거야?"
+   },
+   {
+    "en": "We need to get the landlord to fix the heater.",
+    "ru": "Надо добиться, чтобы хозяин починил обогреватель.",
+    "ko": "집주인이 히터를 고치게 해야 돼요."
+   },
+   {
+    "en": "I'll try to get the doctor to see you today.",
+    "ru": "Постараюсь, чтобы врач принял вас сегодня.",
+    "ko": "오늘 의사 선생님이 봐 주시도록 해 볼게요."
+   },
+   {
+    "en": "She finally got her boss to approve the vacation.",
+    "ru": "Она всё-таки уговорила начальника одобрить отпуск.",
+    "ko": "그분이 결국 상사한테 휴가 승인을 받아 냈어요."
    }
   ]
  },
@@ -2419,6 +3091,38 @@
      "ko": "make the dishes는 '접시를 만들다'가 됩니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "I'm making pancakes. Want some?",
+    "ru": "Я делаю блинчики. Будешь?",
+    "ko": "팬케이크 만드는 중인데 좀 먹을래?"
+   },
+   {
+    "en": "Could you make me a sandwich for the road?",
+    "ru": "Можешь сделать мне бутерброд в дорогу?",
+    "ko": "가면서 먹게 샌드위치 하나 만들어 줄래요?"
+   },
+   {
+    "en": "My grandma made this scarf for me.",
+    "ru": "Этот шарф мне связала бабушка.",
+    "ko": "이 목도리 할머니가 만들어 주신 거예요."
+   },
+   {
+    "en": "We're going to make a birthday cake for Mom.",
+    "ru": "Мы испечём маме торт на день рождения.",
+    "ko": "엄마 생일 케이크 만들어 드릴 거예요."
+   },
+   {
+    "en": "I didn't make dinner tonight. Let's order in.",
+    "ru": "Я сегодня ужин не готовил. Давай закажем.",
+    "ko": "오늘 저녁 안 했어요. 시켜 먹어요."
+   },
+   {
+    "en": "They make these bags by hand in Italy.",
+    "ru": "Эти сумки делают вручную в Италии.",
+    "ko": "이 가방들은 이탈리아에서 수작업으로 만들어요."
+   }
   ]
  },
  "23": {
@@ -2528,6 +3232,38 @@
      "ru": "После make + объект идёт прилагательное без to be.",
      "ko": "make 뒤에는 to be를 쓰지 않습니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "The rain made the roads really slippery.",
+    "ru": "Из-за дождя дороги стали очень скользкими.",
+    "ko": "비 때문에 길이 엄청 미끄러워졌어요."
+   },
+   {
+    "en": "Does the new haircut make me look older?",
+    "ru": "Я с новой стрижкой выгляжу старше?",
+    "ko": "이 머리 하니까 더 나이 들어 보여요?"
+   },
+   {
+    "en": "Don't make this harder than it needs to be.",
+    "ru": "Не усложняй больше, чем нужно.",
+    "ko": "괜히 일 더 어렵게 만들지 마세요."
+   },
+   {
+    "en": "The news made him really quiet all evening.",
+    "ru": "После этой новости он весь вечер молчал.",
+    "ko": "그 소식 듣고 걔가 저녁 내내 조용했어요."
+   },
+   {
+    "en": "Living abroad made me more independent.",
+    "ru": "Жизнь за границей сделала меня самостоятельнее.",
+    "ko": "외국에서 살면서 더 독립적으로 됐어요."
+   },
+   {
+    "en": "They want to make him captain next season.",
+    "ru": "Его хотят сделать капитаном в следующем сезоне.",
+    "ko": "다음 시즌에 그 선수를 주장으로 세우려고 해요."
    }
   ]
  },
@@ -2639,6 +3375,38 @@
      "ko": "능동태에서는 to를 쓰지 않습니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "My mom made me practice piano every day.",
+    "ru": "Мама заставляла меня каждый день заниматься на пианино.",
+    "ko": "엄마가 매일 피아노 연습을 시키셨어요."
+   },
+   {
+    "en": "Please don't make me eat that.",
+    "ru": "Только не заставляй меня это есть.",
+    "ko": "제발 그거 먹으라고 하지 마."
+   },
+   {
+    "en": "The airline made us check our carry-ons.",
+    "ru": "Авиакомпания заставила нас сдать ручную кладь в багаж.",
+    "ko": "항공사에서 기내 가방을 짐으로 부치게 했어요."
+   },
+   {
+    "en": "Nobody's making you stay. You can go home.",
+    "ru": "Никто тебя не держит. Можешь идти домой.",
+    "ko": "아무도 남으라고 안 해요. 집에 가도 돼요."
+   },
+   {
+    "en": "That joke made everyone laugh.",
+    "ru": "От этой шутки все рассмеялись.",
+    "ko": "그 농담에 다들 웃었어요."
+   },
+   {
+    "en": "I'm going to make myself go to bed early tonight.",
+    "ru": "Сегодня заставлю себя лечь пораньше.",
+    "ko": "오늘은 억지로라도 일찍 잘 거예요."
+   }
   ]
  },
  "25": {
@@ -2748,6 +3516,38 @@
      "ru": "После make идёт feel без to.",
      "ko": "make 뒤에는 to 없이 feel이 옵니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Does loud music make you feel stressed?",
+    "ru": "Тебя громкая музыка напрягает?",
+    "ko": "시끄러운 음악 들으면 스트레스 받아?"
+   },
+   {
+    "en": "Hot showers always make me feel relaxed.",
+    "ru": "После горячего душа мне всегда спокойно.",
+    "ko": "뜨거운 물로 샤워하면 늘 긴장이 풀려요."
+   },
+   {
+    "en": "I didn't mean to make you feel bad.",
+    "ru": "Я не хотел тебя расстроить.",
+    "ko": "기분 상하게 하려던 건 아니었어."
+   },
+   {
+    "en": "Big crowds make me feel kind of uneasy.",
+    "ru": "В большой толпе мне как-то не по себе.",
+    "ko": "사람 많은 데 가면 좀 불편해요."
+   },
+   {
+    "en": "That meeting made me feel like an idiot.",
+    "ru": "После той встречи я почувствовал себя идиотом.",
+    "ko": "그 회의 때문에 바보가 된 기분이었어요."
+   },
+   {
+    "en": "A little walk will make you feel better.",
+    "ru": "Немного прогуляешься — и полегчает.",
+    "ko": "좀 걸으면 나아질 거예요."
    }
   ]
  },
@@ -2859,6 +3659,38 @@
      "ko": "관용구에는 it이 반드시 들어갑니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Do you think we'll make it before the store closes?",
+    "ru": "Думаешь, успеем до закрытия магазина?",
+    "ko": "가게 문 닫기 전에 도착할 수 있을까?"
+   },
+   {
+    "en": "I'm so sorry I couldn't make it to your party.",
+    "ru": "Прости, что не смог прийти на твою вечеринку.",
+    "ko": "파티에 못 가서 정말 미안해."
+   },
+   {
+    "en": "We made it! The train's still here.",
+    "ru": "Успели! Поезд ещё не ушёл.",
+    "ko": "도착했다! 기차 아직 안 떠났어."
+   },
+   {
+    "en": "Text me when you make it to the hotel.",
+    "ru": "Напиши, когда доберёшься до отеля.",
+    "ko": "호텔 도착하면 문자 줘."
+   },
+   {
+    "en": "Will you be able to make it to the meeting?",
+    "ru": "Вы сможете прийти на встречу?",
+    "ko": "회의에 오실 수 있으세요?"
+   },
+   {
+    "en": "Only three of us made it to the top.",
+    "ru": "До вершины добрались только трое из нас.",
+    "ko": "정상까지 간 건 우리 중 세 명뿐이었어요."
+   }
   ]
  },
  "27": {
@@ -2968,6 +3800,38 @@
      "ru": "become говорит о превращении со временем. make оценивает пригодность.",
      "ko": "become은 변화, make는 적합성 평가입니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "You'd make a great teacher, you know.",
+    "ru": "Знаешь, из тебя вышел бы отличный учитель.",
+    "ko": "너 선생님 하면 진짜 잘할 것 같아."
+   },
+   {
+    "en": "This old box would make a perfect bed for the cat.",
+    "ru": "Из этой старой коробки получится идеальная лежанка для кота.",
+    "ko": "이 헌 상자 고양이 침대로 딱이겠다."
+   },
+   {
+    "en": "I don't think he'd make a very good boss.",
+    "ru": "Не думаю, что из него выйдет хороший начальник.",
+    "ko": "그 사람은 상사로는 별로일 것 같아요."
+   },
+   {
+    "en": "Do you think I'd make a good dad?",
+    "ru": "Как думаешь, из меня получится хороший папа?",
+    "ko": "나 좋은 아빠가 될 수 있을까?"
+   },
+   {
+    "en": "Her grandmother's ring would make a lovely gift.",
+    "ru": "Бабушкино кольцо было бы прекрасным подарком.",
+    "ko": "할머니 반지면 좋은 선물이 되겠네요."
+   },
+   {
+    "en": "They made a really cute couple back in college.",
+    "ru": "В колледже они были очень милой парой.",
+    "ko": "대학 때 그 둘 진짜 귀여운 커플이었어요."
    }
   ]
  },
@@ -3079,6 +3943,38 @@
      "ko": "화자에게서 멀어지므로 take입니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Don't forget to take your keys.",
+    "ru": "Не забудь взять ключи.",
+    "ko": "열쇠 챙기는 거 잊지 마."
+   },
+   {
+    "en": "Can I take this chair? We need one more.",
+    "ru": "Можно я возьму этот стул? Нам нужен ещё один.",
+    "ko": "이 의자 가져가도 될까요? 하나 더 필요해서요."
+   },
+   {
+    "en": "I took the kids to the park this morning.",
+    "ru": "Утром я сводил детей в парк.",
+    "ko": "오늘 아침에 애들 데리고 공원에 갔어요."
+   },
+   {
+    "en": "Should I take a jacket or will it be warm?",
+    "ru": "Брать куртку или будет тепло?",
+    "ko": "재킷 챙겨 갈까요, 아니면 따뜻할까요?"
+   },
+   {
+    "en": "Someone took my lunch from the office fridge.",
+    "ru": "Кто-то забрал мой обед из офисного холодильника.",
+    "ko": "누가 회사 냉장고에서 제 점심을 가져갔어요."
+   },
+   {
+    "en": "You can take the magazines. I've already read them.",
+    "ru": "Журналы можешь забрать, я их уже прочитал.",
+    "ko": "잡지 가져가도 돼요. 이미 다 읽었어요."
+   }
   ]
  },
  "29": {
@@ -3188,6 +4084,38 @@
      "ru": "get означало бы, что к ним просто никто не приходит. Политика приёма — take.",
      "ko": "get은 '환자가 안 온다'는 뜻이 됩니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Sorry, we only take cash here.",
+    "ru": "Извините, у нас только наличные.",
+    "ko": "죄송한데 여기는 현금만 받아요."
+   },
+   {
+    "en": "Does this hotel take pets?",
+    "ru": "В этот отель можно с животными?",
+    "ko": "이 호텔 반려동물 받아 줘요?"
+   },
+   {
+    "en": "Is the restaurant taking reservations for Friday?",
+    "ru": "Ресторан принимает брони на пятницу?",
+    "ko": "그 식당 금요일 예약 받아요?"
+   },
+   {
+    "en": "The school isn't taking any more students this year.",
+    "ru": "В этом году школа больше учеников не набирает.",
+    "ko": "그 학교는 올해 학생을 더 안 받아요."
+   },
+   {
+    "en": "Do you guys take Apple Pay?",
+    "ru": "У вас можно через Apple Pay?",
+    "ko": "애플페이 돼요?"
+   },
+   {
+    "en": "The shelter took in three more dogs last week.",
+    "ru": "На прошлой неделе приют взял ещё трёх собак.",
+    "ko": "보호소에서 지난주에 강아지 세 마리를 더 받았어요."
    }
   ]
  },
@@ -3299,6 +4227,38 @@
      "ko": "get criticism은 '비판을 받는다'는 뜻입니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "He never takes no for an answer.",
+    "ru": "Он никогда не принимает отказа.",
+    "ko": "그 사람은 거절을 절대 안 받아들여요."
+   },
+   {
+    "en": "Why won't you take my advice for once?",
+    "ru": "Почему ты хоть раз не послушаешь моего совета?",
+    "ko": "한 번만이라도 내 말 좀 들으면 안 돼?"
+   },
+   {
+    "en": "I took your advice and called her.",
+    "ru": "Я последовал твоему совету и позвонил ей.",
+    "ko": "네 말대로 걔한테 전화했어."
+   },
+   {
+    "en": "She didn't take the hint and stayed till midnight.",
+    "ru": "Она не поняла намёка и просидела до полуночи.",
+    "ko": "그분이 눈치를 못 채고 자정까지 있었어요."
+   },
+   {
+    "en": "You need to learn to take feedback from your team.",
+    "ru": "Тебе нужно научиться прислушиваться к мнению команды.",
+    "ko": "팀원들 피드백을 받아들이는 법을 배워야 해요."
+   },
+   {
+    "en": "My son doesn't take orders from his big sister.",
+    "ru": "Сын не слушается старшую сестру.",
+    "ko": "아들은 누나 말은 안 들어요."
+   }
   ]
  },
  "31": {
@@ -3408,6 +4368,38 @@
      "ru": "Конструкция безличная — только it.",
      "ko": "비인칭 it만 쓸 수 있습니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "It takes patience to raise a puppy.",
+    "ru": "Чтобы вырастить щенка, нужно терпение.",
+    "ko": "강아지 키우려면 인내심이 필요해요."
+   },
+   {
+    "en": "It took a lot of nerve to quit like that.",
+    "ru": "Уволиться вот так — это надо было решиться.",
+    "ko": "그렇게 그만두려면 배짱이 많이 필요했겠어요."
+   },
+   {
+    "en": "It doesn't take a genius to figure that out.",
+    "ru": "Тут не надо быть гением, чтобы догадаться.",
+    "ko": "그건 천재가 아니어도 알 수 있어요."
+   },
+   {
+    "en": "What does it take to get a table here?",
+    "ru": "Что нужно сделать, чтобы здесь получить столик?",
+    "ko": "여기 자리 잡으려면 어떻게 해야 돼요?"
+   },
+   {
+    "en": "It'll take a lot of money to fix this car.",
+    "ru": "На ремонт этой машины уйдёт куча денег.",
+    "ko": "이 차 고치려면 돈 많이 들 거예요."
+   },
+   {
+    "en": "It takes two to argue, you know.",
+    "ru": "Знаешь, для ссоры нужны двое.",
+    "ko": "싸움도 손뼉이 마주쳐야 나는 거예요."
    }
   ]
  },
@@ -3519,6 +4511,38 @@
      "ko": "사람이 아니라 it이 주어입니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "How long will it take to fix my phone?",
+    "ru": "Сколько времени займёт ремонт телефона?",
+    "ko": "제 휴대폰 고치는 데 얼마나 걸려요?"
+   },
+   {
+    "en": "It took us forever to find a parking spot.",
+    "ru": "Мы целую вечность искали, где припарковаться.",
+    "ko": "주차 자리 찾는 데 한참 걸렸어요."
+   },
+   {
+    "en": "It doesn't take long to get to the beach from here.",
+    "ru": "Отсюда до пляжа недалеко.",
+    "ko": "여기서 해변까지 얼마 안 걸려요."
+   },
+   {
+    "en": "It'll take me about twenty minutes to get ready.",
+    "ru": "Мне нужно минут двадцать, чтобы собраться.",
+    "ko": "준비하는 데 20분 정도 걸릴 거예요."
+   },
+   {
+    "en": "It took her a year to get over the breakup.",
+    "ru": "Ей понадобился год, чтобы пережить расставание.",
+    "ko": "그분이 이별 극복하는 데 일 년 걸렸어요."
+   },
+   {
+    "en": "Shipping usually takes three to five days.",
+    "ru": "Доставка обычно занимает три-пять дней.",
+    "ko": "배송은 보통 3일에서 5일 걸려요."
+   }
   ]
  },
  "33": {
@@ -3628,6 +4652,38 @@
      "ru": "Наречие при глаголе — well, не good.",
      "ko": "동사를 꾸미므로 good이 아니라 well입니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "How did your parents take it when you moved out?",
+    "ru": "Как родители отнеслись к твоему переезду?",
+    "ko": "독립한다고 했을 때 부모님 반응 어떠셨어?"
+   },
+   {
+    "en": "Don't worry, he'll take it fine.",
+    "ru": "Не волнуйся, он нормально это воспримет.",
+    "ko": "걱정 마, 걔 괜찮게 받아들일 거야."
+   },
+   {
+    "en": "My dad took it pretty hard when he lost his job.",
+    "ru": "Папа очень тяжело переживал потерю работы.",
+    "ko": "아빠가 실직하셨을 때 많이 힘들어하셨어요."
+   },
+   {
+    "en": "I was afraid she'd take it badly, but she laughed.",
+    "ru": "Я боялся, что она обидится, а она рассмеялась.",
+    "ko": "기분 나빠할까 봐 걱정했는데 웃더라고요."
+   },
+   {
+    "en": "The team took the loss better than I expected.",
+    "ru": "Команда восприняла поражение лучше, чем я думал.",
+    "ko": "팀이 패배를 생각보다 잘 받아들였어요."
+   },
+   {
+    "en": "Please don't take this the wrong way, but you look tired.",
+    "ru": "Не пойми неправильно, но ты выглядишь уставшим.",
+    "ko": "오해하지 말고 들어, 너 좀 피곤해 보여."
    }
   ]
  },
@@ -3739,6 +4795,38 @@
      "ko": "cooking은 활동이므로 do를 씁니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "I'll do the laundry if you do the dishes.",
+    "ru": "Я постираю, если ты помоешь посуду.",
+    "ko": "네가 설거지하면 내가 빨래할게."
+   },
+   {
+    "en": "Did you do your homework yet?",
+    "ru": "Ты уже сделал домашку?",
+    "ko": "숙제 다 했어?"
+   },
+   {
+    "en": "I'm not doing any work this weekend.",
+    "ru": "В эти выходные я вообще не работаю.",
+    "ko": "이번 주말엔 일 하나도 안 할 거예요."
+   },
+   {
+    "en": "Could you do me a quick favor?",
+    "ru": "Можешь сделать мне одолжение?",
+    "ko": "부탁 하나만 들어줄 수 있어요?"
+   },
+   {
+    "en": "We did a lot of sightseeing in Rome.",
+    "ru": "В Риме мы много гуляли по достопримечательностям.",
+    "ko": "로마에서 관광 많이 했어요."
+   },
+   {
+    "en": "Who's doing the shopping this week?",
+    "ru": "Кто на этой неделе ходит за продуктами?",
+    "ko": "이번 주 장보기 누가 해요?"
+   }
   ]
  },
  "35": {
@@ -3848,6 +4936,38 @@
      "ru": "Впечатление спрашивают через How do you like…? или What do you think of…?",
      "ko": "How do you think about은 틀린 형태입니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "I like cooking, but I hate cleaning up after.",
+    "ru": "Готовить я люблю, а убирать потом терпеть не могу.",
+    "ko": "요리하는 건 좋은데 치우는 건 정말 싫어요."
+   },
+   {
+    "en": "Do you like living in the city?",
+    "ru": "Тебе нравится жить в городе?",
+    "ko": "도시에서 사는 거 좋아?"
+   },
+   {
+    "en": "My kids don't like going to the dentist.",
+    "ru": "Мои дети не любят ходить к зубному.",
+    "ko": "우리 애들은 치과 가는 걸 싫어해요."
+   },
+   {
+    "en": "I like to check my email first thing in the morning.",
+    "ru": "Я люблю первым делом с утра проверить почту.",
+    "ko": "저는 아침에 제일 먼저 메일 확인하는 편이에요."
+   },
+   {
+    "en": "He never liked talking on the phone.",
+    "ru": "Он никогда не любил говорить по телефону.",
+    "ko": "그 사람은 원래 전화 통화를 안 좋아했어요."
+   },
+   {
+    "en": "I like to pay off my card every month.",
+    "ru": "Я предпочитаю гасить карту каждый месяц.",
+    "ko": "저는 카드값을 매달 다 갚는 편이에요."
    }
   ]
  },
@@ -3959,6 +5079,38 @@
      "ko": "지금까지 이어지는 기간은 현재완료로 말합니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "I'm seeing my parents this weekend.",
+    "ru": "На выходных я еду к родителям.",
+    "ko": "이번 주말에 부모님 뵈러 가요."
+   },
+   {
+    "en": "We don't see each other much since she moved.",
+    "ru": "С тех пор как она переехала, мы редко видимся.",
+    "ko": "걔가 이사 간 뒤로 자주 못 봐요."
+   },
+   {
+    "en": "Can I see you for a minute after the meeting?",
+    "ru": "Можно вас на минутку после встречи?",
+    "ko": "회의 끝나고 잠깐 뵐 수 있을까요?"
+   },
+   {
+    "en": "How long have you two been seeing each other?",
+    "ru": "Сколько вы уже встречаетесь?",
+    "ko": "두 사람 만난 지 얼마나 됐어요?"
+   },
+   {
+    "en": "I saw Jake at the gym yesterday.",
+    "ru": "Вчера видел Джейка в спортзале.",
+    "ko": "어제 헬스장에서 제이크 봤어."
+   },
+   {
+    "en": "The dentist can see you at three tomorrow.",
+    "ru": "Стоматолог может принять вас завтра в три.",
+    "ko": "치과 선생님이 내일 세 시에 봐 주실 수 있대요."
+   }
   ]
  },
  "37": {
@@ -4068,6 +5220,38 @@
      "ru": "О владении языком говорят speak. know Russian звучит как «знаком с русским языком как предметом».",
      "ko": "언어 구사는 speak로 말합니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Do you know anyone who can fix a leaky sink?",
+    "ru": "У тебя есть знакомый, кто может починить кран?",
+    "ko": "싱크대 새는 거 고칠 줄 아는 사람 알아?"
+   },
+   {
+    "en": "I don't really know her. We just say hi.",
+    "ru": "Я её толком не знаю. Мы просто здороваемся.",
+    "ko": "그분 잘 몰라요. 그냥 인사만 해요."
+   },
+   {
+    "en": "My cousin knows someone at the embassy.",
+    "ru": "У моего двоюродного брата есть знакомый в посольстве.",
+    "ko": "사촌이 대사관에 아는 사람이 있어요."
+   },
+   {
+    "en": "How do you two know each other?",
+    "ru": "А вы откуда друг друга знаете?",
+    "ko": "두 분은 어떻게 아는 사이예요?"
+   },
+   {
+    "en": "I've known Mina since kindergarten.",
+    "ru": "Я знаю Мину с детского сада.",
+    "ko": "미나는 유치원 때부터 알았어요."
+   },
+   {
+    "en": "It helps to know people in this industry.",
+    "ru": "В этой сфере полезно иметь знакомства.",
+    "ko": "이 업계에서는 아는 사람이 있으면 도움이 돼요."
    }
   ]
  },
@@ -4179,6 +5363,38 @@
      "ko": "효과를 말할 때는 work를 씁니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "I tried everything, but nothing worked.",
+    "ru": "Я перепробовал всё, но ничего не помогло.",
+    "ko": "다 해 봤는데 아무것도 안 통했어요."
+   },
+   {
+    "en": "Did the new allergy pills work?",
+    "ru": "Новые таблетки от аллергии помогли?",
+    "ko": "새 알레르기 약 효과 있었어요?"
+   },
+   {
+    "en": "Turning it off and on again usually works.",
+    "ru": "Обычно помогает выключить и снова включить.",
+    "ko": "껐다 켜면 보통 돼요."
+   },
+   {
+    "en": "Honey and lemon always work for my sore throat.",
+    "ru": "Мёд с лимоном мне всегда помогают от горла.",
+    "ko": "목 아플 때 꿀이랑 레몬이 늘 잘 들어요."
+   },
+   {
+    "en": "If this plan doesn't work, we'll try something else.",
+    "ru": "Если этот план не сработает, попробуем что-то другое.",
+    "ko": "이 계획이 안 되면 다른 걸 해 봐요."
+   },
+   {
+    "en": "Ice really works for swelling.",
+    "ru": "Лёд реально помогает от отёка.",
+    "ko": "부기에는 얼음이 진짜 잘 들어요."
+   }
   ]
  },
  "39": {
@@ -4288,6 +5504,38 @@
      "ru": "Речь об устройстве в принципе, а не о текущем моменте.",
      "ko": "일반적인 원리를 묻는 것이므로 진행형을 쓰지 않습니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "How does this coffee machine work?",
+    "ru": "Как работает эта кофемашина?",
+    "ko": "이 커피 머신 어떻게 쓰는 거예요?"
+   },
+   {
+    "en": "Can you show me how the remote works?",
+    "ru": "Покажешь, как работает пульт?",
+    "ko": "리모컨 어떻게 쓰는지 알려 줄래요?"
+   },
+   {
+    "en": "I'm not sure how the bus system works here.",
+    "ru": "Не очень понимаю, как тут устроены автобусы.",
+    "ko": "여기 버스가 어떻게 다니는지 잘 모르겠어요."
+   },
+   {
+    "en": "That's just how it works in big companies.",
+    "ru": "В больших компаниях всё так и устроено.",
+    "ko": "큰 회사는 원래 그렇게 돌아가요."
+   },
+   {
+    "en": "Tipping works differently in Japan.",
+    "ru": "В Японии с чаевыми всё по-другому.",
+    "ko": "일본은 팁 문화가 달라요."
+   },
+   {
+    "en": "So how does the free trial work?",
+    "ru": "А как устроен бесплатный пробный период?",
+    "ko": "무료 체험은 어떻게 되는 거예요?"
    }
   ]
  },
@@ -4399,6 +5647,38 @@
      "ko": "as planned로 써야 합니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "How did your job interview go?",
+    "ru": "Как прошло собеседование?",
+    "ko": "면접 어떻게 됐어요?"
+   },
+   {
+    "en": "The surgery went fine. She's resting now.",
+    "ru": "Операция прошла нормально. Она сейчас отдыхает.",
+    "ko": "수술은 잘됐어요. 지금 쉬고 있어요."
+   },
+   {
+    "en": "The first date didn't go so well.",
+    "ru": "Первое свидание прошло не очень.",
+    "ko": "첫 데이트는 별로였어요."
+   },
+   {
+    "en": "Let me know how the move goes.",
+    "ru": "Дай знать, как пройдёт переезд.",
+    "ko": "이사 어떻게 됐는지 알려 줘."
+   },
+   {
+    "en": "I hope your exam goes well tomorrow.",
+    "ru": "Надеюсь, завтра экзамен пройдёт хорошо.",
+    "ko": "내일 시험 잘 보길 바라요."
+   },
+   {
+    "en": "How did the call with the client go?",
+    "ru": "Как прошёл звонок с клиентом?",
+    "ko": "거래처랑 통화는 어떻게 됐어요?"
+   }
   ]
  },
  "41": {
@@ -4508,6 +5788,38 @@
      "ru": "become здесь не употребляется. Устойчиво — go dead.",
      "ko": "go dead로 굳어진 표현입니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "My laptop went black right before I hit save.",
+    "ru": "Ноутбук погас прямо перед тем, как я нажал «сохранить».",
+    "ko": "저장 누르기 직전에 노트북 화면이 꺼졌어요."
+   },
+   {
+    "en": "Did the bread go stale already?",
+    "ru": "Хлеб что, уже зачерствел?",
+    "ko": "빵이 벌써 딱딱해졌어요?"
+   },
+   {
+    "en": "The Wi-Fi went down again at the office.",
+    "ru": "В офисе опять упал вай-фай.",
+    "ko": "사무실 와이파이가 또 끊겼어요."
+   },
+   {
+    "en": "The bananas went brown in just two days.",
+    "ru": "Бананы почернели всего за два дня.",
+    "ko": "바나나가 이틀 만에 까맣게 변했어요."
+   },
+   {
+    "en": "My foot went numb on the long flight.",
+    "ru": "За долгий перелёт у меня онемела нога.",
+    "ko": "비행기를 오래 타서 발이 저렸어요."
+   },
+   {
+    "en": "I hope the soup doesn't go sour by tomorrow.",
+    "ru": "Надеюсь, суп до завтра не прокиснет.",
+    "ko": "국이 내일까지 안 쉬었으면 좋겠어요."
    }
   ]
  },
@@ -4619,6 +5931,38 @@
      "ko": "규칙이므로 현재형을 씁니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Excuse me, where does this box go?",
+    "ru": "Простите, куда эту коробку?",
+    "ko": "저기요, 이 상자는 어디에 둬요?"
+   },
+   {
+    "en": "Plates go on the top shelf.",
+    "ru": "Тарелки — на верхнюю полку.",
+    "ko": "접시는 맨 위 칸에 넣어요."
+   },
+   {
+    "en": "Does this go in the fridge or the freezer?",
+    "ru": "Это в холодильник или в морозилку?",
+    "ko": "이거 냉장실에 넣어요, 냉동실에 넣어요?"
+   },
+   {
+    "en": "Your name goes in the box at the top.",
+    "ru": "Имя пишется в окошке наверху.",
+    "ko": "이름은 맨 위 칸에 쓰시면 돼요."
+   },
+   {
+    "en": "Batteries don't go in the regular trash.",
+    "ru": "Батарейки в обычный мусор не выбрасывают.",
+    "ko": "건전지는 일반 쓰레기로 버리면 안 돼요."
+   },
+   {
+    "en": "Could you tell me where the coffee cups go?",
+    "ru": "Подскажите, куда ставить кофейные чашки?",
+    "ko": "커피잔은 어디에 두면 되는지 알려 주실래요?"
+   }
   ]
  },
  "43": {
@@ -4728,6 +6072,38 @@
      "ru": "I want you to в письме звучит как приказ. I'd like — деловой стандарт.",
      "ko": "I want you to는 명령조입니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Do you want some coffee before we start?",
+    "ru": "Хотите кофе, пока не начали?",
+    "ko": "시작하기 전에 커피 드실래요?"
+   },
+   {
+    "en": "I don't want to wake the baby.",
+    "ru": "Не хочу разбудить малыша.",
+    "ko": "아기 깨우고 싶지 않아요."
+   },
+   {
+    "en": "What do you want for your birthday?",
+    "ru": "Что ты хочешь на день рождения?",
+    "ko": "생일 선물로 뭐 갖고 싶어요?"
+   },
+   {
+    "en": "I wanted to call you last night, but it got late.",
+    "ru": "Хотел вчера тебе позвонить, но было уже поздно.",
+    "ko": "어젯밤에 전화하고 싶었는데 너무 늦어서요."
+   },
+   {
+    "en": "Do you want me to pick you up after work?",
+    "ru": "Хочешь, заберу тебя после работы?",
+    "ko": "퇴근하고 데리러 갈까요?"
+   },
+   {
+    "en": "We want to book a table for four.",
+    "ru": "Мы хотим забронировать столик на четверых.",
+    "ko": "네 명 자리 예약하고 싶어요."
    }
   ]
  },
@@ -4839,6 +6215,38 @@
      "ko": "영어는 사이트를 주어로 삼습니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "What does the text say?",
+    "ru": "Что там в сообщении?",
+    "ko": "문자에 뭐라고 왔어요?"
+   },
+   {
+    "en": "The app says my order is on the way.",
+    "ru": "В приложении пишут, что заказ уже в пути.",
+    "ko": "앱에 주문이 배송 중이라고 떠요."
+   },
+   {
+    "en": "The doctor's note says I need two days of rest.",
+    "ru": "В справке от врача написано, что мне нужно два дня отдыха.",
+    "ko": "진단서에 이틀 쉬어야 한다고 되어 있어요."
+   },
+   {
+    "en": "The map said it was a ten-minute walk.",
+    "ru": "По карте было десять минут пешком.",
+    "ko": "지도에는 걸어서 10분이라고 나왔어요."
+   },
+   {
+    "en": "Does the menu say if it's spicy?",
+    "ru": "В меню указано, острое это или нет?",
+    "ko": "메뉴에 매운지 안 매운지 나와 있어요?"
+   },
+   {
+    "en": "The instructions don't say anything about batteries.",
+    "ru": "В инструкции ничего не сказано про батарейки.",
+    "ko": "설명서에 배터리 얘기는 하나도 없어요."
+   }
   ]
  },
  "45": {
@@ -4948,6 +6356,38 @@
      "ru": "После let инфинитив без to.",
      "ko": "let 뒤에는 to를 쓰지 않습니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Let me help you with those bags.",
+    "ru": "Давайте я помогу с сумками.",
+    "ko": "짐 좀 도와드릴게요."
+   },
+   {
+    "en": "Let me pay this time.",
+    "ru": "Давай в этот раз я заплачу.",
+    "ko": "이번엔 제가 낼게요."
+   },
+   {
+    "en": "Let me call you back in five minutes.",
+    "ru": "Давай я перезвоню через пять минут.",
+    "ko": "5분 뒤에 다시 전화드릴게요."
+   },
+   {
+    "en": "Here, let me show you how it works.",
+    "ru": "Смотрите, сейчас покажу, как это работает.",
+    "ko": "여기요, 어떻게 쓰는지 보여 드릴게요."
+   },
+   {
+    "en": "Let me just grab my coat.",
+    "ru": "Сейчас, только куртку возьму.",
+    "ko": "잠깐만요, 외투 좀 챙길게요."
+   },
+   {
+    "en": "Let me double-check the address before we go.",
+    "ru": "Давай я перепроверю адрес перед выходом.",
+    "ko": "출발하기 전에 주소 한 번 더 확인해 볼게요."
    }
   ]
  },
@@ -5059,6 +6499,38 @@
      "ko": "let은 수동태가 없어 allowed를 씁니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Will they let me bring my dog on the train?",
+    "ru": "Мне разрешат взять собаку в поезд?",
+    "ko": "기차에 강아지 데리고 타도 될까요?"
+   },
+   {
+    "en": "My boss let me leave early today.",
+    "ru": "Начальник отпустил меня сегодня пораньше.",
+    "ko": "오늘 팀장님이 일찍 퇴근하게 해 주셨어요."
+   },
+   {
+    "en": "Don't let the kids stay up too late.",
+    "ru": "Не разрешай детям сидеть допоздна.",
+    "ko": "애들 너무 늦게 자게 두지 마세요."
+   },
+   {
+    "en": "The hotel let us check in two hours early.",
+    "ru": "Отель разрешил нам заселиться на два часа раньше.",
+    "ko": "호텔에서 두 시간 일찍 체크인하게 해 줬어요."
+   },
+   {
+    "en": "Would you let me use your charger for a minute?",
+    "ru": "Можно я на минутку возьму твою зарядку?",
+    "ko": "충전기 잠깐 써도 될까요?"
+   },
+   {
+    "en": "The doctor won't let me drink coffee for a week.",
+    "ru": "Врач запретил мне кофе на неделю.",
+    "ko": "의사 선생님이 일주일 동안 커피 마시지 말래요."
+   }
   ]
  },
  "47": {
@@ -5168,6 +6640,38 @@
      "ru": "После let — инфинитив без to.",
      "ko": "let 뒤에는 to를 쓰지 않습니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Don't let one bad day ruin your week.",
+    "ru": "Не дай одному плохому дню испортить всю неделю.",
+    "ko": "하루 안 좋았다고 한 주를 다 망치지 마세요."
+   },
+   {
+    "en": "I let my emotions take over during the meeting.",
+    "ru": "На совещании я дал волю эмоциям.",
+    "ko": "회의 때 감정을 못 다스렸어요."
+   },
+   {
+    "en": "Try not to let his comments bother you.",
+    "ru": "Постарайся не принимать его слова близко к сердцу.",
+    "ko": "그 사람 말 때문에 속상해하지 마세요."
+   },
+   {
+    "en": "We can't let a small mistake stop the whole project.",
+    "ru": "Нельзя, чтобы из-за мелкой ошибки встал весь проект.",
+    "ko": "작은 실수 하나로 프로젝트 전체를 멈출 순 없어요."
+   },
+   {
+    "en": "Don't let the price scare you off.",
+    "ru": "Пусть цена тебя не пугает.",
+    "ko": "가격 보고 겁먹지 마세요."
+   },
+   {
+    "en": "Why did you let him push you around like that?",
+    "ru": "Почему ты позволил ему так собой помыкать?",
+    "ko": "왜 그 사람한테 그렇게 휘둘렸어요?"
    }
   ]
  },
@@ -5279,6 +6783,38 @@
      "ko": "아이디어나 느낌은 give로 표현합니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Does spicy food give you heartburn?",
+    "ru": "У тебя от острого бывает изжога?",
+    "ko": "매운 거 먹으면 속 쓰려요?"
+   },
+   {
+    "en": "That movie gave me nightmares for a week.",
+    "ru": "После этого фильма мне неделю снились кошмары.",
+    "ko": "그 영화 보고 일주일 동안 악몽 꿨어요."
+   },
+   {
+    "en": "Reading in the car gives me motion sickness.",
+    "ru": "Если читаю в машине, меня укачивает.",
+    "ko": "차에서 책 읽으면 멀미 나요."
+   },
+   {
+    "en": "Your message really gave me hope.",
+    "ru": "Твоё сообщение правда дало мне надежду.",
+    "ko": "보내 준 메시지 덕분에 정말 힘이 났어요."
+   },
+   {
+    "en": "This old house gives me the creeps.",
+    "ru": "От этого старого дома мне не по себе.",
+    "ko": "이 오래된 집은 좀 으스스해요."
+   },
+   {
+    "en": "The new chair hasn't given me any back pain.",
+    "ru": "С новым стулом спина совсем не болит.",
+    "ko": "새 의자로 바꾸고 나서 허리가 하나도 안 아파요."
+   }
   ]
  },
  "49": {
@@ -5388,6 +6924,38 @@
      "ru": "information неисчисляемо, артикль a с ним не ставится. Устойчиво — an update.",
      "ko": "information은 불가산이라 a를 붙이지 않습니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Could you give me a heads-up if the plan changes?",
+    "ru": "Предупредите меня, если планы поменяются?",
+    "ko": "계획이 바뀌면 미리 알려 주실래요?"
+   },
+   {
+    "en": "Give me a shout when dinner's ready.",
+    "ru": "Крикни, когда ужин будет готов.",
+    "ko": "저녁 준비되면 불러 줘."
+   },
+   {
+    "en": "I gave the car a quick wash this morning.",
+    "ru": "Утром я быстренько помыл машину.",
+    "ko": "아침에 세차 좀 간단히 했어요."
+   },
+   {
+    "en": "Can you give this report a quick look?",
+    "ru": "Можешь быстро глянуть этот отчёт?",
+    "ko": "이 보고서 좀 빨리 봐 줄래요?"
+   },
+   {
+    "en": "Give me a call when you land.",
+    "ru": "Позвони, когда приземлишься.",
+    "ko": "도착하면 전화 줘요."
+   },
+   {
+    "en": "We didn't give the new app a fair chance.",
+    "ru": "Мы толком не дали новому приложению шанса.",
+    "ko": "새 앱을 제대로 써 보지도 않았어요."
    }
   ]
  },
@@ -5499,6 +7067,38 @@
      "ko": "Keep the change로 굳어진 표현입니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Do you want to keep the box, or can I toss it?",
+    "ru": "Коробку оставишь себе или можно выбросить?",
+    "ko": "상자 가지실 거예요, 아니면 버려도 돼요?"
+   },
+   {
+    "en": "I kept my grandma's old watch.",
+    "ru": "Я оставил себе бабушкины старые часы.",
+    "ko": "할머니 옛날 시계는 제가 간직하고 있어요."
+   },
+   {
+    "en": "You can keep the book, I've already read it.",
+    "ru": "Книгу можешь оставить себе, я уже прочитал.",
+    "ko": "그 책 그냥 가지세요, 저는 벌써 읽었어요."
+   },
+   {
+    "en": "The hotel lets you keep the slippers.",
+    "ru": "Тапочки из отеля можно забрать себе.",
+    "ko": "호텔 슬리퍼는 가져가도 된대요."
+   },
+   {
+    "en": "I'm not keeping this dress, it doesn't fit.",
+    "ru": "Это платье я оставлять не буду, оно мне не по размеру.",
+    "ko": "이 원피스는 안 맞아서 반품할 거예요."
+   },
+   {
+    "en": "Should I keep the old phone or sell it?",
+    "ru": "Старый телефон оставить себе или продать?",
+    "ko": "예전 폰은 그냥 갖고 있을까요, 팔까요?"
+   }
   ]
  },
  "51": {
@@ -5608,6 +7208,38 @@
      "ru": "После keep идёт форма на -ing.",
      "ko": "keep 뒤에는 -ing를 씁니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "My neighbor's dog keeps barking all night.",
+    "ru": "Соседская собака всю ночь лает без остановки.",
+    "ko": "옆집 개가 밤새 계속 짖어요."
+   },
+   {
+    "en": "Why do you keep checking your phone?",
+    "ru": "Чего ты всё время в телефон смотришь?",
+    "ko": "왜 자꾸 휴대폰을 봐요?"
+   },
+   {
+    "en": "I kept waking up last night.",
+    "ru": "Я всю ночь то и дело просыпался.",
+    "ko": "어젯밤에 자꾸 깼어요."
+   },
+   {
+    "en": "The printer keeps jamming on the second page.",
+    "ru": "Принтер постоянно зажёвывает бумагу на второй странице.",
+    "ko": "프린터가 자꾸 두 번째 장에서 걸려요."
+   },
+   {
+    "en": "Please don't keep interrupting me.",
+    "ru": "Пожалуйста, не перебивай меня всё время.",
+    "ko": "자꾸 말 끊지 말아 주세요."
+   },
+   {
+    "en": "If my knee keeps hurting, I'll see a doctor.",
+    "ru": "Если колено так и будет болеть, пойду к врачу.",
+    "ko": "무릎이 계속 아프면 병원 가 볼게요."
    }
   ]
  },
@@ -5719,6 +7351,38 @@
      "ko": "목적어 뒤에는 과거분사가 옵니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Keep your phone on, I might call.",
+    "ru": "Не выключай телефон, я могу позвонить.",
+    "ko": "전화기 켜 둬요, 전화할 수도 있어요."
+   },
+   {
+    "en": "How do you keep your plants alive?",
+    "ru": "Как у тебя цветы не засыхают?",
+    "ko": "식물을 어떻게 안 죽이고 키워요?"
+   },
+   {
+    "en": "Keep your passport safe on the trip.",
+    "ru": "В поездке держи паспорт в надёжном месте.",
+    "ko": "여행 중에 여권 잘 간수하세요."
+   },
+   {
+    "en": "This jacket kept me warm all winter.",
+    "ru": "Эта куртка грела меня всю зиму.",
+    "ko": "이 재킷 덕분에 겨우내 따뜻했어요."
+   },
+   {
+    "en": "We try to keep the office quiet after lunch.",
+    "ru": "После обеда мы стараемся соблюдать в офисе тишину.",
+    "ko": "점심 이후엔 사무실을 조용하게 유지하려고 해요."
+   },
+   {
+    "en": "Keep your answers short in the interview.",
+    "ru": "На собеседовании отвечай коротко.",
+    "ko": "면접에서는 대답을 짧게 하세요."
+   }
   ]
  },
  "53": {
@@ -5828,6 +7492,38 @@
      "ru": "План уже зафиксирован, поэтому Present Continuous.",
      "ko": "이미 정해진 일정은 현재진행형으로 말합니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "When are you leaving for your trip?",
+    "ru": "Когда уезжаешь в поездку?",
+    "ko": "여행 언제 떠나요?"
+   },
+   {
+    "en": "The bus left five minutes early!",
+    "ru": "Автобус ушёл на пять минут раньше!",
+    "ko": "버스가 5분 일찍 가 버렸어요!"
+   },
+   {
+    "en": "I usually leave the office around seven.",
+    "ru": "Обычно я ухожу из офиса около семи.",
+    "ko": "보통 7시쯤 퇴근해요."
+   },
+   {
+    "en": "Don't leave yet, the cake's almost ready.",
+    "ru": "Не уходи пока, торт почти готов.",
+    "ko": "아직 가지 마요, 케이크 거의 다 됐어요."
+   },
+   {
+    "en": "Our flight leaves at 6 a.m., so we need an early night.",
+    "ru": "Рейс в шесть утра, так что надо лечь пораньше.",
+    "ko": "비행기가 새벽 6시라서 일찍 자야 해요."
+   },
+   {
+    "en": "Could we leave a little earlier tomorrow?",
+    "ru": "Можем завтра выехать чуть пораньше?",
+    "ko": "내일 조금 더 일찍 출발할 수 있을까요?"
    }
   ]
  },
@@ -5939,6 +7635,38 @@
      "ko": "Leave it with me로 굳어진 표현입니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Did anyone leave a package for me?",
+    "ru": "Мне никто посылку не оставлял?",
+    "ko": "누가 저한테 택배 맡기고 간 거 있어요?"
+   },
+   {
+    "en": "I'll leave the key under the mat.",
+    "ru": "Ключ оставлю под ковриком.",
+    "ko": "열쇠는 매트 밑에 둘게요."
+   },
+   {
+    "en": "Mom left us a note on the fridge.",
+    "ru": "Мама оставила нам записку на холодильнике.",
+    "ko": "엄마가 냉장고에 쪽지 남겨 놓으셨어요."
+   },
+   {
+    "en": "Please leave your shoes by the door.",
+    "ru": "Обувь, пожалуйста, оставляйте у двери.",
+    "ko": "신발은 문 옆에 벗어 두세요."
+   },
+   {
+    "en": "Can you leave me some coffee?",
+    "ru": "Оставишь мне немного кофе?",
+    "ko": "커피 좀 남겨 줄래요?"
+   },
+   {
+    "en": "I left a voicemail, but she hasn't called back.",
+    "ru": "Я оставил голосовое, но она так и не перезвонила.",
+    "ko": "음성 메시지 남겼는데 아직 연락이 없어요."
+   }
   ]
  },
  "55": {
@@ -6048,6 +7776,38 @@
      "ru": "Здесь нужно прилагательное open, а не причастие opened.",
      "ko": "형용사 open을 씁니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Did you leave the stove on?",
+    "ru": "Ты плиту не выключил?",
+    "ko": "가스레인지 켜 놓고 나왔어요?"
+   },
+   {
+    "en": "Leave me alone, I'm trying to work.",
+    "ru": "Отстань, я пытаюсь работать.",
+    "ko": "나 좀 내버려 둬, 일하는 중이야."
+   },
+   {
+    "en": "Somebody left the fridge door open all night.",
+    "ru": "Кто-то оставил холодильник открытым на всю ночь.",
+    "ko": "누가 냉장고 문을 밤새 열어 놨어요."
+   },
+   {
+    "en": "Please leave your phone on silent during the show.",
+    "ru": "Во время спектакля, пожалуйста, держите телефон на беззвучном.",
+    "ko": "공연 중에는 휴대폰을 무음으로 해 두세요."
+   },
+   {
+    "en": "Don't leave your stuff lying around.",
+    "ru": "Не разбрасывай свои вещи где попало.",
+    "ko": "물건 아무 데나 늘어놓지 마세요."
+   },
+   {
+    "en": "The news left everyone speechless.",
+    "ru": "От этой новости все потеряли дар речи.",
+    "ko": "그 소식에 다들 말을 잃었어요."
    }
   ]
  },
@@ -6159,6 +7919,38 @@
      "ko": "Do you mind…?는 '싫으세요?'라는 뜻이라 허락은 부정으로 답합니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Should I bring anything to the party?",
+    "ru": "Мне что-нибудь принести на вечеринку?",
+    "ko": "파티에 뭐 가져갈까요?"
+   },
+   {
+    "en": "Can you bring me some water, please?",
+    "ru": "Принесёшь мне воды, пожалуйста?",
+    "ko": "물 좀 갖다줄래요?"
+   },
+   {
+    "en": "I forgot to bring my lunch today.",
+    "ru": "Я сегодня забыл взять с собой обед.",
+    "ko": "오늘 도시락 깜빡하고 안 가져왔어요."
+   },
+   {
+    "en": "Bring your kids next time, they'd love it.",
+    "ru": "В следующий раз приводи детей, им понравится.",
+    "ko": "다음엔 애들도 데려와요, 좋아할 거예요."
+   },
+   {
+    "en": "Please bring your ID to the clinic.",
+    "ru": "Возьмите с собой в клинику удостоверение личности.",
+    "ko": "병원 오실 때 신분증 가져오세요."
+   },
+   {
+    "en": "She brought homemade cookies to the office.",
+    "ru": "Она принесла в офис домашнее печенье.",
+    "ko": "그분이 직접 만든 쿠키를 사무실에 가져왔어요."
+   }
   ]
  },
  "57": {
@@ -6268,6 +8060,38 @@
      "ru": "Первый вариант — устойчивая разговорная формула. Второй понятен, но встречается реже.",
      "ko": "Where are you headed?가 굳어진 표현입니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "I'm heading home, do you need anything?",
+    "ru": "Я домой, тебе что-нибудь нужно?",
+    "ko": "저 집에 가는데, 뭐 필요한 거 있어요?"
+   },
+   {
+    "en": "We should head over to the gate now.",
+    "ru": "Нам пора идти к выходу на посадку.",
+    "ko": "이제 게이트로 가야 해요."
+   },
+   {
+    "en": "Are you heading to the gym after work?",
+    "ru": "После работы в спортзал?",
+    "ko": "퇴근하고 헬스장 가요?"
+   },
+   {
+    "en": "I headed to bed early last night.",
+    "ru": "Вчера я рано лёг спать.",
+    "ko": "어젯밤엔 일찍 자러 갔어요."
+   },
+   {
+    "en": "Text me when you head out.",
+    "ru": "Напиши, когда выйдешь.",
+    "ko": "출발할 때 문자 줘요."
+   },
+   {
+    "en": "We're heading up to the mountains for a few days.",
+    "ru": "Едем на несколько дней в горы.",
+    "ko": "며칠 산에 다녀오려고요."
    }
   ]
  },
@@ -6379,6 +8203,38 @@
      "ko": "부르는 쪽으로 가므로 coming입니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Can I come with you to the store?",
+    "ru": "Можно с тобой в магазин?",
+    "ko": "저도 가게 같이 가도 돼요?"
+   },
+   {
+    "en": "Why don't you come with us?",
+    "ru": "Пошли с нами!",
+    "ko": "우리랑 같이 가는 게 어때요?"
+   },
+   {
+    "en": "Sorry, I can't come tonight, I'm sick.",
+    "ru": "Извини, сегодня не смогу, я заболел.",
+    "ko": "미안해요, 오늘 몸이 안 좋아서 못 가요."
+   },
+   {
+    "en": "Is your husband coming to dinner too?",
+    "ru": "Муж тоже придёт на ужин?",
+    "ko": "남편분도 저녁 식사에 오세요?"
+   },
+   {
+    "en": "Thanks for coming to my show last night.",
+    "ru": "Спасибо, что пришёл вчера на мой концерт.",
+    "ko": "어제 공연 와 줘서 고마워요."
+   },
+   {
+    "en": "I'll come with you to the doctor if you want.",
+    "ru": "Если хочешь, схожу с тобой к врачу.",
+    "ko": "원하면 병원에 같이 가 줄게요."
+   }
   ]
  },
  "59": {
@@ -6488,6 +8344,38 @@
      "ru": "Устойчивое сочетание — in charge of.",
      "ko": "in charge of로 굳어져 있습니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Can you put me on the list for Saturday?",
+    "ru": "Запишете меня на субботу?",
+    "ko": "토요일 명단에 저 좀 넣어 주실래요?"
+   },
+   {
+    "en": "They put me on the night shift this week.",
+    "ru": "На этой неделе меня поставили в ночную смену.",
+    "ko": "이번 주엔 저를 야간 근무로 넣었어요."
+   },
+   {
+    "en": "The doctor put me on antibiotics.",
+    "ru": "Врач назначил мне антибиотики.",
+    "ko": "의사 선생님이 항생제를 처방해 주셨어요."
+   },
+   {
+    "en": "Why did they put us in different groups?",
+    "ru": "Почему нас определили в разные группы?",
+    "ko": "왜 우리를 다른 조로 나눴을까요?"
+   },
+   {
+    "en": "Sorry, can I put you on hold for a second?",
+    "ru": "Простите, подождёте секунду на линии?",
+    "ko": "죄송한데 잠시만 기다려 주시겠어요?"
+   },
+   {
+    "en": "The airline put us in a hotel for the night.",
+    "ru": "Авиакомпания поселила нас на ночь в гостиницу.",
+    "ko": "항공사에서 하룻밤 호텔을 잡아 줬어요."
    }
   ]
  },
@@ -6599,6 +8487,38 @@
      "ko": "in a mood로 씁니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Rainy days always put me in a lazy mood.",
+    "ru": "В дождливые дни мне всегда лень что-либо делать.",
+    "ko": "비 오는 날엔 늘 몸이 늘어져요."
+   },
+   {
+    "en": "That phone call put him in a terrible mood.",
+    "ru": "После этого звонка у него совсем испортилось настроение.",
+    "ko": "그 전화 받고 그분 기분이 완전히 상했어요."
+   },
+   {
+    "en": "Your joke really put me at ease.",
+    "ru": "Твоя шутка меня правда успокоила.",
+    "ko": "농담해 주셔서 마음이 편해졌어요."
+   },
+   {
+    "en": "I don't want to put you in an awkward spot.",
+    "ru": "Не хочу ставить тебя в неловкое положение.",
+    "ko": "곤란하게 해 드리고 싶지 않아요."
+   },
+   {
+    "en": "Missing that flight put us in a tough situation.",
+    "ru": "Опоздание на рейс поставило нас в трудное положение.",
+    "ko": "그 비행기를 놓쳐서 정말 난감해졌어요."
+   },
+   {
+    "en": "Christmas music puts me in the holiday spirit.",
+    "ru": "От рождественской музыки у меня сразу праздничное настроение.",
+    "ko": "캐럴 들으면 연말 기분이 나요."
+   }
   ]
  },
  "61": {
@@ -6708,6 +8628,38 @@
      "ru": "После feel идёт прилагательное, а не наречие.",
      "ko": "feel 뒤에는 부사가 아니라 형용사가 옵니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "This sweater feels so soft.",
+    "ru": "Этот свитер такой мягкий.",
+    "ko": "이 스웨터 너무 부드러워요."
+   },
+   {
+    "en": "The water feels a little cold today.",
+    "ru": "Вода сегодня какая-то холодная.",
+    "ko": "오늘 물이 좀 차갑네요."
+   },
+   {
+    "en": "Does this bed feel too hard to you?",
+    "ru": "Тебе эта кровать не кажется жёсткой?",
+    "ko": "이 침대 너무 딱딱하지 않아요?"
+   },
+   {
+    "en": "The new office felt empty on the first day.",
+    "ru": "В первый день новый офис казался пустым.",
+    "ko": "첫날엔 새 사무실이 텅 빈 느낌이었어요."
+   },
+   {
+    "en": "These shoes don't feel comfortable at all.",
+    "ru": "В этих туфлях совсем неудобно.",
+    "ko": "이 신발 전혀 편하지 않아요."
+   },
+   {
+    "en": "The trip felt way too short.",
+    "ru": "Поездка пролетела слишком быстро.",
+    "ko": "여행이 너무 짧게 느껴졌어요."
    }
   ]
  },
@@ -6819,6 +8771,38 @@
      "ko": "turn 뒤에는 to 없이 형용사가 옵니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "My dad turns seventy this weekend.",
+    "ru": "Папе в эти выходные исполняется семьдесят.",
+    "ko": "아빠가 이번 주말에 칠순이세요."
+   },
+   {
+    "en": "The milk turned sour overnight.",
+    "ru": "Молоко за ночь скисло.",
+    "ko": "우유가 하룻밤 사이에 상했어요."
+   },
+   {
+    "en": "His face turned red when she walked in.",
+    "ru": "Он покраснел, когда она вошла.",
+    "ko": "그녀가 들어오니까 걔 얼굴이 빨개졌어."
+   },
+   {
+    "en": "What do you want to do when you turn forty?",
+    "ru": "Чем хочешь заняться, когда исполнится сорок?",
+    "ko": "마흔 되면 뭐 하고 싶어요?"
+   },
+   {
+    "en": "The sky turned dark right before the storm.",
+    "ru": "Перед грозой небо потемнело.",
+    "ko": "폭풍 오기 직전에 하늘이 어두워졌어요."
+   },
+   {
+    "en": "I hope it doesn't turn ugly at the meeting.",
+    "ru": "Надеюсь, на совещании не дойдёт до скандала.",
+    "ko": "회의에서 분위기가 험악해지지 않았으면 좋겠어요."
+   }
   ]
  },
  "63": {
@@ -6928,6 +8912,38 @@
      "ru": "Фразовый глагол — move on, предлог сразу после глагола.",
      "ko": "move on이 하나의 구동사입니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Can you help me move the couch?",
+    "ru": "Поможешь передвинуть диван?",
+    "ko": "소파 옮기는 것 좀 도와줄래요?"
+   },
+   {
+    "en": "Could you move your car, please? I'm blocked in.",
+    "ru": "Не могли бы вы переставить машину? Я не могу выехать.",
+    "ko": "차 좀 빼 주시겠어요? 제 차가 막혀서요."
+   },
+   {
+    "en": "We moved to Busan when I was ten.",
+    "ru": "Мы переехали в Пусан, когда мне было десять.",
+    "ko": "제가 열 살 때 부산으로 이사했어요."
+   },
+   {
+    "en": "Someone moved my chair again.",
+    "ru": "Кто-то опять передвинул мой стул.",
+    "ko": "누가 또 제 의자를 옮겨 놨어요."
+   },
+   {
+    "en": "I'll move the plant closer to the window.",
+    "ru": "Переставлю цветок поближе к окну.",
+    "ko": "화분을 창가 쪽으로 옮길게요."
+   },
+   {
+    "en": "Don't move anything on my desk, OK?",
+    "ru": "Ничего не трогай у меня на столе, ладно?",
+    "ko": "내 책상 위에 있는 거 아무것도 옮기지 마, 알았지?"
    }
   ]
  },
@@ -7039,6 +9055,38 @@
      "ko": "run 뒤에 전치사를 쓰지 않습니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "My aunt runs a small bakery downtown.",
+    "ru": "Моя тётя держит маленькую пекарню в центре.",
+    "ko": "이모가 시내에서 작은 빵집을 하세요."
+   },
+   {
+    "en": "Who runs this place? The service is great.",
+    "ru": "Кто тут хозяин? Обслуживание отличное.",
+    "ko": "여기 사장님이 누구세요? 서비스가 정말 좋네요."
+   },
+   {
+    "en": "He ran the company for twenty years.",
+    "ru": "Он руководил компанией двадцать лет.",
+    "ko": "그분이 20년 동안 회사를 이끄셨어요."
+   },
+   {
+    "en": "I'd love to run my own café someday.",
+    "ru": "Когда-нибудь хотел бы открыть своё кафе.",
+    "ko": "언젠가 제 카페를 운영해 보고 싶어요."
+   },
+   {
+    "en": "The hotel is run by a family from Italy.",
+    "ru": "Отель держит семья из Италии.",
+    "ko": "그 호텔은 이탈리아 가족이 운영해요."
+   },
+   {
+    "en": "Who's going to run the office while you're away?",
+    "ru": "Кто будет вести офис, пока тебя нет?",
+    "ko": "안 계시는 동안 사무실은 누가 맡아요?"
+   }
   ]
  },
  "65": {
@@ -7148,6 +9196,38 @@
      "ru": "try to подчёркивает, что попытка не удалась.",
      "ko": "try to는 시도했으나 안 됐다는 뜻입니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "You should try the spicy noodles here.",
+    "ru": "Попробуй здесь острую лапшу.",
+    "ko": "여기 매운 국수 꼭 드셔 보세요."
+   },
+   {
+    "en": "Have you ever tried yoga?",
+    "ru": "Ты когда-нибудь пробовал йогу?",
+    "ko": "요가 해 본 적 있어요?"
+   },
+   {
+    "en": "Can I try this jacket on?",
+    "ru": "Можно примерить эту куртку?",
+    "ko": "이 재킷 입어 봐도 돼요?"
+   },
+   {
+    "en": "I tried that app, but I didn't like it.",
+    "ru": "Я пробовал это приложение, но мне не понравилось.",
+    "ko": "그 앱 써 봤는데 별로였어요."
+   },
+   {
+    "en": "Let's try the new Thai place tonight.",
+    "ru": "Давай сегодня сходим в новый тайский ресторан.",
+    "ko": "오늘 저녁에 새로 생긴 태국 음식점 가 보자."
+   },
+   {
+    "en": "I'm going to try a different shampoo.",
+    "ru": "Попробую другой шампунь.",
+    "ko": "다른 샴푸를 써 보려고요."
    }
   ]
  },
@@ -7259,6 +9339,38 @@
      "ko": "can't stand 뒤에는 -ing를 씁니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "I can't stand people who talk in movies.",
+    "ru": "Терпеть не могу, когда болтают в кино.",
+    "ko": "영화 볼 때 떠드는 사람 정말 싫어요."
+   },
+   {
+    "en": "My wife can't stand horror movies.",
+    "ru": "Жена терпеть не может ужастики.",
+    "ko": "아내는 공포 영화를 질색해요."
+   },
+   {
+    "en": "How can you stand this traffic every day?",
+    "ru": "Как ты каждый день выносишь эти пробки?",
+    "ko": "매일 이 교통 체증을 어떻게 견뎌요?"
+   },
+   {
+    "en": "I couldn't stand that job for another day.",
+    "ru": "Я больше ни дня не мог выносить ту работу.",
+    "ko": "그 일은 하루도 더 못 버티겠더라고요."
+   },
+   {
+    "en": "Honestly, I can't stand waiting in line.",
+    "ru": "Честно, ненавижу стоять в очереди.",
+    "ko": "솔직히 줄 서는 거 정말 못 참겠어요."
+   },
+   {
+    "en": "Kids usually can't stand the taste of this medicine.",
+    "ru": "Дети обычно терпеть не могут вкус этого лекарства.",
+    "ko": "애들은 보통 이 약 맛을 질색해요."
+   }
   ]
  },
  "67": {
@@ -7368,6 +9480,38 @@
      "ru": "Первый вариант констатирует факт и оставляет место для диалога.",
      "ko": "사물을 주어로 쓰면 대화의 여지가 남습니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "My laptop broke right before the trip.",
+    "ru": "Ноутбук сломался прямо перед поездкой.",
+    "ko": "출장 직전에 노트북이 고장 났어요."
+   },
+   {
+    "en": "The elevator broke, so we took the stairs.",
+    "ru": "Лифт сломался, так что мы пошли по лестнице.",
+    "ko": "엘리베이터가 고장 나서 계단으로 갔어요."
+   },
+   {
+    "en": "Be careful, that chair breaks easily.",
+    "ru": "Осторожно, этот стул легко ломается.",
+    "ko": "조심해요, 그 의자 잘 부서져요."
+   },
+   {
+    "en": "Did the zipper break again?",
+    "ru": "Молния опять сломалась?",
+    "ko": "지퍼 또 고장 났어요?"
+   },
+   {
+    "en": "My umbrella broke in the wind.",
+    "ru": "Зонт сломался от ветра.",
+    "ko": "바람에 우산이 망가졌어요."
+   },
+   {
+    "en": "I hope the washing machine doesn't break this time.",
+    "ru": "Надеюсь, стиралка на этот раз не сломается.",
+    "ko": "이번엔 세탁기가 고장 안 났으면 좋겠어요."
    }
   ]
  },
@@ -7479,6 +9623,38 @@
      "ko": "My back hurts가 자연스럽습니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "My feet hurt from walking all day.",
+    "ru": "Ноги болят, весь день ходил.",
+    "ko": "하루 종일 걸었더니 발이 아파요."
+   },
+   {
+    "en": "Where does it hurt?",
+    "ru": "Где болит?",
+    "ko": "어디가 아프세요?"
+   },
+   {
+    "en": "My eyes hurt after staring at the screen.",
+    "ru": "После экрана у меня болят глаза.",
+    "ko": "화면을 오래 봤더니 눈이 아파요."
+   },
+   {
+    "en": "It hurt a lot, but only for a second.",
+    "ru": "Было очень больно, но всего секунду.",
+    "ko": "많이 아팠는데 잠깐이었어요."
+   },
+   {
+    "en": "My throat still hurts a little.",
+    "ru": "Горло всё ещё немного болит.",
+    "ko": "목이 아직 좀 아파요."
+   },
+   {
+    "en": "Tell me if this hurts, OK?",
+    "ru": "Скажите, если будет больно, хорошо?",
+    "ko": "아프면 말씀하세요, 아셨죠?"
+   }
   ]
  },
  "69": {
@@ -7588,6 +9764,38 @@
      "ru": "Первый вариант — устойчивая деликатная формула.",
      "ko": "I couldn't help noticing이 정중한 관용 표현입니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Did you notice she cut her hair?",
+    "ru": "Ты заметил, что она подстриглась?",
+    "ko": "그 사람 머리 자른 거 눈치챘어요?"
+   },
+   {
+    "en": "I didn't notice the time. Sorry I'm late!",
+    "ru": "Не заметил, сколько времени. Извини за опоздание!",
+    "ko": "시간 가는 줄 몰랐어. 늦어서 미안!"
+   },
+   {
+    "en": "Nobody will notice if we leave early.",
+    "ru": "Никто не заметит, если мы уйдём пораньше.",
+    "ko": "우리 일찍 나가도 아무도 모를 거예요."
+   },
+   {
+    "en": "I noticed a small scratch on the screen.",
+    "ru": "Я заметил маленькую царапину на экране.",
+    "ko": "화면에 작은 흠집이 있더라고요."
+   },
+   {
+    "en": "Have you noticed the new coffee machine?",
+    "ru": "Ты видел новую кофемашину?",
+    "ko": "새 커피 머신 들어온 거 보셨어요?"
+   },
+   {
+    "en": "I only noticed the mistake after I hit send.",
+    "ru": "Ошибку я заметил, только когда уже отправил.",
+    "ko": "보내기 누르고 나서야 실수를 알아챘어요."
    }
   ]
  },
@@ -7699,6 +9907,38 @@
      "ko": "실제로 기다릴 때는 wait for를 씁니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "We're expecting about thirty guests on Saturday.",
+    "ru": "В субботу ждём человек тридцать гостей.",
+    "ko": "토요일에 손님이 서른 명쯤 올 거예요."
+   },
+   {
+    "en": "I didn't expect you to call so early.",
+    "ru": "Не думал, что ты позвонишь так рано.",
+    "ko": "이렇게 일찍 전화할 줄은 몰랐어요."
+   },
+   {
+    "en": "Expect some delays because of the snow.",
+    "ru": "Из-за снега возможны задержки.",
+    "ko": "눈 때문에 좀 늦어질 수 있어요."
+   },
+   {
+    "en": "When do you expect to be back?",
+    "ru": "Когда планируешь вернуться?",
+    "ko": "언제쯤 돌아오실 것 같아요?"
+   },
+   {
+    "en": "The doctor expects a full recovery.",
+    "ru": "Врач рассчитывает на полное выздоровление.",
+    "ko": "의사 선생님이 완전히 회복될 거래요."
+   },
+   {
+    "en": "Don't expect too much from the hotel breakfast.",
+    "ru": "Многого от завтрака в отеле не жди.",
+    "ko": "호텔 조식은 너무 기대하지 마세요."
+   }
   ]
  },
  "71": {
@@ -7808,6 +10048,38 @@
      "ru": "Опоздание на транспорт — miss, не lose.",
      "ko": "교통편을 놓친 것은 miss입니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "I lost my keys again this morning.",
+    "ru": "Сегодня утром опять потерял ключи.",
+    "ko": "오늘 아침에 또 열쇠를 잃어버렸어요."
+   },
+   {
+    "en": "We lost the game by one point.",
+    "ru": "Мы проиграли с разницей в одно очко.",
+    "ko": "1점 차로 졌어요."
+   },
+   {
+    "en": "Did you lose your umbrella on the subway?",
+    "ru": "Ты в метро зонт потерял?",
+    "ko": "지하철에서 우산 잃어버렸어요?"
+   },
+   {
+    "en": "Don't lose this receipt, you'll need it.",
+    "ru": "Не потеряй чек, он тебе понадобится.",
+    "ko": "이 영수증 잃어버리지 마세요, 필요할 거예요."
+   },
+   {
+    "en": "I hate losing at cards to my little brother.",
+    "ru": "Терпеть не могу проигрывать младшему брату в карты.",
+    "ko": "남동생한테 카드 게임 지는 거 진짜 싫어."
+   },
+   {
+    "en": "If we wait, we'll lose the deal.",
+    "ru": "Если будем ждать, упустим сделку.",
+    "ko": "기다리다간 거래를 놓칠 거예요."
    }
   ]
  },
@@ -7919,6 +10191,38 @@
      "ko": "둘째는 상대 탓으로 들립니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "If we hurry, we can still catch the train.",
+    "ru": "Если поторопимся, ещё успеем на поезд.",
+    "ko": "서두르면 아직 기차 탈 수 있어요."
+   },
+   {
+    "en": "I missed the bus, so I caught a taxi.",
+    "ru": "Опоздал на автобус, так что поймал такси.",
+    "ko": "버스를 놓쳐서 택시를 잡았어요."
+   },
+   {
+    "en": "What time do you need to catch your flight?",
+    "ru": "Во сколько у тебя рейс?",
+    "ko": "비행기 몇 시에 타야 돼요?"
+   },
+   {
+    "en": "Catch! Here are your keys.",
+    "ru": "Лови! Вот твои ключи.",
+    "ko": "받아! 네 열쇠야."
+   },
+   {
+    "en": "I'll catch the next one, don't wait for me.",
+    "ru": "Я поеду на следующем, не жди меня.",
+    "ko": "저는 다음 거 탈게요, 기다리지 마세요."
+   },
+   {
+    "en": "Did you manage to catch the last ferry?",
+    "ru": "Успел на последний паром?",
+    "ko": "마지막 배는 탔어요?"
+   }
   ]
  },
  "73": {
@@ -8028,6 +10332,38 @@
      "ru": "Прошедшее время у cost совпадает с начальной формой.",
      "ko": "cost의 과거형은 cost입니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "How much did your new phone cost?",
+    "ru": "Сколько стоил твой новый телефон?",
+    "ko": "새 휴대폰 얼마 줬어요?"
+   },
+   {
+    "en": "A taxi to the airport costs about fifty dollars.",
+    "ru": "Такси до аэропорта стоит около пятидесяти долларов.",
+    "ko": "공항까지 택시비가 50달러쯤 나와요."
+   },
+   {
+    "en": "It doesn't cost anything to join.",
+    "ru": "Вступить ничего не стоит.",
+    "ko": "가입은 무료예요."
+   },
+   {
+    "en": "The trip cost more than we planned.",
+    "ru": "Поездка обошлась дороже, чем мы планировали.",
+    "ko": "여행비가 계획보다 많이 들었어요."
+   },
+   {
+    "en": "Fixing the car will cost a fortune.",
+    "ru": "Ремонт машины обойдётся в целое состояние.",
+    "ko": "차 고치려면 돈이 엄청 들 거예요."
+   },
+   {
+    "en": "Does it cost extra to choose a seat?",
+    "ru": "За выбор места нужно доплачивать?",
+    "ko": "좌석 지정하면 돈 더 내야 해요?"
    }
   ]
  },
@@ -8139,6 +10475,38 @@
      "ko": "첫째 표현은 협상의 여지를 남깁니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "He offered to drive me home.",
+    "ru": "Он предложил подвезти меня домой.",
+    "ko": "그분이 집까지 태워 주겠다고 했어요."
+   },
+   {
+    "en": "They offered me the job yesterday!",
+    "ru": "Вчера мне предложили эту работу!",
+    "ko": "어제 그 회사에서 저를 뽑겠대요!"
+   },
+   {
+    "en": "Does the hotel offer free breakfast?",
+    "ru": "В отеле есть бесплатный завтрак?",
+    "ko": "그 호텔 조식 무료로 줘요?"
+   },
+   {
+    "en": "I offered to help, but she said no.",
+    "ru": "Я предложил помочь, но она отказалась.",
+    "ko": "도와주겠다고 했는데 괜찮다더라고요."
+   },
+   {
+    "en": "Could you offer a small discount if I pay cash?",
+    "ru": "Можете сделать небольшую скидку, если я заплачу наличными?",
+    "ko": "현금으로 내면 좀 깎아 주실 수 있어요?"
+   },
+   {
+    "en": "Nobody offered me a seat on the bus.",
+    "ru": "Никто не уступил мне место в автобусе.",
+    "ko": "버스에서 아무도 자리를 양보 안 해 줬어요."
+   }
   ]
  },
  "75": {
@@ -8248,6 +10616,38 @@
      "ru": "Первый вариант — стандарт документов. Второй громоздкий.",
      "ko": "문서에서는 첫째가 표준입니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Does this job require a driver's license?",
+    "ru": "Для этой работы нужны права?",
+    "ko": "이 일은 운전면허가 필요해요?"
+   },
+   {
+    "en": "International flights require a valid passport.",
+    "ru": "Для международных рейсов нужен действующий паспорт.",
+    "ko": "국제선 타려면 유효한 여권이 있어야 해요."
+   },
+   {
+    "en": "The recipe requires fresh basil.",
+    "ru": "Для этого рецепта нужен свежий базилик.",
+    "ko": "이 레시피에는 생바질이 꼭 들어가요."
+   },
+   {
+    "en": "Learning a language requires a lot of patience.",
+    "ru": "Изучение языка требует много терпения.",
+    "ko": "언어를 배우려면 인내심이 많이 필요해요."
+   },
+   {
+    "en": "You're required to wear a helmet here.",
+    "ru": "Здесь обязательно носить каску.",
+    "ko": "여기서는 헬멧을 꼭 써야 해요."
+   },
+   {
+    "en": "This medicine doesn't require a prescription.",
+    "ru": "Это лекарство продаётся без рецепта.",
+    "ko": "이 약은 처방전이 없어도 돼요."
    }
   ]
  },
@@ -8359,6 +10759,38 @@
      "ko": "체중 증가는 gain으로 말합니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "I've gained some weight since I stopped running.",
+    "ru": "С тех пор как бросил бегать, я поправился.",
+    "ko": "달리기 그만두고 나서 살이 좀 쪘어요."
+   },
+   {
+    "en": "You'll gain a lot from this internship.",
+    "ru": "Эта стажировка тебе много даст.",
+    "ko": "이번 인턴십에서 얻는 게 많을 거예요."
+   },
+   {
+    "en": "What did you gain from living abroad?",
+    "ru": "Что тебе дала жизнь за границей?",
+    "ko": "외국에서 살면서 뭘 얻었어요?"
+   },
+   {
+    "en": "Our channel gained ten thousand followers this month.",
+    "ru": "Наш канал за месяц набрал десять тысяч подписчиков.",
+    "ko": "이번 달에 우리 채널 구독자가 만 명 늘었어요."
+   },
+   {
+    "en": "He gained the team's trust pretty quickly.",
+    "ru": "Он довольно быстро завоевал доверие команды.",
+    "ko": "그분은 꽤 빨리 팀의 신뢰를 얻었어요."
+   },
+   {
+    "en": "Try not to gain too much weight on vacation.",
+    "ru": "Постарайся не набрать много веса в отпуске.",
+    "ko": "휴가 때 살 너무 찌지 않게 조심해요."
+   }
   ]
  },
  "77": {
@@ -8468,6 +10900,38 @@
      "ru": "После mention предлог about не нужен.",
      "ko": "mention은 전치사 없이 목적어를 바로 받습니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "She mentioned you were moving to Seoul.",
+    "ru": "Она обмолвилась, что ты переезжаешь в Сеул.",
+    "ko": "그분이 당신 서울로 이사 간다고 하던데요."
+   },
+   {
+    "en": "Please don't mention this to my mom.",
+    "ru": "Пожалуйста, не говори об этом маме.",
+    "ko": "제발 이거 엄마한테 말하지 마."
+   },
+   {
+    "en": "Did I mention I'm allergic to nuts?",
+    "ru": "Я говорил, что у меня аллергия на орехи?",
+    "ko": "제가 견과류 알레르기 있다고 말했나요?"
+   },
+   {
+    "en": "He never mentioned having a sister.",
+    "ru": "Он ни разу не упоминал, что у него есть сестра.",
+    "ko": "그 사람 누나 있다는 얘기 한 번도 안 했어요."
+   },
+   {
+    "en": "I'll mention it to the manager tomorrow.",
+    "ru": "Завтра скажу об этом менеджеру.",
+    "ko": "내일 매니저한테 얘기해 볼게요."
+   },
+   {
+    "en": "You didn't mention the party was tonight!",
+    "ru": "Ты не говорил, что вечеринка сегодня!",
+    "ko": "파티가 오늘이라고는 말 안 했잖아!"
    }
   ]
  },
@@ -8579,6 +11043,38 @@
      "ko": "첫째가 훨씬 책임감 있게 들립니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Can you handle the kids by yourself tonight?",
+    "ru": "Справишься сегодня с детьми один?",
+    "ko": "오늘 밤에 애들 혼자 볼 수 있겠어?"
+   },
+   {
+    "en": "Don't worry, I can handle it.",
+    "ru": "Не волнуйся, я справлюсь.",
+    "ko": "걱정 마세요, 제가 할 수 있어요."
+   },
+   {
+    "en": "I couldn't handle the pressure at that job.",
+    "ru": "На той работе я не выдержал давления.",
+    "ko": "그 직장에선 압박감을 감당 못 하겠더라고요."
+   },
+   {
+    "en": "Who handles refunds here?",
+    "ru": "Кто тут занимается возвратами?",
+    "ko": "여기 환불은 누가 처리해요?"
+   },
+   {
+    "en": "He doesn't handle stress very well.",
+    "ru": "Он плохо справляется со стрессом.",
+    "ko": "그 사람은 스트레스를 잘 못 견뎌요."
+   },
+   {
+    "en": "Could you handle the bookings for our trip?",
+    "ru": "Можешь взять на себя бронирование для поездки?",
+    "ko": "이번 여행 예약 좀 맡아 줄래요?"
+   }
   ]
  },
  "79": {
@@ -8688,6 +11184,38 @@
      "ru": "Товар в роли подлежащего берёт активную форму без дополнений.",
      "ko": "상품이 주어일 때는 능동형으로 간단히 씁니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "These cookies always sell out by noon.",
+    "ru": "Это печенье всегда раскупают к обеду.",
+    "ko": "이 쿠키는 늘 점심 전에 다 팔려요."
+   },
+   {
+    "en": "Do umbrellas sell well on rainy days?",
+    "ru": "В дождь зонты хорошо продаются?",
+    "ko": "비 오는 날엔 우산 잘 팔려요?"
+   },
+   {
+    "en": "His first book didn't sell at all.",
+    "ru": "Его первая книга совсем не продавалась.",
+    "ko": "그 사람 첫 책은 전혀 안 팔렸어요."
+   },
+   {
+    "en": "Houses in this area sell fast.",
+    "ru": "Дома в этом районе продаются быстро.",
+    "ko": "이 동네 집은 금방 팔려요."
+   },
+   {
+    "en": "Black T-shirts sell better than white ones.",
+    "ru": "Чёрные футболки продаются лучше белых.",
+    "ko": "검은색 티셔츠가 흰색보다 잘 팔려요."
+   },
+   {
+    "en": "I hope my old bike sells this week.",
+    "ru": "Надеюсь, мой старый велик продастся на этой неделе.",
+    "ko": "제 중고 자전거가 이번 주에 팔렸으면 좋겠어요."
    }
   ]
  },
@@ -8799,6 +11327,38 @@
      "ko": "fit은 사이즈, suit은 어울림입니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Short hair really suits you.",
+    "ru": "Короткая стрижка тебе очень идёт.",
+    "ko": "짧은 머리 정말 잘 어울려요."
+   },
+   {
+    "en": "Does this dress suit me, or is it too much?",
+    "ru": "Мне идёт это платье или перебор?",
+    "ko": "이 원피스 저한테 어울려요, 아니면 너무 과해요?"
+   },
+   {
+    "en": "Red has never suited me.",
+    "ru": "Красный мне никогда не шёл.",
+    "ko": "빨간색은 원래 저한테 안 어울려요."
+   },
+   {
+    "en": "Would ten o'clock suit you?",
+    "ru": "Вам удобно в десять?",
+    "ko": "10시 괜찮으시겠어요?"
+   },
+   {
+    "en": "That apartment doesn't really suit a big family.",
+    "ru": "Эта квартира не очень подходит для большой семьи.",
+    "ko": "그 집은 대가족한테는 좀 안 맞아요."
+   },
+   {
+    "en": "Glasses suit him better than contacts.",
+    "ru": "Очки ему идут больше, чем линзы.",
+    "ko": "그 사람은 렌즈보다 안경이 더 잘 어울려요."
+   }
   ]
  },
  "81": {
@@ -8908,6 +11468,38 @@
      "ru": "Опоздание на транспорт — только miss.",
      "ko": "교통편을 놓친 것은 miss입니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Sorry I missed your call — I was driving.",
+    "ru": "Извини, пропустил твой звонок — был за рулём.",
+    "ko": "전화 못 받아서 미안해, 운전 중이었어."
+   },
+   {
+    "en": "Hurry up, or we'll miss the last train.",
+    "ru": "Быстрее, а то опоздаем на последнюю электричку.",
+    "ko": "서둘러요, 안 그러면 막차 놓쳐요."
+   },
+   {
+    "en": "I'm not going to miss your birthday party.",
+    "ru": "Твой день рождения я ни за что не пропущу.",
+    "ko": "네 생일 파티는 절대 안 빠질 거야."
+   },
+   {
+    "en": "She missed two days of work with the flu.",
+    "ru": "Она пропустила два рабочих дня из-за гриппа.",
+    "ko": "독감 때문에 이틀 결근했어요."
+   },
+   {
+    "en": "You can't miss it — it's the big blue building.",
+    "ru": "Мимо не пройдёте — это большое синее здание.",
+    "ko": "못 찾을 수가 없어요, 큰 파란 건물이에요."
+   },
+   {
+    "en": "The kids really miss you. Come visit soon.",
+    "ru": "Дети по тебе очень скучают. Приезжай скорее.",
+    "ko": "애들이 너 엄청 보고 싶어 해. 빨리 놀러 와."
    }
   ]
  },
@@ -9019,6 +11611,38 @@
      "ko": "사건이 주어면 능동형으로 간단히 씁니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "The movie finished around eleven, so we took a cab.",
+    "ru": "Фильм закончился около одиннадцати, так что мы взяли такси.",
+    "ko": "영화가 열한 시쯤 끝나서 택시 탔어요."
+   },
+   {
+    "en": "Do you know when the concert finishes?",
+    "ru": "Не знаешь, когда заканчивается концерт?",
+    "ko": "콘서트 몇 시에 끝나는지 알아요?"
+   },
+   {
+    "en": "My shift finishes at six, so I can meet after.",
+    "ru": "Моя смена заканчивается в шесть, потом могу встретиться.",
+    "ko": "제 근무가 여섯 시에 끝나니까 그 뒤에 만날 수 있어요."
+   },
+   {
+    "en": "The match didn't finish until almost midnight.",
+    "ru": "Матч закончился только ближе к полуночи.",
+    "ko": "경기가 거의 자정이 다 돼서야 끝났어요."
+   },
+   {
+    "en": "Our team finished last in the bowling league.",
+    "ru": "Наша команда заняла последнее место в лиге по боулингу.",
+    "ko": "우리 팀이 볼링 리그에서 꼴찌로 끝났어요."
+   },
+   {
+    "en": "Class finishes early on Fridays.",
+    "ru": "По пятницам занятия заканчиваются раньше.",
+    "ko": "금요일에는 수업이 일찍 끝나요."
+   }
   ]
  },
  "83": {
@@ -9128,6 +11752,38 @@
      "ru": "После finish идёт -ing.",
      "ko": "finish 뒤에는 -ing를 씁니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Are you going to finish your fries?",
+    "ru": "Ты будешь доедать картошку?",
+    "ko": "감자튀김 다 먹을 거야?"
+   },
+   {
+    "en": "I didn't finish the movie — it was too boring.",
+    "ru": "Я не досмотрел фильм — слишком скучный.",
+    "ko": "영화 너무 지루해서 끝까지 못 봤어요."
+   },
+   {
+    "en": "Let me finish my coffee, then we can go.",
+    "ru": "Дай допью кофе, и пойдём.",
+    "ko": "커피만 다 마시고 가요."
+   },
+   {
+    "en": "Have you finished packing yet?",
+    "ru": "Ты уже собрал вещи?",
+    "ko": "짐 다 쌌어요?"
+   },
+   {
+    "en": "I'll finish the slides tonight and send them over.",
+    "ru": "Сегодня вечером доделаю слайды и пришлю.",
+    "ko": "오늘 밤에 슬라이드 마무리해서 보내 드릴게요."
+   },
+   {
+    "en": "Could you let me finish my sentence, please?",
+    "ru": "Дайте мне, пожалуйста, договорить.",
+    "ko": "제 말 좀 끝까지 들어 주시겠어요?"
    }
   ]
  },
@@ -9239,6 +11895,38 @@
      "ko": "자리를 말할 때는 in을 씁니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Where do the towels belong?",
+    "ru": "Где у вас лежат полотенца?",
+    "ko": "수건은 어디에 두는 거예요?"
+   },
+   {
+    "en": "This phone charger belongs to my brother.",
+    "ru": "Эта зарядка — моего брата.",
+    "ko": "이 충전기는 우리 형 거예요."
+   },
+   {
+    "en": "Shoes belong by the door, not in the hallway.",
+    "ru": "Обувь стоит у двери, а не посреди коридора.",
+    "ko": "신발은 복도 말고 문 옆에 두는 거야."
+   },
+   {
+    "en": "Does this umbrella belong to anyone?",
+    "ru": "Чей это зонтик?",
+    "ko": "이 우산 주인 계세요?"
+   },
+   {
+    "en": "That folder belongs on the top shelf.",
+    "ru": "Эта папка стоит на верхней полке.",
+    "ko": "그 폴더는 맨 위 칸에 두는 거예요."
+   },
+   {
+    "en": "I don't think this receipt belongs in my bag.",
+    "ru": "По-моему, этому чеку не место в моей сумке.",
+    "ko": "이 영수증은 제 가방에 있을 게 아닌 것 같은데요."
+   }
   ]
  },
  "85": {
@@ -9348,6 +12036,38 @@
      "ru": "afford требует can или could.",
      "ko": "afford는 can과 함께 씁니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "I can't afford a new phone right now.",
+    "ru": "Сейчас я не могу позволить себе новый телефон.",
+    "ko": "지금은 새 폰 살 여유가 없어요."
+   },
+   {
+    "en": "Can we afford to eat out this weekend?",
+    "ru": "Мы можем себе позволить поужинать где-нибудь в эти выходные?",
+    "ko": "이번 주말에 외식할 여유 돼?"
+   },
+   {
+    "en": "I can't afford to be late again.",
+    "ru": "Мне больше нельзя опаздывать.",
+    "ko": "또 늦으면 안 돼요."
+   },
+   {
+    "en": "We could barely afford rent when we started out.",
+    "ru": "Поначалу мы еле тянули аренду.",
+    "ko": "처음엔 월세 내기도 빠듯했어요."
+   },
+   {
+    "en": "One day I'll be able to afford a trip to Hawaii.",
+    "ru": "Когда-нибудь я смогу позволить себе поездку на Гавайи.",
+    "ko": "언젠가는 하와이 여행 갈 형편이 되겠죠."
+   },
+   {
+    "en": "Honestly, I can't afford to take another day off.",
+    "ru": "Честно, я больше не могу брать отгул.",
+    "ko": "솔직히 하루 더 쉴 여유는 없어요."
    }
   ]
  },
@@ -9459,6 +12179,38 @@
      "ko": "grab은 공식 자리에 어울리지 않습니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Can you grab some milk on your way home?",
+    "ru": "Захватишь молоко по дороге домой?",
+    "ko": "집에 오는 길에 우유 좀 사 올래?"
+   },
+   {
+    "en": "Let's grab a quick bite before the movie.",
+    "ru": "Давай перекусим перед фильмом.",
+    "ko": "영화 전에 간단히 뭐 좀 먹자."
+   },
+   {
+    "en": "I'll grab a taxi from the airport.",
+    "ru": "Из аэропорта возьму такси.",
+    "ko": "공항에서 택시 탈게요."
+   },
+   {
+    "en": "Want to grab a drink after work?",
+    "ru": "Хочешь выпить по стаканчику после работы?",
+    "ko": "퇴근하고 한잔할래?"
+   },
+   {
+    "en": "Could you grab the door for me?",
+    "ru": "Не придержите дверь?",
+    "ko": "문 좀 잡아 주실래요?"
+   },
+   {
+    "en": "I grabbed the wrong bag at the gym.",
+    "ru": "В спортзале я схватил не ту сумку.",
+    "ko": "헬스장에서 가방을 잘못 들고 왔어요."
+   }
   ]
  },
  "87": {
@@ -9568,6 +12320,38 @@
      "ru": "В официальном документе repair точнее и нейтральнее.",
      "ko": "공식 문서에서는 repair가 적절합니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Can you fix my bike this weekend?",
+    "ru": "Сможешь починить мой велик на выходных?",
+    "ko": "이번 주말에 내 자전거 좀 고쳐 줄 수 있어?"
+   },
+   {
+    "en": "The plumber still hasn't fixed the sink.",
+    "ru": "Сантехник так и не починил раковину.",
+    "ko": "배관공이 아직도 싱크대를 안 고쳤어요."
+   },
+   {
+    "en": "I'll fix the typo and resend the email.",
+    "ru": "Исправлю опечатку и отправлю письмо заново.",
+    "ko": "오타 고쳐서 메일 다시 보낼게요."
+   },
+   {
+    "en": "Did restarting it fix the problem?",
+    "ru": "Перезагрузка помогла?",
+    "ko": "재부팅하니까 문제 해결됐어요?"
+   },
+   {
+    "en": "Let's sit down and fix this before it gets worse.",
+    "ru": "Давай сядем и уладим это, пока не стало хуже.",
+    "ko": "더 나빠지기 전에 앉아서 해결하자."
+   },
+   {
+    "en": "They couldn't fix my screen, so I got a new one.",
+    "ru": "Экран починить не смогли, так что я купил новый.",
+    "ko": "화면을 못 고친다고 해서 새로 샀어요."
    }
   ]
  },
@@ -9679,6 +12463,38 @@
      "ko": "deserve 뒤 동사에는 to를 씁니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "After this week, you deserve a nice dinner.",
+    "ru": "После такой недели ты заслужил хороший ужин.",
+    "ko": "이번 주 고생했으니 맛있는 저녁 먹을 자격 있어."
+   },
+   {
+    "en": "He didn't deserve to be treated like that.",
+    "ru": "Он не заслужил такого обращения.",
+    "ko": "그 사람이 그런 대우를 받을 이유는 없었어요."
+   },
+   {
+    "en": "Honestly, that waiter deserves a big tip.",
+    "ru": "Честно, этот официант заслужил хорошие чаевые.",
+    "ko": "솔직히 저 웨이터는 팁 많이 받을 만해요."
+   },
+   {
+    "en": "What did I do to deserve this?",
+    "ru": "Чем я это заслужил?",
+    "ko": "내가 뭘 잘못했다고 이래?"
+   },
+   {
+    "en": "You've worked hard. You deserve this vacation.",
+    "ru": "Ты много работал. Этот отпуск ты заслужил.",
+    "ko": "열심히 일했잖아요. 이번 휴가는 누릴 만해요."
+   },
+   {
+    "en": "They deserved to win — they played much better.",
+    "ru": "Они заслужили победу — играли гораздо лучше.",
+    "ko": "이길 만했어요, 훨씬 잘했거든요."
+   }
   ]
  },
  "89": {
@@ -9788,6 +12604,38 @@
      "ru": "Вопрос значит «вы против?», поэтому согласие — отрицание.",
      "ko": "'싫으세요?'라는 뜻이므로 부정으로 답합니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "I wouldn't mind a few more days at the beach.",
+    "ru": "Я бы не отказался ещё от пары дней на пляже.",
+    "ko": "바닷가에서 며칠 더 있어도 좋겠어요."
+   },
+   {
+    "en": "I don't mind driving if you're tired.",
+    "ru": "Если ты устал, я спокойно поведу.",
+    "ko": "피곤하면 내가 운전해도 괜찮아."
+   },
+   {
+    "en": "I wouldn't mind trying that new Thai place.",
+    "ru": "Я бы не прочь сходить в то новое тайское кафе.",
+    "ko": "새로 생긴 태국 음식점 가 봐도 좋을 것 같아요."
+   },
+   {
+    "en": "He doesn't mind working late on Fridays.",
+    "ru": "Он не против задерживаться по пятницам.",
+    "ko": "그 사람은 금요일에 야근해도 별로 상관 안 해요."
+   },
+   {
+    "en": "Honestly, I wouldn't mind a quiet night in.",
+    "ru": "Честно, я бы с удовольствием просто посидел дома.",
+    "ko": "솔직히 오늘은 집에서 조용히 쉬어도 좋겠어요."
+   },
+   {
+    "en": "I wouldn't mind some help with these boxes.",
+    "ru": "Я бы не отказался от помощи с этими коробками.",
+    "ko": "이 상자들 좀 도와주면 좋겠는데요."
    }
   ]
  },
@@ -9899,6 +12747,38 @@
      "ko": "fully booked로 굳어진 표현입니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Could you book a table for four at seven?",
+    "ru": "Можете забронировать столик на четверых на семь?",
+    "ko": "일곱 시에 네 명 자리 예약해 주실 수 있어요?"
+   },
+   {
+    "en": "I still haven't booked a hotel for the trip.",
+    "ru": "Я до сих пор не забронировал отель на поездку.",
+    "ko": "여행 갈 호텔을 아직 예약 못 했어요."
+   },
+   {
+    "en": "I booked a dentist appointment for Monday morning.",
+    "ru": "Записался к стоматологу на утро понедельника.",
+    "ko": "월요일 아침으로 치과 예약했어요."
+   },
+   {
+    "en": "Did you book the tickets online?",
+    "ru": "Ты бронировал билеты онлайн?",
+    "ko": "표 인터넷으로 예약했어?"
+   },
+   {
+    "en": "Sorry, we're fully booked this weekend.",
+    "ru": "Извините, на эти выходные у нас всё занято.",
+    "ko": "죄송합니다, 이번 주말은 예약이 다 찼어요."
+   },
+   {
+    "en": "I'll book us a car for the airport.",
+    "ru": "Закажу нам машину до аэропорта.",
+    "ko": "공항 가는 차 예약해 둘게요."
+   }
   ]
  },
  "91": {
@@ -10008,6 +12888,38 @@
      "ru": "Первый вариант оставляет место для объяснений и сохраняет отношения.",
      "ko": "첫째 표현은 해명의 여지를 남깁니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "You seem a little down today. Everything okay?",
+    "ru": "Ты сегодня какой-то грустный. Всё в порядке?",
+    "ko": "오늘 좀 기운 없어 보이네요. 괜찮아요?"
+   },
+   {
+    "en": "The new guy seems really nice.",
+    "ru": "Новенький вроде очень приятный.",
+    "ko": "새로 온 분 진짜 좋은 사람 같아요."
+   },
+   {
+    "en": "It seems like it's going to rain.",
+    "ru": "Похоже, будет дождь.",
+    "ko": "비가 올 것 같아요."
+   },
+   {
+    "en": "She didn't seem surprised at all.",
+    "ru": "Она совсем не выглядела удивлённой.",
+    "ko": "그분은 전혀 놀란 것 같지 않았어요."
+   },
+   {
+    "en": "This price seems a bit high for a used car.",
+    "ru": "Цена кажется высоковатой для подержанной машины.",
+    "ko": "중고차치고 가격이 좀 비싼 것 같아요."
+   },
+   {
+    "en": "You seem to know a lot about wine.",
+    "ru": "Ты, похоже, неплохо разбираешься в вине.",
+    "ko": "와인에 대해 많이 아시는 것 같아요."
    }
   ]
  },
@@ -10119,6 +13031,38 @@
      "ko": "첫째는 내 느낌, 둘째는 상대 탓입니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Does it bother you if I open the window?",
+    "ru": "Тебе не помешает, если я открою окно?",
+    "ko": "창문 열어도 신경 안 쓰여요?"
+   },
+   {
+    "en": "The smell of smoke really bothers me.",
+    "ru": "Меня очень раздражает запах дыма.",
+    "ko": "담배 냄새가 정말 거슬려요."
+   },
+   {
+    "en": "It bothered me that nobody said thank you.",
+    "ru": "Меня задело, что никто не сказал спасибо.",
+    "ko": "아무도 고맙다는 말을 안 해서 좀 서운했어요."
+   },
+   {
+    "en": "Is your back still bothering you?",
+    "ru": "Спина всё ещё беспокоит?",
+    "ko": "허리 아직도 불편하세요?"
+   },
+   {
+    "en": "The crying baby on the plane didn't bother me.",
+    "ru": "Плачущий ребёнок в самолёте мне не мешал.",
+    "ko": "비행기에서 아기가 울어도 저는 괜찮았어요."
+   },
+   {
+    "en": "What bothers me most is the constant notifications.",
+    "ru": "Больше всего меня бесят бесконечные уведомления.",
+    "ko": "제일 거슬리는 건 계속 오는 알림이에요."
+   }
   ]
  },
  "93": {
@@ -10228,6 +13172,38 @@
      "ru": "После bother нужна форма -ing или to.",
      "ko": "bother 뒤에는 -ing나 to가 옵니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Don't bother calling — I'll be in a meeting.",
+    "ru": "Можешь не звонить — я буду на совещании.",
+    "ko": "전화하지 마세요, 회의 중일 거예요."
+   },
+   {
+    "en": "She didn't even bother saying goodbye.",
+    "ru": "Она даже не удосужилась попрощаться.",
+    "ko": "그 사람은 인사도 안 하고 갔어요."
+   },
+   {
+    "en": "I never bother ironing my T-shirts.",
+    "ru": "Я никогда не заморачиваюсь глажкой футболок.",
+    "ko": "저는 티셔츠는 굳이 안 다려요."
+   },
+   {
+    "en": "Don't bother cooking tonight, let's order pizza.",
+    "ru": "Не заморачивайся с готовкой сегодня, закажем пиццу.",
+    "ko": "오늘 요리하지 말고 피자 시키자."
+   },
+   {
+    "en": "Nobody bothered to tell me the meeting was canceled.",
+    "ru": "Никто не удосужился сказать мне, что встречу отменили.",
+    "ko": "회의 취소됐다고 말해 준 사람이 아무도 없었어요."
+   },
+   {
+    "en": "Should I bother bringing an umbrella?",
+    "ru": "Есть смысл брать зонт?",
+    "ko": "우산 챙겨 갈 필요 있을까요?"
    }
   ]
  },
@@ -10339,6 +13315,38 @@
      "ko": "첫째가 상대의 바쁨을 존중하는 표현입니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Could you spare some change for the parking meter?",
+    "ru": "Не найдётся мелочи для паркомата?",
+    "ko": "주차 요금 낼 잔돈 좀 있으세요?"
+   },
+   {
+    "en": "Sorry, I can't spare any time today.",
+    "ru": "Извини, сегодня у меня нет ни минуты.",
+    "ko": "미안해요, 오늘은 시간 낼 수가 없어요."
+   },
+   {
+    "en": "Do you have a spare charger I could borrow?",
+    "ru": "У тебя нет лишней зарядки одолжить?",
+    "ko": "빌릴 수 있는 남는 충전기 있어?"
+   },
+   {
+    "en": "We got to the airport with an hour to spare.",
+    "ru": "Мы приехали в аэропорт с запасом в час.",
+    "ko": "공항에 한 시간 여유 있게 도착했어요."
+   },
+   {
+    "en": "Can you spare me a few minutes after lunch?",
+    "ru": "Уделишь мне пару минут после обеда?",
+    "ko": "점심 먹고 몇 분만 시간 내줄 수 있어요?"
+   },
+   {
+    "en": "I can't spare the money for a new laptop yet.",
+    "ru": "Пока не могу выделить деньги на новый ноутбук.",
+    "ko": "아직은 새 노트북 살 돈을 뺄 수가 없어요."
+   }
   ]
  },
  "95": {
@@ -10448,6 +13456,38 @@
      "ru": "ruin в отчёте звучит эмоционально и безнадёжно.",
      "ko": "보고서에서 ruin은 감정적으로 들립니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "I hope I didn't ruin your evening.",
+    "ru": "Надеюсь, я не испортил тебе вечер.",
+    "ko": "내가 오늘 저녁 망친 건 아니었으면 좋겠다."
+   },
+   {
+    "en": "The washing machine ruined my favorite sweater.",
+    "ru": "Стиралка испортила мой любимый свитер.",
+    "ko": "세탁기가 제일 좋아하는 스웨터를 망가뜨렸어요."
+   },
+   {
+    "en": "Please don't ruin this for me.",
+    "ru": "Пожалуйста, не порть мне это.",
+    "ko": "제발 이거 망치지 마."
+   },
+   {
+    "en": "A bad cold totally ruined my vacation.",
+    "ru": "Сильная простуда напрочь испортила мне отпуск.",
+    "ko": "심한 감기 때문에 휴가를 완전히 망쳤어요."
+   },
+   {
+    "en": "Too much salt will ruin the soup.",
+    "ru": "Если пересолить, суп будет испорчен.",
+    "ko": "소금 너무 많이 넣으면 국 망쳐요."
+   },
+   {
+    "en": "Did the rain ruin your phone?",
+    "ru": "Телефон после дождя не накрылся?",
+    "ko": "비 맞아서 폰 망가졌어?"
    }
   ]
  },
@@ -10559,6 +13599,38 @@
      "ko": "owe는 상태 동사입니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "I still owe you twenty bucks from last week.",
+    "ru": "Я всё ещё должен тебе двадцатку с прошлой недели.",
+    "ko": "지난주에 빌린 20달러 아직 못 갚았네."
+   },
+   {
+    "en": "Thanks for covering for me. I owe you one.",
+    "ru": "Спасибо, что прикрыл. Я твой должник.",
+    "ko": "대신 맡아 줘서 고마워. 신세 졌다."
+   },
+   {
+    "en": "What do I owe you for the tickets?",
+    "ru": "Сколько я тебе должен за билеты?",
+    "ko": "표값 얼마 주면 돼?"
+   },
+   {
+    "en": "You don't owe me an explanation.",
+    "ru": "Ты не обязан мне ничего объяснять.",
+    "ko": "나한테 설명 안 해도 돼."
+   },
+   {
+    "en": "We owe the landlord two months' rent.",
+    "ru": "Мы должны арендодателю за два месяца.",
+    "ko": "집주인한테 두 달 치 월세가 밀렸어요."
+   },
+   {
+    "en": "I owe my parents a visit this weekend.",
+    "ru": "На этих выходных мне надо бы навестить родителей.",
+    "ko": "이번 주말엔 부모님 댁에 한번 가 봬야 해요."
+   }
   ]
  },
  "97": {
@@ -10668,6 +13740,38 @@
      "ru": "В официальном письме уместен resign, quit слишком разговорно.",
      "ko": "공식 문서에서는 resign을 씁니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "I'm going to quit sugar next month.",
+    "ru": "Со следующего месяца бросаю сахар.",
+    "ko": "다음 달부터 설탕 끊을 거예요."
+   },
+   {
+    "en": "Why did you quit the gym?",
+    "ru": "Почему ты бросил спортзал?",
+    "ko": "헬스 왜 그만뒀어?"
+   },
+   {
+    "en": "She quit her job to travel for a year.",
+    "ru": "Она уволилась, чтобы год путешествовать.",
+    "ko": "그분은 1년 여행하려고 회사 그만뒀어요."
+   },
+   {
+    "en": "I tried to quit social media, but it didn't last.",
+    "ru": "Пытался бросить соцсети, но надолго не хватило.",
+    "ko": "SNS 끊으려고 했는데 오래 못 갔어요."
+   },
+   {
+    "en": "He never quits, no matter how hard it gets.",
+    "ru": "Он никогда не сдаётся, как бы тяжело ни было.",
+    "ko": "그 사람은 아무리 힘들어도 절대 포기 안 해요."
+   },
+   {
+    "en": "Quit complaining and help me with the dishes.",
+    "ru": "Хватит ныть, помоги лучше с посудой.",
+    "ko": "불평 그만하고 설거지 좀 도와줘."
    }
   ]
  },
@@ -10779,6 +13883,38 @@
      "ko": "사물 앞에는 for를 쓰지 않습니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "Could you arrange a taxi for nine tomorrow?",
+    "ru": "Можете заказать такси на девять завтра?",
+    "ko": "내일 아홉 시로 택시 좀 불러 주실 수 있어요?"
+   },
+   {
+    "en": "We arranged to meet outside the station.",
+    "ru": "Мы договорились встретиться у вокзала.",
+    "ko": "역 앞에서 만나기로 했어요."
+   },
+   {
+    "en": "I've arranged for a babysitter on Saturday night.",
+    "ru": "Я договорилась с няней на субботний вечер.",
+    "ko": "토요일 밤에 아이 봐줄 사람 구해 놨어요."
+   },
+   {
+    "en": "Has anyone arranged a gift for her farewell?",
+    "ru": "Кто-нибудь организовал подарок на её проводы?",
+    "ko": "송별회 선물 준비한 사람 있어요?"
+   },
+   {
+    "en": "The hotel can arrange a late checkout for you.",
+    "ru": "Отель может устроить вам поздний выезд.",
+    "ko": "호텔에서 늦은 체크아웃 해 드릴 수 있어요."
+   },
+   {
+    "en": "I'll arrange everything, you just show up.",
+    "ru": "Я всё организую, тебе нужно только прийти.",
+    "ko": "내가 다 준비할 테니까 넌 오기만 해."
+   }
   ]
  },
  "99": {
@@ -10889,6 +14025,38 @@
      "ko": "의도적으로 안 간 것이므로 skip입니다."
     }
    }
+  ],
+  "more": [
+   {
+    "en": "I skipped breakfast and now I'm starving.",
+    "ru": "Я пропустил завтрак, и теперь умираю с голоду.",
+    "ko": "아침 걸렀더니 배고파 죽겠어요."
+   },
+   {
+    "en": "Let's skip the mall and go straight home.",
+    "ru": "Давай не пойдём в торговый центр, а сразу домой.",
+    "ko": "쇼핑몰은 건너뛰고 바로 집에 가자."
+   },
+   {
+    "en": "Can I skip this question and come back to it?",
+    "ru": "Можно я пропущу этот вопрос и вернусь к нему?",
+    "ko": "이 문제 넘어갔다가 다시 와도 돼요?"
+   },
+   {
+    "en": "He skipped class to watch the game.",
+    "ru": "Он прогулял пару, чтобы посмотреть матч.",
+    "ko": "경기 보려고 수업 빼먹었어요."
+   },
+   {
+    "en": "I'm skipping the party tonight — I'm exhausted.",
+    "ru": "Сегодня на вечеринку не пойду — я без сил.",
+    "ko": "오늘 파티는 빠질래, 너무 피곤해."
+   },
+   {
+    "en": "Just skip the ads and go to the video.",
+    "ru": "Просто пропусти рекламу и смотри видео.",
+    "ko": "광고는 건너뛰고 영상 바로 봐요."
+   }
   ]
  },
  "100": {
@@ -10998,6 +14166,38 @@
      "ru": "О сюжете говорят spoil. ruin означало бы, что фильм испорчен физически.",
      "ko": "줄거리를 말할 때는 spoil을 씁니다."
     }
+   }
+  ],
+  "more": [
+   {
+    "en": "Please don't spoil the ending — I'm only on episode three.",
+    "ru": "Только не спойлери концовку — я на третьей серии.",
+    "ko": "결말 스포 하지 마세요, 저 아직 3화예요."
+   },
+   {
+    "en": "You're going to spoil that dog with all those treats.",
+    "ru": "Ты избалуешь собаку всеми этими вкусняшками.",
+    "ko": "간식 그렇게 주면 강아지 버릇 나빠져."
+   },
+   {
+    "en": "One rude guest spoiled the whole party.",
+    "ru": "Один грубый гость испортил весь праздник.",
+    "ko": "무례한 손님 한 명 때문에 파티 분위기를 다 망쳤어요."
+   },
+   {
+    "en": "Someone spoiled the finale for me on Twitter.",
+    "ru": "Кто-то проспойлерил мне финал в Твиттере.",
+    "ko": "트위터에서 누가 마지막 회 스포했어요."
+   },
+   {
+    "en": "Put the meat in the fridge, or it'll spoil.",
+    "ru": "Убери мясо в холодильник, а то испортится.",
+    "ko": "고기 냉장고에 넣어, 안 그러면 상해."
+   },
+   {
+    "en": "Go ahead and spoil yourself — it's your birthday.",
+    "ru": "Побалуй себя — у тебя же день рождения.",
+    "ko": "생일이잖아, 오늘은 마음껏 누려."
    }
   ]
  }

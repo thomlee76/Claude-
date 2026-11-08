@@ -11,9 +11,10 @@ import os, re, ssl, urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KEEP = ("latin", "latin-ext", "cyrillic", "cyrillic-ext")
-FAMILIES = ("Unbounded:wght@600;700"
+# Те же шрифты, что в «Фразовых глаголах 100» (phrasal-verbs/), чтобы курсы выглядели одинаково.
+FAMILIES = ("Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700"
             "&family=Golos+Text:wght@400;500;600;700"
-            "&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600")
+            "&family=Literata:opsz,wght@7..72,400;7..72,600")
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")   # за старый UA отдадут ttf
 
