@@ -36,6 +36,9 @@ function save() {
 /* ---------- строки интерфейса ---------- */
 var UI = {
   greet:        ["Доброе утро", "좋은 아침입니다"],
+  courseBasic:  ["Базовые глаголы", "기본 동사"],
+  coursePhr:    ["Фразовые глаголы", "구동사"],
+  courseAria:   ["Выбор курса", "과정 선택"],
   streakOn:     ["Серия идёт", "연속 학습 중"],
   courseDone:   ["Курс пройден", "과정 완료"],
   settings:     ["Настройки", "설정"],
@@ -344,6 +347,10 @@ function viewToday() {
 
   var html =
   '<div class="stack">' +
+    '<nav class="course-sw" aria-label="' + ui("courseAria") + '">' +
+      '<span class="on" aria-current="page">' + ui("courseBasic") + '</span>' +
+      '<a href="phrasal-verbs/" data-course="phrasal">' + ui("coursePhr") + '</a>' +
+    '</nav>' +
     '<div class="head">' +
       "<div>" +
         '<div class="sub">' + esc(humanDate(todayISO())) + "</div>" +
@@ -1058,9 +1065,16 @@ function go(where) {
 }
 
 /* ---------- делегирование событий ---------- */
+/* Переключатель курсов: «Базовые глаголы 100» ⇄ «Фразовые глаголы 100» (phrasal-verbs/).
+   Последний открытый курс хранится в localStorage "courses:last" — index.html
+   открывает его при запуске. */
+function setCourse(c) { try { localStorage.setItem("courses:last", c); } catch (e) {} }
+setCourse("basic");
+
 document.addEventListener("click", function (e) {
   var el;
 
+  if ((el = e.target.closest("[data-course]"))) { setCourse(el.dataset.course); return; } // ссылка ведёт дальше сама
   if ((el = e.target.closest("[data-go]"))) { go(el.dataset.go); return; }
   if ((el = e.target.closest("[data-lesson]"))) { startLesson(+el.dataset.lesson); return; }
   if ((el = e.target.closest("[data-say]"))) { speak(el.dataset.say, el); return; }

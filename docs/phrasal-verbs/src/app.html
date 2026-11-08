@@ -108,6 +108,9 @@ button:focus-visible,.line:focus-visible{outline:2px solid var(--accent);outline
 .bar-in{max-width:560px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:10px;min-height:52px}
 .bar h1{font-family:var(--f-display);font-size:17px;font-weight:700;margin:0;flex:1;min-width:0;letter-spacing:-.01em}
 .bar h1 small{display:block;font-family:var(--f-ui);font-size:11px;font-weight:500;color:var(--muted);letter-spacing:.02em}
+.course-sw{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;margin:0 0 14px;border-radius:14px;background:var(--surface);border:1px solid var(--line)}
+.course-sw>*{display:flex;align-items:center;justify-content:center;min-height:36px;border-radius:10px;font-size:13.5px;font-weight:600;color:var(--muted);text-decoration:none}
+.course-sw .on{background:var(--btn);color:var(--on-btn)}
 .icon-btn{border:1px solid var(--line);background:var(--surface);border-radius:10px;height:36px;min-width:36px;padding:0 10px;font-size:13px;font-weight:600}
 .timer{font-variant-numeric:tabular-nums;font-size:13px;font-weight:600;color:var(--muted);white-space:nowrap}
 .timer.over{color:var(--accent)}
@@ -311,9 +314,11 @@ function streak(){const days=[...new Set(S.days)].sort();if(!days.length)return 
 function home(){
   stop();stopTimer();$("#steps").hidden=true;
   $("#bar").innerHTML=`<h1>Фразовые глаголы 100<small>Hackers Talk · 아는 단어로 말하기</small></h1>`;
+  try{localStorage.setItem("courses:last","phrasal")}catch(e){}
   const d=nextDay(),L=LESSONS[d],doneN=Object.keys(S.done).length;
   const allDone=available.every(x=>S.done[x]);
-  let h=`<div class="today">
+  let h=`<nav class="course-sw" aria-label="Выбор курса"><a href="../" onclick="try{localStorage.setItem('courses:last','basic')}catch(e){}">Базовые глаголы</a><span class="on" aria-current="page">Фразовые глаголы</span></nav>
+  <div class="today">
     <div class="eyebrow">${allDone?"Все доступные уроки пройдены":"Сегодня"} · DAY ${pad(d)}</div>
     ${pvHTML(L.verb,L.part)}
     <div class="ru">${esc(L.ru)}</div>

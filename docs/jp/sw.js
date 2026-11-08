@@ -30,7 +30,7 @@ self.addEventListener('activate', e => {
   const keep = [SHELL, RUNTIME, SHEETS];
   e.waitUntil(
     caches.keys()
-      .then(keys => Promise.all(keys.filter(k => keep.indexOf(k) < 0).map(k => caches.delete(k))))
+      .then(keys => Promise.all(keys.filter(k => k.startsWith('jpn-') && keep.indexOf(k) < 0).map(k => caches.delete(k))))
       .then(() => caches.open(SHEETS).then(c => c.keys().then(ks => Promise.all(ks.filter(r => /\/img\/w\d+\.webp$/.test(r.url)).map(r => c.delete(r))))))
       .then(() => self.clients.claim())
   );
