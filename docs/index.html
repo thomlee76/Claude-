@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <script>/* запуск: открыть последний курс (переключатель «Базовые ⇄ Фразовые») */
-try{if(localStorage.getItem("courses:last")==="phrasal")location.replace("phrasal-verbs/")}catch(e){}</script>
+try{if(localStorage.getItem("courses:last")==="phrasal"&&!/[?&]icon=/.test(location.search))location.replace("phrasal-verbs/")}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
 <title>Базовые глаголы 100</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -12,6 +12,10 @@ try{if(localStorage.getItem("courses:last")==="phrasal")location.replace("phrasa
 <meta name="theme-color" content="#FBF8F6">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png">
+<script>/* Ярлык: ?icon=books (варианты в icons/alt/) — iOS берёт картинку в момент «На экран Домой» */
+try{var m=location.search.match(/[?&]icon=([a-z]+)/),ic=m?m[1]:localStorage.getItem("verb100.icon");
+if(m)localStorage.setItem("verb100.icon",ic);
+if(/^(books|plus|chat|mono|split|night)$/.test(ic))document.querySelectorAll('link[rel="apple-touch-icon"]').forEach(function(l){l.href="icons/alt/"+ic+"-180.png"});}catch(e){}</script>
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
 <link rel="stylesheet" href="fonts.css">

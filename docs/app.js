@@ -36,6 +36,11 @@ function save() {
 /* ---------- строки интерфейса ---------- */
 var UI = {
   appTitle:     ["Базовые глаголы 100", "기본 동사 100"],
+  iconLabel:    ["Ярлык на экране «Домой»", "홈 화면 아이콘"],
+  iconHint:     ["Выберите вариант — ссылка скопируется. Откройте её в Safari → «Поделиться» → «На экран „Домой“», старый ярлык удалите.",
+                 "원하는 아이콘을 누르면 링크가 복사됩니다. Safari에서 열고 공유 → '홈 화면에 추가'를 누른 뒤 기존 아이콘은 지우세요."],
+  iconCopied:   ["Ссылка скопирована — откройте её в Safari", "링크가 복사되었습니다. Safari에서 여세요"],
+  iconPicked:   ["Выбрано. Ссылка: %1", "선택됨. 링크: %1"],
   verbs58:      ["58 глаголов", "핵심 동사 58개"],
   todayLbl:     ["Сегодня", "오늘"],
   chapterN:     ["Глава %1", "챕터 %1"],
@@ -498,8 +503,33 @@ function settingsBox() {
     row(ui("allowNotif"), ui("allowHint"), '<button class="pill" id="notif">' + ui("enable") + "</button>") +
     row(ui("offline"), '<span id="offHint">' + ui("offlineHint") + "</span>", '<button class="pill" id="offBtn">' + ui("download") + "</button>") +
     row(ui("startDate"), ui("startHint"), '<input type="date" id="start" value="' + esc(S.start) + '">') +
+    iconPicker() +
     '<button class="danger" id="reset">' + ui("resetLabel") + "</button>" +
   "</div>";
+}
+
+/* ---------- выбор ярлыка: картинки в icons/alt/, применяет скрипт в <head> index.html ---------- */
+var ICONS = [["book", "icons/icon-180.png"], ["books"], ["plus"], ["chat"], ["mono"], ["split"], ["night"]];
+var APP_URL = "https://thomlee76.github.io/Claude-/";
+function currentIcon() { try { return localStorage.getItem("verb100.icon") || "book"; } catch (e) { return "book"; } }
+function iconPicker() {
+  var cur = currentIcon();
+  return '<div><label style="font-size:14px;font-weight:500">' + ui("iconLabel") + '</label>' +
+    '<div class="hint" style="font-size:12px;color:var(--muted);line-height:1.4;margin:2px 0 10px">' + ui("iconHint") + "</div>" +
+    '<div class="icons">' + ICONS.map(function (x) {
+      return '<button class="ico' + (x[0] === cur ? " on" : "") + '" data-icon="' + x[0] + '" aria-label="' + x[0] + '">' +
+        '<img src="' + (x[1] || "icons/alt/" + x[0] + "-180.png") + '" alt=""></button>';
+    }).join("") + "</div></div>";
+}
+function pickIcon(id) {
+  try { localStorage.setItem("verb100.icon", id); } catch (e) {}
+  var href = id === "book" ? "icons/icon-180.png" : "icons/alt/" + id + "-180.png";
+  document.querySelectorAll('link[rel="apple-touch-icon"]').forEach(function (l) { l.href = href; });
+  var url = APP_URL + "?icon=" + id;
+  var done = function () { toast(ui("iconCopied")); };
+  try { navigator.clipboard.writeText(url).then(done, function () { toast(ui("iconPicked", url)); }); }
+  catch (e) { toast(ui("iconPicked", url)); }
+  document.querySelectorAll(".ico").forEach(function (b) { b.classList.toggle("on", b.dataset.icon === id); });
 }
 
 function wireSettings() {
@@ -920,6 +950,7 @@ document.addEventListener("click", function (e) {
   if ((el = e.target.closest("[data-lang]"))) { S.lang = el.dataset.lang; save(); rerender(); return; }
   if ((el = e.target.closest("[data-set-theme]"))) { S.theme = el.dataset.setTheme; save(); applyTheme(); rerender(); return; }
   if ((el = e.target.closest("[data-rate]"))) { S.rate = parseFloat(el.dataset.rate); save(); rerender(); return; }
+  if ((el = e.target.closest("[data-icon]"))) { pickIcon(el.dataset.icon); return; }
   if ((el = e.target.closest("[data-voice]"))) { S.voice = el.dataset.voice; save(); rerender(); return; }
 
   /* урок */
