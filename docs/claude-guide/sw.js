@@ -1,4 +1,4 @@
-const CACHE = 'cg-1bb5675ad8';
+const CACHE = 'cg-a23c526b41';
 const VCACHE = 'cg-video-6256e62a';
 const PRECACHE = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "apple-touch-icon.png", "content.enc"];
 
