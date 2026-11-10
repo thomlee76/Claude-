@@ -51,6 +51,7 @@ button,input{font:inherit;color:inherit;background:none;border:0;padding:0;curso
 .lang.ja .li{transform:translateX(100%)}
 .lang button{position:relative;z-index:1;min-width:40px;padding:8px 6px;font:700 14px var(--d);letter-spacing:.5px;text-align:center;color:#A3A8B8}
 .lang button[aria-pressed="true"]{color:var(--gold)}
+.lang .fl{display:block;width:26px;height:18px;margin:0 auto;border-radius:4px;background:center/cover no-repeat;box-shadow:0 0 0 1px rgba(255,255,255,.28);opacity:.45;filter:saturate(.5);transition:opacity .25s,filter .25s}.lang button[aria-pressed="true"] .fl{opacity:1;filter:none}.lang .fl-en{background-image:url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="7.5 0 45 30" preserveAspectRatio="xMidYMid slice"%3E%3CclipPath id="t"%3E%3Cpath d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/%3E%3C/clipPath%3E%3Cpath d="M0,0v30h60v-30z" fill="%23012169"/%3E%3Cpath d="M0,0 60,30M60,0 0,30" stroke="%23fff" stroke-width="6"/%3E%3Cpath d="M0,0 60,30M60,0 0,30" clip-path="url%28%23t%29" stroke="%23C8102E" stroke-width="4"/%3E%3Cpath d="M30,0v30M0,15h60" stroke="%23fff" stroke-width="10"/%3E%3Cpath d="M30,0v30M0,15h60" stroke="%23C8102E" stroke-width="6"/%3E%3C/svg%3E')}.lang .fl-ja{background-image:url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20"%3E%3Crect width="30" height="20" fill="%23fff"/%3E%3Ccircle cx="15" cy="10" r="6" fill="%23BC002D"/%3E%3C/svg%3E')}
 .ava{flex:none;width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font:700 16px var(--d);letter-spacing:.5px;color:#0A0A0A;
   background:linear-gradient(150deg,var(--gold2),var(--gold) 55%,#C98A22);box-shadow:0 8px 20px -8px rgba(255,198,92,.7),inset 0 1px 0 rgba(255,255,255,.6)}
 .card{position:relative;display:block;border-radius:18px;padding:18px;
@@ -300,7 +301,7 @@ ruby rt{font-size:.55em;color:var(--sub);font-family:var(--f)}
 
 <!-- ===== КВАРТАЛ ===== -->
 <section class="view" id="v-sum" data-view="sum">
-  <div class="head"><div><div class="eye" id="eye1"></div><h1>Квартал</h1></div><div class="hr"><div class="lang" role="group" aria-label="Курс"><span class="li"></span><button data-course="en">EN</button><button data-course="ja">日本</button></div><button class="ava" data-ava aria-label="Настройки">B1</button></div></div>
+  <div class="head"><div><div class="eye" id="eye1"></div><h1>Квартал</h1></div><div class="hr"><div class="lang" role="group" aria-label="Курс"><span class="li"></span><button data-course="en" aria-label="English B1" title="English B1"><span class="fl fl-en"></span></button><button data-course="ja" aria-label="日本語 N5" title="日本語 N5"><span class="fl fl-ja"></span></button></div><button class="ava" data-ava aria-label="Настройки">B1</button></div></div>
   <div class="hero">
     <div class="citybox"><canvas id="city" aria-label="Деловой квартал: 12 башен — 12 тем, окна — слова. Поверните пальцем, нажмите на башню"></canvas>
       <div class="badge"><div class="pct" id="pct">0%</div><div class="pn" id="pn"></div></div></div>
@@ -321,7 +322,7 @@ ruby rt{font-size:.55em;color:var(--sub);font-family:var(--f)}
 
 <!-- ===== СЛОВА ===== -->
 <section class="view" id="v-list" data-view="list" hidden>
-  <div class="head"><div><div class="eye" id="eye2">300 слов · 12 тем</div><h1>Слова</h1></div><div class="hr"><div class="lang" role="group" aria-label="Курс"><span class="li"></span><button data-course="en">EN</button><button data-course="ja">日本</button></div><button class="ava" data-ava aria-label="Настройки">B1</button></div></div>
+  <div class="head"><div><div class="eye" id="eye2">300 слов · 12 тем</div><h1>Слова</h1></div><div class="hr"><div class="lang" role="group" aria-label="Курс"><span class="li"></span><button data-course="en" aria-label="English B1" title="English B1"><span class="fl fl-en"></span></button><button data-course="ja" aria-label="日本語 N5" title="日本語 N5"><span class="fl fl-ja"></span></button></div><button class="ava" data-ava aria-label="Настройки">B1</button></div></div>
   <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="q" type="search" placeholder="Поиск: invoice или счёт" autocomplete="off" autocapitalize="off" spellcheck="false"></label>
   <div class="seg" role="group" aria-label="Фильтр"><span class="ind" id="segInd"></span>
     <button data-f="all" aria-pressed="true">Все</button><button data-f="new" aria-pressed="false">Новые</button><button data-f="learn" aria-pressed="false">Учу</button><button data-f="known" aria-pressed="false">Выучено</button></div>
@@ -331,7 +332,7 @@ ruby rt{font-size:.55em;color:var(--sub);font-family:var(--f)}
 
 <!-- ===== ПРАКТИКА ===== -->
 <section class="view" id="v-prac" data-view="prac" hidden>
-  <div class="head"><div><div class="eye">10 вопросов · 3–5 минут</div><h1>Практика</h1></div><div class="hr"><div class="lang" role="group" aria-label="Курс"><span class="li"></span><button data-course="en">EN</button><button data-course="ja">日本</button></div><button class="ava" data-ava aria-label="Настройки">B1</button></div></div>
+  <div class="head"><div><div class="eye">10 вопросов · 3–5 минут</div><h1>Практика</h1></div><div class="hr"><div class="lang" role="group" aria-label="Курс"><span class="li"></span><button data-course="en" aria-label="English B1" title="English B1"><span class="fl fl-en"></span></button><button data-course="ja" aria-label="日本語 N5" title="日本語 N5"><span class="fl fl-ja"></span></button></div><button class="ava" data-ava aria-label="Настройки">B1</button></div></div>
   <div class="eye" style="margin:6px 2px 8px">Тема</div>
   <div class="topics" id="ptps"></div>
   <div class="sect"><div><h3>Режимы</h3><p>Сначала слова «к повторению», затем новые</p></div></div>
