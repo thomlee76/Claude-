@@ -1,4 +1,4 @@
-const CACHE="b1w-42b214b04e";const PRECACHE=["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "apple-touch-icon.png", "fonts/Oswald-cyrillic.woff2", "fonts/Oswald-latin.woff2", "fonts/fonts.css"];const MEDIA="b1w-media";
+const CACHE="b1w-78d7374e53";const PRECACHE=["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "apple-touch-icon.png", "fonts/Oswald-cyrillic.woff2", "fonts/Oswald-latin.woff2", "fonts/fonts.css"];const MEDIA="b1w-media";
 const isMedia=u=>/\/(audio|img)\//.test(u.pathname);
 /* установка — только ядро (страница, шрифты, иконки): секунды, не минуты */
 self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(PRECACHE)).then(()=>self.skipWaiting()))});
