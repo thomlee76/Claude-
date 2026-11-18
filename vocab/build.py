@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Слова: English B1 + 日本語 N5 — topics/words + app.html -> index.html + sw.js"""
-import json, hashlib
+import hashlib, json
 from pathlib import Path
 R = Path(__file__).resolve().parent
 
@@ -16,7 +16,8 @@ def mark_img(topics, sub):
     d = R / 'img' / sub
     for t in topics:
         for w in t['words']:
-            if (d / f"{w['id']}.webp").exists(): w['img'] = 1
+            f = d / f"{w['id']}.webp"
+            if f.exists(): w['img'] = hashlib.md5(f.read_bytes()).hexdigest()[:8]  # версия = хэш файла: офлайн-кэш обновляет только изменённые картинки
 audio = sorted('audio/' + p.name for p in (R / 'audio').glob('*.m4a')) if (R / 'audio').exists() else []
 ja = load(R / 'ja')
 mark_img(en, 'en'); mark_img(ja, 'ja')
