@@ -1,0 +1,1174 @@
+N5 일본어 단어 그림 프롬프트 — 84묶음 (각 묶음 = 이미지 1장)
+사용법: 묶음 하나씩 "PROMPT" 아래 영어 문장을 ChatGPT에 붙여 넣고, 저장할 때 파일 이름을 묶음 번호(예: 07.png)로 바꿔 주세요.
+
+============================================================
+묶음 01  |  人(사람) · 男(남자) · 女(여자) · 子ども(아이, 어린이) · 大人(어른) · 家族(가족)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A crowd of people walking across a busy Tokyo street crossing.
+2. A young Japanese man in a jacket standing alone on a quiet street.
+3. A young Japanese woman in a light dress standing in a park.
+4. A small child playing with a red ball in a park.
+5. Two grown-up adults in business clothes standing tall at a train station.
+6. A Japanese family of four smiling together on a picnic blanket under trees.
+
+============================================================
+묶음 02  |  父(아버지(나의)) · 母(어머니(나의)) · お父さん(아버지) · お母さん(어머니) · 兄(형, 오빠(나의)) · 姉(누나, 언니(나의))
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A middle-aged father relaxing at home on tatami, sipping tea in slippers.
+2. A mother at home in an apron cooking miso soup in her kitchen.
+3. A young guest bowing politely to a friend's smiling father at the front door.
+4. A friend's kind mother welcoming a visiting child with a tray of snacks.
+5. An older teenage brother helping his little sibling tie shoelaces at home.
+6. An older sister braiding her little sister's hair at home.
+
+============================================================
+묶음 03  |  弟(남동생) · 妹(여동생) · お兄さん(형, 오빠) · お姉さん(누나, 언니) · 兄弟(형제) · 両親(부모님)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A little brother riding piggyback on his older sibling's back.
+2. A little sister in pigtails holding her older brother's hand.
+3. A friend's tall older brother waving hello from the family doorway.
+4. A friend's elegant older sister in a kimono greeting guests politely.
+5. Three siblings of different heights standing in a row, arms around shoulders.
+6. A smiling elderly couple, mother and father, sitting together on a bench.
+
+============================================================
+묶음 04  |  友だち(친구) · 先生(선생님) · 学生(학생) · 名前(이름) · 私(나, 저) · あなた(당신)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Two friends laughing and high-fiving after school under cherry blossoms.
+2. A kind teacher pointing at a blank blackboard in a Japanese classroom.
+3. A student in a Japanese school uniform carrying a backpack to school.
+4. Two people bowing and introducing themselves, one touching her own chest.
+5. A person pointing at themselves with a finger to their chest, smiling.
+6. A person smiling and pointing directly at the viewer with an open hand.
+
+============================================================
+묶음 05  |  皆さん(여러분) · 時間(시간) · 分(분) · 半(반) · 今(지금) · 午前(오전)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A teacher greeting a whole room of people with arms spread wide.
+2. An hourglass with flowing sand on a wooden table.
+3. A long minute hand ticking forward on a blank wall clock face.
+4. A round orange cut exactly into two halves on a cutting board.
+5. A person glancing at a wristwatch while hurrying out the door.
+6. Mid-morning commuters walking into office buildings, sun climbing in the east.
+
+============================================================
+묶음 06  |  午後(오후) · 朝(아침) · 昼(낮) · 晩(저녁) · 夜(밤) · 毎日(매일)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Long afternoon shadows across a quiet Japanese street, sun lowering westward.
+2. Early morning sunrise over a quiet street, birds singing on wires.
+3. Bright midday sun directly overhead, workers eating ramen on a park bench.
+4. Orange evening dusk sky, paper lanterns lighting up along a Japanese alley.
+5. Dark night sky with a crescent moon and stars over sleeping houses.
+6. The same commuter walking to the station in sunshine, rain and snow.
+
+============================================================
+묶음 07  |  何時(몇 시) · 一つ(하나, 한 개) · 二つ(둘, 두 개) · 三つ(셋, 세 개) · いくつ(몇 개) · 何(무엇)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A puzzled person looking at a clock with no hands, scratching head.
+2. One red apple on a white plate.
+3. Two glasses of iced coffee side by side on a cafe table.
+4. Three suitcases lined up in a row at a hotel entrance.
+5. A thoughtful person counting a pile of eggs, one finger raised.
+6. A curious person tilting head at a mysterious wrapped box.
+
+============================================================
+묶음 08  |  誰(누구) · どこ(어디) · いつ(언제) · どうして(왜) · どれ(어느 것) · どんな(어떤)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A puzzled person staring at a mysterious silhouette behind a paper shoji door.
+2. A lost traveler looking at a map at a Japanese train station.
+3. A thoughtful person watching seasons change outside a window, hand on chin.
+4. A confused person shrugging with palms up, frowning at a broken vase.
+5. A hesitant person choosing between three similar umbrellas in a stand.
+6. A curious traveler peering at a misty unknown town from a hilltop.
+
+============================================================
+묶음 09  |  百(백) · 千(천) · 今日(오늘) · 明日(내일) · 昨日(어제) · 毎朝(매일 아침)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A big pile of many shiny coins on a wooden table.
+2. A huge mountain of countless golden coins filling a treasure room.
+3. A person stepping out the front door into a bright sunny day.
+4. A traveler packing a suitcase at night, ready to leave in the morning.
+5. A person looking back over their shoulder at a Kyoto temple they visited.
+6. A person jogging at sunrise along the same riverside path, daily routine.
+
+============================================================
+묶음 10  |  今週(이번 주) · 来週(다음 주) · 先週(지난주) · 今年(올해) · 来年(내년) · 去年(작년)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A person crossing off boxes on a blank seven-day planner on the wall.
+2. A person circling a future square on a blank planner, suitcase ready.
+3. Two old friends hugging at a Tokyo station, faded sepia memory scene.
+4. A family at a shrine at New Year praying for the year ahead.
+5. A child planting a tiny seedling, dreaming of it blooming next spring.
+6. An old faded photo album opened to last year's summer beach trip.
+
+============================================================
+묶음 11  |  月曜日(월요일) · 火曜日(화요일) · 水曜日(수요일) · 木曜日(목요일) · 金曜日(금요일) · 土曜日(토요일)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Busy Monday morning commuters rushing onto a crowded train under a pale moon.
+2. A cozy campfire burning brightly with a person warming hands.
+3. Clear water flowing from a bamboo fountain in a Japanese garden.
+4. A large green tree in a park, a traveler resting under it.
+5. Friday night coworkers toasting with golden beer mugs at an izakaya.
+6. A gardener happily digging brown soil in a garden on a weekend morning.
+
+============================================================
+묶음 12  |  日曜日(일요일) · 誕生日(생일) · 休み(휴일, 휴가) · 春(봄) · 夏(여름) · 秋(가을)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A person relaxing at home on Sunday, lying on tatami in sunshine.
+2. A child blowing out candles on a birthday cake surrounded by family.
+3. An office worker relaxing in a hammock on a day off.
+4. Pink cherry blossoms in full bloom along a river in Kyoto.
+5. A hot summer day, a person fanning themselves and eating watermelon on a porch.
+6. Red and orange maple leaves falling around a quiet temple.
+
+============================================================
+묶음 13  |  冬(겨울) · 天気(날씨) · 雨(비) · ご飯(밥) · 朝ご飯(아침밥) · 昼ご飯(점심밥)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Snow falling on a quiet street, a person in a scarf and coat.
+2. A person looking up at a sky half sunny and half cloudy.
+3. Heavy raindrops falling into puddles on a stone path.
+4. A steaming bowl of fluffy white rice on a wooden tray.
+5. A Japanese breakfast tray with rice, miso soup, grilled fish, morning sunlight.
+6. Coworkers eating lunch together at a noon cafeteria table.
+
+============================================================
+묶음 14  |  晩ご飯(저녁밥) · 肉(고기) · 魚(생선) · 野菜(채소) · 果物(과일) · 卵(달걀)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A family eating dinner together at a low table under a warm lamp at night.
+2. Sizzling slices of beef grilling on a barbecue.
+3. A whole fresh fish on ice at a fish market.
+4. A basket of fresh vegetables: carrots, cabbage, daikon and green onions.
+5. A bowl of fresh fruit: apples, oranges, grapes and a melon.
+6. A few white eggs in a small basket.
+
+============================================================
+묶음 15  |  パン(빵) · 牛乳(우유) · お茶(차) · 水(물) · コーヒー(커피) · お酒(술)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A loaf of freshly baked bread and croissants on a bakery shelf.
+2. A glass of cold milk next to a milk bottle.
+3. Green tea poured from a teapot into a cup in a tea room.
+4. A clear glass of water with drops on the outside.
+5. A steaming cup of black coffee on an office desk.
+6. A ceramic sake bottle and small cups on a wooden izakaya counter.
+
+============================================================
+묶음 16  |  料理(요리) · 食べ物(음식) · 飲み物(음료) · お菓子(과자) · 砂糖(설탕) · 塩(소금)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A person stirring a pot of curry on the stove at home.
+2. A variety of foods together: sushi, onigiri, tempura and dumplings.
+3. A row of different drinks: juice, tea, soda and milk.
+4. An open box of colorful Japanese sweets and mochi.
+5. A spoonful of white sugar being added into coffee.
+6. A small salt shaker sprinkling white salt over grilled fish.
+
+============================================================
+묶음 17  |  箸(젓가락) · 皿(접시) · レストラン(레스토랑) · 弁当(도시락) · 家(집) · 部屋(방)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A pair of wooden chopsticks resting on a chopstick rest.
+2. A person washing a stack of white plates at the sink.
+3. A cozy restaurant interior with diners and a waiter carrying plates.
+4. An open bento box with rice, egg and vegetables at a station bench.
+5. A small traditional Japanese house with a tiled roof.
+6. A tidy room interior with tatami floor and sliding doors.
+
+============================================================
+묶음 18  |  台所(부엌) · 窓(창문) · ドア(문) · 机(책상) · 椅子(의자) · ベッド(침대)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A bright kitchen with a stove, sink and hanging pots.
+2. A person opening a wide window to let in fresh air.
+3. A person closing a wooden front door.
+4. A wooden desk with a book and lamp on top.
+5. A simple wooden chair standing alone in a room.
+6. A big soft bed with white sheets in a bedroom.
+
+============================================================
+묶음 19  |  電気(전기) · 電話(전화) · テレビ(텔레비전) · 冷蔵庫(냉장고) · 時計(시계) · 鍵(열쇠)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A hand switching on a ceiling light in a dark room.
+2. A person talking on a smartphone pressed to the ear.
+3. A family watching television in a living room at night.
+4. An open refrigerator full of food and a milk bottle.
+5. An elegant wristwatch with a plain face and no numbers.
+6. A metal key on a ring being turned in a door lock.
+
+============================================================
+묶음 20  |  傘(우산) · かばん(가방) · 靴(신발) · 服(옷) · 帽子(모자) · 眼鏡(안경)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A person opening a red umbrella on a rainy day.
+2. A heavy leather bag hanging on a person's shoulder.
+3. Pairs of shoes neatly placed at a Japanese genkan entrance.
+4. Clothes hanging on a rack in a store, shirts and dresses.
+5. A straw sun hat on a person's head on a summer day.
+6. A pair of round eyeglasses on a table.
+
+============================================================
+묶음 21  |  お風呂(목욕) · トイレ(화장실) · 庭(마당) · 写真(사진) · 新聞(신문) · 学校(학교)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A person relaxing in a deep Japanese wooden bathtub with steam.
+2. A clean modern toilet in a small bright restroom.
+3. A small Japanese garden with flowers, stones and a stone lantern.
+4. A tourist taking a photo of a pagoda with a camera.
+5. A man reading a folded newspaper at the breakfast table.
+6. A Japanese school building with a playground and cherry trees.
+
+============================================================
+묶음 22  |  大学(대학) · 教室(교실) · 勉強(공부) · 宿題(숙제) · 試験(시험) · 質問(질문)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A large university campus with students walking between brick buildings.
+2. A classroom full of desks with students sitting in rows.
+3. A student studying hard at a desk with open books at night.
+4. A child doing homework at the kitchen table after school.
+5. Students taking an exam in silence, pencils on answer sheets.
+6. A student raising a hand to ask the teacher.
+
+============================================================
+묶음 23  |  答え(답) · 言葉(말) · 漢字(한자) · 本(책) · 辞書(사전) · 紙(종이)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A student standing up confidently answering, teacher nodding with approval.
+2. Two people chatting with colorful empty speech bubbles between them.
+3. A student practicing calligraphy with a black ink brush on rice paper.
+4. A thick hardcover book lying open on a table.
+5. A heavy dictionary lying open with a magnifying glass.
+6. A stack of blank white paper sheets on a desk.
+
+============================================================
+묶음 24  |  鉛筆(연필) · ペン(펜) · ノート(공책) · 字(글자) · 意味(의미) · 英語(영어)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A sharpened yellow pencil with an eraser tip.
+2. A person lending a blue pen to a classmate.
+3. A stack of colorful spiral notebooks on a desk.
+4. A teacher showing beautiful handwriting brush strokes to admiring students.
+5. A teacher explaining a picture of a tree to a curious student.
+6. A Japanese office worker talking with British visitors, Union Jack flag on desk.
+
+============================================================
+묶음 25  |  日本語(일본어) · 外国(외국) · 留学生(유학생) · 授業(수업) · 図書館(도서관) · 練習(연습)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A foreign student chatting with a Japanese woman in kimono, Japanese flag nearby.
+2. An airplane flying over a world globe toward distant countries.
+3. A foreign exchange student with a backpack arriving at a Japanese campus.
+4. A lecturer teaching a lesson in a sloped university lecture hall.
+5. Tall shelves full of books in a quiet library, a reader at a table.
+6. A boy practicing baseball swings alone in an empty field.
+
+============================================================
+묶음 26  |  仕事(일) · 会社(회사) · 会社員(회사원) · 医者(의사) · 銀行(은행) · お金(돈)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A busy worker at a desk with a laptop and documents.
+2. A tall modern office building with employees entering.
+3. A salaryman in a suit and tie carrying a briefcase to work.
+4. A doctor in a white coat with a stethoscope listening to a patient.
+5. A bank interior with a clerk at the counter handing money.
+6. A piggy bank with shiny coins dropping in.
+
+============================================================
+묶음 27  |  円(엔) · 店(가게) · 買い物(쇼핑) · いくら(얼마) · 切手(우표) · 手紙(편지)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Japanese yen coins with holes in the center beside paper bills.
+2. A small Japanese shop front with a noren curtain and shopkeeper.
+3. A woman carrying many shopping bags, happily walking through a mall.
+4. A puzzled shopper looking at a bag and holding a wallet.
+5. A colorful postage stamp with a Mount Fuji picture.
+6. A person writing a letter by hand at a desk.
+
+============================================================
+묶음 28  |  葉書(엽서) · 封筒(봉투) · 荷物(짐) · デパート(백화점) · 八百屋(채소 가게) · 財布(지갑)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A postcard with a picture of a Kyoto temple.
+2. A hand sliding a folded letter into a white envelope.
+3. A traveler struggling to carry heavy luggage and boxes.
+4. A grand department store interior with escalators and elegant displays.
+5. A greengrocer shop with crates of vegetables and fruit outside.
+6. A brown leather wallet left on an office desk.
+
+============================================================
+묶음 29  |  切符(표) · 郵便局(우체국) · 病院(병원) · 薬(약) · 病気(병) · 風邪(감기)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A person buying a train ticket at a station ticket machine.
+2. A post office counter with a clerk weighing a parcel, red mailbox outside.
+3. A large hospital building with an ambulance parked at the entrance.
+4. A hand holding white pills and a glass of water.
+5. A sick person lying in bed with a fever, pale face.
+6. A person with a cold sneezing into a tissue, wrapped in a scarf.
+
+============================================================
+묶음 30  |  パーティー(파티) · 国(나라) · 町(동네) · 道(길) · 駅(역) · 公園(공원)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Coworkers at a lively party with balloons, food and raised glasses.
+2. A traveler pointing at a country on a large world globe.
+3. An old Kyoto town street with wooden houses and lanterns.
+4. A long straight road stretching into green countryside.
+5. A Japanese train station platform with a train arriving.
+6. A green park with people strolling under trees on a Sunday.
+
+============================================================
+묶음 31  |  建物(건물) · 交番(파출소) · 映画館(영화관) · 喫茶店(찻집) · ホテル(호텔) · 山(산)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A tall glass skyscraper building towering over a city street.
+2. A small Japanese police box with a police officer giving directions.
+3. Friends watching a movie in a dark cinema with popcorn.
+4. A cozy retro coffee shop with a person sipping coffee by the window.
+5. A hotel lobby with a receptionist greeting a guest with a suitcase.
+6. Mount Fuji with a snowy peak under a clear blue sky.
+
+============================================================
+묶음 32  |  川(강) · 海(바다) · 池(연못) · 上(위) · 下(아래) · 前(앞)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A clear river flowing through a green valley.
+2. Blue ocean waves on a sandy beach in summer.
+3. A small pond with koi fish and lily pads in a park.
+4. A small bird perched on top of a tall pole.
+5. A cat hiding under a wooden chair.
+6. A taxi waiting in front of a hotel entrance.
+
+============================================================
+묶음 33  |  後ろ(뒤) · 右(오른쪽) · 左(왼쪽) · 中(안) · 外(밖) · 隣(옆)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A big mountain rising behind a small house.
+2. A person turning right at a crossroad, raising the right arm.
+3. A person turning left at an intersection, left arm pointing left.
+4. An open bag with things visible inside it.
+5. A person standing outside in the cold snow, house behind.
+6. A small bank building standing right next to an office building.
+
+============================================================
+묶음 34  |  近く(근처) · 向こう(건너편) · 車(차) · 電車(전철) · 地下鉄(지하철) · バス(버스)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A person standing close to a nearby convenience store, just steps away.
+2. A park visible on the far side of a river, beyond a bridge.
+3. A family car driving along a country road.
+4. A commuter train running along tracks through the city.
+5. An underground subway train arriving at a tiled tunnel platform.
+6. A city bus stopping at a bus stop, passengers boarding.
+
+============================================================
+묶음 35  |  タクシー(택시) · 自転車(자전거) · 飛行機(비행기) · 船(배) · 旅行(여행) · 地図(지도)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A person hailing a taxi on a rainy street.
+2. A person riding a bicycle along a Kyoto canal path.
+3. An airplane flying high above the clouds.
+4. A large ferry boat sailing across a blue sea.
+5. A family with suitcases and cameras traveling to Kyoto temples.
+6. A large paper map spread open on a table with a compass.
+
+============================================================
+묶음 36  |  入口(입구) · 出口(출구) · 東(동쪽) · 西(서쪽) · 南(남쪽) · 北(북쪽)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. People walking in through the entrance gate of a building.
+2. People walking out through an exit door toward daylight.
+3. Sun rising over the eastern horizon at dawn, a person facing it.
+4. Sun setting behind western mountains at dusk, a person watching.
+5. A tropical southern island beach with palm trees and turquoise water.
+6. A snowy northern landscape with the polar star shining above.
+
+============================================================
+묶음 37  |  角(모퉁이) · 橋(다리) · 外国人(외국인) · 大使館(대사관) · エレベーター(엘리베이터) · 階段(계단)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A person turning at a street corner beside a building.
+2. A red arched wooden bridge over a stream in a Japanese garden.
+3. Foreign tourists with backpacks sightseeing at a Kyoto temple.
+4. A stately embassy building with flags flying at the gate.
+5. People riding inside an elevator with doors opening.
+6. A person climbing a long flight of stone stairs.
+
+============================================================
+묶음 38  |  空(하늘) · 花(꽃) · 動物(동물) · 行く(가다) · 来る(오다) · 帰る(돌아가다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A wide clear blue sky with white clouds.
+2. Colorful flowers blooming in a spring field.
+3. Various animals together: a dog, cat, rabbit and bird.
+4. A person walking away toward the station with a bag.
+5. A friend walking toward the viewer, waving hello.
+6. A person returning home, taking off shoes at the front door.
+
+============================================================
+묶음 39  |  見る(보다) · 聞く(듣다) · 食べる(먹다) · 飲む(마시다) · 話す(말하다) · 読む(읽다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A person watching a movie with wide eyes.
+2. A person listening to music with headphones, eyes closed.
+3. A person eating a bowl of ramen with chopsticks.
+4. A person drinking a glass of water thirstily.
+5. Two people talking face to face in a cafe.
+6. A commuter reading a book on a train.
+
+============================================================
+묶음 40  |  書く(쓰다) · 買う(사다) · 売る(팔다) · 会う(만나다) · 待つ(기다리다) · 使う(사용하다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A person writing in a notebook with a pencil at a desk.
+2. A customer paying at a shop counter and receiving a bag.
+3. A market vendor selling apples to a customer from a stall.
+4. Two friends meeting and bowing to each other at a station.
+5. A person waiting at a bus stop, looking down the road impatiently.
+6. A person using a laptop computer at a desk.
+
+============================================================
+묶음 41  |  作る(만들다) · 起きる(일어나다) · 寝る(자다) · 働く(일하다) · 休む(쉬다) · 分かる(알다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. A person building a wooden birdhouse with a hammer.
+2. A person waking up and sitting up in bed, stretching.
+3. A person sleeping peacefully in a futon at night.
+4. A worker in a hard hat working at a construction site.
+5. A tired person resting on a sofa with eyes closed.
+6. A student nodding happily with a glowing lightbulb above the head.
+
+============================================================
+묶음 42  |  ある(있다) · いる(있다) · する(하다) · 言う(말하다) · 乗る(타다) · 降りる(내리다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Objects on a shelf: a vase, books and a teapot.
+2. A cat and a dog sitting together in a room.
+3. A person doing jumping jack exercises in a park.
+4. A person saying something loudly, hand cupped around the mouth.
+5. Woman stepping aboard a sleek commuter train from a Tokyo station platform.
+6. Passengers stepping down off a bus onto a quiet Japanese street.
+
+============================================================
+묶음 43  |  歩く(걷다) · 走る(달리다) · 泳ぐ(헤엄치다) · 入る(들어가다) · 出る(나가다) · 出かける(외출하다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Man walking along a tree-lined sidewalk with a shoulder bag.
+2. Jogger running through a green park in the early morning light.
+3. Child swimming freestyle in clear blue sea near a sandy beach.
+4. Guest stepping into a tatami room through an open sliding door.
+5. Man leaving his house through the front door, briefcase in hand.
+6. Family with backpacks heading out together on a sunny weekend.
+
+============================================================
+묶음 44  |  始まる(시작되다) · 終わる(끝나다) · 開ける(열다) · 閉める(닫다) · 住む(살다) · 知る(알다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Runners bursting off the starting line as a race begins.
+2. Red theater curtain closing as a stage performance ends.
+3. Hand pushing open a wooden window to let in fresh morning air.
+4. Person pushing a front door shut with one hand.
+5. Family living happily in a cozy small house with laundry drying outside.
+6. Local woman confidently giving directions to a lost tourist on a street.
+
+============================================================
+묶음 45  |  教える(가르치다) · 習う(배우다) · 覚える(외우다) · 忘れる(잊다) · 持つ(들다) · 貸す(빌려주다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Grandmother teaching a child how to fold an origami crane.
+2. Young woman taking a tea ceremony lesson from a kimono-clad teacher.
+3. Student with eyes closed memorizing blank flashcards at a desk.
+4. Umbrella left behind on an empty train seat as doors close.
+5. Woman carrying a large paper shopping bag in each hand.
+6. Student lending his pen to a classmate who forgot hers.
+
+============================================================
+묶음 46  |  借りる(빌리다) · 返す(돌려주다) · 洗う(씻다) · 着る(입다) · 呼ぶ(부르다) · 大きい(크다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Girl receiving a book from a librarian at the library counter.
+2. Boy sliding a borrowed book back into a library return box.
+3. Hands being washed with soap under a running tap.
+4. Man putting on a warm winter coat at the entrance.
+5. Woman raising her hand to hail a taxi on a city street.
+6. Huge pumpkin dwarfing the little farmer standing proudly beside it.
+
+============================================================
+묶음 47  |  小さい(작다) · 高い(비싸다) · 安い(싸다) · 新しい(새롭다) · 古い(오래되다) · いい(좋다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Tiny kitten sleeping curled up in the palm of a hand.
+2. Shopper gasping at an expensive diamond necklace in a glass case.
+3. Happy shopper digging through a bargain bin of cheap shoes.
+4. Shiny brand-new leather bag being unwrapped from tissue paper.
+5. Old weathered wooden temple with mossy roof in Kyoto.
+6. Smiling person giving a thumbs up under a bright blue sky.
+
+============================================================
+묶음 48  |  悪い(나쁘다) · 暑い(덥다) · 寒い(춥다) · 難しい(어렵다) · 忙しい(바쁘다) · 楽しい(즐겁다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Dark storm clouds and slanting rain lashing an empty street.
+2. Man fanning himself and sweating under a blazing summer sun.
+3. Shivering woman in a scarf, breath steaming in snowy cold.
+4. Student scratching his head over a complicated puzzle cube.
+5. Office worker juggling phone calls and paper stacks at a cluttered desk.
+6. Friends laughing together on a fun day trip in Kyoto.
+
+============================================================
+묶음 49  |  おいしい(맛있다) · 遠い(멀다) · 多い(많다) · 好き(좋아하다) · 嫌い(싫어하다) · 静か(조용하다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Man savoring ramen with a blissful, delighted expression.
+2. Tiny distant mountain at the end of a long winding road.
+3. Huge crowd of people filling a busy Tokyo street crossing.
+4. Girl hugging a plate of sushi with little hearts floating above.
+5. Boy grimacing and pushing away a plate of green vegetables.
+6. Tranquil Japanese garden with a still pond at dawn.
+
+============================================================
+묶음 50  |  元気(건강하다) · とても(매우) · たくさん(많이) · 少し(조금) · いつも(항상) · ちょっと(조금)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Energetic elderly man doing morning exercises in a sunny park.
+2. Extremely tall stack of pancakes towering over an astonished child.
+3. Table covered with lots of plates of Osaka street food.
+4. Fingers dropping just a tiny pinch of salt onto food.
+5. Loyal dog always waiting at the station gate, like Hachiko.
+6. Person holding up one hand in a wait-a-moment gesture, smiling apologetically.
+
+============================================================
+묶음 51  |  体(몸) · 頭(머리) · 顔(얼굴) · 目(눈) · 耳(귀) · 鼻(코)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Whole human figure stretching arms wide, showing the full body.
+2. Mother gently patting her small child's head.
+3. Woman splashing cold water on her face at a sink.
+4. Close-up of a girl's big bright sparkling eyes.
+5. Grandfather cupping a hand behind his ear to listen.
+6. Boy sniffing a flower with his nose pressed close.
+
+============================================================
+묶음 52  |  口(입) · 歯(이) · 手(손) · 足(발) · 背(키) · おなか(배)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Baby opening mouth wide for a spoonful of rice.
+2. Close-up of a wide smile showing clean white teeth.
+3. Two open palms raised toward the viewer.
+4. Tired bare feet soaking in a basin after a long walk.
+5. Tall older brother standing back to back with his short sister.
+6. Hungry boy holding his rumbling stomach before lunch.
+
+============================================================
+묶음 53  |  声(목소리) · 痛い(아프다) · 色(색) · 赤い(빨갛다) · 青い(파랗다) · 白い(하얗다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Woman calling out loudly with hands cupped around her mouth.
+2. Person clutching a sore throat and wincing in pain.
+3. Row of colored pencils fanned out in a rainbow.
+4. Three shiny red apples in a woven basket.
+5. Clear bright blue sky above a calm sea.
+6. Crisp white shirt hanging on a wooden hanger.
+
+============================================================
+묶음 54  |  黒い(검다) · 黄色い(노랗다) · 茶色(갈색) · 緑(초록) · 強い(강하다) · 弱い(약하다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Pair of polished black leather shoes on a doorstep.
+2. Field of bright yellow rapeseed flowers in spring.
+3. Brown leather bag resting on a wooden bench.
+4. Lush green forested mountains around Kyoto.
+5. Muscular man lifting a heavy barbell with ease.
+6. Man red-faced and dizzy after just one small cup of sake.
+
+============================================================
+묶음 55  |  丈夫(튼튼하다) · これ(이것) · それ(그것) · あれ(저것) · ここ(여기) · そこ(거기)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Sturdy canvas bag stuffed full yet holding perfectly.
+2. Woman holding a snack box close, pointing at it in her hands.
+3. Man pointing at the souvenir bag his friend is holding.
+4. Two friends side by side, one pointing at a faraway tower.
+5. Clerk pointing down at a spot right in front of herself on the counter.
+6. Man pointing to the floor beside his listener, showing where to put luggage.
+
+============================================================
+묶음 56  |  あそこ(저기) · こちら(이쪽) · そちら(그쪽) · あちら(저쪽) · どちら(어느 쪽) · この(이)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Person pointing at a distant department store across the street, friend following her gaze.
+2. Woman introducing a colleague beside her with an open palm gesture.
+3. Hotel clerk gesturing politely with an open palm toward the guest.
+4. Staff member gesturing with an open palm toward a distant corridor.
+5. Girl deciding between a coffee cup and a teacup, one in each hand.
+6. Traveler pointing at the train right beside her, asking a conductor.
+
+============================================================
+묶음 57  |  その(그) · あの(저) · どの(어느) · そう(그렇게) · こんな(이런) · そんな(그런)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Man pointing at the book his friend is reading across the table.
+2. Two friends gazing at a distant white building, one pointing.
+3. Confused traveler looking at several buses, unsure which one to take.
+4. Man nodding in agreement with a friendly smile.
+5. Tourist amazed, gesturing around the huge station he stands in.
+6. Woman laughing and waving her hand modestly, shaking her head.
+
+============================================================
+묶음 58  |  あんな(저런) · 何か(무언가) · 誰か(누군가) · どこか(어딘가) · 全部(전부) · 一緒に(같이)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Couple gazing longingly at a beautiful house far away on a hill.
+2. Host offering a tray of assorted drinks to a guest.
+3. Shadowy figure behind a paper sliding door, someone unknown inside.
+4. Traveler with a backpack at a crossroads of many paths.
+5. Shopper placing every item from a full basket on the counter.
+6. Two friends eating lunch together side by side on a bench.
+
+============================================================
+묶음 59  |  同じ(같다) · ほか(다른 것) · おはようございます(안녕하세요(아침)) · こんにちは(안녕하세요(낮)) · こんばんは(안녕하세요(저녁)) · おやすみなさい(안녕히 주무세요)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Two friends holding identical ice cream cones.
+2. Clerk showing a customer the same sweater in other colors.
+3. Neighbors bowing and greeting each other at the front gate at sunrise.
+4. Two people waving hello on a sunny street at midday.
+5. Neighbors greeting each other under glowing street lamps in the evening.
+6. Mother tucking a sleepy child into a futon under a moonlit window.
+
+============================================================
+묶음 60  |  ありがとう(고마워) · どういたしまして(천만에요) · すみません(죄송합니다) · ごめんなさい(미안해요) · さようなら(안녕히 가세요) · お願いします(부탁합니다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Person receiving a gift and smiling gratefully.
+2. Man smiling modestly after helping an old woman carry her bags.
+3. Tourist politely raising a hand to ask a stranger for directions.
+4. Child bowing in apology beside a broken vase.
+5. Students waving goodbye to their teacher at the school gate.
+6. Customer ordering coffee from a café clerk with a slight bow.
+
+============================================================
+묶음 61  |  いただきます(잘 먹겠습니다) · ごちそうさまでした(잘 먹었습니다) · はい(네) · いいえ(아니요) · どうぞ(어서, 자) · どうも(정말, 참)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Person with hands pressed together before a steaming bowl of ramen.
+2. Satisfied diner with hands together over empty bowls after a meal.
+3. Student raising her hand eagerly and nodding yes.
+4. Person shaking head and waving a hand side to side meaning no.
+5. Host holding the door open, gesturing a guest inside with a smile.
+6. Man giving a quick casual nod of thanks to a shopkeeper.
+
+============================================================
+묶음 62  |  いらっしゃいませ(어서 오세요) · 失礼します(실례합니다) · はじめまして(처음 뵙겠습니다) · よろしくお願いします(잘 부탁합니다) · 大丈夫(괜찮다) · そうですね(그렇네요)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Restaurant staff bowing warmly to customers entering under a noren curtain.
+2. Office worker bowing at the door as he leaves before his colleagues.
+3. Two strangers meeting for the first time, shaking hands shyly.
+4. Two new colleagues bowing deeply to each other in an office.
+5. Kind passerby helping a fallen cyclist up, checking if he is okay.
+6. Two people fanning themselves on a hot day, nodding in agreement.
+
+============================================================
+묶음 63  |  もしもし(여보세요) · ええ(네) · じゃあ(그럼) · 今朝(오늘 아침) · 今晩(오늘 밤) · 夕方(저녁 무렵)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Woman answering a ringing phone, holding the receiver to her ear.
+2. Friend casually nodding along in a relaxed chat over tea.
+3. Customer finally deciding and pointing at a cake in a bakery case.
+4. Person waking and stretching by a window at early morning sunrise.
+5. Friends meeting for dinner tonight as city lights begin to glow.
+6. Orange sunset sky over rooftops as people head home.
+
+============================================================
+묶음 64  |  毎晩(매일 밤) · 毎週(매주) · 毎月(매달) · 毎年(매년) · 先月(지난달) · 来月(다음 달)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Student studying under a desk lamp, moon outside, a nightly habit.
+2. Businessman boarding the bullet train with his usual weekly suitcase.
+3. Row of moon phases above a steadily growing stack of books.
+4. Same family under cherry blossoms, children growing taller year by year.
+5. Woman reminiscing over a recent photo of flying home.
+6. Traveler packing a suitcase, dreaming of Mount Fuji for next month's trip.
+
+============================================================
+묶음 65  |  今月(이번 달) · 一昨日(그저께) · 明後日(모레) · 年(해) · 月(달) · 日(날)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Overwhelmed office worker surrounded by a whole month's piled tasks.
+2. Faded memory scene of a rainy street from a couple of days ago.
+3. Packed suitcase waiting by the door for a trip the day after tomorrow.
+4. Two friends of the same age blowing out birthday candles together.
+5. Bright full moon above a pagoda in the night sky.
+6. Relaxing day off, person lounging on tatami with a cup of tea.
+
+============================================================
+묶음 66  |  時々(가끔) · 初めて(처음으로) · もう(벌써) · まだ(아직) · すぐ(곧) · 後で(나중에)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Woman watching a Japanese film on the sofa, an occasional treat.
+2. Wide-eyed tourist seeing Kyoto's red torii gates for the first time.
+3. Man patting his full stomach beside already empty lunch plates.
+4. Office worker still typing late at night beside an unfinished pile of work.
+5. Taxi pulling up instantly at the curb, surprising a waiting woman.
+6. Busy woman glancing at her ringing phone, gesturing she will call back later.
+
+============================================================
+묶음 67  |  夕べ(어젯밤) · 一日(하루) · 一週間(일주일) · 何曜日(무슨 요일) · 音楽(음악) · 歌(노래)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Friends drinking late into last night at a lantern-lit izakaya.
+2. Sun arcing from sunrise to sunset over one full day in Tokyo.
+3. Seven little suns in a row above an Osaka hotel window.
+4. Puzzled man scratching his head, unsure what day of the week it is.
+5. Commuter listening to music through headphones on a train.
+6. Colorful musical notes floating from a vintage record player.
+
+============================================================
+묶음 68  |  歌う(노래하다) · 映画(영화) · スポーツ(스포츠) · 散歩(산책) · 絵(그림) · 雑誌(잡지)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Friends singing loudly with microphones in a karaoke room.
+2. Audience watching a film on a big cinema screen with popcorn.
+3. Kids playing soccer and baseball on a sunny sports field.
+4. Couple strolling leisurely along a riverside path at dawn.
+5. Old painting of cranes on a folding screen in a temple.
+6. Person flipping through a glossy picture magazine on a station bench.
+
+============================================================
+묶음 69  |  ニュース(뉴스) · ラジオ(라디오) · ギター(기타) · 遊ぶ(놀다) · プール(수영장) · カメラ(카메라)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Family watching a news anchor on television in the evening.
+2. Retro radio on a car dashboard while driving along the coast.
+3. Older brother skillfully playing an acoustic guitar on a bench.
+4. Children playing tag happily in a city playground.
+5. Hotel swimming pool with clear blue water and sun loungers.
+6. Vintage camera hanging from a tourist's neck before a Kyoto temple.
+
+============================================================
+묶음 70  |  犬(개) · 猫(고양이) · 鳥(새) · 木(나무) · 晴れ(맑음) · 曇り(흐림)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Fluffy white dog sitting by the front door of a house.
+2. Small cat curled up asleep in a sunny garden.
+3. Small bird perched on a branch in a tree.
+4. Huge old tree with spreading branches in a park.
+5. Clear sunny sky with a bright sun over Tokyo.
+6. Gray overcast clouds covering the city sky, no sun.
+
+============================================================
+묶음 71  |  雪(눈) · 風(바람) · 涼しい(시원하다) · 暖かい(따뜻하다) · 降る((비·눈이) 내리다) · 立つ(서다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Snow falling softly on a quiet Tokyo street with a red torii.
+2. Colorful carp streamers fluttering in the wind above a house.
+3. Cool autumn breeze rustling red maple leaves in Kyoto.
+4. Person basking in warm spring sunshine on a bench with blossoms.
+5. Heavy rain pouring down onto Osaka rooftops.
+6. Man standing straight at a station entrance, waiting.
+
+============================================================
+묶음 72  |  座る(앉다) · 置く(두다) · 入れる(넣다) · 出す(내다) · 取る(집다) · 撮る((사진을) 찍다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Woman sitting down on a floor cushion at a low table.
+2. Traveler setting a suitcase down on the hotel floor.
+3. Spoon putting sugar into a cup of coffee.
+4. Person dropping a sealed envelope into a red post box.
+5. Hand reaching across a dinner table to take the salt shaker.
+6. Tourist taking a photo of a pagoda with a camera.
+
+============================================================
+묶음 73  |  押す(누르다) · 引く(당기다) · 切る(자르다) · 消える(꺼지다) · 付ける(켜다) · 開く(열리다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Finger pressing a round elevator button.
+2. Person pulling a heavy wooden door open by its handle.
+3. Chef slicing meat with a knife on a cutting board.
+4. Room suddenly going dark as the ceiling light goes out.
+5. Hand flipping a switch, bright light filling a dark room.
+6. Automatic glass doors sliding open as customers walk in.
+
+============================================================
+묶음 74  |  閉まる(닫히다) · 止まる(멈추다) · 曲がる(돌다) · 渡る(건너다) · 着く(도착하다) · 飛ぶ(날다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Shop shutters rolling down closed on an evening street.
+2. Bullet train coming to a stop at a station platform.
+3. Car turning right at a street corner in a quiet town.
+4. Person walking across a red arched bridge over a river.
+5. Traveler arriving at a hotel lobby with luggage at night.
+6. Flock of birds flying across a wide blue sky.
+
+============================================================
+묶음 75  |  並ぶ(줄 서다) · 並べる(늘어놓다) · 見せる(보여 주다) · 渡す(건네다) · 頼む(부탁하다) · 答える(대답하다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Long orderly line of people waiting in front of a station.
+2. Woman arranging plates neatly in a row on a table.
+3. Traveler showing her passport to an airport officer.
+4. Friend handing a train ticket to another at the station.
+5. Diner raising a hand to call a waiter and order coffee.
+6. Student standing up to answer the teacher's question.
+
+============================================================
+묶음 76  |  できる(할 수 있다) · なる(되다) · やる(하다) · 困る(곤란하다) · 違う(다르다) · 生まれる(태어나다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Child proudly riding a bicycle on his own for the first time.
+2. Autumn tree turning bare as the first winter snow arrives.
+3. Boy doing homework with determination at the kitchen table.
+4. Person caught in sudden rain without an umbrella, looking troubled.
+5. One red apple standing out in a row of green apples.
+6. Newborn baby cradled in mother's arms in a hospital room.
+
+============================================================
+묶음 77  |  死ぬ(죽다) · 吸う(피우다) · 浴びる((샤워를) 하다) · 脱ぐ(벗다) · はく(신다, 입다) · かぶる((모자를) 쓰다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Child placing flowers on the small grave of a pet dog.
+2. Old man smoking a cigarette on a balcony.
+3. Person taking a morning shower under streaming water.
+4. Guest taking off shoes at a Japanese genkan entrance.
+5. Man pulling on a pair of black trousers.
+6. Child putting on a straw hat on a sunny day.
+
+============================================================
+묶음 78  |  かける((안경을) 쓰다) · 磨く(닦다) · 弾く((악기를) 치다) · 吹く(불다) · 咲く((꽃이) 피다) · 鳴く((동물이) 울다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Man putting on his glasses with both hands.
+2. Boy brushing his teeth in front of a bathroom mirror at night.
+3. Girl playing the piano in a sunlit room.
+4. Strong wind blowing cherry petals and a woman's hair sideways.
+5. Cherry blossoms in full bloom in a Kyoto park.
+6. Rooster crowing loudly at dawn in a farmyard.
+
+============================================================
+묶음 79  |  登る(오르다) · 勤める(근무하다) · 差す((우산을) 쓰다) · かかる((시간이) 걸리다) · 晴れる(개다) · 消す(끄다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Hikers climbing a rocky trail up Mount Fuji.
+2. Office worker busy at her desk in a large company office.
+3. Woman holding up an open umbrella in the rain.
+4. Weary traveler waiting beside a large hourglass for a long journey.
+5. Clouds parting to reveal bright sunshine over Tokyo after rain.
+6. Person blowing out a candle in a dim room.
+
+============================================================
+묶음 80  |  要る(필요하다) · 長い(길다) · 短い(짧다) · 重い(무겁다) · 軽い(가볍다) · 広い(넓다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Hand packing a passport into a suitcase before a trip.
+2. Girl wrapped in a very long scarf trailing on the ground.
+3. Short pencil stub lying next to a long new pencil.
+4. Man straining to lift a heavy cardboard box.
+5. Woman lifting a slim laptop easily with one hand.
+6. Spacious hotel room with large windows and a wide floor.
+
+============================================================
+묶음 81  |  狭い(좁다) · 明るい(밝다) · 暗い(어둡다) · 早い(이르다) · 速い((속도가) 빠르다) · 遅い(늦다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Narrow Kyoto alley squeezed between old wooden houses.
+2. Bright room flooded with warm sunlight through big windows.
+3. Dark night street lit by a single dim streetlamp.
+4. Person leaving home early at dawn as stars fade.
+5. Bullet train speeding past a slow bus on a road.
+6. Snail slowly crawling along a garden path.
+
+============================================================
+묶음 82  |  若い(젊다) · 甘い(달다) · 辛い(맵다) · 冷たい(차갑다) · 熱い(뜨겁다) · 汚い(더럽다)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Group of young energetic employees laughing in an office.
+2. Slice of sugary strawberry cake with whipped cream.
+3. Man sweating with a red face after eating spicy kimchi stew.
+4. Glass of ice water with cold condensation dripping.
+5. Steaming hot cup of green tea on a wooden tray.
+6. Messy dirty room with clothes and trash scattered everywhere.
+
+============================================================
+묶음 83  |  きれい(예쁘다) · 上手(잘함) · 下手(서투름) · 暇(한가함) · 大切(소중함) · 色々(여러 가지)
+PROMPT:
+Create one single image. Landscape 3:2 image (1536×1024). Layout: an EXACT grid of 3 columns and 2 rows — exactly 6 equal square tiles, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Beautiful clean Kyoto street with lanterns at dusk.
+2. Skillful chef flipping okonomiyaki perfectly on a hot griddle.
+3. Man singing off-key at karaoke while friends cover their ears.
+4. Bored man lying on tatami with nothing to do.
+5. Woman holding an old family photo carefully to her chest.
+6. Assortment of various Japanese snacks spread across a table.
+
+============================================================
+묶음 84  |  本当(정말) · よく(자주)
+PROMPT:
+Create one single image. Wide landscape image. Layout: exactly 2 equal square tiles side by side in one row, separated by thin pure-white gutters, with a thin pure-white outer border.
+Every tile is its own polished illustration in modern Korean webtoon (manhwa) style: clean crisp digital lineart, soft cel shading with smooth gradients, bright fresh colors, attractive expressive characters with large clear eyes, clean simple backgrounds with soft depth; one clear central subject, fully inside the tile with comfortable margin around heads and feet; consistent character design and style across all tiles.
+Strictly NO text of any kind anywhere: no speech bubbles, no captions, no labels, no letters, numbers, signs, kanji or writing.
+Tile contents in reading order (left to right, top row first):
+1. Surprised friend with jaw dropped and wide eyes in disbelief.
+2. Frequent traveler with a well-worn suitcase at a familiar airport gate.
