@@ -20,8 +20,7 @@ def mark_img(topics, sub):
 audio = sorted('audio/' + p.name for p in (R / 'audio').glob('*.m4a')) if (R / 'audio').exists() else []
 ja = load(R / 'ja')
 mark_img(en, 'en'); mark_img(ja, 'ja')
-IMGV = 2  # версия картинок: увеличить при перегенерации, чтобы обновился офлайн-кэш
-imgs = sorted(f'img/{p.parent.name}/{p.name}?v={IMGV}' for p in (R / 'img').glob('*/*.webp') if p.parent.name in ('en', 'ja'))
+IMGV = {'en': 2, 'ja': 3}  # версия картинок по курсам: увеличить при перегенерации курса, чтобы обновился офлайн-кэш
 for t in ja:
     for w in t['words']:  # единые поля для интерфейса
         w['ipa'] = w['rom'] if w['kana'] == w['w'] else w['kana']
