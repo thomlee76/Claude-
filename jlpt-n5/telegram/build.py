@@ -290,9 +290,9 @@ def message(rows, n):
         if w["reading"]:
             head += f" ({w['reading']})"
         out.append(f"{head} — {w['ko']}")
-        for i, (jp, ko) in enumerate(w["ex"]):
-            out.append(f"{'①②'[i]} {inline_ruby(jp)}")
-            out.append(f"→ {ko}")
+        jp, ko = w["ex"][0]          # 텍스트에는 예문 1개만 (그림에는 2개)
+        out.append(inline_ruby(jp))
+        out.append(f"→ {ko}")
         out.append("")
     if n < DAYS:
         nxt = " · ".join(w["word"] for w in day_words(rows, n + 1))
