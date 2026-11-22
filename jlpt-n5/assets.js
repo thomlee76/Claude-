@@ -1,1 +1,1 @@
-window.IMGS=["hana","inu","ki","sakana"];
+window.IMGS=["inu","neko","samui","taberu"];

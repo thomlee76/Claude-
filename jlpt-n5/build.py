@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """그림 변환과 오프라인 목록 생성.
 사용: python3 build.py [PNG 폴더]
- - PNG 폴더가 주어지면 <id>.png 를 img/<id>.webp (400px)로 변환한다.
+ - PNG 폴더가 주어지면 <id>.png 를 img/<id>.webp (600px)로 변환한다.
  - assets.js (그림이 있는 단어 id 목록)와 sw.js (오프라인 캐시 목록)를 다시 만든다.
 """
 import hashlib, json, os, sys
@@ -15,9 +15,9 @@ if len(sys.argv) > 1:
     from PIL import Image
     for p in sorted(Path(sys.argv[1]).glob("*.png")):
         im = Image.open(p).convert("RGB")
-        if max(im.size) > 400:
-            im.thumbnail((400, 400), Image.LANCZOS)
-        im.save(IMG / (p.stem + ".webp"), "WEBP", quality=82, method=6)
+        if max(im.size) > 600:
+            im.thumbnail((600, 600), Image.LANCZOS)
+        im.save(IMG / (p.stem + ".webp"), "WEBP", quality=80, method=6)
 
 ids = sorted(p.stem for p in IMG.glob("*.webp"))
 (ROOT / "assets.js").write_text("window.IMGS=" + json.dumps(ids, separators=(",", ":")) + ";\n", encoding="utf-8")
