@@ -55,7 +55,7 @@ gakusei	学生	がくせい	명	학생	{私:わたし}は{大学:だいがく}�
 hon	本	ほん	명	책	{本:ほん}を{読:よ}みます。	책을 읽습니다.	この{本:ほん}はおもしろいです。	이 책은 재미있습니다.	A girl absorbed in reading a book in a cozy library corner with glowing light
 nooto	ノート		명	노트, 공책	ノートに{書:か}きます。	공책에 씁니다.	ノートを{三冊:さんさつ}{買:か}いました。	공책을 세 권 샀습니다.	A close-up of a student writing in an open notebook with a pen on a sunlit desk
 enpitsu	鉛筆	えんぴつ	명	연필	{鉛筆:えんぴつ}を{貸:か}してください。	연필 좀 빌려주세요.	{鉛筆:えんぴつ}で{絵:え}をかきます。	연필로 그림을 그립니다.	One classmate handing a pencil to another across desks in a classroom, friendly smiles
-kami	紙	かみ	명	종이	{紙:かみ}に{名前:なまえ}を{書:か}きます。	종이에 이름을 씁니다.	{白:しろ}い{紙:かみ}をください。	하얀 종이를 주세요.	A child carefully writing on a sheet of white paper at a low table, paper sheets around
+kami	紙	かみ	명	종이	{紙:かみ}に{名前:なまえ}を{書:か}きます。	종이에 이름을 씁니다.	{白:しろ}い{紙:かみ}をください。	하얀 종이를 주세요.	A child carefully writing on a blank sheet of white paper at a low wooden table in a sunny room, no other people
 jisho	辞書	じしょ	명	사전	{辞書:じしょ}で{調:しら}べます。	사전으로 찾아봅니다.	この{辞書:じしょ}は{便利:べんり}です。	이 사전은 편리합니다.	A student flipping through a thick dictionary at a library table, pages fluttering
 shukudai	宿題	しゅくだい	명	숙제	{宿題:しゅくだい}が{多:おお}いです。	숙제가 많습니다.	{夜:よる}、{宿題:しゅくだい}をします。	밤에 숙제를 합니다.	An exhausted student slumped at a desk buried under a huge pile of homework at night
 shiken	試験	しけん	명	시험	{明日:あした}は{試験:しけん}です。	내일은 시험입니다.	{試験:しけん}は{難:むずか}しかったです。	시험은 어려웠습니다.	Tense students writing an exam in a silent classroom, a clock ticking on the wall
@@ -86,7 +86,7 @@ kaze	風	かぜ	명	바람	{風:かぜ}が{強:つよ}いです。	바람이 강
 haru	春	はる	명	봄	{春:はる}は{暖:あたた}かいです。	봄은 따뜻합니다.	{春:はる}に{花見:はなみ}をします。	봄에 꽃구경을 합니다.	Friends having a picnic under full-bloom cherry blossom trees in spring
 natsu	夏	なつ	명	여름	{夏休:なつやす}みはいつですか。	여름방학은 언제입니까?	{夏:なつ}は{暑:あつ}いです。	여름은 덥습니다.	Kids with ice pops and a bug net under a bright summer sky, sunflowers and cicadas
 aki	秋	あき	명	가을	{秋:あき}は{涼:すず}しいです。	가을은 선선합니다.	{秋:あき}の{山:やま}はきれいです。	가을 산은 예쁩니다.	A girl walking through a forest path of red and orange maple leaves in autumn
-fuyu	冬	ふゆ	명	겨울	{冬:ふゆ}は{寒:さむ}いです。	겨울은 춥습니다.	{冬:ふゆ}{休:やす}みに{北海道:ほっかいどう}へ{行:い}きます。	겨울방학에 홋카이도에 갑니다.	A girl in a scarf breathing white mist on a snowy winter evening street with lights
+fuyu	冬	ふゆ	명	겨울	{冬:ふゆ}は{寒:さむ}いです。	겨울은 춥습니다.	{冬:ふゆ}{休:やす}みに{北海道:ほっかいどう}へ{行:い}きます。	겨울방학에 홋카이도에 갑니다.	A girl in a scarf breathing white mist on a snowy winter evening street lit by plain warm lanterns, no signs
 atsui	暑い	あつい	い형	덥다	{今日:きょう}はとても{暑:あつ}いです。	오늘은 매우 덥습니다.	{暑:あつ}い{日:ひ}はアイスを{食:た}べます。	더운 날은 아이스크림을 먹습니다.	A boy fanning himself and melting in the summer heat, a sweating ice cream cone in hand
 samui	寒い	さむい	い형	춥다	{外:そと}は{寒:さむ}いですよ。	밖은 추워요.	{寒:さむ}いですから、コートを{着:き}ます。	추우니까 코트를 입습니다.	A shivering girl in a coat and scarf stepping out into a freezing snowy night
 fuku	服	ふく	명	옷	{新:あたら}しい{服:ふく}を{買:か}いました。	새 옷을 샀습니다.	この{服:ふく}はきれいですね。	이 옷은 예쁘네요.	A happy young woman trying on a new outfit in front of a boutique mirror
@@ -100,7 +100,7 @@ zubon	ズボン		명	바지	{黒:くろ}いズボンをはきます。	검은 �
 sukaato	スカート		명	치마	{赤:あか}いスカートですね。	빨간 치마네요.	{姉:あね}はスカートが{好:す}きです。	누나는 치마를 좋아합니다.	A girl twirling in a flowing red skirt on a sunny street
 kutsushita	靴下	くつした	명	양말	{靴下:くつした}を{三足:さんぞく}{買:か}いました。	양말을 세 켤레 샀습니다.	{冬:ふゆ}は{厚:あつ}い{靴下:くつした}をはきます。	겨울에는 두꺼운 양말을 신습니다.	Cozy colorful wool socks on feet by a warm fireplace in winter, a cup of cocoa nearby
 iku	行く	いく	동	가다	{駅:えき}へ{行:い}きます。	역에 갑니다.	{明日:あした}、{友達:ともだち}と{海:うみ}へ{行:い}きます。	내일 친구와 바다에 갑니다.	A young man walking briskly toward a train station entrance in the morning crowd
-kuru	来る	くる	동	오다	{友達:ともだち}が{家:いえ}に{来:き}ます。	친구가 집에 옵니다.	{先生:せんせい}は{九時:くじ}に{来:き}ます。	선생님은 9시에 옵니다.	A girl opening her front door to welcome smiling friends carrying snacks
+kuru	来る	くる	동	오다	{友達:ともだち}が{家:いえ}に{来:き}ます。	친구가 집에 옵니다.	{先生:せんせい}は{九時:くじ}に{来:き}ます。	선생님은 9시에 옵니다.	A girl opening her front door to welcome smiling friends carrying a cake box, cozy entrance hall, no signs
 kaeru	帰る	かえる	동	돌아가다, 귀가하다	{六時:ろくじ}に{家:いえ}へ{帰:かえ}ります。	6시에 집에 돌아갑니다.	{早:はや}く{帰:かえ}りましょう。	빨리 돌아갑시다.	A father coming home at six in the evening, his child running to hug him at the door
 taberu	食べる	たべる	동	먹다	すしを{食:た}べます。	초밥을 먹습니다.	{一緒:いっしょ}にご{飯:はん}を{食:た}べませんか。	같이 밥 먹지 않겠습니까?	A delighted girl eating sushi at a sushi counter, the chef smiling
 nomu	飲む	のむ	동	마시다	{牛乳:ぎゅうにゅう}を{飲:の}みます。	우유를 마십니다.	{薬:くすり}を{飲:の}んでください。	약을 드세요.	A boy drinking a glass of milk in one go after a bath, very satisfied
@@ -143,7 +143,7 @@ oishii	おいしい		い형	맛있다	このラーメンはおいしいです。
 amai	甘い	あまい	い형	달다	このケーキは{甘:あま}いです。	이 케이크는 답니다.	{甘:あま}いものが{好:す}きです。	단 것을 좋아합니다.	A girl blissfully eating a strawberry cream cake in a pastel cafe
 karai	辛い	からい	い형	맵다	キムチは{辛:から}いです。	김치는 맵습니다.	このカレーは{少:すこ}し{辛:から}いです。	이 카레는 조금 맵습니다.	A boy with a red face breathing fire after eating very spicy food, comically
 tanoshii	楽しい	たのしい	い형	즐겁다	{旅行:りょこう}は{楽:たの}しかったです。	여행은 즐거웠습니다.	{学校:がっこう}は{楽:たの}しいです。	학교는 즐겁습니다.	Friends laughing together on a trip, taking a photo in front of a beautiful landmark
-muzukashii	難しい	むずかしい	い형	어렵다	{漢字:かんじ}は{難:むずか}しいです。	한자는 어렵습니다.	{試験:しけん}は{難:むずか}しくなかったです。	시험은 어렵지 않았습니다.	A confused student staring at a complex kanji character floating above the desk
+muzukashii	難しい	むずかしい	い형	어렵다	{漢字:かんじ}は{難:むずか}しいです。	한자는 어렵습니다.	{試験:しけん}は{難:むずか}しくなかったです。	시험은 어렵지 않았습니다.	A confused student scratching his head over a thick difficult textbook at a desk piled with books, the pages blank
 yasashii	易しい	やさしい	い형	쉽다	この{問題:もんだい}は{易:やさ}しいです。	이 문제는 쉽습니다.	{易:やさ}しい{日本語:にほんご}で{話:はな}してください。	쉬운 일본어로 말해 주세요.	A confident student smiling as she quickly finishes an easy test
 isogashii	忙しい	いそがしい	い형	바쁘다	{今週:こんしゅう}は{忙:いそが}しいです。	이번 주는 바쁩니다.	{父:ちち}はいつも{忙:いそが}しいです。	아버지는 항상 바쁩니다.	A busy office worker juggling phone calls and piles of documents at a desk
 akarui	明るい	あかるい	い형	밝다	この{部屋:へや}は{明:あか}るいです。	이 방은 밝습니다.	{彼女:かのじょ}は{明:あか}るい{人:ひと}です。	그녀는 밝은 사람입니다.	A bright white room flooded with sunlight from big windows, a happy girl in it
@@ -159,7 +159,7 @@ jouzu	上手	じょうず	な형	잘하다, 능숙하다	{日本語:にほんご
 heta	下手	へた	な형	서투르다	{私:わたし}は{歌:うた}が{下手:へた}です。	저는 노래를 못합니다.	{字:じ}が{下手:へた}ですみません。	글씨가 서툴러서 죄송합니다.	A boy singing badly at karaoke while his friends cover their ears and laugh
 yuumei	有名	ゆうめい	な형	유명하다	ここは{有名:ゆうめい}な{店:みせ}です。	여기는 유명한 가게입니다.	{京都:きょうと}はお{寺:てら}で{有名:ゆうめい}です。	교토는 절로 유명합니다.	A long line of people waiting outside a famous little ramen shop
 benri	便利	べんり	な형	편리하다	スマホは{便利:べんり}です。	스마트폰은 편리합니다.	{駅:えき}の{近:ちか}くは{便利:べんり}です。	역 근처는 편리합니다.	A girl using her smartphone to pay at a convenience store, glowing screen
-akai	赤い	あかい	い형	빨갛다	{赤:あか}いりんごです。	빨간 사과입니다.	{秋:あき}は{葉:は}が{赤:あか}くなります。	가을에는 잎이 빨개집니다.	A close-up of a glossy red apple on a wooden table in warm light
+akai	赤い	あかい	い형	빨갛다	{赤:あか}いりんごです。	빨간 사과입니다.	{秋:あき}は{葉:は}が{赤:あか}くなります。	가을에는 잎이 빨개집니다.	A single glossy red apple on a wooden table in warm window light, simple still life, no people
 aoi	青い	あおい	い형	파랗다	{青:あお}い{海:うみ}が{好:す}きです。	파란 바다를 좋아합니다.	{青:あお}いシャツを{着:き}ています。	파란 셔츠를 입고 있습니다.	A girl standing on a cliff overlooking a deep blue ocean and blue sky
 shiroi	白い	しろい	い형	하얗다	{白:しろ}い{猫:ねこ}がいます。	하얀 고양이가 있습니다.	{山:やま}の{上:うえ}は{白:しろ}いです。	산 위는 하얗습니다.	A pure white cat sitting in the snow with bright blue eyes
 kuroi	黒い	くろい	い형	검다	{黒:くろ}い{車:くるま}です。	검은 차입니다.	{彼:かれ}は{黒:くろ}い{帽子:ぼうし}をかぶっています。	그는 검은 모자를 쓰고 있습니다.	A sleek black car parked on a rainy night street reflecting neon lights
