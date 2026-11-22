@@ -14,7 +14,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 ROOT = Path(__file__).resolve().parent
-PER_DAY, DAYS = 8, 25
+PER_DAY, DAYS = 8, 63   # DAYS는 load_words()에서 단어 수로 다시 계산
 START = "2026-11-23"  # DAY 1
 STYLE = ("Cinematic Japanese anime illustration, film still quality. {scene}. "
          "Highly detailed hand-painted background, dramatic lighting, rich saturated colors, "
@@ -22,13 +22,16 @@ STYLE = ("Cinematic Japanese anime illustration, film still quality. {scene}. "
 
 # ---------- data ----------
 def load_words():
+    global DAYS
     rows = []
-    for line in (ROOT / "words.tsv").read_text(encoding="utf-8").splitlines():
-        if not line or line.startswith("#"):
-            continue
-        f = line.split("\t")
-        rows.append(dict(id=f[0], word=f[1], reading=f[2], pos=f[3], ko=f[4],
-                         ex=[(f[5], f[6]), (f[7], f[8])], scene=f[9]))
+    for name in ("words.tsv", "words_more.tsv"):
+        for line in (ROOT / name).read_text(encoding="utf-8").splitlines():
+            if not line or line.startswith("#"):
+                continue
+            f = line.split("\t")
+            rows.append(dict(id=f[0], word=f[1], reading=f[2], pos=f[3], ko=f[4],
+                             ex=[(f[5], f[6]), (f[7], f[8])], scene=f[9],
+                             theme=f[10] if len(f) > 10 else ""))
     # 주제(테마)는 원래 단어장(words.js) 순서를 그대로 사용
     js = (ROOT.parent / "words.js").read_text(encoding="utf-8")
     theme_of, cur = {}, None
@@ -40,8 +43,9 @@ def load_words():
         if m and cur:
             theme_of[m.group(1)] = cur
     for r in rows:
-        r["theme"] = theme_of.get(r["id"], "")
-    assert len(rows) == PER_DAY * DAYS, len(rows)
+        if not r["theme"]:
+            r["theme"] = theme_of.get(r["id"], "")
+    DAYS = -(-len(rows) // PER_DAY)
     return rows
 
 def day_words(rows, n):
@@ -244,17 +248,17 @@ def card_image(d0, w, pic_path):
     img.paste(base, (0, 0), m)
     return img
 
-def collage(words, n, part, title):
+def collage(words, n, part, parts, title):
     d0 = ImageDraw.Draw(Image.new("RGB", (10, 10)))
     cards = [card_image(d0, w, pic_path(w["id"])) for w in words]
     ftag, ftitle = font("Bold", 22, "KR"), font("Bold", 46, "KR")
     head_h = 40 + 32 + 2 + 64
-    rows = [cards[:2], cards[2:]]
+    rows = [r for r in (cards[:2], cards[2:]) if r]
     row_h = [max(c.size[1] for c in r) for r in rows]
-    H = head_h + GAP + row_h[0] + GAP + row_h[1] + 44
+    H = head_h + GAP + sum(h + GAP for h in row_h) - GAP + 44
     canvas = Image.new("RGB", (W, H), hexc(C["bg"]))
     d = ImageDraw.Draw(canvas)
-    tag = f"JLPT N5  ·  DAY {n}  ·  {part}/2"
+    tag = f"JLPT N5  ·  DAY {n}  ·  {part}/{parts}"
     d.text(((W - tw(d, tag, ftag)) / 2, 40), tag, font=ftag, fill=C["tag"])
     d.text(((W - tw(d, title, ftitle)) / 2, 40 + 32), title, font=ftitle, fill=C["title"])
     y = head_h + GAP
@@ -285,7 +289,7 @@ def pic_path(i):
 
 def message(rows, n):
     ws = day_words(rows, n)
-    out = [f"📚 <b>JLPT N5 오늘의 단어</b>", f"DAY {n} / {DAYS} · {day_title(ws)} · {PER_DAY}단어", ""]
+    out = [f"📚 <b>JLPT N5 오늘의 단어</b>", f"DAY {n} / {DAYS} · {day_title(ws)} · {len(ws)}단어", ""]
     for k, w in enumerate(ws, (n - 1) * PER_DAY + 1):
         head = f"<b>{k}. {w['word']}</b>"
         if w["reading"]:
@@ -299,12 +303,13 @@ def message(rows, n):
         nxt = " · ".join(w["word"] for w in day_words(rows, n + 1))
         out.append(f"📌 내일(DAY {n + 1}): {nxt}")
     else:
-        out.append("🎉 JLPT N5 핵심 단어 200개를 모두 마쳤습니다! 수고하셨습니다.")
+        out.append(f"🎉 JLPT N5 단어 {len(rows)}개를 모두 마쳤습니다! 수고하셨습니다.")
+    parts = -(-len(ws) // 4)
     caps = []
-    for part in (1, 2):
+    for part in range(1, parts + 1):
         part_ws = ws[(part - 1) * 4: part * 4]
-        caps.append(f"🇯🇵 <b>JLPT N5 · DAY {n}</b> ({part}/2)\n" + " · ".join(w["word"] for w in part_ws))
-    return {"day": n, "caption1": caps[0], "caption2": caps[1], "text": "\n".join(out)}
+        caps.append(f"🇯🇵 <b>JLPT N5 · DAY {n}</b> ({part}/{parts})\n" + " · ".join(w["word"] for w in part_ws))
+    return {"day": n, "caption1": caps[0], "caption2": caps[1] if parts > 1 else "", "text": "\n".join(out)}
 
 def main():
     rows = load_words()
@@ -323,8 +328,9 @@ def main():
             print(f"DAY {n}: skip, missing images {missing}")
             continue
         title = day_title(ws)
-        for part in (1, 2):
-            img = collage(ws[(part - 1) * 4: part * 4], n, part, title)
+        parts = -(-len(ws) // 4)
+        for part in range(1, parts + 1):
+            img = collage(ws[(part - 1) * 4: part * 4], n, part, parts, title)
             img.save(ROOT / "collages" / f"day{n:02d}-{part}.png", optimize=True)
         msg = message(rows, n)
         (ROOT / "messages" / f"day{n:02d}.json").write_text(json.dumps(msg, ensure_ascii=False, indent=1), encoding="utf-8")

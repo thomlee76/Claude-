@@ -1,0 +1,301 @@
+#id	word	reading	pos	ko	ex1	ex1_ko	ex2	ex2_ko	scene	theme
+kazoku	家族	かぞく	명	가족	{私:わたし}の{家族:かぞく}は{四人:よにん}です。	우리 가족은 네 명입니다.	{家族:かぞく}と{旅行:りょこう}に{行:い}きます。	가족과 여행을 갑니다.	A happy family of four posing together in their living room with warm evening light	가족·사람
+ryoushin	両親	りょうしん	명	부모님	{両親:りょうしん}は{大阪:おおさか}に{住:す}んでいます。	부모님은 오사카에 살고 있습니다.	{両親:りょうしん}に{手紙:てがみ}を{書:か}きます。	부모님께 편지를 씁니다.	An elderly couple smiling side by side on the porch of a traditional Japanese house	가족·사람
+kyoudai	兄弟	きょうだい	명	형제	{兄弟:きょうだい}はいますか。	형제가 있습니까?	{兄弟:きょうだい}でサッカーをします。	형제끼리 축구를 합니다.	Three young brothers laughing and playing soccer together in a park at sunset	가족·사람
+otousan	お父さん	おとうさん	명	아버지(남의 아버지·부를 때)	お{父:とう}さんはお{元気:げんき}ですか。	아버님은 잘 지내십니까?	お{父:とう}さん、おかえりなさい。	아빠, 어서 오세요.	A little girl running to hug her father at the front door when he comes home	가족·사람
+okaasan	お母さん	おかあさん	명	어머니(남의 어머니·부를 때)	お{母:かあ}さんは{料理:りょうり}が{上手:じょうず}ですね。	어머님은 요리를 잘하시네요.	お{母:かあ}さん、ありがとう。	엄마, 고마워요.	A boy giving a bouquet of carnations to his smiling mother in the kitchen	가족·사람
+oniisan	お兄さん	おにいさん	명	형, 오빠(남의 형·부를 때)	お{兄:にい}さんは{何歳:なんさい}ですか。	형은 몇 살입니까?	お{兄:にい}さんと{一緒:いっしょ}にゲームをします。	형과 같이 게임을 합니다.	A teenage boy helping his little brother with a video game on the sofa	가족·사람
+oneesan	お姉さん	おねえさん	명	누나, 언니(남의 누나·부를 때)	お{姉:ねえ}さんはとてもきれいですね。	언니는 아주 예쁘네요.	お{姉:ねえ}さんに{本:ほん}を{借:か}りました。	언니에게 책을 빌렸습니다.	A kind older sister braiding her little sister's hair by a sunny window	가족·사람
+ojiisan	おじいさん		명	할아버지	おじいさんは{毎朝:まいあさ}{散歩:さんぽ}します。	할아버지는 매일 아침 산책합니다.	おじいさんの{家:いえ}は{田舎:いなか}にあります。	할아버지 집은 시골에 있습니다.	A cheerful grandfather walking his dog along a rice field path in the morning	가족·사람
+obaasan	おばあさん		명	할머니	おばあさんはお{茶:ちゃ}が{好:す}きです。	할머니는 차를 좋아합니다.	おばあさんと{一緒:いっしょ}に{料理:りょうり}を{作:つく}ります。	할머니와 같이 요리를 만듭니다.	A gentle grandmother cooking with her granddaughter in a cozy old kitchen	가족·사람
+otoko	男	おとこ	명	남자	あの{男:おとこ}の{人:ひと}は{誰:だれ}ですか。	저 남자는 누구입니까?	{男:おとこ}の{学生:がくせい}が{三人:さんにん}います。	남학생이 세 명 있습니다.	A mysterious young man in a long coat standing on a bridge at dusk	가족·사람
+onna	女	おんな	명	여자	{女:おんな}の{人:ひと}が{歌:うた}っています。	여자가 노래하고 있습니다.	このクラスは{女:おんな}の{学生:がくせい}が{多:おお}いです。	이 반은 여학생이 많습니다.	A young woman singing on a small stage under a spotlight	가족·사람
+otokonoko	男の子	おとこのこ	명	남자아이	{男:おとこ}の{子:こ}が{走:はし}っています。	남자아이가 달리고 있습니다.	あの{男:おとこ}の{子:こ}は{私:わたし}の{弟:おとうと}です。	저 남자아이는 제 남동생입니다.	A little boy running with a paper airplane on a grassy riverbank	가족·사람
+onnanoko	女の子	おんなのこ	명	여자아이	{女:おんな}の{子:こ}が{花:はな}を{持:も}っています。	여자아이가 꽃을 들고 있습니다.	{女:おんな}の{子:こ}が{二人:ふたり}います。	여자아이가 두 명 있습니다.	A little girl holding a bunch of wildflowers in a sunny meadow	가족·사람
+otona	大人	おとな	명	어른	{大人:おとな}は{千円:せんえん}です。	어른은 천 엔입니다.	{早:はや}く{大人:おとな}になりたいです。	빨리 어른이 되고 싶습니다.	A child wearing his father's oversized suit jacket and tie, pretending to be an adult	가족·사람
+isha	医者	いしゃ	명	의사	{兄:あに}は{医者:いしゃ}です。	형은 의사입니다.	{医者:いしゃ}に{行:い}ってください。	의사에게 가 보세요.	A kind young doctor with a stethoscope smiling at a child patient	가족·사람
+gaikokujin	外国人	がいこくじん	명	외국인	{外国人:がいこくじん}の{友達:ともだち}がいます。	외국인 친구가 있습니다.	{京都:きょうと}には{外国人:がいこくじん}が{多:おお}いです。	교토에는 외국인이 많습니다.	Foreign tourists taking photos in front of a red torii gate in Kyoto	가족·사람
+getsuyoubi	月曜日	げつようび	명	월요일	{月曜日:げつようび}は{忙:いそが}しいです。	월요일은 바쁩니다.	{月曜日:げつようび}から{学校:がっこう}が{始:はじ}まります。	월요일부터 학교가 시작됩니다.	A sleepy office worker dragging himself to work on a gray Monday morning	시간·요일
+kayoubi	火曜日	かようび	명	화요일	{火曜日:かようび}にテストがあります。	화요일에 시험이 있습니다.	{毎週:まいしゅう}{火曜日:かようび}にピアノを{習:なら}います。	매주 화요일에 피아노를 배웁니다.	A student studying hard at a desk the night before a test, a calendar on the wall	시간·요일
+suiyoubi	水曜日	すいようび	명	수요일	{水曜日:すいようび}は{休:やす}みです。	수요일은 쉬는 날입니다.	{水曜日:すいようび}に{会:あ}いましょう。	수요일에 만납시다.	A relaxed young woman lying in a hammock on a sunny midweek day off	시간·요일
+mokuyoubi	木曜日	もくようび	명	목요일	{木曜日:もくようび}にプールへ{行:い}きます。	목요일에 수영장에 갑니다.	{木曜日:もくようび}の{午後:ごご}は{暇:ひま}です。	목요일 오후는 한가합니다.	Kids diving into a bright indoor swimming pool, splashing water	시간·요일
+kinyoubi	金曜日	きんようび	명	금요일	{金曜日:きんようび}の{夜:よる}は{楽:たの}しいです。	금요일 밤은 즐겁습니다.	{金曜日:きんようび}に{飲:の}みに{行:い}きます。	금요일에 한잔하러 갑니다.	Coworkers cheering with drinks at a lively izakaya on Friday night	시간·요일
+doyoubi	土曜日	どようび	명	토요일	{土曜日:どようび}に{映画:えいが}を{見:み}ます。	토요일에 영화를 봅니다.	{土曜日:どようび}は{学校:がっこう}がありません。	토요일은 학교가 없습니다.	A couple buying popcorn at a cinema on a busy Saturday afternoon	시간·요일
+nichiyoubi	日曜日	にちようび	명	일요일	{日曜日:にちようび}は{家:いえ}で{休:やす}みます。	일요일은 집에서 쉽니다.	{日曜日:にちようび}に{公園:こうえん}へ{行:い}きました。	일요일에 공원에 갔습니다.	A family having a lazy Sunday breakfast in pajamas in a sunny room	시간·요일
+kesa	今朝	けさ	명	오늘 아침	{今朝:けさ}、{六時:ろくじ}に{起:お}きました。	오늘 아침 6시에 일어났습니다.	{今朝:けさ}は{寒:さむ}かったです。	오늘 아침은 추웠습니다.	A girl opening the curtains to a frosty early morning with breath visible	시간·요일
+konban	今晩	こんばん	명	오늘 밤	{今晩:こんばん}、{電話:でんわ}します。	오늘 밤 전화하겠습니다.	{今晩:こんばん}は{何:なに}を{食:た}べますか。	오늘 밤에는 무엇을 먹습니까?	A man on a smartphone at a night window with city lights, planning the evening	시간·요일
+yuugata	夕方	ゆうがた	명	저녁(해 질 녘)	{夕方:ゆうがた}、{家:いえ}に{帰:かえ}ります。	저녁에 집에 돌아갑니다.	{夕方:ゆうがた}の{空:そら}はきれいです。	저녁 하늘은 예쁩니다.	Students walking home along a riverside under a glowing orange sunset sky	시간·요일
+gozen	午前	ごぜん	명	오전	{午前:ごぜん}{九時:くじ}に{会社:かいしゃ}へ{行:い}きます。	오전 9시에 회사에 갑니다.	{午前:ごぜん}は{勉強:べんきょう}します。	오전에는 공부합니다.	Office workers arriving at a bright office building in the morning sunshine	시간·요일
+gogo	午後	ごご	명	오후	{午後:ごご}{三時:さんじ}に{会:あ}いましょう。	오후 3시에 만납시다.	{午後:ごご}は{雨:あめ}が{降:ふ}ります。	오후에는 비가 내립니다.	Two friends meeting at a cafe terrace in warm afternoon light	시간·요일
+senshuu	先週	せんしゅう	명	지난주	{先週:せんしゅう}、{京都:きょうと}へ{行:い}きました。	지난주에 교토에 갔습니다.	{先週:せんしゅう}は{忙:いそが}しかったです。	지난주는 바빴습니다.	A girl looking at travel photos of Kyoto temples on her phone with a smile	시간·요일
+konshuu	今週	こんしゅう	명	이번 주	{今週:こんしゅう}は{試験:しけん}があります。	이번 주에는 시험이 있습니다.	{今週:こんしゅう}の{土曜日:どようび}は{暇:ひま}です。	이번 주 토요일은 한가합니다.	A student marking a weekly planner full of colorful notes at a desk	시간·요일
+sengetsu	先月	せんげつ	명	지난달	{先月:せんげつ}、{引:ひ}っ{越:こ}しました。	지난달에 이사했습니다.	{先月:せんげつ}は{雨:あめ}が{多:おお}かったです。	지난달은 비가 많이 왔습니다.	A young man unpacking cardboard boxes in a new empty apartment	시간·요일
+raigetsu	来月	らいげつ	명	다음 달	{来月:らいげつ}、{国:くに}へ{帰:かえ}ります。	다음 달에 고국으로 돌아갑니다.	{来月:らいげつ}から{仕事:しごと}を{始:はじ}めます。	다음 달부터 일을 시작합니다.	A student looking at an airplane in the sky from an airport window, dreaming of home	시간·요일
+kyonen	去年	きょねん	명	작년	{去年:きょねん}、{日本:にほん}に{来:き}ました。	작년에 일본에 왔습니다.	{去年:きょねん}の{夏:なつ}は{暑:あつ}かったです。	작년 여름은 더웠습니다.	A foreign student arriving in Japan with a suitcase, looking amazed at Tokyo streets	시간·요일
+kotoshi	今年	ことし	명	올해	{今年:ことし}は{日本語:にほんご}を{勉強:べんきょう}します。	올해는 일본어를 공부합니다.	{今年:ことし}の{冬:ふゆ}は{寒:さむ}いです。	올해 겨울은 춥습니다.	A person writing New Year resolutions in a notebook with a sunrise outside	시간·요일
+rainen	来年	らいねん	명	내년	{来年:らいねん}、{大学:だいがく}に{入:はい}ります。	내년에 대학에 들어갑니다.	{来年:らいねん}また{来:き}てください。	내년에 또 오세요.	A high-school student looking at a university campus gate with hope	시간·요일
+tanjoubi	誕生日	たんじょうび	명	생일	{誕生日:たんじょうび}はいつですか。	생일은 언제입니까?	{誕生日:たんじょうび}おめでとうございます。	생일 축하합니다.	Friends surprising a girl with a birthday cake and confetti in a dark room	시간·요일
+yottsu	四つ	よっつ	수	넷(4개)	りんごを{四:よっ}つ{買:か}いました。	사과를 네 개 샀습니다.	{部屋:へや}が{四:よっ}つあります。	방이 네 개 있습니다.	Four shiny red apples in a paper bag on a kitchen table	숫자·세기
+itsutsu	五つ	いつつ	수	다섯(5개)	{卵:たまご}を{五:いつ}つください。	달걀 다섯 개 주세요.	{箱:はこ}が{五:いつ}つあります。	상자가 다섯 개 있습니다.	A shopkeeper handing five eggs in a carton across a market counter	숫자·세기
+muttsu	六つ	むっつ	수	여섯(6개)	ケーキが{六:むっ}つあります。	케이크가 여섯 개 있습니다.	{椅子:いす}を{六:むっ}つ{並:なら}べます。	의자를 여섯 개 늘어놓습니다.	Six colorful cupcakes on a tray in a cute bakery window	숫자·세기
+nanatsu	七つ	ななつ	수	일곱(7개)	{七:なな}つの{色:いろ}があります。	일곱 가지 색이 있습니다.	{娘:むすめ}は{七:なな}つです。	딸은 일곱 살입니다.	A giant rainbow with seven colors over a green valley after the rain	숫자·세기
+yattsu	八つ	やっつ	수	여덟(8개)	おにぎりを{八:やっ}つ{作:つく}りました。	주먹밥을 여덟 개 만들었습니다.	{八:やっ}つの{国:くに}から{来:き}ました。	여덟 나라에서 왔습니다.	Eight rice balls neatly lined up on a plate for a picnic	숫자·세기
+kokonotsu	九つ	ここのつ	수	아홉(9개)	{星:ほし}が{九:ここの}つ{見:み}えます。	별이 아홉 개 보입니다.	{九:ここの}つの{部屋:へや}があります。	방이 아홉 개 있습니다.	A child pointing at bright stars in a clear night sky from a hilltop	숫자·세기
+too	十	とお	수	열(10개)	みかんを{十:とお}{買:か}いました。	귤을 열 개 샀습니다.	{子供:こども}は{十:とお}になりました。	아이는 열 살이 되었습니다.	A basket full of ten bright orange mandarins on a kotatsu table	숫자·세기
+hitori	一人	ひとり	수	한 명, 혼자	{一人:ひとり}で{旅行:りょこう}します。	혼자 여행합니다.	{兄弟:きょうだい}は{一人:ひとり}います。	형제는 한 명 있습니다.	A lone traveler with a backpack walking on a mountain road at sunrise	숫자·세기
+futari	二人	ふたり	수	두 명	{二人:ふたり}で{映画:えいが}を{見:み}ました。	둘이서 영화를 봤습니다.	{子供:こども}が{二人:ふたり}います。	아이가 두 명 있습니다.	Two friends sharing an umbrella and laughing on a rainy street	숫자·세기
+nannin	何人	なんにん	의문	몇 명	{家族:かぞく}は{何人:なんにん}ですか。	가족은 몇 명입니까?	{教室:きょうしつ}に{何人:なんにん}いますか。	교실에 몇 명 있습니까?	A teacher counting students in a classroom, pointing with a finger	숫자·세기
+ichimai	一枚	いちまい	수	한 장	{紙:かみ}を{一枚:いちまい}ください。	종이 한 장 주세요.	{切手:きって}を{三枚:さんまい}{買:か}いました。	우표를 세 장 샀습니다.	A hand holding up a single sheet of white paper in a bright office	숫자·세기
+ippon	一本	いっぽん	수	한 개(가늘고 긴 것)	{鉛筆:えんぴつ}を{一本:いっぽん}{貸:か}してください。	연필 한 자루 빌려주세요.	ビールを{二本:にほん}{飲:の}みました。	맥주를 두 병 마셨습니다.	A single yellow pencil lying on an open notebook in sunlight	숫자·세기
+toshokan	図書館	としょかん	명	도서관	{図書館:としょかん}で{本:ほん}を{借:か}ります。	도서관에서 책을 빌립니다.	{図書館:としょかん}は{九時:くじ}からです。	도서관은 9시부터입니다.	A grand library with tall wooden bookshelves and warm light, students reading	장소
+kouen	公園	こうえん	명	공원	{公園:こうえん}で{遊:あそ}びます。	공원에서 놉니다.	{家:いえ}の{近:ちか}くに{公園:こうえん}があります。	집 근처에 공원이 있습니다.	A peaceful city park with a pond, ducks and cherry trees in bloom	장소
+daigaku	大学	だいがく	명	대학	{兄:あに}は{大学:だいがく}の{先生:せんせい}です。	형은 대학 교수입니다.	{大学:だいがく}で{日本語:にほんご}を{勉強:べんきょう}します。	대학에서 일본어를 공부합니다.	A large university campus with an old clock tower and students walking	장소
+kyoushitsu	教室	きょうしつ	명	교실	{教室:きょうしつ}に{学生:がくせい}がいます。	교실에 학생이 있습니다.	{教室:きょうしつ}で{食:た}べないでください。	교실에서 먹지 마세요.	An empty classroom bathed in golden afternoon light, chalk dust in the air	장소
+machi	町	まち	명	마을, 동네	この{町:まち}は{静:しず}かです。	이 동네는 조용합니다.	{町:まち}を{歩:ある}きましょう。	동네를 걸읍시다.	A quiet little Japanese town street with shops and lanterns at dusk	장소
+michi	道	みち	명	길	この{道:みち}をまっすぐ{行:い}ってください。	이 길을 쭉 가세요.	{道:みち}が{分:わ}かりません。	길을 모르겠습니다.	A long country road stretching between green rice fields toward mountains	장소
+daidokoro	台所	だいどころ	명	부엌	{母:はは}は{台所:だいどころ}にいます。	어머니는 부엌에 있습니다.	{台所:だいどころ}で{料理:りょうり}をします。	부엌에서 요리를 합니다.	A warm traditional Japanese kitchen with pots steaming and sunlight	장소
+niwa	庭	にわ	명	정원, 마당	{庭:にわ}に{花:はな}が{咲:さ}いています。	정원에 꽃이 피어 있습니다.	{庭:にわ}で{犬:いぬ}が{遊:あそ}んでいます。	마당에서 개가 놀고 있습니다.	A beautiful Japanese garden with a stone lantern, pond and maple trees	장소
+genkan	玄関	げんかん	명	현관	{玄関:げんかん}で{靴:くつ}を{脱:ぬ}ぎます。	현관에서 신발을 벗습니다.	{玄関:げんかん}に{誰:だれ}かいます。	현관에 누군가 있습니다.	The entrance hall of a Japanese home with shoes lined up and a guest arriving	장소
+tatemono	建物	たてもの	명	건물	あの{高:たか}い{建物:たてもの}は{何:なん}ですか。	저 높은 건물은 무엇입니까?	{古:ふる}い{建物:たてもの}が{好:す}きです。	오래된 건물을 좋아합니다.	A tall glass skyscraper reflecting clouds, people looking up from the street	장소
+kouban	交番	こうばん	명	파출소	{交番:こうばん}で{道:みち}を{聞:き}きます。	파출소에서 길을 묻습니다.	{駅:えき}の{前:まえ}に{交番:こうばん}があります。	역 앞에 파출소가 있습니다.	A small Japanese police box on a street corner with a friendly officer	장소
+kissaten	喫茶店	きっさてん	명	찻집, 카페	{喫茶店:きっさてん}でコーヒーを{飲:の}みます。	찻집에서 커피를 마십니다.	あの{喫茶店:きっさてん}は{静:しず}かです。	저 찻집은 조용합니다.	A cozy retro Japanese coffee shop with wooden counters and warm lamps	장소
+eigakan	映画館	えいがかん	명	영화관	{映画館:えいがかん}は{駅:えき}の{近:ちか}くです。	영화관은 역 근처입니다.	{映画館:えいがかん}で{友達:ともだち}に{会:あ}いました。	영화관에서 친구를 만났습니다.	The glowing entrance of a movie theater at night with people lining up	장소
+shokudou	食堂	しょくどう	명	식당	{大学:だいがく}の{食堂:しょくどう}は{安:やす}いです。	대학 식당은 쌉니다.	{食堂:しょくどう}で{昼:ひる}ご{飯:はん}を{食:た}べます。	식당에서 점심을 먹습니다.	A busy university cafeteria at lunchtime with students carrying trays	장소
+yaoya	八百屋	やおや	명	채소 가게	{八百屋:やおや}で{野菜:やさい}を{買:か}います。	채소 가게에서 채소를 삽니다.	{八百屋:やおや}のトマトは{安:やす}いです。	채소 가게의 토마토는 쌉니다.	A colorful neighborhood vegetable shop with a cheerful shopkeeper	장소
+puuru	プール		명	수영장	{夏:なつ}はプールで{泳:およ}ぎます。	여름에는 수영장에서 수영합니다.	プールは{何時:なんじ}までですか。	수영장은 몇 시까지입니까?	A sparkling outdoor swimming pool in summer with kids jumping in	장소
+ike	池	いけ	명	연못	{池:いけ}に{魚:さかな}がいます。	연못에 물고기가 있습니다.	{公園:こうえん}に{大:おお}きい{池:いけ}があります。	공원에 큰 연못이 있습니다.	Colorful koi fish swimming in a clear garden pond with lily pads	장소
+gaikoku	外国	がいこく	명	외국	{外国:がいこく}へ{行:い}きたいです。	외국에 가고 싶습니다.	{外国:がいこく}の{料理:りょうり}が{好:す}きです。	외국 요리를 좋아합니다.	A girl spinning a globe and dreaming of travel in her bedroom	장소
+taishikan	大使館	たいしかん	명	대사관	{大使館:たいしかん}はどこですか。	대사관은 어디입니까?	{大使館:たいしかん}で{働:はたら}いています。	대사관에서 일하고 있습니다.	An elegant embassy building with a gate and flags on a sunny street	장소
+hoteru	ホテル		명	호텔	ホテルは{駅:えき}の{前:まえ}にあります。	호텔은 역 앞에 있습니다.	このホテルは{高:たか}いです。	이 호텔은 비쌉니다.	A luxury hotel lobby with chandeliers and a smiling receptionist	장소
+resutoran	レストラン		명	레스토랑	レストランで{晩:ばん}ご{飯:はん}を{食:た}べます。	레스토랑에서 저녁을 먹습니다.	あのレストランは{有名:ゆうめい}です。	저 레스토랑은 유명합니다.	A romantic restaurant with candlelit tables and a city view at night	장소
+depaato	デパート		명	백화점	デパートで{服:ふく}を{買:か}いました。	백화점에서 옷을 샀습니다.	デパートは{十時:じゅうじ}からです。	백화점은 10시부터입니다.	A grand department store interior with escalators and shoppers	장소
+apaato	アパート		명	아파트, 연립주택	{私:わたし}のアパートは{小:ちい}さいです。	제 아파트는 작습니다.	{駅:えき}の{近:ちか}くのアパートに{住:す}んでいます。	역 근처 아파트에 살고 있습니다.	A small two-story Japanese apartment building with outdoor stairs at dusk	장소
+hashi_b	橋	はし	명	다리	{橋:はし}を{渡:わた}ります。	다리를 건넙니다.	{川:かわ}に{長:なが}い{橋:はし}があります。	강에 긴 다리가 있습니다.	A long red wooden bridge over a misty river surrounded by autumn trees	장소
+mae	前	まえ	명	앞, 전	{駅:えき}の{前:まえ}で{待:ま}っています。	역 앞에서 기다리고 있습니다.	{三年:さんねん}{前:まえ}に{日本:にほん}へ{来:き}ました。	3년 전에 일본에 왔습니다.	A girl waiting in front of a station entrance with a big clock above	위치·방향
+ushiro	後ろ	うしろ	명	뒤	{私:わたし}の{後:うし}ろに{誰:だれ}かいます。	제 뒤에 누군가 있습니다.	{家:いえ}の{後:うし}ろに{山:やま}があります。	집 뒤에 산이 있습니다.	A boy turning around in surprise as a cat sneaks up behind him	위치·방향
+tonari	隣	となり	명	옆, 이웃	{隣:となり}の{人:ひと}は{親切:しんせつ}です。	옆집 사람은 친절합니다.	{銀行:ぎんこう}の{隣:となり}に{本屋:ほんや}があります。	은행 옆에 서점이 있습니다.	A friendly neighbor handing a gift over the fence to the family next door	위치·방향
+yoko	横	よこ	명	옆, 가로	{机:つくえ}の{横:よこ}に{鞄:かばん}があります。	책상 옆에 가방이 있습니다.	{私:わたし}の{横:よこ}に{座:すわ}ってください。	제 옆에 앉으세요.	A girl patting the bench beside her, inviting a friend to sit in a park	위치·방향
+chikaku	近く	ちかく	명	근처	{近:ちか}くにコンビニがありますか。	근처에 편의점이 있습니까?	{駅:えき}の{近:ちか}くに{住:す}んでいます。	역 근처에 살고 있습니다.	A bright convenience store glowing at night in a quiet neighborhood	위치·방향
+soto	外	そと	명	밖	{外:そと}で{遊:あそ}びましょう。	밖에서 놉시다.	{外:そと}は{雨:あめ}です。	밖은 비가 옵니다.	Kids running out the door to play outside on a bright sunny day	위치·방향
+aida	間	あいだ	명	사이	{銀行:ぎんこう}と{本屋:ほんや}の{間:あいだ}にあります。	은행과 서점 사이에 있습니다.	{二人:ふたり}の{間:あいだ}に{猫:ねこ}がいます。	두 사람 사이에 고양이가 있습니다.	A cat sitting between two friends on a bench, all looking at the sunset	위치·방향
+mukou	向こう	むこう	명	건너편, 저쪽	{川:かわ}の{向:む}こうに{家:いえ}があります。	강 건너편에 집이 있습니다.	{向:む}こうに{山:やま}が{見:み}えます。	저쪽에 산이 보입니다.	A small house on the far side of a wide river seen from the opposite bank	위치·방향
+higashi	東	ひがし	명	동쪽	{太陽:たいよう}は{東:ひがし}から{出:で}ます。	해는 동쪽에서 뜹니다.	{駅:えき}の{東:ひがし}{口:ぐち}で{会:あ}いましょう。	역 동쪽 출구에서 만납시다.	The sun rising over the sea in the east, a person watching from a cliff	위치·방향
+nishi	西	にし	명	서쪽	{西:にし}の{空:そら}が{赤:あか}いです。	서쪽 하늘이 빨갛습니다.	{大阪:おおさか}は{東京:とうきょう}の{西:にし}にあります。	오사카는 도쿄의 서쪽에 있습니다.	A red sunset sky in the west over city rooftops	위치·방향
+minami	南	みなみ	명	남쪽	{南:みなみ}の{島:しま}へ{行:い}きたいです。	남쪽 섬에 가고 싶습니다.	{部屋:へや}の{窓:まど}は{南:みなみ}にあります。	방 창문은 남쪽에 있습니다.	A tropical southern island with palm trees and turquoise water	위치·방향
+kita	北	きた	명	북쪽	{北:きた}の{国:くに}は{寒:さむ}いです。	북쪽 나라는 춥습니다.	{北海道:ほっかいどう}は{日本:にほん}の{北:きた}にあります。	홋카이도는 일본의 북쪽에 있습니다.	A snowy northern landscape with northern lights over a small cabin	위치·방향
+kado	角	かど	명	모퉁이	あの{角:かど}を{右:みぎ}に{曲:ま}がってください。	저 모퉁이에서 오른쪽으로 도세요.	{角:かど}に{パン屋:ぱんや}があります。	모퉁이에 빵집이 있습니다.	A charming bakery on a street corner with a person turning the corner	위치·방향
+koko	ここ		대	여기	ここに{名前:なまえ}を{書:か}いてください。	여기에 이름을 써 주세요.	ここはどこですか。	여기는 어디입니까?	A lost traveler pointing at a map spot in a busy unfamiliar city	위치·방향
+soko	そこ		대	거기	そこに{座:すわ}ってください。	거기에 앉으세요.	そこは{危:あぶ}ないですよ。	거기는 위험해요.	A teacher pointing to an empty chair for a new student to sit	위치·방향
+asoko	あそこ		대	저기	あそこに{駅:えき}があります。	저기에 역이 있습니다.	あそこの{店:みせ}はおいしいです。	저기 가게는 맛있습니다.	Two friends pointing at a distant station across a wide plaza	위치·방향
+gyuunyuu	牛乳	ぎゅうにゅう	명	우유	{毎朝:まいあさ}{牛乳:ぎゅうにゅう}を{飲:の}みます。	매일 아침 우유를 마십니다.	{牛乳:ぎゅうにゅう}を{買:か}ってきてください。	우유를 사 오세요.	A glass of fresh milk on a breakfast table with morning sunlight	음식
+ryouri	料理	りょうり	명	요리	{日本:にほん}{料理:りょうり}が{好:す}きです。	일본 요리를 좋아합니다.	{父:ちち}は{料理:りょうり}をしません。	아버지는 요리를 하지 않습니다.	A beautiful spread of Japanese dishes on a wooden table	음식
+asagohan	朝ご飯	あさごはん	명	아침밥	{朝:あさ}ご{飯:はん}を{食:た}べましたか。	아침밥 먹었습니까?	{朝:あさ}ご{飯:はん}はパンです。	아침밥은 빵입니다.	A traditional Japanese breakfast with rice, miso soup and grilled fish	음식
+bangohan	晩ご飯	ばんごはん	명	저녁밥	{晩:ばん}ご{飯:はん}は{何:なん}ですか。	저녁밥은 무엇입니까?	{家族:かぞく}と{晩:ばん}ご{飯:はん}を{食:た}べます。	가족과 저녁밥을 먹습니다.	A family gathered around a hot pot dinner on a winter evening	음식
+okashi	お菓子	おかし	명	과자	お{菓子:かし}を{食:た}べすぎました。	과자를 너무 많이 먹었습니다.	{子供:こども}はお{菓子:かし}が{好:す}きです。	아이들은 과자를 좋아합니다.	A child surrounded by colorful candies and snacks with a happy face	음식
+satou	砂糖	さとう	명	설탕	コーヒーに{砂糖:さとう}を{入:い}れますか。	커피에 설탕을 넣습니까?	{砂糖:さとう}を{少:すこ}し{使:つか}います。	설탕을 조금 씁니다.	A spoon pouring sugar into a cup of coffee, close-up with steam	음식
+shio	塩	しお	명	소금	{塩:しお}を{取:と}ってください。	소금 좀 집어 주세요.	このスープは{塩:しお}が{足:た}りません。	이 수프는 소금이 부족합니다.	A hand sprinkling salt over a sizzling grilled fish	음식
+shouyu	醤油	しょうゆ	명	간장	{醤油:しょうゆ}をかけて{食:た}べます。	간장을 뿌려 먹습니다.	{醤油:しょうゆ}はどこですか。	간장은 어디에 있습니까?	Soy sauce being poured into a small dish next to sushi	음식
+osake	お酒	おさけ	명	술	お{酒:さけ}は{飲:の}みません。	술은 마시지 않습니다.	{父:ちち}はお{酒:さけ}が{好:す}きです。	아버지는 술을 좋아합니다.	A small ceramic sake bottle and cups on a table at a traditional inn	음식
+koucha	紅茶	こうちゃ	명	홍차	{紅茶:こうちゃ}にミルクを{入:い}れます。	홍차에 우유를 넣습니다.	{紅茶:こうちゃ}とケーキをください。	홍차와 케이크 주세요.	An elegant cup of black tea with a slice of cake in an English-style tea room	음식
+gyuuniku	牛肉	ぎゅうにく	명	소고기	{牛肉:ぎゅうにく}を{三百:さんびゃく}グラム{買:か}いました。	소고기를 300그램 샀습니다.	{牛肉:ぎゅうにく}は{高:たか}いです。	소고기는 비쌉니다.	Thinly sliced marbled beef on a plate next to a hot sukiyaki pot	음식
+butaniku	豚肉	ぶたにく	명	돼지고기	{豚肉:ぶたにく}でカレーを{作:つく}ります。	돼지고기로 카레를 만듭니다.	{豚肉:ぶたにく}が{好:す}きです。	돼지고기를 좋아합니다.	A golden crispy pork cutlet with shredded cabbage on a plate	음식
+toriniku	鶏肉	とりにく	명	닭고기	{鶏肉:とりにく}を{焼:や}きます。	닭고기를 굽습니다.	{鶏肉:とりにく}は{安:やす}いです。	닭고기는 쌉니다.	Juicy chicken skewers grilling over charcoal at a yakitori stand	음식
+bataa	バター		명	버터	パンにバターをつけます。	빵에 버터를 바릅니다.	バターを{少:すこ}し{入:い}れます。	버터를 조금 넣습니다.	A knife spreading golden butter on warm toast with morning light	음식
+obentou	お弁当	おべんとう	명	도시락	お{弁当:べんとう}を{作:つく}りました。	도시락을 만들었습니다.	{公園:こうえん}でお{弁当:べんとう}を{食:た}べます。	공원에서 도시락을 먹습니다.	A colorful handmade bento box opened on a picnic blanket under cherry trees	음식
+karee	カレー		명	카레	カレーはちょっと{辛:から}いです。	카레는 조금 맵습니다.	{日曜日:にちようび}はカレーを{作:つく}ります。	일요일에는 카레를 만듭니다.	A steaming plate of Japanese curry rice with a spoon	음식
+nomimono	飲み物	のみもの	명	음료, 마실 것	{飲:の}み{物:もの}は{何:なに}がいいですか。	음료는 뭐가 좋습니까?	{冷:つめ}たい{飲:の}み{物:もの}をください。	차가운 음료를 주세요.	Colorful cold drinks in a glowing vending machine on a summer night	음식
+tabemono	食べ物	たべもの	명	음식, 먹을 것	{好:す}きな{食:た}べ{物:もの}は{何:なん}ですか。	좋아하는 음식은 무엇입니까?	{日本:にほん}の{食:た}べ{物:もの}はおいしいです。	일본 음식은 맛있습니다.	A lively food market street with many stalls of Japanese street food	음식
+hashi_c	箸	はし	명	젓가락	お{箸:はし}で{食:た}べます。	젓가락으로 먹습니다.	{箸:はし}を{二膳:にぜん}ください。	젓가락 두 벌 주세요.	A hand holding chopsticks picking up sushi, close-up	음식
+sara	皿	さら	명	접시	{皿:さら}を{洗:あら}います。	접시를 닦습니다.	{大:おお}きい{皿:さら}を{取:と}ってください。	큰 접시를 집어 주세요.	A stack of beautiful handmade ceramic plates on a wooden shelf	음식
+chawan	茶碗	ちゃわん	명	밥공기, 찻잔	{茶碗:ちゃわん}にご{飯:はん}を{入:い}れます。	밥공기에 밥을 담습니다.	この{茶碗:ちゃわん}はきれいですね。	이 밥공기는 예쁘네요.	A steaming rice bowl being filled with rice from a rice cooker	음식
+koppu	コップ		명	컵	コップに{水:みず}を{入:い}れます。	컵에 물을 따릅니다.	コップを{二:ふた}つください。	컵 두 개 주세요.	Water being poured into a clear glass with sparkling light	음식
+supuun	スプーン		명	숟가락	スプーンでスープを{飲:の}みます。	숟가락으로 수프를 먹습니다.	スプーンをください。	숟가락 주세요.	A spoon lifting warm soup from a bowl with steam rising	음식
+fooku	フォーク		명	포크	フォークでケーキを{食:た}べます。	포크로 케이크를 먹습니다.	ナイフとフォークを{使:つか}います。	나이프와 포크를 씁니다.	A fork cutting into a slice of strawberry shortcake in a cafe	음식
+pen	ペン		명	펜	ペンで{名前:なまえ}を{書:か}いてください。	펜으로 이름을 써 주세요.	{赤:あか}いペンはありますか。	빨간 펜 있습니까?	A hand signing a document with an elegant pen on a desk	물건
+boorupen	ボールペン		명	볼펜	ボールペンを{貸:か}してください。	볼펜 좀 빌려주세요.	このボールペンは{書:か}きやすいです。	이 볼펜은 쓰기 편합니다.	A colorful set of ballpoint pens on an open notebook	물건
+kitte	切手	きって	명	우표	{切手:きって}を{貼:は}ります。	우표를 붙입니다.	{八十円:はちじゅうえん}の{切手:きって}をください。	80엔짜리 우표 주세요.	A hand placing a colorful stamp on an envelope on a wooden desk	물건
+fuutou	封筒	ふうとう	명	봉투	{封筒:ふうとう}に{手紙:てがみ}を{入:い}れます。	봉투에 편지를 넣습니다.	{白:しろ}い{封筒:ふうとう}をください。	하얀 봉투 주세요.	A girl sealing a letter into an envelope with a heart sticker	물건
+hagaki	葉書	はがき	명	엽서	{旅行:りょこう}{先:さき}から{葉書:はがき}を{出:だ}します。	여행지에서 엽서를 보냅니다.	{友達:ともだち}から{葉書:はがき}が{来:き}ました。	친구에게서 엽서가 왔습니다.	A traveler writing a postcard at a cafe table with a sea view	물건
+tegami	手紙	てがみ	명	편지	{母:はは}に{手紙:てがみ}を{書:か}きます。	어머니께 편지를 씁니다.	{手紙:てがみ}をありがとう。	편지 고마워.	A girl reading a handwritten letter by the window with tears of joy	물건
+shinbun	新聞	しんぶん	명	신문	{毎朝:まいあさ}{新聞:しんぶん}を{読:よ}みます。	매일 아침 신문을 읽습니다.	{新聞:しんぶん}はどこですか。	신문은 어디에 있습니까?	A man reading a newspaper on a morning train with sunlight	물건
+zasshi	雑誌	ざっし	명	잡지	{雑誌:ざっし}を{買:か}いました。	잡지를 샀습니다.	この{雑誌:ざっし}はおもしろいです。	이 잡지는 재미있습니다.	A girl flipping through a fashion magazine on her bed	물건
+chizu	地図	ちず	명	지도	{地図:ちず}を{見:み}てください。	지도를 보세요.	{地図:ちず}で{駅:えき}を{探:さが}します。	지도에서 역을 찾습니다.	Two travelers studying a large paper map on a street corner	물건
+kamera	カメラ		명	카메라	{新:あたら}しいカメラを{買:か}いました。	새 카메라를 샀습니다.	カメラで{写真:しゃしん}を{撮:と}ります。	카메라로 사진을 찍습니다.	A young photographer taking a picture of cherry blossoms with a camera	물건
+rajio	ラジオ		명	라디오	ラジオを{聞:き}きます。	라디오를 듣습니다.	{父:ちち}は{毎朝:まいあさ}ラジオを{聞:き}きます。	아버지는 매일 아침 라디오를 듣습니다.	An old radio on a kitchen shelf with a grandfather listening and smiling	물건
+reizouko	冷蔵庫	れいぞうこ	명	냉장고	{冷蔵庫:れいぞうこ}に{牛乳:ぎゅうにゅう}があります。	냉장고에 우유가 있습니다.	{冷蔵庫:れいぞうこ}を{開:あ}けないでください。	냉장고를 열지 마세요.	A boy opening a glowing refrigerator at midnight looking for snacks	물건
+denki	電気	でんき	명	전기, 전등	{電気:でんき}をつけてください。	불을 켜 주세요.	{電気:でんき}を{消:け}しました。	불을 껐습니다.	A hand switching on a warm lamp in a dark cozy room	물건
+sutoobu	ストーブ		명	난로	ストーブをつけましょう。	난로를 켭시다.	ストーブの{前:まえ}は{暖:あたた}かいです。	난로 앞은 따뜻합니다.	A cat sleeping in front of a glowing heater on a snowy night	물건
+hako	箱	はこ	명	상자	{箱:はこ}の{中:なか}に{本:ほん}があります。	상자 안에 책이 있습니다.	{大:おお}きい{箱:はこ}ですね。	큰 상자네요.	A child peeking into a large cardboard box full of old toys	물건
+kagi	鍵	かぎ	명	열쇠	{鍵:かぎ}をかけましたか。	문을 잠갔습니까?	{鍵:かぎ}がありません。	열쇠가 없습니다.	A golden key turning in an old wooden door lock, close-up	물건
+saifu	財布	さいふ	명	지갑	{財布:さいふ}を{落:お}としました。	지갑을 잃어버렸습니다.	{新:あたら}しい{財布:さいふ}を{買:か}いました。	새 지갑을 샀습니다.	A worried man searching his pockets for his wallet on a busy street	물건
+nimotsu	荷物	にもつ	명	짐	{荷物:にもつ}が{多:おお}いです。	짐이 많습니다.	{荷物:にもつ}を{持:も}ちましょうか。	짐을 들어 드릴까요?	A traveler struggling with many suitcases at a train station	물건
+hondana	本棚	ほんだな	명	책장	{本棚:ほんだな}に{本:ほん}がたくさんあります。	책장에 책이 많이 있습니다.	{新:あたら}しい{本棚:ほんだな}を{買:か}いました。	새 책장을 샀습니다.	A tall wooden bookshelf packed with colorful books in a cozy study	물건
+kaidan	階段	かいだん	명	계단	{階段:かいだん}を{上:のぼ}ります。	계단을 오릅니다.	{階段:かいだん}で{転:ころ}ばないでください。	계단에서 넘어지지 마세요.	A long stone staircase leading up to a shrine through the forest	물건
+erebeetaa	エレベーター		명	엘리베이터	エレベーターで{五階:ごかい}へ{行:い}きます。	엘리베이터로 5층에 갑니다.	エレベーターはどこですか。	엘리베이터는 어디입니까?	People inside a glass elevator rising above a bright city atrium	물건
+teeburu	テーブル		명	테이블, 식탁	テーブルの{上:うえ}に{花:はな}があります。	테이블 위에 꽃이 있습니다.	テーブルを{拭:ふ}きます。	테이블을 닦습니다.	A wooden dining table with a vase of flowers by a sunny window	물건
+nekutai	ネクタイ		명	넥타이	{父:ちち}にネクタイをあげました。	아버지께 넥타이를 드렸습니다.	{青:あお}いネクタイをしています。	파란 넥타이를 매고 있습니다.	A young man tying his necktie in front of a mirror before work	물건
+seetaa	セーター		명	스웨터	{暖:あたた}かいセーターを{着:き}ます。	따뜻한 스웨터를 입습니다.	{母:はは}がセーターを{作:つく}りました。	어머니가 스웨터를 만들었습니다.	A girl in a cozy knitted sweater holding a hot drink in winter	물건
+chikatetsu	地下鉄	ちかてつ	명	지하철	{地下鉄:ちかてつ}で{会社:かいしゃ}へ{行:い}きます。	지하철로 회사에 갑니다.	{地下鉄:ちかてつ}の{駅:えき}はどこですか。	지하철역은 어디입니까?	A crowded Tokyo subway platform as a train arrives with lights	교통
+takushii	タクシー		명	택시	タクシーで{帰:かえ}りましょう。	택시로 돌아갑시다.	タクシーを{呼:よ}んでください。	택시를 불러 주세요.	A woman hailing a taxi on a rainy neon-lit night street	교통
+fune	船	ふね	명	배	{船:ふね}で{島:しま}へ{行:い}きます。	배로 섬에 갑니다.	{大:おお}きい{船:ふね}が{見:み}えます。	큰 배가 보입니다.	A ferry crossing a calm blue sea toward a green island	교통
+kippu	切符	きっぷ	명	표, 승차권	{切符:きっぷ}を{二枚:にまい}{買:か}います。	표를 두 장 삽니다.	{切符:きっぷ}をなくしました。	표를 잃어버렸습니다.	A traveler buying a train ticket from a machine at a station	교통
+jidousha	自動車	じどうしゃ	명	자동차	{兄:あに}は{自動車:じどうしゃ}の{会社:かいしゃ}で{働:はたら}いています。	형은 자동차 회사에서 일하고 있습니다.	{自動車:じどうしゃ}が{多:おお}いです。	자동차가 많습니다.	A busy highway full of cars at sunset seen from above	교통
+iriguchi	入口	いりぐち	명	입구	{入口:いりぐち}はどこですか。	입구는 어디입니까?	{入口:いりぐち}で{待:ま}っています。	입구에서 기다리고 있습니다.	People entering through the grand entrance of a museum	교통
+deguchi	出口	でぐち	명	출구	{出口:でぐち}はあちらです。	출구는 저쪽입니다.	{東:ひがし}{出口:でぐち}で{会:あ}いましょう。	동쪽 출구에서 만납시다.	Commuters walking toward a bright station exit with daylight beyond	교통
+posuto	ポスト		명	우체통	ポストに{手紙:てがみ}を{入:い}れます。	우체통에 편지를 넣습니다.	{駅:えき}の{前:まえ}にポストがあります。	역 앞에 우체통이 있습니다.	A child dropping a letter into a red Japanese postbox	교통
+eigo	英語	えいご	명	영어	{英語:えいご}が{話:はな}せますか。	영어를 할 수 있습니까?	{英語:えいご}の{先生:せんせい}はアメリカ{人:じん}です。	영어 선생님은 미국인입니다.	A teacher writing on a whiteboard in an English class with eager students	공부·말
+kanji	漢字	かんじ	명	한자	{漢字:かんじ}を{練習:れんしゅう}します。	한자를 연습합니다.	この{漢字:かんじ}は{読:よ}めません。	이 한자는 읽을 수 없습니다.	A student carefully writing with a brush on rice paper in a calligraphy class	공부·말
+hiragana	平仮名	ひらがな	명	히라가나	{平仮名:ひらがな}で{書:か}いてください。	히라가나로 써 주세요.	{平仮名:ひらがな}は{簡単:かんたん}です。	히라가나는 쉽습니다.	A young child learning to write with a pencil, a parent guiding her hand	공부·말
+katakana	片仮名	かたかな	명	가타카나	{名前:なまえ}を{片仮名:かたかな}で{書:か}きます。	이름을 가타카나로 씁니다.	{片仮名:かたかな}は{難:むずか}しいです。	가타카나는 어렵습니다.	A foreign student writing in a workbook with concentration at a desk	공부·말
+sakubun	作文	さくぶん	명	작문	{作文:さくぶん}を{書:か}きました。	작문을 썼습니다.	{作文:さくぶん}の{宿題:しゅくだい}があります。	작문 숙제가 있습니다.	A student thinking hard while writing an essay by a rainy window	공부·말
+mondai	問題	もんだい	명	문제	この{問題:もんだい}は{難:むずか}しいです。	이 문제는 어렵습니다.	{問題:もんだい}ありません。	문제없습니다.	A student scratching his head at a difficult problem on the blackboard	공부·말
+shitsumon	質問	しつもん	명	질문	{質問:しつもん}がありますか。	질문 있습니까?	{先生:せんせい}に{質問:しつもん}します。	선생님께 질문합니다.	A student raising her hand eagerly in a lecture hall	공부·말
+imi	意味	いみ	명	의미, 뜻	この{言葉:ことば}の{意味:いみ}が{分:わ}かりません。	이 단어의 뜻을 모르겠습니다.	{意味:いみ}を{教:おし}えてください。	뜻을 알려 주세요.	A puzzled student looking up a word in a dictionary with question marks around	공부·말
+renshuu	練習	れんしゅう	명	연습	{毎日:まいにち}ピアノを{練習:れんしゅう}します。	매일 피아노를 연습합니다.	もっと{練習:れんしゅう}しましょう。	더 연습합시다.	A girl practicing the violin alone in a music room at dusk	공부·말
+benkyou	勉強	べんきょう	명	공부	{図書館:としょかん}で{勉強:べんきょう}します。	도서관에서 공부합니다.	{勉強:べんきょう}は{楽:たの}しいです。	공부는 즐겁습니다.	Students studying together around a table in a bright library	공부·말
+ryuugakusei	留学生	りゅうがくせい	명	유학생	{私:わたし}は{韓国:かんこく}からの{留学生:りゅうがくせい}です。	저는 한국에서 온 유학생입니다.	この{大学:だいがく}は{留学生:りゅうがくせい}が{多:おお}いです。	이 대학은 유학생이 많습니다.	International students chatting and laughing on a Japanese campus lawn	공부·말
+gaikokugo	外国語	がいこくご	명	외국어	{外国語:がいこくご}を{勉強:べんきょう}しています。	외국어를 공부하고 있습니다.	{外国語:がいこくご}は{面白:おもしろ}いです。	외국어는 재미있습니다.	A desk covered with textbooks in several languages and a world map	공부·말
+hanashi	話	はなし	명	이야기	{先生:せんせい}の{話:はなし}を{聞:き}きます。	선생님의 이야기를 듣습니다.	{面白:おもしろ}い{話:はなし}ですね。	재미있는 이야기네요.	A grandfather telling an exciting story to wide-eyed children by a fire	공부·말
+ji	字	じ	명	글자, 글씨	{字:じ}がきれいですね。	글씨가 예쁘네요.	{大:おお}きい{字:じ}で{書:か}いてください。	큰 글씨로 써 주세요.	A close-up of beautiful handwriting being written with a fountain pen	공부·말
+bunshou	文章	ぶんしょう	명	문장, 글	この{文章:ぶんしょう}を{読:よ}んでください。	이 문장을 읽어 주세요.	{短:みじか}い{文章:ぶんしょう}を{書:か}きます。	짧은 글을 씁니다.	A student reading aloud from a textbook while standing in class	공부·말
+kurasu	クラス		명	반, 클래스	{私:わたし}のクラスは{二十人:にじゅうにん}です。	우리 반은 20명입니다.	クラスの{友達:ともだち}と{遊:あそ}びます。	반 친구들과 놉니다.	A cheerful class photo of students in uniforms in front of a school	공부·말
+doubutsu	動物	どうぶつ	명	동물	{動物:どうぶつ}が{好:す}きです。	동물을 좋아합니다.	{動物園:どうぶつえん}に{行:い}きました。	동물원에 갔습니다.	Children watching giraffes and elephants at a sunny zoo	자연
+tsuki	月	つき	명	달	{今夜:こんや}は{月:つき}がきれいです。	오늘 밤은 달이 예쁩니다.	{月:つき}が{出:で}ています。	달이 떠 있습니다.	A huge full moon rising over a quiet Japanese temple roof	자연
+hare	晴れ	はれ	명	맑음	{明日:あした}は{晴:は}れです。	내일은 맑습니다.	{晴:は}れの{日:ひ}は{散歩:さんぽ}します。	맑은 날에는 산책합니다.	A perfectly clear blue sky over a green field with a girl stretching	자연
+kumori	曇り	くもり	명	흐림	{今日:きょう}は{曇:くも}りです。	오늘은 흐립니다.	{曇:くも}りの{日:ひ}は{少:すこ}し{寒:さむ}いです。	흐린 날은 조금 춥습니다.	A gray cloudy sky over a quiet seaside town	자연
+petto	ペット		명	애완동물	ペットを{飼:か}っていますか。	애완동물을 키웁니까?	{私:わたし}のペットは{犬:いぬ}です。	제 애완동물은 개입니다.	A girl hugging her pet rabbit and puppy on a sofa	자연
+sanpo	散歩	さんぽ	명	산책	{犬:いぬ}と{散歩:さんぽ}します。	개와 산책합니다.	{朝:あさ}の{散歩:さんぽ}は{気持:きも}ちがいいです。	아침 산책은 기분이 좋습니다.	A man walking his dog along a misty riverside path at dawn	생활
+souji	掃除	そうじ	명	청소	{部屋:へや}を{掃除:そうじ}します。	방을 청소합니다.	{日曜日:にちようび}に{掃除:そうじ}をしました。	일요일에 청소를 했습니다.	A girl vacuuming her room with energetic cheer, sunlight streaming in	생활
+sentaku	洗濯	せんたく	명	빨래	{毎日:まいにち}{洗濯:せんたく}をします。	매일 빨래를 합니다.	{洗濯:せんたく}は{終:お}わりましたか。	빨래는 끝났습니까?	Laundry hanging on a balcony in the sun, a woman hanging shirts	생활
+kekkon	結婚	けっこん	명	결혼	{姉:あね}は{来月:らいげつ}{結婚:けっこん}します。	누나는 다음 달에 결혼합니다.	{結婚:けっこん}おめでとうございます。	결혼 축하합니다.	A bride and groom in traditional Japanese wedding attire at a shrine	생활
+ongaku	音楽	おんがく	명	음악	{音楽:おんがく}を{聞:き}くのが{好:す}きです。	음악 듣는 것을 좋아합니다.	どんな{音楽:おんがく}が{好:す}きですか。	어떤 음악을 좋아합니까?	A boy with headphones dancing alone in his room with music notes floating	생활
+uta	歌	うた	명	노래	この{歌:うた}を{知:し}っていますか。	이 노래를 알고 있습니까?	{日本:にほん}の{歌:うた}を{歌:うた}いました。	일본 노래를 불렀습니다.	A girl singing joyfully on a hill with her hair blowing in the wind	생활
+e	絵	え	명	그림	{絵:え}をかくのが{好:す}きです。	그림 그리는 것을 좋아합니다.	きれいな{絵:え}ですね。	예쁜 그림이네요.	A young artist painting a landscape on an easel by a lake	생활
+supootsu	スポーツ		명	스포츠	どんなスポーツが{好:す}きですか。	어떤 스포츠를 좋아합니까?	{毎週:まいしゅう}スポーツをします。	매주 스포츠를 합니다.	Teenagers playing basketball on an outdoor court at sunset	생활
+gitaa	ギター		명	기타	ギターを{弾:ひ}きます。	기타를 칩니다.	{兄:あに}はギターが{上手:じょうず}です。	형은 기타를 잘 칩니다.	A young man playing acoustic guitar on a rooftop at sunset	생활
+piano	ピアノ		명	피아노	ピアノを{習:なら}っています。	피아노를 배우고 있습니다.	{妹:いもうと}はピアノが{上手:じょうず}です。	여동생은 피아노를 잘 칩니다.	A girl playing a grand piano on stage under a soft spotlight	생활
+nyuusu	ニュース		명	뉴스	{毎晩:まいばん}ニュースを{見:み}ます。	매일 밤 뉴스를 봅니다.	{今日:きょう}のニュースを{聞:き}きましたか。	오늘 뉴스를 들었습니까?	A family watching the evening news on TV in their living room	생활
+paatii	パーティー		명	파티	{土曜日:どようび}にパーティーがあります。	토요일에 파티가 있습니다.	パーティーは{楽:たの}しかったです。	파티는 즐거웠습니다.	Friends celebrating at a lively party with balloons and lights	생활
+shawaa	シャワー		명	샤워	{朝:あさ}シャワーを{浴:あ}びます。	아침에 샤워를 합니다.	シャワーは{後:あと}で{使:つか}います。	샤워는 나중에 씁니다.	Steam rising from a bright modern bathroom shower in the morning	생활
+byouki	病気	びょうき	명	병	{病気:びょうき}で{学校:がっこう}を{休:やす}みました。	병으로 학교를 쉬었습니다.	{早:はや}く{病気:びょうき}が{治:なお}るといいですね。	빨리 병이 나으면 좋겠네요.	A sick boy in bed with a thermometer, his mother bringing soup	생활
+kusuri	薬	くすり	명	약	この{薬:くすり}を{飲:の}んでください。	이 약을 드세요.	{薬:くすり}は{食後:しょくご}に{飲:の}みます。	약은 식후에 먹습니다.	A pharmacist kindly handing medicine to a patient at a counter	생활
+kazebyo	風邪	かぜ	명	감기	{風邪:かぜ}をひきました。	감기에 걸렸습니다.	{風邪:かぜ}に{気:き}をつけてください。	감기 조심하세요.	A girl wrapped in a blanket with a red nose sneezing, tissues around	생활
+iu	言う	いう	동	말하다	もう{一度:いちど}{言:い}ってください。	한 번 더 말해 주세요.	{先生:せんせい}は「おはよう」と{言:い}いました。	선생님은 '안녕'이라고 말했습니다.	A student asking a teacher to repeat something, hand behind ear	동사
+aku	開く	あく	동	열리다	ドアが{開:あ}きました。	문이 열렸습니다.	{店:みせ}は{十時:じゅうじ}に{開:あ}きます。	가게는 10시에 엽니다.	An automatic door sliding open into a bright shop	동사
+ageru	上げる	あげる	동	올리다, 주다	{手:て}を{上:あ}げてください。	손을 들어 주세요.	{友達:ともだち}に{花:はな}をあげました。	친구에게 꽃을 주었습니다.	Students raising their hands eagerly in a classroom	동사
+aru	ある		동	있다(사물)	{机:つくえ}の{上:うえ}に{本:ほん}があります。	책상 위에 책이 있습니다.	{明日:あした}{試験:しけん}があります。	내일 시험이 있습니다.	A single book resting on an empty desk in a quiet sunlit room	동사
+iru	いる		동	있다(사람·동물)	{部屋:へや}に{猫:ねこ}がいます。	방에 고양이가 있습니다.	{兄:あに}は{今:いま}{家:いえ}にいます。	형은 지금 집에 있습니다.	A cat sitting in the middle of a cozy room looking at the viewer	동사
+ireru	入れる	いれる	동	넣다	コーヒーに{牛乳:ぎゅうにゅう}を{入:い}れます。	커피에 우유를 넣습니다.	{鞄:かばん}に{本:ほん}を{入:い}れます。	가방에 책을 넣습니다.	Milk being poured into a cup of coffee, swirling patterns	동사
+umareru	生まれる	うまれる	동	태어나다	{私:わたし}はソウルで{生:う}まれました。	저는 서울에서 태어났습니다.	{子供:こども}が{生:う}まれました。	아이가 태어났습니다.	Happy parents holding a newborn baby in a bright hospital room	동사
+oku	置く	おく	동	놓다, 두다	{鞄:かばん}をここに{置:お}いてください。	가방을 여기에 두세요.	{机:つくえ}の{上:うえ}に{花:はな}を{置:お}きました。	책상 위에 꽃을 놓았습니다.	A girl placing a vase of flowers on a wooden table	동사
+osu	押す	おす	동	누르다, 밀다	このボタンを{押:お}してください。	이 버튼을 눌러 주세요.	ドアを{押:お}して{開:あ}けます。	문을 밀어서 엽니다.	A finger pressing a glowing elevator button, close-up	동사
+oboeru	覚える	おぼえる	동	외우다, 기억하다	{新:あたら}しい{言葉:ことば}を{覚:おぼ}えます。	새 단어를 외웁니다.	{私:わたし}の{名前:なまえ}を{覚:おぼ}えていますか。	제 이름을 기억하고 있습니까?	A student memorizing flashcards with intense focus on a train	동사
+oriru	降りる	おりる	동	내리다	{次:つぎ}の{駅:えき}で{降:お}ります。	다음 역에서 내립니다.	バスを{降:お}りてください。	버스에서 내리세요.	Passengers stepping off a train onto a sunny rural platform	동사
+owaru	終わる	おわる	동	끝나다	{授業:じゅぎょう}は{三時:さんじ}に{終:お}わります。	수업은 3시에 끝납니다.	{仕事:しごと}が{終:お}わりました。	일이 끝났습니다.	A tired office worker stretching happily after finishing work at dusk	동사
+kakaru	かかる		동	걸리다(시간·돈)	{駅:えき}まで{十分:じゅっぷん}かかります。	역까지 10분 걸립니다.	お{金:かね}がたくさんかかります。	돈이 많이 듭니다.	A person checking a stopwatch while walking toward a station	동사
+kasu	貸す	かす	동	빌려주다	{傘:かさ}を{貸:か}してください。	우산 좀 빌려주세요.	{友達:ともだち}に{本:ほん}を{貸:か}しました。	친구에게 책을 빌려주었습니다.	A girl lending her umbrella to a classmate at the school entrance in the rain	동사
+kariru	借りる	かりる	동	빌리다	{図書館:としょかん}で{本:ほん}を{借:か}ります。	도서관에서 책을 빌립니다.	{友達:ともだち}にお{金:かね}を{借:か}りました。	친구에게 돈을 빌렸습니다.	A student checking out books at a library counter	동사
+kieru	消える	きえる	동	꺼지다, 사라지다	{電気:でんき}が{消:き}えました。	불이 꺼졌습니다.	{雪:ゆき}が{消:き}えました。	눈이 녹아 없어졌습니다.	A room suddenly going dark as the lights go out, a candle flickering	동사
+kiru_k	切る	きる	동	자르다	{紙:かみ}をはさみで{切:き}ります。	종이를 가위로 자릅니다.	{髪:かみ}を{切:き}りました。	머리를 잘랐습니다.	A hairdresser cutting a girl's hair in a bright salon	동사
+kiru_w	着る	きる	동	입다(상의)	{着物:きもの}を{着:き}ます。	기모노를 입습니다.	{白:しろ}いシャツを{着:き}ています。	흰 셔츠를 입고 있습니다.	A girl wearing a beautiful kimono at a shrine festival	동사
+kotaeru	答える	こたえる	동	대답하다	{質問:しつもん}に{答:こた}えてください。	질문에 대답해 주세요.	{学生:がくせい}が{答:こた}えました。	학생이 대답했습니다.	A student standing up confidently to answer a teacher's question	동사
+komaru	困る	こまる	동	곤란하다	{財布:さいふ}がなくて{困:こま}っています。	지갑이 없어서 곤란합니다.	{困:こま}ったときは{電話:でんわ}してください。	곤란할 때는 전화하세요.	A confused man standing in the rain with a broken umbrella, troubled face	동사
+saku	咲く	さく	동	피다	{桜:さくら}が{咲:さ}きました。	벚꽃이 피었습니다.	{庭:にわ}に{花:はな}が{咲:さ}いています。	정원에 꽃이 피어 있습니다.	Cherry blossoms in full bloom along a river with petals falling	동사
+shiru	知る	しる	동	알다	{田中:たなか}さんを{知:し}っていますか。	다나카 씨를 알고 있습니까?	その{店:みせ}は{知:し}りません。	그 가게는 모릅니다.	Two people meeting and recognizing each other with surprise on a street	동사
+sumu	住む	すむ	동	살다	{東京:とうきょう}に{住:す}んでいます。	도쿄에 살고 있습니다.	{大:おお}きい{家:いえ}に{住:す}みたいです。	큰 집에 살고 싶습니다.	A young woman on her small balcony overlooking a vast Tokyo cityscape	동사
+suru	する		동	하다	{毎日:まいにち}{運動:うんどう}をします。	매일 운동을 합니다.	{週末:しゅうまつ}は{何:なに}をしますか。	주말에는 무엇을 합니까?	A young man doing push-ups in a sunny park in the morning	동사
+dasu	出す	だす	동	내다, 꺼내다	{手紙:てがみ}を{出:だ}します。	편지를 부칩니다.	{鞄:かばん}から{本:ほん}を{出:だ}します。	가방에서 책을 꺼냅니다.	A student taking a book out of her school bag at her desk	동사
+tanomu	頼む	たのむ	동	부탁하다, 주문하다	{友達:ともだち}に{仕事:しごと}を{頼:たの}みました。	친구에게 일을 부탁했습니다.	コーヒーを{頼:たの}みます。	커피를 주문합니다.	A customer ordering coffee from a friendly waiter at a cafe	동사
+tsukau	使う	つかう	동	사용하다	このパソコンを{使:つか}ってもいいですか。	이 컴퓨터를 써도 됩니까?	お{箸:はし}を{使:つか}います。	젓가락을 사용합니다.	A girl using a laptop at a bright modern desk	동사
+tsukareru	疲れる	つかれる	동	피곤하다, 지치다	{今日:きょう}はとても{疲:つか}れました。	오늘은 매우 피곤했습니다.	{疲:つか}れたから、{休:やす}みましょう。	피곤하니까 쉽시다.	An exhausted office worker asleep on the train after a long day	동사
+tsuku	着く	つく	동	도착하다	{駅:えき}に{着:つ}きました。	역에 도착했습니다.	{何時:なんじ}に{着:つ}きますか。	몇 시에 도착합니까?	A traveler arriving at a sunny seaside station with a suitcase	동사
+dekakeru	出かける	でかける	동	외출하다	{日曜日:にちようび}は{家族:かぞく}と{出:で}かけます。	일요일에는 가족과 외출합니다.	{母:はは}は{今:いま}{出:で}かけています。	어머니는 지금 외출 중입니다.	A family leaving their house for a weekend outing on a sunny day	동사
+dekiru	できる		동	할 수 있다	{日本語:にほんご}ができます。	일본어를 할 수 있습니다.	{料理:りょうり}ができますか。	요리를 할 수 있습니까?	A proud child showing off a perfect origami crane she made	동사
+deru	出る	でる	동	나가다, 나오다	{七時:しちじ}に{家:いえ}を{出:で}ます。	7시에 집을 나섭니다.	{部屋:へや}から{出:で}てください。	방에서 나가 주세요.	A boy rushing out of his front door in the morning with a backpack	동사
+tobu	飛ぶ	とぶ	동	날다	{鳥:とり}が{飛:と}んでいます。	새가 날고 있습니다.	{飛行機:ひこうき}が{空:そら}を{飛:と}びます。	비행기가 하늘을 납니다.	A flock of white birds flying over a blue sea at sunrise	동사
+toru	取る	とる	동	잡다, 집다	{塩:しお}を{取:と}ってください。	소금을 집어 주세요.	{運転:うんてん}{免許:めんきょ}を{取:と}りました。	운전면허를 땄습니다.	A hand passing a salt shaker across a family dinner table	동사
+narabu	並ぶ	ならぶ	동	줄 서다	{店:みせ}の{前:まえ}に{人:ひと}が{並:なら}んでいます。	가게 앞에 사람들이 줄 서 있습니다.	{一列:いちれつ}に{並:なら}んでください。	한 줄로 서 주세요.	A long line of people waiting in front of a popular ramen shop	동사
+naru	なる		동	되다	{医者:いしゃ}になりたいです。	의사가 되고 싶습니다.	{暖:あたた}かくなりました。	따뜻해졌습니다.	A child in a toy doctor's coat dreaming of the future, sunlight	동사
+nugu	脱ぐ	ぬぐ	동	벗다	{靴:くつ}を{脱:ぬ}いでください。	신발을 벗어 주세요.	{暑:あつ}いから{上着:うわぎ}を{脱:ぬ}ぎます。	더우니까 겉옷을 벗습니다.	A man taking off his jacket on a hot sunny day in the city	동사
+noboru	登る	のぼる	동	오르다	{富士山:ふじさん}に{登:のぼ}りたいです。	후지산에 오르고 싶습니다.	{木:き}に{登:のぼ}らないでください。	나무에 오르지 마세요.	Climbers on the trail of Mount Fuji above the clouds at dawn	동사
+noru	乗る	のる	동	타다	{電車:でんしゃ}に{乗:の}ります。	전철을 탑니다.	{自転車:じてんしゃ}に{乗:の}れますか。	자전거를 탈 수 있습니까?	A girl stepping onto a train at a crowded platform	동사
+hajimaru	始まる	はじまる	동	시작되다	{授業:じゅぎょう}は{九時:くじ}に{始:はじ}まります。	수업은 9시에 시작됩니다.	{映画:えいが}が{始:はじ}まりました。	영화가 시작되었습니다.	A theater curtain rising as the audience watches with excitement	동사
+hataraku	働く	はたらく	동	일하다	{銀行:ぎんこう}で{働:はたら}いています。	은행에서 일하고 있습니다.	{父:ちち}は{毎日:まいにち}{遅:おそ}くまで{働:はたら}きます。	아버지는 매일 늦게까지 일합니다.	A dedicated chef working hard in a busy restaurant kitchen	동사
+hiku	弾く	ひく	동	(악기를) 치다, 켜다	ピアノを{弾:ひ}きます。	피아노를 칩니다.	ギターが{弾:ひ}けますか。	기타를 칠 수 있습니까?	Hands playing a piano keyboard in warm stage light, close-up	동사
+furu	降る	ふる	동	내리다(비·눈)	{雨:あめ}が{降:ふ}っています。	비가 내리고 있습니다.	{明日:あした}は{雪:ゆき}が{降:ふ}るでしょう。	내일은 눈이 내리겠지요.	Snow falling gently on a quiet Japanese street with warm lights	동사
+magaru	曲がる	まがる	동	돌다, 구부러지다	{次:つぎ}の{角:かど}を{左:ひだり}に{曲:ま}がってください。	다음 모퉁이에서 왼쪽으로 도세요.	{右:みぎ}に{曲:ま}がると{駅:えき}があります。	오른쪽으로 돌면 역이 있습니다.	A cyclist turning a corner on a narrow street lined with houses	동사
+miseru	見せる	みせる	동	보여 주다	{写真:しゃしん}を{見:み}せてください。	사진을 보여 주세요.	パスポートを{見:み}せます。	여권을 보여 줍니다.	A girl showing photos on her phone to a smiling friend	동사
+motsu	持つ	もつ	동	들다, 가지다	{傘:かさ}を{持:も}っていますか。	우산을 가지고 있습니까?	{荷物:にもつ}を{持:も}ちましょうか。	짐을 들어 드릴까요?	A young man carrying heavy bags for an elderly woman on a street	동사
+yasumu	休む	やすむ	동	쉬다	{少:すこ}し{休:やす}みましょう。	조금 쉽시다.	{風邪:かぜ}で{会社:かいしゃ}を{休:やす}みました。	감기로 회사를 쉬었습니다.	Hikers resting on a bench with a beautiful mountain view	동사
+yobu	呼ぶ	よぶ	동	부르다	タクシーを{呼:よ}んでください。	택시를 불러 주세요.	{誰:だれ}かが{私:わたし}を{呼:よ}んでいます。	누군가가 저를 부르고 있습니다.	A girl turning around as a friend calls her name across a street	동사
+wakaru	分かる	わかる	동	알다, 이해하다	{日本語:にほんご}が{分:わ}かりますか。	일본어를 압니까?	{意味:いみ}が{分:わ}かりました。	뜻을 알았습니다.	A student with a lightbulb moment, smiling as she understands	동사
+wasureru	忘れる	わすれる	동	잊다	{宿題:しゅくだい}を{忘:わす}れました。	숙제를 잊어버렸습니다.	{傘:かさ}を{忘:わす}れないでください。	우산을 잊지 마세요.	A shocked student realizing he forgot his homework at the school gate	동사
+wataru	渡る	わたる	동	건너다	{道:みち}を{渡:わた}ります。	길을 건넙니다.	{橋:はし}を{渡:わた}って{右:みぎ}です。	다리를 건너서 오른쪽입니다.	People crossing a busy Tokyo crosswalk at night	동사
+atatakai	暖かい	あたたかい	い형	따뜻하다	{今日:きょう}は{暖:あたた}かいですね。	오늘은 따뜻하네요.	{暖:あたた}かいスープを{飲:の}みます。	따뜻한 수프를 마십니다.	A girl smiling in warm spring sunshine among blooming flowers	い형용사
+atsui_t	厚い	あつい	い형	두껍다	この{本:ほん}は{厚:あつ}いです。	이 책은 두껍습니다.	{厚:あつ}いコートを{着:き}ます。	두꺼운 코트를 입습니다.	A student holding an extremely thick heavy book with a surprised face	い형용사
+abunai	危ない	あぶない	い형	위험하다	{危:あぶ}ないですよ！	위험해요!	この{道:みち}は{夜:よる}{危:あぶ}ないです。	이 길은 밤에 위험합니다.	A man pulling a child back from a busy road just in time	い형용사
+ii	いい		い형	좋다	いい{天気:てんき}ですね。	날씨가 좋네요.	この{本:ほん}はとてもいいです。	이 책은 아주 좋습니다.	A person giving a thumbs up under a beautiful clear sky	い형용사
+itai	痛い	いたい	い형	아프다	{歯:は}が{痛:いた}いです。	이가 아픕니다.	どこが{痛:いた}いですか。	어디가 아픕니까?	A boy holding his cheek with a toothache, comical pained face	い형용사
+usui	薄い	うすい	い형	얇다, 연하다	この{紙:かみ}は{薄:うす}いです。	이 종이는 얇습니다.	{薄:うす}いコーヒーが{好:す}きです。	연한 커피를 좋아합니다.	A thin sheet of paper glowing as sunlight passes through it	い형용사
+ooi	多い	おおい	い형	많다	{東京:とうきょう}は{人:ひと}が{多:おお}いです。	도쿄는 사람이 많습니다.	{今年:ことし}は{雨:あめ}が{多:おお}いです。	올해는 비가 많습니다.	A huge crowd crossing the Shibuya scramble intersection	い형용사
+osoi	遅い	おそい	い형	늦다, 느리다	もう{遅:おそ}いですから、{帰:かえ}ります。	벌써 늦었으니까 돌아가겠습니다.	このバスは{遅:おそ}いです。	이 버스는 느립니다.	A worried student looking at a clock late at night in an empty office	い형용사
+omoshiroi	面白い	おもしろい	い형	재미있다	この{映画:えいが}は{面白:おもしろ}いです。	이 영화는 재미있습니다.	{面白:おもしろ}い{本:ほん}を{読:よ}みました。	재미있는 책을 읽었습니다.	Friends laughing hard while watching a comedy movie	い형용사
+kawaii	可愛い	かわいい	い형	귀엽다	この{猫:ねこ}は{可愛:かわい}いです。	이 고양이는 귀엽습니다.	{可愛:かわい}い{服:ふく}ですね。	귀여운 옷이네요.	A tiny fluffy kitten with big sparkling eyes in a basket	い형용사
+kitanai	汚い	きたない	い형	더럽다	{部屋:へや}が{汚:きたな}いです。	방이 더럽습니다.	{汚:きたな}い{手:て}で{食:た}べないでください。	더러운 손으로 먹지 마세요.	A very messy room with clothes and snacks scattered everywhere	い형용사
+sukunai	少ない	すくない	い형	적다	{今日:きょう}は{人:ひと}が{少:すく}ないです。	오늘은 사람이 적습니다.	お{金:かね}が{少:すく}ないです。	돈이 적습니다.	An almost empty train car with only one passenger in morning light	い형용사
+suzushii	涼しい	すずしい	い형	시원하다, 선선하다	{今日:きょう}は{涼:すず}しいです。	오늘은 선선합니다.	{涼:すず}しい{風:かぜ}が{吹:ふ}いています。	시원한 바람이 불고 있습니다.	A girl enjoying a cool breeze on a summer evening veranda with a wind chime	い형용사
+semai	狭い	せまい	い형	좁다	{私:わたし}の{部屋:へや}は{狭:せま}いです。	제 방은 좁습니다.	この{道:みち}は{狭:せま}いです。	이 길은 좁습니다.	A very narrow old alley between houses in Kyoto	い형용사
+hiroi	広い	ひろい	い형	넓다	この{公園:こうえん}は{広:ひろ}いです。	이 공원은 넓습니다.	{広:ひろ}い{部屋:へや}に{住:す}みたいです。	넓은 방에 살고 싶습니다.	A vast green meadow under a huge sky with a tiny person	い형용사
+chikai	近い	ちかい	い형	가깝다	{駅:えき}は{近:ちか}いです。	역은 가깝습니다.	{学校:がっこう}は{家:いえ}から{近:ちか}いです。	학교는 집에서 가깝습니다.	A house right next to a small train station in the countryside	い형용사
+tooi	遠い	とおい	い형	멀다	{会社:かいしゃ}は{遠:とお}いです。	회사는 멉니다.	{遠:とお}い{国:くに}から{来:き}ました。	먼 나라에서 왔습니다.	A long road disappearing far into the distance toward mountains	い형용사
+tsumaranai	つまらない		い형	재미없다	この{映画:えいが}はつまらないです。	이 영화는 재미없습니다.	{仕事:しごと}がつまらないです。	일이 지루합니다.	A bored student yawning at a desk with a dull lecture	い형용사
+tsuyoi	強い	つよい	い형	강하다	{今日:きょう}は{風:かぜ}が{強:つよ}いです。	오늘은 바람이 강합니다.	{兄:あに}はとても{強:つよ}いです。	형은 아주 강합니다.	A strong young man lifting a heavy barbell with determination	い형용사
+yowai	弱い	よわい	い형	약하다	{私:わたし}はお{酒:さけ}に{弱:よわ}いです。	저는 술이 약합니다.	{体:からだ}が{弱:よわ}いです。	몸이 약합니다.	A pale thin boy sitting weakly by a hospital window	い형용사
+hayai	早い	はやい	い형	(시간이) 이르다	{朝:あさ}{早:はや}く{起:お}きます。	아침 일찍 일어납니다.	まだ{早:はや}いですよ。	아직 일러요.	A person waking up before dawn, the sky barely lit	い형용사
+hayai2	速い	はやい	い형	(속도가) 빠르다	{新幹線:しんかんせん}は{速:はや}いです。	신칸센은 빠릅니다.	{彼:かれ}は{走:はし}るのが{速:はや}いです。	그는 달리는 것이 빠릅니다.	A bullet train speeding past Mount Fuji with motion blur	い형용사
+hikui	低い	ひくい	い형	낮다	この{山:やま}は{低:ひく}いです。	이 산은 낮습니다.	{背:せ}が{低:ひく}いです。	키가 작습니다.	A small gentle hill with a tiny shrine on top under blue sky	い형용사
+futoi	太い	ふとい	い형	굵다	この{木:き}は{太:ふと}いです。	이 나무는 굵습니다.	{太:ふと}いペンで{書:か}きます。	굵은 펜으로 씁니다.	Children hugging a giant thick tree trunk in a forest	い형용사
+hosoi	細い	ほそい	い형	가늘다	{細:ほそ}い{道:みち}を{歩:ある}きます。	좁은 길을 걷습니다.	{彼女:かのじょ}は{指:ゆび}が{細:ほそ}いです。	그녀는 손가락이 가늡니다.	A narrow winding path through a bamboo forest	い형용사
+marui	丸い	まるい	い형	둥글다	{月:つき}が{丸:まる}いです。	달이 둥급니다.	{丸:まる}いテーブルがあります。	둥근 테이블이 있습니다.	A big round full moon above a calm lake	い형용사
+wakai	若い	わかい	い형	젊다	{新:あたら}しい{先生:せんせい}は{若:わか}いです。	새 선생님은 젊습니다.	{若:わか}い{人:ひと}が{多:おお}いですね。	젊은 사람이 많네요.	Young people laughing together at an outdoor music festival	い형용사
+warui	悪い	わるい	い형	나쁘다	{天気:てんき}が{悪:わる}いです。	날씨가 나쁩니다.	{目:め}が{悪:わる}いです。	눈이 나쁩니다.	Dark storm clouds and heavy rain over a city with people running	い형용사
+hoshii	欲しい	ほしい	い형	갖고 싶다	{新:あたら}しいカメラが{欲:ほ}しいです。	새 카메라를 갖고 싶습니다.	{何:なに}が{欲:ほ}しいですか。	무엇을 갖고 싶습니까?	A boy pressing his face to a shop window, longing for a toy	い형용사
+mazui	まずい		い형	맛없다	この{料理:りょうり}はまずいです。	이 요리는 맛없습니다.	まずいコーヒーですね。	맛없는 커피네요.	A man making a funny disgusted face after tasting strange food	い형용사
+joubu	丈夫	じょうぶ	な형	튼튼하다	この{鞄:かばん}は{丈夫:じょうぶ}です。	이 가방은 튼튼합니다.	{祖父:そふ}は{体:からだ}が{丈夫:じょうぶ}です。	할아버지는 몸이 튼튼합니다.	A sturdy leather bag on a wooden bench in a workshop	な형용사
+daijoubu	大丈夫	だいじょうぶ	な형	괜찮다	{大丈夫:だいじょうぶ}ですか。	괜찮습니까?	はい、{大丈夫:だいじょうぶ}です。	네, 괜찮습니다.	A girl helping a boy who fell off his bike, asking if he is okay	な형용사
+daisuki	大好き	だいすき	な형	아주 좋아하다	{猫:ねこ}が{大好:だいす}きです。	고양이를 아주 좋아합니다.	{母:はは}の{料理:りょうり}が{大好:だいす}きです。	어머니 요리를 아주 좋아합니다.	A girl hugging a big fluffy cat with hearts floating around	な형용사
+taisetsu	大切	たいせつ	な형	소중하다	{家族:かぞく}は{大切:たいせつ}です。	가족은 소중합니다.	{時間:じかん}を{大切:たいせつ}にしてください。	시간을 소중히 하세요.	A person holding an old family photo carefully with both hands	な형용사
+taihen	大変	たいへん	な형	힘들다, 큰일이다	{仕事:しごと}が{大変:たいへん}です。	일이 힘듭니다.	{大変:たいへん}！{遅:おく}れます！	큰일이다! 늦겠어!	An office worker buried under a mountain of paperwork	な형용사
+hima	暇	ひま	な형	한가하다	{今日:きょう}は{暇:ひま}です。	오늘은 한가합니다.	{暇:ひま}なとき、{何:なに}をしますか。	한가할 때 무엇을 합니까?	A relaxed cat and a girl lounging lazily on a sunny tatami floor	な형용사
+rippa	立派	りっぱ	な형	훌륭하다	{立派:りっぱ}な{家:いえ}ですね。	훌륭한 집이네요.	{立派:りっぱ}な{人:ひと}になりたいです。	훌륭한 사람이 되고 싶습니다.	A magnificent Japanese castle with white walls under blue sky	な형용사
+onaji	同じ	おなじ	な형	같다	{私:わたし}も{同:おな}じです。	저도 같습니다.	{同:おな}じ{服:ふく}を{着:き}ています。	같은 옷을 입고 있습니다.	Two girls surprised to be wearing identical outfits on the street	な형용사
+iroiro	色々	いろいろ	な형	여러 가지	{色々:いろいろ}な{国:くに}へ{行:い}きました。	여러 나라에 갔습니다.	{色々:いろいろ}ありがとうございました。	여러모로 감사했습니다.	Many colorful souvenirs from different countries on a shelf	な형용사
+kekkou	結構	けっこう	な형	괜찮다, 충분하다	もう{結構:けっこう}です。	이제 됐습니다.	{結構:けっこう}おいしいですね。	꽤 맛있네요.	A guest politely refusing another serving at a dinner table, hand raised	な형용사
+itsumo	いつも		부	항상	いつも{七時:しちじ}に{起:お}きます。	항상 7시에 일어납니다.	{彼:かれ}はいつも{元気:げんき}です。	그는 항상 활기찹니다.	A boy waking at the same time every morning, alarm clock and sunrise	부사
+tokidoki	時々	ときどき	부	가끔, 때때로	{時々:ときどき}{映画:えいが}を{見:み}ます。	가끔 영화를 봅니다.	{時々:ときどき}{雨:あめ}が{降:ふ}ります。	때때로 비가 내립니다.	A woman occasionally glancing out at light rain from a cafe window	부사
+taitei	たいてい		부	대개	{朝:あさ}はたいていパンです。	아침은 대개 빵입니다.	{日曜日:にちようび}はたいてい{家:いえ}にいます。	일요일에는 대개 집에 있습니다.	A man relaxing at home on a typical Sunday with a book	부사
+takusan	たくさん		부	많이	{本:ほん}がたくさんあります。	책이 많이 있습니다.	たくさん{食:た}べてください。	많이 드세요.	A table piled high with lots of delicious dishes at a family feast	부사
+zenbu	全部	ぜんぶ	명	전부	{全部:ぜんぶ}でいくらですか。	전부 얼마입니까?	{宿題:しゅくだい}を{全部:ぜんぶ}しました。	숙제를 전부 했습니다.	A shopper placing many items on a checkout counter	부사
+chotto	ちょっと		부	조금, 잠깐	ちょっと{待:ま}ってください。	잠깐 기다려 주세요.	ちょっと{高:たか}いですね。	조금 비싸네요.	A girl raising her hand to say wait a moment, smiling	부사
+motto	もっと		부	더	もっとゆっくり{話:はな}してください。	좀 더 천천히 말해 주세요.	もっと{食:た}べたいです。	더 먹고 싶습니다.	A hungry boy holding out his empty bowl asking for more	부사
+ichiban	一番	いちばん	부	가장, 제일	{日本:にほん}で{一番:いちばん}{高:たか}い{山:やま}は{富士山:ふじさん}です。	일본에서 가장 높은 산은 후지산입니다.	{何:なに}が{一番:いちばん}{好:す}きですか。	무엇을 가장 좋아합니까?	A runner crossing the finish line first with arms raised	부사
+issho	一緒に	いっしょに	부	함께, 같이	{一緒:いっしょ}に{行:い}きましょう。	같이 갑시다.	{友達:ともだち}と{一緒:いっしょ}に{勉強:べんきょう}します。	친구와 함께 공부합니다.	Friends walking together arm in arm down a sunny street	부사
+yukkuri	ゆっくり		부	천천히, 푹	ゆっくり{話:はな}してください。	천천히 말해 주세요.	{今日:きょう}はゆっくり{休:やす}んでください。	오늘은 푹 쉬세요.	A turtle slowly walking along a garden path with a smiling child	부사
+itsu	いつ		의문	언제	{誕生日:たんじょうび}はいつですか。	생일은 언제입니까?	いつ{日本:にほん}へ{行:い}きますか。	언제 일본에 갑니까?	A girl looking at a calendar with a question on her face	의문사
+doko	どこ		의문	어디	トイレはどこですか。	화장실은 어디입니까?	どこへ{行:い}きますか。	어디에 갑니까?	A lost tourist looking around a huge maze-like train station	의문사
+dare	誰	だれ	의문	누구	あの{人:ひと}は{誰:だれ}ですか。	저 사람은 누구입니까?	{誰:だれ}が{来:き}ましたか。	누가 왔습니까?	A girl peeking curiously at a mysterious stranger at the door	의문사
+nani	何	なに	의문	무엇	{何:なに}を{食:た}べますか。	무엇을 먹습니까?	これは{何:なん}ですか。	이것은 무엇입니까?	A boy looking at a strange glowing object with curiosity	의문사
+dore	どれ		의문	어느 것	どれがいいですか。	어느 것이 좋습니까?	あなたの{傘:かさ}はどれですか。	당신 우산은 어느 것입니까?	A girl choosing between many colorful cakes in a bakery showcase	의문사
+doushite	どうして		의문	왜, 어째서	どうして{遅:おく}れましたか。	왜 늦었습니까?	どうして{日本語:にほんご}を{勉強:べんきょう}しますか。	왜 일본어를 공부합니까?	A teacher asking a late breathless student why, with arms crossed	의문사
+ikutsu	いくつ		의문	몇 개, 몇 살	りんごはいくつありますか。	사과는 몇 개 있습니까?	お{子:こ}さんはいくつですか。	자녀분은 몇 살입니까?	A child counting apples in a basket with her fingers	의문사
+kore	これ		대	이것	これは{私:わたし}の{本:ほん}です。	이것은 제 책입니다.	これをください。	이것 주세요.	A customer pointing at an item in a shop showcase	의문사
+sore	それ		대	그것	それは{何:なん}ですか。	그것은 무엇입니까?	それを{見:み}せてください。	그것을 보여 주세요.	A girl pointing at an object in her friend's hands with curiosity	의문사
+douzo	どうぞ		인사	자, 어서(권할 때)	どうぞ{入:はい}ってください。	어서 들어오세요.	お{茶:ちゃ}をどうぞ。	차 드세요.	A host welcoming a guest into a warm home with an open door	인사
+sayounara	さようなら		인사	안녕히 가세요	{先生:せんせい}、さようなら。	선생님, 안녕히 계세요.	さようなら、また{明日:あした}。	안녕, 내일 봐.	Students waving goodbye to a teacher at the school gate at sunset	인사
+konbanwa	こんばんは		인사	안녕하세요(저녁)	こんばんは、いい{夜:よる}ですね。	안녕하세요, 좋은 밤이네요.	{田中:たなか}さん、こんばんは。	다나카 씨, 안녕하세요.	Two neighbors greeting each other under a streetlight in the evening	인사
+oyasumi	おやすみなさい		인사	안녕히 주무세요	おやすみなさい、また{明日:あした}。	안녕히 주무세요, 내일 봬요.	{子供:こども}に「おやすみなさい」と{言:い}います。	아이에게 '잘 자'라고 말합니다.	A mother tucking her child into bed under a starry night light	인사
+gochisousama	ごちそうさまでした		인사	잘 먹었습니다	ごちそうさまでした。おいしかったです。	잘 먹었습니다. 맛있었습니다.	{食:た}べた{後:あと}、「ごちそうさまでした」と{言:い}います。	먹은 후에 '잘 먹었습니다'라고 말합니다.	A family with hands together after finishing a delicious dinner	인사
+hajimemashite	はじめまして		인사	처음 뵙겠습니다	はじめまして、{田中:たなか}です。	처음 뵙겠습니다, 다나카입니다.	はじめまして。どうぞよろしく。	처음 뵙겠습니다. 잘 부탁합니다.	Two business people bowing and exchanging greetings for the first time	인사
+iro	色	いろ	명	색, 색깔	{何色:なにいろ}が{好:す}きですか。	무슨 색을 좋아합니까?	この{色:いろ}はきれいですね。	이 색은 예쁘네요.	A painter's palette full of bright colors in an art studio	색
+midori	緑	みどり	명	초록	{緑:みどり}の{山:やま}がきれいです。	초록 산이 아름답습니다.	{緑:みどり}のシャツを{着:き}ています。	초록 셔츠를 입고 있습니다.	Lush green tea fields covering rolling hills under blue sky	색
+chairo	茶色	ちゃいろ	명	갈색	{茶色:ちゃいろ}の{犬:いぬ}を{飼:か}っています。	갈색 개를 키우고 있습니다.	{茶色:ちゃいろ}の{靴:くつ}を{買:か}いました。	갈색 구두를 샀습니다.	A fluffy brown dog sitting on a pile of autumn leaves	색
