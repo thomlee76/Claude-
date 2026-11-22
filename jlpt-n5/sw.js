@@ -1,4 +1,4 @@
-const CACHE="n5-e1041d881d";const CORE=8;const PRECACHE=["./", "index.html", "words.js", "assets.js", "manifest.webmanifest", "icon-192.png", "icon-512.png", "apple-touch-icon.png", "img/hana.webp", "img/inu.webp", "img/ki.webp", "img/sakana.webp"];
+const CACHE="n5-6dbb0f3986";const CORE=8;const PRECACHE=["./", "index.html", "words.js", "assets.js", "manifest.webmanifest", "icon-192.png", "icon-512.png", "apple-touch-icon.png", "img/hana.webp", "img/inu.webp", "img/ki.webp", "img/sakana.webp"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(PRECACHE.slice(0,CORE))).then(()=>self.skipWaiting()))});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k.startsWith("n5-")&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
 async function ensure(){const c=await caches.open(CACHE);const have=new Set((await c.keys()).map(r=>new URL(r.url).pathname));
