@@ -1,4 +1,4 @@
-const CACHE="n5-b8197c7d75";const CORE=8;const PRECACHE=["./", "index.html", "words.js", "assets.js", "manifest.webmanifest", "icon-192.png", "icon-512.png", "apple-touch-icon.png", "img/inu.webp", "img/neko.webp", "img/samui.webp", "img/taberu.webp"];
+const CACHE="n5-ef90dcdf1a";const CORE=8;const PRECACHE=["./", "index.html", "words.js", "assets.js", "manifest.webmanifest", "icon-192.png", "icon-512.png", "apple-touch-icon.png", "img/chichi.webp", "img/gakusei.webp", "img/genki.webp", "img/hito.webp", "img/inu.webp", "img/kaeru.webp", "img/neko.webp", "img/nigiyaka.webp", "img/samui.webp", "img/suki.webp", "img/taberu.webp", "img/tomodachi.webp", "img/watashi.webp"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(PRECACHE.slice(0,CORE))).then(()=>self.skipWaiting()))});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k.startsWith("n5-")&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
 async function ensure(){const c=await caches.open(CACHE);const have=new Set((await c.keys()).map(r=>new URL(r.url).pathname));
