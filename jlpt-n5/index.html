@@ -11,8 +11,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="N5 단어">
-<title>N5 단어 200</title>
-<meta name="description" content="JLPT N5 핵심 단어 200개를 장면 그림·발음·복습 주기로 외우는 단어장. 하루 10단어, 20일 완성.">
+<title>N5 단어 500</title>
+<meta name="description" content="JLPT N5 핵심 단어 500개를 장면 그림·발음·복습 주기로 외우는 단어장. 하루 10단어, 50일 완성.">
 <style>
 :root{
  --bg:#F2F2F7; --card:#FFFFFF; --ink:#0E0E10; --muted:#8A8A8E; --line:#E5E5EA; --soft:#F2F2F7;
@@ -198,7 +198,7 @@ const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random(
 const W={},ALL=[];
 const ADJ=new Set("atsui samui akai aoi shiroi kuroi kiiroi".split(" "));
 function posOf(id,di,wi){if(ADJ.has(id)||di>=13&&di<=15)return"형";if(di>=10&&di<=12)return"동";if(di===19)return wi<5?"표현":"부";if(id==="ikura"||id==="nanji")return"의문";return"명"}
-DAYS.forEach((d,di)=>d.w.forEach((a,wi)=>{const o={id:a[0],w:a[1],r:a[2],m:a[3],ex:a[4],exr:a[5],exm:a[6],d:di,p:posOf(a[0],di,wi)};W[o.id]=o;ALL.push(o)}));
+DAYS.forEach((d,di)=>d.w.forEach((a,wi)=>{const o={id:a[0],w:a[1],r:a[2],m:a[3],ex:a[4],exr:a[5],exm:a[6],d:di,p:a[7]||posOf(a[0],di,wi)};W[o.id]=o;ALL.push(o)}));
 const IMG=new Set(window.IMGS||[]);
 const INT=[0,1,3,7,14,30];           // 복습 간격(일): 1→3→7→14→30
 const SEC=26;                        // 카드 한 장 권장 시간
@@ -263,17 +263,17 @@ function home(){
   const learned=ALL.filter(o=>st(o.id).b>=1).length,master=ALL.filter(o=>st(o.id).b>=6).length,due=dueList();
   const next=DAYS.findIndex((d,i)=>!S.days[i]);
   app.innerHTML=`
-  <div class="hero"><div><small>JLPT N5 · 20일 완성</small><h1>N5 단어 200</h1></div>
+  <div class="hero"><div><small>JLPT N5 · ${DAYS.length}일 완성</small><h1>N5 단어 ${ALL.length}</h1></div>
    <div class="streak" title="연속 학습일"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1 4 5 5.500 5 11a5 5 0 01-10 0c0-2 .8-3.200 1.600-4.200.4 1.700 1.400 3.200 1.900 3.200C11 9 10.500 5 12 2z"/></svg>${streakNow()}일</div></div>
   <div class="stats">
-   <div class="stat"><b>${learned}<span> /200</span></b><span>배운 단어</span></div>
+   <div class="stat"><b>${learned}<span> /${ALL.length}</span></b><span>배운 단어</span></div>
    <div class="stat"><b>${due.length}</b><span>오늘 복습</span></div>
    <div class="stat"><b>${master}</b><span>완전 암기</span></div>
   </div>
   <div class="bar"><i style="width:${learned/2}%"></i></div>
   ${due.length?`<button class="cta" id="rv"><div><div class="n">복습 주기가 돌아왔습니다</div><div class="t">오늘의 복습 ${due.length}단어</div></div><span class="go">›</span></button>`:""}
-  ${next>=0?`<button class="cta ${due.length?"alt":""}" id="nx"><div><div class="n">Day ${next+1} · ${esc(DAYS[next].t)}</div><div class="t">새 단어 10개 학습</div></div><span class="go">›</span></button>`
-   :`<div class="cta alt"><div><div class="n">200단어 진도 완료</div><div class="t">복습 주기에 맞춰 반복하세요</div></div></div>`}
+  ${next>=0?`<button class="cta ${due.length?"alt":""}" id="nx"><div><div class="n">Day ${next+1} · ${esc(DAYS[next].t)}</div><div class="t">새 단어 ${DAYS[next].w.length}개 학습</div></div><span class="go">›</span></button>`
+   :`<div class="cta alt"><div><div class="n">${ALL.length}단어 진도 완료</div><div class="t">복습 주기에 맞춰 반복하세요</div></div></div>`}
   <h2>전체 과정</h2>
   <div class="days">${DAYS.map((d,i)=>`<button class="day ${S.days[i]?"done":""}" data-d="${i}">
     <span class="no">${i+1}</span><span class="mid"><div class="tt">${esc(d.t)}</div><div class="pv" lang="ja">${d.w.slice(0,5).map(a=>esc(a[1])).join("・")}…</div></span>

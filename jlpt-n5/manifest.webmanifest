@@ -1,7 +1,7 @@
 {
- "name": "N5 단어 200 — JLPT N5 그림 단어장",
+ "name": "N5 단어 500 — JLPT N5 그림 단어장",
  "short_name": "N5 단어",
- "description": "JLPT N5 핵심 단어 200개를 그림·발음·복습 주기로 외우는 단어장",
+ "description": "JLPT N5 핵심 단어 500개를 그림·발음·복습 주기로 외우는 단어장",
  "lang": "ko",
  "start_url": "./",
  "scope": "./",
