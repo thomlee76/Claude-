@@ -17,8 +17,8 @@ ROOT = Path(__file__).resolve().parent
 PER_DAY, DAYS = 8, 63   # DAYS는 load_words()에서 단어 수로 다시 계산
 START = "2026-11-23"  # DAY 1
 STYLE = ("Cinematic Japanese anime illustration, film still quality. {scene}. "
-         "Highly detailed hand-painted background, dramatic lighting, rich saturated colors, "
-         "expressive faces. No text, no letters, no numbers, no signs with writing, no logos, no watermark.")
+         "Highly detailed hand-painted background, dramatic lighting, rich saturated colors. "
+         "No text, no letters, no numbers, no signs with writing, no logos, no watermark.")
 
 # ---------- data ----------
 def load_words():
