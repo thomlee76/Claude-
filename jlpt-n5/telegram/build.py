@@ -129,7 +129,7 @@ def ruby_layout(d, src, word, width, fb, fbb, fr):
         pos += len(base)
     lines, line, x, prev_rr = [], [], 0.0, -1e9
     size = fb.size
-    for base, ruby, b in units:
+    for ui, (base, ruby, b) in enumerate(units):
         bw = tw(d, base, fbb if b else fb)
         rw = tw(d, ruby, fr) if ruby else 0
         shift = 0.0
@@ -143,7 +143,8 @@ def ruby_layout(d, src, word, width, fb, fbb, fr):
         if ruby:
             rr = x + shift + (bw + rw) / 2
             end = max(end, rr - size * 0.5)     # 루비가 뒤 글자 위로 반 글자까지만 걸치게
-        if line and end > width and base not in "。、！？":
+        tail_ok = len(units) - ui <= 2 and end <= width + 30   # 마지막 1~2글자만 남으면 줄바꿈하지 않음
+        if line and end > width and base not in "。、！？" and not tail_ok:
             lines.append(line)
             line, x, prev_rr, shift = [], 0.0, -1e9, 0.0
             if ruby:
