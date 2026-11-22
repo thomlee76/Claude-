@@ -1,1 +1,1 @@
-window.IMGS=["ane","ani","asa","ashita","chichi","gakusei","genki","haha","hito","ima","imouto","inu","kaeru","kinou","kodomo","kyou","neko","nigiyaka","otouto","samui","suki","taberu","tomodachi","watashi"];
+window.IMGS=["ane","ani","asa","ashita","chichi","gakusei","genki","gohan","haha","hana","hiru","hito","ima","imouto","inu","jikan","kaeru","kawa","ki","kinou","kodomo","kudamono","kyou","mainichi","neko","nigiyaka","niku","otouto","pan","raishuu","sakana","samui","sora","suki","taberu","tamago","tomodachi","tori","umi","watashi","yama","yasai","yoru"];
