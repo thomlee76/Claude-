@@ -4,11 +4,12 @@
 import sys
 from pathlib import Path
 from PIL import Image
-import numpy as np
+import numpy as np, os
+TH = int(os.environ.get("TH", 246))
 src, out, ids = sys.argv[1], Path(sys.argv[2]), sys.argv[3:]
 out.mkdir(parents=True, exist_ok=True)
 im = Image.open(src).convert('RGB'); a = np.asarray(im.convert('L')).astype(float)
-row = np.percentile(a, 10, axis=1) > 246; col = np.percentile(a, 10, axis=0) > 246
+row = np.percentile(a, 10, axis=1) > TH; col = np.percentile(a, 10, axis=0) > TH
 def runs(m):
     r = []; i = 0
     while i < len(m):
