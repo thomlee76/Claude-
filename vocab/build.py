@@ -18,6 +18,10 @@ def mark_img(topics, sub):
         for w in t['words']:
             f = d / f"{w['id']}.webp"
             if f.exists(): w['img'] = hashlib.md5(f.read_bytes()).hexdigest()[:8]  # версия = хэш файла: офлайн-кэш обновляет только изменённые картинки
+            if f.exists():
+                from PIL import Image
+                with Image.open(f) as im: ar = im.width / im.height
+                if abs(ar - 1) > .05: w['ia'] = round(ar, 3)  # не квадрат: карточка слова показывает картинку целиком
 audio = sorted('audio/' + p.name for p in (R / 'audio').glob('*.m4a')) if (R / 'audio').exists() else []
 ja = load(R / 'ja')
 mark_img(en, 'en'); mark_img(ja, 'ja')
