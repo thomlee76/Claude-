@@ -29,7 +29,7 @@ async def tts(seg, sem):
                 print("retry", i, seg["v"], repr(e)[:120], flush=True)
             await asyncio.sleep(2 + 3 * i)
         else:
-            raise RuntimeError(f"TTS failed: {seg}")
+            print("!! TTS failed:", seg["t"][:60], flush=True); return
     run("ffmpeg", "-nostdin", "-y", "-i", str(mp3), "-ac", "1", "-ar", str(SR), "-sample_fmt", "s16", str(wav))
 
 def pcm(path):
@@ -38,6 +38,8 @@ def silence(sec): return b"\x00\x00" * int(SR * sec)
 
 def build_ep(m):
     ep = m["ep"]; parts = []; prev = None; total = 0.0
+    miss = [s for sc in m["scenes"] for s in sc["segs"] if not (AUD / f"{key(s)}.wav").exists()]
+    if miss: print(f"!! SKIP ep{ep}: {len(miss)} clips missing", flush=True); return
     for i, sc in enumerate(m["scenes"]):
         data = silence(0.2)
         for s in sc["segs"]: data += pcm(AUD / f"{key(s)}.wav") + silence(s["p"])
@@ -63,7 +65,9 @@ async def main(nos):
     segs = {key(s): s for m in mans for sc in m["scenes"] for s in sc["segs"]}
     print(len(segs), "unique narration clips", flush=True)
     await asyncio.gather(*(tts(s, sem) for s in segs.values()))
-    for m in mans: build_ep(m)
+    for m in mans:
+        try: build_ep(m)
+        except Exception as e: print(f'!! ep{m["ep"]} failed: {e}', flush=True)
 
 if __name__ == "__main__":
     asyncio.run(main(sys.argv[1:]))
