@@ -1,0 +1,10756 @@
+{
+"cast": {
+"A": [
+"Artyom",
+"#14233A",
+"SG Healthcare 해외영업"
+],
+"D": [
+"Dana",
+"#0E6672",
+"알마티 클리닉 원장"
+],
+"P": [
+"Mr. Park",
+"#B4501A",
+"본사 물류팀"
+],
+"M": [
+"Marat",
+"#6B3FA0",
+"현지 운송 기사"
+],
+"J": [
+"Jun",
+"#2856A3",
+"서비스 엔지니어"
+],
+"K": [
+"Mr. Kang",
+"#5B6472",
+"본사 전무"
+],
+"V": [
+"Viktor",
+"#A3401A",
+"경쟁사 영업"
+],
+"L": [
+"Aliya",
+"#8C5A1E",
+"2호점 원장"
+],
+"N": [
+"Mr. Nurlan",
+"#2E7D5B",
+"보건부 입찰 담당관"
+],
+"E": [
+"Elena",
+"#B5361F",
+"통역사 · Artyom 동료"
+],
+"S": [
+"Sora",
+"#7A4F9E",
+"본사 마케팅"
+]
+},
+"eps": [
+{
+"no": "01",
+"title": "화물은 어디에?",
+"grammar": "현재완료",
+"panels": [
+{
+"label": "월요일 09:00 · 알마티 클리닉",
+"lines": [
+{
+"s": "D",
+"en": "Artyom, has the CT arrived {1:yet}?",
+"ko": "아르툠, CT 아직 안 왔어요?"
+},
+{
+"s": "A",
+"en": "Not {1:yet}, but it has {0:already} left Incheon!",
+"ko": "아직요, 근데 인천에선 이미 출발했어요!"
+}
+]
+},
+{
+"label": "월요일 23:00 · 호텔 방",
+"lines": [
+{
+"s": "A",
+"en": "Mr. Park, the clinic is {2:still} waiting!",
+"ko": "과장님, 병원이 아직도 기다려요!"
+},
+{
+"s": "P",
+"en": "Relax. It has {3:just} cleared customs.",
+"ko": "진정해요. 방금 통관됐어요."
+}
+]
+},
+{
+"label": "화요일 10:00 · 클리닉 입구",
+"lines": [
+{
+"s": "M",
+"en": "Good news: the CT has arrived.",
+"ko": "좋은 소식: CT 도착했어요."
+},
+{
+"s": "M",
+"en": "Bad news: we {2:still} haven't measured the door.",
+"ko": "나쁜 소식: 문 치수를 아직도 안 쟀어요."
+}
+]
+},
+{
+"label": "화요일 15:00 · 반전",
+"lines": [
+{
+"s": "D",
+"en": "Relax. I've {0:already} ordered a bigger door.",
+"ko": "진정해요. 더 큰 문 이미 주문했어요."
+},
+{
+"s": "A",
+"en": "Great. I've {3:just} lost five years of my life.",
+"ko": "다행이네요. 방금 수명이 5년 줄었습니다."
+}
+]
+}
+],
+"red": [
+[
+"We",
+"have shipped",
+"shipped",
+"the CT last Monday.",
+"last Monday 같은 시점이 있으면 과거형"
+],
+[
+"It",
+"arrived already",
+"has already arrived",
+"in Almaty.",
+"already는 have와 p.p. 사이"
+],
+[
+"We",
+"are waiting",
+"have been waiting",
+"for the door since Tuesday.",
+"since는 현재완료(진행)와 함께"
+]
+],
+"explain": [
+{
+"w": "already",
+"why": "예상보다 빨리 끝났을 때. '이미 했으니 걱정 마세요'라는 안심 신호.",
+"trap": "already를 문장 앞에 두면 어색 → have와 p.p. 사이",
+"ex": [
+[
+"We've already sent the proforma invoice.",
+"견적 송장은 이미 보냈습니다."
+],
+[
+"The engineer has already left for the airport.",
+"엔지니어는 이미 공항으로 출발했습니다."
+]
+]
+},
+{
+"w": "yet",
+"why": "부정문에서는 '아직', 의문문에서는 '벌써/이제'. 상대를 압박하지 않는 가장 부드러운 확인.",
+"trap": "긍정문에는 쓰지 않음 (I have yet received → X)",
+"ex": [
+[
+"We haven't received the signed PO yet.",
+"서명된 발주서를 아직 받지 못했습니다."
+],
+[
+"Have you had a chance to check the drawings yet?",
+"도면은 확인해 보셨나요?"
+]
+]
+},
+{
+"w": "still",
+"why": "기대보다 오래 걸릴 때. '아직도'라는 짜증·재촉의 뉘앙스가 있어 두 번째 리마인더부터 사용.",
+"trap": "still은 haven't 앞에 온다 (haven't still → X)",
+"ex": [
+[
+"We still haven't heard back from customs.",
+"세관에서 아직도 회신이 없습니다."
+],
+[
+"The payment is still pending on our side.",
+"결제가 저희 쪽에서 아직도 보류 중입니다."
+]
+]
+},
+{
+"w": "just",
+"why": "방금 끝난 일. 가장 최신 상황을 알릴 때 메일 첫 줄에 쓰면 좋다.",
+"trap": "just + 과거형(I just sent)도 미국식에서는 흔함",
+"ex": [
+[
+"I've just spoken to the forwarder.",
+"방금 포워더와 통화했습니다."
+],
+[
+"The truck has just left the warehouse.",
+"트럭이 방금 창고를 출발했습니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "The invoice has ______ been paid. No need to remind them.",
+"opts": [
+"yet",
+"already",
+"still",
+"ago"
+],
+"a": 1,
+"why": "이미 끝난 일 → already"
+},
+{
+"q": "Has the engineer arrived ______?",
+"opts": [
+"already",
+"still",
+"yet",
+"just"
+],
+"a": 2,
+"why": "의문문 끝 → yet"
+},
+{
+"q": "We ______ haven't received the contract. This is the third reminder.",
+"opts": [
+"yet",
+"just",
+"already",
+"still"
+],
+"a": 3,
+"why": "재촉 → still + haven't"
+},
+{
+"q": "I've ______ sent you the tracking number. Please check your inbox.",
+"opts": [
+"just",
+"yet",
+"still",
+"since"
+],
+"a": 0,
+"why": "방금 → just"
+},
+{
+"q": "We ______ the goods last Friday.",
+"opts": [
+"have shipped",
+"shipped",
+"have been shipping",
+"ship"
+],
+"a": 1,
+"why": "last Friday = 시점 → 과거형"
+},
+{
+"q": "We have been waiting for the payment ______ October.",
+"opts": [
+"for",
+"since",
+"from",
+"at"
+],
+"a": 1,
+"why": "시작 시점 → since"
+},
+{
+"q": "We have worked with this clinic ______ five years.",
+"opts": [
+"since",
+"during",
+"for",
+"by"
+],
+"a": 2,
+"why": "기간 → for"
+},
+{
+"q": "올바른 어순은?",
+"opts": [
+"Already I have sent it.",
+"I have sent already it.",
+"I have already sent it.",
+"I already have sent it."
+],
+"a": 2,
+"why": "have + already + p.p."
+},
+{
+"q": "첫 번째 리마인더에 가장 부드러운 표현은?",
+"opts": [
+"You still haven't paid.",
+"Have you had a chance to review it yet?",
+"Why haven't you replied?",
+"Pay now."
+],
+"a": 1,
+"why": "yet 의문문이 가장 정중"
+},
+{
+"q": "'The CT has arrived.' 의 뉘앙스는?",
+"opts": [
+"언제 도착했는지가 중요",
+"지금 여기 있다는 결과가 중요",
+"도착하지 않았다",
+"곧 도착할 것이다"
+],
+"a": 1,
+"why": "현재완료 = 지금의 결과"
+}
+],
+"next": "EP.02 — 엔지니어가 탄 비행기가 취소됐다!  ▸ 미래 표현 will · be going to · be due to"
+},
+{
+"no": "02",
+"title": "비행기가 취소됐다",
+"grammar": "미래 표현",
+"panels": [
+{
+"label": "수요일 06:30 · 인천공항",
+"lines": [
+{
+"s": "J",
+"en": "My flight is cancelled! The next one {3:is due to} leave tomorrow.",
+"ko": "비행기 취소! 다음 편은 내일 출발 예정이래요."
+},
+{
+"s": "A",
+"en": "Don't panic. I{0:'ll} find another route.",
+"ko": "당황하지 마. 내가 다른 경로 찾을게."
+}
+]
+},
+{
+"label": "수요일 07:10 · 화상 통화",
+"lines": [
+{
+"s": "D",
+"en": "I{2:'m meeting} the Health Minister on Friday.",
+"ko": "금요일에 보건부 장관님 만나요."
+},
+{
+"s": "D",
+"en": "The CT {0:will} work by then. Right?",
+"ko": "그때까지 CT 되는 거죠?"
+}
+]
+},
+{
+"label": "수요일 09:00 · 항공사 카운터",
+"lines": [
+{
+"s": "A",
+"en": "Jun, you{1:'re going to} fly via Tashkent.",
+"ko": "준, 타슈켄트 경유로 가는 거야."
+},
+{
+"s": "J",
+"en": "Tashkent? OK... I{0:'ll} buy a ticket now.",
+"ko": "타슈켄트요? 네... 지금 표 살게요."
+}
+]
+},
+{
+"label": "금요일 08:55 · 클리닉",
+"lines": [
+{
+"s": "J",
+"en": "Done! The first scan {3:is due to} start at nine.",
+"ko": "끝! 첫 촬영은 9시 시작 예정이에요."
+},
+{
+"s": "A",
+"en": "And I{1:'m going to} sleep for two days.",
+"ko": "그리고 난 이틀 동안 잘 거야."
+}
+]
+}
+],
+"red": [
+[
+"",
+"When the engineer will arrive, I'll call you.",
+"When the engineer arrives, I'll call you.",
+"",
+"when · if 뒤에는 현재형"
+],
+[
+"Please confirm",
+"until",
+"by",
+"Friday.",
+"끝내야 하는 기한은 by"
+],
+[
+"The CT is due to",
+"arriving",
+"arrive",
+"on Friday.",
+"be due to + 동사원형"
+]
+],
+"explain": [
+{
+"w": "will",
+"why": "말하는 순간 결정하거나 약속할 때. 메일에서 'I'll send / I'll check'는 신뢰를 주는 기본 문장.",
+"trap": "if·when 절 안에는 will을 쓰지 않음",
+"ex": [
+[
+"I'll get back to you by noon.",
+"정오까지 회신드리겠습니다."
+],
+[
+"We'll cover the extra freight cost.",
+"추가 운임은 저희가 부담하겠습니다."
+]
+]
+},
+{
+"w": "be going to",
+"why": "이미 정해 둔 계획. 회사 방침·예정된 투자처럼 '그렇게 하기로 되어 있다'는 느낌.",
+"trap": "gonna는 비즈니스 메일 금지",
+"ex": [
+[
+"We're going to open a service center in Tashkent.",
+"타슈켄트에 서비스 센터를 열 계획입니다."
+],
+[
+"They're going to replace the old units next year.",
+"그들은 내년에 구형 장비를 교체할 예정입니다."
+]
+]
+},
+{
+"w": "be + -ing",
+"why": "날짜·장소가 잡힌 확정 일정. 캘린더에 적혀 있는 일.",
+"trap": "미래 시간 표현(on Monday 등)이 함께 와야 미래로 읽힘",
+"ex": [
+[
+"I'm flying to Almaty on Tuesday.",
+"화요일에 알마티로 갑니다."
+],
+[
+"We're meeting the distributor at 3 p.m.",
+"오후 3시에 대리점과 미팅합니다."
+]
+]
+},
+{
+"w": "be due to",
+"why": "공식 일정·예정. 선적·도착·결제 기한 안내에 가장 많이 쓰는 격식 표현.",
+"trap": "be due to + 동사원형 / be due on + 날짜",
+"ex": [
+[
+"The vessel is due to arrive on 20 November.",
+"선박은 11월 20일 도착 예정입니다."
+],
+[
+"Payment is due within 30 days of invoice.",
+"결제는 송장일로부터 30일 이내입니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "The printer is broken. — Don't worry, I ______ call the technician.",
+"opts": [
+"am going to",
+"'ll",
+"am calling",
+"am due to"
+],
+"a": 1,
+"why": "즉석 결정 → will"
+},
+{
+"q": "We ______ the hospital director on Monday at 10. It's in the calendar.",
+"opts": [
+"will meet",
+"meet",
+"are meeting",
+"are due meet"
+],
+"a": 2,
+"why": "확정 일정 → be + -ing"
+},
+{
+"q": "The shipment is due ______ on 15 November.",
+"opts": [
+"arrive",
+"to arrive",
+"arriving",
+"arrived"
+],
+"a": 1,
+"why": "be due to + 동사원형"
+},
+{
+"q": "When the goods ______, I'll call you.",
+"opts": [
+"will arrive",
+"arrive",
+"are arriving",
+"arrived"
+],
+"a": 1,
+"why": "when절은 현재형"
+},
+{
+"q": "Please send the PO ______ Friday.",
+"opts": [
+"until",
+"by",
+"since",
+"in"
+],
+"a": 1,
+"why": "완료 기한 → by"
+},
+{
+"q": "The offer is valid ______ 30 November.",
+"opts": [
+"by",
+"until",
+"within",
+"for"
+],
+"a": 1,
+"why": "계속 유효 → until"
+},
+{
+"q": "We'll ship ______ two weeks.",
+"opts": [
+"until",
+"by",
+"within",
+"since"
+],
+"a": 2,
+"why": "~이내 → within"
+},
+{
+"q": "We've decided. We ______ open a branch in Astana.",
+"opts": [
+"will",
+"are going to",
+"are due",
+"would"
+],
+"a": 1,
+"why": "이미 정한 계획 → going to"
+},
+{
+"q": "비즈니스 메일에 부적절한 것은?",
+"opts": [
+"We're going to ship on Monday.",
+"We're gonna ship on Monday.",
+"We will ship on Monday.",
+"Shipment is due on Monday."
+],
+"a": 1,
+"why": "gonna는 구어"
+},
+{
+"q": "Payment is due ______ 30 days.",
+"opts": [
+"within",
+"until",
+"by",
+"at"
+],
+"a": 0,
+"why": "기간 이내 → within"
+}
+],
+"next": "EP.03 — 원장님의 2호점 견적 요청, 그리고 본사 설득  ▸ 정중한 요청"
+},
+{
+"no": "03",
+"title": "전무님, 부탁이 있습니다",
+"grammar": "정중한 요청",
+"panels": [
+{
+"label": "월요일 10:00 · 원장실",
+"lines": [
+{
+"s": "D",
+"en": "We're opening a second clinic. {0:Could you} send me a quote for two X-rays?",
+"ko": "2호점을 열어요. X-ray 2대 견적 보내 주실래요?"
+},
+{
+"s": "A",
+"en": "Of course. I'll send it today.",
+"ko": "물론이죠. 오늘 보내드릴게요."
+}
+]
+},
+{
+"label": "월요일 16:00 · 본사 화상회의",
+"lines": [
+{
+"s": "A",
+"en": "{2:Would it be possible to} give Dana a 10% discount?",
+"ko": "Dana 원장님께 10% 할인이 가능할까요?"
+},
+{
+"s": "K",
+"en": "{1:Would you mind} sending me the volume forecast first?",
+"ko": "물량 예측부터 보내 주겠나?"
+}
+]
+},
+{
+"label": "월요일 23:00 · 호텔에서 메일",
+"lines": [
+{
+"s": "A",
+"en": "{3:I'd appreciate it if you could} approve it by Friday.",
+"ko": "금요일까지 승인해 주시면 감사하겠습니다."
+},
+{
+"s": "K",
+"en": "Approved. 8%, not 10%.",
+"ko": "승인. 10%가 아니라 8%."
+}
+]
+},
+{
+"label": "화요일 11:00 · 반전",
+"lines": [
+{
+"s": "D",
+"en": "8%? OK. {1:Would you mind} adding free training?",
+"ko": "8%? 좋아요. 무료 교육도 넣어 주실래요?"
+},
+{
+"s": "A",
+"en": "...Not at all.",
+"ko": "...물론이죠. (식은땀)"
+}
+]
+}
+],
+"red": [
+[
+"Could you",
+"sent",
+"send",
+"me the invoice?",
+"could · would 뒤는 동사원형"
+],
+[
+"Would you mind",
+"to check",
+"checking",
+"the drawings?",
+"mind 뒤는 -ing"
+],
+[
+"",
+"Please kindly send ASAP.",
+"Could you send it as soon as possible?",
+"",
+"kindly·ASAP 남발은 명령조로 들림"
+]
+],
+"explain": [
+{
+"w": "Could you ~?",
+"why": "가장 범용적인 정중한 요청. 메일·전화·대면 모두 안전.",
+"trap": "Could you please는 OK, Please could you는 어색",
+"ex": [
+[
+"Could you send me the packing list?",
+"패킹리스트를 보내 주시겠어요?"
+],
+[
+"Could you confirm the delivery address?",
+"배송지 주소를 확인해 주시겠어요?"
+]
+]
+},
+{
+"w": "Would you mind ~ing?",
+"why": "상대에게 수고를 끼치는 부탁. 대답은 No/Not at all이 '해 드릴게요'.",
+"trap": "mind 뒤에는 -ing (to 동사 X)",
+"ex": [
+[
+"Would you mind resending the file in PDF?",
+"파일을 PDF로 다시 보내 주셔도 될까요?"
+],
+[
+"Would you mind waiting a few minutes?",
+"몇 분만 기다려 주셔도 될까요?"
+]
+]
+},
+{
+"w": "Would it be possible to ~?",
+"why": "조건·규정을 바꿔 달라는 큰 부탁. 할인·기한 연장·예외 요청에 적합.",
+"trap": "주어가 it이므로 뒤에 to + 동사원형",
+"ex": [
+[
+"Would it be possible to extend the deadline by a week?",
+"기한을 1주일 연장할 수 있을까요?"
+],
+[
+"Would it be possible to split the payment?",
+"분할 결제가 가능할까요?"
+]
+]
+},
+{
+"w": "I'd appreciate it if ~",
+"why": "메일 마무리용 격식 요청. 기한을 붙이면 효과적.",
+"trap": "it을 빼먹지 않기 (I'd appreciate if → X)",
+"ex": [
+[
+"I'd appreciate it if you could reply by Wednesday.",
+"수요일까지 회신해 주시면 감사하겠습니다."
+],
+[
+"I'd appreciate it if you could share the test results.",
+"테스트 결과를 공유해 주시면 감사하겠습니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "______ send me the updated price list?",
+"opts": [
+"Could you",
+"Do you",
+"You can",
+"Would you mind"
+],
+"a": 0,
+"why": "기본 정중 요청"
+},
+{
+"q": "Would you mind ______ the serial number?",
+"opts": [
+"to check",
+"check",
+"checking",
+"checked"
+],
+"a": 2,
+"why": "mind + -ing"
+},
+{
+"q": "Would it be possible ______ the meeting to Monday?",
+"opts": [
+"move",
+"to move",
+"moving",
+"moved"
+],
+"a": 1,
+"why": "possible + to 동사원형"
+},
+{
+"q": "I'd appreciate ______ you could confirm today.",
+"opts": [
+"if",
+"it if",
+"that",
+"it that"
+],
+"a": 1,
+"why": "I'd appreciate it if"
+},
+{
+"q": "'Would you mind sending it?' 에 '보내 드릴게요'라는 대답은?",
+"opts": [
+"Yes, I would.",
+"Not at all.",
+"Yes, I mind.",
+"No, I can't."
+],
+"a": 1,
+"why": "Not at all = 꺼리지 않음"
+},
+{
+"q": "가장 큰 부탁(조건 변경)에 어울리는 표현은?",
+"opts": [
+"Can you ~?",
+"Could you ~?",
+"Would it be possible to ~?",
+"Send me ~."
+],
+"a": 2,
+"why": "조건·예외 요청"
+},
+{
+"q": "명령조로 들리는 메일 표현은?",
+"opts": [
+"Could you send it as soon as possible?",
+"Please kindly send ASAP.",
+"I'd appreciate it if you could send it today.",
+"Would you mind sending it today?"
+],
+"a": 1,
+"why": "kindly·ASAP 남발"
+},
+{
+"q": "Could you ______ me the invoice?",
+"opts": [
+"sent",
+"send",
+"sending",
+"to send"
+],
+"a": 1,
+"why": "could + 동사원형"
+},
+{
+"q": "'미안하지만 거절'의 정중한 표현은?",
+"opts": [
+"No.",
+"I'm afraid we can't.",
+"Impossible.",
+"We don't want."
+],
+"a": 1,
+"why": "I'm afraid ~"
+},
+{
+"q": "부탁 + 이유 + 기한이 모두 들어간 문장은?",
+"opts": [
+"Send it.",
+"Could you send it?",
+"Could you send it by Friday? We need it for the tender.",
+"I need it."
+],
+"a": 2,
+"why": "부탁·기한·이유"
+}
+],
+"next": "EP.04 — 공장에서 온 소식: 생산은 끝났는데…  ▸ 수동태"
+},
+{
+"no": "04",
+"title": "공장에서 온 소식",
+"grammar": "수동태",
+"panels": [
+{
+"label": "화요일 · 본사 공장",
+"lines": [
+{
+"s": "P",
+"en": "Every detector {0:is tested} three times.",
+"ko": "디텍터는 전부 세 번씩 검사돼요."
+},
+{
+"s": "A",
+"en": "So that's why they're late!",
+"ko": "그래서 늦는 거였군요!"
+}
+]
+},
+{
+"label": "수요일 · 인천항",
+"lines": [
+{
+"s": "P",
+"en": "Good news. The X-rays {1:were shipped} this morning.",
+"ko": "좋은 소식. X-ray가 오늘 아침 선적됐어요."
+},
+{
+"s": "A",
+"en": "Finally! I'll tell Dana.",
+"ko": "드디어! Dana에게 알릴게요."
+}
+]
+},
+{
+"label": "목요일 · 원장실",
+"lines": [
+{
+"s": "D",
+"en": "Your invoice {2:has been paid}. In one day.",
+"ko": "인보이스 결제 완료됐어요. 하루 만에."
+},
+{
+"s": "A",
+"en": "One day? That's a record!",
+"ko": "하루요? 신기록이네요!"
+}
+]
+},
+{
+"label": "금요일 · 반전",
+"lines": [
+{
+"s": "A",
+"en": "The X-rays {3:will be installed} next Monday.",
+"ko": "X-ray는 다음 주 월요일에 설치됩니다."
+},
+{
+"s": "D",
+"en": "Good. The new door {2:has been delivered} too.",
+"ko": "좋아요. 새 문도 배송 완료됐어요."
+}
+]
+}
+],
+"red": [
+[
+"The goods",
+"were arrived",
+"arrived",
+"yesterday.",
+"arrive · happen은 수동태 불가"
+],
+[
+"The contract",
+"has signed",
+"has been signed",
+".",
+"계약서는 서명 '되는' 대상 → been 필요"
+],
+[
+"The machine was",
+"install",
+"installed",
+"last week.",
+"수동태는 be + p.p."
+]
+],
+"explain": [
+{
+"w": "is / are + p.p.",
+"why": "제품 사양·회사 규정처럼 '일반적으로 그렇게 된다'는 사실. 카탈로그 문장의 70%.",
+"trap": "주어가 복수면 are",
+"ex": [
+[
+"All units are tested before shipment.",
+"모든 장비는 선적 전에 검사됩니다."
+],
+[
+"The software is updated twice a year.",
+"소프트웨어는 1년에 두 번 업데이트됩니다."
+]
+]
+},
+{
+"w": "was / were + p.p.",
+"why": "끝난 일의 보고. 날짜와 함께 쓰면 가장 명확.",
+"trap": "was/were 뒤는 반드시 p.p. (install → installed)",
+"ex": [
+[
+"The order was placed on 3 October.",
+"주문은 10월 3일에 접수되었습니다."
+],
+[
+"Two units were damaged in transit.",
+"운송 중 2대가 파손되었습니다."
+]
+]
+},
+{
+"w": "has been + p.p.",
+"why": "'완료됐고 지금 그 상태다'. 입금 확인·서명 완료·발송 완료 알림의 표준.",
+"trap": "been을 빼면 틀림 (has signed ≠ has been signed)",
+"ex": [
+[
+"Your order has been shipped.",
+"주문하신 제품이 발송되었습니다."
+],
+[
+"The issue has been resolved.",
+"문제가 해결되었습니다."
+]
+]
+},
+{
+"w": "will be + p.p.",
+"why": "앞으로의 처리 계획. 책임자를 말하지 않고 절차만 안내할 때.",
+"trap": "will be + p.p. (will installed → X)",
+"ex": [
+[
+"The replacement will be sent by air.",
+"교체품은 항공으로 발송될 예정입니다."
+],
+[
+"You will be informed once it clears customs.",
+"통관되면 안내드리겠습니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "The detectors ______ in Korea.",
+"opts": [
+"make",
+"are made",
+"is made",
+"made"
+],
+"a": 1,
+"why": "복수 + are + p.p."
+},
+{
+"q": "The goods ______ last Monday.",
+"opts": [
+"were shipped",
+"have shipped",
+"shipped by",
+"are shipped"
+],
+"a": 0,
+"why": "시점 → was/were"
+},
+{
+"q": "The payment ______. Thank you.",
+"opts": [
+"has received",
+"has been received",
+"received",
+"is receive"
+],
+"a": 1,
+"why": "완료된 결과 → has been"
+},
+{
+"q": "The system ______ next week.",
+"opts": [
+"will install",
+"will be install",
+"will be installed",
+"installs"
+],
+"a": 2,
+"why": "will be + p.p."
+},
+{
+"q": "The goods ______ yesterday.",
+"opts": [
+"were arrived",
+"arrived",
+"have been arrived",
+"was arrived"
+],
+"a": 1,
+"why": "arrive는 수동태 불가"
+},
+{
+"q": "Your order ______ right now.",
+"opts": [
+"is processed",
+"is being processed",
+"processes",
+"has processed"
+],
+"a": 1,
+"why": "진행 중 → is being"
+},
+{
+"q": "The contract ______.",
+"opts": [
+"has signed",
+"has been signed",
+"signed",
+"is sign"
+],
+"a": 1,
+"why": "계약서는 서명되는 대상"
+},
+{
+"q": "행위자를 꼭 밝혀야 할 때 쓰는 것은?",
+"opts": [
+"for",
+"by",
+"with",
+"of"
+],
+"a": 1,
+"why": "by + 행위자"
+},
+{
+"q": "'A mistake was made.' 를 쓰는 이유는?",
+"opts": [
+"누가 했는지 강조",
+"책임자를 부드럽게 숨김",
+"미래의 일",
+"질문"
+],
+"a": 1,
+"why": "수동태로 완곡하게"
+},
+{
+"q": "보고 메일 첫 줄로 가장 자연스러운 것은?",
+"opts": [
+"I'm pleased to inform you that the payment has been received.",
+"Payment received by we.",
+"We was received payment.",
+"Payment is receive."
+],
+"a": 0,
+"why": "표준 알림 문장"
+}
+],
+"next": "EP.05 — 트럭이 국경에서 멈췄다  ▸ 상태 전치사 in transit · on site"
+},
+{
+"no": "05",
+"title": "국경에서 멈춘 트럭",
+"grammar": "상태 전치사",
+"panels": [
+{
+"label": "월요일 · 코르고스 국경",
+"lines": [
+{
+"s": "M",
+"en": "The X-rays are {0:in transit}... but we're stuck at the border.",
+"ko": "X-ray는 운송 중인데... 국경에서 막혔어요."
+},
+{
+"s": "A",
+"en": "Stuck? For how long?",
+"ko": "막혔다고? 얼마나?"
+}
+]
+},
+{
+"label": "월요일 · 세관 사무실",
+"lines": [
+{
+"s": "A",
+"en": "Who's {3:in charge of} customs here?",
+"ko": "여기 통관 담당이 누구죠?"
+},
+{
+"s": "M",
+"en": "A man who loves very long lunches.",
+"ko": "점심을 아주 길게 드시는 분이요."
+}
+]
+},
+{
+"label": "화요일 · 원장실",
+"lines": [
+{
+"s": "D",
+"en": "We're two days {2:behind schedule}, Artyom.",
+"ko": "아르툠, 일정보다 이틀 늦었어요."
+},
+{
+"s": "A",
+"en": "I know. I'm fixing it.",
+"ko": "알아요. 해결하는 중입니다."
+}
+]
+},
+{
+"label": "화요일 · 텅 빈 촬영실",
+"lines": [
+{
+"s": "J",
+"en": "Good news: I'm {1:on site}.",
+"ko": "좋은 소식: 저 현장에 왔어요."
+},
+{
+"s": "J",
+"en": "Bad news: the X-rays aren't.",
+"ko": "나쁜 소식: X-ray가 안 왔어요."
+}
+]
+}
+],
+"red": [
+[
+"The goods are",
+"on transit",
+"in transit",
+".",
+null
+],
+[
+"We will deliver",
+"on next Monday",
+"next Monday",
+".",
+"next · last · this 앞에는 전치사 X"
+],
+[
+"I am in charge",
+"for",
+"of",
+"this project.",
+null
+]
+],
+"explain": [
+{
+"w": "in transit",
+"why": "출발했지만 아직 도착 전. 포워더·세관 메일의 핵심 단어.",
+"trap": "on transit → X",
+"ex": [
+[
+"Two pallets are still in transit.",
+"팔레트 2개는 아직 운송 중입니다."
+],
+[
+"Goods damaged in transit are covered by insurance.",
+"운송 중 파손은 보험으로 보장됩니다."
+]
+]
+},
+{
+"w": "on site",
+"why": "현장에 있다. 설치·점검·공사 일정에서 '사람이 거기 있다'는 뜻.",
+"trap": "on the site(그 부지)는 뜻이 달라짐",
+"ex": [
+[
+"Our engineer will be on site for three days.",
+"엔지니어가 3일간 현장에 있을 겁니다."
+],
+[
+"Training is done on site after installation.",
+"교육은 설치 후 현장에서 진행합니다."
+]
+]
+},
+{
+"w": "behind schedule",
+"why": "지연 보고의 공식 표현. 숫자(two days)를 앞에 붙이면 정확해진다.",
+"trap": "반대말: ahead of schedule / on schedule",
+"ex": [
+[
+"The project is running two weeks behind schedule.",
+"프로젝트가 2주 지연되고 있습니다."
+],
+[
+"We're back on schedule after the customs delay.",
+"통관 지연 후 일정을 회복했습니다."
+]
+]
+},
+{
+"w": "in charge of",
+"why": "담당자 소개. 명함 대신 쓰는 한 문장.",
+"trap": "in charge for → X, 뒤에는 명사/-ing",
+"ex": [
+[
+"Who is in charge of after-sales service?",
+"A/S 담당자가 누구인가요?"
+],
+[
+"I'm in charge of the Central Asia market.",
+"저는 중앙아시아 시장을 담당합니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "The shipment is ______ transit to Almaty.",
+"opts": [
+"on",
+"in",
+"at",
+"by"
+],
+"a": 1,
+"why": "in transit"
+},
+{
+"q": "Our engineer is ______ site now.",
+"opts": [
+"in",
+"at",
+"on",
+"by"
+],
+"a": 2,
+"why": "on site"
+},
+{
+"q": "We are one week ______ schedule.",
+"opts": [
+"after",
+"late",
+"behind",
+"under"
+],
+"a": 2,
+"why": "behind schedule"
+},
+{
+"q": "Ms. Kim is in charge ______ the tender.",
+"opts": [
+"for",
+"of",
+"to",
+"on"
+],
+"a": 1,
+"why": "in charge of"
+},
+{
+"q": "We will deliver ______ Monday.",
+"opts": [
+"on next",
+"in next",
+"next",
+"at next"
+],
+"a": 2,
+"why": "next 앞 전치사 X"
+},
+{
+"q": "The meeting is ______ 10 a.m.",
+"opts": [
+"in",
+"on",
+"at",
+"by"
+],
+"a": 2,
+"why": "시각 → at"
+},
+{
+"q": "We will ship ______ two weeks. (2주 후에)",
+"opts": [
+"after",
+"in",
+"on",
+"since"
+],
+"a": 1,
+"why": "in + 기간 = ~후에"
+},
+{
+"q": "The project was completed ______ schedule. (일정보다 빨리)",
+"opts": [
+"behind",
+"on",
+"ahead of",
+"before of"
+],
+"a": 2,
+"why": "ahead of schedule"
+},
+{
+"q": "The installation is ______ 15 November.",
+"opts": [
+"in",
+"at",
+"on",
+"since"
+],
+"a": 2,
+"why": "날짜 → on"
+},
+{
+"q": "Our office opens ______ 2027.",
+"opts": [
+"on",
+"at",
+"in",
+"by"
+],
+"a": 2,
+"why": "연도 → in"
+}
+],
+"next": "EP.06 — 경쟁사 Viktor 등장, 15% 더 싼 견적  ▸ 비교 표현"
+},
+{
+"no": "06",
+"title": "더 싼 견적이 나타났다",
+"grammar": "비교 표현",
+"panels": [
+{
+"label": "월요일 · 원장실",
+"lines": [
+{
+"s": "D",
+"en": "Viktor's offer is 15% {0:cheaper than} yours.",
+"ko": "Viktor 견적이 당신 것보다 15% 싸요."
+},
+{
+"s": "A",
+"en": "Cheaper, yes. But is it better?",
+"ko": "싸긴 하죠. 근데 더 좋을까요?"
+}
+]
+},
+{
+"label": "월요일 · 클리닉 로비",
+"lines": [
+{
+"s": "V",
+"en": "Our X-ray is just {3:as good as} theirs.",
+"ko": "저희 X-ray도 저쪽만큼 좋습니다."
+},
+{
+"s": "A",
+"en": "Then why did your unit at City Hospital break twice?",
+"ko": "그럼 시립병원 장비는 왜 두 번 고장 났죠?"
+}
+]
+},
+{
+"label": "화요일 · 데이터 미팅",
+"lines": [
+{
+"s": "A",
+"en": "Our detector is lighter and {1:more reliable than} his.",
+"ko": "저희 디텍터가 더 가볍고 안정적입니다."
+},
+{
+"s": "D",
+"en": "Prove it. Send me the data.",
+"ko": "증명해 보세요. 데이터 보내 주세요."
+}
+]
+},
+{
+"label": "수요일 · 결정",
+"lines": [
+{
+"s": "D",
+"en": "You're not as cheap as Viktor, but you're {2:the most} reliable.",
+"ko": "Viktor만큼 싸진 않지만, 제일 믿을 만하네요."
+},
+{
+"s": "A",
+"en": "I'll take that as a compliment.",
+"ko": "칭찬으로 듣겠습니다."
+}
+]
+}
+],
+"red": [
+[
+"",
+"This model is more cheaper.",
+"This model is cheaper.",
+"",
+"more와 -er을 함께 쓰지 않기"
+],
+[
+"",
+"It is very better than before.",
+"It is much better than before.",
+"",
+"비교급 강조는 very가 아니라 much"
+],
+[
+"",
+"Our price is same as theirs.",
+"Our price is the same as theirs.",
+"",
+null
+]
+],
+"explain": [
+{
+"w": "cheaper than",
+"why": "짧은 형용사는 -er. 가격 비교에서 'cheap'은 싸구려 느낌이 있어 메일에서는 more affordable / lower price가 안전.",
+"trap": "more cheaper → X",
+"ex": [
+[
+"Our offer is 8% lower than the competitor's.",
+"저희 견적이 경쟁사보다 8% 낮습니다."
+],
+[
+"Sea freight is cheaper but slower than air.",
+"해상 운송은 항공보다 싸지만 느립니다."
+]
+]
+},
+{
+"w": "more reliable than",
+"why": "3음절 이상 형용사는 more. 품질 비교의 핵심 단어: reliable, durable, efficient.",
+"trap": "than 뒤는 비교 대상 (than ours)",
+"ex": [
+[
+"Our detector is more durable than the previous model.",
+"저희 디텍터는 이전 모델보다 내구성이 좋습니다."
+],
+[
+"This workflow is more efficient than manual entry.",
+"이 워크플로가 수동 입력보다 효율적입니다."
+]
+]
+},
+{
+"w": "the most ~",
+"why": "최상급은 범위를 붙이면 설득력이 생긴다: in its class, on the market, in the region.",
+"trap": "good → the best, bad → the worst",
+"ex": [
+[
+"It's the most cost-effective option in its class.",
+"동급 중 가장 비용 효율적인 옵션입니다."
+],
+[
+"This is the best-selling model in the CIS region.",
+"CIS 지역 최다 판매 모델입니다."
+]
+]
+},
+{
+"w": "as ~ as",
+"why": "동등 비교. not as ~ as는 '그만큼은 아니다'라는 부드러운 열위 표현.",
+"trap": "as good as (as good than → X)",
+"ex": [
+[
+"Our lead time is as short as theirs.",
+"저희 납기도 그쪽만큼 짧습니다."
+],
+[
+"The price is not as high as you might think.",
+"가격은 생각하시는 것만큼 높지 않습니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "Model A is ______ than Model B.",
+"opts": [
+"more light",
+"lighter",
+"most light",
+"light"
+],
+"a": 1,
+"why": "짧은 단어 -er"
+},
+{
+"q": "This system is ______ than the old one.",
+"opts": [
+"efficienter",
+"more efficient",
+"most efficient",
+"efficient"
+],
+"a": 1,
+"why": "긴 단어 more"
+},
+{
+"q": "It is the ______ option on the market.",
+"opts": [
+"goodest",
+"most good",
+"best",
+"better"
+],
+"a": 2,
+"why": "good → best"
+},
+{
+"q": "Our warranty is ______ long as theirs.",
+"opts": [
+"so",
+"as",
+"more",
+"than"
+],
+"a": 1,
+"why": "as ~ as"
+},
+{
+"q": "The new version is ______ faster.",
+"opts": [
+"very",
+"much",
+"more",
+"most"
+],
+"a": 1,
+"why": "비교급 강조 much"
+},
+{
+"q": "Their price is ______ lower. (약간)",
+"opts": [
+"slightly",
+"very",
+"most",
+"much"
+],
+"a": 0,
+"why": "slightly + 비교급"
+},
+{
+"q": "Our price is ______ as theirs.",
+"opts": [
+"same",
+"the same",
+"as same",
+"more same"
+],
+"a": 1,
+"why": "the same as"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"It is cheaper.",
+"It is more cheaper.",
+"It is much cheaper.",
+"It is the cheapest."
+],
+"a": 1,
+"why": "more + -er 중복"
+},
+{
+"q": "'cheap' 대신 메일에 더 적절한 표현은?",
+"opts": [
+"cheapo",
+"more affordable",
+"cheapest cheap",
+"poor"
+],
+"a": 1,
+"why": "cheap은 싸구려 느낌"
+},
+{
+"q": "Our lead time is not ______ long as theirs.",
+"opts": [
+"so much",
+"as",
+"more",
+"than"
+],
+"a": 1,
+"why": "not as ~ as"
+}
+],
+"next": "EP.07 — 인허가 규정이 바뀌었다, 서류 40장  ▸ must · have to · should"
+},
+{
+"no": "07",
+"title": "새 규정, 서류 폭탄",
+"grammar": "의무와 조언",
+"panels": [
+{
+"label": "월요일 · 원장실",
+"lines": [
+{
+"s": "D",
+"en": "New rule: all X-rays {1:have to} be registered again.",
+"ko": "새 규정: X-ray 전부 다시 등록해야 해요."
+},
+{
+"s": "A",
+"en": "Again?!",
+"ko": "또요?!"
+}
+]
+},
+{
+"label": "월요일 · 본사 화상통화",
+"lines": [
+{
+"s": "A",
+"en": "Mr. Park, what do we {2:need to} send?",
+"ko": "과장님, 뭘 보내야 하죠?"
+},
+{
+"s": "P",
+"en": "Only forty pages. By Friday.",
+"ko": "겨우 40장이에요. 금요일까지."
+}
+]
+},
+{
+"label": "수요일 · 보건부 민원실",
+"lines": [
+{
+"s": "M",
+"en": "Visitors {0:must} wear a badge here.",
+"ko": "여기선 방문자는 반드시 출입증을 달아야 해요."
+},
+{
+"s": "A",
+"en": "And I {0:must} wear a smile, I guess.",
+"ko": "미소도 반드시 달아야겠네요."
+}
+]
+},
+{
+"label": "금요일 · 등록 완료",
+"lines": [
+{
+"s": "D",
+"en": "Registered! You {3:should} bring cookies next time.",
+"ko": "등록 완료! 다음엔 쿠키를 가져가는 게 좋아요."
+},
+{
+"s": "A",
+"en": "Cookies. Noted.",
+"ko": "쿠키. 메모했습니다."
+}
+]
+}
+],
+"red": [
+[
+"",
+"We must to send the documents.",
+"We must send the documents.",
+"",
+"must 뒤에 to를 쓰지 않기"
+],
+[
+"",
+"He have to sign the contract.",
+"He has to sign the contract.",
+"",
+"3인칭 단수는 has to"
+],
+[
+"",
+"You don't must touch it.",
+"You mustn't touch it.",
+"",
+null
+]
+],
+"explain": [
+{
+"w": "must",
+"why": "말하는 사람의 강한 의지나 규칙. 안전 규정·회사 규칙 안내.",
+"trap": "must to → X, 과거형 없음(had to 사용)",
+"ex": [
+[
+"All visitors must sign in at reception.",
+"모든 방문자는 접수처에서 서명해야 합니다."
+],
+[
+"You must not open the unit while it is powered on.",
+"전원이 켜진 상태에서 장비를 열면 안 됩니다."
+]
+]
+},
+{
+"w": "have to",
+"why": "외부 상황·법규 때문에 해야 할 때. 인허가·세관 이야기에서는 거의 항상 have to.",
+"trap": "3인칭 단수는 has to, 과거는 had to",
+"ex": [
+[
+"We have to submit the certificate of origin.",
+"원산지 증명서를 제출해야 합니다."
+],
+[
+"The clinic had to postpone the opening.",
+"병원은 개원을 연기해야 했습니다."
+]
+]
+},
+{
+"w": "need to",
+"why": "필요성. must/have to보다 부드러워 상대에게 요구할 때 쓰기 좋다.",
+"trap": "don't need to = 할 필요 없다",
+"ex": [
+[
+"You need to update the firmware first.",
+"먼저 펌웨어를 업데이트하셔야 합니다."
+],
+[
+"We need to confirm the voltage on site.",
+"현장에서 전압을 확인해야 합니다."
+]
+]
+},
+{
+"w": "should",
+"why": "조언·권장. 매뉴얼의 '~하는 것이 좋습니다'.",
+"trap": "should + 동사원형 (should to → X)",
+"ex": [
+[
+"You should back up the data every week.",
+"매주 데이터를 백업하는 것이 좋습니다."
+],
+[
+"We should inform the ministry in advance.",
+"보건부에 미리 알리는 게 좋겠습니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "All engineers ______ wear safety shoes in the factory.",
+"opts": [
+"should",
+"must",
+"could",
+"might"
+],
+"a": 1,
+"why": "규칙 → must"
+},
+{
+"q": "The distributor ______ submit the papers by Monday.",
+"opts": [
+"have to",
+"has to",
+"must to",
+"need"
+],
+"a": 1,
+"why": "3인칭 has to"
+},
+{
+"q": "You ______ pay now. It's optional.",
+"opts": [
+"mustn't",
+"don't have to",
+"shouldn't",
+"can't"
+],
+"a": 1,
+"why": "필요 없음"
+},
+{
+"q": "You ______ touch the cover. It's dangerous.",
+"opts": [
+"don't have to",
+"mustn't",
+"needn't",
+"shouldn't have"
+],
+"a": 1,
+"why": "금지"
+},
+{
+"q": "I think you ______ update the software.",
+"opts": [
+"must",
+"have",
+"should",
+"need"
+],
+"a": 2,
+"why": "조언"
+},
+{
+"q": "We need ______ the form.",
+"opts": [
+"submit",
+"to submit",
+"submitting",
+"submitted"
+],
+"a": 1,
+"why": "need to + 동사"
+},
+{
+"q": "Last year we ______ renew the license.",
+"opts": [
+"must",
+"had to",
+"have to",
+"musted"
+],
+"a": 1,
+"why": "must의 과거 = had to"
+},
+{
+"q": "가장 부드러운 요구 표현은?",
+"opts": [
+"You must send it.",
+"You need to send it.",
+"Send it now.",
+"You have to send it."
+],
+"a": 1,
+"why": "need to가 부드러움"
+},
+{
+"q": "'don't have to'의 뜻은?",
+"opts": [
+"하면 안 된다",
+"할 필요가 없다",
+"해야 한다",
+"했어야 한다"
+],
+"a": 1,
+"why": "불필요"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"We must send it.",
+"We must to send it.",
+"We have to send it.",
+"We should send it."
+],
+"a": 1,
+"why": "must + to X"
+}
+],
+"next": "EP.08 — 원장님이 10대를 사겠다는데, 조건이…  ▸ 조건문"
+},
+{
+"no": "08",
+"title": "10대를 사면?",
+"grammar": "조건문",
+"panels": [
+{
+"label": "월요일 · 협상 테이블",
+"lines": [
+{
+"s": "D",
+"en": "{0:If} we order ten X-rays, {0:will} you give us 12%?",
+"ko": "10대 주문하면 12% 해 주실래요?"
+},
+{
+"s": "A",
+"en": "Ten? Let me call Seoul.",
+"ko": "10대요? 서울에 전화해 볼게요."
+}
+]
+},
+{
+"label": "월요일 · 본사 화상통화",
+"lines": [
+{
+"s": "K",
+"en": "We can't give 12% {1:unless} they pay 30% in advance.",
+"ko": "선금 30% 안 내면 12%는 안 돼."
+},
+{
+"s": "A",
+"en": "I'll tell her.",
+"ko": "전달하겠습니다."
+}
+]
+},
+{
+"label": "화요일 · 원장실",
+"lines": [
+{
+"s": "D",
+"en": "Fine, {2:as long as} you train all my staff.",
+"ko": "좋아요. 직원 전원 교육해 주는 조건으로."
+},
+{
+"s": "A",
+"en": "Deal, {2:as long as} they don't break anything.",
+"ko": "좋습니다. 아무것도 안 부순다는 조건으로."
+}
+]
+},
+{
+"label": "화요일 · 계약 서명",
+"lines": [
+{
+"s": "A",
+"en": "We'll send two spare detectors {3:in case} one fails.",
+"ko": "고장 대비로 예비 디텍터 2개 보내드릴게요."
+},
+{
+"s": "D",
+"en": "Perfect. Keep my number {3:in case} Viktor calls.",
+"ko": "완벽해요. Viktor가 전화할 때 대비해 제 번호 저장해 두세요."
+}
+]
+}
+],
+"red": [
+[
+"",
+"If you will order today, we give a discount.",
+"If you order today, we will give a discount.",
+"",
+"if절은 현재형, 주절에 will"
+],
+[
+"",
+"Unless you don't pay, we can't ship.",
+"Unless you pay, we can't ship.",
+"",
+"unless에 이미 부정 의미"
+],
+[
+"",
+"In case of the price changes, we'll tell you.",
+"In case the price changes, we'll tell you.",
+"",
+"in case of + 명사 / in case + 문장"
+]
+],
+"explain": [
+{
+"w": "If ~, will",
+"why": "조건부 제안의 기본형. 할인·무상 서비스·납기 단축을 교환할 때.",
+"trap": "if절은 현재형, 결과절에 will",
+"ex": [
+[
+"If you confirm today, we'll ship this week.",
+"오늘 확정하시면 이번 주에 선적하겠습니다."
+],
+[
+"If the unit fails within a year, we'll replace it free of charge.",
+"1년 내 고장 시 무상 교체해 드립니다."
+]
+]
+},
+{
+"w": "unless",
+"why": "= if not. 조건 미충족 시 결과를 경고할 때. 가격 유효기간 안내에 자주.",
+"trap": "unless 뒤에 부정문 X (unless you don't → X)",
+"ex": [
+[
+"We can't start production unless we receive the deposit.",
+"선금을 받지 못하면 생산을 시작할 수 없습니다."
+],
+[
+"The price will change unless you order by June.",
+"6월까지 주문하지 않으면 가격이 바뀝니다."
+]
+]
+},
+{
+"w": "as long as",
+"why": "'~하기만 하면'. 조건을 걸되 긍정적인 톤.",
+"trap": "so long as도 같은 뜻",
+"ex": [
+[
+"You can return it as long as it's unused.",
+"미사용 상태라면 반품 가능합니다."
+],
+[
+"We'll keep the price as long as the volume stays the same.",
+"물량이 유지되면 가격을 유지하겠습니다."
+]
+]
+},
+{
+"w": "in case",
+"why": "만약을 대비해. 예비품·연락처·보험 이야기.",
+"trap": "in case of + 명사 / in case + 문장",
+"ex": [
+[
+"Keep the box in case you need to return it.",
+"반품에 대비해 상자를 보관하세요."
+],
+[
+"Here's my mobile number in case of emergency.",
+"비상시를 대비해 제 휴대폰 번호입니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "If you ______ 20 units, we will add free training.",
+"opts": [
+"will order",
+"order",
+"ordered",
+"ordering"
+],
+"a": 1,
+"why": "if절 현재형"
+},
+{
+"q": "We won't ship ______ we receive the payment.",
+"opts": [
+"if",
+"unless",
+"as long as",
+"in case"
+],
+"a": 1,
+"why": "~하지 않으면"
+},
+{
+"q": "You can return it ______ it's unused.",
+"opts": [
+"unless",
+"in case",
+"as long as",
+"even"
+],
+"a": 2,
+"why": "조건 충족 시"
+},
+{
+"q": "Take my number ______ you need help.",
+"opts": [
+"in case",
+"unless",
+"as long as",
+"if not"
+],
+"a": 0,
+"why": "대비"
+},
+{
+"q": "If the shipment ______ late, we will tell you.",
+"opts": [
+"will be",
+"is",
+"was",
+"be"
+],
+"a": 1,
+"why": "if + 현재형"
+},
+{
+"q": "In case ______ delay, we'll inform you.",
+"opts": [
+"the",
+"of",
+"that",
+"for"
+],
+"a": 1,
+"why": "in case of + 명사"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"Unless you pay, we can't ship.",
+"Unless you don't pay, we can't ship.",
+"If you don't pay, we can't ship.",
+"We can't ship unless you pay."
+],
+"a": 1,
+"why": "unless + 긍정문"
+},
+{
+"q": "______ the goods arrive, please check them. (도착은 확실)",
+"opts": [
+"If",
+"When",
+"Unless",
+"In case"
+],
+"a": 1,
+"why": "확실한 일 → when"
+},
+{
+"q": "If you pay in advance, we ______ within a week.",
+"opts": [
+"ship",
+"will ship",
+"shipped",
+"shipping"
+],
+"a": 1,
+"why": "결과절 will"
+},
+{
+"q": "'as long as'와 바꿔 쓸 수 있는 것은?",
+"opts": [
+"unless",
+"provided that",
+"in case",
+"although"
+],
+"a": 1,
+"why": "provided that = 조건"
+}
+],
+"next": "EP.09 — 전무님께 보낼 보고 메일, 문제가 너무 많다  ▸ 연결어"
+},
+{
+"no": "09",
+"title": "전무님께 보내는 메일",
+"grammar": "연결어",
+"panels": [
+{
+"label": "화요일 23:00 · 메일 초안",
+"lines": [
+{
+"s": "A",
+"en": "The deal is signed. {0:However}, they want free training.",
+"ko": "계약 체결. 그러나 무료 교육을 원합니다."
+},
+{
+"s": "A",
+"en": "{2:In addition}, they asked for two spare units.",
+"ko": "게다가 예비품 2개를 요청했습니다."
+}
+]
+},
+{
+"label": "화요일 23:20 · 옆자리",
+"lines": [
+{
+"s": "P",
+"en": "You gave them everything?",
+"ko": "다 내준 거예요?"
+},
+{
+"s": "A",
+"en": "Not everything. Almost everything.",
+"ko": "다는 아니고요. 거의 다요."
+}
+]
+},
+{
+"label": "수요일 08:00 · 서울 본사",
+"lines": [
+{
+"s": "A",
+"en": "Customs took a week. {3:As a result}, installation was delayed.",
+"ko": "통관 1주일. 그 결과 설치가 지연됐습니다."
+},
+{
+"s": "K",
+"en": "Too many problems, Artyom.",
+"ko": "문제가 너무 많군, 아르툠."
+}
+]
+},
+{
+"label": "수요일 08:30 · 반전",
+"lines": [
+{
+"s": "A",
+"en": "{1:Therefore}, I suggest a five-year service contract.",
+"ko": "따라서 5년 서비스 계약을 제안합니다."
+},
+{
+"s": "K",
+"en": "...Good idea. Approved.",
+"ko": "...좋은 생각이군. 승인."
+}
+]
+}
+],
+"red": [
+[
+"",
+"However the price is high.",
+"However, the price is high.",
+"",
+"However 뒤에 쉼표"
+],
+[
+"",
+"The parts are late, therefore we postpone.",
+"The parts are late. Therefore, we will postpone.",
+"",
+"문장을 끊고 Therefore,"
+],
+[
+"",
+"In addition of the warranty, we offer training.",
+"In addition to the warranty, we offer training.",
+"",
+"in addition to + 명사"
+]
+],
+"explain": [
+{
+"w": "however",
+"why": "앞 문장과 반대. 문장 첫머리 + 쉼표. but보다 격식.",
+"trap": "문장을 끊고 However, 로 시작",
+"ex": [
+[
+"The samples passed the test. However, the packaging needs improvement.",
+"샘플은 테스트를 통과했습니다. 그러나 포장은 개선이 필요합니다."
+],
+[
+"We appreciate the offer. However, the lead time is too long.",
+"제안은 감사하지만 납기가 너무 깁니다."
+]
+]
+},
+{
+"w": "therefore",
+"why": "논리적 결론. 보고 메일의 '그러므로 ~을 제안/요청합니다'.",
+"trap": "so의 격식체",
+"ex": [
+[
+"The parts are out of stock. Therefore, delivery will take six weeks.",
+"부품 재고가 없어 납품에 6주가 걸립니다."
+],
+[
+"Therefore, we recommend ordering before December.",
+"따라서 12월 전 주문을 권해 드립니다."
+]
+]
+},
+{
+"w": "in addition",
+"why": "장점·조건을 추가할 때. also의 격식체.",
+"trap": "in addition to + 명사",
+"ex": [
+[
+"In addition, all units come with a two-year warranty.",
+"게다가 모든 장비에 2년 보증이 포함됩니다."
+],
+[
+"In addition to the manual, we provide video training.",
+"매뉴얼 외에 영상 교육도 제공합니다."
+]
+]
+},
+{
+"w": "as a result",
+"why": "원인 → 결과. 지연·문제의 영향을 설명할 때.",
+"trap": "as a result of + 명사",
+"ex": [
+[
+"Customs held the shipment. As a result, installation was delayed.",
+"세관이 화물을 붙잡아 설치가 지연됐습니다."
+],
+[
+"As a result of the new rule, registration takes longer.",
+"새 규정 때문에 등록이 더 오래 걸립니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "The quality is excellent. ______, the price is high.",
+"opts": [
+"Therefore",
+"However",
+"In addition",
+"As a result"
+],
+"a": 1,
+"why": "역접"
+},
+{
+"q": "The flight was cancelled. ______, I missed the meeting.",
+"opts": [
+"However",
+"In addition",
+"As a result",
+"Although"
+],
+"a": 2,
+"why": "결과"
+},
+{
+"q": "We provide installation. ______, training is free.",
+"opts": [
+"In addition",
+"However",
+"Therefore",
+"Unless"
+],
+"a": 0,
+"why": "추가"
+},
+{
+"q": "Stock is limited. ______, please order early.",
+"opts": [
+"However",
+"Therefore",
+"In addition",
+"Despite"
+],
+"a": 1,
+"why": "결론"
+},
+{
+"q": "In addition ______ the manual, we send a video.",
+"opts": [
+"of",
+"to",
+"for",
+"with"
+],
+"a": 1,
+"why": "in addition to"
+},
+{
+"q": "쉼표가 올바른 것은?",
+"opts": [
+"However the price is high.",
+"However, the price is high.",
+"However; the price is high.",
+"However. the price is high."
+],
+"a": 1,
+"why": "연결어 뒤 쉼표"
+},
+{
+"q": "'therefore'의 구어체 대체어는?",
+"opts": [
+"but",
+"so",
+"also",
+"then"
+],
+"a": 1,
+"why": "so ≈ therefore"
+},
+{
+"q": "As a result ______ the delay, we lost a week.",
+"opts": [
+"to",
+"of",
+"for",
+"by"
+],
+"a": 1,
+"why": "as a result of"
+},
+{
+"q": "메일 3단 구조로 알맞은 순서는?",
+"opts": [
+"요청 → 문제 → 상황",
+"상황 → However 문제 → Therefore 요청",
+"문제 → 상황 → 문제",
+"요청만"
+],
+"a": 1,
+"why": "상황·문제·요청"
+},
+{
+"q": "'also'의 격식체는?",
+"opts": [
+"However",
+"In addition",
+"Therefore",
+"As a result"
+],
+"a": 1,
+"why": "in addition"
+}
+],
+"next": "EP.10 — 2호점 오픈 파티, 불청객 등장  ▸ 관계대명사"
+},
+{
+"no": "10",
+"title": "2호점 오픈 파티",
+"grammar": "관계대명사",
+"panels": [
+{
+"label": "토요일 18:00 · 2호점",
+"lines": [
+{
+"s": "D",
+"en": "Meet Aliya, the doctor {0:who} will run this branch.",
+"ko": "이 지점을 맡을 의사 Aliya예요."
+},
+{
+"s": "A",
+"en": "Nice to meet you, Dr. Aliya!",
+"ko": "반갑습니다, Aliya 선생님!"
+}
+]
+},
+{
+"label": "토요일 18:20 · 촬영실",
+"lines": [
+{
+"s": "A",
+"en": "This is the X-ray {1:which} survived the border.",
+"ko": "이게 국경을 살아 넘은 X-ray입니다."
+},
+{
+"s": "L",
+"en": "A real hero.",
+"ko": "진정한 영웅이네요."
+}
+]
+},
+{
+"label": "토요일 18:40 · VIP실",
+"lines": [
+{
+"s": "D",
+"en": "And this is the room {3:where} the minister had his scan.",
+"ko": "여기가 장관님이 촬영받으신 방이에요."
+},
+{
+"s": "A",
+"en": "A historic room.",
+"ko": "역사적인 방이군요."
+}
+]
+},
+{
+"label": "토요일 19:00 · 불청객",
+"lines": [
+{
+"s": "V",
+"en": "So you're the salesman {2:that} stole my client.",
+"ko": "당신이 내 고객을 뺏어간 영업이군."
+},
+{
+"s": "A",
+"en": "And you're the guy {0:who} sold the broken unit.",
+"ko": "그리고 당신은 고장 난 장비 판 분이고요."
+}
+]
+}
+],
+"red": [
+[
+"",
+"The engineer which came yesterday...",
+"The engineer who came yesterday...",
+"",
+"사람은 who"
+],
+[
+"",
+"This is the hospital which we work.",
+"This is the hospital where we work.",
+"",
+"장소 + 완전한 문장 → where"
+],
+[
+"",
+"the manual that I sent it to you",
+"the manual that I sent to you",
+"",
+"it 중복 금지"
+]
+],
+"explain": [
+{
+"w": "who",
+"why": "사람을 설명. 담당자·엔지니어·의사 소개.",
+"trap": "사람에 which 쓰지 않기",
+"ex": [
+[
+"This is Mr. Lee, who handles all CIS orders.",
+"CIS 주문을 모두 담당하는 이 부장입니다."
+],
+[
+"The doctor who ordered the CT is on leave.",
+"CT를 주문한 의사는 휴가 중입니다."
+]
+]
+},
+{
+"w": "which",
+"why": "사물을 설명. 장비·서류·소프트웨어.",
+"trap": "쉼표 뒤에는 that 대신 which",
+"ex": [
+[
+"We use a detector which weighs only 2.8 kg.",
+"무게가 2.8kg밖에 안 되는 디텍터를 사용합니다."
+],
+[
+"Please sign the contract, which I attached yesterday.",
+"어제 첨부한 계약서에 서명해 주세요."
+]
+]
+},
+{
+"w": "that",
+"why": "사람·사물 모두. 구어와 캐주얼 메일에서 who/which 대신.",
+"trap": "쉼표 뒤·전치사 뒤에는 that 불가",
+"ex": [
+[
+"This is the model that won the tender.",
+"이것이 입찰에 선정된 모델입니다."
+],
+[
+"The engineer that came yesterday fixed it.",
+"어제 온 엔지니어가 고쳤습니다."
+]
+]
+},
+{
+"w": "where",
+"why": "장소 설명. 뒤에 완전한 문장이 온다.",
+"trap": "where 뒤에 주어+동사 (where is → X)",
+"ex": [
+[
+"This is the clinic where we installed the first CT.",
+"첫 CT를 설치한 병원입니다."
+],
+[
+"The warehouse where the units are stored is in Almaty.",
+"장비가 보관된 창고는 알마티에 있습니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "The man ______ called you is our new agent.",
+"opts": [
+"which",
+"who",
+"where",
+"whose"
+],
+"a": 1,
+"why": "사람 → who"
+},
+{
+"q": "Here is the brochure ______ shows all models.",
+"opts": [
+"who",
+"where",
+"which",
+"whom"
+],
+"a": 2,
+"why": "사물 → which"
+},
+{
+"q": "Almaty is the city ______ our clinic is located.",
+"opts": [
+"which",
+"that",
+"where",
+"who"
+],
+"a": 2,
+"why": "장소 + 완전한 문장"
+},
+{
+"q": "This is the price list ______ you requested.",
+"opts": [
+"who",
+"where",
+"that",
+"whom"
+],
+"a": 2,
+"why": "사물 → that"
+},
+{
+"q": "생략할 수 있는 관계사는?",
+"opts": [
+"the engineer who installed it",
+"the detector that we discussed",
+"the room where we met",
+"the doctor who is busy"
+],
+"a": 1,
+"why": "뒤에 주어가 오면 생략 가능"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"The doctor who ordered it is busy.",
+"The doctor which ordered it is busy.",
+"The doctor that ordered it is busy.",
+"The doctor is busy."
+],
+"a": 1,
+"why": "사람에 which X"
+},
+{
+"q": "This is the hospital ______ we work.",
+"opts": [
+"which",
+"where",
+"that",
+"who"
+],
+"a": 1,
+"why": "장소"
+},
+{
+"q": "the manual that I sent ______ to you",
+"opts": [
+"it",
+"(없음)",
+"that",
+"which"
+],
+"a": 1,
+"why": "it 중복 금지"
+},
+{
+"q": "Please sign the contract, ______ I attached yesterday.",
+"opts": [
+"that",
+"which",
+"where",
+"who"
+],
+"a": 1,
+"why": "쉼표 뒤 which"
+},
+{
+"q": "She is the engineer ______ fixed the error.",
+"opts": [
+"which",
+"where",
+"who",
+"whose"
+],
+"a": 2,
+"why": "사람"
+}
+],
+"next": "EP.11 — 전무님이 알마티에 오신다  ▸ 동사 뒤 -ing vs to"
+},
+{
+"no": "11",
+"title": "전무님이 오신다",
+"grammar": "동사 뒤 -ing vs to",
+"panels": [
+{
+"label": "월요일 · 메일 알림",
+"lines": [
+{
+"s": "K",
+"en": "I {1:plan to} visit Almaty next week.",
+"ko": "다음 주에 알마티 방문할 계획이네."
+},
+{
+"s": "A",
+"en": "Next week?!",
+"ko": "다음 주요?!"
+}
+]
+},
+{
+"label": "월요일 · 답장",
+"lines": [
+{
+"s": "A",
+"en": "I {0:look forward to seeing} you, sir!",
+"ko": "뵙기를 고대하겠습니다, 전무님!"
+},
+{
+"s": "P",
+"en": "Your face doesn't look forward to it.",
+"ko": "얼굴은 전혀 고대하는 표정이 아닌데요."
+}
+]
+},
+{
+"label": "목요일 · 만찬 전",
+"lines": [
+{
+"s": "D",
+"en": "Please {2:avoid talking} about Viktor at dinner.",
+"ko": "저녁 식사 때 Viktor 얘기는 피해 주세요."
+},
+{
+"s": "A",
+"en": "Understood.",
+"ko": "알겠습니다."
+}
+]
+},
+{
+"label": "목요일 · 만찬",
+"lines": [
+{
+"s": "D",
+"en": "Your boss {3:agreed to give} us a five-year warranty!",
+"ko": "전무님이 5년 보증을 해 주시기로 했어요!"
+},
+{
+"s": "A",
+"en": "He {3:agreed to} WHAT?",
+"ko": "뭘 해 주신다고요?"
+}
+]
+}
+],
+"red": [
+[
+"",
+"I look forward to hear from you.",
+"I look forward to hearing from you.",
+"",
+"이 to는 전치사 → -ing"
+],
+[
+"",
+"We are considering to open a branch.",
+"We are considering opening a branch.",
+"",
+null
+],
+[
+"",
+"They agreed paying the costs.",
+"They agreed to pay the costs.",
+"",
+null
+]
+],
+"explain": [
+{
+"w": "look forward to -ing",
+"why": "메일 마무리 1위 표현. to는 전치사라 -ing.",
+"trap": "look forward to hear → X",
+"ex": [
+[
+"I look forward to hearing from you.",
+"회신 기다리겠습니다."
+],
+[
+"We look forward to working with you.",
+"함께 일하게 되기를 기대합니다."
+]
+]
+},
+{
+"w": "plan to",
+"why": "계획·결정·희망 동사는 to: plan, decide, hope, intend, expect.",
+"trap": "plan -ing → X",
+"ex": [
+[
+"We plan to attend Arab Health next year.",
+"내년 Arab Health에 참가할 계획입니다."
+],
+[
+"The clinic decided to buy two units.",
+"병원이 2대 구매를 결정했습니다."
+]
+]
+},
+{
+"w": "avoid -ing",
+"why": "avoid, consider, finish, suggest, mind 뒤는 -ing.",
+"trap": "avoid to → X",
+"ex": [
+[
+"We are considering opening a local office.",
+"현지 사무소 개설을 검토 중입니다."
+],
+[
+"Please avoid shipping on Fridays.",
+"금요일 선적은 피해 주세요."
+]
+]
+},
+{
+"w": "agree to",
+"why": "합의·약속·제안 동사는 to: agree, promise, offer, refuse.",
+"trap": "agree -ing → X",
+"ex": [
+[
+"They agreed to extend the warranty.",
+"그들은 보증 연장에 동의했습니다."
+],
+[
+"We offered to cover the shipping cost.",
+"운송비 부담을 제안했습니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "We look forward to ______ your order.",
+"opts": [
+"receive",
+"receiving",
+"received",
+"to receive"
+],
+"a": 1,
+"why": "to는 전치사"
+},
+{
+"q": "The client decided ______ two units.",
+"opts": [
+"buying",
+"buy",
+"to buy",
+"bought"
+],
+"a": 2,
+"why": "decide to"
+},
+{
+"q": "Please avoid ______ the device before calibration.",
+"opts": [
+"to use",
+"using",
+"use",
+"used"
+],
+"a": 1,
+"why": "avoid -ing"
+},
+{
+"q": "Don't forget ______ the invoice.",
+"opts": [
+"attaching",
+"attach",
+"to attach",
+"attached"
+],
+"a": 2,
+"why": "forget to = 할 일"
+},
+{
+"q": "I finished ______ the documents.",
+"opts": [
+"to check",
+"checking",
+"check",
+"checked"
+],
+"a": 1,
+"why": "finish -ing"
+},
+{
+"q": "We are considering ______ a branch.",
+"opts": [
+"to open",
+"open",
+"opening",
+"opened"
+],
+"a": 2,
+"why": "consider -ing"
+},
+{
+"q": "They agreed ______ the costs.",
+"opts": [
+"paying",
+"to pay",
+"pay",
+"paid"
+],
+"a": 1,
+"why": "agree to"
+},
+{
+"q": "We stopped ______ the old model. (생산을 멈췄다)",
+"opts": [
+"to produce",
+"producing",
+"produce",
+"produced"
+],
+"a": 1,
+"why": "stop -ing = 하던 것 멈춤"
+},
+{
+"q": "Please remember ______ both copies.",
+"opts": [
+"signing",
+"to sign",
+"sign",
+"signed"
+],
+"a": 1,
+"why": "remember to = 잊지 말고"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"I look forward to hearing from you.",
+"I look forward to hear from you.",
+"We plan to visit.",
+"We agreed to pay."
+],
+"a": 1,
+"why": "to + -ing"
+}
+],
+"next": "EP.12 — 시연 도중 화면이 꺼졌다  ▸ 가능성과 추측"
+},
+{
+"no": "12",
+"title": "시연 중 블랙아웃",
+"grammar": "가능성과 추측",
+"panels": [
+{
+"label": "월요일 · 2호점 시연",
+"lines": [
+{
+"s": "L",
+"en": "The screen went black! Is it broken?",
+"ko": "화면이 꺼졌어요! 고장인가요?"
+},
+{
+"s": "A",
+"en": "It {3:might} be the power supply.",
+"ko": "전원 공급 문제일지도 모릅니다."
+}
+]
+},
+{
+"label": "월요일 · 서울과 통화",
+"lines": [
+{
+"s": "J",
+"en": "It {2:may} be a cable. Check it first.",
+"ko": "케이블일 수 있어요. 먼저 확인해 보세요."
+},
+{
+"s": "A",
+"en": "Which cable? There are fifty.",
+"ko": "어떤 케이블? 50개는 되는데."
+}
+]
+},
+{
+"label": "월요일 · 재부팅",
+"lines": [
+{
+"s": "J",
+"en": "The system {0:can} restart in two minutes.",
+"ko": "시스템은 2분이면 재시작할 수 있어요."
+},
+{
+"s": "A",
+"en": "OK. We {1:could} try that.",
+"ko": "좋아. 그거 해 보면 되겠네."
+}
+]
+},
+{
+"label": "월요일 · 범인 발견",
+"lines": [
+{
+"s": "M",
+"en": "Sorry... I needed to charge my phone.",
+"ko": "죄송해요... 폰을 충전해야 해서."
+},
+{
+"s": "A",
+"en": "Marat, we {1:could} buy you a power bank.",
+"ko": "Marat, 보조배터리 사 줄 수도 있어요."
+}
+]
+}
+],
+"red": [
+[
+"",
+"It may arrives tomorrow.",
+"It may arrive tomorrow.",
+"",
+"조동사 뒤는 동사원형"
+],
+[
+"",
+"Maybe it will might be late.",
+"It might be late.",
+"",
+"조동사 두 개를 연달아 쓰지 않기"
+],
+[
+"",
+"We can to offer a discount.",
+"We can offer a discount.",
+"",
+null
+]
+],
+"explain": [
+{
+"w": "can",
+"why": "능력·기능·허가. 제품 사양 설명의 핵심.",
+"trap": "can to → X",
+"ex": [
+[
+"The detector can be used wirelessly.",
+"디텍터는 무선으로 사용할 수 있습니다."
+],
+[
+"You can download the manual from our site.",
+"매뉴얼은 저희 사이트에서 받을 수 있습니다."
+]
+]
+},
+{
+"w": "could",
+"why": "정중한 제안·가능성. '~할 수도 있겠습니다'.",
+"trap": "could는 can의 과거이기도 함",
+"ex": [
+[
+"We could arrange a remote session tomorrow.",
+"내일 원격 세션을 잡을 수도 있습니다."
+],
+[
+"The delay could affect the opening date.",
+"지연이 개원일에 영향을 줄 수 있습니다."
+]
+]
+},
+{
+"w": "may",
+"why": "50% 정도의 가능성. 공식 안내문에 자주.",
+"trap": "may be(일지도) ≠ maybe(아마도)",
+"ex": [
+[
+"Delivery may take up to ten days.",
+"배송은 최대 10일이 걸릴 수 있습니다."
+],
+[
+"Prices may change without notice.",
+"가격은 예고 없이 변경될 수 있습니다."
+]
+]
+},
+{
+"w": "might",
+"why": "낮은 가능성·조심스러운 추측. 원인을 단정하지 않을 때.",
+"trap": "might + 동사원형",
+"ex": [
+[
+"The error might be caused by a loose cable.",
+"오류는 케이블 접촉 불량 때문일지도 모릅니다."
+],
+[
+"We might need an extra day for testing.",
+"테스트에 하루가 더 필요할지도 모릅니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "The software ______ read DICOM files.",
+"opts": [
+"might",
+"can",
+"may to",
+"could be"
+],
+"a": 1,
+"why": "기능"
+},
+{
+"q": "We ______ meet on Friday if you prefer.",
+"opts": [
+"must",
+"could",
+"can't",
+"will be"
+],
+"a": 1,
+"why": "제안"
+},
+{
+"q": "The delay ______ be due to bad weather.",
+"opts": [
+"can",
+"may",
+"must to",
+"is"
+],
+"a": 1,
+"why": "추측"
+},
+{
+"q": "It ______ be the battery. It's brand new.",
+"opts": [
+"might",
+"may",
+"can't",
+"could"
+],
+"a": 2,
+"why": "그럴 리 없음"
+},
+{
+"q": "The parts might ______ next week.",
+"opts": [
+"arrives",
+"arrive",
+"arriving",
+"arrived"
+],
+"a": 1,
+"why": "조동사 + 동사원형"
+},
+{
+"q": "The email ______ gone to spam.",
+"opts": [
+"might have",
+"might",
+"can have",
+"may"
+],
+"a": 0,
+"why": "과거 추측"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"It may arrive tomorrow.",
+"It will might be late.",
+"It might be late.",
+"We can offer a discount."
+],
+"a": 1,
+"why": "조동사 중복"
+},
+{
+"q": "가장 확신이 높은 것은?",
+"opts": [
+"might",
+"could",
+"may",
+"will"
+],
+"a": 3,
+"why": "will > may > might"
+},
+{
+"q": "Prices ______ change without notice.",
+"opts": [
+"can't",
+"may",
+"must",
+"should"
+],
+"a": 1,
+"why": "공식 안내"
+},
+{
+"q": "We can ______ a discount.",
+"opts": [
+"to offer",
+"offer",
+"offering",
+"offered"
+],
+"a": 1,
+"why": "can + 동사원형"
+}
+],
+"next": "EP.13 — 전무님이 경위서를 요구하신다  ▸ 과거진행"
+},
+{
+"no": "13",
+"title": "경위서를 써라",
+"grammar": "과거진행",
+"panels": [
+{
+"label": "화요일 · 본사 화상회의",
+"lines": [
+{
+"s": "K",
+"en": "Explain. What happened during the demo?",
+"ko": "설명해 보게. 시연 중에 무슨 일이 있었나?"
+},
+{
+"s": "A",
+"en": "We {0:were scanning} a phantom {1:when} the screen went black.",
+"ko": "팬텀(시험용 모형) 촬영 중에 화면이 꺼졌습니다."
+}
+]
+},
+{
+"label": "화요일 · 회상",
+"lines": [
+{
+"s": "A",
+"en": "{2:While} Jun {0:was checking} the cables, Marat came in.",
+"ko": "Jun이 케이블을 확인하는 동안 Marat이 들어왔고요."
+},
+{
+"s": "M",
+"en": "I {0:was charging} my phone. It was at 2%!",
+"ko": "폰 충전 중이었어요. 2%였다고요!"
+}
+]
+},
+{
+"label": "화요일 · 추궁",
+"lines": [
+{
+"s": "A",
+"en": "I {3:was going to} tell you, sir, but...",
+"ko": "말씀드리려고 했는데, 그게..."
+},
+{
+"s": "K",
+"en": "But you {0:were hoping} I'd never find out.",
+"ko": "내가 모르길 바라고 있었겠지."
+}
+]
+},
+{
+"label": "화요일 · 반전",
+"lines": [
+{
+"s": "K",
+"en": "{2:While} you {0:were writing} this, Aliya sent me a thank-you letter.",
+"ko": "자네가 이걸 쓰는 동안 Aliya 원장이 감사 편지를 보냈네."
+},
+{
+"s": "A",
+"en": "...So I'm not fired?",
+"ko": "...그럼 저 안 잘리는 겁니까?"
+}
+]
+}
+],
+"red": [
+[
+"",
+"When the error occurred, we scanned a patient.",
+"When the error occurred, we were scanning a patient.",
+"",
+"배경 동작은 과거진행"
+],
+[
+"",
+"While I checked, the alarm was ringing.",
+"While I was checking, the alarm rang.",
+"",
+"긴 배경 = 진행형, 짧은 사건 = 과거형"
+],
+[
+"",
+"We were knowing the problem.",
+"We knew the problem.",
+"",
+null
+]
+],
+"explain": [
+{
+"w": "was -ing",
+"why": "그 시각에 진행 중이던 배경 동작.",
+"trap": "상태 동사(know, need)는 진행형 X",
+"ex": [
+[
+"At 10 a.m. we were still testing the unit.",
+"오전 10시에 우리는 아직 장비를 테스트 중이었습니다."
+],
+[
+"The engineer was updating the firmware.",
+"엔지니어가 펌웨어를 업데이트하고 있었습니다."
+]
+]
+},
+{
+"w": "when",
+"why": "진행 중 '갑자기' 생긴 사건. 사고·고장 경위서의 핵심 구조.",
+"trap": "when절은 짧은 사건 → 과거형",
+"ex": [
+[
+"We were scanning when the alarm went off.",
+"촬영 중에 경보가 울렸습니다."
+],
+[
+"I was writing the report when you called.",
+"보고서를 쓰고 있을 때 전화하셨습니다."
+]
+]
+},
+{
+"w": "while",
+"why": "긴 배경 동작을 강조. while + 과거진행.",
+"trap": "while 뒤는 진행형이 자연스러움",
+"ex": [
+[
+"While we were unpacking, we noticed a crack.",
+"포장을 풀던 중 균열을 발견했습니다."
+],
+[
+"While Jun was on site, the power failed twice.",
+"Jun이 현장에 있는 동안 전원이 두 번 나갔습니다."
+]
+]
+},
+{
+"w": "was going to",
+"why": "하려고 했지만 못 한 일. 변명·사정 설명에 필수.",
+"trap": "실제로는 안 했다는 뜻",
+"ex": [
+[
+"I was going to call you, but the meeting ran late.",
+"전화드리려 했는데 회의가 길어졌습니다."
+],
+[
+"We were going to ship on Monday, but customs closed.",
+"월요일에 선적하려 했는데 세관이 문을 닫았습니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "The engineer ______ the unit when I arrived.",
+"opts": [
+"repaired",
+"was repairing",
+"repairs",
+"has repaired"
+],
+"a": 1,
+"why": "배경 동작 진행형"
+},
+{
+"q": "While we ______ at customs, the boss called.",
+"opts": [
+"waited",
+"wait",
+"were waiting",
+"have waited"
+],
+"a": 2,
+"why": "while + 진행"
+},
+{
+"q": "I ______ send it, but I forgot.",
+"opts": [
+"was going to",
+"went to",
+"am going to",
+"will"
+],
+"a": 0,
+"why": "하려 했으나 못 함"
+},
+{
+"q": "The power ______ off while we were working.",
+"opts": [
+"was going",
+"went",
+"goes",
+"has gone"
+],
+"a": 1,
+"why": "짧은 사건 과거형"
+},
+{
+"q": "We ______ more information.",
+"opts": [
+"were needing",
+"needed",
+"was needing",
+"needing"
+],
+"a": 1,
+"why": "상태 동사"
+},
+{
+"q": "When the error occurred, we ______ a patient.",
+"opts": [
+"scanned",
+"were scanning",
+"scan",
+"have scanned"
+],
+"a": 1,
+"why": "배경"
+},
+{
+"q": "I ______ a strange noise.",
+"opts": [
+"was hearing",
+"heard",
+"hearing",
+"hear"
+],
+"a": 1,
+"why": "hear는 단순형"
+},
+{
+"q": "'I was going to call you.'의 뜻은?",
+"opts": [
+"전화했다",
+"전화하려 했지만 안 했다",
+"전화할 것이다",
+"전화 중이다"
+],
+"a": 1,
+"why": "미실행"
+},
+{
+"q": "______ I was checking, the alarm rang.",
+"opts": [
+"During",
+"While",
+"When",
+"Since"
+],
+"a": 1,
+"why": "while + 진행"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"We were knowing the problem.",
+"We knew the problem.",
+"We were testing it.",
+"We were going to test it."
+],
+"a": 0,
+"why": "know 진행형 X"
+}
+],
+"next": "EP.14 — 2호점 원장님이 화가 났다  ▸ 사과와 클레임 대응"
+},
+{
+"no": "14",
+"title": "2호점의 분노",
+"grammar": "사과와 클레임 대응",
+"panels": [
+{
+"label": "월요일 · 2호점",
+"lines": [
+{
+"s": "L",
+"en": "Two detectors are broken! This is unacceptable.",
+"ko": "디텍터가 두 개나 고장이에요! 말도 안 돼요."
+},
+{
+"s": "A",
+"en": "We {0:apologize for} the trouble.",
+"ko": "불편을 드려 사과드립니다."
+}
+]
+},
+{
+"label": "월요일 · 본사 통화",
+"lines": [
+{
+"s": "P",
+"en": "{1:Unfortunately}, the spare parts are out of stock.",
+"ko": "유감스럽게도 예비 부품이 품절이에요."
+},
+{
+"s": "A",
+"en": "Then send them from Seoul by air.",
+"ko": "그럼 서울에서 항공으로 보내 주세요."
+}
+]
+},
+{
+"label": "월요일 · 해결책",
+"lines": [
+{
+"s": "A",
+"en": "We'll {2:make sure} Jun is here tomorrow morning.",
+"ko": "내일 아침 Jun이 반드시 오도록 하겠습니다."
+},
+{
+"s": "L",
+"en": "Make sure he brings coffee.",
+"ko": "커피도 꼭 가져오라고 하세요."
+}
+]
+},
+{
+"label": "화요일 · 화해",
+"lines": [
+{
+"s": "A",
+"en": "{3:As a gesture of goodwill}, we'll extend the warranty.",
+"ko": "성의의 표시로 보증 기간을 연장해 드리겠습니다."
+},
+{
+"s": "L",
+"en": "...OK. You're forgiven. For now.",
+"ko": "...좋아요. 용서할게요. 일단은."
+}
+]
+}
+],
+"red": [
+[
+"",
+"We apologize the delay.",
+"We apologize for the delay.",
+"",
+"apologize 뒤에 for"
+],
+[
+"",
+"Sorry for your inconvenient.",
+"Sorry for the inconvenience.",
+"",
+"inconvenient(형용사) → inconvenience(명사)"
+],
+[
+"",
+"We'll make sure it will not happen.",
+"We'll make sure it doesn't happen again.",
+"",
+"make sure 뒤는 보통 현재형"
+]
+],
+"explain": [
+{
+"w": "apologize for",
+"why": "공식 사과. for 뒤에 명사/-ing.",
+"trap": "apologize the delay → X",
+"ex": [
+[
+"We apologize for the delay in responding.",
+"회신이 늦어 사과드립니다."
+],
+[
+"I apologize for any confusion caused by my email.",
+"제 메일로 혼란을 드려 사과드립니다."
+]
+]
+},
+{
+"w": "unfortunately",
+"why": "나쁜 소식 앞에 붙이는 완충어. 문장 맨 앞 + 쉼표.",
+"trap": "unfortunately는 이유가 아니라 유감 표시",
+"ex": [
+[
+"Unfortunately, we cannot offer a further discount.",
+"유감스럽게도 추가 할인은 어렵습니다."
+],
+[
+"Unfortunately, the part is on back order.",
+"유감스럽게도 해당 부품은 입고 대기 중입니다."
+]
+]
+},
+{
+"w": "make sure",
+"why": "재발 방지 약속. 'make sure (that) + 현재형'.",
+"trap": "make sure 뒤 will은 보통 생략",
+"ex": [
+[
+"We will make sure this does not happen again.",
+"재발하지 않도록 하겠습니다."
+],
+[
+"Please make sure the room is ready by Monday.",
+"월요일까지 방이 준비되도록 해 주세요."
+]
+]
+},
+{
+"w": "as a gesture of goodwill",
+"why": "보상 제안의 격식 표현. 책임 인정 없이 성의를 보일 때.",
+"trap": "a gesture of good will (띄어쓰기) 둘 다 사용",
+"ex": [
+[
+"As a gesture of goodwill, we will waive the service fee.",
+"성의의 표시로 서비스 비용을 면제해 드리겠습니다."
+],
+[
+"As a gesture of goodwill, we'll ship the spare part free of charge.",
+"성의의 표시로 예비 부품을 무상 발송하겠습니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "We apologize ______ the late delivery.",
+"opts": [
+"about",
+"for",
+"of",
+"to"
+],
+"a": 1,
+"why": "apologize for"
+},
+{
+"q": "______, the flight has been cancelled.",
+"opts": [
+"Fortunately",
+"Unfortunately",
+"However",
+"Luckily"
+],
+"a": 1,
+"why": "나쁜 소식"
+},
+{
+"q": "We will make ______ the unit is tested before shipping.",
+"opts": [
+"sure",
+"sure that will",
+"certainly",
+"ensure"
+],
+"a": 0,
+"why": "make sure (that)"
+},
+{
+"q": "As a gesture of ______, we offer free training.",
+"opts": [
+"goodwill",
+"good",
+"will",
+"kindness will"
+],
+"a": 0,
+"why": "goodwill"
+},
+{
+"q": "Sorry for the ______.",
+"opts": [
+"inconvenient",
+"inconvenience",
+"inconveniently",
+"unconvenient"
+],
+"a": 1,
+"why": "명사형"
+},
+{
+"q": "가장 강한 사과는?",
+"opts": [
+"Sorry for the delay.",
+"We apologize for the delay.",
+"We sincerely apologize for the error.",
+"Oops."
+],
+"a": 2,
+"why": "sincerely"
+},
+{
+"q": "원인 확인 전에 쓰는 안전한 표현은?",
+"opts": [
+"It's our fault.",
+"We regret any inconvenience.",
+"Never again!",
+"Not our problem."
+],
+"a": 1,
+"why": "책임 인정 없이 유감"
+},
+{
+"q": "We'll make sure it ______ again.",
+"opts": [
+"will not happen",
+"doesn't happen",
+"not happen",
+"happens"
+],
+"a": 1,
+"why": "현재형"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"We apologize for the delay.",
+"We apologize the delay.",
+"We apologize for being late.",
+"I apologize for the confusion."
+],
+"a": 1,
+"why": "for 필요"
+},
+{
+"q": "클레임 대응 순서로 알맞은 것은?",
+"opts": [
+"변명 → 사과",
+"사과 → 원인 → 조치 → 재발 방지",
+"조치만",
+"재발 방지 → 사과"
+],
+"a": 1,
+"why": "표준 순서"
+}
+],
+"next": "EP.15 — 본사가 가격 인상을 통보했다  ▸ 숫자와 가격 표현"
+},
+{
+"no": "15",
+"title": "가격이 오른다고요?",
+"grammar": "숫자와 가격",
+"panels": [
+{
+"label": "월요일 · 본사 공지",
+"lines": [
+{
+"s": "K",
+"en": "From January, prices will {0:increase by} 7%.",
+"ko": "1월부터 가격이 7% 인상되네."
+},
+{
+"s": "A",
+"en": "Dana is going to kill me.",
+"ko": "Dana 원장님이 절 죽이려 하실 겁니다."
+}
+]
+},
+{
+"label": "화요일 · 원장실",
+"lines": [
+{
+"s": "A",
+"en": "The new price is $46,000 {3:per unit}.",
+"ko": "새 가격은 대당 46,000달러입니다."
+},
+{
+"s": "D",
+"en": "You said $43,000!",
+"ko": "43,000달러라면서요!"
+}
+]
+},
+{
+"label": "화요일 · 설득",
+"lines": [
+{
+"s": "A",
+"en": "But the lead time has {1:dropped to} four weeks.",
+"ko": "대신 납기가 4주로 줄었습니다."
+},
+{
+"s": "D",
+"en": "Hmm. That's useful.",
+"ko": "음. 그건 쓸모 있네요."
+}
+]
+},
+{
+"label": "화요일 · 반전",
+"lines": [
+{
+"s": "D",
+"en": "Then I'll order {2:around} twenty units before January.",
+"ko": "그럼 1월 전에 20대쯤 주문할게요."
+},
+{
+"s": "A",
+"en": "...Twenty?!",
+"ko": "...20대요?!"
+}
+]
+}
+],
+"red": [
+[
+"",
+"We need 20 unit.",
+"We need 20 units.",
+"",
+"2 이상은 복수형"
+],
+[
+"",
+"It costs $12,000 for unit.",
+"It costs $12,000 per unit.",
+"",
+null
+],
+[
+"",
+"a three-years warranty",
+"a three-year warranty",
+"",
+"명사 앞 수식어는 단수형"
+]
+],
+"explain": [
+{
+"w": "increase by",
+"why": "'~만큼' 변화량. 퍼센트·금액 차이에 by.",
+"trap": "by = 차이, to = 결과",
+"ex": [
+[
+"Material costs have increased by 12% this year.",
+"올해 원자재 비용이 12% 올랐습니다."
+],
+[
+"We reduced the lead time by two weeks.",
+"납기를 2주 단축했습니다."
+]
+]
+},
+{
+"w": "drop to",
+"why": "결과 수치. '~로 떨어지다/오르다'.",
+"trap": "rise to / fall to / increase to",
+"ex": [
+[
+"The price dropped to $9,500 per unit.",
+"가격이 대당 9,500달러로 떨어졌습니다."
+],
+[
+"Sales rose to 300 units last year.",
+"작년 판매량이 300대로 늘었습니다."
+]
+]
+},
+{
+"w": "around",
+"why": "대략. about / approximately / roughly 모두 가능.",
+"trap": "숫자 앞에 위치",
+"ex": [
+[
+"The installation takes around three days.",
+"설치에 약 3일이 걸립니다."
+],
+[
+"We expect approximately 20 orders next quarter.",
+"다음 분기 약 20건의 주문을 예상합니다."
+]
+]
+},
+{
+"w": "per unit",
+"why": "단가. per unit / each / per piece.",
+"trap": "for unit → X",
+"ex": [
+[
+"The price is $12,000 per unit, FOB Busan.",
+"가격은 대당 12,000달러, FOB 부산 조건입니다."
+],
+[
+"Shipping costs about $400 per unit.",
+"운송비는 대당 약 400달러입니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "Our sales rose ______ 20% last year.",
+"opts": [
+"to",
+"by",
+"at",
+"of"
+],
+"a": 1,
+"why": "차이 → by"
+},
+{
+"q": "The price fell ______ $9,000.",
+"opts": [
+"by",
+"at",
+"to",
+"of"
+],
+"a": 2,
+"why": "결과 → to"
+},
+{
+"q": "We sold ______ 300 units in total.",
+"opts": [
+"around",
+"per",
+"by",
+"each"
+],
+"a": 0,
+"why": "대략"
+},
+{
+"q": "The cost is $45 ______ unit.",
+"opts": [
+"for",
+"per",
+"by",
+"at"
+],
+"a": 1,
+"why": "per unit"
+},
+{
+"q": "The price is two ______ dollars.",
+"opts": [
+"thousands",
+"thousand",
+"thousand of",
+"thousands of"
+],
+"a": 1,
+"why": "thousand 단수"
+},
+{
+"q": "We need 20 ______.",
+"opts": [
+"unit",
+"units",
+"unit's",
+"of unit"
+],
+"a": 1,
+"why": "복수"
+},
+{
+"q": "a ______ warranty",
+"opts": [
+"three-years",
+"three year's",
+"three-year",
+"three years"
+],
+"a": 2,
+"why": "명사 앞 단수"
+},
+{
+"q": "3.5%를 읽으면?",
+"opts": [
+"three comma five",
+"three point five percent",
+"three and five",
+"three five"
+],
+"a": 1,
+"why": "point"
+},
+{
+"q": "Q3는?",
+"opts": [
+"the third quarter",
+"quarter three month",
+"third quality",
+"question three"
+],
+"a": 0,
+"why": "분기"
+},
+{
+"q": "Prices increased ______ $50,000. (그 금액이 됐다)",
+"opts": [
+"by",
+"to",
+"at",
+"for"
+],
+"a": 1,
+"why": "결과"
+}
+],
+"next": "EP.16 — 20대는 언제 오나요? 재고는 단 3대  ▸ 간접의문문"
+},
+{
+"no": "16",
+"title": "20대, 언제 와요?",
+"grammar": "간접의문문",
+"panels": [
+{
+"label": "월요일 · 원장실",
+"lines": [
+{
+"s": "D",
+"en": "{0:Could you tell me} when the 20 units will arrive?",
+"ko": "20대가 언제 도착하는지 알려 주실래요?"
+},
+{
+"s": "A",
+"en": "Let me check with Seoul.",
+"ko": "서울에 확인해 볼게요."
+}
+]
+},
+{
+"label": "월요일 · 본사 창고",
+"lines": [
+{
+"s": "A",
+"en": "{2:Do you know} how many units are in stock?",
+"ko": "재고가 몇 대인지 아세요?"
+},
+{
+"s": "P",
+"en": "Exactly three.",
+"ko": "정확히 세 대."
+}
+]
+},
+{
+"label": "월요일 · 본사 화상통화",
+"lines": [
+{
+"s": "A",
+"en": "{1:I wonder if} the factory could add a night shift.",
+"ko": "공장이 야간 근무를 추가할 수 있을지 궁금합니다."
+},
+{
+"s": "K",
+"en": "{3:I'd like to know} who will pay for it.",
+"ko": "그 비용은 누가 내는지 알고 싶군."
+}
+]
+},
+{
+"label": "화요일 · 원장실",
+"lines": [
+{
+"s": "D",
+"en": "{3:I'd like to know} why you look so tired.",
+"ko": "왜 그렇게 피곤해 보이는지 알고 싶네요."
+},
+{
+"s": "A",
+"en": "{0:Could you tell me} if the coffee here is free?",
+"ko": "여기 커피가 무료인지 알려 주실래요?"
+}
+]
+}
+],
+"red": [
+[
+"",
+"Could you tell me when will it arrive?",
+"Could you tell me when it will arrive?",
+"",
+"간접의문문은 주어 + 동사"
+],
+[
+"",
+"Do you know where is the office?",
+"Do you know where the office is?",
+"",
+null
+],
+[
+"",
+"I wonder did you get my email.",
+"I wonder if you got my email.",
+"",
+"yes/no 질문은 if / whether"
+]
+],
+"explain": [
+{
+"w": "Could you tell me ~?",
+"why": "정보 요청을 부드럽게. 뒤는 평서문 어순.",
+"trap": "Could you tell me when will it → X",
+"ex": [
+[
+"Could you tell me who the contact person is?",
+"담당자가 누구인지 알려 주시겠어요?"
+],
+[
+"Could you tell me how long the warranty is?",
+"보증 기간이 얼마인지 알려 주시겠어요?"
+]
+]
+},
+{
+"w": "I wonder if ~",
+"why": "yes/no 질문을 아주 조심스럽게. 재촉·부탁에 좋다.",
+"trap": "if / whether 뒤 평서문",
+"ex": [
+[
+"I wonder if you've had time to review the proposal.",
+"제안서를 검토하셨는지 궁금합니다."
+],
+[
+"I was wondering if we could reschedule.",
+"일정을 조정할 수 있을지 궁금합니다."
+]
+]
+},
+{
+"w": "Do you know ~?",
+"why": "구어에서 가장 흔한 간접 질문.",
+"trap": "Do you know where is → X",
+"ex": [
+[
+"Do you know when the truck will arrive?",
+"트럭이 언제 도착하는지 아세요?"
+],
+[
+"Do you know if the ministry is open on Saturday?",
+"보건부가 토요일에 여는지 아세요?"
+]
+]
+},
+{
+"w": "I'd like to know ~",
+"why": "격식 있는 메일 질문.",
+"trap": "I'd like to know that → X (의문사/if)",
+"ex": [
+[
+"I'd like to know what documents are required.",
+"어떤 서류가 필요한지 알고 싶습니다."
+],
+[
+"I'd like to know whether the price includes delivery.",
+"가격에 배송이 포함되는지 알고 싶습니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "Could you tell me what time the meeting ______?",
+"opts": [
+"does start",
+"starts",
+"start",
+"is start"
+],
+"a": 1,
+"why": "평서문 어순"
+},
+{
+"q": "Do you know where the engineer ______?",
+"opts": [
+"is",
+"is he",
+"be",
+"does"
+],
+"a": 0,
+"why": "where + 주어 + 동사"
+},
+{
+"q": "I wonder ______ you received the samples.",
+"opts": [
+"that",
+"if",
+"did",
+"what"
+],
+"a": 1,
+"why": "yes/no → if"
+},
+{
+"q": "I'd like to know how much it ______.",
+"opts": [
+"cost",
+"does cost",
+"costs",
+"costing"
+],
+"a": 2,
+"why": "3인칭 현재형"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"Could you tell me where the warehouse is?",
+"Could you tell me where is the warehouse?",
+"Do you know where the warehouse is?",
+"I wonder where the warehouse is."
+],
+"a": 1,
+"why": "어순"
+},
+{
+"q": "'Is the price final?' 의 간접 형태는?",
+"opts": [
+"Could you tell me is the price final?",
+"Could you tell me if the price is final?",
+"Could you tell me the price is final?",
+"Could you tell me whether is the price final?"
+],
+"a": 1,
+"why": "if + 평서문"
+},
+{
+"q": "I wonder ______ you got my email.",
+"opts": [
+"did",
+"if",
+"that",
+"do"
+],
+"a": 1,
+"why": "if"
+},
+{
+"q": "'Did you receive it?' → I wonder ______.",
+"opts": [
+"did you receive it",
+"whether you received it",
+"if did you receive it",
+"you received it"
+],
+"a": 1,
+"why": "did 제거, 시제 반영"
+},
+{
+"q": "가장 격식 있는 질문은?",
+"opts": [
+"Where's the invoice?",
+"I'd like to know where the invoice is.",
+"Invoice where?",
+"Tell me where the invoice is."
+],
+"a": 1,
+"why": "I'd like to know"
+},
+{
+"q": "Could you let me know when we ______ expect the payment?",
+"opts": [
+"can",
+"can we",
+"could we",
+"do"
+],
+"a": 0,
+"why": "평서문 어순"
+}
+],
+"next": "EP.17 — 서울·알마티 운명의 3자 회의  ▸ 회의 표현"
+},
+{
+"no": "17",
+"title": "운명의 3자 회의",
+"grammar": "회의 표현",
+"panels": [
+{
+"label": "수요일 10:00 · 회의 시작",
+"lines": [
+{
+"s": "A",
+"en": "{0:Let's start with} the delivery schedule.",
+"ko": "납품 일정부터 시작하겠습니다."
+},
+{
+"s": "D",
+"en": "Good. My favorite topic.",
+"ko": "좋아요. 제가 제일 좋아하는 주제죠."
+}
+]
+},
+{
+"label": "수요일 10:10 · 본사 발언",
+"lines": [
+{
+"s": "K",
+"en": "{1:I'd like to add} that we can ship ten units in December.",
+"ko": "12월에 10대 선적 가능하다는 점을 덧붙이겠네."
+},
+{
+"s": "D",
+"en": "Only ten?",
+"ko": "10대만요?"
+}
+]
+},
+{
+"label": "수요일 10:20 · 확인",
+"lines": [
+{
+"s": "D",
+"en": "{2:Could you clarify} when the other ten will arrive?",
+"ko": "나머지 10대가 언제 오는지 명확히 해 주실래요?"
+},
+{
+"s": "P",
+"en": "Mid-February. Probably.",
+"ko": "2월 중순이요. 아마도."
+}
+]
+},
+{
+"label": "수요일 10:40 · 정리",
+"lines": [
+{
+"s": "A",
+"en": "{3:To sum up}, ten in December and ten in February.",
+"ko": "정리하면, 12월 10대, 2월 10대입니다."
+},
+{
+"s": "D",
+"en": "And no more \"probably\".",
+"ko": "그리고 '아마도'는 이제 그만."
+}
+]
+}
+],
+"red": [
+[
+"",
+"Can you explain me the terms?",
+"Can you explain the terms to me?",
+"",
+"explain + 내용 + to 사람"
+],
+[
+"",
+"To summary, we agree.",
+"To sum up, we agree.",
+"",
+"To summarize도 가능"
+],
+[
+"",
+"Let's discuss about the price.",
+"Let's discuss the price.",
+"",
+"discuss 뒤에 about 없음"
+]
+],
+"explain": [
+{
+"w": "Let's start with ~",
+"why": "회의 시작. 첫 안건을 지정하면 진행 주도권을 잡는다.",
+"trap": "Let's start from → 어색",
+"ex": [
+[
+"Let's start with the open issues from last week.",
+"지난주 미결 사항부터 시작하죠."
+],
+[
+"Shall we start with the budget?",
+"예산부터 시작할까요?"
+]
+]
+},
+{
+"w": "I'd like to add ~",
+"why": "의견 덧붙이기. 끼어들 때 정중하게.",
+"trap": "I'd like to add that + 문장",
+"ex": [
+[
+"I'd like to add that the price includes installation.",
+"가격에 설치가 포함된다는 점을 덧붙입니다."
+],
+[
+"May I add something here?",
+"여기서 한 가지 덧붙여도 될까요?"
+]
+]
+},
+{
+"w": "Could you clarify ~?",
+"why": "모호한 말을 확인. 오해를 막는 가장 중요한 문장.",
+"trap": "clarify + 명사 / what you mean by",
+"ex": [
+[
+"Could you clarify what you mean by 'soon'?",
+"'곧'이 무슨 뜻인지 명확히 해 주시겠어요?"
+],
+[
+"Just to clarify, the deadline is the 15th?",
+"확인차 여쭙는데, 마감이 15일이죠?"
+]
+]
+},
+{
+"w": "To sum up, ~",
+"why": "회의 마무리 정리. 합의 사항을 한 문장으로.",
+"trap": "To summary → X",
+"ex": [
+[
+"To sum up, we ship ten in December and ten in February.",
+"정리하면 12월 10대, 2월 10대 선적입니다."
+],
+[
+"To summarize, the next step is the signed PO.",
+"요약하면 다음 단계는 서명된 발주서입니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "Let's start ______ the budget.",
+"opts": [
+"from",
+"with",
+"at",
+"on"
+],
+"a": 1,
+"why": "start with"
+},
+{
+"q": "I'd like to ______ that the price includes VAT.",
+"opts": [
+"add",
+"plus",
+"say more",
+"addition"
+],
+"a": 0,
+"why": "add that"
+},
+{
+"q": "Could you ______ what you mean by 'final'?",
+"opts": [
+"clear",
+"clarify",
+"explain me",
+"clarity"
+],
+"a": 1,
+"why": "clarify"
+},
+{
+"q": "To ______ up, we need two more weeks.",
+"opts": [
+"sum",
+"summary",
+"total",
+"add"
+],
+"a": 0,
+"why": "sum up"
+},
+{
+"q": "Let's ______ the schedule.",
+"opts": [
+"discuss about",
+"discuss",
+"discuss on",
+"discussing"
+],
+"a": 1,
+"why": "discuss + 목적어"
+},
+{
+"q": "Can you explain ______?",
+"opts": [
+"me the terms",
+"the terms to me",
+"to me terms",
+"me about terms"
+],
+"a": 1,
+"why": "explain + 것 + to 사람"
+},
+{
+"q": "다음 안건으로 넘어갈 때는?",
+"opts": [
+"Let's move on to ~",
+"Let's come back",
+"Let's start",
+"To sum up"
+],
+"a": 0,
+"why": "move on to"
+},
+{
+"q": "보류할 때는?",
+"opts": [
+"Let's move on",
+"Let's come back to that later.",
+"To sum up",
+"Shall we start?"
+],
+"a": 1,
+"why": "come back to"
+},
+{
+"q": "정중하게 끼어들 때는?",
+"opts": [
+"Stop.",
+"Sorry to interrupt, but could I add something?",
+"Listen to me.",
+"Wait."
+],
+"a": 1,
+"why": "sorry to interrupt"
+},
+{
+"q": "회의록을 보내겠다는 말은?",
+"opts": [
+"I'll send the minutes.",
+"I'll send the hours.",
+"I'll send the notes paper.",
+"I'll send the meeting."
+],
+"a": 0,
+"why": "minutes = 회의록"
+}
+],
+"next": "EP.18 — Viktor의 마지막 반격  ▸ 동의와 반대"
+},
+{
+"no": "18",
+"title": "Viktor의 반격",
+"grammar": "동의와 반대",
+"panels": [
+{
+"label": "목요일 · 원장실",
+"lines": [
+{
+"s": "V",
+"en": "Cancel the other ten. I can deliver tomorrow, 20% cheaper.",
+"ko": "나머지 10대 취소하세요. 내일 납품, 20% 싸게."
+},
+{
+"s": "D",
+"en": "{3:I'm not sure about that}.",
+"ko": "글쎄요."
+}
+]
+},
+{
+"label": "목요일 · 긴급 미팅",
+"lines": [
+{
+"s": "D",
+"en": "Viktor says your delivery is too slow.",
+"ko": "Viktor 말로는 당신 납기가 너무 느리대요."
+},
+{
+"s": "A",
+"en": "{2:I see your point, but} his units break every month.",
+"ko": "무슨 말인지 알지만, 그쪽 장비는 매달 고장 납니다."
+}
+]
+},
+{
+"label": "목요일 · 대안",
+"lines": [
+{
+"s": "A",
+"en": "What if we lend you two demo units until February?",
+"ko": "2월까지 데모 장비 2대를 빌려드리면 어떨까요?"
+},
+{
+"s": "D",
+"en": "{1:That makes sense}.",
+"ko": "일리가 있네요."
+}
+]
+},
+{
+"label": "금요일 · 결론",
+"lines": [
+{
+"s": "D",
+"en": "Sorry, Viktor. {0:I agree} with Artyom.",
+"ko": "미안해요 Viktor. 저는 Artyom 의견에 동의해요."
+},
+{
+"s": "V",
+"en": "You'll regret this!",
+"ko": "후회하게 될 겁니다!"
+}
+]
+}
+],
+"red": [
+[
+"",
+"I am agree with you.",
+"I agree with you.",
+"",
+"agree는 동사 → am 불필요"
+],
+[
+"",
+"It makes a sense.",
+"It makes sense.",
+"",
+"sense 앞에 a 없음"
+],
+[
+"",
+"I'm not agree.",
+"I don't agree.",
+"",
+null
+]
+],
+"explain": [
+{
+"w": "I agree",
+"why": "동의. with 사람 / that 문장. 'I am agree'는 흔한 실수.",
+"trap": "agree는 동사 → am 불필요",
+"ex": [
+[
+"I agree with your proposal.",
+"제안에 동의합니다."
+],
+[
+"I agree that we should start with the pilot unit.",
+"파일럿 장비부터 시작하자는 데 동의합니다."
+]
+]
+},
+{
+"w": "That makes sense",
+"why": "상대 논리를 인정. 협상에서 분위기를 부드럽게.",
+"trap": "a sense → X",
+"ex": [
+[
+"That makes sense. Let's go with option B.",
+"일리 있네요. B안으로 가죠."
+],
+[
+"It makes sense to test it before the full order.",
+"전량 주문 전에 테스트하는 게 합리적입니다."
+]
+]
+},
+{
+"w": "I see your point, but",
+"why": "공감 후 반대. 직접적인 No를 피하는 완충.",
+"trap": "but 뒤에 반드시 이유",
+"ex": [
+[
+"I see your point, but the budget is fixed.",
+"말씀은 이해하지만 예산이 고정되어 있습니다."
+],
+[
+"I understand, but we can't change the terms this year.",
+"이해합니다만 올해는 조건을 바꿀 수 없습니다."
+]
+]
+},
+{
+"w": "I'm not sure about that",
+"why": "부드러운 반대·의심. 바로 거절하지 않고 시간을 번다.",
+"trap": "I'm not sure that → 뜻이 달라짐",
+"ex": [
+[
+"I'm not sure about that. Let me check the data.",
+"글쎄요. 데이터를 확인해 보겠습니다."
+],
+[
+"I'm not sure about the timeline.",
+"일정은 확신이 없습니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "I ______ with you on the delivery date.",
+"opts": [
+"am agree",
+"agree",
+"agreeing",
+"am agreed"
+],
+"a": 1,
+"why": "agree는 동사"
+},
+{
+"q": "That ______ sense. Let's do it.",
+"opts": [
+"makes a",
+"makes",
+"is",
+"has"
+],
+"a": 1,
+"why": "makes sense"
+},
+{
+"q": "I see your ______, but we need a lower price.",
+"opts": [
+"idea",
+"point",
+"opinion",
+"side"
+],
+"a": 1,
+"why": "see your point"
+},
+{
+"q": "I'm not ______ about that. It sounds risky.",
+"opts": [
+"agree",
+"sure",
+"certain that",
+"know"
+],
+"a": 1,
+"why": "not sure about"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"I agree with you.",
+"I am agree with you.",
+"I agree that it's late.",
+"I don't agree."
+],
+"a": 1,
+"why": "am 불필요"
+},
+{
+"q": "가장 강한 동의는?",
+"opts": [
+"I suppose so.",
+"Partly, yes.",
+"I completely agree.",
+"Maybe."
+],
+"a": 2,
+"why": "completely"
+},
+{
+"q": "가장 정중한 반대는?",
+"opts": [
+"You are wrong.",
+"No way.",
+"I'm afraid I disagree.",
+"That's stupid."
+],
+"a": 2,
+"why": "I'm afraid"
+},
+{
+"q": "부분 동의는?",
+"opts": [
+"I agree up to a point, but ~",
+"I completely agree.",
+"No.",
+"Yes, totally."
+],
+"a": 0,
+"why": "up to a point"
+},
+{
+"q": "대안 제시 표현은?",
+"opts": [
+"What if we split the shipment?",
+"No.",
+"I agree.",
+"Never."
+],
+"a": 0,
+"why": "What if"
+},
+{
+"q": "'I'm not sure about that.'의 역할은?",
+"opts": [
+"강한 동의",
+"부드러운 반대",
+"질문",
+"사과"
+],
+"a": 1,
+"why": "완곡한 반대"
+}
+],
+"next": "EP.19 — 데모 장비 긴급 공수, 그런데 그날은 Jun의 생일  ▸ 사역동사"
+},
+{
+"no": "19",
+"title": "데모 장비를 보내라",
+"grammar": "사역동사",
+"panels": [
+{
+"label": "금요일 · 본사 통화",
+"lines": [
+{
+"s": "A",
+"en": "Can we {0:have} two demo units {0:shipped} by air?",
+"ko": "데모 장비 2대 항공으로 보내 줄 수 있을까요?"
+},
+{
+"s": "P",
+"en": "By air? Expensive. But OK.",
+"ko": "항공? 비싼데. 그래도 오케이."
+}
+]
+},
+{
+"label": "금요일 · 일정 지시",
+"lines": [
+{
+"s": "A",
+"en": "I'll {1:get} Jun {1:to install} them on Monday.",
+"ko": "월요일에 Jun이 설치하도록 할게요."
+},
+{
+"s": "J",
+"en": "Monday? That's my birthday.",
+"ko": "월요일요? 제 생일인데요."
+}
+]
+},
+{
+"label": "월요일 · 설치 현장",
+"lines": [
+{
+"s": "D",
+"en": "The new rule {2:makes} us {2:test} every unit twice.",
+"ko": "새 규정 때문에 모든 장비를 두 번 검사해야 해요."
+},
+{
+"s": "J",
+"en": "Then {3:let} me {3:start} now.",
+"ko": "그럼 지금 시작하게 해 주세요."
+}
+]
+},
+{
+"label": "월요일 · 생일 저녁",
+"lines": [
+{
+"s": "D",
+"en": "Happy birthday, Jun! {3:Let} us {3:buy} you dinner.",
+"ko": "생일 축하해요 Jun! 저녁은 저희가 살게요."
+},
+{
+"s": "J",
+"en": "Best birthday ever.",
+"ko": "최고의 생일이에요."
+}
+]
+}
+],
+"red": [
+[
+"",
+"Let me to know your opinion.",
+"Let me know your opinion.",
+"",
+"let 뒤에 to 없음"
+],
+[
+"",
+"We will have the unit replace.",
+"We will have the unit replaced.",
+"",
+"물건이 '받는' 쪽 → p.p."
+],
+[
+"",
+"I will get him call you.",
+"I will get him to call you.",
+"",
+"get + 사람 + to"
+]
+],
+"explain": [
+{
+"w": "have + 물건 + p.p.",
+"why": "서비스를 '받다'. 수리·점검·교체를 남이 해 주는 상황.",
+"trap": "물건 뒤는 p.p. (have it repair → X)",
+"ex": [
+[
+"We'll have the detector recalibrated next week.",
+"다음 주에 디텍터를 재교정받겠습니다."
+],
+[
+"Please have the room cleaned before installation.",
+"설치 전에 방을 청소해 두세요."
+]
+]
+},
+{
+"w": "get + 사람 + to",
+"why": "누군가가 하도록 부탁·설득. 메일에서 '~가 연락드리게 하겠습니다'.",
+"trap": "get + 사람 + to 동사원형",
+"ex": [
+[
+"I'll get our engineer to call you this afternoon.",
+"오늘 오후 엔지니어가 전화드리도록 하겠습니다."
+],
+[
+"Can you get the driver to wait at the gate?",
+"기사님이 정문에서 기다리게 해 주시겠어요?"
+]
+]
+},
+{
+"w": "make + 사람 + 동사",
+"why": "강제·규정. '~하게 만들다'.",
+"trap": "make 뒤에는 to 없음",
+"ex": [
+[
+"The regulation makes us test every unit twice.",
+"규정상 모든 장비를 두 번 검사해야 합니다."
+],
+[
+"Customs made us open every box.",
+"세관이 모든 상자를 열게 했습니다."
+]
+]
+},
+{
+"w": "let + 사람 + 동사",
+"why": "허락·제안. 메일의 Let me know / Let me check.",
+"trap": "let 뒤에 to 없음",
+"ex": [
+[
+"Let me know if you need anything else.",
+"더 필요하신 게 있으면 알려 주세요."
+],
+[
+"Let me check with the factory and get back to you.",
+"공장에 확인하고 회신드리겠습니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "We need to have the X-ray ______.",
+"opts": [
+"check",
+"to check",
+"checked",
+"checking"
+],
+"a": 2,
+"why": "have + 물건 + p.p."
+},
+{
+"q": "I'll get my manager ______ the contract.",
+"opts": [
+"sign",
+"to sign",
+"signing",
+"signed"
+],
+"a": 1,
+"why": "get + 사람 + to"
+},
+{
+"q": "______ me know if you have any questions.",
+"opts": [
+"Make",
+"Let",
+"Get",
+"Have"
+],
+"a": 1,
+"why": "let me know"
+},
+{
+"q": "The rule ______ us test each unit.",
+"opts": [
+"lets",
+"gets",
+"makes",
+"has"
+],
+"a": 2,
+"why": "강제"
+},
+{
+"q": "We had our engineer ______ it.",
+"opts": [
+"to repair",
+"repair",
+"repairing",
+"repaired"
+],
+"a": 1,
+"why": "have + 사람 + 동사원형"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"Let me know.",
+"Let me to know.",
+"Let me check.",
+"Let me explain."
+],
+"a": 1,
+"why": "let + 동사원형"
+},
+{
+"q": "We will have the unit ______.",
+"opts": [
+"replace",
+"to replace",
+"replaced",
+"replacing"
+],
+"a": 2,
+"why": "p.p."
+},
+{
+"q": "I will get him ______ you.",
+"opts": [
+"call",
+"to call",
+"calling",
+"called"
+],
+"a": 1,
+"why": "get + to"
+},
+{
+"q": "'확인 후 회신드리겠습니다'는?",
+"opts": [
+"Let me check and get back to you.",
+"Make me check.",
+"Have me check.",
+"Get me check."
+],
+"a": 0,
+"why": "let me check"
+},
+{
+"q": "Customs ______ us open every box.",
+"opts": [
+"let",
+"made",
+"got",
+"had to"
+],
+"a": 1,
+"why": "강제 과거"
+}
+],
+"next": "EP.20 시즌 피날레 — 새벽 2시의 전화  ▸ 전화 영어"
+},
+{
+"no": "20",
+"title": "새벽 2시의 전화",
+"grammar": "전화 영어",
+"panels": [
+{
+"label": "토요일 02:00 · 호텔",
+"lines": [
+{
+"s": "A",
+"en": "Hello? This is Artyom...",
+"ko": "여보세요? 아르툠입니다..."
+},
+{
+"s": "D",
+"en": "{0:I'm calling about} big news. Wake up!",
+"ko": "큰 소식 때문에 전화했어요. 일어나요!"
+}
+]
+},
+{
+"label": "토요일 02:01 · 원장실",
+"lines": [
+{
+"s": "D",
+"en": "The Ministry wants 50 X-rays for regional hospitals.",
+"ko": "보건부가 지방 병원용 X-ray 50대를 원해요."
+},
+{
+"s": "A",
+"en": "{2:Hold on}... did you say FIFTY?",
+"ko": "잠깐만요... 50대라고요?"
+}
+]
+},
+{
+"label": "토요일 06:05 · 서울 (시차 +4)",
+"lines": [
+{
+"s": "A",
+"en": "{1:Could I speak to} Mr. Kang? It's urgent.",
+"ko": "강 전무님과 통화할 수 있을까요? 급합니다."
+},
+{
+"s": "P",
+"en": "He's asleep. I'll {3:put you through} anyway.",
+"ko": "주무시는데. 그래도 연결해 줄게요."
+}
+]
+},
+{
+"label": "토요일 06:07 · 전무님 댁",
+"lines": [
+{
+"s": "K",
+"en": "Artyom... it's six in the morning.",
+"ko": "아르툠... 아침 6시일세."
+},
+{
+"s": "A",
+"en": "Sir, {0:I'm calling about} fifty X-rays.",
+"ko": "전무님, X-ray 50대 건으로 전화드렸습니다."
+}
+]
+}
+],
+"red": [
+[
+"",
+"I am Lee.",
+"This is Lee speaking.",
+"",
+"전화에서는 This is ~"
+],
+[
+"",
+"Please wait.",
+"Could you hold on a moment, please?",
+"",
+"명령조보다 정중하게"
+],
+[
+"",
+"I will call you again back.",
+"I'll call you back.",
+"",
+null
+]
+],
+"explain": [
+{
+"w": "I'm calling about ~",
+"why": "용건을 첫 문장에. 전화 영어의 절반.",
+"trap": "about + 명사",
+"ex": [
+[
+"I'm calling about the invoice for order 2041.",
+"주문 2041 송장 건으로 전화드렸습니다."
+],
+[
+"I'm calling to confirm tomorrow's meeting.",
+"내일 미팅 확인차 전화드렸습니다."
+]
+]
+},
+{
+"w": "Could I speak to ~?",
+"why": "연결 요청. please를 끝에.",
+"trap": "speak with도 OK",
+"ex": [
+[
+"Could I speak to someone in the service department?",
+"서비스 부서 담당자와 통화할 수 있을까요?"
+],
+[
+"May I speak to Mr. Nurlan, please?",
+"누를란 씨와 통화할 수 있을까요?"
+]
+]
+},
+{
+"w": "hold on",
+"why": "잠시 기다리기. hold the line도 같은 뜻.",
+"trap": "Please wait는 다소 명령조",
+"ex": [
+[
+"Could you hold on while I check?",
+"확인하는 동안 잠시 기다려 주시겠어요?"
+],
+[
+"Hold on a second, I'll get the file.",
+"잠깐만요, 파일 가져올게요."
+]
+]
+},
+{
+"w": "put you through",
+"why": "연결해 드리다. 교환·비서 표현.",
+"trap": "put you through to + 사람/부서",
+"ex": [
+[
+"I'll put you through to the sales team.",
+"영업팀으로 연결해 드리겠습니다."
+],
+[
+"Let me put you through to his assistant.",
+"비서에게 연결해 드리겠습니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "Hello, ______ is Lee from SG Healthcare.",
+"opts": [
+"I am",
+"this",
+"here",
+"me"
+],
+"a": 1,
+"why": "전화에서 this is"
+},
+{
+"q": "I'm ______ about your quotation.",
+"opts": [
+"calling",
+"call",
+"telling",
+"phoning to"
+],
+"a": 0,
+"why": "calling about"
+},
+{
+"q": "Could you ______ on a moment, please?",
+"opts": [
+"wait",
+"hold",
+"stay",
+"keep"
+],
+"a": 1,
+"why": "hold on"
+},
+{
+"q": "I'll put you ______ to the sales manager.",
+"opts": [
+"on",
+"in",
+"through",
+"to"
+],
+"a": 2,
+"why": "put through"
+},
+{
+"q": "Could you call me ______?",
+"opts": [
+"again back",
+"back",
+"return",
+"back again later again"
+],
+"a": 1,
+"why": "call back"
+},
+{
+"q": "'통화 중이십니다'는?",
+"opts": [
+"He is on another line.",
+"He is in line.",
+"He is calling.",
+"He is busy phone."
+],
+"a": 0,
+"why": "on another line"
+},
+{
+"q": "메시지를 남기겠냐는 말은?",
+"opts": [
+"Can I take a message?",
+"Can I give a message?",
+"Do you message?",
+"Message?"
+],
+"a": 0,
+"why": "take a message"
+},
+{
+"q": "잘 못 알아들었을 때는?",
+"opts": [
+"What?",
+"Sorry, could you say that again more slowly?",
+"Repeat.",
+"Huh?"
+],
+"a": 1,
+"why": "정중"
+},
+{
+"q": "통화 마무리는?",
+"opts": [
+"Bye.",
+"Thanks for your time. I'll send an email to confirm.",
+"OK finish.",
+"End."
+],
+"a": 1,
+"why": "확인 메일 예고"
+},
+{
+"q": "'Please wait.' 보다 정중한 표현은?",
+"opts": [
+"Wait!",
+"Could you hold on a moment, please?",
+"Stop talking.",
+"One minute."
+],
+"a": 1,
+"why": "hold on + please"
+}
+],
+"next": "시즌 2 예고 — 50대 입찰 전쟁, Viktor의 역습  ▸ B2 레벨로 돌아옵니다"
+},
+{
+"no": "21",
+"title": "입찰 공고가 떴다",
+"grammar": "현재완료 심화 (경험)",
+"panels": [
+{
+"label": "월요일 · 보건부 홈페이지",
+"lines": [
+{
+"s": "A",
+"en": "Fifty X-rays. Elena, {0:have} you {0:ever} worked on a tender this big?",
+"ko": "50대. Elena, 이렇게 큰 입찰 해 본 적 있어요?"
+},
+{
+"s": "E",
+"en": "{1:Never}. But I've translated worse things.",
+"ko": "한 번도요. 하지만 더 심한 것도 번역해 봤죠."
+}
+]
+},
+{
+"label": "월요일 · 본사 화상회의",
+"lines": [
+{
+"s": "K",
+"en": "Have we {2:done} a ministry tender in Kazakhstan {2:before}?",
+"ko": "카자흐스탄 보건부 입찰을 전에 해 본 적 있나?"
+},
+{
+"s": "P",
+"en": "Twice. We lost both.",
+"ko": "두 번요. 둘 다 졌습니다."
+}
+]
+},
+{
+"label": "화요일 · 보건부",
+"lines": [
+{
+"s": "N",
+"en": "Have you {0:ever} supplied fifty units in one year?",
+"ko": "1년에 50대 공급해 본 적 있습니까?"
+},
+{
+"s": "A",
+"en": "Not fifty. But we've {1:never} missed a delivery date.",
+"ko": "50대는 아니지만 납기를 어긴 적은 한 번도 없습니다."
+}
+]
+},
+{
+"label": "화요일 · 복도",
+"lines": [
+{
+"s": "E",
+"en": "You lied a little.",
+"ko": "약간 거짓말했네요."
+},
+{
+"s": "A",
+"en": "It's {3:the first time} I've {3:been} this nervous.",
+"ko": "이렇게 긴장한 건 처음이에요."
+}
+]
+}
+],
+"red": [
+[
+"",
+"Did you ever work on a tender?",
+"Have you ever worked on a tender?",
+"",
+"경험 질문은 현재완료"
+],
+[
+"I",
+"have been never",
+"have never been",
+"to Astana.",
+"never는 have와 p.p. 사이"
+],
+[
+"It's the first time I",
+"see",
+"have seen",
+"a tender this big.",
+"the first time + 현재완료"
+]
+],
+"explain": [
+{
+"w": "ever",
+"why": "경험을 묻는 의문문 전용. '지금까지 한 번이라도'. Have you ever ~?는 레퍼런스 체크의 기본 질문.",
+"trap": "긍정 평서문에는 쓰지 않음 (I have ever → X)",
+"ex": [
+[
+"Have you ever worked with a government hospital?",
+"공공병원과 일해 본 적 있으세요?"
+],
+[
+"Has your company ever exported to Uzbekistan?",
+"귀사는 우즈베키스탄에 수출한 적이 있나요?"
+]
+]
+},
+{
+"w": "never",
+"why": "강한 부정 경험. 신뢰를 주는 문장: We have never missed a deadline.",
+"trap": "never 자체가 부정 → haven't never (X)",
+"ex": [
+[
+"We have never had a safety incident.",
+"안전 사고가 한 번도 없었습니다."
+],
+[
+"I've never seen a tender this competitive.",
+"이렇게 경쟁이 치열한 입찰은 처음 봅니다."
+]
+]
+},
+{
+"w": "before",
+"why": "'전에 해 봤다'를 강조. 문장 끝에.",
+"trap": "before 뒤에 시점이 오면 과거완료 쪽으로 감",
+"ex": [
+[
+"We have installed this model in Russia before.",
+"이 모델을 러시아에 설치해 본 적이 있습니다."
+],
+[
+"Have we met before?",
+"전에 뵌 적 있나요?"
+]
+]
+},
+{
+"w": "It's the first time I've ~",
+"why": "처음 겪는 일. 뒤에 반드시 현재완료.",
+"trap": "It's the first time I see (X)",
+"ex": [
+[
+"It's the first time we've bid for fifty units.",
+"50대 입찰은 처음입니다."
+],
+[
+"This is the first time I've visited Astana.",
+"아스타나 방문은 처음입니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "Have you ______ worked on a tender this big?",
+"opts": [
+"never",
+"ever",
+"before",
+"yet"
+],
+"a": 1,
+"why": "의문문 경험 → ever"
+},
+{
+"q": "We have ______ missed a deadline.",
+"opts": [
+"ever",
+"never",
+"not never",
+"before"
+],
+"a": 1,
+"why": "강한 부정"
+},
+{
+"q": "We have installed this model in Russia ______.",
+"opts": [
+"ever",
+"yet",
+"before",
+"ago"
+],
+"a": 2,
+"why": "문장 끝 before"
+},
+{
+"q": "It's the first time I ______ this nervous.",
+"opts": [
+"am",
+"was",
+"have been",
+"be"
+],
+"a": 2,
+"why": "the first time + 현재완료"
+},
+{
+"q": "______ you ever supplied fifty units?",
+"opts": [
+"Did",
+"Do",
+"Have",
+"Were"
+],
+"a": 2,
+"why": "경험 → have"
+},
+{
+"q": "I have ______ been to Astana.",
+"opts": [
+"never",
+"ever",
+"not never",
+"yet"
+],
+"a": 0,
+"why": "never + p.p."
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"Have you ever been there?",
+"I have ever been there.",
+"I have never been there.",
+"I have been there before."
+],
+"a": 1,
+"why": "긍정문 ever X"
+},
+{
+"q": "We lost both tenders. → 경험 질문으로 바꾸면?",
+"opts": [
+"Did you lose tenders?",
+"Have you ever lost a tender?",
+"Do you lose tenders?",
+"Were you lost?"
+],
+"a": 1,
+"why": "have you ever"
+},
+{
+"q": "'Have we met before?'의 뜻은?",
+"opts": [
+"앞으로 만날까요?",
+"전에 뵌 적 있나요?",
+"지금 만나고 있나요?",
+"만나지 맙시다"
+],
+"a": 1,
+"why": "경험"
+},
+{
+"q": "신뢰를 주는 레퍼런스 문장은?",
+"opts": [
+"We sometimes miss deadlines.",
+"We have never missed a delivery date.",
+"We missed once.",
+"Deadlines are hard."
+],
+"a": 1,
+"why": "never + 현재완료"
+}
+],
+"next": "EP.22 — 입찰 설명회, 경쟁사가 7개  ▸ 수량 표현 a few · a little · enough · too many"
+},
+{
+"no": "22",
+"title": "경쟁사가 일곱",
+"grammar": "수량 표현",
+"panels": [
+{
+"label": "수요일 · 입찰 설명회장",
+"lines": [
+{
+"s": "E",
+"en": "Seven competitors. That's {3:too many}.",
+"ko": "경쟁사 일곱. 너무 많아요."
+},
+{
+"s": "A",
+"en": "{0:A few} are serious. The rest are just here for the coffee.",
+"ko": "진짜는 몇 군데뿐이에요. 나머진 커피 마시러 왔어요."
+}
+]
+},
+{
+"label": "수요일 · Viktor 등장",
+"lines": [
+{
+"s": "V",
+"en": "Artyom! Still here? You have {1:little} chance.",
+"ko": "아르툠! 아직도 있네? 가능성 거의 없어."
+},
+{
+"s": "A",
+"en": "And you have {3:too much} confidence.",
+"ko": "그쪽은 자신감이 너무 많고요."
+}
+]
+},
+{
+"label": "수요일 · 서울 통화",
+"lines": [
+{
+"s": "A",
+"en": "Do we have {2:enough} stock for fifty?",
+"ko": "50대 재고 충분해요?"
+},
+{
+"s": "P",
+"en": "We have {1:a little} time to build it. Eight months.",
+"ko": "만들 시간이 조금 있어요. 8개월."
+}
+]
+},
+{
+"label": "수요일 · 밤",
+"lines": [
+{
+"s": "E",
+"en": "You need {0:a few} hours of sleep.",
+"ko": "몇 시간은 자야 해요."
+},
+{
+"s": "A",
+"en": "I have {3:too many} spreadsheets and {1:too little} coffee.",
+"ko": "스프레드시트는 너무 많고 커피는 너무 적어요."
+}
+]
+}
+],
+"red": [
+[
+"We have",
+"a few",
+"a little",
+"time left.",
+"time은 불가산 → a little"
+],
+[
+"There are",
+"too much",
+"too many",
+"competitors.",
+"셀 수 있는 복수 → too many"
+],
+[
+"The sample is",
+"enough good",
+"good enough",
+".",
+"형용사 + enough"
+]
+],
+"explain": [
+{
+"w": "a few / few",
+"why": "셀 수 있는 명사. a few = 조금 있다(긍정), few = 거의 없다(부정).",
+"trap": "a의 유무로 뜻이 반대가 됨",
+"ex": [
+[
+"We have a few units in stock.",
+"재고가 몇 대 있습니다."
+],
+[
+"Few competitors can deliver in 120 days.",
+"120일 내 납품 가능한 경쟁사는 거의 없습니다."
+]
+]
+},
+{
+"w": "a little / little",
+"why": "셀 수 없는 명사(time, money, information). a little = 조금, little = 거의 없음.",
+"trap": "time·money·advice는 불가산",
+"ex": [
+[
+"We need a little more time to finalize the offer.",
+"제안서 마무리에 시간이 조금 더 필요합니다."
+],
+[
+"There is little information about the site.",
+"현장 정보가 거의 없습니다."
+]
+]
+},
+{
+"w": "enough",
+"why": "명사 앞, 형용사 뒤. 충분함.",
+"trap": "good enough (O) / enough good (X)",
+"ex": [
+[
+"Do we have enough spare parts for 50 hospitals?",
+"50개 병원에 쓸 예비 부품이 충분한가요?"
+],
+[
+"The room is not big enough for the unit.",
+"방이 장비를 넣기에 충분히 크지 않습니다."
+]
+]
+},
+{
+"w": "too many / too much",
+"why": "지나치게 많음. many는 가산 복수, much는 불가산.",
+"trap": "too much people (X)",
+"ex": [
+[
+"There are too many steps in the registration process.",
+"등록 절차에 단계가 너무 많습니다."
+],
+[
+"We spent too much time on paperwork.",
+"서류 작업에 시간을 너무 많이 썼습니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "We have ______ time left. (조금)",
+"opts": [
+"a few",
+"a little",
+"few",
+"many"
+],
+"a": 1,
+"why": "time 불가산"
+},
+{
+"q": "There are ______ competitors. (너무 많은)",
+"opts": [
+"too much",
+"too many",
+"a little",
+"much"
+],
+"a": 1,
+"why": "복수 가산"
+},
+{
+"q": "The sample is ______.",
+"opts": [
+"enough good",
+"good enough",
+"too good enough",
+"enough of good"
+],
+"a": 1,
+"why": "형용사 + enough"
+},
+{
+"q": "______ companies can deliver in 120 days. (거의 없음)",
+"opts": [
+"A few",
+"Few",
+"Little",
+"A little"
+],
+"a": 1,
+"why": "few = 거의 없다"
+},
+{
+"q": "We need ______ more information.",
+"opts": [
+"a few",
+"many",
+"a little",
+"few"
+],
+"a": 2,
+"why": "information 불가산"
+},
+{
+"q": "Do we have ______ people?",
+"opts": [
+"enough",
+"too",
+"little",
+"a little"
+],
+"a": 0,
+"why": "충분한"
+},
+{
+"q": "We spent ______ money on freight.",
+"opts": [
+"too many",
+"too much",
+"a few",
+"few"
+],
+"a": 1,
+"why": "money 불가산"
+},
+{
+"q": "'a few'와 'few'의 차이는?",
+"opts": [
+"같다",
+"a few = 조금 있다, few = 거의 없다",
+"a few = 거의 없다",
+"few가 더 많다"
+],
+"a": 1,
+"why": "a 유무"
+},
+{
+"q": "There is ______ hope. (거의 없음)",
+"opts": [
+"little",
+"a little",
+"few",
+"a few"
+],
+"a": 0,
+"why": "hope 불가산 부정"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"too many people",
+"too much time",
+"too much people",
+"enough time"
+],
+"a": 2,
+"why": "people 복수 → many"
+}
+],
+"next": "EP.23 — 입찰 서류 준비, 본사 지시가 전달되다  ▸ 간접화법 said that · told me to"
+},
+{
+"no": "23",
+"title": "전무님이 그러셨어",
+"grammar": "간접화법",
+"panels": [
+{
+"label": "목요일 · 서울 전화",
+"lines": [
+{
+"s": "K",
+"en": "The price must be under $40,000. Tell Dana nothing yet.",
+"ko": "가격은 4만 달러 아래여야 해. Dana에겐 아직 말하지 말게."
+},
+{
+"s": "A",
+"en": "Understood, sir.",
+"ko": "알겠습니다."
+}
+]
+},
+{
+"label": "목요일 · 알마티 사무실",
+"lines": [
+{
+"s": "E",
+"en": "What did he say?",
+"ko": "뭐라고 하셨어요?"
+},
+{
+"s": "A",
+"en": "He {0:said that} the price had to be under forty.",
+"ko": "가격이 4만 아래여야 한다고 하셨어요."
+}
+]
+},
+{
+"label": "목요일 · 10분 뒤",
+"lines": [
+{
+"s": "D",
+"en": "So what did Mr. Kang tell you?",
+"ko": "그래서 강 전무님이 뭐라고 하셨대요?"
+},
+{
+"s": "A",
+"en": "He {3:told me to} tell you nothing. So... nothing.",
+"ko": "아무 말도 하지 말라고 하셨어요. 그래서... 아무것도요."
+}
+]
+},
+{
+"label": "금요일 · 서울",
+"lines": [
+{
+"s": "P",
+"en": "Dana called me. She {2:asked me to} send her the price list.",
+"ko": "Dana가 전화해서 가격표를 보내 달라고 했어요."
+},
+{
+"s": "A",
+"en": "And you {1:told her} nothing, right?",
+"ko": "그래서 아무것도 안 알려 주셨죠?"
+},
+{
+"s": "P",
+"en": "...I told her everything.",
+"ko": "...다 알려 줬는데."
+}
+]
+}
+],
+"red": [
+[
+"He said",
+"me",
+"",
+"that the price was final.",
+"say 뒤에는 사람 X (told me)"
+],
+[
+"He",
+"told to me",
+"told me",
+"to wait.",
+"tell + 사람 (to 없음)"
+],
+[
+"She said that she",
+"will",
+"would",
+"call back.",
+"시제 한 단계 과거"
+]
+],
+"explain": [
+{
+"w": "said (that) ~",
+"why": "말한 내용 전달. 시제를 한 단계 과거로: is→was, will→would, can→could.",
+"trap": "said me (X) → told me / said to me",
+"ex": [
+[
+"He said that the price was final.",
+"그는 가격이 최종이라고 했습니다."
+],
+[
+"She said she would send the contract on Monday.",
+"그녀는 월요일에 계약서를 보내겠다고 했습니다."
+]
+]
+},
+{
+"w": "told + 사람 + that",
+"why": "누구에게 말했는지 포함. tell 뒤에는 반드시 사람.",
+"trap": "told to me (X)",
+"ex": [
+[
+"Mr. Kang told me that the budget had been approved.",
+"강 전무님이 예산이 승인됐다고 하셨습니다."
+],
+[
+"The forwarder told us the truck was delayed.",
+"포워더가 트럭이 지연됐다고 했습니다."
+]
+]
+},
+{
+"w": "asked + 사람 + to",
+"why": "요청·부탁 전달.",
+"trap": "asked me that I send (X)",
+"ex": [
+[
+"Dana asked me to send the price list.",
+"Dana가 가격표를 보내 달라고 했습니다."
+],
+[
+"They asked us not to share the details.",
+"그들은 세부 사항을 공유하지 말아 달라고 했습니다."
+]
+]
+},
+{
+"w": "told + 사람 + to",
+"why": "지시·명령 전달. 부정은 told me not to.",
+"trap": "told me don't (X)",
+"ex": [
+[
+"He told me to wait for the final approval.",
+"최종 승인을 기다리라고 하셨습니다."
+],
+[
+"The officer told us not to open the boxes.",
+"담당관이 상자를 열지 말라고 했습니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "He said that the price ______ final. (직접화법: 'The price is final.')",
+"opts": [
+"is",
+"was",
+"will be",
+"be"
+],
+"a": 1,
+"why": "시제 한 단계 과거"
+},
+{
+"q": "He ______ me to wait.",
+"opts": [
+"said",
+"told",
+"said to",
+"spoke"
+],
+"a": 1,
+"why": "tell + 사람"
+},
+{
+"q": "She asked me ______ the file.",
+"opts": [
+"send",
+"to send",
+"sending",
+"that send"
+],
+"a": 1,
+"why": "ask + 사람 + to"
+},
+{
+"q": "He told me ______ share the details.",
+"opts": [
+"don't",
+"not to",
+"to not",
+"no"
+],
+"a": 1,
+"why": "told + not to"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"He told me that it was late.",
+"He said me that it was late.",
+"He said that it was late.",
+"He told us to wait."
+],
+"a": 1,
+"why": "said me X"
+},
+{
+"q": "'I will call back.' → She said she ______ call back.",
+"opts": [
+"will",
+"would",
+"can",
+"is"
+],
+"a": 1,
+"why": "will → would"
+},
+{
+"q": "'Can you send it?' → He asked me ______ it.",
+"opts": [
+"can I send",
+"to send",
+"sending",
+"that I send"
+],
+"a": 1,
+"why": "요청 전달"
+},
+{
+"q": "'Don't open the box.' → She told us ______ the box.",
+"opts": [
+"don't open",
+"not open",
+"not to open",
+"to not opening"
+],
+"a": 2,
+"why": "not to"
+},
+{
+"q": "He ______ that he was busy.",
+"opts": [
+"told",
+"said",
+"asked",
+"spoke"
+],
+"a": 1,
+"why": "said that (사람 없이)"
+},
+{
+"q": "'The truck has left.' → The driver said the truck ______.",
+"opts": [
+"has left",
+"had left",
+"left",
+"leaves"
+],
+"a": 1,
+"why": "현재완료 → 과거완료"
+}
+],
+"next": "EP.24 — 전시회 부스, 3분 안에 제품 설명  ▸ 목적 표현 to · in order to · so that · for"
+},
+{
+"no": "24",
+"title": "3분 제품 설명",
+"grammar": "목적 표현",
+"panels": [
+{
+"label": "토요일 · 알마티 의료 전시회",
+"lines": [
+{
+"s": "S",
+"en": "We flew 6,000 km {0:to} show you this detector.",
+"ko": "이 디텍터를 보여 드리려고 6,000km를 날아왔습니다."
+},
+{
+"s": "N",
+"en": "Three minutes. Go.",
+"ko": "3분. 시작하세요."
+}
+]
+},
+{
+"label": "토요일 · 부스",
+"lines": [
+{
+"s": "A",
+"en": "It's wireless, {2:so that} the technician can move freely.",
+"ko": "무선이라서 기사가 자유롭게 움직일 수 있습니다."
+},
+{
+"s": "A",
+"en": "And it weighs 2.8 kg, {0:to} reduce patient repositioning.",
+"ko": "그리고 2.8kg이라 환자 재배치를 줄여 줍니다."
+}
+]
+},
+{
+"label": "토요일 · 2분 30초",
+"lines": [
+{
+"s": "N",
+"en": "What is this button {3:for}?",
+"ko": "이 버튼은 뭐 하는 거죠?"
+},
+{
+"s": "A",
+"en": "{3:For} emergency exposure. {1:In order to} save time in trauma cases.",
+"ko": "응급 촬영용입니다. 외상 환자 시간을 아끼기 위해서요."
+}
+]
+},
+{
+"label": "토요일 · 3분 종료",
+"lines": [
+{
+"s": "N",
+"en": "Not bad. Viktor took ten minutes.",
+"ko": "나쁘지 않군요. Viktor는 10분 걸렸어요."
+},
+{
+"s": "S",
+"en": "We practiced forty times {2:so that} we wouldn't.",
+"ko": "그러지 않으려고 40번 연습했거든요."
+}
+]
+}
+],
+"red": [
+[
+"We came",
+"for see",
+"to see",
+"the hospital.",
+"for + 동사원형 X"
+],
+[
+"This cable is",
+"to charging",
+"for charging",
+".",
+"용도 = for + -ing"
+],
+[
+"We practiced",
+"so that we don't",
+"so that we wouldn't",
+"make mistakes.",
+"주절 과거 → would"
+]
+],
+"explain": [
+{
+"w": "to + 동사원형",
+"why": "가장 흔한 목적 표현. '~하기 위해'.",
+"trap": "for + 동사원형 (X)",
+"ex": [
+[
+"We came to Almaty to meet the ministry team.",
+"보건부 팀을 만나러 알마티에 왔습니다."
+],
+[
+"Press this button to start the exposure.",
+"촬영을 시작하려면 이 버튼을 누르세요."
+]
+]
+},
+{
+"w": "in order to",
+"why": "격식·강조. 문서와 발표에서.",
+"trap": "in order to + 동사원형, in order that + 문장",
+"ex": [
+[
+"In order to reduce downtime, we provide remote diagnostics.",
+"다운타임을 줄이기 위해 원격 진단을 제공합니다."
+],
+[
+"We tested every unit twice in order to meet the standard.",
+"기준을 충족하기 위해 모든 장비를 두 번 테스트했습니다."
+]
+]
+},
+{
+"w": "so that",
+"why": "'~할 수 있도록'. 뒤에 주어 + can/will/could.",
+"trap": "so that 뒤에 문장이 와야 함",
+"ex": [
+[
+"We ship early so that customs has time.",
+"세관 시간을 확보하도록 일찍 선적합니다."
+],
+[
+"The panel is wireless so that staff can move freely.",
+"직원이 자유롭게 움직일 수 있도록 무선입니다."
+]
+]
+},
+{
+"w": "for + 명사/-ing",
+"why": "용도. '~용'.",
+"trap": "for to see (X)",
+"ex": [
+[
+"This port is for charging.",
+"이 포트는 충전용입니다."
+],
+[
+"The spare detector is for emergencies.",
+"예비 디텍터는 비상용입니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "We came here ______ the hospital.",
+"opts": [
+"for see",
+"to see",
+"for seeing",
+"see"
+],
+"a": 1,
+"why": "목적 to"
+},
+{
+"q": "It is wireless ______ the technician can move freely.",
+"opts": [
+"so",
+"so that",
+"for",
+"to"
+],
+"a": 1,
+"why": "so that + 문장"
+},
+{
+"q": "This cable is ______.",
+"opts": [
+"to charging",
+"for charging",
+"for charge",
+"to charge it for"
+],
+"a": 1,
+"why": "용도 for -ing"
+},
+{
+"q": "______ to save time, we practiced forty times.",
+"opts": [
+"For",
+"In order",
+"So that",
+"Because"
+],
+"a": 1,
+"why": "in order to"
+},
+{
+"q": "We practiced so that we ______ make mistakes.",
+"opts": [
+"don't",
+"wouldn't",
+"won't to",
+"not"
+],
+"a": 1,
+"why": "과거 주절 → would"
+},
+{
+"q": "It's ideal ______ emergency rooms.",
+"opts": [
+"to",
+"for",
+"so",
+"in order"
+],
+"a": 1,
+"why": "for + 명사"
+},
+{
+"q": "There are no cables, ______ cable failures.",
+"opts": [
+"for reduce",
+"to reduce",
+"so reduce",
+"reducing to"
+],
+"a": 1,
+"why": "to + 동사"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"We came to see it.",
+"We came for to see it.",
+"We came in order to see it.",
+"We came so that we could see it."
+],
+"a": 1,
+"why": "for to X"
+},
+{
+"q": "'What is this button for?'의 뜻은?",
+"opts": [
+"이 버튼은 어디 있나요?",
+"이 버튼은 뭐 하는 거죠?",
+"이 버튼을 누를까요?",
+"버튼이 몇 개죠?"
+],
+"a": 1,
+"why": "용도 질문"
+},
+{
+"q": "가장 격식 있는 목적 표현은?",
+"opts": [
+"to",
+"for",
+"in order to",
+"so"
+],
+"a": 2,
+"why": "in order to"
+}
+],
+"next": "EP.25 — 입찰 마감 전날 밤, 예전엔 이러지 않았는데  ▸ used to · be used to · get used to"
+},
+{
+"no": "25",
+"title": "예전엔 안 이랬어",
+"grammar": "used to",
+"panels": [
+{
+"label": "일요일 23:00 · 사무실",
+"lines": [
+{
+"s": "E",
+"en": "I {0:used to} finish work at six.",
+"ko": "예전엔 6시에 퇴근했는데."
+},
+{
+"s": "A",
+"en": "I {1:didn't use to} drink four coffees a day.",
+"ko": "난 예전엔 커피를 하루 네 잔 안 마셨어요."
+}
+]
+},
+{
+"label": "일요일 23:30 · 서울 통화",
+"lines": [
+{
+"s": "P",
+"en": "Are you {2:used to} working this late?",
+"ko": "이렇게 늦게까지 일하는 거 익숙해요?"
+},
+{
+"s": "A",
+"en": "I'm {3:getting used to} it. Unfortunately.",
+"ko": "익숙해지는 중이에요. 불행히도."
+}
+]
+},
+{
+"label": "월요일 01:00 · 서류 더미",
+"lines": [
+{
+"s": "E",
+"en": "Page 212 of 300. The ministry {0:used to} accept PDFs.",
+"ko": "300쪽 중 212쪽. 예전엔 보건부가 PDF 받아 줬는데."
+},
+{
+"s": "A",
+"en": "Now they want paper. And stamps. And tears.",
+"ko": "이제 종이에 도장에 눈물까지 원해요."
+}
+]
+},
+{
+"label": "월요일 08:55 · 보건부 접수",
+"lines": [
+{
+"s": "N",
+"en": "Five minutes early. Viktor {0:used to} be early too.",
+"ko": "5분 일찍 왔군요. Viktor도 예전엔 일찍 왔는데."
+},
+{
+"s": "A",
+"en": "What happened?",
+"ko": "무슨 일이 있었죠?"
+},
+{
+"s": "N",
+"en": "He got {2:used to} winning.",
+"ko": "이기는 데 익숙해졌죠."
+}
+]
+}
+],
+"red": [
+[
+"I",
+"used to working",
+"am used to working",
+"late.",
+"익숙하다 = be used to -ing"
+],
+[
+"We",
+"use to",
+"used to",
+"ship by sea.",
+"과거 습관 used to"
+],
+[
+"He",
+"didn't used to",
+"didn't use to",
+"come early.",
+"didn't + use to"
+]
+],
+"explain": [
+{
+"w": "used to + 동사원형",
+"why": "과거의 습관·상태, 지금은 아님. 변화를 설명할 때.",
+"trap": "현재형 없음 (use to now X)",
+"ex": [
+[
+"We used to ship everything by sea.",
+"예전엔 전부 해상 운송했습니다."
+],
+[
+"The ministry used to accept PDF submissions.",
+"보건부가 예전엔 PDF 제출을 받았습니다."
+]
+]
+},
+{
+"w": "didn't use to",
+"why": "과거엔 안 했다. use (d 없음).",
+"trap": "didn't used to (X)",
+"ex": [
+[
+"We didn't use to offer remote support.",
+"예전엔 원격 지원을 제공하지 않았습니다."
+],
+[
+"Did you use to work in sales?",
+"예전에 영업 일을 하셨나요?"
+]
+]
+},
+{
+"w": "be used to + -ing",
+"why": "~에 익숙하다. 상태.",
+"trap": "뜻이 완전히 다름: used to(과거 습관) vs be used to(익숙)",
+"ex": [
+[
+"Our engineers are used to working in cold regions.",
+"저희 엔지니어는 추운 지역 작업에 익숙합니다."
+],
+[
+"I'm used to long flights.",
+"장거리 비행에 익숙합니다."
+]
+]
+},
+{
+"w": "get used to + -ing",
+"why": "~에 익숙해지다. 과정.",
+"trap": "get used to + 명사/-ing",
+"ex": [
+[
+"You'll get used to the new software in a week.",
+"일주일이면 새 소프트웨어에 익숙해질 겁니다."
+],
+[
+"We're getting used to the new regulations.",
+"새 규정에 익숙해지는 중입니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "I ______ to finish work at six.",
+"opts": [
+"use",
+"used",
+"am used",
+"get used"
+],
+"a": 1,
+"why": "과거 습관"
+},
+{
+"q": "I'm ______ to working late.",
+"opts": [
+"use",
+"used",
+"using",
+"get used"
+],
+"a": 1,
+"why": "익숙하다 be used to"
+},
+{
+"q": "He ______ use to come early.",
+"opts": [
+"didn't",
+"doesn't",
+"wasn't",
+"didn't used"
+],
+"a": 0,
+"why": "didn't use to"
+},
+{
+"q": "You'll ______ to the new software soon.",
+"opts": [
+"use",
+"be use",
+"get used",
+"used"
+],
+"a": 2,
+"why": "익숙해지다"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"I used to work late.",
+"I am used to working late.",
+"I used to working late.",
+"I got used to working late."
+],
+"a": 2,
+"why": "used to + 동사원형"
+},
+{
+"q": "'We used to ship by sea.'의 뜻은?",
+"opts": [
+"지금도 해상 운송한다",
+"예전엔 해상 운송했지만 지금은 아니다",
+"해상 운송에 익숙하다",
+"해상 운송할 것이다"
+],
+"a": 1,
+"why": "과거 습관"
+},
+{
+"q": "Our engineers are used ______ in cold regions.",
+"opts": [
+"to work",
+"to working",
+"work",
+"working"
+],
+"a": 1,
+"why": "be used to -ing"
+},
+{
+"q": "______ you use to work in sales?",
+"opts": [
+"Did",
+"Do",
+"Were",
+"Have"
+],
+"a": 0,
+"why": "did ~ use to"
+},
+{
+"q": "We're ______ used to the new rules.",
+"opts": [
+"get",
+"getting",
+"got",
+"gets"
+],
+"a": 1,
+"why": "진행 과정"
+},
+{
+"q": "'익숙하다'와 '예전에 ~했다'를 구분하는 핵심은?",
+"opts": [
+"used의 철자",
+"be동사 유무와 뒤의 -ing",
+"시제",
+"주어"
+],
+"a": 1,
+"why": "be used to -ing"
+}
+],
+"next": "EP.26 — 개찰 결과, 2위. 만약 내가 당신이라면  ▸ 2차 조건문 If I were you"
+},
+{
+"no": "26",
+"title": "만약 내가 당신이라면",
+"grammar": "2차 조건문",
+"panels": [
+{
+"label": "화요일 · 개찰 결과",
+"lines": [
+{
+"s": "N",
+"en": "Second place. Viktor is first by $600 per unit.",
+"ko": "2위입니다. Viktor가 대당 600달러 차이로 1위."
+},
+{
+"s": "A",
+"en": "{0:If} we {0:had} another week, I {0:would} find that $600.",
+"ko": "일주일만 더 있으면 그 600달러를 찾아낼 텐데."
+}
+]
+},
+{
+"label": "화요일 · 복도",
+"lines": [
+{
+"s": "E",
+"en": "{1:If I were you}, I would check his delivery schedule.",
+"ko": "내가 당신이라면 그쪽 납기 일정을 확인하겠어요."
+},
+{
+"s": "A",
+"en": "Why?",
+"ko": "왜요?"
+},
+{
+"s": "E",
+"en": "Because nobody delivers fifty units in four months.",
+"ko": "넉 달에 50대 납품하는 사람은 없으니까요."
+}
+]
+},
+{
+"label": "화요일 · 서울",
+"lines": [
+{
+"s": "K",
+"en": "{3:What would you do} if you were me, Artyom?",
+"ko": "자네가 나라면 어떻게 하겠나?"
+},
+{
+"s": "A",
+"en": "I {2:would} ask the ministry about the delivery clause.",
+"ko": "보건부에 납기 조항을 물어보겠습니다."
+}
+]
+},
+{
+"label": "수요일 · 보건부",
+"lines": [
+{
+"s": "N",
+"en": "If Viktor {0:missed} the deadline, the contract {0:would} go to second place.",
+"ko": "Viktor가 납기를 어기면 계약은 2위에게 갑니다."
+},
+{
+"s": "A",
+"en": "Interesting. Very interesting.",
+"ko": "흥미롭네요. 아주요."
+}
+]
+}
+],
+"red": [
+[
+"If I",
+"am",
+"were",
+"you, I would call him.",
+"가정 → were"
+],
+[
+"If we had more time, we",
+"will",
+"would",
+"win.",
+"결과절 would"
+],
+[
+"If I",
+"would have",
+"had",
+"the data, I would show you.",
+"if절에 would X"
+]
+],
+"explain": [
+{
+"w": "If + 과거형, would",
+"why": "현재 사실과 다른 가정. '시간이 더 있다면(없지만)'.",
+"trap": "if절에 would 금지",
+"ex": [
+[
+"If we had a local warehouse, we would deliver in two days.",
+"현지 창고가 있다면 이틀 안에 배송할 텐데요."
+],
+[
+"If the price were lower, they would order more.",
+"가격이 더 낮다면 더 주문할 텐데요."
+]
+]
+},
+{
+"w": "If I were you",
+"why": "조언의 완곡 표현. 모든 인칭에 were.",
+"trap": "If I was you도 구어에선 쓰이나 격식은 were",
+"ex": [
+[
+"If I were you, I would call the ministry today.",
+"저라면 오늘 보건부에 전화하겠습니다."
+],
+[
+"If I were in your position, I'd wait for the results.",
+"제가 그 입장이라면 결과를 기다리겠습니다."
+]
+]
+},
+{
+"w": "could / might",
+"why": "would 대신 '할 수 있을 텐데 / 할지도 모르는데'.",
+"trap": "could = 능력·가능성, might = 낮은 가능성",
+"ex": [
+[
+"If we had the data, we could prove it.",
+"데이터가 있다면 증명할 수 있을 텐데요."
+],
+[
+"If they accepted L/C, we might reduce the price.",
+"L/C를 받아 준다면 가격을 낮출지도 모릅니다."
+]
+]
+},
+{
+"w": "What would you do if ~?",
+"why": "상대 의견을 가정으로 묻기. 협상·조언 요청.",
+"trap": "if절은 과거형",
+"ex": [
+[
+"What would you do if the client asked for 20% off?",
+"고객이 20% 할인을 요구하면 어떻게 하시겠어요?"
+],
+[
+"What would happen if we missed the deadline?",
+"마감을 놓치면 어떻게 될까요?"
+]
+]
+}
+],
+"quiz": [
+{
+"q": "If I ______ you, I would call him.",
+"opts": [
+"am",
+"was",
+"were",
+"be"
+],
+"a": 2,
+"why": "가정 were"
+},
+{
+"q": "If we had more time, we ______ win.",
+"opts": [
+"will",
+"would",
+"can",
+"won"
+],
+"a": 1,
+"why": "would"
+},
+{
+"q": "If I ______ the data, I would show you.",
+"opts": [
+"have",
+"had",
+"would have",
+"will have"
+],
+"a": 1,
+"why": "if절 과거형"
+},
+{
+"q": "What ______ you do if you were me?",
+"opts": [
+"will",
+"do",
+"would",
+"did"
+],
+"a": 2,
+"why": "would"
+},
+{
+"q": "If his price ______ real, I would compete on warranty.",
+"opts": [
+"is",
+"were",
+"will be",
+"be"
+],
+"a": 1,
+"why": "were"
+},
+{
+"q": "If we had more data, we ______ prove it. (할 수 있을 텐데)",
+"opts": [
+"can",
+"could",
+"will",
+"may"
+],
+"a": 1,
+"why": "could"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"If I were you, I'd wait.",
+"If I would be you, I'd wait.",
+"If I were in your position, I'd wait.",
+"I'd wait if I were you."
+],
+"a": 1,
+"why": "if절 would X"
+},
+{
+"q": "'If we had a warehouse, we would deliver faster.' 현재 창고는?",
+"opts": [
+"있다",
+"없다",
+"곧 생긴다",
+"알 수 없다"
+],
+"a": 1,
+"why": "현재 사실과 반대"
+},
+{
+"q": "If Viktor ______ the deadline, the contract would go to us.",
+"opts": [
+"misses",
+"missed",
+"will miss",
+"miss"
+],
+"a": 1,
+"why": "과거형"
+},
+{
+"q": "If they accepted L/C, we ______ reduce the price. (할지도)",
+"opts": [
+"will",
+"might",
+"can",
+"must"
+],
+"a": 1,
+"why": "might"
+}
+],
+"next": "EP.27 — Viktor의 납기 비밀, 이미 알고 있었다면  ▸ 과거완료 had + p.p."
+},
+{
+"no": "27",
+"title": "이미 알고 있었다",
+"grammar": "과거완료",
+"panels": [
+{
+"label": "목요일 · 카페",
+"lines": [
+{
+"s": "M",
+"en": "Viktor's factory? It {0:had} closed before he even bid.",
+"ko": "Viktor 공장요? 입찰하기 전에 이미 문 닫았어요."
+},
+{
+"s": "A",
+"en": "What?!",
+"ko": "뭐라고요?!"
+}
+]
+},
+{
+"label": "목요일 · 사무실",
+"lines": [
+{
+"s": "E",
+"en": "{1:By the time} he submitted, he {1:had} already {1:lost} his supplier.",
+"ko": "그가 제출했을 땐 이미 공급사를 잃은 뒤였어요."
+},
+{
+"s": "A",
+"en": "So his $600 discount was a bluff.",
+"ko": "그러니까 600달러 할인은 허세였군요."
+}
+]
+},
+{
+"label": "금요일 · 보건부",
+"lines": [
+{
+"s": "A",
+"en": "{3:We realized that} Viktor {3:had} quoted a product he could no longer supply.",
+"ko": "Viktor가 더 이상 공급할 수 없는 제품으로 견적했다는 걸 알게 됐습니다."
+},
+{
+"s": "N",
+"en": "Can you prove it?",
+"ko": "증명할 수 있습니까?"
+}
+]
+},
+{
+"label": "금요일 · 1시간 뒤",
+"lines": [
+{
+"s": "M",
+"en": "Here. Photos of the empty factory. I {2:had taken} them {2:before} the tender.",
+"ko": "여기요. 빈 공장 사진. 입찰 전에 찍어 뒀죠."
+},
+{
+"s": "A",
+"en": "Marat, you're a genius.",
+"ko": "Marat, 당신 천재예요."
+},
+{
+"s": "M",
+"en": "I know.",
+"ko": "알아요."
+}
+]
+}
+],
+"red": [
+[
+"When I arrived, the meeting",
+"already started",
+"had already started",
+".",
+"먼저 일어난 일 → had p.p."
+],
+[
+"By the time we called, he",
+"left",
+"had left",
+".",
+"by the time + had p.p."
+],
+[
+"After we",
+"had sent",
+"sent",
+"the file, he replied. (둘 다 가능하나 단순 과거가 자연스러움)",
+"after는 순서가 분명하면 과거형도 OK"
+]
+],
+"explain": [
+{
+"w": "had + p.p.",
+"why": "과거의 어떤 시점보다 더 먼저 일어난 일. 두 과거 사건의 순서를 분명히.",
+"trap": "기준 과거 시점이 없으면 그냥 과거형",
+"ex": [
+[
+"When we arrived, the inspection had already finished.",
+"도착했을 때 검수는 이미 끝나 있었습니다."
+],
+[
+"The supplier had closed before Viktor submitted his bid.",
+"Viktor가 입찰하기 전에 공급사가 이미 문을 닫았습니다."
+]
+]
+},
+{
+"w": "by the time",
+"why": "'~할 때쯤에는 이미'. 뒤 절이 had p.p.",
+"trap": "by the time + 과거, 주절 had p.p.",
+"ex": [
+[
+"By the time customs opened, the truck had waited six hours.",
+"세관이 열렸을 때 트럭은 이미 6시간을 기다린 뒤였습니다."
+],
+[
+"By the time I called, she had left the office.",
+"전화했을 때 그녀는 이미 퇴근한 뒤였습니다."
+]
+]
+},
+{
+"w": "after / before",
+"why": "순서가 명확하면 과거형도 OK. 강조할 때 had p.p.",
+"trap": "before 뒤는 보통 과거형",
+"ex": [
+[
+"After we had checked the site, we signed.",
+"현장 확인 후 서명했습니다."
+],
+[
+"Marat had taken the photos before the tender.",
+"Marat은 입찰 전에 사진을 찍어 두었습니다."
+]
+]
+},
+{
+"w": "realized that ~ had",
+"why": "'~했었다는 걸 알게 됐다'. 보고서의 반전 문장.",
+"trap": "realized 뒤 that절은 had p.p.",
+"ex": [
+[
+"We realized that the cable had been unplugged.",
+"케이블이 뽑혀 있었다는 걸 알게 됐습니다."
+],
+[
+"I realized I had sent the wrong file.",
+"잘못된 파일을 보냈다는 걸 깨달았습니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "When I arrived, the meeting ______.",
+"opts": [
+"already started",
+"had already started",
+"has already started",
+"starts"
+],
+"a": 1,
+"why": "먼저 일어난 일"
+},
+{
+"q": "By the time we called, he ______.",
+"opts": [
+"left",
+"had left",
+"has left",
+"leaves"
+],
+"a": 1,
+"why": "by the time + had p.p."
+},
+{
+"q": "His supplier ______ two months before the tender.",
+"opts": [
+"closed",
+"had closed",
+"has closed",
+"closes"
+],
+"a": 1,
+"why": "입찰(과거)보다 먼저"
+},
+{
+"q": "We realized that he ______ a product he couldn't supply.",
+"opts": [
+"quoted",
+"had quoted",
+"has quoted",
+"quotes"
+],
+"a": 1,
+"why": "realized + had p.p."
+},
+{
+"q": "Marat ______ the photos before the tender.",
+"opts": [
+"took",
+"had taken",
+"has taken",
+"takes"
+],
+"a": 1,
+"why": "강조 had p.p. (took도 가능)"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"By the time I arrived, it had ended.",
+"By the time I arrived, it has ended.",
+"When I arrived, it had ended.",
+"It had ended before I arrived."
+],
+"a": 1,
+"why": "has X"
+},
+{
+"q": "By then, he ______ already ______ his bid.",
+"opts": [
+"has / submitted",
+"had / submitted",
+"was / submitting",
+"did / submit"
+],
+"a": 1,
+"why": "had + p.p."
+},
+{
+"q": "과거완료가 필요한 조건은?",
+"opts": [
+"과거 일 하나",
+"과거 두 사건 중 먼저 일어난 것",
+"미래 일",
+"현재 일"
+],
+"a": 1,
+"why": "과거의 과거"
+},
+{
+"q": "I realized I ______ the wrong file.",
+"opts": [
+"send",
+"sent",
+"had sent",
+"have sent"
+],
+"a": 2,
+"why": "realized + had p.p."
+},
+{
+"q": "The truck ______ six hours by the time customs opened.",
+"opts": [
+"waited",
+"had waited",
+"has waited",
+"waits"
+],
+"a": 1,
+"why": "had p.p."
+}
+],
+"next": "EP.28 — 보건부 공문을 읽다: 계약 조건 해석  ▸ 계약·공문 어휘 shall · hereby · in accordance with"
+},
+{
+"no": "28",
+"title": "공문 해독",
+"grammar": "계약·공문 표현",
+"panels": [
+{
+"label": "월요일 · 보건부 공문",
+"lines": [
+{
+"s": "E",
+"en": "\"The Supplier {0:shall} deliver all units within 120 days.\"",
+"ko": "\"공급자는 120일 이내 전량 납품하여야 한다.\""
+},
+{
+"s": "A",
+"en": "Shall means must. In a suit.",
+"ko": "shall은 '정장 입은 must'죠."
+}
+]
+},
+{
+"label": "월요일 · 2쪽",
+"lines": [
+{
+"s": "E",
+"en": "\"Payment {3:subject to} acceptance by the Ministry.\"",
+"ko": "\"대금은 보건부 검수를 조건으로 한다.\""
+},
+{
+"s": "A",
+"en": "So no acceptance, no money.",
+"ko": "검수 없으면 돈도 없다."
+}
+]
+},
+{
+"label": "월요일 · 서울",
+"lines": [
+{
+"s": "K",
+"en": "Draft our reply. Formal.",
+"ko": "답신 초안 쓰게. 격식 있게."
+},
+{
+"s": "A",
+"en": "\"We {2:hereby} confirm our ability to deliver {1:in accordance with} Clause 4.\"",
+"ko": "\"당사는 이로써 제4조에 따른 납품 능력을 확인합니다.\""
+}
+]
+},
+{
+"label": "화요일 · 보건부",
+"lines": [
+{
+"s": "N",
+"en": "Your letter was... very formal.",
+"ko": "편지가... 아주 격식 있더군요."
+},
+{
+"s": "A",
+"en": "Was it too much?",
+"ko": "너무 과했나요?"
+},
+{
+"s": "N",
+"en": "Viktor's said \"OK, no problem 👍\".",
+"ko": "Viktor 건 \"OK, no problem 👍\"였어요."
+}
+]
+}
+],
+"red": [
+[
+"The supplier",
+"should",
+"shall",
+"deliver within 120 days. (계약서)",
+"계약 의무는 shall"
+],
+[
+"in accordance",
+"to",
+"with",
+"the contract",
+"in accordance with"
+],
+[
+"Payment is subject",
+"of",
+"to",
+"acceptance.",
+"subject to"
+]
+],
+"explain": [
+{
+"w": "shall",
+"why": "계약서·공문에서 '의무'. 일상 영어의 should와 다름.",
+"trap": "계약서 밖에서는 거의 안 씀",
+"ex": [
+[
+"The Buyer shall pay within 30 days of acceptance.",
+"매수인은 검수 후 30일 이내 지급하여야 한다."
+],
+[
+"The Supplier shall provide a 24-month warranty.",
+"공급자는 24개월 보증을 제공하여야 한다."
+]
+]
+},
+{
+"w": "in accordance with",
+"why": "'~에 따라'. 규정·조항·표준 인용.",
+"trap": "according to보다 격식",
+"ex": [
+[
+"Testing shall be performed in accordance with IEC 60601.",
+"시험은 IEC 60601에 따라 수행한다."
+],
+[
+"Payment will be made in accordance with Clause 7.",
+"대금은 제7조에 따라 지급된다."
+]
+]
+},
+{
+"w": "hereby / herein / hereto",
+"why": "'이로써 / 이 문서에서 / 이 문서에'. 공식 확인 문장.",
+"trap": "일반 메일에서는 과함",
+"ex": [
+[
+"We hereby confirm our acceptance of the terms.",
+"당사는 이로써 조건 수락을 확인합니다."
+],
+[
+"The specifications are attached hereto.",
+"사양서는 본 문서에 첨부되어 있습니다."
+]
+]
+},
+{
+"w": "subject to",
+"why": "'~을 조건으로'. 조건부 승인·지급.",
+"trap": "subject to + 명사",
+"ex": [
+[
+"This offer is subject to final approval by our board.",
+"본 제안은 당사 이사회 최종 승인을 조건으로 합니다."
+],
+[
+"Delivery dates are subject to customs clearance.",
+"납기는 통관을 조건으로 합니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "계약서에서 의무를 나타내는 조동사는?",
+"opts": [
+"should",
+"shall",
+"may",
+"could"
+],
+"a": 1,
+"why": "shall"
+},
+{
+"q": "Testing shall be performed in accordance ______ IEC 60601.",
+"opts": [
+"to",
+"with",
+"of",
+"by"
+],
+"a": 1,
+"why": "in accordance with"
+},
+{
+"q": "We ______ confirm our acceptance.",
+"opts": [
+"hereby",
+"herein",
+"hereto",
+"here"
+],
+"a": 0,
+"why": "이로써"
+},
+{
+"q": "Payment is subject ______ acceptance.",
+"opts": [
+"of",
+"for",
+"to",
+"on"
+],
+"a": 2,
+"why": "subject to"
+},
+{
+"q": "The specifications are attached ______.",
+"opts": [
+"hereby",
+"hereto",
+"herein",
+"hereof"
+],
+"a": 1,
+"why": "이 문서에 첨부"
+},
+{
+"q": "'subject to final approval'의 뜻은?",
+"opts": [
+"이미 승인됨",
+"최종 승인을 조건으로",
+"승인 거부",
+"승인 불필요"
+],
+"a": 1,
+"why": "조건부"
+},
+{
+"q": "일반 메일에서 피하는 게 좋은 표현은?",
+"opts": [
+"Could you",
+"Thank you",
+"We hereby",
+"Best regards"
+],
+"a": 2,
+"why": "과한 격식"
+},
+{
+"q": "The Buyer ______ pay within 30 days.",
+"opts": [
+"shall",
+"can",
+"might",
+"would"
+],
+"a": 0,
+"why": "의무"
+},
+{
+"q": "'in accordance with'의 덜 격식 있는 표현은?",
+"opts": [
+"because of",
+"according to",
+"instead of",
+"in spite of"
+],
+"a": 1,
+"why": "according to"
+},
+{
+"q": "격식 서신의 마무리 (수신인 이름을 모를 때)?",
+"opts": [
+"Bye",
+"Yours faithfully",
+"Cheers",
+"See you"
+],
+"a": 1,
+"why": "Yours faithfully"
+}
+],
+"next": "EP.29 — 결제 조건 협상: L/C인가 T/T인가  ▸ 결제·무역 용어"
+},
+{
+"no": "29",
+"title": "L/C냐 T/T냐",
+"grammar": "결제·무역 용어",
+"panels": [
+{
+"label": "수요일 · 보건부 재무실",
+"lines": [
+{
+"s": "N",
+"en": "The Ministry pays by {1:L/C}. Irrevocable, at sight.",
+"ko": "보건부는 L/C로 지급합니다. 취소불능, 일람불."
+},
+{
+"s": "A",
+"en": "At sight is good. Our bank will love you.",
+"ko": "일람불이면 좋죠. 저희 은행이 좋아하겠네요."
+}
+]
+},
+{
+"label": "수요일 · 서울",
+"lines": [
+{
+"s": "P",
+"en": "{0:T/T} would be faster. L/C paperwork takes weeks.",
+"ko": "T/T가 더 빠른데. L/C 서류는 몇 주 걸려요."
+},
+{
+"s": "A",
+"en": "Faster, but a ministry won't wire 2 million in advance.",
+"ko": "빠르긴 한데 보건부가 200만 달러를 선송금하진 않죠."
+}
+]
+},
+{
+"label": "목요일 · 조건 협상",
+"lines": [
+{
+"s": "N",
+"en": "Price basis?",
+"ko": "가격 조건은?"
+},
+{
+"s": "A",
+"en": "{2:CIF Almaty}. We cover freight and insurance to the airport.",
+"ko": "CIF 알마티. 공항까지 운임·보험은 저희가 부담합니다."
+},
+{
+"s": "N",
+"en": "{2:DAP}. To each hospital.",
+"ko": "DAP. 각 병원까지."
+}
+]
+},
+{
+"label": "목요일 · 밤",
+"lines": [
+{
+"s": "E",
+"en": "DAP to 25 regional hospitals. Some have no road.",
+"ko": "지방 병원 25곳까지 DAP. 길도 없는 데가 있어요."
+},
+{
+"s": "A",
+"en": "Then Marat gets a helicopter. {3:Due upon} landing.",
+"ko": "그럼 Marat한테 헬기 사 줘야죠. 착륙 즉시 결제."
+}
+]
+}
+],
+"red": [
+[
+"Payment by",
+"L/C in sight",
+"L/C at sight",
+".",
+"at sight"
+],
+[
+"30%",
+"T/T advance",
+"T/T in advance",
+"",
+"in advance"
+],
+[
+"Price",
+"FOB to Busan",
+"FOB Busan",
+"",
+"Incoterm + 지명"
+]
+],
+"explain": [
+{
+"w": "T/T (telegraphic transfer)",
+"why": "은행 송금. 빠르고 단순, 선금에 흔함. 'T/T in advance'.",
+"trap": "wire transfer, bank transfer와 같은 뜻",
+"ex": [
+[
+"We require 30% T/T in advance and 70% before shipment.",
+"선금 30% T/T, 선적 전 70%입니다."
+],
+[
+"Please send the T/T copy once the transfer is made.",
+"송금 후 송금증 사본을 보내 주세요."
+]
+]
+},
+{
+"w": "L/C (letter of credit)",
+"why": "은행이 지급 보증. 큰 금액·공공기관. irrevocable(취소불능), at sight(일람불).",
+"trap": "L/C는 서류가 1자라도 틀리면 지급 거절",
+"ex": [
+[
+"Payment by irrevocable L/C at sight.",
+"취소불능 일람불 신용장 결제."
+],
+[
+"The L/C must be opened within 15 days of contract signature.",
+"L/C는 계약 서명 후 15일 내 개설되어야 합니다."
+]
+]
+},
+{
+"w": "Incoterms: FOB / CIF / DAP",
+"why": "어디까지 누가 비용·위험을 지는지. FOB 부산(배에 실을 때까지), CIF 알마티(목적지까지 운임·보험), DAP(지정 장소 도착, 통관 전).",
+"trap": "Incoterm 뒤에 지명 필수",
+"ex": [
+[
+"Our price is CIF Almaty airport.",
+"가격은 CIF 알마티 공항 조건입니다."
+],
+[
+"DAP to each hospital will add about $800 per unit.",
+"각 병원 DAP는 대당 약 800달러 추가됩니다."
+]
+]
+},
+{
+"w": "net 30 / due upon",
+"why": "결제 기한. net 30 = 송장일로부터 30일. due upon acceptance = 검수 즉시.",
+"trap": "net 30은 선금이 아니라 외상 기간",
+"ex": [
+[
+"Payment terms: net 30 from invoice date.",
+"결제 조건: 송장일로부터 30일."
+],
+[
+"The balance is due upon acceptance.",
+"잔금은 검수 즉시 지급됩니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "30% ______ in advance.",
+"opts": [
+"L/C",
+"T/T",
+"FOB",
+"net"
+],
+"a": 1,
+"why": "선금은 송금"
+},
+{
+"q": "irrevocable L/C ______ sight",
+"opts": [
+"in",
+"on",
+"at",
+"by"
+],
+"a": 2,
+"why": "at sight"
+},
+{
+"q": "Price basis: ______ Busan. (배에 실을 때까지)",
+"opts": [
+"CIF",
+"DAP",
+"FOB",
+"EXW"
+],
+"a": 2,
+"why": "FOB"
+},
+{
+"q": "운임과 보험을 포함해 목적지까지 = ?",
+"opts": [
+"FOB",
+"CIF",
+"T/T",
+"net 30"
+],
+"a": 1,
+"why": "CIF"
+},
+{
+"q": "지정 장소 도착 (통관 전) = ?",
+"opts": [
+"FOB",
+"CIF",
+"DAP",
+"L/C"
+],
+"a": 2,
+"why": "DAP"
+},
+{
+"q": "'net 30'의 뜻은?",
+"opts": [
+"30% 선금",
+"송장일로부터 30일 내 결제",
+"30대 주문",
+"30% 할인"
+],
+"a": 1,
+"why": "결제 기한"
+},
+{
+"q": "The balance is due ______ acceptance.",
+"opts": [
+"upon",
+"in",
+"at",
+"for"
+],
+"a": 0,
+"why": "due upon"
+},
+{
+"q": "L/C의 장점은?",
+"opts": [
+"빠르다",
+"은행이 지급을 보증한다",
+"서류가 필요 없다",
+"할인된다"
+],
+"a": 1,
+"why": "지급 보증"
+},
+{
+"q": "'irrevocable'의 뜻은?",
+"opts": [
+"취소 가능",
+"취소 불능",
+"즉시",
+"분할"
+],
+"a": 1,
+"why": "취소불능"
+},
+{
+"q": "Incoterm 뒤에 반드시 오는 것은?",
+"opts": [
+"금액",
+"지명",
+"날짜",
+"회사명"
+],
+"a": 1,
+"why": "FOB Busan처럼 지명"
+}
+],
+"next": "EP.30 — 계약 체결 만찬, 스몰토크의 지옥  ▸ 스몰토크 표현"
+},
+{
+"no": "30",
+"title": "스몰토크의 지옥",
+"grammar": "스몰토크",
+"panels": [
+{
+"label": "금요일 · 만찬 전",
+"lines": [
+{
+"s": "N",
+"en": "{0:How was your flight}, Mr. Kang?",
+"ko": "비행은 어떠셨습니까, 강 전무님?"
+},
+{
+"s": "K",
+"en": "Long. Very long.",
+"ko": "길었습니다. 아주."
+},
+{
+"s": "A",
+"en": "(He means it was fine.)",
+"ko": "(괜찮았다는 뜻입니다.)"
+}
+]
+},
+{
+"label": "금요일 · 전채",
+"lines": [
+{
+"s": "N",
+"en": "{1:Have you been to} Almaty before?",
+"ko": "알마티는 전에 와 보셨나요?"
+},
+{
+"s": "K",
+"en": "Three times. The mountains are beautiful.",
+"ko": "세 번요. 산이 아름답죠."
+},
+{
+"s": "N",
+"en": "And the traffic?",
+"ko": "교통은요?"
+},
+{
+"s": "K",
+"en": "Also beautiful. From the hotel window.",
+"ko": "그것도 아름답죠. 호텔 창문에서 보면."
+}
+]
+},
+{
+"label": "금요일 · 메인",
+"lines": [
+{
+"s": "D",
+"en": "{2:Speaking of} mountains, do you ski, Mr. Nurlan?",
+"ko": "산 얘기가 나와서 말인데, 스키 타세요?"
+},
+{
+"s": "N",
+"en": "Every weekend at Shymbulak.",
+"ko": "매주 심불락에서요."
+},
+{
+"s": "A",
+"en": "(Writing: ski = 50 X-rays)",
+"ko": "(메모: 스키 = X-ray 50대)"
+}
+]
+},
+{
+"label": "금요일 · 23:00",
+"lines": [
+{
+"s": "K",
+"en": "Well, {3:I'd better get going}. Early flight.",
+"ko": "자, 이만 가 봐야겠습니다. 아침 비행기라."
+},
+{
+"s": "N",
+"en": "Of course. It was a pleasure.",
+"ko": "물론이죠. 즐거웠습니다."
+},
+{
+"s": "E",
+"en": "(to A) You survived.",
+"ko": "(A에게) 살아남았네요."
+}
+]
+}
+],
+"red": [
+[
+"",
+"How is your flight?",
+"How was your flight?",
+"",
+"이미 끝난 비행 → was"
+],
+[
+"",
+"Did you ever been to Almaty?",
+"Have you ever been to Almaty?",
+"",
+"have been to"
+],
+[
+"Speaking",
+"about",
+"of",
+"the weather...",
+"speaking of"
+]
+],
+"explain": [
+{
+"w": "How was your flight?",
+"why": "비즈니스 스몰토크 시작의 정석. 답은 짧게 + 되묻기.",
+"trap": "How is → 이미 끝났으므로 was",
+"ex": [
+[
+"How was your flight? — Not bad, thanks. A bit long.",
+"비행은요? — 괜찮았어요. 좀 길었지만."
+],
+[
+"How was the traffic this morning?",
+"오늘 아침 길은 어땠어요?"
+]
+]
+},
+{
+"w": "Have you been to ~?",
+"why": "장소 경험 묻기. 대화를 이어 갈 재료가 생긴다.",
+"trap": "Have you gone to (X, 가 버렸다는 뜻)",
+"ex": [
+[
+"Have you been to Korea before?",
+"한국에 와 보신 적 있어요?"
+],
+[
+"Have you ever been to the mountains here?",
+"여기 산에 가 보셨어요?"
+]
+]
+},
+{
+"w": "Speaking of ~",
+"why": "자연스러운 화제 전환. 앞 말의 단어를 받아서.",
+"trap": "speaking about (X)",
+"ex": [
+[
+"Speaking of deadlines, when is the next tender?",
+"마감 얘기가 나왔으니, 다음 입찰은 언제죠?"
+],
+[
+"Speaking of coffee, have you tried the local kind?",
+"커피 얘기가 나왔으니, 현지 커피 드셔 보셨어요?"
+]
+]
+},
+{
+"w": "I'd better get going",
+"why": "자리를 뜨는 정중한 신호. 이유를 하나 붙이면 완벽.",
+"trap": "I'd better + 동사원형",
+"ex": [
+[
+"Well, I'd better get going. Early flight tomorrow.",
+"자, 이만 가 봐야겠어요. 내일 아침 비행기라서."
+],
+[
+"It was great talking to you. I'd better let you go.",
+"얘기 즐거웠습니다. 이만 보내 드려야겠네요."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "How ______ your flight?",
+"opts": [
+"is",
+"was",
+"does",
+"has"
+],
+"a": 1,
+"why": "끝난 일 was"
+},
+{
+"q": "Have you ever ______ to Almaty?",
+"opts": [
+"gone",
+"been",
+"go",
+"went"
+],
+"a": 1,
+"why": "been to"
+},
+{
+"q": "______ of mountains, do you ski?",
+"opts": [
+"Talking",
+"Speaking",
+"Saying",
+"Telling"
+],
+"a": 1,
+"why": "speaking of"
+},
+{
+"q": "I'd better ______ going.",
+"opts": [
+"to get",
+"get",
+"getting",
+"got"
+],
+"a": 1,
+"why": "had better + 동사원형"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"Speaking of weather...",
+"Speaking about weather...",
+"How was your trip?",
+"Have you been to Seoul?"
+],
+"a": 1,
+"why": "speaking of"
+},
+{
+"q": "'How was your flight?'에 좋은 대답은?",
+"opts": [
+"Yes.",
+"Not bad, thanks. A bit long. How was your week?",
+"I flew.",
+"Why?"
+],
+"a": 1,
+"why": "짧게 + 되묻기"
+},
+{
+"q": "'I'd better get going.'의 뜻은?",
+"opts": [
+"더 머물게요",
+"이만 가 봐야겠어요",
+"같이 가요",
+"가지 마세요"
+],
+"a": 1,
+"why": "자리 뜨기"
+},
+{
+"q": "I ______ been to the mountains yet.",
+"opts": [
+"haven't",
+"didn't",
+"don't",
+"wasn't"
+],
+"a": 0,
+"why": "현재완료 yet"
+},
+{
+"q": "The weather ______ great this week.",
+"opts": [
+"is been",
+"has been",
+"was been",
+"be"
+],
+"a": 1,
+"why": "현재완료"
+},
+{
+"q": "스몰토크에서 피할 주제는?",
+"opts": [
+"날씨",
+"비행·교통",
+"연봉·종교·정치",
+"취미"
+],
+"a": 2,
+"why": "민감 주제"
+}
+],
+"next": "EP.31 — 첫 납품 트럭이 눈 속에 갇혔다  ▸ 재귀대명사·강조 myself · each other · on my own"
+},
+{
+"no": "31",
+"title": "눈 속의 트럭",
+"grammar": "재귀대명사·상호",
+"panels": [
+{
+"label": "1월 · 카라간다 고속도로",
+"lines": [
+{
+"s": "M",
+"en": "Snowstorm. I'm {1:by myself} with ten X-rays.",
+"ko": "눈보라예요. X-ray 10대랑 저 혼자예요."
+},
+{
+"s": "A",
+"en": "Stay in the truck. I'll call the road service {0:myself}.",
+"ko": "트럭에 있어요. 도로 구조대엔 내가 직접 전화할게요."
+}
+]
+},
+{
+"label": "1월 · 사무실",
+"lines": [
+{
+"s": "E",
+"en": "Jun and Marat have never met. Will they manage {2:each other}?",
+"ko": "Jun과 Marat은 만난 적도 없는데 서로 잘 지낼까요?"
+},
+{
+"s": "A",
+"en": "They'll help {2:each other}. Or freeze together.",
+"ko": "서로 도울 거예요. 아니면 같이 얼든가."
+}
+]
+},
+{
+"label": "1월 · 6시간 뒤",
+"lines": [
+{
+"s": "J",
+"en": "Found him! The truck is stuck, but the units {3:themselves} are fine.",
+"ko": "찾았어요! 트럭은 갇혔지만 장비 자체는 멀쩡해요."
+},
+{
+"s": "A",
+"en": "Did you dig it out {1:on your own}?",
+"ko": "혼자 파낸 거예요?"
+},
+{
+"s": "J",
+"en": "Marat and I did it {2:together}.",
+"ko": "Marat이랑 같이요."
+}
+]
+},
+{
+"label": "1월 · 병원 도착",
+"lines": [
+{
+"s": "L",
+"en": "You brought them {0:yourselves}? In this weather?",
+"ko": "이 날씨에 직접 가져왔다고요?"
+},
+{
+"s": "M",
+"en": "The road service never came. So we became the road service.",
+"ko": "구조대가 안 와서 우리가 구조대가 됐어요."
+}
+]
+}
+],
+"red": [
+[
+"I will check it",
+"by my own",
+"on my own",
+".",
+"on my own / by myself"
+],
+[
+"They helped",
+"themselves",
+"each other",
+".",
+"서로 = each other"
+],
+[
+"The unit",
+"himself",
+"itself",
+"is fine.",
+"사물 → itself"
+]
+],
+"explain": [
+{
+"w": "myself / yourself (강조)",
+"why": "'직접'. 남에게 맡기지 않았음을 강조.",
+"trap": "I myself / I ... myself 둘 다 가능",
+"ex": [
+[
+"I tested the unit myself before shipping.",
+"선적 전에 제가 직접 테스트했습니다."
+],
+[
+"The director herself signed the acceptance.",
+"원장이 직접 검수서에 서명했습니다."
+]
+]
+},
+{
+"w": "by myself / on my own",
+"why": "'혼자서'. 도움 없이.",
+"trap": "by my own (X)",
+"ex": [
+[
+"Marat drove 800 km by himself.",
+"Marat이 혼자 800km를 운전했습니다."
+],
+[
+"Can you set it up on your own?",
+"혼자 설치할 수 있으세요?"
+]
+]
+},
+{
+"w": "each other",
+"why": "'서로'. 둘 이상이 상대에게.",
+"trap": "themselves(자기 자신들)와 혼동 주의",
+"ex": [
+[
+"The two teams support each other during installations.",
+"두 팀은 설치 중 서로 지원합니다."
+],
+[
+"Let's keep each other updated.",
+"서로 상황을 공유합시다."
+]
+]
+},
+{
+"w": "itself (강조)",
+"why": "'그 자체는'. 주변 문제와 구분.",
+"trap": "사물·회사 → itself",
+"ex": [
+[
+"The software itself is fine; the server is slow.",
+"소프트웨어 자체는 괜찮고 서버가 느린 겁니다."
+],
+[
+"The hospital itself has no loading dock.",
+"병원 자체에 하역장이 없습니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "I will check it ______. (혼자서)",
+"opts": [
+"by my own",
+"on my own",
+"by own",
+"myself own"
+],
+"a": 1,
+"why": "on my own"
+},
+{
+"q": "They helped ______.",
+"opts": [
+"themselves",
+"each other",
+"them",
+"theirselves"
+],
+"a": 1,
+"why": "서로"
+},
+{
+"q": "The unit ______ is fine.",
+"opts": [
+"himself",
+"itself",
+"themselves",
+"it"
+],
+"a": 1,
+"why": "사물 itself"
+},
+{
+"q": "Jun ran the tests ______. (직접)",
+"opts": [
+"himself",
+"him",
+"by own",
+"itself"
+],
+"a": 0,
+"why": "강조"
+},
+{
+"q": "The units ______ were not damaged.",
+"opts": [
+"itself",
+"themselves",
+"themself",
+"each other"
+],
+"a": 1,
+"why": "복수 themselves"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"I did it myself.",
+"I did it by myself.",
+"I did it by my own.",
+"I did it on my own."
+],
+"a": 2,
+"why": "by my own 없음"
+},
+{
+"q": "'each other'와 'themselves'의 차이는?",
+"opts": [
+"같다",
+"each other = 서로, themselves = 자기 자신들",
+"themselves = 서로",
+"each other = 혼자"
+],
+"a": 1,
+"why": "상호 vs 재귀"
+},
+{
+"q": "Marat drove 800 km ______.",
+"opts": [
+"himself by",
+"by himself",
+"by his own",
+"his self"
+],
+"a": 1,
+"why": "by himself"
+},
+{
+"q": "The director ______ signed the document.",
+"opts": [
+"herself",
+"sheself",
+"her",
+"itself"
+],
+"a": 0,
+"why": "강조 herself"
+},
+{
+"q": "Let's keep ______ updated.",
+"opts": [
+"ourselves",
+"each other",
+"us",
+"we"
+],
+"a": 1,
+"why": "서로"
+}
+],
+"next": "EP.32 — 지방 병원 교육: 동명사로 설명하기  ▸ 동명사 주어 · 전치사 + -ing"
+},
+{
+"no": "32",
+"title": "교육은 어렵다",
+"grammar": "동명사",
+"panels": [
+{
+"label": "2월 · 지방 병원 교육실",
+"lines": [
+{
+"s": "J",
+"en": "{0:Calibrating} the detector takes five minutes.",
+"ko": "디텍터 교정은 5분 걸립니다."
+},
+{
+"s": "L",
+"en": "{0:Explaining} it to 25 hospitals will take five months.",
+"ko": "25개 병원에 설명하려면 5개월 걸리겠네요."
+}
+]
+},
+{
+"label": "2월 · 실습",
+"lines": [
+{
+"s": "J",
+"en": "Never move the panel {1:without turning} it off first.",
+"ko": "먼저 끄지 않고 패널을 옮기면 절대 안 됩니다."
+},
+{
+"s": "J",
+"en": "You save battery {1:by using} sleep mode.",
+"ko": "절전 모드를 쓰면 배터리를 아낄 수 있습니다."
+}
+]
+},
+{
+"label": "2월 · 질문",
+"lines": [
+{
+"s": "L",
+"en": "Is it {2:worth reading} the whole manual?",
+"ko": "매뉴얼 전체를 읽을 가치가 있나요?"
+},
+{
+"s": "J",
+"en": "Chapter 3 is. The rest is lawyers.",
+"ko": "3장은요. 나머진 변호사들이 쓴 거예요."
+}
+]
+},
+{
+"label": "2월 · 저녁",
+"lines": [
+{
+"s": "A",
+"en": "Any {3:trouble teaching} today?",
+"ko": "오늘 가르치는 데 어려움은 없었어요?"
+},
+{
+"s": "J",
+"en": "Only one. They kept {3:asking} me to fix the coffee machine.",
+"ko": "하나요. 자꾸 커피 머신 고쳐 달라고 해서요."
+}
+]
+}
+],
+"red": [
+[
+"",
+"Calibrate the detector takes five minutes.",
+"Calibrating the detector takes five minutes.",
+"",
+"주어는 -ing"
+],
+[
+"Save battery",
+"by use",
+"by using",
+"sleep mode.",
+"전치사 + -ing"
+],
+[
+"It's worth",
+"to check",
+"checking",
+".",
+"worth -ing"
+]
+],
+"explain": [
+{
+"w": "-ing 주어",
+"why": "동작을 명사처럼 주어로. 단수 취급.",
+"trap": "Calibrating ... takes (단수 동사)",
+"ex": [
+[
+"Installing a CT takes three days.",
+"CT 설치는 3일 걸립니다."
+],
+[
+"Training the staff is part of the contract.",
+"직원 교육은 계약에 포함됩니다."
+]
+]
+},
+{
+"w": "전치사 + -ing",
+"why": "by(~함으로써), before/after, without(~없이), instead of. 매뉴얼 문장의 핵심.",
+"trap": "전치사 뒤 동사원형 X",
+"ex": [
+[
+"Turn off the unit before moving it.",
+"옮기기 전에 전원을 끄세요."
+],
+[
+"You can extend battery life by enabling sleep mode.",
+"절전 모드를 켜면 배터리 수명이 늘어납니다."
+]
+]
+},
+{
+"w": "be worth -ing",
+"why": "'~할 가치가 있다'. 추천할 때.",
+"trap": "worth to + 동사 (X)",
+"ex": [
+[
+"It's worth reading Chapter 3 before the first scan.",
+"첫 촬영 전 3장은 읽을 가치가 있습니다."
+],
+[
+"The upgrade is worth considering.",
+"업그레이드는 고려할 가치가 있습니다."
+]
+]
+},
+{
+"w": "have trouble / difficulty -ing",
+"why": "'~하는 데 애먹다'.",
+"trap": "have trouble to (X)",
+"ex": [
+[
+"Some hospitals have trouble connecting to the server.",
+"일부 병원은 서버 연결에 어려움을 겪습니다."
+],
+[
+"Did you have any difficulty finding the clinic?",
+"병원 찾는 데 어려움은 없으셨어요?"
+]
+]
+}
+],
+"quiz": [
+{
+"q": "______ the detector takes five minutes.",
+"opts": [
+"Calibrate",
+"Calibrating",
+"To calibrating",
+"Calibrated"
+],
+"a": 1,
+"why": "-ing 주어"
+},
+{
+"q": "Save battery by ______ sleep mode.",
+"opts": [
+"use",
+"using",
+"to use",
+"used"
+],
+"a": 1,
+"why": "by + -ing"
+},
+{
+"q": "It's worth ______.",
+"opts": [
+"to check",
+"checking",
+"check",
+"checked"
+],
+"a": 1,
+"why": "worth -ing"
+},
+{
+"q": "Don't move it without ______ it off.",
+"opts": [
+"turn",
+"turning",
+"to turn",
+"turned"
+],
+"a": 1,
+"why": "without -ing"
+},
+{
+"q": "We have trouble ______ to the server.",
+"opts": [
+"connect",
+"to connect",
+"connecting",
+"connected"
+],
+"a": 2,
+"why": "trouble -ing"
+},
+{
+"q": "Training the staff ______ part of the contract.",
+"opts": [
+"are",
+"is",
+"be",
+"were"
+],
+"a": 1,
+"why": "-ing 주어 단수"
+},
+{
+"q": "Turn off the unit ______ moving it.",
+"opts": [
+"before",
+"before to",
+"for",
+"to"
+],
+"a": 0,
+"why": "before + -ing"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"It's worth reading.",
+"It's worth to read.",
+"Reading it is worth it.",
+"It's worth a read."
+],
+"a": 1,
+"why": "worth to X"
+},
+{
+"q": "Instead of ______ the manual, watch the video.",
+"opts": [
+"read",
+"reading",
+"to read",
+"reads"
+],
+"a": 1,
+"why": "instead of -ing"
+},
+{
+"q": "Did you have any difficulty ______ the clinic?",
+"opts": [
+"find",
+"to find",
+"finding",
+"found"
+],
+"a": 2,
+"why": "difficulty -ing"
+}
+],
+"next": "EP.33 — 보건부 검수에서 문제 발견, 더 많이 쓸수록  ▸ the more ~, the more ~ · 비교 심화"
+},
+{
+"no": "33",
+"title": "쓸수록 더",
+"grammar": "비교 심화",
+"panels": [
+{
+"label": "3월 · 보건부 검수",
+"lines": [
+{
+"s": "N",
+"en": "Hospital 7 reports slow image loading.",
+"ko": "7번 병원에서 이미지 로딩이 느리다고 합니다."
+},
+{
+"s": "J",
+"en": "{0:The more} images they store, {0:the slower} the old server gets.",
+"ko": "이미지를 많이 저장할수록 구형 서버가 느려지는 겁니다."
+}
+]
+},
+{
+"label": "3월 · 사무실",
+"lines": [
+{
+"s": "E",
+"en": "Complaints are getting {1:more and more} frequent.",
+"ko": "불만이 점점 잦아지고 있어요."
+},
+{
+"s": "A",
+"en": "And my hair is getting {1:more and more} grey.",
+"ko": "내 머리도 점점 희어지고요."
+}
+]
+},
+{
+"label": "3월 · 해결책",
+"lines": [
+{
+"s": "A",
+"en": "A new server costs {2:twice as much as} the upgrade.",
+"ko": "새 서버는 업그레이드의 두 배 비용이에요."
+},
+{
+"s": "P",
+"en": "But it's {3:by far the fastest} option.",
+"ko": "하지만 단연 가장 빠른 방법이죠."
+}
+]
+},
+{
+"label": "3월 · 보건부",
+"lines": [
+{
+"s": "N",
+"en": "So: {0:the sooner} we upgrade, {0:the fewer} complaints?",
+"ko": "그러니까 빨리 업그레이드할수록 불만이 줄어든다?"
+},
+{
+"s": "A",
+"en": "Exactly. And {0:the happier} Hospital 7.",
+"ko": "맞습니다. 7번 병원도 더 행복해지고요."
+}
+]
+}
+],
+"red": [
+[
+"The more you use it,",
+"the more fast",
+"the faster",
+"it gets.",
+"짧은 형용사 → the -er"
+],
+[
+"It costs",
+"twice more than",
+"twice as much as",
+"the upgrade.",
+"twice as ~ as"
+],
+[
+"It is",
+"very the fastest",
+"by far the fastest",
+".",
+"최상급 강조 by far"
+]
+],
+"explain": [
+{
+"w": "the more ~, the more ~",
+"why": "비례 관계. 두 비교급을 the로 묶음.",
+"trap": "the more fast (X) → the faster",
+"ex": [
+[
+"The more hospitals we connect, the more data the server handles.",
+"병원을 많이 연결할수록 서버가 처리하는 데이터가 늘어납니다."
+],
+[
+"The sooner we order, the cheaper it is.",
+"빨리 주문할수록 저렴합니다."
+]
+]
+},
+{
+"w": "more and more / -er and -er",
+"why": "점점 더. 추세 설명.",
+"trap": "짧은 단어는 -er and -er (bigger and bigger)",
+"ex": [
+[
+"Regional hospitals are becoming more and more digital.",
+"지방 병원이 점점 디지털화되고 있습니다."
+],
+[
+"Response times are getting shorter and shorter.",
+"대응 시간이 점점 짧아지고 있습니다."
+]
+]
+},
+{
+"w": "twice / three times as ~ as",
+"why": "배수 비교.",
+"trap": "twice more than (X) → twice as much as",
+"ex": [
+[
+"The new server is twice as fast as the old one.",
+"새 서버는 구형보다 두 배 빠릅니다."
+],
+[
+"Air freight costs three times as much as sea freight.",
+"항공 운임은 해상의 세 배입니다."
+]
+]
+},
+{
+"w": "by far the ~est",
+"why": "최상급 강조. '단연'.",
+"trap": "very the best (X)",
+"ex": [
+[
+"This is by far the most reliable detector we have sold.",
+"저희가 판매한 것 중 단연 가장 안정적인 디텍터입니다."
+],
+[
+"Almaty is by far our largest market in Central Asia.",
+"알마티는 중앙아시아에서 단연 최대 시장입니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "The more you use it, ______ it gets.",
+"opts": [
+"the more fast",
+"the faster",
+"faster",
+"more faster"
+],
+"a": 1,
+"why": "the + 비교급"
+},
+{
+"q": "It costs ______ the upgrade.",
+"opts": [
+"twice more than",
+"twice as much as",
+"two times than",
+"double as"
+],
+"a": 1,
+"why": "twice as ~ as"
+},
+{
+"q": "It is ______ the fastest option.",
+"opts": [
+"very",
+"by far",
+"much more",
+"most"
+],
+"a": 1,
+"why": "최상급 강조"
+},
+{
+"q": "Complaints are becoming ______ frequent.",
+"opts": [
+"more and more",
+"more more",
+"most and most",
+"much and much"
+],
+"a": 0,
+"why": "점점 더"
+},
+{
+"q": "The ______ we upgrade, the less it costs.",
+"opts": [
+"soon",
+"sooner",
+"soonest",
+"more soon"
+],
+"a": 1,
+"why": "the sooner"
+},
+{
+"q": "Response times are getting ______.",
+"opts": [
+"short and short",
+"shorter and shorter",
+"more short",
+"shortest"
+],
+"a": 1,
+"why": "-er and -er"
+},
+{
+"q": "Air freight costs three ______ as much as sea freight.",
+"opts": [
+"time",
+"times",
+"timed",
+"x"
+],
+"a": 1,
+"why": "three times as"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"by far the best",
+"very the best",
+"the best by far",
+"easily the best"
+],
+"a": 1,
+"why": "very X"
+},
+{
+"q": "The more hospitals we connect, ______ data the server handles.",
+"opts": [
+"more",
+"the more",
+"most",
+"the most"
+],
+"a": 1,
+"why": "the more"
+},
+{
+"q": "'The sooner, the better.'의 뜻은?",
+"opts": [
+"나중이 좋다",
+"빠를수록 좋다",
+"둘 다 좋다",
+"느릴수록 좋다"
+],
+"a": 1,
+"why": "비례"
+}
+],
+"next": "EP.34 — Viktor가 이의를 제기했다: 이야기를 전하기  ▸ 과거 보고 · 시간 순서 표현"
+},
+{
+"no": "34",
+"title": "Viktor의 이의 제기",
+"grammar": "사건 순서 설명",
+"panels": [
+{
+"label": "4월 · 보건부 긴급 호출",
+"lines": [
+{
+"s": "N",
+"en": "Viktor filed a complaint. Tell me what happened, in order.",
+"ko": "Viktor가 이의를 제기했어요. 순서대로 말해 보세요."
+},
+{
+"s": "A",
+"en": "{0:First}, we submitted on time. {0:Then} we learned his factory had closed.",
+"ko": "먼저 저희는 제때 제출했고, 그다음 그의 공장이 문 닫은 걸 알았습니다."
+}
+]
+},
+{
+"label": "4월 · 계속",
+"lines": [
+{
+"s": "A",
+"en": "{1:Meanwhile}, Marat sent the photos to your office.",
+"ko": "그동안 Marat이 사진을 보건부에 보냈고요."
+},
+{
+"s": "A",
+"en": "{3:As soon as} you confirmed, we started production.",
+"ko": "확인해 주시자마자 생산을 시작했습니다."
+}
+]
+},
+{
+"label": "4월 · Viktor",
+"lines": [
+{
+"s": "V",
+"en": "Those photos were fake!",
+"ko": "그 사진은 조작이야!"
+},
+{
+"s": "M",
+"en": "Here's the video. Timestamp included.",
+"ko": "영상도 있어요. 시간 표시까지."
+}
+]
+},
+{
+"label": "4월 · 결론",
+"lines": [
+{
+"s": "N",
+"en": "{2:In the end}, the facts are clear. Complaint rejected.",
+"ko": "결국 사실은 명확하군요. 이의 기각."
+},
+{
+"s": "A",
+"en": "{2:Eventually}, honesty wins. It just takes four months.",
+"ko": "결국 정직이 이기네요. 4개월 걸릴 뿐이지."
+}
+]
+}
+],
+"red": [
+[
+"",
+"At first, we submitted. At second, we learned...",
+"First, we submitted. Then, we learned...",
+"",
+"at second X"
+],
+[
+"",
+"In the meanwhile, Marat sent photos.",
+"Meanwhile, Marat sent photos.",
+"",
+"meanwhile 단독"
+],
+[
+"As soon as you",
+"will confirm",
+"confirm",
+", we start.",
+"as soon as + 현재형"
+]
+],
+"explain": [
+{
+"w": "First / Then / After that / Finally",
+"why": "순서 나열의 기본. 경위서·절차 설명.",
+"trap": "At first는 '처음에는(나중과 대비)'라는 다른 뜻",
+"ex": [
+[
+"First, we received the PO. Then we confirmed stock. After that, we shipped.",
+"먼저 발주서를 받고, 재고를 확인한 뒤, 선적했습니다."
+],
+[
+"Finally, the hospital signed the acceptance.",
+"마지막으로 병원이 검수서에 서명했습니다."
+]
+]
+},
+{
+"w": "meanwhile",
+"why": "'그동안에'. 동시에 진행된 다른 일.",
+"trap": "in the meanwhile (X) → meanwhile / in the meantime",
+"ex": [
+[
+"The truck waited at customs. Meanwhile, Jun prepared the room.",
+"트럭은 세관에서 대기했고, 그동안 Jun은 방을 준비했습니다."
+],
+[
+"In the meantime, please send the signed form.",
+"그동안 서명된 양식을 보내 주세요."
+]
+]
+},
+{
+"w": "eventually / in the end",
+"why": "'결국'. 시간이 걸린 뒤의 결과.",
+"trap": "finally는 순서의 마지막, eventually는 '오래 걸려 결국'",
+"ex": [
+[
+"Eventually, customs released the goods after six days.",
+"결국 6일 만에 세관이 물품을 내보냈습니다."
+],
+[
+"In the end, the ministry rejected the complaint.",
+"결국 보건부가 이의를 기각했습니다."
+]
+]
+},
+{
+"w": "as soon as",
+"why": "'~하자마자'. 미래도 현재형.",
+"trap": "as soon as it will arrive (X)",
+"ex": [
+[
+"As soon as the units arrive, we'll start installation.",
+"장비가 도착하자마자 설치를 시작하겠습니다."
+],
+[
+"Please call me as soon as you land.",
+"착륙하자마자 전화 주세요."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "______, we shipped. ______, we cleared customs.",
+"opts": [
+"First / Then",
+"At first / At second",
+"One / Two",
+"Then / First"
+],
+"a": 0,
+"why": "First, Then"
+},
+{
+"q": "______, the hospital prepared the room. (그동안)",
+"opts": [
+"Meanwhile",
+"In the meanwhile",
+"During",
+"While"
+],
+"a": 0,
+"why": "meanwhile"
+},
+{
+"q": "______ the units arrive, we'll install them.",
+"opts": [
+"As soon",
+"As soon as",
+"Soon as",
+"So soon"
+],
+"a": 1,
+"why": "as soon as"
+},
+{
+"q": "As soon as you ______, call me.",
+"opts": [
+"will land",
+"land",
+"landed",
+"landing"
+],
+"a": 1,
+"why": "현재형"
+},
+{
+"q": "______, customs released the goods after six days. (결국)",
+"opts": [
+"Finally first",
+"Eventually",
+"Firstly",
+"Meanwhile"
+],
+"a": 1,
+"why": "eventually"
+},
+{
+"q": "In the ______, the complaint was rejected.",
+"opts": [
+"end",
+"final",
+"last",
+"finish"
+],
+"a": 0,
+"why": "in the end"
+},
+{
+"q": "'At first'의 뜻은?",
+"opts": [
+"먼저(순서)",
+"처음에는(나중과 대비)",
+"첫째로",
+"마지막에"
+],
+"a": 1,
+"why": "대비"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"Meanwhile, he called.",
+"In the meantime, he called.",
+"In the meanwhile, he called.",
+"He called in the meantime."
+],
+"a": 2,
+"why": "in the meanwhile X"
+},
+{
+"q": "After ______, we shipped the goods.",
+"opts": [
+"that",
+"than",
+"then",
+"there"
+],
+"a": 0,
+"why": "after that"
+},
+{
+"q": "'Finally'와 'Eventually'의 차이는?",
+"opts": [
+"같다",
+"finally = 순서의 마지막, eventually = 오래 걸려 결국",
+"eventually = 순서",
+"finally = 결코"
+],
+"a": 1,
+"why": "순서 vs 결과"
+}
+],
+"next": "EP.35 — 아스타나 출장: 공항·호텔·택시  ▸ 출장 영어"
+},
+{
+"no": "35",
+"title": "아스타나 출장",
+"grammar": "출장 영어",
+"panels": [
+{
+"label": "5월 · 아스타나 공항",
+"lines": [
+{
+"s": "A",
+"en": "{1:Could you take me to} the Hilton, please?",
+"ko": "힐튼으로 가 주시겠어요?"
+},
+{
+"s": "M",
+"en": "(driver) Which Hilton? There are two.",
+"ko": "(기사) 어느 힐튼요? 두 개인데."
+},
+{
+"s": "A",
+"en": "The one near the Ministry.",
+"ko": "보건부 근처요."
+}
+]
+},
+{
+"label": "5월 · 호텔 프런트",
+"lines": [
+{
+"s": "A",
+"en": "{0:I have a reservation under} Lee. Artyom Lee.",
+"ko": "Lee 이름으로 예약했습니다. 아르툠 리."
+},
+{
+"s": "S",
+"en": "(clerk) Here you are. Room 1412.",
+"ko": "(직원) 여기요. 1412호."
+},
+{
+"s": "A",
+"en": "{2:Is breakfast included}?",
+"ko": "조식 포함인가요?"
+}
+]
+},
+{
+"label": "5월 · 다음 날 택시",
+"lines": [
+{
+"s": "A",
+"en": "{3:I'd like a receipt, please}. For my company.",
+"ko": "영수증 주세요. 회사 제출용으로요."
+},
+{
+"s": "M",
+"en": "(driver) Receipt? I'll write one on this napkin.",
+"ko": "(기사) 영수증요? 이 냅킨에 써 드릴게요."
+}
+]
+},
+{
+"label": "5월 · 서울 정산",
+"lines": [
+{
+"s": "P",
+"en": "A napkin? Accounting won't accept this.",
+"ko": "냅킨? 회계팀이 안 받아 줄 텐데."
+},
+{
+"s": "A",
+"en": "It has a stamp. He used ketchup.",
+"ko": "도장도 찍혔어요. 케첩으로."
+}
+]
+}
+],
+"red": [
+[
+"I have a reservation",
+"on the name",
+"under the name",
+"of Lee.",
+"under the name"
+],
+[
+"",
+"Take me to Hilton.",
+"Could you take me to the Hilton, please?",
+"",
+"정중하게"
+],
+[
+"Is the breakfast",
+"include",
+"included",
+"?",
+"수동태"
+]
+],
+"explain": [
+{
+"w": "I have a reservation under ~",
+"why": "호텔·식당 체크인 첫 문장.",
+"trap": "under the name of + 성",
+"ex": [
+[
+"I have a reservation under the name of Lee for two nights.",
+"Lee 이름으로 2박 예약했습니다."
+],
+[
+"We have a table reserved under SG Healthcare.",
+"SG Healthcare 이름으로 테이블 예약했습니다."
+]
+]
+},
+{
+"w": "Could you take me to ~?",
+"why": "택시. 목적지 + please.",
+"trap": "Go to Hilton (명령조)",
+"ex": [
+[
+"Could you take me to the airport, please? Terminal 2.",
+"공항으로 가 주시겠어요? 2터미널요."
+],
+[
+"How long does it take to get to the city center?",
+"시내까지 얼마나 걸리나요?"
+]
+]
+},
+{
+"w": "Is ~ included?",
+"why": "포함 여부 확인. 조식·세금·와이파이.",
+"trap": "Is breakfast include (X)",
+"ex": [
+[
+"Is breakfast included in the rate?",
+"요금에 조식이 포함되나요?"
+],
+[
+"Are taxes included in this price?",
+"이 가격에 세금이 포함되나요?"
+]
+]
+},
+{
+"w": "I'd like ~, please",
+"why": "요청의 만능형. 영수증·늦은 체크아웃·창가 자리.",
+"trap": "I want은 다소 직설적",
+"ex": [
+[
+"I'd like a receipt, please. With the company name.",
+"영수증 주세요. 회사명 넣어서요."
+],
+[
+"I'd like a late check-out, if possible.",
+"가능하면 늦은 체크아웃을 하고 싶습니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "I have a reservation ______ the name of Lee.",
+"opts": [
+"on",
+"under",
+"in",
+"by"
+],
+"a": 1,
+"why": "under the name"
+},
+{
+"q": "Could you ______ me to the Hilton, please?",
+"opts": [
+"bring",
+"take",
+"go",
+"carry"
+],
+"a": 1,
+"why": "take me to"
+},
+{
+"q": "Is breakfast ______?",
+"opts": [
+"include",
+"included",
+"including",
+"includes"
+],
+"a": 1,
+"why": "수동"
+},
+{
+"q": "I'd like a ______, please. For my company.",
+"opts": [
+"recipe",
+"receipt",
+"reception",
+"receive"
+],
+"a": 1,
+"why": "receipt = 영수증"
+},
+{
+"q": "Could you ______ a taxi to the airport?",
+"opts": [
+"make",
+"call",
+"do",
+"bring"
+],
+"a": 1,
+"why": "call a taxi"
+},
+{
+"q": "How long does it ______ to get to the center?",
+"opts": [
+"take",
+"cost",
+"spend",
+"need"
+],
+"a": 0,
+"why": "take + 시간"
+},
+{
+"q": "가장 정중한 택시 표현은?",
+"opts": [
+"Hilton.",
+"Go to Hilton.",
+"Could you take me to the Hilton, please?",
+"Hilton now."
+],
+"a": 2,
+"why": "Could you ~ please"
+},
+{
+"q": "I'd like a late ______, if possible.",
+"opts": [
+"check-in",
+"check-out",
+"checking",
+"checker"
+],
+"a": 1,
+"why": "늦은 체크아웃"
+},
+{
+"q": "'I'd like'는 무엇의 줄임인가?",
+"opts": [
+"I would like",
+"I had like",
+"I did like",
+"I will like"
+],
+"a": 0,
+"why": "would"
+},
+{
+"q": "Are taxes ______ in this price?",
+"opts": [
+"include",
+"included",
+"inclusive of",
+"including"
+],
+"a": 1,
+"why": "included"
+}
+],
+"next": "EP.36 — 전무님 앞 프레젠테이션 리허설  ▸ 발표 표현"
+},
+{
+"no": "36",
+"title": "발표 리허설",
+"grammar": "발표 표현",
+"panels": [
+{
+"label": "6월 · 회의실",
+"lines": [
+{
+"s": "A",
+"en": "{0:Today I'm going to talk about} the 50-unit rollout.",
+"ko": "오늘은 50대 배치 계획에 대해 말씀드리겠습니다."
+},
+{
+"s": "K",
+"en": "You have ten minutes. Not eleven.",
+"ko": "10분이네. 11분 아니고."
+}
+]
+},
+{
+"label": "6월 · 슬라이드 4",
+"lines": [
+{
+"s": "A",
+"en": "{2:As you can see}, 32 units are already installed.",
+"ko": "보시다시피 32대는 이미 설치됐습니다."
+},
+{
+"s": "A",
+"en": "{1:Let's move on to} the remaining 18.",
+"ko": "남은 18대로 넘어가겠습니다."
+}
+]
+},
+{
+"label": "6월 · 슬라이드 9",
+"lines": [
+{
+"s": "A",
+"en": "{3:That brings me to} the budget.",
+"ko": "이제 예산 차례입니다."
+},
+{
+"s": "K",
+"en": "Finally. The part I care about.",
+"ko": "드디어. 내가 관심 있는 부분이군."
+}
+]
+},
+{
+"label": "6월 · 9분 50초",
+"lines": [
+{
+"s": "A",
+"en": "To sum up: on schedule, on budget, one ketchup receipt.",
+"ko": "정리하면 일정 준수, 예산 준수, 케첩 영수증 하나."
+},
+{
+"s": "K",
+"en": "Approved. Except the ketchup.",
+"ko": "승인. 케첩만 빼고."
+}
+]
+}
+],
+"red": [
+[
+"Today I",
+"will talk you",
+"'m going to talk",
+"about the rollout.",
+"talk about"
+],
+[
+"",
+"Let's move to next.",
+"Let's move on to the next point.",
+"",
+"move on to"
+],
+[
+"As you",
+"see",
+"can see",
+", sales are up.",
+"as you can see"
+]
+],
+"explain": [
+{
+"w": "Today I'm going to talk about ~",
+"why": "발표 시작. 주제 + 구성 + 소요 시간.",
+"trap": "talk about (talk on도 가능)",
+"ex": [
+[
+"Today I'm going to talk about the Q2 results in three parts.",
+"오늘은 2분기 실적을 세 부분으로 말씀드리겠습니다."
+],
+[
+"This will take about ten minutes.",
+"약 10분 걸립니다."
+]
+]
+},
+{
+"w": "Let's move on to ~",
+"why": "다음 항목으로 전환.",
+"trap": "move to next (X)",
+"ex": [
+[
+"Let's move on to the installation schedule.",
+"설치 일정으로 넘어가겠습니다."
+],
+[
+"Moving on to costs...",
+"비용으로 넘어가서..."
+]
+]
+},
+{
+"w": "As you can see",
+"why": "슬라이드·그래프 가리킬 때.",
+"trap": "as you see보다 as you can see가 자연스러움",
+"ex": [
+[
+"As you can see on this chart, downtime fell by 80%.",
+"이 차트에서 보시듯 다운타임이 80% 줄었습니다."
+],
+[
+"As you can see, 32 units are already live.",
+"보시다시피 32대가 이미 가동 중입니다."
+]
+]
+},
+{
+"w": "That brings me to ~",
+"why": "자연스러운 연결. '이제 ~ 차례입니다'.",
+"trap": "brings me to + 명사",
+"ex": [
+[
+"That brings me to the budget.",
+"이제 예산 차례입니다."
+],
+[
+"That brings me to my final point: service.",
+"마지막 요점인 서비스로 넘어갑니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "Today I'm going to ______ about Q2 results.",
+"opts": [
+"say",
+"talk",
+"tell",
+"speak you"
+],
+"a": 1,
+"why": "talk about"
+},
+{
+"q": "Let's ______ on to the next point.",
+"opts": [
+"go",
+"move",
+"pass",
+"jump"
+],
+"a": 1,
+"why": "move on to"
+},
+{
+"q": "As you can ______, sales are up.",
+"opts": [
+"look",
+"see",
+"watch",
+"view"
+],
+"a": 1,
+"why": "as you can see"
+},
+{
+"q": "That ______ me to the budget.",
+"opts": [
+"takes",
+"brings",
+"gets",
+"moves"
+],
+"a": 1,
+"why": "brings me to"
+},
+{
+"q": "Let's ______ with the numbers.",
+"opts": [
+"start",
+"begin from",
+"open",
+"first"
+],
+"a": 0,
+"why": "start with"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"Let's move on to costs.",
+"Let's move to next.",
+"Moving on to costs...",
+"Now, costs."
+],
+"a": 1,
+"why": "move on to the next"
+},
+{
+"q": "발표 시작에 포함하면 좋은 것은?",
+"opts": [
+"농담 5개",
+"주제·구성·소요 시간",
+"개인사",
+"결론만"
+],
+"a": 1,
+"why": "구조 예고"
+},
+{
+"q": "This will ______ about ten minutes.",
+"opts": [
+"spend",
+"take",
+"cost",
+"need"
+],
+"a": 1,
+"why": "take"
+},
+{
+"q": "To ______ up, we are on schedule.",
+"opts": [
+"sum",
+"total",
+"end",
+"close"
+],
+"a": 0,
+"why": "sum up"
+},
+{
+"q": "질문을 받을 때는?",
+"opts": [
+"No questions.",
+"Any questions?",
+"Questions no.",
+"Ask."
+],
+"a": 1,
+"why": "Any questions?"
+}
+],
+"next": "EP.37 — 25번 병원에서 클레임: 조건 협상 복습  ▸ 3차 조건문 should have · could have"
+},
+{
+"no": "37",
+"title": "그랬어야 했는데",
+"grammar": "should have · could have",
+"panels": [
+{
+"label": "7월 · 25번 병원",
+"lines": [
+{
+"s": "L",
+"en": "The room is too small. Someone {0:should have} measured it.",
+"ko": "방이 너무 작아요. 누가 치수를 쟀어야죠."
+},
+{
+"s": "A",
+"en": "...We {0:should have}. Again.",
+"ko": "...그랬어야 했네요. 또."
+}
+]
+},
+{
+"label": "7월 · 전화",
+"lines": [
+{
+"s": "P",
+"en": "You {1:shouldn't have} promised DAP to a hospital with no door.",
+"ko": "문도 없는 병원에 DAP를 약속하면 안 됐죠."
+},
+{
+"s": "A",
+"en": "I know. We {2:could have} sent Marat to check first.",
+"ko": "알아요. Marat을 먼저 보내 확인할 수도 있었는데."
+}
+]
+},
+{
+"label": "7월 · 서울",
+"lines": [
+{
+"s": "K",
+"en": "{3:If you had checked} the site, we {3:wouldn't have lost} a week.",
+"ko": "현장을 확인했더라면 일주일을 안 잃었을 텐데."
+},
+{
+"s": "A",
+"en": "Yes, sir. Lesson learned. Twice.",
+"ko": "네. 교훈을 얻었습니다. 두 번째로요."
+}
+]
+},
+{
+"label": "7월 · 반전",
+"lines": [
+{
+"s": "D",
+"en": "Relax. I {2:could have} told you: regional doors are all small.",
+"ko": "진정해요. 내가 말해 줄 수도 있었는데: 지방 병원 문은 다 작아요."
+},
+{
+"s": "D",
+"en": "I've {0:already} ordered 25 bigger doors.",
+"ko": "이미 큰 문 25개 주문했어요."
+},
+{
+"s": "A",
+"en": "Of course you have.",
+"ko": "역시 그러셨군요."
+}
+]
+}
+],
+"red": [
+[
+"We",
+"should measured",
+"should have measured",
+"the room.",
+"should have + p.p."
+],
+[
+"If we",
+"checked",
+"had checked",
+", we would have known.",
+"3차 조건문 if절 had p.p."
+],
+[
+"You",
+"could have send",
+"could have sent",
+"Marat.",
+"have + p.p."
+]
+],
+"explain": [
+{
+"w": "should have + p.p.",
+"why": "'~했어야 했는데' 안 했다. 후회·지적.",
+"trap": "should have measured (should measured X)",
+"ex": [
+[
+"We should have measured the room before shipping.",
+"선적 전에 방 치수를 쟀어야 했습니다."
+],
+[
+"You should have told me earlier.",
+"더 일찍 말씀해 주셨어야죠."
+]
+]
+},
+{
+"w": "shouldn't have + p.p.",
+"why": "'~하지 말았어야 했는데' 했다.",
+"trap": "shouldn't have + p.p.",
+"ex": [
+[
+"We shouldn't have promised DAP without a site survey.",
+"현장 조사 없이 DAP를 약속하지 말았어야 했습니다."
+],
+[
+"I shouldn't have sent the file to the wrong address.",
+"잘못된 주소로 파일을 보내지 말았어야 했습니다."
+]
+]
+},
+{
+"w": "could have + p.p.",
+"why": "'~할 수도 있었는데' 안 했다. 놓친 선택지.",
+"trap": "could have sent",
+"ex": [
+[
+"We could have sent Marat to check first.",
+"Marat을 먼저 보내 확인할 수도 있었습니다."
+],
+[
+"You could have called me.",
+"전화하실 수도 있었잖아요."
+]
+]
+},
+{
+"w": "If + had p.p., would have p.p.",
+"why": "3차 조건문. 과거의 가정. 바꿀 수 없는 일에 대한 반성.",
+"trap": "if절 had p.p., 주절 would have p.p.",
+"ex": [
+[
+"If we had checked the site, we wouldn't have lost a week.",
+"현장을 확인했더라면 일주일을 잃지 않았을 겁니다."
+],
+[
+"If Viktor had delivered, we would have lost the contract.",
+"Viktor가 납품했더라면 우리가 계약을 잃었을 겁니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "We ______ measured the room.",
+"opts": [
+"should",
+"should have",
+"should had",
+"should be"
+],
+"a": 1,
+"why": "should have + p.p."
+},
+{
+"q": "If we ______ it, we would have known.",
+"opts": [
+"checked",
+"had checked",
+"have checked",
+"check"
+],
+"a": 1,
+"why": "3차 if절"
+},
+{
+"q": "You could have ______ Marat.",
+"opts": [
+"send",
+"sent",
+"sending",
+"sended"
+],
+"a": 1,
+"why": "p.p."
+},
+{
+"q": "We ______ have promised DAP. (하지 말았어야)",
+"opts": [
+"should",
+"shouldn't",
+"couldn't",
+"wouldn't"
+],
+"a": 1,
+"why": "shouldn't have"
+},
+{
+"q": "If we had checked, we ______ have saved a week.",
+"opts": [
+"will",
+"would",
+"had",
+"should"
+],
+"a": 1,
+"why": "would have"
+},
+{
+"q": "'We should have checked.' 실제로는?",
+"opts": [
+"확인했다",
+"확인하지 않았다",
+"확인할 것이다",
+"확인 중"
+],
+"a": 1,
+"why": "안 한 것에 대한 후회"
+},
+{
+"q": "'We could have sent Marat.' 실제로는?",
+"opts": [
+"보냈다",
+"보내지 않았다",
+"보낼 것이다",
+"못 보낸다"
+],
+"a": 1,
+"why": "놓친 선택"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"We should have measured it.",
+"We should measured it.",
+"We shouldn't have promised.",
+"We could have checked."
+],
+"a": 1,
+"why": "have 필요"
+},
+{
+"q": "If Viktor ______ delivered, we would have lost.",
+"opts": [
+"has",
+"had",
+"have",
+"was"
+],
+"a": 1,
+"why": "had + p.p."
+},
+{
+"q": "3차 조건문이 말하는 것은?",
+"opts": [
+"미래 계획",
+"현재 가정",
+"과거의 바꿀 수 없는 가정",
+"습관"
+],
+"a": 2,
+"why": "과거 가정"
+}
+],
+"next": "EP.38 — 전화로 클레임 접수, 들은 대로 전달하기  ▸ 듣기 확인 · 바꿔 말하기"
+},
+{
+"no": "38",
+"title": "다시 말씀해 주시겠어요?",
+"grammar": "확인·바꿔 말하기",
+"panels": [
+{
+"label": "8월 · 전화",
+"lines": [
+{
+"s": "N",
+"en": "(bad line) ...hospital ...Zhezkazgan ...detector ...",
+"ko": "(잡음) ...병원 ...제즈카즈간 ...디텍터 ..."
+},
+{
+"s": "A",
+"en": "{0:Sorry, I didn't catch that}. The line is bad.",
+"ko": "죄송해요, 잘 못 들었습니다. 연결이 안 좋네요."
+}
+]
+},
+{
+"label": "8월 · 다시",
+"lines": [
+{
+"s": "N",
+"en": "Zhezkazgan Hospital. The detector shows error 42.",
+"ko": "제즈카즈간 병원. 디텍터에 42번 오류."
+},
+{
+"s": "A",
+"en": "{3:Could you spell} the city, please?",
+"ko": "도시 철자를 말씀해 주시겠어요?"
+},
+{
+"s": "N",
+"en": "Z-H-E-Z-K-A-Z-G-A-N.",
+"ko": "Z-H-E-Z-K-A-Z-G-A-N."
+}
+]
+},
+{
+"label": "8월 · 확인",
+"lines": [
+{
+"s": "A",
+"en": "{1:So what you're saying is} the unit works but shows an error?",
+"ko": "그러니까 장비는 작동하는데 오류가 뜬다는 말씀이죠?"
+},
+{
+"s": "N",
+"en": "Exactly. Since Monday.",
+"ko": "맞아요. 월요일부터."
+}
+]
+},
+{
+"label": "8월 · 마무리",
+"lines": [
+{
+"s": "A",
+"en": "{2:Let me make sure I understand}: error 42, since Monday, Zhezkazgan.",
+"ko": "제대로 이해했는지 확인하겠습니다: 42번 오류, 월요일부터, 제즈카즈간."
+},
+{
+"s": "N",
+"en": "Perfect. You're better on the phone than Viktor.",
+"ko": "완벽해요. 전화는 Viktor보다 낫군요."
+},
+{
+"s": "A",
+"en": "Low bar, but I'll take it.",
+"ko": "기준이 낮지만 받아들이죠."
+}
+]
+}
+],
+"red": [
+[
+"",
+"What? Say again.",
+"Sorry, I didn't catch that. Could you say it again?",
+"",
+"정중하게"
+],
+[
+"So",
+"you say",
+"what you're saying is",
+"the unit works?",
+"바꿔 말하기 공식"
+],
+[
+"Could you",
+"spell me",
+"spell",
+"that, please?",
+"spell + 목적어"
+]
+],
+"explain": [
+{
+"w": "Sorry, I didn't catch that",
+"why": "못 들었을 때 가장 자연스러운 표현. What?보다 훨씬 정중.",
+"trap": "catch = 알아듣다",
+"ex": [
+[
+"Sorry, I didn't catch your name.",
+"죄송해요, 성함을 못 들었습니다."
+],
+[
+"I didn't quite catch the last part. Could you repeat it?",
+"마지막 부분을 잘 못 들었어요. 다시 말씀해 주시겠어요?"
+]
+]
+},
+{
+"w": "So what you're saying is ~",
+"why": "바꿔 말해 확인. 오해 방지의 핵심 기술.",
+"trap": "뒤에 that절 또는 문장",
+"ex": [
+[
+"So what you're saying is the unit works but shows an error?",
+"그러니까 장비는 작동하는데 오류가 뜬다는 거죠?"
+],
+[
+"So you mean the delivery is next week, not this week?",
+"그러니까 배송이 이번 주가 아니라 다음 주라는 말씀이죠?"
+]
+]
+},
+{
+"w": "Let me make sure I understand",
+"why": "요약 확인 전 신호.",
+"trap": "Let me make sure (that) ~",
+"ex": [
+[
+"Let me make sure I understand: error 42, since Monday, Zhezkazgan.",
+"제가 이해한 게 맞는지: 42번 오류, 월요일부터, 제즈카즈간."
+],
+[
+"Just to confirm, you need two units by Friday?",
+"확인차, 금요일까지 2대 필요하시다는 거죠?"
+]
+]
+},
+{
+"w": "Could you spell that?",
+"why": "이름·지명·이메일 철자 확인.",
+"trap": "spell + 목적어 (spell me X)",
+"ex": [
+[
+"Could you spell your surname, please?",
+"성의 철자를 말씀해 주시겠어요?"
+],
+[
+"Is that B as in Bravo or V as in Victor?",
+"Bravo의 B인가요, Victor의 V인가요?"
+]
+]
+}
+],
+"quiz": [
+{
+"q": "Sorry, I didn't ______ that.",
+"opts": [
+"hear up",
+"catch",
+"take",
+"listen"
+],
+"a": 1,
+"why": "catch"
+},
+{
+"q": "Could you ______ the hospital name, please?",
+"opts": [
+"spell me",
+"spell",
+"speak",
+"letter"
+],
+"a": 1,
+"why": "spell"
+},
+{
+"q": "So what you're ______ is the problem started on Friday?",
+"opts": [
+"telling",
+"saying",
+"speaking",
+"talking"
+],
+"a": 1,
+"why": "saying"
+},
+{
+"q": "Let me make ______ I understand.",
+"opts": [
+"sure",
+"certain that",
+"clear",
+"true"
+],
+"a": 0,
+"why": "make sure"
+},
+{
+"q": "가장 정중한 되묻기는?",
+"opts": [
+"What?",
+"Huh?",
+"Sorry, could you say that again?",
+"Repeat."
+],
+"a": 2,
+"why": "정중"
+},
+{
+"q": "Is that B as in ______?",
+"opts": [
+"Bravo",
+"Boy",
+"Big",
+"Ball"
+],
+"a": 0,
+"why": "NATO 음성 문자"
+},
+{
+"q": "Just to ______, you need two units by Friday?",
+"opts": [
+"confirm",
+"say",
+"ask",
+"think"
+],
+"a": 0,
+"why": "just to confirm"
+},
+{
+"q": "'I didn't catch your name.'의 뜻은?",
+"opts": [
+"이름이 싫다",
+"성함을 못 들었다",
+"이름을 안다",
+"이름을 잊었다"
+],
+"a": 1,
+"why": "못 들음"
+},
+{
+"q": "바꿔 말해 확인하는 이유는?",
+"opts": [
+"시간 끌기",
+"오해 방지",
+"상대 테스트",
+"예의 없음"
+],
+"a": 1,
+"why": "오해 방지"
+},
+{
+"q": "So you ______ the delivery is next week?",
+"opts": [
+"mean",
+"meaning",
+"means",
+"meant to"
+],
+"a": 0,
+"why": "so you mean"
+}
+],
+"next": "EP.39 — 1년 서비스 보고서: 수치 비교와 추세  ▸ 추세 표현 · 그래프 설명"
+},
+{
+"no": "39",
+"title": "1년 보고서",
+"grammar": "추세·그래프 표현",
+"panels": [
+{
+"label": "9월 · 서울 보고",
+"lines": [
+{
+"s": "A",
+"en": "Service calls {0:rose sharply} in March, then {1:remained stable}.",
+"ko": "서비스 콜은 3월에 급증했다가 안정됐습니다."
+},
+{
+"s": "K",
+"en": "Why March?",
+"ko": "왜 3월인가?"
+},
+{
+"s": "A",
+"en": "Thirty-two installations in one month.",
+"ko": "한 달에 32대 설치해서요."
+}
+]
+},
+{
+"label": "9월 · 슬라이드",
+"lines": [
+{
+"s": "A",
+"en": "Downtime {2:peaked} at 4% in April and {2:bottomed out} at 0.5% in August.",
+"ko": "다운타임은 4월 4%로 정점, 8월 0.5%로 바닥."
+},
+{
+"s": "S",
+"en": "That's a beautiful curve.",
+"ko": "곡선이 아름답네요."
+}
+]
+},
+{
+"label": "9월 · 비교",
+"lines": [
+{
+"s": "A",
+"en": "{3:Compared to} Viktor's units at City Hospital, our downtime is 80% lower.",
+"ko": "시립병원의 Viktor 장비에 비해 다운타임이 80% 낮습니다."
+},
+{
+"s": "K",
+"en": "Put that on the first slide.",
+"ko": "그걸 첫 슬라이드에 넣게."
+}
+]
+},
+{
+"label": "9월 · 전무님",
+"lines": [
+{
+"s": "K",
+"en": "Revenue {0:rose} 40% {3:compared with} last year. Good.",
+"ko": "매출은 작년 대비 40% 올랐군. 좋아."
+},
+{
+"s": "A",
+"en": "And my grey hair rose 100%.",
+"ko": "제 흰머리는 100% 올랐습니다."
+},
+{
+"s": "K",
+"en": "Also good. You look senior now.",
+"ko": "그것도 좋군. 이제 연차 있어 보여."
+}
+]
+}
+],
+"red": [
+[
+"Sales",
+"rised",
+"rose",
+"by 20%.",
+"rise → rose"
+],
+[
+"Downtime",
+"peaked on",
+"peaked at",
+"4%.",
+"peak at + 수치 / in + 시기"
+],
+[
+"",
+"Compare to last year, sales are up.",
+"Compared to last year, sales are up.",
+"",
+"compared to"
+]
+],
+"explain": [
+{
+"w": "rise / fall sharply",
+"why": "급격한 변화. 부사: sharply, dramatically, slightly, gradually.",
+"trap": "rise(자동사)-rose-risen / raise(타동사)",
+"ex": [
+[
+"Service calls rose sharply in March.",
+"서비스 콜이 3월에 급증했습니다."
+],
+[
+"Costs fell slightly in Q3.",
+"비용이 3분기에 소폭 감소했습니다."
+]
+]
+},
+{
+"w": "remain stable / level off",
+"why": "변화 없음. 안정.",
+"trap": "remain stable at + 수치",
+"ex": [
+[
+"Downtime remained stable at under 1%.",
+"다운타임은 1% 미만으로 안정됐습니다."
+],
+[
+"Sales leveled off after the summer.",
+"매출은 여름 이후 보합세였습니다."
+]
+]
+},
+{
+"w": "peak / bottom out",
+"why": "정점·바닥.",
+"trap": "peak at + 수치, peak in + 시기",
+"ex": [
+[
+"Complaints peaked at 48 in March.",
+"불만은 3월에 48건으로 정점."
+],
+[
+"Revenue bottomed out in July and recovered.",
+"매출은 7월에 바닥을 치고 회복했습니다."
+]
+]
+},
+{
+"w": "compared to / with",
+"why": "비교 기준 제시.",
+"trap": "compared to (분사형) / in comparison with",
+"ex": [
+[
+"Compared to last year, downtime is 80% lower.",
+"작년에 비해 다운타임이 80% 낮습니다."
+],
+[
+"Our response time is 2 hours, compared with Viktor's 2 days.",
+"저희 대응 시간은 2시간, Viktor는 2일입니다."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "Sales ______ by 20% last year.",
+"opts": [
+"rised",
+"rose",
+"raised",
+"risen"
+],
+"a": 1,
+"why": "rise-rose"
+},
+{
+"q": "Downtime peaked ______ 4% in April.",
+"opts": [
+"on",
+"at",
+"in",
+"to"
+],
+"a": 1,
+"why": "peak at + 수치"
+},
+{
+"q": "______ to last year, sales are up.",
+"opts": [
+"Compare",
+"Compared",
+"Comparing",
+"Comparison"
+],
+"a": 1,
+"why": "compared to"
+},
+{
+"q": "Calls ______ stable at around 40.",
+"opts": [
+"remained",
+"remain",
+"kept at",
+"stayed up"
+],
+"a": 0,
+"why": "remained stable"
+},
+{
+"q": "Revenue ______ out at 15 in September.",
+"opts": [
+"bottomed",
+"fell",
+"dropped",
+"lowered"
+],
+"a": 0,
+"why": "bottom out"
+},
+{
+"q": "'급격히'는?",
+"opts": [
+"slightly",
+"sharply",
+"gradually",
+"stably"
+],
+"a": 1,
+"why": "sharply"
+},
+{
+"q": "'소폭'은?",
+"opts": [
+"sharply",
+"slightly",
+"dramatically",
+"rapidly"
+],
+"a": 1,
+"why": "slightly"
+},
+{
+"q": "Complaints peaked ______ March.",
+"opts": [
+"at",
+"in",
+"on",
+"to"
+],
+"a": 1,
+"why": "peak in + 시기"
+},
+{
+"q": "Sales ______ off after the summer. (보합)",
+"opts": [
+"leveled",
+"peaked",
+"rose",
+"fell"
+],
+"a": 0,
+"why": "level off"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"Prices rose.",
+"Prices raised.",
+"We raised prices.",
+"Prices have risen."
+],
+"a": 1,
+"why": "raise는 타동사"
+}
+],
+"next": "EP.40 시즌 피날레 — 마지막 장비, 그리고 Viktor의 전화  ▸ 총정리 · 감사·마무리 표현"
+},
+{
+"no": "40",
+"title": "마지막 장비",
+"grammar": "감사·마무리 표현",
+"panels": [
+{
+"label": "10월 · 50번째 병원",
+"lines": [
+{
+"s": "N",
+"en": "Unit 50. On time. Under budget.",
+"ko": "50대째. 제때. 예산 안으로."
+},
+{
+"s": "A",
+"en": "{0:I can't thank you enough}, Mr. Nurlan. For trusting us.",
+"ko": "뭐라 감사해야 할지 모르겠습니다. 믿어 주셔서."
+}
+]
+},
+{
+"label": "10월 · 알마티 클리닉",
+"lines": [
+{
+"s": "D",
+"en": "{1:It's been a pleasure}, Artyom. Two years, 62 X-rays, 27 doors.",
+"ko": "즐거웠어요, 아르툠. 2년, X-ray 62대, 문 27개."
+},
+{
+"s": "A",
+"en": "Twenty-seven doors. That should be on my business card.",
+"ko": "문 27개. 명함에 넣어야겠어요."
+}
+]
+},
+{
+"label": "10월 · 공항",
+"lines": [
+{
+"s": "E",
+"en": "{2:Keep in touch}. And sleep.",
+"ko": "연락해요. 그리고 잠 좀 자고."
+},
+{
+"s": "J",
+"en": "{3:All the best}, boss. Next time, bring a tape measure.",
+"ko": "행운을 빌어요. 다음엔 줄자 가져오세요."
+}
+]
+},
+{
+"label": "10월 · 기내 · 전화",
+"lines": [
+{
+"s": "V",
+"en": "Artyom. It's Viktor. I'm... looking for a job.",
+"ko": "아르툠. Viktor야. 나... 일자리 찾고 있어."
+},
+{
+"s": "A",
+"en": "...{2:Let's keep in touch}, Viktor.",
+"ko": "...연락하고 지내요, Viktor."
+}
+]
+}
+],
+"red": [
+[
+"I can't thank you",
+"too much",
+"enough",
+".",
+"can't thank you enough"
+],
+[
+"It",
+"was",
+"has been",
+"a pleasure working with you. (관계가 지금까지 이어짐)",
+"현재완료가 자연스러움"
+],
+[
+"",
+"Keep touching.",
+"Keep in touch.",
+"",
+"keep in touch"
+]
+],
+"explain": [
+{
+"w": "I can't thank you enough",
+"why": "최고 수준의 감사. for + 명사/-ing.",
+"trap": "thank you too much (X)",
+"ex": [
+[
+"I can't thank you enough for your support this year.",
+"올해 도와주셔서 뭐라 감사해야 할지 모르겠습니다."
+],
+[
+"We can't thank you enough for trusting us with this project.",
+"이 프로젝트를 믿고 맡겨 주셔서 깊이 감사드립니다."
+]
+]
+},
+{
+"w": "It's been a pleasure",
+"why": "관계 마무리 인사. 현재완료.",
+"trap": "It's been a pleasure + -ing / to + 동사",
+"ex": [
+[
+"It's been a pleasure working with you.",
+"함께 일해서 즐거웠습니다."
+],
+[
+"It's been a pleasure to meet your team.",
+"팀을 만나 뵈어 기뻤습니다."
+]
+]
+},
+{
+"w": "Keep in touch",
+"why": "연락 유지. 비즈니스 관계의 마지막 문장.",
+"trap": "keep touching (X)",
+"ex": [
+[
+"Let's keep in touch about future tenders.",
+"향후 입찰 건으로 계속 연락합시다."
+],
+[
+"Please stay in touch and let me know how the units perform.",
+"계속 연락 주시고 장비 성능도 알려 주세요."
+]
+]
+},
+{
+"w": "All the best",
+"why": "편지·메일 마무리. 캐주얼~중간 격식.",
+"trap": "Best wishes / Kind regards도 가능",
+"ex": [
+[
+"All the best with the new hospital.",
+"새 병원 일 잘되시길 빕니다."
+],
+[
+"Wishing you all the best for the coming year.",
+"다가오는 해에 행운이 가득하시길."
+]
+]
+}
+],
+"quiz": [
+{
+"q": "I can't ______ you enough.",
+"opts": [
+"thank",
+"thanks",
+"thanking",
+"thankful"
+],
+"a": 0,
+"why": "thank"
+},
+{
+"q": "It's ______ a pleasure working with you.",
+"opts": [
+"was",
+"been",
+"be",
+"being"
+],
+"a": 1,
+"why": "현재완료"
+},
+{
+"q": "Let's keep in ______.",
+"opts": [
+"touch",
+"touching",
+"contact with",
+"touches"
+],
+"a": 0,
+"why": "keep in touch"
+},
+{
+"q": "All the ______!",
+"opts": [
+"good",
+"best",
+"better",
+"well"
+],
+"a": 1,
+"why": "all the best"
+},
+{
+"q": "I can't thank you enough ______ your support.",
+"opts": [
+"to",
+"for",
+"of",
+"about"
+],
+"a": 1,
+"why": "for"
+},
+{
+"q": "틀린 문장은?",
+"opts": [
+"Keep in touch.",
+"Stay in touch.",
+"Keep touching.",
+"Let's stay in contact."
+],
+"a": 2,
+"why": "keep touching X"
+},
+{
+"q": "It's been a pleasure ______ your team.",
+"opts": [
+"meet",
+"to meet",
+"met",
+"meets"
+],
+"a": 1,
+"why": "to meet / meeting"
+},
+{
+"q": "격식 메일 마무리로 적절한 것은?",
+"opts": [
+"Bye bye",
+"Warm regards",
+"Later",
+"OK"
+],
+"a": 1,
+"why": "warm regards"
+},
+{
+"q": "'Safe travels!'의 뜻은?",
+"opts": [
+"여행 금지",
+"조심히 가세요",
+"여행 가세요",
+"안전벨트"
+],
+"a": 1,
+"why": "작별 인사"
+},
+{
+"q": "'don't hesitate to call'의 뜻은?",
+"opts": [
+"전화하지 마세요",
+"망설이지 말고 전화하세요",
+"전화를 기다리세요",
+"전화가 안 됩니다"
+],
+"a": 1,
+"why": "편하게 연락"
+}
+],
+"next": "B1 완결! 시즌 3 예고 — B2: 남미 시장 개척, 스페인어권 파트너와의 협상"
+}
+]
+}
