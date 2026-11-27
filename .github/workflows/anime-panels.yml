@@ -1,0 +1,28 @@
+name: anime-panels
+on:
+  push:
+    branches: [claude/english-learning-app-3ufdp7]
+    paths: ['drama-video/anime_urls.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: anime-panels
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install -q pillow numpy
+      - run: python drama-video/fetch_panels.py
+      - name: Commit panels
+        run: |
+          git config user.name "panel-builder"
+          git config user.email "actions@users.noreply.github.com"
+          git add drama-video/panels
+          git commit -m "build: full-resolution anime panels [skip ci]" || { echo "nothing to commit"; exit 0; }
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 5; done
