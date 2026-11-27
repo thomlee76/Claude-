@@ -31,9 +31,9 @@ def img(no, p):
     if k not in IMGCACHE: IMGCACHE[k] = "data:image/webp;base64," + b64(IMG / f"ep{no}_p{p}.webp")
     return IMGCACHE[k]
 
-esc = lambda s: html.escape(str(s))
+esc = lambda s: html.escape("" if s is None else str(s))
 def hl(s): return re.sub(r"\{(\d):([^}]+)\}", lambda m: f'<span class="hl" style="color:{SLOT[int(m[1])]}">{m[2]}</span>', esc(s))
-def plain(s): return re.sub(r"\{\d:([^}]+)\}", r"\1", s)
+def plain(s): return re.sub(r"\{\d:([^}]+)\}", r"\1", s or "")
 def speakable(s):
     s = plain(s).replace("·", ",").replace("→", ",").replace("~", " ").replace("…", ".")
     s = re.sub(r"\[\[(.+?)\]\]", r"\1", s); s = re.sub(r"\*\*(.+?)\*\*", r"\1", s)
@@ -142,10 +142,10 @@ def scenes(ep):
           <div><img src="{img(no, i+1)}"></div></div>""",
           [(EN, speakable(x["w"]), "-10%", 0.2), (KO, speakable(x["why"]), "+12%", 0.2), (EN, speakable(x["ex"][0][0]), "-5%", 0.6)]))
     # 4 red pen
-    for i, (a, bad, good, rest, why) in enumerate(ep["red"]):
+    for i, (a, bad, good, rest, why) in enumerate([[x or "" for x in r] for r in ep["red"]]):
         S.append(("RED PEN", f"""<div class="rp"><div class="lab">빨간 펜 첨삭 {i+1} / {len(ep['red'])}</div>
           <div class="row bad"><span class="tag">BEFORE</span>{esc(a)} <s>{esc(bad)}</s> {esc(rest)}</div>
-          <div class="row good"><span class="tag">AFTER</span>{esc(a)} <u>{esc(good)}</u> {esc(rest)}</div><div class="why">✎ {esc(why)}</div></div>""",
+          <div class="row good"><span class="tag">AFTER</span>{esc(a)} <u>{esc(good)}</u> {esc(rest)}</div>{f'<div class="why">✎ {esc(why)}</div>' if why else ''}</div>""",
           ([(KO, "빨간 펜 첨삭입니다.", "+8%", 0.1)] if i == 0 else []) + [(EN, speakable(f"{a} {good} {rest}"), "-5%", 0.2), (KO, speakable(why), "+12%", 0.5)]))
     # 5 shadowing: 3 lines that contain a highlight
     lines = [l for p in ep["panels"] for l in p["lines"] if "{" in l["en"]][:3] or [l for p in ep["panels"] for l in p["lines"]][:3]
