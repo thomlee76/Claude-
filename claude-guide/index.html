@@ -544,9 +544,9 @@ body{padding-bottom:env(safe-area-inset-bottom)}
   <aside class="side" id="side">
     <div class="brand">
       <div class="mark">✳</div>
-      <div class="kicker">44 Lessons · 12 Videos · Offline</div>
+      <div class="kicker">50 Lessons · 18 Videos · Offline</div>
       <h1>클로드 실습 가이드</h1>
-      <div class="sub">해외영업 실무 예시로 익히는 기본기부터 에이전트, 영상 · 디자인, 개인 생활 활용까지</div>
+      <div class="sub">해외영업 실무 예시로 익히는 기본기부터 에이전트, 최신 기능, 15분 세팅 실습까지</div>
     </div>
     <div class="progwrap">
       <svg class="ring" viewBox="0 0 46 46" aria-hidden="true">
@@ -805,8 +805,8 @@ function renderVideo(id){
   });
   vid.addEventListener('ended', () => {
     ST.vpos[id] = 0;
-    const lid = id + '-v';
-    if(!ST.done[lid]){ ST.done[lid] = true; buildToc(); buildTabs(); updateProgress(); const d = $('.donebtn'); if(d){ d.className = 'donebtn is-done'; d.textContent = '✓ 이 영상을 시청했습니다'; } }
+    const lid = (current && !current.video) ? current.id : id + '-v';
+    if(!ST.done[lid]){ ST.done[lid] = true; buildToc(); buildTabs(); updateProgress(); const d = $('.donebtn'); if(d){ d.className = 'donebtn is-done'; d.textContent = (current && !current.video) ? '✓ 이 레슨을 완료했습니다' : '✓ 이 영상을 시청했습니다'; } }
     save();
   });
   return box;
@@ -1072,7 +1072,7 @@ function buildTabs(){
     lab.appendChild(el('span','cnt', done + '/' + p.lessons.length));
     box.appendChild(lab);
     p.lessons.forEach(l => {
-      const a = el('a','tab' + (l === current ? ' on' : '') + (ST.done[l.id] ? ' done' : '') + (l.video ? ' vid' : ''));
+      const a = el('a','tab' + (l === current ? ' on' : '') + (ST.done[l.id] ? ' done' : '') + ((l.video || l.blocks[0][0] === 'video') ? ' vid' : ''));
       a.href = '#' + l.id; a.title = l.title;
       a.appendChild(el('div','n', l.video ? '영상' : l.gno));
       a.appendChild(el('div','t', l.short));
