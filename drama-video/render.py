@@ -127,46 +127,46 @@ def scenes(ep):
     # 1 title
     S.append(("INTRO", f"""<div class="ttl"><div><div class="k">BUSINESS ENGLISH DRAMA</div><div class="n">EP.{no}</div><h1>{esc(ep['title'])}</h1><div class="g">{esc(ep['grammar'])}</div></div>
       <div class="grid4">{''.join(f'<img src="{img(no,p)}">' for p in range(1,5))}</div></div>""",
-      [(KO, f"비즈니스 영어 드라마, 에피소드 {int(no)}. {ep['title']}.", "+0%", 0.4), (KO, f"오늘 배울 문법은 {speakable(ep['grammar'])} 입니다. 먼저 이야기를 들어 볼까요?", "+0%", 0.6)]))
+      [(KO, f"비즈니스 영어 드라마, 에피소드 {int(no)}. {ep['title']}.", "+8%", 0.3), (KO, f"오늘의 문법은 {speakable(ep['grammar'])}. 먼저 이야기를 들어 볼까요?", "+8%", 0.4)]))
     # 2 story: one frame per line
     for pi, pn in enumerate(ep["panels"]):
         for li, ln in enumerate(pn["lines"]):
             rows = "".join(f"""<div class="ln {'on' if j == li else ''}">{dot(l['s'])}<div><div class="nm">{esc(CAST.get(l['s'], [l['s']])[0])}</div><div class="en">{hl(l['en'])}</div><div class="ko">{esc(l['ko'])}</div></div></div>""" for j, l in enumerate(pn["lines"]))
             S.append(("STORY", f"""<div class="st"><img src="{img(no, pi+1)}"><div><div class="lab">{pi+1} / 4 · {esc(pn['label'])}</div>{rows}</div></div>""",
-                      [(VOICE.get(ln["s"], EN), speakable(ln["en"]), "-5%", 0.7)]))
+                      [(VOICE.get(ln["s"], EN), speakable(ln["en"]), "-5%", 0.45)]))
     # 3 expressions
-    S.append(("EXPRESSIONS", '<div class="sc"><div class="n">KEY EXPRESSIONS</div><h1>오늘의 핵심 표현</h1><p>이야기 속 표현 4개를 짚어 봅니다</p></div>', [(KO, "이야기 속 핵심 표현 네 가지를 짚어 보겠습니다.", "+0%", 0.4)]))
+    S.append(("EXPRESSIONS", '<div class="sc"><div class="n">KEY EXPRESSIONS</div><h1>오늘의 핵심 표현</h1><p>이야기 속 표현 4개를 짚어 봅니다</p></div>', [(KO, "핵심 표현 네 가지를 짚어 볼게요.", "+8%", 0.2)]))
     for i, x in enumerate(ep["explain"]):
         exs = "".join(f"<div><b>{esc(en)}</b><span>{esc(ko)}</span></div>" for en, ko in x["ex"][:2])
         S.append(("EXPRESSIONS", f"""<div class="ex"><div><div class="lab">EXPRESSION {i+1} / 4</div><div class="w">{esc(x['w'])}</div><div class="why">{esc(x['why'])}</div><div class="trap">⚠ {esc(x['trap'])}</div><div class="exs">{exs}</div></div>
           <div><img src="{img(no, i+1)}"></div></div>""",
-          [(EN, speakable(x["w"]), "-10%", 0.3), (KO, speakable(x["why"]), "+5%", 0.3), (EN, speakable(x["ex"][0][0]), "-5%", 0.8)]))
+          [(EN, speakable(x["w"]), "-10%", 0.2), (KO, speakable(x["why"]), "+12%", 0.2), (EN, speakable(x["ex"][0][0]), "-5%", 0.6)]))
     # 4 red pen
     for i, (a, bad, good, rest, why) in enumerate(ep["red"]):
         S.append(("RED PEN", f"""<div class="rp"><div class="lab">빨간 펜 첨삭 {i+1} / {len(ep['red'])}</div>
           <div class="row bad"><span class="tag">BEFORE</span>{esc(a)} <s>{esc(bad)}</s> {esc(rest)}</div>
           <div class="row good"><span class="tag">AFTER</span>{esc(a)} <u>{esc(good)}</u> {esc(rest)}</div><div class="why">✎ {esc(why)}</div></div>""",
-          ([(KO, "빨간 펜 첨삭입니다. 이렇게 고쳐 쓰세요.", "+0%", 0.2)] if i == 0 else []) + [(EN, speakable(f"{a} {good} {rest}"), "-5%", 0.3), (KO, speakable(why), "+5%", 0.8)]))
+          ([(KO, "빨간 펜 첨삭입니다.", "+8%", 0.1)] if i == 0 else []) + [(EN, speakable(f"{a} {good} {rest}"), "-5%", 0.2), (KO, speakable(why), "+12%", 0.5)]))
     # 5 shadowing: 3 lines that contain a highlight
     lines = [l for p in ep["panels"] for l in p["lines"] if "{" in l["en"]][:3] or [l for p in ep["panels"] for l in p["lines"]][:3]
     for i, l in enumerate(lines):
         S.append(("SHADOWING", f"""<div class="sh"><span class="chip">🎧 듣고 따라 말해 보세요 · {i+1} / {len(lines)}</span><div class="who">{dot(l['s'],34)}{esc(CAST.get(l['s'],[l['s']])[0])}</div>
           <div class="en">{hl(l['en'])}</div><div class="ko">{esc(l['ko'])}</div><div class="cnt">LISTEN · REPEAT · LISTEN</div></div>""",
-          ([(KO, "이제 따라 말해 볼까요? 듣고, 멈춘 동안 소리 내어 말해 보세요.", "+0%", 0.4)] if i == 0 else []) +
-          [(VOICE.get(l["s"], EN), speakable(l["en"]), "-15%", 3.2), (VOICE.get(l["s"], EN), speakable(l["en"]), "+0%", 1.0)]))
+          ([(KO, "따라 말해 보세요. 멈춘 동안 소리 내어 말하면 됩니다.", "+8%", 0.3)] if i == 0 else []) +
+          [(VOICE.get(l["s"], EN), speakable(l["en"]), "-12%", 2.8), (VOICE.get(l["s"], EN), speakable(l["en"]), "+0%", 0.6)]))
     # 6 quiz (2 questions)
     for i, q in enumerate(ep["quiz"][:2]):
         ops = lambda ans: "".join(f'<div class="op {("ok" if j == q["a"] else "dim") if ans else ""}"><i>{"ABCD"[j]}</i>{esc(o)}</div>' for j, o in enumerate(q["opts"]))
         S.append(("QUIZ", f"""<div class="qz"><div class="lab">QUIZ {i+1} / 2</div><div class="q">{esc(q['q'])}</div><div class="ops">{ops(False)}</div></div>""",
-          ([(KO, "마지막으로 퀴즈입니다. 정답을 골라 보세요.", "+0%", 3.0)] if i == 0 else [(KO, "다음 문제입니다.", "+0%", 3.0)])))
+          ([(KO, "퀴즈입니다. 정답을 골라 보세요.", "+8%", 2.6)] if i == 0 else [(KO, "다음 문제.", "+8%", 2.6)])))
         S.append(("QUIZ", f"""<div class="qz"><div class="lab">QUIZ {i+1} / 2 · 정답</div><div class="q">{esc(q['q'])}</div><div class="ops">{ops(True)}</div><div class="why">✎ {esc(q['why'])}</div></div>""",
-          [(KO, f"정답은 {['A','B','C','D'][q['a']]}번,", "+0%", 0.1), (EN, speakable(q["opts"][q["a"]]), "+0%", 0.2), (KO, speakable(q["why"]), "+5%", 0.9)]))
+          [(KO, f"정답은 {['A','B','C','D'][q['a']]}번,", "+8%", 0.1), (EN, speakable(q["opts"][q["a"]]), "+0%", 0.2), (KO, speakable(q["why"]), "+12%", 0.6)]))
     # 7 outro
     nxt = re.sub(r"\s*▸.*$", "", ep["next"]).strip()
     nno = f"{int(no)+1:02d}"
     pic = f'<img src="{img(nno,1)}">' if (IMG / f"ep{nno}_p1.webp").exists() else f'<img src="{img(no,4)}">'
     S.append(("NEXT", f"""<div class="ot"><div><div class="k">NEXT EPISODE</div><h1>{esc(nxt)}</h1><p>오늘 표현은 앱의 복습 퀴즈와 단어장에서 다시 연습하세요.</p></div>{pic}</div>""",
-      [(KO, f"다음 화 예고. {speakable(nxt)}", "+0%", 0.4), (KO, "오늘도 수고하셨습니다. 시 유 넥스트 타임!", "+0%", 1.5)]))
+      [(KO, f"다음 화 예고. {speakable(nxt)}", "+8%", 0.3), (KO, "오늘도 수고하셨습니다.", "+8%", 1.2)]))
     return S
 
 def main(nos):

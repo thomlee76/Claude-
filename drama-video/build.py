@@ -39,7 +39,7 @@ def silence(sec): return b"\x00\x00" * int(SR * sec)
 def build_ep(m):
     ep = m["ep"]; parts = []; prev = None; total = 0.0
     for i, sc in enumerate(m["scenes"]):
-        data = silence(0.3)
+        data = silence(0.2)
         for s in sc["segs"]: data += pcm(AUD / f"{key(s)}.wav") + silence(s["p"])
         wav = SCN / f"ep{ep}_{i+1:03d}.wav"
         with wave.open(str(wav), "wb") as w: w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes(data)
