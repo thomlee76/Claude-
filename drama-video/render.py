@@ -116,7 +116,7 @@ body{width:1280px;height:720px;overflow:hidden;background:#0B0B0F;color:#F2F2F7;
 .ot img{width:520px;height:390px;object-fit:cover;border-radius:24px}
 """
 
-def dot(k, sz=40): c = CAST.get(k, ["?", "#555"]); return f'<span class="dot" style="background:{c[1]};width:{sz}px;height:{sz}px">{k}</span>'
+def dot(k, sz=40): c = CAST.get(k, ["?", "#555"]); return f'<span class="dot" style="background:{c[1]};width:{sz}px;height:{sz}px">{"Su" if k == "A" else k}</span>'
 def shell(ep, sec, inner, prog): return f"""<html><head><meta charset="utf-8"><style>{CSS}</style></head><body>
 <div class="top"><span class="ep">EP.{ep['no']}</span><span class="tt">{esc(ep['title'])}</span><span class="sec">{sec}</span></div>
 <div class="main">{inner}</div><div class="brand">BUSINESS ENGLISH DRAMA · B1</div><div class="bar"><i style="width:{prog:.1f}%"></i></div></body></html>"""

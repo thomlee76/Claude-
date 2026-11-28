@@ -1,7 +1,7 @@
 {
 "cast": {
 "A": [
-"Artyom",
+"Sung",
 "#14233A",
 "SG Healthcare 해외영업"
 ],
@@ -48,7 +48,7 @@
 "E": [
 "Elena",
 "#B5361F",
-"통역사 · Artyom 동료"
+"통역사 · Sung 동료"
 ],
 "S": [
 "Sora",
@@ -67,8 +67,8 @@
 "lines": [
 {
 "s": "D",
-"en": "Artyom, has the CT arrived {1:yet}?",
-"ko": "아르툠, CT 아직 안 왔어요?"
+"en": "Sung, has the CT arrived {1:yet}?",
+"ko": "Sung, CT 아직 안 왔어요?"
 },
 {
 "s": "A",
@@ -1157,8 +1157,8 @@
 "lines": [
 {
 "s": "D",
-"en": "We're two days {2:behind schedule}, Artyom.",
-"ko": "아르툠, 일정보다 이틀 늦었어요."
+"en": "We're two days {2:behind schedule}, Sung.",
+"ko": "Sung, 일정보다 이틀 늦었어요."
 },
 {
 "s": "A",
@@ -2222,8 +2222,8 @@ null
 },
 {
 "s": "K",
-"en": "Too many problems, Artyom.",
-"ko": "문제가 너무 많군, 아르툠."
+"en": "Too many problems, Sung.",
+"ko": "문제가 너무 많군, Sung."
 }
 ]
 },
@@ -4617,8 +4617,8 @@ null
 "lines": [
 {
 "s": "D",
-"en": "Sorry, Viktor. {0:I agree} with Artyom.",
-"ko": "미안해요 Viktor. 저는 Artyom 의견에 동의해요."
+"en": "Sorry, Viktor. {0:I agree} with Sung.",
+"ko": "미안해요 Viktor. 저는 Sung 의견에 동의해요."
 },
 {
 "s": "V",
@@ -5102,8 +5102,8 @@ null
 "lines": [
 {
 "s": "A",
-"en": "Hello? This is Artyom...",
-"ko": "여보세요? 아르툠입니다..."
+"en": "Hello? This is Sung...",
+"ko": "여보세요? Sung입니다..."
 },
 {
 "s": "D",
@@ -5147,8 +5147,8 @@ null
 "lines": [
 {
 "s": "K",
-"en": "Artyom... it's six in the morning.",
-"ko": "아르툠... 아침 6시일세."
+"en": "Sung... it's six in the morning.",
+"ko": "Sung... 아침 6시일세."
 },
 {
 "s": "A",
@@ -5647,8 +5647,8 @@ null
 "lines": [
 {
 "s": "V",
-"en": "Artyom! Still here? You have {1:little} chance.",
-"ko": "아르툠! 아직도 있네? 가능성 거의 없어."
+"en": "Sung! Still here? You have {1:little} chance.",
+"ko": "Sung! 아직도 있네? 가능성 거의 없어."
 },
 {
 "s": "A",
@@ -6737,7 +6737,7 @@ null
 "lines": [
 {
 "s": "K",
-"en": "{3:What would you do} if you were me, Artyom?",
+"en": "{3:What would you do} if you were me, Sung?",
 "ko": "자네가 나라면 어떻게 하겠나?"
 },
 {
@@ -9157,8 +9157,8 @@ null
 "lines": [
 {
 "s": "A",
-"en": "{0:I have a reservation under} Lee. Artyom Lee.",
-"ko": "Lee 이름으로 예약했습니다. 아르툠 리."
+"en": "{0:I have a reservation under} Lee. Sung Lee.",
+"ko": "Lee 이름으로 예약했습니다. Sung Lee."
 },
 {
 "s": "S",
@@ -10512,8 +10512,8 @@ null
 "lines": [
 {
 "s": "D",
-"en": "{1:It's been a pleasure}, Artyom. Two years, 62 X-rays, 27 doors.",
-"ko": "즐거웠어요, 아르툠. 2년, X-ray 62대, 문 27개."
+"en": "{1:It's been a pleasure}, Sung. Two years, 62 X-rays, 27 doors.",
+"ko": "즐거웠어요, Sung. 2년, X-ray 62대, 문 27개."
 },
 {
 "s": "A",
@@ -10542,8 +10542,8 @@ null
 "lines": [
 {
 "s": "V",
-"en": "Artyom. It's Viktor. I'm... looking for a job.",
-"ko": "아르툠. Viktor야. 나... 일자리 찾고 있어."
+"en": "Sung. It's Viktor. I'm... looking for a job.",
+"ko": "Sung. Viktor야. 나... 일자리 찾고 있어."
 },
 {
 "s": "A",
